@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Web widgets</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="web_sweeping" class="book toc2 toc-left">
+<div id="header">
+<h1>Web widgets</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html"><span class="toc-current">Web widgets</span></a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="web_sweeping" class="sect0">Web widgets</h1>
+          <div class="paragraph">
+<p>The web widgets for this capability are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_sweeping.html#create_sweep_business_web_widgets">Create sweep</a></p>
+</li>
+<li>
+<p><a href="web_sweeping.html#manage_sweeps_business_web_widgets">Manage sweeps</a></p>
+</li>
+<li>
+<p><a href="web_sweeping.html#view_sweep_details_business_web_widgets">View sweep details</a></p>
+</li>
+</ul>
+</div>
+<h2 id="create_sweep_business_web_widgets" class="discrete">Create sweep</h2>
+<div class="paragraph">
+<p>In this widget, the financial institution customer creates a one- or a two-way daily sweep.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_sweep_understand_v360.png?ver=3.10.1" alt="create sweep understand v360"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_sweep_schedule_view.png?ver=3.10.1" alt="create sweep schedule view"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_sweep_review_view.png?ver=3.10.1" alt="create sweep review view"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_sweep_discard_view.png?ver=3.10.1" alt="create sweep discard view"></span></p>
+</div>
+<div class="paragraph">
+<p>The customer clicks the <strong>New sweep</strong> button in the <strong>Manage sweeps</strong> widget
+to create a new sweep, then goes through steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Set type of rule</strong>.</p>
+<div class="paragraph">
+<p>The customer defines the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Sweep name</strong>: Any name given by the customer.</p>
+</li>
+<li>
+<p><strong>Sweep type</strong>: A <strong>one-way sweep</strong> or <strong>two-way sweep</strong>.</p>
+</li>
+<li>
+<p><strong>Sweep condition</strong>: The condition which is applied to the
+target account and, if met, triggers a sweep, which can be:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>One-way: The customer selects either of the two conditions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>is higher than</strong>: The balance of the target account exceeds a specified amount
+(default value) OR</p>
+</li>
+<li>
+<p><strong>is lower than</strong>: The balance of the target account is lower than a specified amount</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Two-way: Both conditions are applied:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>is lower than</strong>: The balance of the target account is lower than a specified amount AND</p>
+</li>
+<li>
+<p><strong>is higher than</strong>: The balance of the target account is higher than a specified amount</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Amount</strong>: The threshold that triggers the sweep.</p>
+</li>
+<li>
+<p><strong>Target account</strong>: The target account name and IBAN.
+If IBAN is not available, BBAN is displayed.</p>
+</li>
+<li>
+<p><strong>Swept account</strong>: The swept account name and IBAN.
+If IBAN is not available, BBAN is displayed.</p>
+</li>
+<li>
+<p><strong>Description</strong>: An optional additional information about the sweep.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Schedule sweep</strong>.</p>
+<div class="paragraph">
+<p>The customer defines the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Start date</strong>: The current date or a future date.</p>
+</li>
+<li>
+<p><strong>Expiry date</strong>: The current date, a future date, or never.</p>
+</li>
+<li>
+<p><strong>Repeat every</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Frequency count: The number of times of how often to repeat the sweep.</p>
+</li>
+<li>
+<p>Frequency period : <strong>Day</strong>, <strong>Week</strong>, or <strong>Month</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Repeat on</strong>: A specific day on which the sweep is repeated. Available only
+for weekly and monthly frequency periods.</p>
+</li>
+<li>
+<p><strong>At</strong>: The exact time when sweeping is done</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Starting at</strong></p>
+</li>
+<li>
+<p><strong>Ending at</strong></p>
+</li>
+<li>
+<p><strong>Continuing every</strong></p>
+<div class="paragraph">
+<p><strong>Starting at</strong>, <strong>Ending at</strong>, and <strong>Continuing every</strong> are available only for
+daily frequency period, when <strong>Repeat during the day</strong> is checked.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>To enable intraday sweeping, the bank customer selects <strong>Repeat during the day</strong>.
+The setting <strong>At</strong> then changes to <strong>Starting at</strong>.
+If the number of hours is set to 00, only the number of minutes are taken
+into consideration when repeating the sweep.
+If the number of hours is set to 01 or greater, both the number of hours
+and the number of minutes are taken into consideration.</p>
+</div>
+<div class="paragraph">
+<p>If the bank customer defines a period at <strong>Starting at</strong> and <strong>Ending at</strong> that is
+shorter than the amount of hours set at <strong>Continue every</strong>, the sweep is performed
+only once.</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Review sweep</strong>.</p>
+<div class="paragraph">
+<p>The customer reviews the data provided in the previous steps.
+The customer clicks <strong>Submit</strong> to confirm the new sweep. Once the sweep is created, the customer is redirected to the
+<strong>Manage sweeps</strong> widget, where they see the new sweep listed.</p>
+</div>
+</li>
+</ol>
+</div>
+<h3 id="_features_48" class="discrete">Features</h3>
+<div class="paragraph">
+<p>This widget provides the following features for the customer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a new sweep.</p>
+</li>
+<li>
+<p>Set properties for the sweep.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_47" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="create_sweep_reference.html">Create sweep</a></p>
+</li>
+</ul>
+</div>
+<div class="sect1">
+        <h2 id="manage_sweeps_business_web_widgets">Manage sweeps</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>In the <strong>Manage sweeps</strong> widget, the bank customer views and manages available sweeps.
+The customer may also search for sweeps by name and filter sweeps using several criteria.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_sweeps_understand.png?ver=3.10.1" alt="manage sweeps understand"></span></p>
+</div>
+<div class="paragraph">
+<p>The information includes the following details:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Status</strong>: The current sweep life cycle status.</p>
+</li>
+<li>
+<p><strong>Name, ID</strong>: Any name given by the customer and the unique sweep identifier in the system.</p>
+</li>
+<li>
+<p><strong>Sweep rule</strong>: The condition that triggers the sweep.</p>
+</li>
+<li>
+<p><strong>Target account</strong>: The account name and IBAN. If IBAN is not available, BBAN is displayed.</p>
+</li>
+<li>
+<p><strong>Swept account</strong>: The account name and IBAN. If IBAN is not available, BBAN is displayed.</p>
+</li>
+<li>
+<p><strong>Execution</strong>: The time and frequency of sweeping.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The customer can activate, pause, or cancel the sweep from the list, as well as print detailed information about it.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/filter_sweeps_understand_v360.png?ver=3.10.1" alt="filter sweeps understand v360"></span></p>
+</div>
+<div class="paragraph">
+<p>The filtering criteria include the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sweep status: Active, paused, expired, cancelled, rejected, processing, entered</p>
+</li>
+<li>
+<p>Sweep execution rule: Surplus, maintenance, two way</p>
+</li>
+<li>
+<p>Sweep execution time: Daily, weekly, monthly</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The customer selects no, one, or multiple values for each filtering criteria.
+Search and filtering can be applied simultaneously.</p>
+</div>
+<h3 id="_features_49" class="discrete">Features</h3>
+<div class="paragraph">
+<p>This widget provides the following features for the customer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>View high-level info about sweeps.</p>
+</li>
+<li>
+<p>Filter sweeps by status, rule, and execution.</p>
+</li>
+<li>
+<p>Search sweeps by sweep name.</p>
+</li>
+<li>
+<p>Open the <strong>View sweep details</strong> widget.</p>
+</li>
+<li>
+<p>Activate, pause, or cancel sweep.</p>
+</li>
+<li>
+<p>Print sweep details.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_48" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="manage_sweeps_reference.html">Manage sweeps</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+<div class="sect1">
+        <h2 id="view_sweep_details_business_web_widgets">View sweep details</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>In the <strong>View sweep details</strong> widget, the bank customer views details
+of an existing sweep.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/view_sweep_details_understand_v360.png?ver=3.10.1" alt="view sweep details understand v360"></span></p>
+</div>
+<div class="paragraph">
+<p>The information includes the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Sweep name</strong>: Any name given by the customer.</p>
+</li>
+<li>
+<p><strong>Sweep ID</strong>: The unique sweep identifier in the system.</p>
+</li>
+<li>
+<p><strong>Username</strong>: The name of the customer that created the sweep.</p>
+</li>
+<li>
+<p><strong>Created on</strong>: The server date when the sweep was created (local date).</p>
+</li>
+<li>
+<p><strong>Created at</strong>: The server time when the sweep was created (local time).</p>
+</li>
+<li>
+<p><strong>Sweep status</strong>: The current sweep life cycle status.</p>
+</li>
+<li>
+<p><strong>Sweep rule</strong>: The sweep type and amount. Sweep type can be:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>One-way</strong> (surplus or maintenance)</p>
+</li>
+<li>
+<p><strong>Two-way</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Target account</strong>: The account name and IBAN. If IBAN is not available, BBAN is displayed.</p>
+</li>
+<li>
+<p><strong>Swept account</strong>: The account name and IBAN. If IBAN is not available, BBAN is displayed.</p>
+</li>
+<li>
+<p><strong>Sweep execution</strong>: The time and frequency of sweeping.</p>
+</li>
+<li>
+<p><strong>Sweep description</strong>: Optional additional information about the sweep.</p>
+</li>
+<li>
+<p><strong>Start date</strong>: The current date or a future date.</p>
+</li>
+<li>
+<p><strong>Expiry date</strong>: The current date, a future date, or never.</p>
+</li>
+<li>
+<p><strong>Repeat every</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Frequency count</strong>: The number of times of how often to repeat the sweep.</p>
+</li>
+<li>
+<p><strong>Frequency period</strong>: Day, week, or month.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Repeat on</strong>: The specific days on which the sweep is repeated. Available
+only for weekly and monthly frequency periods.</p>
+</li>
+<li>
+<p><strong>At</strong>: The exact time when sweeping is done. If <strong>Repeat during the day</strong> is checked,
+then <strong>At</strong> changes to:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Starting at</strong></p>
+</li>
+<li>
+<p><strong>Ending at</strong></p>
+</li>
+<li>
+<p><strong>Continuing every</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_features_50" class="discrete">Features</h3>
+<div class="paragraph">
+<p>This widget provides the following features for the customer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>View sweep details.</p>
+</li>
+<li>
+<p>Activate, pause, or cancel sweep.</p>
+</li>
+<li>
+<p>Print sweep details.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_49" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="view_sweep_details_reference.html">View sweep details</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+</div>
+</body>
+</html>

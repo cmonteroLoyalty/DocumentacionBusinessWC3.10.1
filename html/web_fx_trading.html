@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Web widgets</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="web_fx_trading" class="book toc2 toc-left">
+<div id="header">
+<h1>Web widgets</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html"><span class="toc-current">Web widgets</span></a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="web_fx_trading" class="sect0">Web widgets</h1>
+          <div class="paragraph">
+<p>The web widgets included in FX Trading are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_fx_trading.html#view_fx_rates_business_web_widgets">View FX rates</a></p>
+</li>
+<li>
+<p><a href="web_fx_trading.html#view_fx_pair_details_business_web_widgets">View FX pair details</a></p>
+</li>
+<li>
+<p><a href="web_fx_trading.html#create_fx_trade_order_business_web_widgets">Create FX trade order</a></p>
+</li>
+</ul>
+</div>
+<h2 id="view_fx_rates_business_web_widgets" class="discrete">View FX rates</h2>
+<div class="paragraph">
+<p>In the <strong>View FX rates</strong> widget, the bank customer views currency exchange rates. They may search for currency pairs and clicks through to place
+a trade order.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/view_fx_rates_understand_v360.png?ver=3.10.1" alt="view fx rates understand v360"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/view_fx_rates_details_view_v360.png?ver=3.10.1" alt="view fx rates details view v360"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/search_fx_rates_results_view_v360.png?ver=3.10.1" alt="search fx rates results view v360"></span></p>
+</div>
+<div class="paragraph">
+<p>The table includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Currency</strong>: The currency code for the currency pair.</p>
+</li>
+<li>
+<p><strong>Last price</strong>: The last executed price for the currency pair.</p>
+</li>
+<li>
+<p><strong>Change</strong>: Today&#8217;s price change in green or red.</p>
+</li>
+<li>
+<p><strong>%Change</strong>: Today&#8217;s price change in percentage in green or red.</p>
+</li>
+<li>
+<p><strong>Bid</strong>: The bid price available for the currency pair within the system.</p>
+</li>
+<li>
+<p><strong>Ask</strong>: The ask price available for the currency pair within the system.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The state of the <span class="image"><img src="./images/icons/icon_trade_currency.png?ver=3.10.1" alt="icon trade currency"></span> icon indicates whether the customer can trade the currency pair.
+This icon is clickable when the customer has at least one open account for each currency in the pair.</p>
+</div>
+<div class="paragraph">
+<p>By clicking the currency symbol, the customer accesses the <strong>View FX pair details</strong> widget. By clicking anywhere
+else in the currency row, the customer can see detailed information about the pair. The provided
+information is the same as in the <strong>View FX pair details</strong> widget and configurable in Experience Manager.</p>
+</div>
+<div class="paragraph">
+<p>The list is updated automatically using intervals specified in the <a href="view_fx_rates_reference.html">widget preferences</a>
+or when the customer refreshes the page or uses pagination.</p>
+</div>
+<h3 id="_features_25" class="discrete">Features</h3>
+<div class="paragraph">
+<p>This widget provides the following features for the customer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>View currency exchange rates and their fluctuations.</p>
+</li>
+<li>
+<p>Sort currencies in the list in the ascending or descending order.</p>
+</li>
+<li>
+<p>Mark currency pairs as favorite and then see them in the <strong>Favorites</strong> tab.</p>
+</li>
+<li>
+<p>View detailed information about a currency pair.</p>
+</li>
+<li>
+<p>See whether the currency pair can be traded.</p>
+</li>
+<li>
+<p>Search for currency pairs.</p>
+</li>
+<li>
+<p>View the number of matching results.</p>
+</li>
+<li>
+<p>Discard the search query.</p>
+</li>
+<li>
+<p>Access the <strong>Create FX trade order</strong> widget by clicking the corresponding icon.</p>
+</li>
+<li>
+<p>Access the <strong>View FX pair details</strong> widget by clicking a currency symbol.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The navigation between widgets is configurable in Experience Manager.</p>
+</div>
+<h3 id="_related_topics_25" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="view_fx_rates_reference.html">View FX rates</a></p>
+</li>
+</ul>
+</div>
+<h2 id="view_fx_pair_details_business_web_widgets" class="discrete">View FX pair details</h2>
+<div class="paragraph">
+<p>In the <strong>View FX pair details</strong> widget, the bank customer views detailed information about a selected currency pair.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/view_fx_pair_details_understand_v360.png?ver=3.10.1" alt="view fx pair details understand v360"></span></p>
+</div>
+<div class="paragraph">
+<p>This information includes the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Currency symbol</strong>: The name of the currency pair according to international conventions.</p>
+</li>
+<li>
+<p><strong>Update time</strong>: The time when the exchange rate was last updated.</p>
+</li>
+<li>
+<p><strong>Price</strong>: The last executed price for the currency pair.</p>
+</li>
+<li>
+<p><strong>Change</strong>: Today’s price change in green or red, depending on the direction.</p>
+</li>
+<li>
+<p><strong>%Change</strong>: Today’s price change percentage in green or red, depending on the direction.</p>
+</li>
+<li>
+<p><strong>Candlestick chart</strong>: The fluctuations of the price.</p>
+</li>
+<li>
+<p><strong>Open</strong>: The initial price at the beginning of the current trading period.</p>
+</li>
+<li>
+<p><strong>Prev. Close</strong>: The final price at the end of the previous trading period.</p>
+</li>
+<li>
+<p><strong>YTD Return</strong>: The amount of profit or loss generated by trading the corresponding
+currency pair since the beginning of the current calendar year (usually January 1st),
+the first trading day of the year, or the first day of the fiscal year.</p>
+</li>
+<li>
+<p><strong>Bid</strong>: The bid price available for the currency pair within the system.</p>
+</li>
+<li>
+<p><strong>Ask</strong>: The ask price available for the currency pair within the system.</p>
+</li>
+<li>
+<p><strong>52 Wk Range</strong>: The price range for the currency pair during a 52-week period.</p>
+</li>
+<li>
+<p><strong>Day&#8217;s Range</strong>: The price range for the currency pair starting from the beginning of the day.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The customer can access the <strong>Create FX trade order</strong> widget by clicking <strong>Place order</strong> or go back to
+the list by clicking <strong>Back to currencies</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The information is automatically refreshed using the intervals set up in the
+<a href="view_fx_pair_details_reference.html">widget preferences</a>.</p>
+</div>
+<h3 id="_features_26" class="discrete">Features</h3>
+<div class="paragraph">
+<p>This widget provides the following features for the customer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>View detailed information about a selected currency pair.</p>
+</li>
+<li>
+<p>Access the <strong>Create FX trade order</strong> widget by clicking <strong>Place order</strong>.</p>
+</li>
+<li>
+<p>Access the <strong>View FX rates</strong> widget by clicking <strong>Back to currencies</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The navigation between widgets is configurable in Experience Manager.</p>
+</div>
+<h3 id="_related_topics_26" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="view_fx_pair_details_reference.html">View FX pair details</a></p>
+</li>
+</ul>
+</div>
+<h2 id="create_fx_trade_order_business_web_widgets" class="discrete">Create FX trade order</h2>
+<div class="paragraph">
+<p>In the <strong>Create FX trade order</strong> widget, the bank customer creates, reviews, and submits a trade order for a selected
+currency pair.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/create_fx_trade_order_understand_v360.png?ver=3.10.1" alt="create fx trade order understand v360"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/create_fx_trade_order_rates_changed_view_v360.png?ver=3.10.1" alt="create fx trade order rates changed view v360"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/create_fx_trade_order_confirm_view_v360.png?ver=3.10.1" alt="create fx trade order confirm view v360"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/create_fx_trade_order_expired_view_v360.png?ver=3.10.1" alt="create fx trade order expired view v360"></span></p>
+</div>
+<div class="paragraph">
+<p>The widget includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Currency symbol</strong>: The name of the currency pair according to international conventions.</p>
+</li>
+<li>
+<p><strong>Update time</strong>: The time when the exchange rate was last updated.</p>
+</li>
+<li>
+<p><strong>Bid</strong>: The bid price available for the currency pair within the system.</p>
+</li>
+<li>
+<p><strong>Ask</strong>: the ask price available for the currency pair within the system.</p>
+</li>
+<li>
+<p><strong>Selling amount</strong>: The amount to be sold.</p>
+</li>
+<li>
+<p><strong>Buying amount</strong>: The amount to be bought.</p>
+</li>
+<li>
+<p><strong>Paying from</strong>: The bank account to be used for buying the currency.</p>
+</li>
+<li>
+<p><strong>Paying to</strong>: The bank account to deposit funds after selling the currency.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The rate is updated when the customer refreshes the page or clicks <strong>Next</strong> to review order details.
+In both cases, the buying and selling amounts specified by the customer are recalculated automatically.</p>
+</div>
+<div class="paragraph">
+<p>If the rates change when the customer clicks <strong>Next</strong> to review the order, the widget displays a warning message
+with the new rates, asking the customer to confirm or edit the order.</p>
+</div>
+<div class="paragraph">
+<p>The review screen includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Current price</strong>: The current price for the currency pair.</p>
+</li>
+<li>
+<p><strong>Availability time</strong>: The time that the price remains available with a progress bar.</p>
+</li>
+<li>
+<p><strong>Date and Time</strong>: The time and date of creating the order.</p>
+</li>
+<li>
+<p><strong>Selling</strong>: The amount of currency to be sold.</p>
+</li>
+<li>
+<p><strong>Buying</strong>: The amount of currency to be bought.</p>
+</li>
+<li>
+<p><strong>Paying from</strong>: The account to be used for buying the currency.</p>
+</li>
+<li>
+<p><strong>Paying to</strong>: The account to deposit the funds after selling the currency.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The customer can submit the order, discard it, or return to edit it. If the time
+allocated to submit the order expires, the widget displays a warning message and offers
+the customer to go back to editing.</p>
+</div>
+<h3 id="_features_27" class="discrete">Features</h3>
+<div class="paragraph">
+<p>This widget provides the following features for the bank customer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Review the exchange rate for the currency pair.</p>
+</li>
+<li>
+<p>Specify the selling and buying amounts.</p>
+</li>
+<li>
+<p>Swap the base and quote currency.</p>
+</li>
+<li>
+<p>Specify the accounts to withdraw and deposit funds.</p>
+</li>
+<li>
+<p>Review updated exchange rates if they have changed in the process of creating the order.</p>
+</li>
+<li>
+<p>Have the buying and selling amounts recalculated automatically according to the updated rates.</p>
+</li>
+<li>
+<p>See a warning if the selected <strong>Paying from</strong> account does not have sufficient funds for the transaction.</p>
+</li>
+<li>
+<p>See warnings if any of the required fields have not been filled out.</p>
+</li>
+<li>
+<p>Cancel the creation of a trade order.</p>
+</li>
+<li>
+<p>Review the details of the trade order.</p>
+</li>
+<li>
+<p>Submit the trade order.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_27" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="create_fx_trade_order_reference.html">Create FX trade order</a></p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

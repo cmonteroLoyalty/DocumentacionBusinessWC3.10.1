@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Web widgets</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="web_batches" class="book toc2 toc-left">
+<div id="header">
+<h1>Web widgets</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html"><span class="toc-current">Web widgets</span></a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="web_batches" class="sect0">Web widgets</h1>
+          <div class="paragraph">
+<p>The web widgets for this capability are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_batches.html#batch_payments_business_web_widgets">View batch details</a>: View the payments included in a batch, and information about their status.</p>
+</li>
+<li>
+<p><a href="web_batches.html#manual_batch_business_web_widgets">Create manual batch payments</a>: Create a batch manually.</p>
+</li>
+<li>
+<p><a href="web_batches.html#manage_batches_business_web_widgets">Manage batch payments</a>: View a paginated list of batch payments created within the context of the your service agreement.</p>
+</li>
+<li>
+<p><a href="web_batches.html#batch_log_business_web_widgets">Manage batch file uploads</a>: View a list of uploaded batch files along with the status of upload.</p>
+</li>
+<li>
+<p><a href="web_batches.html#upload_batch_business_web_widgets">Upload batch payment</a>: Upload one or more batch files asynchronously, and track the progress of the upload.</p>
+</li>
+</ul>
+</div>
+<h2 id="batch_payments_business_web_widgets" class="discrete">View batch details</h2>
+<div class="paragraph">
+<p>This widget provides an overview of the payments included in a batch, and information about their status.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/view_batch_details_understand.svg?ver=3.10.1" alt="view batch details understand"></span></p>
+</div>
+<div class="paragraph">
+<p>To see the overview of payments for a batch in a paginated list,
+the user selects the batch from the list in the <strong>Manage batch payments</strong> widget.</p>
+</div>
+<div class="paragraph">
+<p>Administrators can configure the widget in Experience Manager to load list items incrementally.
+To use this feature, the user clicks the <strong>Load More</strong> button.</p>
+</div>
+<div class="paragraph">
+<p>To approve or reject a batch, the user clicks <strong>Approve</strong> or <strong>Reject</strong>.</p>
+</div>
+<div class="paragraph">
+<p>If a batch is awaiting approval, the uploader of the batch can delete the batch.
+To delete a batch, the uploader clicks <strong>Delete</strong>, and confirms the action in the modal dialog.</p>
+</div>
+<div class="paragraph">
+<p>Once a batch is approved by at least one approver, any user with the permission to cancel batches can cancel that batch.
+To cancel a batch, the user clicks <strong>Cancel</strong>, and confirms the action in the modal dialog.</p>
+</div>
+<div class="paragraph">
+<p>To go back to the <strong>Manage batch payments</strong> widget, the user clicks <strong>Back to list</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The following details are available for each batch:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Batch label</p>
+</li>
+<li>
+<p>Batch type</p>
+</li>
+<li>
+<p>Name of the uploaded file</p>
+</li>
+<li>
+<p>Date and time of the upload</p>
+</li>
+<li>
+<p>Account number, account name, and if present the bank branch code</p>
+</li>
+<li>
+<p>Total credit amount and currency</p>
+</li>
+<li>
+<p>Total debit amount and currency</p>
+</li>
+<li>
+<p>Requested execution date</p>
+</li>
+<li>
+<p>Number of payments</p>
+</li>
+<li>
+<p>Status of the batch</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following details are available for each payment in the batch:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Status</p>
+</li>
+<li>
+<p>Counterparty account number, account name, and if present the bank branch code</p>
+</li>
+<li>
+<p>Amount and currency</p>
+</li>
+<li>
+<p>Payment description</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the batch details view is configured with transaction codes turned on, the following details are available for each payment within the batch:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Account type:</p>
+<div class="paragraph">
+<p>Such as <strong>Savings •</strong> or <strong>Checking •</strong>, followed by the transaction code.</p>
+</div>
+</li>
+<li>
+<p>Prenote:</p>
+<div class="paragraph">
+<p>Displayed under the <strong>Payment Description</strong>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/view_batch_details_transaction_codes.svg?ver=3.10.1" alt="view batch details transaction codes">
+</div>
+</div>
+<div class="paragraph">
+<p>For a batch order created manually through the
+<a href="web_batches.html#manual_batch_business_web_widgets">Create manual batch payments</a>,
+the details view is as follows:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/view_batch_details_manual_view.svg?ver=3.10.1" alt="view batch details manual view"></span></p>
+</div>
+<div class="paragraph">
+<p>If the approval failed for a batch due to limit breach, the approver receives a pop-up notification.
+To view the detailed breach report, the approver clicks <strong>See Details</strong>.</p>
+</div>
+<div class="paragraph">
+<p>In the breach report, the following information is available:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_limit_breach_view.svg?ver=3.10.1" alt="manage batch limit breach view"></span></p>
+</div>
+<h3 id="_features_5" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>View details of a batch.</p>
+</li>
+<li>
+<p>View the list of payments included in a batch.</p>
+</li>
+<li>
+<p>View the status of each payment in a batch.</p>
+</li>
+<li>
+<p>Approve or reject the batch.</p>
+</li>
+<li>
+<p>Delete a batch.</p>
+</li>
+<li>
+<p>Cancel a batch.</p>
+</li>
+</ul>
+</div>
+<h3 id="_services_and_endpoints" class="discrete">Services and endpoints</h3>
+<div class="paragraph">
+<p>This widget interfaces with the following services:</p>
+</div>
+<div class="paragraph">
+<p>This widget interfaces with the
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_understand.html">Payments</a> DBS capability using the
+<a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/payment-batch-client-api.html">payment-batch-client-api</a>.</p>
+</div>
+<h3 id="_related_topics_5" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="batch_payments_reference.html">View batch details</a>.</p>
+</li>
+</ul>
+</div>
+<div class="sect1">
+        <h2 id="manual_batch_business_web_widgets">Create manual batch payments</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>This widget allows users to manually enter multiple payments through a user-friendly wizard.</p>
+</div>
+<div class="paragraph">
+<p>The wizard goes through the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Batch info</strong>: Enter the batch name and execution date.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manual_batch_understand.svg?ver=3.10.1" alt="manual batch understand"></span></p>
+</div>
+</li>
+<li>
+<p><strong>Transfer details</strong>: Select the account to transfer from and add payments.
+For each payment, set the account to transfer to and the amount.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manual_batch_add_payments_view.svg?ver=3.10.1" alt="manual batch add payments view"></span></p>
+</div>
+<div class="paragraph">
+<p>Optionally, enter a description:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manual_batch_payment_description_view.svg?ver=3.10.1" alt="manual batch payment description view"></span></p>
+</div>
+</li>
+<li>
+<p><strong>Review</strong>: Check the entered payments.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manual_batch_review_view.svg?ver=3.10.1" alt="manual batch review view"></span></p>
+</div>
+</li>
+<li>
+<p><strong>Summary</strong>: Shows a success message when the batch order was submitted successfully.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manual_batch_summary_view.svg?ver=3.10.1" alt="manual batch summary view"></span></p>
+</div>
+</li>
+<li>
+<p><strong>Save as a template</strong>: Save a successfully submitted batch as a template for future batch payment submissions.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/batch_save_template_modal.svg?ver=3.10.1" alt="batch save template modal"></span></p>
+</div>
+</li>
+</ol>
+</div>
+<h4 id="_create_a_manual_batch_from_a_batch_template" class="discrete">Create a manual batch from a batch template</h4>
+<div class="paragraph">
+<p>The user can create a new batch quickly using a saved template.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Batch info</strong>: Select <strong>From template</strong> to open the list of available templates.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manual_batch_understand.svg?ver=3.10.1" alt="manual batch understand"></span></p>
+</div>
+</li>
+<li>
+<p>The user can search and select a desired template.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manual_batch_select_template.svg?ver=3.10.1" alt="manual batch select template"></span></p>
+</div>
+</li>
+<li>
+<p><strong>Transfer details</strong>: User selects and applies a template. The <strong>From template</strong> button remains available, the user can use it to select another template from the list. The data will override the current pre-filled fields.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manual_batch_apply_template.svg?ver=3.10.1" alt="manual batch apply template"></span></p>
+</div>
+<div class="paragraph">
+<p>The template data pre-fills the batch information and transfer details.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manual_batch_add_payments_view.svg?ver=3.10.1" alt="manual batch add payments view"></span></p>
+</div>
+</li>
+<li>
+<p><strong>Review</strong>: Check the entered payments.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manual_batch_review_view.svg?ver=3.10.1" alt="manual batch review view"></span></p>
+</div>
+</li>
+<li>
+<p><strong>Summary</strong>: Shows a success message when the pre-filled batch order was submitted successfully.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manual_batch_summary_view.svg?ver=3.10.1" alt="manual batch summary view"></span></p>
+</div>
+</li>
+</ol>
+</div>
+<h3 id="_features_6" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a batch order of batch type <em>USA Intracompany</em></p>
+</li>
+<li>
+<p>Add, edit, and delete payments to the batch order</p>
+</li>
+<li>
+<p>Review before submitting the batch order</p>
+</li>
+<li>
+<p>Create a template from a successfully submitted batch</p>
+</li>
+<li>
+<p>Create a new batch order from a saved template</p>
+</li>
+</ul>
+</div>
+<h3 id="_services_and_endpoints_2" class="discrete">Services and endpoints</h3>
+<div class="paragraph">
+<p>This widget interfaces with the following services:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_understand.html">Payments</a> using the
+<a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/payment-batch-client-api.html">payment-batch-client-api</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The widget calls this endpoint to create the batch order when the user is finished
+with the <strong>Batch info</strong> step:</p>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-batch-client-api.html#api-BatchOrders-postBatchOrders">POST https://ips_host:ips_port/gateway/api/payment-order-service/client-api/v2/batch-orders</a></p>
+</div>
+</li>
+<li>
+<p>The widget calls this endpoint to turn dry-run mode on or off and to submit the batch order.
+To add payments and to submit the batch order, the dry-run mode should be turned off.
+To submit the batch order for validation, the dry-run mode should be turned on.</p>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-batch-client-api.html#api-BatchOrders-updateBatchOrderById">PUT https://ips_host:ips_port/gateway/api/payment-order-service/client-api/v2/batch-orders/{batchOrderID}?dryRun=(false|true)</a></p>
+</div>
+</li>
+<li>
+<p>The widget calls these endpoints to create, edit, and delete batch payments in the <strong>Transfer details</strong> step:</p>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-batch-client-api.html#api-BatchOrders-postBatchPayments">POST https://ips_host:ips_port/gateway/api/payment-order-service/client-api/v2/batch-orders/{batchOrderID}/batch-payments</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-batch-client-api.html#api-BatchOrders-putBatchPaymentById">PUT https://ips_host:ips_port/gateway/api/payment-order-service/client-api/v2/batch-orders/{batchOrderID}/batch-payments/{batchPaymentID}</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-batch-client-api.html#api-BatchOrders-deleteBatchPaymentById">DELETE https://ips_host:ips_port/gateway/api/payment-order-service/client-api/v2/batch-orders/{batchOrderID}/batch-payments/{batchPaymentID}</a></p>
+</div>
+</li>
+<li>
+<p>The widget calls this endpoint to prefetch the batch order list in the <strong>Review</strong> step of the wizard:</p>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-batch-client-api.html#api-BatchOrders-getBatchOrders">GET https://ips_host:ips_port/gateway/api/payment-order-service/client-api/v2/batch-orders</a></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://community.backbase.com/documentation/DBS/2.21.1/product_summary_understand.html">Products</a> using the
+<a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/arrangement-client-api.html">arrangement-client-api</a></p>
+<div class="paragraph">
+<p>The widget calls this endpoint to fetch arrangements in the <strong>Batch info</strong> and <strong>Transfer details</strong>
+steps of the wizard:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/arrangement-client-api.html#api-ProductSummary-getArrangementsByBusinessFunction">GET https://ips_host:ips_port/gateway/api/arrangement-manager/client-api/v2/productsummary/context/arrangements</a></p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_6" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="manual_batch_reference.html">Create manual batch payments</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+<div class="sect1">
+        <h2 id="manage_batches_business_web_widgets">Manage batch payments</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>This widget provides an overview of batch orders created
+within the context of the service agreement selected during login.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_payments_understand.svg?ver=3.10.1" alt="manage batch payments understand"></span></p>
+</div>
+<div class="paragraph">
+<p>Batches display in a list, sorted from the most recently uploaded batch order to the oldest,
+grouped by requested execution date.
+To sort the list by a different attribute, the user clicks the attribute in the column header.
+To reverse the sorting order, the user clicks the attribute again.</p>
+</div>
+<div class="paragraph">
+<p>The user clicks the <strong>New batch</strong> button to begin the process to upload or create a new batch payment.
+The options to either create or upload a batch is determined by the user&#8217;s account permissions and entitlements.
+Without the permission <strong>Create</strong> in one of the batch business functions, the <strong>New batch</strong> button will not appear.</p>
+</div>
+<div class="paragraph">
+<p>Pagination is available by default. Administrators can configure the widget in Experience Manager to load list items incrementally.
+To use this feature, the user clicks the <strong>Load More</strong> button.</p>
+</div>
+<div class="paragraph">
+<p>The list of batches can be filtered by the following criteria:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To filter by <strong>Amount</strong>, the user inputs a minimum and a maximum amount in the available fields.
+The amount filter applies to the total credit amount <em>and</em> the total debit amount of the batch orders.
+For example, if the amount filter ranges from 200 to 500, the batch orders A, B, and C appear in the list,
+and batch order D will not:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Batch order A: Total credit amount is 300 and total debit amount is 50.</p>
+</li>
+<li>
+<p>Batch order B: Total credit amount is 50 and total debit amount is 300.</p>
+</li>
+<li>
+<p>Batch order C: Total credit amount is 300 and total debit amount is 300.</p>
+</li>
+<li>
+<p>Batch order D: Total credit amount is 50 and total debit amount is 50.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>To filter by <strong>Execution date</strong>, the user selects a date range, or a specific date from the calendar.</p>
+</li>
+<li>
+<p>To filter by <strong>Status</strong>, the user chooses one of the available statuses from the drop-down.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_payments_filter_view.svg?ver=3.10.1" alt="manage batch payments filter view"></span></p>
+</div>
+<div class="paragraph">
+<p>In the search field the user can enter free text for matching on the following criteria:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Batch name</p>
+</li>
+<li>
+<p>Own account name</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To view details about a batch in the <strong>View batch details</strong> widget,
+the user selects the batch from the list.</p>
+</div>
+<h3 id="_credit_and_debit_columns" class="discrete">Credit and debit columns</h3>
+<div class="paragraph">
+<p>Whether the <strong>Debits</strong> and <strong>Credits</strong> columns are visible, is determined by the value of the
+<code>creditDebitMixedIndicator</code> key in the response coming from the backend:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>CREDIT</code>: Shows only the credit column</p>
+</li>
+<li>
+<p><code>DEBIT</code>: Shows only the debit column</p>
+</li>
+<li>
+<p><code>MIXED</code>: Shows both columns</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The widget has a configuration setting <code>dynamicCreditDebitMixedIndicator</code> that tells the backend how to
+calculate the <code>creditDebitMixedIndicator</code> key:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>false</code> (default): Use a fixed configuration setting.</p>
+</li>
+<li>
+<p><code>true</code>: Use a dynamic calculation. This option results in a slower response time.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>An example of the widget with only the <strong>Credits</strong> column:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_payments_onlycredit_view.svg?ver=3.10.1" alt="manage batch payments onlycredit view"></span></p>
+</div>
+<div class="paragraph">
+<p>See also:
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/adopt_batchpayments#batchpayments_creditDebitMixedIndicator">How to use configure this in DBS</a>.</p>
+</div>
+<h3 id="_approvals_and_limits" class="discrete">Approvals and limits</h3>
+<div class="paragraph">
+<p>To approve a batch order in the list, the user clicks ✔ next to the item. To reject a batch, the user clicks ✗.
+A modal dialog appears where the user confirms their approval or rejection. To cancel, the user clicks <strong>Cancel</strong>.</p>
+</div>
+<div class="paragraph">
+<p>If the approval failed for a batch due to limit breach, the approver receives a pop-up notification.
+To view the detailed breach report, the approver clicks <strong>See Details</strong>.</p>
+</div>
+<div class="paragraph">
+<p>In the breach report, the following information is available:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_limit_breach_view.svg?ver=3.10.1" alt="manage batch limit breach view"></span></p>
+</div>
+<div class="paragraph">
+<p>If a batch is awaiting approval, the uploader of the batch can delete the batch.
+To delete a batch from the list, the uploader clicks <strong>Delete</strong>, and confirms the action in the modal dialog.</p>
+</div>
+<div class="paragraph">
+<p>Once a batch is approved by at least one approver, any user with the permission to cancel batches can cancel that batch.
+To cancel a batch, the user clicks <strong>Cancel</strong>, and confirms the action in the modal dialog.</p>
+</div>
+<h3 id="_features_7" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>View a paginated list of uploaded batches.</p>
+</li>
+<li>
+<p>Re-order the list based on available columns in the list.</p>
+</li>
+<li>
+<p>Filter and search the list.</p>
+</li>
+<li>
+<p>Dynamic showing or hiding the credit and debit columns.</p>
+</li>
+<li>
+<p>Delete a batch.</p>
+</li>
+<li>
+<p>Cancel a batch.</p>
+</li>
+<li>
+<p>Approve or reject a batch.</p>
+</li>
+</ul>
+</div>
+<h3 id="_services_and_endpoints_3" class="discrete">Services and endpoints</h3>
+<div class="paragraph">
+<p>This widget interfaces with the following services:</p>
+</div>
+<div class="paragraph">
+<p>This widget interfaces with the
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_understand.html">Payments</a> DBS capability using the
+<a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/payment-batch-client-api.html">payment-batch-client-api</a>.</p>
+</div>
+<h3 id="_related_topics_7" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="manage_batches_reference.html">Manage batch payments</a></p>
+</li>
+</ul>
+</div>
+<h2 id="batch_log_business_web_widgets" class="discrete">Manage batch file uploads</h2>
+<div class="paragraph">
+<p>This widget provides the user an overview of their uploaded batch files.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_file_uploads_understand.svg?ver=3.10.1" alt="manage batch file uploads understand"></span></p>
+</div>
+<div class="paragraph">
+<p>The widget shows uploaded batch files in a list, sorted from the most recently uploaded file to the oldest.
+The user also sees the status of their upload, that is, if the upload is <strong>Done</strong>, <strong>Open</strong> or <strong>Failed</strong>.
+To view the error state of a failed upload, the user clicks <strong>Details</strong> next to the batch file.
+The error message specifies the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The number of errors that occurred during upload.</p>
+</li>
+<li>
+<p>The specific error for each line of the file.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the batch file is a duplicate of another batch file in the same service agreement, it is marked as a <strong>DUPLICATE</strong> in the list. On selecting the duplicate batch file, the user views its details and any matching previously uploaded file.</p>
+</div>
+<div class="paragraph">
+<p>The user has three options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Decide later</strong>: Closes the dialog, so that the user can return to the decision later.</p>
+</li>
+<li>
+<p><strong>Delete duplicate file</strong>: Deletes the recently uploaded file.</p>
+</li>
+<li>
+<p><strong>Keep &amp; Process</strong>: The recently uploaded file will be kept for further processing.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/upload_batches_understand_duplicate_batch.svg?ver=3.10.1" alt="upload batches understand duplicate batch">
+</div>
+</div>
+<div class="paragraph">
+<p>Administrators can configure the widget in Experience Manager to load list items incrementally.</p>
+</div>
+<div class="paragraph">
+<p>To use this feature, the user clicks the <strong>Load More</strong> button.</p>
+</div>
+<h3 id="_feature" class="discrete">Feature</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>View a paginated list of uploaded batch files with their status.</p>
+</li>
+<li>
+<p>View the errors if the upload fails.</p>
+</li>
+</ul>
+</div>
+<h3 id="_services_and_endpoints_4" class="discrete">Services and endpoints</h3>
+<div class="paragraph">
+<p>This widget interfaces with the following services:</p>
+</div>
+<div class="paragraph">
+<p>This widget interfaces with the
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_understand.html">Payments</a> DBS capability using the
+<a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/payment-batch-client-api.html">payment-batch-client-api</a>.</p>
+</div>
+<h3 id="_related_topics_8" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="batch_upload_log_reference.html">Manage batch file uploads</a>.</p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+<div class="sect1">
+        <h2 id="upload_batch_business_web_widgets">Upload batch payment</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>Using this widget, the user selects a batch type and the file
+or files to upload for that batch type.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/upload_batch_payment_understand.svg?ver=3.10.1" alt="upload batch payment understand"></span></p>
+</div>
+<div class="paragraph">
+<p>The batch payment types available to the user are determined by user permissions.</p>
+</div>
+<div class="paragraph">
+<p>The upload is asynchronous, that is, the user can navigate
+away from the widget and perform other actions while the upload is in progress.
+A progress tracker shows the upload progress per file real time.
+The user has the option to cancel an upload that is in progress.
+Once a file upload is completed, the user receives a notification
+of the final status.
+If the upload fails, there is a detailed error message available, specifying the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The number of errors that occurred during upload.</p>
+</li>
+<li>
+<p>The specific error for each line of the file.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When a batch uploads, the widget checks for duplicates by comparing the uploaded batch against
+other previously uploaded batch files related to the service agreement the current user is operating in.
+If there is an exact match between the batches parameters, the batch file will be marked as a <strong>DUPLICATE</strong>.
+Each character within the file has to be the same in order for it to be marked as a duplicate file.</p>
+</div>
+<div class="paragraph">
+<p>If a duplicate is found, a sticky notification informs the user that the batch is noted as a <strong>DUPLICATE</strong> and
+will not be further processed until further action by the user. The widget displays a modal screen, allowing
+the user to view the details of the duplicate file and any matching previously uploaded batch.</p>
+</div>
+<div class="paragraph">
+<p>The user has three options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Decide later</strong>: Closes the dialog, so that the user can return to the decision later through
+the <strong>Manage batch file uploads</strong> widget.</p>
+</li>
+<li>
+<p><strong>Delete duplicate file</strong>: Deletes the recently uploaded file.</p>
+</li>
+<li>
+<p><strong>Keep &amp; Process</strong>: The recently uploaded file will be kept for further processing.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/upload_batches_understand_duplicate_batch.svg?ver=3.10.1" alt="upload batches understand duplicate batch">
+</div>
+</div>
+<div class="paragraph">
+<p>To view the uploaded batch payments, the user navigates to the
+<a href="web_batches.html#batch_log_business_web_widgets">Manage batch file uploads</a>
+widget directly from the notification.</p>
+</div>
+<h3 id="_features_8" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Select a batch file type to upload.</p>
+</li>
+<li>
+<p>Browse for files on your device to upload.</p>
+</li>
+<li>
+<p>Select multiple files to upload at the same time.</p>
+</li>
+<li>
+<p>Upload the selected file or files asynchronously.</p>
+</li>
+<li>
+<p>Track the progress of the upload.</p>
+</li>
+<li>
+<p>Cancel an upload in progress.</p>
+</li>
+<li>
+<p>Receive a notification when the upload is completed.</p>
+</li>
+<li>
+<p>Possible duplicate file detection.</p>
+</li>
+</ul>
+</div>
+<h3 id="_services_and_endpoints_5" class="discrete">Services and endpoints</h3>
+<div class="paragraph">
+<p>This widget interfaces with the following services:</p>
+</div>
+<div class="paragraph">
+<p>This widget interfaces with the
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_understand.html">Payments</a> DBS capability using the
+<a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/payment-batch-client-api.html">payment-batch-client-api</a>.</p>
+</div>
+<h3 id="_related_topics_9" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Reference</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="upload_batch_reference.html">Upload batch payment</a></p>
+</li>
+<li>
+<p><a href="https://community.backbase.com/documentation/universal_collection_angular/7.1.0/progress_tracker_widget_reference.html">Progress Tacker Widget</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+</div>
+</body>
+</html>

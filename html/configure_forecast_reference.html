@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Configure forecast</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="configure_forecast_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Configure forecast</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html"><span class="toc-current">Configure forecast</span></a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="configure_forecast_reference" class="sect0">Configure forecast</h1>
+          <h2 id="_shared_library" class="discrete">Shared library</h2>
+<div class="paragraph">
+<p>All Cash Flow Forecasting widgets use a shared library, see <a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>.</p>
+</div>
+<h2 id="_selector_name" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name:
+<code>bb-cash-flow-configure-forecast-widget-ang</code></p>
+</div>
+<h2 id="_required_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Widget module import</p>
+<div class="paragraph">
+<p>Import the following modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">import { CashFlowConfigureForecastWidgetAngModule } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Data module imports</p>
+<div class="paragraph">
+<p>Import the following data modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">import { ProductSummaryDataHttpModule } from '@backbase/data-ang/product-summary';
+import { CashFlowDataHttpModule } from '@backbase/data-ang/cash-flow';</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="_extension_slots_2" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/configure_forecast_slots_1_2_3_4.svg?ver=3.10.1" alt="configure forecast slots 1 2 3 4"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/configure_forecast_slots_5_6.svg?ver=3.10.1" alt="configure forecast slots 5 6"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="configure_forecast_reference.html#bbCashFlowForecastConfigurationModalCustomizable">bbCashFlowForecastConfigurationModalCustomizable</a></p>
+</li>
+<li>
+<p><a href="configure_forecast_reference.html#bbCashFlowForecastConfigurationModalHeaderCustomizable">bbCashFlowForecastConfigurationModalHeaderCustomizable</a></p>
+</li>
+<li>
+<p><a href="configure_forecast_reference.html#bbConfigurationBankingAccountsPageCustomizable">bbConfigurationBankingAccountsPageCustomizable</a></p>
+</li>
+<li>
+<p><a href="configure_forecast_reference.html#bbCashFlowForecastConfigurationModalFooterCustomizable">bbCashFlowForecastConfigurationModalFooterCustomizable</a></p>
+</li>
+<li>
+<p><a href="configure_forecast_reference.html#bbCashFlowAccountingCategoriesPageCustomizable">bbCashFlowAccountingCategoriesPageCustomizable</a></p>
+</li>
+<li>
+<p><a href="configure_forecast_reference.html#bbCashFlowAccountingCategoriesListCustomizable">bbCashFlowAccountingCategoriesListCustomizable</a></p>
+</li>
+<li>
+<p><a href="configure_forecast_reference.html#bbCashFlowConfigureForecastWidgetCustomizable">bbCashFlowConfigureForecastWidgetCustomizable</a> (not in the screenshots)</p>
+</li>
+</ol>
+</div>
+<h3 id="bbCashFlowForecastConfigurationModalCustomizable" class="discrete">bbCashFlowForecastConfigurationModalCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowForecastConfigurationModalCustomizable
+  let-hostRef
+  let-activePage="context.activePage"
+  let-isLoadingState="context.isLoadingState"
+  let-isErrorState="context.isErrorState"
+&gt;
+  &lt;bb-modal-ui [modalOptions]="hostRef.modalOptions" [isOpen]="true"&gt;
+    &lt;bb-forecast-configuration-modal-header&gt;&lt;/bb-forecast-configuration-modal-header&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody&gt;
+        &lt;ng-container *ngIf="!isLoadingState; else loadingState"&gt;
+          &lt;ng-container *ngIf="!isErrorState; else errorState"&gt;
+            &lt;ng-container [ngSwitch]="activePage"&gt;
+              &lt;ng-container
+                *ngSwitchCase="hostRef.forecastConfigurationPage.Accounts"
+              &gt;
+                &lt;bb-configuration-banking-accounts-page&gt;&lt;/bb-configuration-banking-accounts-page&gt;
+              &lt;/ng-container&gt;
+              &lt;ng-container
+                *ngSwitchCase="hostRef.forecastConfigurationPage.Categories"
+              &gt;
+                &lt;bb-cash-flow-accounting-categories-page&gt;&lt;/bb-cash-flow-accounting-categories-page&gt;
+              &lt;/ng-container&gt;
+            &lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+        &lt;/ng-container&gt;
+
+        &lt;bb-forecast-configuration-modal-footer&gt;&lt;/bb-forecast-configuration-modal-footer&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+  &lt;/bb-modal-ui&gt;
+
+  &lt;ng-template #loadingState&gt;
+    &lt;bb-loading-indicator-ui loaderSize="md"&gt;&lt;/bb-loading-indicator-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #errorState&gt;
+    &lt;bb-empty-state-ui
+      title="Unknown Error"
+      i18n-title="Title for error state@@cash-flow.state.error.title"
+      subtitle="Try to reload the page or contact the system administrator."
+      i18n-subtitle="Message for error state@@cash-flow.state.error.message"
+      iconSize="xxl"
+      iconModifier="error"
+    &gt;
+    &lt;/bb-empty-state-ui&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isLoadingState: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the modal are loading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isErrorState: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether there is an error preventing the modal to load.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>activePage: ForecastConfigurationPage</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The active forecast configuration page.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbCashFlowForecastConfigurationModalHeaderCustomizable" class="discrete">bbCashFlowForecastConfigurationModalHeaderCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowForecastConfigurationModalHeaderCustomizable
+  let-hostRef
+  let-configurationType="context.configurationType"
+&gt;
+  &lt;ng-container [ngSwitch]="configurationType"&gt;
+    &lt;ng-container
+      *ngSwitchCase="hostRef.configurationTypes.EditBankingAccounts"
+    &gt;
+      &lt;bb-modal-header-ui
+        title="Edit bank accounts"
+        i18n-title="
+          Title for edit bank accounts
+          modal@@cash-flow.forecast-configuration.banking-accounts-page.modal-title.edit-banking-accounts-flow"
+      &gt;
+      &lt;/bb-modal-header-ui&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-container
+      *ngSwitchCase="hostRef.configurationTypes.EditAccountingCategories"
+    &gt;
+      &lt;bb-modal-header-ui
+        title="Edit accounting categories"
+        i18n-title="
+          Title for edit accounting categories
+          modal@@cash-flow.forecast-configuration.banking-accounts-page.modal-title.edit-accounting-categories-flow"
+      &gt;
+      &lt;/bb-modal-header-ui&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-container *ngSwitchCase="hostRef.configurationTypes.EditCurrency"&gt;
+      &lt;bb-modal-header-ui
+        title="Edit data for cash flow forecasting"
+        i18n-title="
+          Title for edit forecast currency flow
+          modal@@cash-flow.forecast-configuration.banking-accounts-page.modal-title.edit-forecast-currency-flow"
+      &gt;
+      &lt;/bb-modal-header-ui&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-container *ngSwitchCase="hostRef.configurationTypes.Create"&gt;
+      &lt;bb-modal-header-ui
+        title="Set up data for Cash Flow Forecasting"
+        i18n-title="
+          Title for set up forecast configuration
+          modal@@cash-flow.forecast-configuration.banking-accounts-page.modal-title.default"
+      &gt;
+      &lt;/bb-modal-header-ui&gt;
+    &lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>configurationType: ForecastConfigurationCreateEditType</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>The default value of this enumeration is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>enum ForecastConfigurationType {
+  Create = 'Create configuration',
+  EditCurrency = 'Edit currency',
+  EditAccountingCategories = 'Edit accounting categories',
+  EditBankingAccounts = 'Edit banking accounts',
+}</pre>
+</div>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbConfigurationBankingAccountsPageCustomizable" class="discrete">bbConfigurationBankingAccountsPageCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbConfigurationBankingAccountsPageCustomizable
+  let-hostRef
+  let-forecastCurrency="context.forecastCurrency"
+  let-currencies="context.currencies"
+  let-bankingAccounts="context.bankingAccounts"
+  let-bankingAccountsSearchQuery="context.bankingAccountsSearchQuery"
+  let-areNoBankingAccountsSelectedError="context.areNoBankingAccountsSelectedError"
+  let-bankingAccountsSearchResultsCount="context.bankingAccountsSearchResultsCount"
+  let-isEditAccountsOrCategoriesMode="context.isEditAccountsOrCategoriesMode"
+  let-chosenBankingAccountsIds="context.chosenBankingAccountsIds"
+  let-isLoadingState="context.isLoadingState"
+  let-isErrorState="context.isErrorState"
+  let-areAllAccountsSelected="context.areAllAccountsSelected"
+&gt;
+  &lt;div
+    [ngClass]="{
+      'cash-flow-forecast-configuration-page': !isEditAccountsOrCategoriesMode,
+      'cash-flow-forecast-configuration-page-edit': isEditAccountsOrCategoriesMode,
+      'cash-flow-forecast-configuration-page-no-selected-error': areNoBankingAccountsSelectedError
+    }"
+  &gt;
+    &lt;bb-stepper-ui
+      *ngIf="!isEditAccountsOrCategoriesMode"
+      data-role="cash-flow-forecast-configuration-page__stepper"
+    &gt;
+      &lt;bb-stepper-step-ui
+        label="Bank accounts"
+        i18n-label="
+          Bank accounts step
+          label@@cash-flow.forecast-configuration.banking-accounts-step.label"
+        [isActive]="true"
+        [isCurrent]="true"
+      &gt;
+      &lt;/bb-stepper-step-ui&gt;
+      &lt;bb-stepper-step-ui
+        label="Accounting categories"
+        i18n-label="
+          Accounting categories step
+          label@@cash-flow.forecast-configuration.accounting-categories-step.label"
+        [isActive]="false"
+      &gt;
+      &lt;/bb-stepper-step-ui&gt;
+    &lt;/bb-stepper-ui&gt;
+
+    &lt;bb-alert-ui
+      *ngIf="areNoBankingAccountsSelectedError"
+      [bbAutoScroll]="hostRef.areNoBankingAccountsSelectedError$"
+      [dismissible]="true"
+      (close)="hostRef.closeAlert()"
+      title="At least one account must be selected."
+      modifier="error"
+      data-role="forecast-banking-account-not-selected-error"
+      i18n-title="
+        Banking accounts are not selected error
+        title@@cash-flow.forecast-configuration.banking-accounts-page.error.no-items-selected.title"
+    &gt;
+    &lt;/bb-alert-ui&gt;
+
+    &lt;ng-container *ngIf="!isLoadingState; else loadingState"&gt;
+      &lt;ng-container *ngIf="!isErrorState; else errorState"&gt;
+        &lt;div
+          *ngIf="!isEditAccountsOrCategoriesMode"
+          class="cash-flow-forecast-configuration-page__currency bb-block bb-block--lg"
+        &gt;
+          &lt;bb-dropdown-single-select-ui
+            label="Forecast currency"
+            i18n-label="
+              Label for forecast currency
+              selector@@cash-flow.forecast-configuration.banking-accounts-page.forecast-currency-selector.label"
+            labelClasses="bb-text-default"
+            [options]="currencies"
+            [autofocus]="true"
+            [ngModel]="forecastCurrency"
+            (ngModelChange)="hostRef.changeForecastCurrency($event)"
+            data-role="cash-flow-forecast-configuration-banking-accounts-page__currency-selector"
+          &gt;&lt;/bb-dropdown-single-select-ui&gt;
+        &lt;/div&gt;
+
+        &lt;p
+          data-role="cash-flow-forecast-configuration-page__description"
+          i18n="
+            Bank accounts page
+            description@@cash-flow.forecast-configuration.banking-accounts-page.description"
+        &gt;
+          Select bank accounts you want to use for Cash Flow Forecasting:
+        &lt;/p&gt;
+
+        &lt;div class="bb-block bb-block--md"&gt;
+          &lt;bb-search-box-ui
+            [showClear]="true"
+            [showSearch]="true"
+            aria-label="Filter bank accounts"
+            i18n-aria-label="
+              Bank accounts page search box aria
+              label@@cash-flow.configure-forecast.banking-accounts-page.search.aria-label"
+            placeholder="Search"
+            i18n-placeholder="
+              Bank accounts page search box
+              placeholder@@cash-flow.configure-forecast.banking-accounts-page.search.placeholder"
+            data-role="search-field"
+            [ngModel]="bankingAccountsSearchQuery"
+            (submit)="
+              hostRef.addBankingAccountsSearchQuery(
+                $event,
+                bankingAccountsSearchQuery
+              )
+            "
+            (clear)="hostRef.onClearSearch()"
+          &gt;&lt;/bb-search-box-ui&gt;
+        &lt;/div&gt;
+        &lt;p
+          *ngIf="bankingAccountsSearchQuery !== ''"
+          data-role="cash-flow-configure-forecast-banking-accounts-page__search-total-count"
+          i18n="
+            Total results
+            found@@cash-flow.configure-forecast.banking-accounts-page.search.total-count"
+        &gt;
+          {bankingAccountsSearchResultsCount, plural, =1
+          {{{ bankingAccountsSearchResultsCount }} result found} other
+          {{{ bankingAccountsSearchResultsCount }} results found}}
+        &lt;/p&gt;
+        &lt;div
+          class="bb-block bb-block--lg"
+          *ngIf="
+            !(
+              bankingAccountsSearchQuery !== '' &amp;&amp; bankingAccounts.length === 0
+            );
+            else emptySearchResults
+          "
+        &gt;
+          &lt;bb-cash-flow-configure-forecast-toggle-all
+            data-role="cash-flow-configure-forecast-toggle-all"
+            *ngIf="!bankingAccountsSearchQuery"
+            [areAllSelected]="areAllAccountsSelected"
+            (toggleAll)="listRef.toggleAll($event)"
+            [focusButton]="isEditAccountsOrCategoriesMode"
+          &gt;
+          &lt;/bb-cash-flow-configure-forecast-toggle-all&gt;
+
+          &lt;div class="cash-flow-configuration-bank-account-list"&gt;
+            &lt;bb-cash-flow-banking-account-list
+              [bankingAccounts]="bankingAccounts"
+              [chosenBankingAccountsIds]="chosenBankingAccountsIds"
+              (toggleBankingAccounts)="hostRef.onToggleBankingAccounts($event)"
+              #listRef
+            &gt;&lt;/bb-cash-flow-banking-account-list&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+
+  &lt;ng-template #loadingState&gt;
+    &lt;bb-loading-indicator-ui
+      data-role="cash-flow-configure-forecast-loading-state"
+      i18n-text="
+        Cash flow Forecast Configuration banking accounts loading
+        message@@cash-flow-forecast-configuration.modal.loading-banking-accounts-message"
+      text="Loading banking accounts..."
+    &gt;&lt;/bb-loading-indicator-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #emptySearchResults&gt;
+    &lt;div
+      class="bb-state-container"
+      data-role="cash-flow-configure-forecast-empty-search-state"
+    &gt;
+      &lt;bb-empty-state-ui
+        title="No Banking Accounts"
+        i18n-title="
+          Label for empty
+          state@@cash-flow.configure-forecast.banking-accounts-page.no-banking-accounts-search.title"
+        iconModifier="currency-trade"
+      &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #errorState&gt;
+    &lt;div
+      class="bb-state-container"
+      data-role="cash-flow-configure-forecast-error-state"
+    &gt;
+      &lt;bb-empty-state-ui
+        title="Unknown Error"
+        i18n-title="
+          Title for error
+          state@@cash-flow.configure-forecast.banking-accounts-page.error.title"
+        subtitle="Try to reload the page or contact the system administrator."
+        i18n-subtitle="
+          Message for error
+          state@@cash-flow.configure-forecast.banking-accounts-page.error.message"
+        iconSize="xxl"
+        iconModifier="error"
+      &gt;
+      &lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>forecastCurrency: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The active forecast currency.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>currencies: string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The available currencies.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bankingAccounts: BankingAccount[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Available accounts.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bankingAccountsSearchQuery: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Search query for accounts.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>areNoBankingAccountsSelectedError: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether there are no accounts selected.
+The value <code>false</code> indicates that at least one account is selected.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bankingAccountsSearchResultsCount: number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of results found for the search query.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isEditAccountsOrCategoriesMode: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the widget is in edit mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>chosenBankingAccountsIds: string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected account IDs.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isLoadingState: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the accounts and/or the default currency is loading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isErrorState: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether there is any error during loading of accounts and/or the default currency.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>areAllAccountsSelected: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether all accounts are selected.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbCashFlowForecastConfigurationModalFooterCustomizable" class="discrete">bbCashFlowForecastConfigurationModalFooterCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowForecastConfigurationModalFooterCustomizable
+  let-hostRef
+  let-isEditAccountsOrCategoriesMode="context.isEditAccountsOrCategoriesMode"
+  let-isCategoriesPage="context.isCategoriesPage"
+  let-isConfigurationErrorCallState="context.isConfigurationErrorCallState"
+&gt;
+  &lt;div class="bb-stack cash-flow-forecast-configuration-page__footer"&gt;
+    &lt;ng-container
+      *ngIf="isEditAccountsOrCategoriesMode; else createOrEditCurrencyMode"
+    &gt;
+      &lt;ng-container
+        *ngTemplateOutlet="
+          cancelBtn;
+          context: { $implicit: 'bb-stack__item--push-right' }
+        "
+      &gt;&lt;/ng-container&gt;
+      &lt;button
+        *ngIf="!isConfigurationErrorCallState"
+        bbButton
+        class="bb-stack__item"
+        (bbKeyboardClick)="hostRef.onSaveConfiguration()"
+        i18n="
+          Save forecast configuration
+          button@@cash-flow.forecast-configuration-modal-footer.save"
+        data-role="cash-flow-forecast-configuration-modal-footer__save-button"
+      &gt;
+        Save
+      &lt;/button&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+
+  &lt;ng-template #createOrEditCurrencyMode&gt;
+    &lt;ng-container
+      *ngTemplateOutlet="
+        cancelBtn;
+        context: { $implicit: 'bb-stack__item--push-left' }
+      "
+    &gt;&lt;/ng-container&gt;
+
+    &lt;ng-container *ngIf="isCategoriesPage; else nextBtn"&gt;
+      &lt;button
+        *ngIf="!isConfigurationErrorCallState"
+        bbButton
+        color="secondary"
+        class="bb-stack__item"
+        (bbKeyboardClick)="hostRef.goToAccountsPage()"
+        i18n="
+          Back to banking accounts page
+          button@@cash-flow.forecast-configuration-modal-footer.back"
+        data-role="cash-flow-forecast-configuration-modal-footer__back-button"
+      &gt;
+        Back
+      &lt;/button&gt;
+      &lt;button
+        *ngIf="!isConfigurationErrorCallState"
+        bbButton
+        class="bb-stack__item"
+        (bbKeyboardClick)="hostRef.onSaveConfiguration()"
+        i18n="
+          Finish forecast configuration
+          button@@cash-flow.forecast-configuration-modal-footer.finish"
+        data-role="cash-flow-forecast-configuration-modal-footer__finish-button"
+      &gt;
+        Finish
+      &lt;/button&gt;
+    &lt;/ng-container&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #cancelBtn let-classes&gt;
+    &lt;button
+      bbButton
+      color="link"
+      class="bb-stack__item"
+      [ngClass]="classes"
+      (bbKeyboardClick)="hostRef.onCloseButton()"
+      i18n="
+        Cancel forecast configuration
+        button@@cash-flow.forecast-configuration-modal-footer.cancel"
+      data-role="cash-flow-forecast-configuration-modal-footer__cancel-button"
+    &gt;
+      Cancel
+    &lt;/button&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #nextBtn&gt;
+    &lt;button
+      *ngIf="!isConfigurationErrorCallState"
+      bbButton
+      class="bb-stack__item"
+      (bbKeyboardClick)="hostRef.goToCategoriesPage()"
+      i18n="
+        Go to accounting categories page
+        button@@cash-flow.forecast-configuration-modal-footer.next"
+      data-role="cash-flow-forecast-configuration-modal-footer__next-button"
+    &gt;
+      Next
+    &lt;/button&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isEditAccountsOrCategoriesMode: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the widget is in edit mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isCategoriesPage: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the categories page is selected.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isConfigurationErrorCallState: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the forecast configuration has failed to load.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbCashFlowAccountingCategoriesPageCustomizable" class="discrete">bbCashFlowAccountingCategoriesPageCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowAccountingCategoriesPageCustomizable
+  let-hostRef
+  let-accountingCategories="context.accountingCategories"
+  let-isLoadingState="context.isLoadingState"
+  let-isErrorState="context.isErrorState"
+  let-areNoAccountingCategoriesChosen="context.areNoAccountingCategoriesChosen"
+  let-accountingCategoriesSearchQuery="context.accountingCategoriesSearchQuery"
+  let-accountingCategoriesSearchResultsCount="context.accountingCategoriesSearchResultsCount"
+  let-chosenAccountingCategoriesIds="context.chosenAccountingCategoriesIds"
+  let-isEditAccountsOrCategoriesMode="context.isEditAccountsOrCategoriesMode"
+  let-isCreateMode="context.isCreateMode"
+  let-areAllAccountsSelected="context.areAllAccountsSelected"
+&gt;
+  &lt;div
+    [ngClass]="{
+      'cash-flow-forecast-configuration-page': !isEditAccountsOrCategoriesMode,
+      'cash-flow-forecast-configuration-page-edit': isEditAccountsOrCategoriesMode,
+      'cash-flow-forecast-configuration-page-no-selected-error': areNoAccountingCategoriesChosen
+    }"
+  &gt;
+    &lt;bb-stepper-ui
+      *ngIf="!isEditAccountsOrCategoriesMode"
+      data-role="cash-flow-forecast-configuration-page__stepper"
+    &gt;
+      &lt;bb-stepper-step-ui
+        label="Bank accounts"
+        i18n-label="
+          Bank accounts step
+          label@@cash-flow.forecast-configuration.bank-accounts-step.label"
+        [isActive]="true"
+        [isChecked]="true"
+      &gt;
+      &lt;/bb-stepper-step-ui&gt;
+      &lt;bb-stepper-step-ui
+        label="Accounting categories"
+        i18n-label="
+          Accounting categories step
+          label@@cash-flow.forecast-configuration.accounting-categories-step.label"
+        [isActive]="true"
+        [isCurrent]="true"
+      &gt;
+      &lt;/bb-stepper-step-ui&gt;
+    &lt;/bb-stepper-ui&gt;
+
+    &lt;bb-alert-ui
+      *ngIf="areNoAccountingCategoriesChosen &amp;&amp; !isLoadingState"
+      [bbAutoScroll]="hostRef.areNoAccountingCategoriesChosen$"
+      [dismissible]="true"
+      (close)="hostRef.closeAlert()"
+      title="At least one accounting category must be selected."
+      modifier="error"
+      data-role="forecast-accounting-platform-not-selected-error"
+      i18n-title="
+        Accounting categories are not selected error
+        title@@cash-flow.forecast-configuration.accounting-page.error.no-items-selected.title"
+    &gt;
+    &lt;/bb-alert-ui&gt;
+
+    &lt;p
+      data-role="cash-flow-forecast-configuration-page__description"
+      i18n="
+        Accounting categories page
+        description@@cash-flow.forecast-configuration.accounting-page.description"
+    &gt;
+      Select accounting categories you want to use for Cash Flow Forecasting
+      (showing only categories in forecast currency):
+    &lt;/p&gt;
+
+    &lt;div class="bb-block bb-block--md" *ngIf="!isErrorState"&gt;
+      &lt;bb-search-box-ui
+        aria-label="Filter accounting categories"
+        i18n-aria-label="
+          Accounting categories page search box aria
+          label@@cash-flow.configure-forecast.accounting-page.search.aria-label"
+        placeholder="Search"
+        i18n-placeholder="
+          Accounting categories page search box
+          placeholder@@cash-flow.configure-forecast.accounting-page.search.placeholder"
+        [showClear]="true"
+        [showSearch]="true"
+        [ngModel]="accountingCategoriesSearchQuery"
+        (submit)="
+          hostRef.addAccountingCategoriesSearchQuery(
+            $event,
+            accountingCategoriesSearchQuery
+          )
+        "
+        (clear)="hostRef.onClearSearch()"
+      &gt;
+      &lt;/bb-search-box-ui&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-block bb-block--md" *ngIf="!isErrorState"&gt;
+      &lt;p
+        *ngIf="accountingCategoriesSearchQuery !== ''"
+        data-role="cash-flow-configure-forecast-accounting-categories-page__search-total-count"
+        i18n="
+          Total results
+          found@@cash-flow.configure-forecast.accounting-categories-page.search.total-count"
+      &gt;
+        {accountingCategoriesSearchResultsCount, plural, =1
+        {{{ accountingCategoriesSearchResultsCount }} result found} other
+        {{{ accountingCategoriesSearchResultsCount }} results found}}
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;ng-container *ngIf="!isLoadingState; else loading"&gt;
+      &lt;ng-container *ngIf="!isErrorState; else error"&gt;
+        &lt;ng-container
+          *ngIf="
+            !(
+              accountingCategoriesSearchQuery !== '' &amp;&amp;
+              accountingCategories.length === 0
+            );
+            else emptySearchResults
+          "
+        &gt;
+          &lt;bb-cash-flow-configure-forecast-toggle-all
+            data-role="cash-flow-configure-forecast-toggle-all"
+            *ngIf="!accountingCategoriesSearchQuery"
+            [areAllSelected]="areAllAccountsSelected"
+            [focusButton]="true"
+            (toggleAll)="listRef.toggleAll($event)"
+          &gt;
+          &lt;/bb-cash-flow-configure-forecast-toggle-all&gt;
+          &lt;bb-cash-flow-accounting-categories-list
+            [isCreateMode]="isCreateMode"
+            [accountingCategories]="accountingCategories"
+            [chosenAccountingCategoriesIds]="chosenAccountingCategoriesIds"
+            [isSearchMode]="accountingCategoriesSearchQuery !== ''"
+            (updatedChosenAccountingCategories)="
+              hostRef.onChooseAccountingCategories($event)
+            "
+            #listRef
+          &gt;
+          &lt;/bb-cash-flow-accounting-categories-list&gt;
+        &lt;/ng-container&gt;
+      &lt;/ng-container&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-template #loading&gt;
+      &lt;bb-loading-indicator-ui
+        data-role="cash-flow-configure-forecast-accounting-categories-loading-state"
+        loaderSize="md"
+      &gt;&lt;/bb-loading-indicator-ui&gt;
+    &lt;/ng-template&gt;
+    &lt;ng-template #error&gt;
+      &lt;div
+        class="bb-state-container"
+        data-role="cash-flow-configure-forecast-accounting-categories-error-state"
+      &gt;
+        &lt;bb-empty-state-ui
+          title="Unknown Error"
+          i18n-title="Title for error state@@cash-flow.state.error.title"
+          subtitle="Try to reload the page or contact the system administrator."
+          i18n-subtitle="Message for error state@@cash-flow.state.error.message"
+          iconSize="xxl"
+          iconModifier="error"
+        &gt;
+        &lt;/bb-empty-state-ui&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+    &lt;ng-template #emptySearchResults&gt;
+      &lt;div
+        class="bb-state-container"
+        data-role="cash-flow-configure-forecast-accounting-categories-empty-search-state"
+      &gt;
+        &lt;bb-empty-state-ui
+          title="No Accounting Categories"
+          i18n-title="
+            Label for empty
+            state@@cash-flow.configure-forecast.accounting-categories-page.no-accounting-categories-search.title"
+          iconModifier="currency-trade"
+        &gt;&lt;/bb-empty-state-ui&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountingCategories: Array&lt;[PresentationAccountCategory, PresentationAccountingAccount[]]&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The accounting categories retrieved from the backend.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isLoadingState: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the accounting categories are loading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isErrorState: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether there is any error during loading of accounting categories.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>areNoAccountingCategoriesChosen: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether there are no accounting categories selected.
+The value <code>false</code> indicates that at least one accounting category is selected.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountingCategoriesSearchQuery: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Search query for accounting categories.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountingCategoriesSearchResultsCount: number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of results found for the search query.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>chosenAccountingCategoriesIds: string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected accounting categories IDs.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isEditAccountsOrCategoriesMode: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the widget is in edit mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isCreateMode: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the widget is in create mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>areAllAccountsSelected: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether all accounting categories are selected.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbCashFlowAccountingCategoriesListCustomizable" class="discrete">bbCashFlowAccountingCategoriesListCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbCashFlowAccountingCategoriesListCustomizable let-hostRef&gt;
+  &lt;div
+    [formGroup]="hostRef.accountingCategoriesForm"
+    class="bb-block bb-block--xl cash-flow-configuration-accounting-category-list"
+  &gt;
+    &lt;bb-collapsible-card-ui
+      class="bb-collapsible-list"
+      *ngFor="
+        let categoryItem of hostRef.accountingCategories;
+        trackBy: hostRef.trackByCategoryName
+      "
+      [aria-label]="categoryItem[0]"
+      [isOpen]="hostRef.isCategoryExpanded(categoryItem[0])"
+      (isOpenChange)="hostRef.toggleCategory(categoryItem[0], $event)"
+    &gt;
+      &lt;div bbCollapsibleTitle&gt;
+        &lt;div class="cash-flow-configuration-accounting-category-item bb-stack"&gt;
+          &lt;bb-checkbox-group-ui
+            (click)="$event.stopPropagation()"
+            aria-label="{{ categoryItem[0] }} accounts"
+            i18n-aria-label="
+              Accounting categories list category checkbox aria
+              label@@cash-flow.forecast-configuration.accounting-page.list.category.checkbox.aria-label"
+            [formGroupName]="categoryItem[0]"
+          &gt;&lt;/bb-checkbox-group-ui&gt;
+          &lt;span class="cash-flow-configuration-accounting-category-item__label"&gt;
+            &lt;span
+              class="bb-text-default bb-text-semi-bold"
+              data-role="cash-flow-accounting-category-list-item__name"
+            &gt;
+              {{ categoryItem[0] }}
+            &lt;/span&gt;
+            &lt;span
+              class="bb-text-support bb-subtitle"
+              data-role="cash-flow-accounting-category-list-item__subcategories-amount"
+            &gt;
+              {{ categoryItem[1].length }}
+              &lt;ng-container
+                i18n="
+                  Accounting categories list category
+                  subtitle@@cash-flow.forecast-configuration.accounting-page.list.category.subtitle"
+              &gt;
+                {categoryItem[1].length , plural, =1 {subcategory} other
+                {subcategories}}
+              &lt;/ng-container&gt;
+            &lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;ul
+        bbCollapsibleBody
+        class="bb-list bb-list--density-none bb-list--infinite"
+      &gt;
+        &lt;li
+          *ngFor="
+            let item of categoryItem[1];
+            trackBy: hostRef.trackByAccountName
+          "
+          [formGroupName]="categoryItem[0]"
+          class="bb-list__item"
+        &gt;
+          &lt;bb-input-checkbox-ui
+            [formControlName]="item.id"
+            class="cash-flow-configuration-accounting-category-item cash-flow-configuration-accounting-category-item--child"
+          &gt;
+            &lt;span
+              class="bb-stack cash-flow-configuration-accounting-category-item__label"
+            &gt;
+              &lt;span
+                class="bb-text-default"
+                data-role="cash-flow-accounting-subcategory-list-item__name"
+              &gt;
+                {{ item.nominalCode }} • {{ item.name }}
+              &lt;/span&gt;
+              &lt;span
+                class="bb-text-support bb-subtitle"
+                data-role="cash-flow-accounting-subcategory-list-item__description"
+              &gt;
+                {{ item.description }}
+              &lt;/span&gt;
+            &lt;/span&gt;
+          &lt;/bb-input-checkbox-ui&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/bb-collapsible-card-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashFlowConfigureForecastWidgetCustomizable" class="discrete">bbCashFlowConfigureForecastWidgetCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowConfigureForecastWidgetCustomizable
+  let-isModalOpen="context.isModalOpen"
+  let-hostRef
+&gt;
+  &lt;bb-cash-flow-forecast-configuration-modal
+    *ngIf="isModalOpen"
+  &gt;&lt;/bb-cash-flow-forecast-configuration-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isModalOpen: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the forecast configuration modal is open.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_api" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 30%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>CashFlowForecastConfigurationModalComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>bbCashFlowForecastConfigurationModalCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>modalOptions: NgbModalOptions</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modal window options</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>forecastConfigurationPage: ForecastConfigurationPage</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>Enumeration of forecast configuration pages. The default value is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  Accounts = 'Bank accounts',
+  Categories = 'Accounting categories',
+}</pre>
+</div>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ForecastConfigurationModalHeaderComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bbCashFlowForecastConfigurationModalHeaderCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>configurationTypes: ForecastConfigurationType</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>The default value of this enumeration is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>enum ForecastConfigurationType {
+  Create = 'Create configuration',
+  EditCurrency = 'Edit currency',
+  EditAccountingCategories = 'Edit accounting categories',
+  EditBankingAccounts = 'Edit banking accounts',
+  FinishCreate = 'Finish create configuration',
+  FinishEdit = 'Finish edit configuration',
+}</pre>
+</div>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock"><code>ConfigurationBankingAccountsPageComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock"><code>bbConfigurationBankingAccountsPageCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>changeForecastCurrency(forecastCurrency: string): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to save a forecast currency selection</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onToggleBankingAccount(bankingAccountId: string): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to toggle the selected state</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addBankingAccountsSearchQuery(bankingAccountsSearchQuery: string): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to save the search query for accounts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onClearSearch(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to clear search</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>closeAlert()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to close an alert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>ForecastConfigurationModalFooterComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>bbCashFlowForecastConfigurationModalFooterCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onCloseButton(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to close the forecast configuration modal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>goToCategoriesPage(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to change the active page to accounting categories</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>goToAccountsPage(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to change active page to accounts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSaveConfiguration(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to save created or edited configuration</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>CashFlowAccountingCategoriesPageComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>bbCashFlowAccountingCategoriesPageCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onChooseAccountingCategories(chosenAccountingCategoriesIds: string[]): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to update the selected accounting categories IDs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addAccountingCategoriesSearchQuery(newSearchQuery: string, prevSearchQuery: string): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to save the search query for accounting categories</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onClearSearch(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to clear search</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>closeAlert()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to close an alert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="11"><p class="tableblock"><code>CashFlowAccountingCategoriesListComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="11"><p class="tableblock"><code>bbCashFlowAccountingCategoriesListCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() isCreateMode: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag represents modal create mode and defaults to <code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() isSearchMode: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag represents search mode for accounting categories and defaults to <code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() accountingCategories!: AccountingCategories</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accounting categories</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() chosenAccountingCategoriesIds!: string[];</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of selected accounting categories IDs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() updatedChosenAccountingCategories: EventEmitter&lt;string[]&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emits the selected accounting categories</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountingCategoriesForm!: FormGroup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accounting categories form group</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isCategoryExpanded(categoryName: string): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns whether the specified category is expanded</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>toggleAll(areAllSelected: boolean): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Expand or collapse all accounting categories</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>toggleCategory(categoryName: string, isExpanded: boolean): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Expand or collapse the specified accounting category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>trackByCategoryName(_index: number, [value]: string[]): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tracks list item by accounting category name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>trackByAccountName(_index: number, { name }: Account): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tracks list item by account name</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_preferences" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>This widget has no specific preferences.</p>
+</div>
+</div>
+</body>
+</html>

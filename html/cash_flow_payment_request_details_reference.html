@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Cash flow payment request details</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="cash_flow_payment_request_details_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Cash flow payment request details</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html"><span class="toc-current">Cash flow payment request details</span></a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="cash_flow_payment_request_details_reference" class="sect0">Cash flow payment request details</h1>
+          <h2 id="_selector_name_7" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name:
+<code>bb-cash-flow-payment-request-details-modal</code>.</p>
+</div>
+<h2 id="_required_imports_7" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Widget module import</p>
+<div class="paragraph">
+<p>Import the following modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import {
+  AmountModule,
+  BadgeModule,
+  BbDatePipeModule,
+  ButtonModule,
+  EmptyStateModule,
+  IconModule,
+  LoadingIndicatorModule,
+  ModalModule,
+} from '@backbase/ui-ang';</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="_extension_slots_32" class="discrete">Extension slots</h2>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payment_request_details_slots_1-2.svg?ver=3.10.1" alt="payment request details slots 1 2">
+</div>
+</div>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="cash_flow_payment_request_details_reference.html#bbCashFlowDetailsCustomizable">bbCashFlowDetailsCustomizable</a></p>
+</li>
+<li>
+<p><a href="cash_flow_payment_request_details_reference.html#bbCashFlowItemDetailsModalCustomizable">bbCashFlowItemDetailsModalCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbCashFlowDetailsCustomizable" class="discrete">bbCashFlowDetailsCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowPaymentRequestDetailsCustomizable
+  let-paymentItemId="context.paymentItemId"
+  let-itemView="context.itemView"
+  let-hostRef
+&gt;
+  &lt;bb-cash-flow-payment-request-details-modal
+    *ngIf="paymentItemId &amp;&amp; itemView"
+    [paymentItemId]="paymentItemId"
+    [itemView]="itemView"
+    (closeModal)="hostRef.onCloseModal()"
+  &gt;
+  &lt;/bb-cash-flow-payment-request-details-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentItemId: Observable&lt;string | undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of selected payment request item ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>itemView: Observable&lt;CashFlowItemView | undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cash flow item view.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbCashFlowItemDetailsModalCustomizable" class="discrete">bbCashFlowItemDetailsModalCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;/ng-container&gt;
+&lt;ng-template
+  bbCashFlowPaymentRequestDetailsModalCustomizable
+  let-hostRef
+  let-paymentItemDetails="context.paymentItemDetails"
+  let-isLoading="context.isLoading"
+&gt;
+  &lt;bb-modal-ui
+    [modalOptions]="hostRef.modalOptions"
+    [isOpen]="true"
+    (cancel)="hostRef.closeModal.emit()"
+    [aria-labelledby]="modalTitle.id"
+    class="cash-flow-payment-request-details-modal"
+  &gt;
+    &lt;div
+      #modalTitle
+      class="sr-only"
+      id="cash-flow-payment-request-details-modal"
+      i18n="
+        Cash flow payment request details modal
+        title@@cash-flow.payment-request-details-modal.title"
+    &gt;
+      Cash flow payment request details modal
+    &lt;/div&gt;
+    &lt;div class="cash-flow-payment-request-details-modal__header-panel"&gt;
+      &lt;button
+        class="cash-flow-payment-request-details-modal__button-close"
+        bbButton
+        color="link"
+        circle="true"
+        buttonSize="sm"
+        aria-label="Close"
+        i18n-aria-label="
+          Cash flow payment request details close modal
+          button@@cash-flow.payment-request-details-modals.close-button"
+        data-role="bb-cash-flow-payment-request-details-modal__close-button"
+        (click)="hostRef.closeModal.emit()"
+      &gt;
+        &lt;bb-icon-ui name="times" color="dark"&gt;&lt;/bb-icon-ui&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;ng-container *ngIf="!isLoading; else loadingState"&gt;
+      &lt;ng-container
+        *ngIf="paymentItemDetails?.data as paymentItem; else errorState"
+      &gt;
+        &lt;div class="cash-flow-payment-request-details-modal__icon-wrapper"&gt;
+          &lt;bb-icon-ui
+            data-role="bb-cash-flow-payment-request-details-modal__heading-icon"
+            [name]="hostRef.modalHeaderIcon"
+            backgroundType="circle"
+            color="white"
+            size="lg"
+          &gt;
+          &lt;/bb-icon-ui&gt;
+        &lt;/div&gt;
+        &lt;div
+          class="cash-flow-payment-request-details-modal__wrapper bb-text-align-center"
+        &gt;
+          &lt;div
+            class="bb-text-bold bb-block bb-block--xs"
+            data-role="bb-cash-flow-payment-request-details-modal__name"
+          &gt;
+            {{ paymentItem.counterparty.name }}
+          &lt;/div&gt;
+          &lt;div class="bb-heading-3"&gt;
+            &lt;bb-amount-ui
+              [currency]="paymentItem.currencyCode"
+              [amount]="paymentItem.amountDue"
+              [mapCurrency]="false"
+              class="bb-text-bold"
+              data-role="bb-cash-flow-payment-request-details-modal__due-amount"
+            &gt;&lt;/bb-amount-ui&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;bb-modal-body-ui&gt;
+          &lt;ng-template bbCustomModalBody&gt;
+            &lt;div class="bb-stack bb-stack--center bb-block bb-block--lg"&gt;
+              &lt;bb-badge-ui
+                *ngIf="paymentItem.chartOfAccounts.category"
+                wrap="true"
+                color="secondary"
+                text="{{ paymentItem.chartOfAccounts.category }} &amp;middot; {{
+                  paymentItem.chartOfAccounts.accountNames
+                }}"
+                data-role="bb-cash-flow-payment-request-details-modal__status-badge"
+              &gt;&lt;/bb-badge-ui&gt;
+            &lt;/div&gt;
+            &lt;hr class="bb-block bb-block--md" /&gt;
+            &lt;div class="bb-block bb-block--md"&gt;
+              &lt;bb-cash-flow-item-status
+                [status]="paymentItem.status"
+                data-role="bb-cash-flow-payment-request-details-modal__status"
+                [attr.aria-label]="paymentItem.status"
+              &gt;&lt;/bb-cash-flow-item-status&gt;
+            &lt;/div&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="col-sm-6 col-12"&gt;
+                &lt;div class="bb-block bb-block--md"&gt;
+                  &lt;div
+                    class="bb-text-bold"
+                    i18n="
+                      Cash flow payment request details modal due
+                      date@@cash-flow.payment-request-details-modal.dueDate"
+                  &gt;
+                    Due date
+                  &lt;/div&gt;
+                  &lt;div
+                    data-role="bb-cash-flow-payment-request-details-modal__due-date"
+                  &gt;
+                    &lt;bb-cash-flow-item-due-date
+                      [item]="paymentItem"
+                    &gt;&lt;/bb-cash-flow-item-due-date&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="bb-block bb-block--md"&gt;
+                  &lt;div class="bb-text-bold bb-inline-stack"&gt;
+                    &lt;div
+                      class="bb-inline-stack__item"
+                      i18n="
+                        Cash flow payment request details modal expected
+                        date@@cash-flow.payment-request-details-modal.expectedDate"
+                    &gt;
+                      Expected date
+                    &lt;/div&gt;
+                    &lt;bb-icon-ui
+                      bbTooltipTrigger
+                      bbTooltip="You can set expected pay date different from due date to have precise data in Forecasting."
+                      i18n-bbTooltip="
+                        Cash flow payment request details modal expected date
+                        icon
+                        tooltip@@cash-flow.payment-request-details-modal.expectedDate.icon.tooltip"
+                      name="info"
+                      color="dark"
+                      size="sm"
+                      class="bb-inline-stack__item bb-inline-stack__item--spacing-sm"
+                    &gt;
+                    &lt;/bb-icon-ui&gt;
+                  &lt;/div&gt;
+                  &lt;div
+                    data-role="bb-cash-flow-payment-request-details-modal__expected-date"
+                  &gt;
+                    {{ paymentItem.expectedDate | bbDate: hostRef.dateFormat }}
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="col-sm-6 col-12"&gt;
+                &lt;div class="bb-block bb-block--md"&gt;
+                  &lt;div
+                    class="bb-text-bold"
+                    i18n="
+                      Cash flow payment request details modal due
+                      amount@@cash-flow.payment-request-details-modal.dueAmount"
+                  &gt;
+                    Due amount
+                  &lt;/div&gt;
+                  &lt;bb-amount-ui
+                    [currency]="paymentItem.currencyCode"
+                    [amount]="paymentItem.amountDue"
+                    [mapCurrency]="false"
+                    data-role="bb-cash-flow-payment-request-details-modal__amount-due"
+                  &gt;&lt;/bb-amount-ui&gt;
+                &lt;/div&gt;
+                &lt;div class="bb-block bb-block--md"&gt;
+                  &lt;div
+                    class="bb-text-bold"
+                    i18n="
+                      Cash flow payment request details modal total
+                      amount@@cash-flow.payment-request-details-modal.totalAmount"
+                  &gt;
+                    Total amount
+                  &lt;/div&gt;
+                  &lt;bb-amount-ui
+                    [currency]="paymentItem.currencyCode"
+                    [amount]="paymentItem.totalAmount"
+                    [mapCurrency]="false"
+                    data-role="bb-cash-flow-payment-request-details-modal__total-amount"
+                  &gt;&lt;/bb-amount-ui&gt;
+                &lt;/div&gt;
+                &lt;div class="bb-block bb-block--no-margin"&gt;
+                  &lt;div
+                    class="bb-text-bold"
+                    i18n="
+                      Cash flow payment request details modal paid
+                      amount@@cash-flow.payment-request-details-modal.paidAmount"
+                  &gt;
+                    { hostRef.itemView, select, payable {Paid} receivable
+                    {Received} }
+                  &lt;/div&gt;
+                  &lt;bb-amount-ui
+                    [currency]="paymentItem.currencyCode"
+                    [amount]="paymentItem.paidAmount"
+                    [mapCurrency]="false"
+                    data-role="bb-cash-flow-payment-request-details-modal__paid-amount"
+                  &gt;&lt;/bb-amount-ui&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;hr class="bb-block bb-block--lg" /&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="col-sm-6 col-12"&gt;
+                &lt;div class="bb-block bb-block--md"&gt;
+                  &lt;div
+                    class="bb-text-bold"
+                    i18n="
+                      Cash flow payment request details modal
+                      invoice@@cash-flow.payment-request-details-modal.invoice"
+                  &gt;
+                    Invoice #
+                  &lt;/div&gt;
+                  &lt;div
+                    data-role="bb-cash-flow-payment-request-details-modal__invoice"
+                  &gt;
+                    {{ paymentItem.number }}
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="bb-block bb-block--md"&gt;
+                  &lt;div
+                    class="bb-text-bold"
+                    i18n="
+                      Cash flow payment request details modal issue
+                      date@@cash-flow.payment-request-details-modal.issueDate"
+                  &gt;
+                    Issue date
+                  &lt;/div&gt;
+                  &lt;div
+                    data-role="bb-cash-flow-payment-request-details-modal__issue-date"
+                  &gt;
+                    {{ paymentItem.issueDate | bbDate: hostRef.dateFormat }}
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="col-sm-6 col-12"&gt;
+                &lt;div class="bb-block bb-block--md"&gt;
+                  &lt;div
+                    class="bb-text-bold"
+                    i18n="
+                      Cash flow payment request details modal item
+                      id@@cash-flow.payment-request-details-modal.itemId"
+                  &gt;
+                    { hostRef.itemView, select, payable {Payable ID} receivable
+                    {Receivable ID} }
+                  &lt;/div&gt;
+                  &lt;div
+                    data-role="bb-cash-flow-payment-request-details-modal__id"
+                  &gt;
+                    {{ paymentItem.id }}
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/ng-template&gt;
+        &lt;/bb-modal-body-ui&gt;
+      &lt;/ng-container&gt;
+    &lt;/ng-container&gt;
+  &lt;/bb-modal-ui&gt;
+  &lt;ng-template #loadingState&gt;
+    &lt;bb-loading-indicator-ui
+      i18n-text="
+        Cash flow payment request details modal loading
+        text@@cash-flow.payment-request-details-modal.loading-text"
+      text="Loading item..."
+    &gt;&lt;/bb-loading-indicator-ui&gt;
+  &lt;/ng-template&gt;
+  &lt;ng-template #errorState&gt;
+    &lt;div
+      class="bb-state-container bb-state-container--min-height"
+      data-role="bb-cash-flow-paym[ent-request-details-modal__error"
+    &gt;
+      &lt;bb-empty-state-ui
+        title="Unknown Error"
+        i18n-title="
+          Cash flow payment request details modal error
+          title@@cash-flow.payment-request-details-modal.error.title"
+        subtitle="Try to reload the page or contact the system administrator."
+        i18n-subtitle="
+          Cash flow payment request details modal error
+          subtitle@@cash-flow.payment-request-details-modal.error.subtitle"
+        iconModifier="error"
+      &gt;
+      &lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isModalOpen: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of the flag that details modal is open.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>customError: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of custom error.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentItemDetails: Observable&lt;CashFlowItemDetailsData&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of payment item details request.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isLoading: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream indicates that payment details request is pending.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_api_8" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock"><code>CashFlowItemDetailsModalComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock"><code>bbCashFlowItemDetailsModalCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>closeModal(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to close the modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dateFormat: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dateFormat = 'MMM dd, yyyy';</code></p>
+<p class="tableblock">Format of date to display.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>modalOptions: NgbModalOptions</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cash flow item details modal options.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>modalHeaderIcon(): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Getter for modal header icon.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentItemDetails: Observable&lt;CashFlowItemDetailsData&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of payment item details request.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isLoading: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream indicates that payment details request is pending.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_preferences_24" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>The widget has the following preferences that managers or administrators
+configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configurable for</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>input.paymentItemId</strong></p>
+<p class="tableblock">Parameter name that passes the payment ID from the <strong>Manage payables</strong> and the <strong>View receivables</strong> widgets
+to this widget, the <strong>View payment request details</strong>. The string you enter here should match the <code>output</code> parameter
+with the same name in the <a href="manage_payables_reference.html">Manage payables</a> and the View receivables widgets.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>input.paymentItemId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>route-param paymentItemId</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

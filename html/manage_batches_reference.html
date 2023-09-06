@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Manage batch payments</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="manage_batches_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Manage batch payments</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html"><span class="toc-current">Manage batch payments</span></a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="manage_batches_reference" class="sect0">Manage batch payments</h1>
+          <h2 id="_preferences_10" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>The widget has the following preferences that managers or administrators
+can edit in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 25%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Label</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Admin</th>
+<th class="tableblock halign-left valign-top">Value type</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Number of batches per page</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p><strong>Select the method for loading more batches</strong></p>
+</div>
+<div class="paragraph">
+<p>How to load more data. The possible values are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>pagination</code>: Click next page to load more data.</p>
+</li>
+<li>
+<p><code>load-more</code>: Scroll down to load more data.</p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loadMoreMethod</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pagination</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Generic tracker widget success event name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>batchUploadSuccessEventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.event.batch.upload.success</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.batchOrderId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Milliseconds to dismiss any notification message</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>notificationDismissTimeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Time between each search requests (in milliseconds)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>debounceTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">300</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p><strong>Enable dynamic credit/debit/mixed indicator</strong></p>
+</div>
+<div class="paragraph">
+<p>Determines the value of the <code>dynamicCreditDebitMixedIndicator</code> query parameter when the widget calls the
+<a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-batch-client-api.html#api-BatchOrders-getBatchOrders">GET batch-orders</a>
+endpoint. This query parameter instructs the backend how to calculate the <code>creditDebitMixedIndicator</code> key
+in the response of the same endpoint:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>false</code>: Use a fixed configuration setting.</p>
+</li>
+<li>
+<p><code>true</code>: Use a dynamic calculation. This option results in a slower response time.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See also:
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/adopt_batchpayments#batchpayments_creditDebitMixedIndicator">How to use configure this in DBS</a>.</p>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dynamicCreditDebitMixedIndicator</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Preferences that have the <strong>Admin</strong> column
+checked, are only editable for administrators.</p>
+</div>
+<h2 id="_access_control_7" class="discrete">Access Control</h2>
+<div class="paragraph">
+<p>A permission is the combination of a business function and a single privilege granted to a user
+on a given resource type. Privileges are enforced by Digital Banking Services. Widget behavior is affected by the permissions of the user accessing the widget.</p>
+</div>
+<div class="paragraph">
+<p>The following table describes how the widget behavior changes depending on the permissions of the user:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 15%;">
+<col style="width: 20%;">
+<col style="width: 15%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Resource</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Business function</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Privilege</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Widget behavior</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">Batch</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Batch - SEPA CT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current user views a list of SEPA credit batch orders.</p>
+<p class="tableblock">If the user does not have the permission to view, the widget shows an empty list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">approve</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>The current user is able to approve or reject SEPA credit batch orders.</p>
+</div>
+<div class="paragraph">
+<p>If the user does not have the permission to approve, the approval and rejection buttons are disabled.</p>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Batch - ACH Credit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current user views a list of NACHA ACH credit batch orders.</p>
+<p class="tableblock">If the user does not have the permission to view, the widget shows an empty list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">approve</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>The current user is able to approve or reject NACHA ACH credit batch orders.</p>
+</div>
+<div class="paragraph">
+<p>If the user does not have the permission to approve, the approval and rejection buttons are disabled.</p>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Batch - ACH Debit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current user views a list of NACHA ACH debit batch orders.</p>
+<p class="tableblock">If the user does not have the permission to view, the widget shows an empty list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">approve</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>The current user is able to approve or reject NACHA ACH debit batch orders.</p>
+</div>
+<div class="paragraph">
+<p>If the user does not have the permission to approve, the approval and rejection buttons are disabled.</p>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_extension_slots_14" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_payments_slots_1_2_3_4_5_6_7.svg?ver=3.10.1" alt="manage_batch_payments_slots_1_2_3_4_5_6_7"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_payments_slot_8.svg?ver=3.10.1" alt="manage_batch_payments_slot_8"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_payments_slot_9_10.svg?ver=3.10.1" alt="manage_batch_payments_slot_9_10"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_payments_slot_11_12.svg?ver=3.10.1" alt="manage_batch_payments_slot_11_12"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="manage_batches_reference.html#bbBatchManagerListCustomizable">bbBatchManagerListCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_batches_reference.html#bbPaymentsControlsCustomizable">bbPaymentsControlsCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_batches_reference.html#bbPaymentsFilterCustomizable">bbPaymentsFilterCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_batches_reference.html#bbBatchListCustomizable">bbBatchListCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_batches_reference.html#bbPayordStatusBadgeAbbreviationCustomizable2">bbPayordStatusBadgeAbbreviationCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_batches_reference.html#bbBatchListAccountCustomizable">bbBatchListAccountCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_batches_reference.html#bbBatchListMoreActionsCustomizable">bbBatchListMoreActionsCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_batches_reference.html#bbBatchBreachLimitReportCustomizable">bbBatchBreachLimitReportCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_batches_reference.html#bbBatchManagerListSuccessNotificationCustomizable">bbBatchManagerListSuccessNotificationCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_batches_reference.html#bbBatchManagerListErrorNotificationCustomizable">bbBatchManagerListErrorNotificationCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_batches_reference.html#bbBatchManagerListLimitBreachBodyNotificationCustomizable">bbBatchManagerListLimitBreachBodyNotificationCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_batches_reference.html#bbBatchManagerListLimitBreachHeaderNotificationCustomizable">bbBatchManagerListLimitBreachHeaderNotificationCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbBatchManagerListCustomizable" class="discrete">bbBatchManagerListCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBatchManagerListCustomizable let-hostRef&gt;
+  &lt;ng-container *ngIf="!hostRef.error; else errorState"&gt;
+    &lt;div class="bb-block bb-block--xl"&gt;
+      &lt;bb-payments-controls
+        (applyFilter)="hostRef.onApplyFilter($event)"
+        [debounceTime]="hostRef.debounceTime"
+      &gt;
+      &lt;/bb-payments-controls&gt;
+    &lt;/div&gt;
+
+    &lt;bb-batch-manager-list
+      [hidden]="hostRef.loading$ | async"
+      [batchOrders]="(hostRef.batchOrders$ | async)?.items"
+      [loadMoreMethod]="hostRef.loadMoreMethod"
+      [page]="hostRef.batchOrdersService.currentPage$ | async"
+      [batchOrdersPerPage]="hostRef.pageSize"
+      [totalBatchOrders]="(hostRef.batchOrders$ | async)?.totalCount"
+      [creditDebitMixedIndicator]="(hostRef.batchOrders$ | async)?.creditDebitMixedIndicator"
+      [loadMoreFrom]="hostRef.loadMoreFrom"
+      [highlightText]="hostRef.searchQuery"
+      [isLoading]="hostRef.isLoadingBatchOrders"
+      (pageChange)="hostRef.onPageChange($event)"
+      (loadMore)="hostRef.onLoadMore($event)"
+      (sort)="hostRef.onSort($event)"
+      (rowClick)="hostRef.onRowClick($event)"
+      (approveBatchOrder)="hostRef.onApprove($event)"
+      (rejectBatchOrder)="hostRef.onReject($event)"
+      (cancelBatchOrder)="hostRef.onCancelBatchOrder($event)"
+      (deleteBatchOrder)="hostRef.onDeleteBatchOrder($event)"&gt;
+    &lt;/bb-batch-manager-list&gt;
+    &lt;ng-container *ngIf="hostRef.loading$ | async"&gt;
+      &lt;div class="bb-state-container"&gt;
+        &lt;bb-loading-indicator-ui
+          text="Loading batches..."
+          i18n-text="@@batch-manager.loading.text"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+
+  &lt;bb-payments-approvals-confirmation *ngIf="hostRef.openConfirmation"
+    [isOpen]="hostRef.openConfirmation"
+    [confirmationOptions]="hostRef.confirmationOptions"
+    (cancelAction)="hostRef.cancelConfirmation()"
+    (approve)="hostRef.onConfirmApproval($event)"
+    (reject)="hostRef.onConfirmRejection($event)"&gt;
+  &lt;/bb-payments-approvals-confirmation&gt;
+
+  &lt;bb-batch-breach-limit-report
+    *ngIf="hostRef.breachLimitError | async as error"
+    [isOpen]="hostRef.isBreachLimitReportOpen"
+    [error]="error"
+    [batchOrder]="hostRef.lastBatchOrderActionPerformedOn"
+    (close)="hostRef.isBreachLimitReportOpen = false"
+  &gt;&lt;/bb-batch-breach-limit-report&gt;
+
+  &lt;ng-template #errorState&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-empty-state-ui
+        i18n-title="@@batch-manager.error.generic.title"
+        title="Page couldn't load"
+        i18n-subtitle="@@batch-manager.error.generic.subtitle"
+        subtitle="Try to reload the page or contact the system administrator."
+        iconSize="xxl"
+        iconModifier="error"
+      &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template bbPayordStatusBadgeAbbreviationCustomizable let-hostRef&gt;
+    &lt;span class="d-none"
+      aria-hidden="true"
+      i18n="@@batches.payord-status-badge.abbreviation.label"
+      #abbreviation&gt;
+      {hostRef.status, select,
+      OPEN {Ope}
+      CLOSED {Clo}
+      INVALID {Inv}
+      VALID {Val}
+      ENTERED {Ent}
+      READY {Pro}
+      ACCEPTED {Acc}
+      APPROVED {App}
+      REJECTED {Rej}
+      CANCELLED {Can}
+      CANCELLATION_PENDING {Can}
+      PROCESSED {Pro}
+      ACKNOWLEDGED {Pro}
+      DOWNLOADING {Pro}
+      }
+    &lt;/span&gt;
+    &lt;span class="d-none"
+      aria-hidden="true"
+      i18n="@@batches.payord-status-badge.tooltip.label"
+      #tooltip&gt;
+      {hostRef.status, select,
+      OPEN {Open}
+      CLOSED {Closed}
+      INVALID {Invalid}
+      VALID {Valid}
+      ENTERED {Entered}
+      READY {Processing}
+      ACCEPTED {Accepted}
+      APPROVED {Approved}
+      REJECTED {Rejected}
+      CANCELLED {Cancelled}
+      CANCELLATION_PENDING {Cancellation pending}
+      PROCESSED {Processed}
+      ACKNOWLEDGED {Processing}
+      DOWNLOADING {Processing}
+      }
+    &lt;/span&gt;
+    &lt;bb-badge-ui
+      [color]="hostRef.statusColorMap[hostRef.status]"
+      [abbr]="abbreviation.textContent"
+      [text]="tooltip.textContent"
+    &gt;&lt;/bb-badge-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template bbPayordStatusBadgeLabelCustomizable let-hostRef&gt;
+    &lt;span class="d-none"
+      aria-hidden="true"
+      i18n="@@batches.payord-status-badge.label"
+      #label&gt;
+      {hostRef.status, select,
+      OPEN {Open}
+      CLOSED {Closed}
+      INVALID {Invalid}
+      VALID {Valid}
+      ENTERED {Entered}
+      READY {Processing}
+      ACCEPTED {Accepted}
+      APPROVED {Approved}
+      REJECTED {Rejected}
+      CANCELLED {Cancelled}
+      CANCELLATION_PENDING {Cancellation pending}
+      PROCESSED {Processed}
+      ACKNOWLEDGED {Processing}
+      DOWNLOADING {Processing}
+      }
+    &lt;/span&gt;
+    &lt;bb-badge-ui
+      [color]="hostRef.statusColorMap[hostRef.status]"
+      [text]="label.textContent"
+    &gt;&lt;/bb-badge-ui&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbPaymentsControlsCustomizable" class="discrete">bbPaymentsControlsCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbPaymentsControlsCustomizable let-hostRef&gt;
+  &lt;div (keydown)="$event?.stopPropagation()"&gt;
+    &lt;div class="bb-block" [ngClass]="{ 'bb-block--md': hostRef.isFilterOpen }"&gt;
+      &lt;div class="bb-stack"&gt;
+        &lt;!-- Search --&gt;
+        &lt;div class="bb-stack__item bb-stack__item--fill--lg-down"&gt;
+          &lt;bb-payments-search
+            [debounceTime]="hostRef.debounceTime"
+            (search)="hostRef.onSearch($event)"
+            data-role="searchbox"
+          &gt;
+          &lt;/bb-payments-search&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-stack__item d-none d-xl-block"&gt;
+          &lt;!-- Filter button --&gt;
+          &lt;button bbButton
+            [color]="hostRef.isFilterApplied ? 'primary' : 'secondary'"
+            aria-label="Toggle filter"
+            i18n-aria-label="Filter payments@@payments.ariaLabel.filter.big.button"
+            (click)="hostRef.toggleFilter()"
+            [attr.data-role]="'btn-filter'"
+          &gt;
+            &lt;bb-icon-ui name="filter"&gt;&lt;/bb-icon-ui&gt;
+            &lt;ng-container *ngIf="!hostRef.isFilterApplied"
+              i18n="Filter toggle button@@transactions.filter.button"
+            &gt;
+              Filter
+            &lt;/ng-container&gt;
+            &lt;ng-container *ngIf="hostRef.isFilterApplied"
+              i18n="Filter toggle button@@transactions.filtersApplied.button"
+            &gt;
+              Filters applied
+            &lt;/ng-container&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-stack__item bb-stack__item--push-right d-xl-none"&gt;
+          &lt;button bbButton
+            [color]="hostRef.isFilterApplied ? 'primary' : 'secondary'"
+            circle="true"
+            aria-label="Toggle filter"
+            i18n-aria-label="Filter payments@@payments.ariaLabel.filter.small.button"
+            (click)="hostRef.toggleFilter()"
+            [attr.data-role]="'btn-filter'"
+          &gt;
+            &lt;bb-icon-ui name="filter"&gt;&lt;/bb-icon-ui&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;bb-payments-filter
+      [statusBlackList]="[hostRef.statusesMap.CANCELLATION_PENDING]"
+      (filter)="hostRef.onFilter($event)"
+      (isFilterApplied)="hostRef.onFilterReset($event)"
+      (closeFilter)="hostRef.onClose()"
+      (reset)="hostRef.onFilter($event)"
+      [hidden]="!hostRef.isFilterOpen"
+    &gt;
+    &lt;/bb-payments-filter&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbPaymentsFilterCustomizable" class="discrete">bbPaymentsFilterCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbPaymentsFilterCustomizable let-hostRef&gt;
+  &lt;form
+    class="form bg-lighter"
+    [formGroup]="paymentsFilterForm"
+  &gt;
+    &lt;div class=" bb-block bb-block--md"&gt;
+      &lt;div class="row"&gt;
+        &lt;!-- Payment Status select --&gt;
+        &lt;div class="bb-block bb-block--md col-12 col-md-6 col-xl-4"&gt;
+          &lt;bb-dropdown-multi-select-ui
+            label="Status"
+            i18n-label="@@bb-payments-filter.form.label.status"
+            placeholder="All"
+            i18n-placeholder="@@bb-payments-filter.form.label.status.all"
+            formControlName="status"
+            data-role="select-status"
+          &gt;
+            &lt;bb-dropdown-multi-select-option-ui
+              *ngIf="!hostRef.statusBlackList.includes(hostRef.statusesMap.ENTERED)"
+              label="Entered"
+              [value]="hostRef.statusesMap.ENTERED"
+              i18n-label="@@payments.filter.dropdown.option.entered"
+            &gt;
+            &lt;/bb-dropdown-multi-select-option-ui&gt;
+            &lt;bb-dropdown-multi-select-option-ui
+              *ngIf="!hostRef.statusBlackList.includes(hostRef.statusesMap.PROCESSING)"
+              label="Processing"
+              [value]="hostRef.statusesMap.PROCESSING"
+              i18n-label="@@payments.filter.dropdown.option.processing"
+            &gt;
+            &lt;/bb-dropdown-multi-select-option-ui&gt;
+            &lt;bb-dropdown-multi-select-option-ui
+              *ngIf="!hostRef.statusBlackList.includes(hostRef.statusesMap.PROCESSED)"
+              label="Processed"
+              [value]="hostRef.statusesMap.PROCESSED"
+              i18n-label="@@payments.filter.dropdown.option.processed"
+            &gt;
+            &lt;/bb-dropdown-multi-select-option-ui&gt;
+            &lt;bb-dropdown-multi-select-option-ui
+              *ngIf="!hostRef.statusBlackList.includes(hostRef.statusesMap.ACCEPTED)"
+              label="Accepted"
+              [value]="hostRef.statusesMap.ACCEPTED"
+              i18n-label="@@payments.filter.dropdown.option.accepted"
+            &gt;
+            &lt;/bb-dropdown-multi-select-option-ui&gt;
+            &lt;bb-dropdown-multi-select-option-ui
+              *ngIf="!hostRef.statusBlackList.includes(hostRef.statusesMap.REJECTED)"
+              label="Rejected"
+              [value]="hostRef.statusesMap.REJECTED"
+              i18n-label="@@payments.filter.dropdown.option.rejected"
+            &gt;
+            &lt;/bb-dropdown-multi-select-option-ui&gt;
+           &lt;bb-dropdown-multi-select-option-ui
+              *ngIf="!hostRef.statusBlackList.includes(hostRef.statusesMap.CANCELLATION_PENDING)"
+              label="Cancellation pending"
+              [value]="hostRef.statusesMap.CANCELLATION_PENDING"
+              i18n-label="@@payments.filter.dropdown.option.cancellation-pending"
+            &gt;
+            &lt;/bb-dropdown-multi-select-option-ui&gt;
+            &lt;bb-dropdown-multi-select-option-ui
+              *ngIf="!hostRef.statusBlackList.includes(hostRef.statusesMap.CANCELLED)"
+              label="Cancelled"
+              [value]="hostRef.statusesMap.CANCELLED"
+              i18n-label="@@payments.filter.dropdown.option.cancelled"
+            &gt;
+            &lt;/bb-dropdown-multi-select-option-ui&gt;
+          &lt;/bb-dropdown-multi-select-ui&gt;
+        &lt;/div&gt;
+        &lt;!-- Amount range --&gt;
+        &lt;div class="bb-block bb-block--md col-12 col-md-6 col-xl-4"&gt;
+          &lt;div class="row" formGroupName="amount"&gt;
+            &lt;bb-input-number-ui
+              #min
+              class="col-6"
+              formControlName="from"
+              min="0"
+              label="Amount"
+              ariaLabel="Amount From"
+              placeholder="min"
+              i18n-label="amount from@@bb-payments-filter.form.label.amountFrom"
+              i18n-ariaLabel="amount from aria@@bb-payments-filter.form.ariaLabel.amountFrom"
+              i18n-placeholder="@@bb-payments-filter.form.placeholder.min"
+              data-role="input-amount-from"
+            &gt;
+            &lt;/bb-input-number-ui&gt;
+            &lt;bb-input-number-ui
+              #max
+              [min]="min.value || 0"
+              class="col-6"
+              formControlName="to"
+              placeholder="max"
+              ariaLabel="Amount To"
+              i18n-ariaLabel="amount to aria@@bb-payments-filter.form.ariaLabel.amountTo"
+              i18n-placeholder="@@bb-payments-filter.form.placeholder.max"
+              data-role="input-amount-to"
+              label="&amp;nbsp;"
+            &gt; &lt;!-- Do not remove label, placeholder needed for layout not to break --&gt;
+            &lt;/bb-input-number-ui&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Date range --&gt;
+        &lt;div class="bb-block bb-block--md col-12 col-md-6 col-xl-4"&gt;
+          &lt;label
+            [for]="executionDate.id"
+            i18n="@@bb-payments-filter.form.label.executionDate"
+          &gt;
+            Execution date
+          &lt;/label&gt;
+          &lt;bb-input-datepicker-ui
+            name="executionDate"
+            formControlName="executionDate"
+            [rangeSelection]="true"
+            data-role="input-date"
+            [placeholder]="'MM/DD/YY - MM/DD/YY'"
+            overrideDateFormat="MM/dd/y"
+            #executionDate
+          &gt;
+          &lt;/bb-input-datepicker-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+      &lt;!-- Apply --&gt;
+      &lt;button
+        bbButton
+        type="submit"
+        class="bb-button-bar__button"
+        (click)="hostRef.onFilter(hostRef.paymentsFilterForm.value)"
+        color="primary"
+        data-role="btn-apply"
+        [disabled]="hostRef.paymentsFilterForm.pristine || hostRef.paymentsFilterForm.get('amount').invalid"
+        i18n="@@bb-payments-filter.form.button.apply"
+      &gt;
+        Apply
+      &lt;/button&gt;
+      &lt;!-- Close --&gt;
+      &lt;button
+        bbButton
+        type="button"
+        color="secondary"
+        class="bb-button-bar__button"
+        data-role="btn-cancel"
+        i18n="@@bb-payments-filter.form.button.close"
+        (click)="hostRef.onCloseFilter()"
+      &gt;
+        Close
+      &lt;/button&gt;
+      &lt;!-- Clear all --&gt;
+      &lt;button
+        bbButton
+        type="reset"
+        color="link"
+        class="bb-button-bar__button"
+        i18n="@@bb-payments-filter.form.button.clearAll"
+        (click)="hostRef.onClearFilter()"
+        *ngIf="hostRef.paymentsFilterForm.dirty"
+        data-role="btn-clear-all"
+      &gt;
+        Clear All
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBatchListCustomizable" class="discrete">bbBatchListCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBatchListCustomizable let-hostRef&gt;
+  &lt;ng-container *ngIf="hostRef.batchOrders?.length; else emptyState"&gt;
+    &lt;ng-container *ngIf="hostRef.highlightText &amp;&amp; hostRef.totalBatchOrders"&gt;
+      &lt;div class="py-3 pl-2 border-top"&gt;
+        &lt;span i18n="@@batch-manager-list.search.results" data-role="filtered-results-count"&gt;
+          {hostRef.totalBatchOrders, plural, =0 {No results} =1 {1 result} other
+            {{{hostRef.totalBatchOrders}} results}} found
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+
+    &lt;div class="batch-manager__table d-none d-xl-block"&gt;
+      &lt;table
+        class="table table-hover bb-table"
+        [bbTable]="hostRef.batchOrders"
+        bbTableFocus
+        (sort)="hostRef.onSort($event)"
+        (rowClick)="hostRef.onRowClick($event)"
+      &gt;
+        &lt;thead&gt;
+        &lt;tr class="batch-manager__table--header"&gt;
+          &lt;th scope="col" class="batch-manager__table--status"&gt;
+              &lt;span
+                data-role="header-status"
+                i18n="Batch table header label| Batch header label for status@@batch-manager-list.batch-header.status"
+              &gt;
+                Status
+              &lt;/span&gt;
+          &lt;/th&gt;
+          &lt;th scope="col" data-role="header-name-type"&gt;
+              &lt;span
+                i18n="Batch table header label| Batch header label for name, type@@batch-manager-list.batch-header.name-type"
+              &gt;
+                Name, type
+              &lt;/span&gt;
+          &lt;/th&gt;
+          &lt;th
+            scope="col"
+            class="batch-manager__table--your-account"
+            data-role="header-account-name"
+          &gt;
+              &lt;span
+                i18n="Batch table header label| Batch header label for account@@batch-manager-list.batch-header.account"
+              &gt;
+                Your account
+              &lt;/span&gt;
+          &lt;/th&gt;
+          &lt;th
+            *ngIf="hostRef.creditDebitMixedIndicator !== CreditDebitMixedIndicator.CREDIT"
+            class="batch-manager__table--credits"
+            scope="col"
+            data-role="header-total-transaction-debit-count"
+          &gt;
+              &lt;span
+                i18n="Batch table header label| Batch header label for debits@@batch-manager-list.batch-header.debits"
+              &gt;
+                Debits
+              &lt;/span&gt;
+          &lt;/th&gt;
+          &lt;th
+            *ngIf="hostRef.creditDebitMixedIndicator !== CreditDebitMixedIndicator.DEBIT"
+            class="batch-manager__table--credits"
+            scope="col"
+            data-role="header-total-transaction-count"
+          &gt;
+              &lt;span
+                i18n="Batch table header label| Batch header label for credit@@batch-manager-list.batch-header.credits"
+              &gt;
+                Credits
+              &lt;/span&gt;
+          &lt;/th&gt;
+          &lt;th
+            scope="col"
+            data-role="header-requested-execution-date"
+            class="batch-manager__table--date"
+          &gt;
+              &lt;span
+                i18n="Batch table header label| Batch header label for execution date@@batch-manager-list.batch-header.execution-date"&gt;
+                Exec. date
+              &lt;/span&gt;
+          &lt;/th&gt;
+          &lt;th scope="col" class="batch-manager__table--tools"&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+        &lt;tr
+          data-role="batch-row"
+          *ngFor="let batchOrder of hostRef.batchOrders"
+          [bbRow]="batchOrder"
+          class="batch-manager__table--row"
+        &gt;
+          &lt;td data-role="batch-col-status" class="batch-manager__table--status"&gt;
+            &lt;div class="d-flex justify-content-between align-items-center"&gt;
+              &lt;bb-payord-status-badge
+                class="d-none d-md-block"
+                [status]="batchOrder.status"
+                [statusColorMap]="hostRef.statusBadgeColorMap"
+                [showAbbreviated]="true"
+              &gt;&lt;/bb-payord-status-badge&gt;
+              &lt;bb-payord-status-badge
+                class="d-block d-md-none"
+                [status]="batchOrder.status"
+                [statusColorMap]="hostRef.statusBadgeColorMap"
+              &gt;&lt;/bb-payord-status-badge&gt;
+              &lt;div class="d-md-none"&gt;
+                &lt;bb-batch-list-more-actions
+                  [batchOrder]="batchOrder"
+                  (approve)="hostRef.onApprove($event)"
+                  (reject)="hostRef.onReject($event)"
+                  (cancel)="hostRef.onCancel($event)"
+                  (delete)="hostRef.onDelete($event)"
+                &gt;&lt;/bb-batch-list-more-actions&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;
+            &lt;div
+              class="batch-manager__table--name"
+              data-role="batch-col-name"
+            &gt;
+              {{ batchOrder.name }}
+            &lt;/div&gt;
+            &lt;div
+              [ngSwitch]="batchOrder.type"
+              class="batch-manager__table--file"
+              data-role="batch-col-type"
+            &gt;
+              &lt;ng-container *ngSwitchCase="'SEPACT'"&gt;
+                &lt;span i18n="Batch type backbase sepa title| Batch name for type SEPA_CT@@batch-manager-list.batch-type.sepa-ct"&gt;
+                  Backbase SEPA
+                &lt;/span&gt;
+              &lt;/ng-container&gt;
+              &lt;ng-container *ngSwitchCase="'ACH_CREDIT'"&gt;
+                &lt;span i18n="Batch type ach credit title | Batch name for type NACHA_CREDIT@@bbatch-manager-list.batch-type.nacha-credit"&gt;
+                  ACH Credit (Balanced)
+                &lt;/span&gt;
+              &lt;/ng-container&gt;
+              &lt;ng-container *ngSwitchCase="'ACH_DEBIT'"&gt;
+                &lt;span i18n="Batch type ach debit title | Batch name for type NACHA_DEBIT@@bbatch-manager-list.batch-type.nacha-debit"&gt;
+                  ACH Debit (Balanced)
+                &lt;/span&gt;
+              &lt;/ng-container&gt;
+              &lt;ng-container *ngSwitchCase="'ACH_CREDIT_UNBALANCED'"&gt;
+                &lt;span i18n="Batch type ach credit unbalanced title | Batch name for type ACH_CREDIT_UNBALANCED@@bbatch-manager-list.batch-type.nacha-credit-unbalanced"&gt;
+                  ACH Credit (Unbalanced)
+                &lt;/span&gt;
+              &lt;/ng-container&gt;
+              &lt;ng-container *ngSwitchDefault&gt;
+                {{ batchOrder.type }}
+              &lt;/ng-container&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td class="batch-manager__table--your-account"&gt;
+            &lt;bb-batch-manager-list-account [batchOrder]="batchOrder"&gt;&lt;/bb-batch-manager-list-account&gt;
+          &lt;/td&gt;
+          &lt;td class="batch-manager__table--credits" *ngIf="hostRef.creditDebitMixedIndicator !== CreditDebitMixedIndicator.CREDIT"&gt;
+            &lt;ng-container *ngIf="batchOrder.creditDebitMixedIndicator !== CreditDebitMixedIndicator.CREDIT;else emDash"&gt;
+              &lt;div
+                i18n="@@batch-manager-list.debits-found"
+                data-role="batch-col-transactions-debit-count"
+              &gt;
+                { batchOrder.totalDebitTransactionsCount, plural, =1 {1 debit:} other {{{ batchOrder.totalDebitTransactionsCount }} debits:}}
+              &lt;/div&gt;
+              &lt;div class="batch-manager__table--amount"&gt;
+                &lt;span data-role="batch-col-currency-code"&gt;
+                  {{ batchOrder.totalDebitInstructedAmount?.currencyCode }}
+                &lt;/span&gt;
+                &lt;span data-role="batch-col-instructed-amount"&gt;
+                  {{ batchOrder.totalDebitInstructedAmount?.amount | number: '1.2-2' }}
+                &lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/ng-container&gt;
+          &lt;/td&gt;
+          &lt;td class="batch-manager__table--credits" *ngIf="hostRef.creditDebitMixedIndicator !== CreditDebitMixedIndicator.DEBIT"&gt;
+            &lt;ng-container *ngIf="batchOrder.creditDebitMixedIndicator !== CreditDebitMixedIndicator.DEBIT;else emDash"&gt;
+              &lt;div
+                i18n="@@batch-manager-list.credits-found"
+                data-role="batch-col-transactions-count"
+              &gt;
+                { batchOrder.totalCreditTransactionsCount, plural, =1 {1 credit:} other {{{ batchOrder.totalCreditTransactionsCount }} credits:}}
+              &lt;/div&gt;
+              &lt;div class="batch-manager__table--amount"&gt;
+                &lt;span data-role="batch-col-currency-code"&gt;
+                  {{ batchOrder.totalCreditInstructedAmount?.currencyCode }}
+                &lt;/span&gt;
+                &lt;span data-role="batch-col-instructed-amount"&gt;
+                  {{ batchOrder.totalCreditInstructedAmount?.amount | number: '1.2-2' }}
+                &lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/ng-container&gt;
+          &lt;/td&gt;
+          &lt;td data-role="batch-col-execution-date" class="batch-manager__table--date"&gt;
+            {{ batchOrder.requestedExecutionDate | date }}
+          &lt;/td&gt;
+          &lt;td class="batch-manager__table--tools"&gt;
+            &lt;div class="bb-stack justify-content-end"&gt;
+              &lt;ng-container *ngIf="batchOrder.status === hostRef.Status.ENTERED"&gt;
+                &lt;div class="d-md-none batch-manager__table--tools-small"&gt;
+                  &lt;div class="batch-manager__table-tools-button"&gt;
+                    &lt;button
+                      bbButton
+                      color="success"
+                      [block]="true"
+                      class="batch-manager__button--approve"
+                      (click)="hostRef.onApprove(batchOrder);$event.stopPropagation();"
+                      [ngClass]="{ disabled: !hostRef.batchOrdersPermissions.canApprove(batchOrder) }"
+                      [bbTooltip]="hostRef.batchOrdersPermissions.canApprove(batchOrder) ? approve : approveDisabled"
+                      triggers="hover focus"
+                      i18n="Approve batch order|Label for approve batch order@@batch-manager-list.batch-approvals.approve"
+                    &gt;
+                      Approve
+                    &lt;/button&gt;
+                  &lt;/div&gt;
+                  &lt;div class="batch-manager__table-tools-button"&gt;
+                    &lt;button
+                      bbButton
+                      color="danger"
+                      [block]="true"
+                      (click)="hostRef.onReject(batchOrder);$event.stopPropagation();"
+                      [ngClass]="{ disabled: !hostRef.batchOrdersPermissions.canReject(batchOrder) }"
+                      [bbTooltip]="hostRef.batchOrdersPermissions.canReject(batchOrder) ? reject : rejectDisabled"
+                      triggers="hover focus"
+                      i18n="Reject batch order|Label for reject batch order@@batch-manager-list.batch-approvals.reject"
+                    &gt;
+                      Reject
+                    &lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="bb-stack__item d-none d-md-block"&gt;
+                  &lt;button
+                    bbButton
+                    buttonSize="sm"
+                    [circle]="true"
+                    color="success"
+                    aria-label="Approve"
+                    i18n-aria-label="Approve batch order|Label for approve batch order@@batch-manager-list.batch-approvals.approve"
+                    data-role="batch-approve-button"
+                    [ngClass]="{ disabled: !hostRef.batchOrdersPermissions.canApprove(batchOrder) }"
+                    (click)="hostRef.onApprove(batchOrder);$event.stopPropagation();"
+                    [bbTooltip]="hostRef.batchOrdersPermissions.canApprove(batchOrder) ? approve : approveDisabled"
+                    triggers="hover focus"
+                  &gt;
+                    &lt;bb-icon-ui name="check"&gt;&lt;/bb-icon-ui&gt;
+                  &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="bb-stack__item d-none d-md-block"&gt;
+                  &lt;button
+                    bbButton
+                    buttonSize="sm"
+                    [circle]="true"
+                    color="danger"
+                    aria-label="Reject"
+                    i18n-aria-label="Reject batch order|Label for reject batch order@@batch-manager-list.batch-approvals.reject"
+                    data-role="batch-reject-button"
+                    [ngClass]="{ disabled: !hostRef.batchOrdersPermissions.canReject(batchOrder) }"
+                    (click)="hostRef.onReject(batchOrder);$event.stopPropagation();"
+                    [bbTooltip]="hostRef.batchOrdersPermissions.canReject(batchOrder) ? reject : rejectDisabled"
+                    triggers="hover focus"
+                  &gt;
+                    &lt;bb-icon-ui name="times"&gt;&lt;/bb-icon-ui&gt;
+                  &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;ng-template #approve&gt;
+                    &lt;span i18n="Approve batch order|Label for approve batch order tooltip@@batch-manager-list.batch-approvals.approve"&gt;
+                      Approve
+                    &lt;/span&gt;
+                &lt;/ng-template&gt;
+                &lt;ng-template #reject&gt;
+                    &lt;span i18n="Reject batch order|Label for reject batch order tooltip@@batch-manager-list.batch-approvals.reject"&gt;
+                      Reject
+                    &lt;/span&gt;
+                &lt;/ng-template&gt;
+                &lt;ng-template #delete&gt;
+                    &lt;span i18n="@@batch-manager-list.batch-approvals.delete"&gt;
+                      Delete
+                    &lt;/span&gt;
+                &lt;/ng-template&gt;
+                &lt;ng-template #deleteDisabled&gt;
+                    &lt;span i18n="@@batch-manager-list.batch-approvals.delete-disabled"&gt;
+                      Delete not available
+                    &lt;/span&gt;
+                &lt;/ng-template&gt;
+                &lt;ng-template #approveDisabled&gt;
+                    &lt;span i18n="Disabled approve batch order|Label for disabled approve batch order tooltip@@batch-manager-list.batch-approvals.approve-disabled"&gt;
+                      Approve not available
+                    &lt;/span&gt;
+                &lt;/ng-template&gt;
+                &lt;ng-template #approveDisabled&gt;
+                    &lt;span i18n="Disabled approve batch order|Label for disabled approve batch order tooltip@@batch-manager-list.batch-approvals.approve-disabled"&gt;
+                      Approve not available
+                    &lt;/span&gt;
+                &lt;/ng-template&gt;
+                &lt;ng-template #rejectDisabled&gt;
+                    &lt;span i18n="Disabled reject batch order|Label for disabled reject batch order tooltip@@batch-manager-list.batch-approvals.reject-disabled"&gt;
+                      Reject not available
+                    &lt;/span&gt;
+                &lt;/ng-template&gt;
+              &lt;/ng-container&gt;
+
+              &lt;div class="d-none d-md-block bb-stack__item" data-role="batch-manager-more-options-container"&gt;
+                &lt;bb-batch-list-more-actions
+                  [batchOrder]="batchOrder"
+                  (approve)="hostRef.onApprove($event)"
+                  (reject)="hostRef.onReject($event)"
+                  (cancel)="hostRef.onCancel($event)"
+                  (delete)="hostRef.onDelete($event)"
+                &gt;&lt;/bb-batch-list-more-actions&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+
+    &lt;div class="d-xl-none"&gt;
+      &lt;bb-batch-list-responsive
+        [batchOrders]="hostRef.batchOrders"
+        [highlightText]="hostRef.highlightText"
+        (rowClick)="hostRef.onRowClick($event)"
+        (approve)="hostRef.onApprove($event)"
+        (reject)="hostRef.onReject($event)"
+        (cancel)="hostRef.onCancel($event)"
+        (delete)="hostRef.onDelete($event)"
+      &gt;&lt;/bb-batch-list-responsive&gt;
+    &lt;/div&gt;
+
+    &lt;div [ngSwitch]="hostRef.loadMoreMethod" class="d-flex justify-content-center mt-3"&gt;
+      &lt;ng-container *ngSwitchCase="'pagination'"&gt;
+        &lt;bb-pagination-ui
+          [page]="hostRef.page"
+          [totalItems]="hostRef.totalBatchOrders"
+          [itemsPerPage]="hostRef.batchOrdersPerPage"
+          (pageChange)="hostRef.onPageChange($event)"
+          [boundaryLinks]="true"
+          [directionLinks]="true"
+        &gt;&lt;/bb-pagination-ui&gt;
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="'load-more'"&gt;
+        &lt;bb-load-button-ui
+          color="secondary"
+          i18n="Load more batch orders|Load more button for loading more batch orders@@batch-manager-list.load.more"
+          [isLoading]="hostRef.isLoading"
+          [size]="hostRef.batchOrdersPerPage"
+          [from]="hostRef.loadMoreFrom"
+          [totalCount]="hostRef.totalBatchOrders"
+          (paramChange)="hostRef.onLoadMore($event)"
+        &gt;
+          Load more
+        &lt;/bb-load-button-ui&gt;
+      &lt;/ng-container&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #emptyState&gt;
+    &lt;div class="bb-state-container" *ngIf="!hostRef.highlightText else emptySearchState"&gt;
+      &lt;bb-empty-state-ui
+        i18n-title="@@batch-manager.state.noBatches.title"
+        title="No Batches"
+        i18n-subtitle="@@batch-manager.state.noBatches.subtitle"
+        subtitle="You do not have any batch payments to be displayed."
+        iconSize="xxl"
+        iconModifier="batches"
+      &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #emptySearchState&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-empty-state-ui
+        data-role="batch-manager-empty-search"
+        i18n-title="@@batch-manager.no-search-results.title"
+        title="No Results Found"
+        i18n-subtitle="@@batch-manager.no-search-results.subtitle"
+        subtitle="We can’t find what you’re looking for. Please try a different criteria."
+        iconSize="xxl"
+        iconModifier="search"&gt;
+      &lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #emDash&gt;&amp;mdash;&lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbPayordStatusBadgeAbbreviationCustomizable2" class="discrete">bbPayordStatusBadgeAbbreviationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbPayordStatusBadgeAbbreviationCustomizable let-hostRef&gt;
+  &lt;span class="d-none"
+    aria-hidden="true"
+    i18n="@@batches.payord-status-badge.abbreviation.label"
+    #abbreviation&gt;
+    {hostRef.status, select,
+    OPEN {Ope}
+    CLOSED {Clo}
+    INVALID {Inv}
+    VALID {Val}
+    ENTERED {Ent}
+    READY {Pro}
+    ACCEPTED {Acc}
+    APPROVED {App}
+    REJECTED {Rej}
+    CANCELLED {Can}
+    CANCELLATION_PENDING {Can}
+    PROCESSED {Pro}
+    ACKNOWLEDGED {Pro}
+    DOWNLOADING {Pro}
+    }
+  &lt;/span&gt;
+  &lt;span class="d-none"
+    aria-hidden="true"
+    i18n="@@batches.payord-status-badge.tooltip.label"
+    #tooltip&gt;
+    {hostRef.status, select,
+    OPEN {Open}
+    CLOSED {Closed}
+    INVALID {Invalid}
+    VALID {Valid}
+    ENTERED {Entered}
+    READY {Processing}
+    ACCEPTED {Accepted}
+    APPROVED {Approved}
+    REJECTED {Rejected}
+    CANCELLED {Cancelled}
+    CANCELLATION_PENDING {Cancellation pending}
+    PROCESSED {Processed}
+    ACKNOWLEDGED {Processing}
+    DOWNLOADING {Processing}
+    }
+  &lt;/span&gt;
+  &lt;bb-badge-ui
+    [color]="hostRef.statusColorMap[hostRef.status]"
+    [abbr]="abbreviation.textContent"
+    [text]="tooltip.textContent"
+  &gt;&lt;/bb-badge-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBatchListAccountCustomizable" class="discrete">bbBatchListAccountCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBatchListAccountCustomizable let-hostRef&gt;
+  &lt;div class="break-word" data-role="batch-col-debtor-name"&gt;
+    {{ hostRef.batchOrder.account?.name }}
+  &lt;/div&gt;
+  &lt;div class="break-word bb-text-support"&gt;
+    &lt;span *ngIf="hostRef.batchOrder.bankBranchCode"&gt;{{ hostRef.batchOrder.bankBranchCode }} / &lt;/span&gt;
+    &lt;span data-role="batch-col-debtor-account"&gt;
+      {{ hostRef.batchOrder.account?.identification | accountFormatter }}
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBatchListMoreActionsCustomizable" class="discrete">bbBatchListMoreActionsCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBatchListMoreActionsCustomizable let-hostRef&gt;
+  &lt;bb-dropdown-menu-ui
+    btnCircle="true"
+    buttonSize="sm"
+    btnColor="link"
+    icon="ellipsis-h"
+    container="body"
+    (click)="$event.stopPropagation()"
+    (keyUp.enter)="$event.stopPropagation()"
+    i18n-ariaLabel="Show more actions|Label for more actions dropdown menu@@batch-manager-list.more-actions"
+    ariaLabel="More actions"
+    bbTooltip="More actions"
+    i18n-bbTooltip="@@manage-batches.batch-order.action.more.tooltip"
+    triggers="hover focus"
+    data-role="batch-manager-more-options"&gt;
+    &lt;ng-template bbDropdownMenuItem&gt;
+      &lt;button
+        type="button"
+        class="dropdown-item"
+        [disabled]="!hostRef.batchOrdersPermissions.canCancel(hostRef.batchOrder)"
+        i18n="@@manage-batches.batch-order.action.cancel"
+        (click)="hostRef.onClickAction(hostRef.Actions.CANCEL);$event.stopPropagation();"
+        data-role="cancel-batch-order"
+      &gt;
+        Cancel
+      &lt;/button&gt;
+      &lt;button
+        type="button"
+        class="dropdown-item"
+        [disabled]="!hostRef.batchOrdersPermissions.canDelete(hostRef.batchOrder)"
+        i18n="@@manage-batches.batch-order.action.delete"
+        (click)="hostRef.onClickAction(hostRef.Actions.DELETE);$event.stopPropagation();"
+        data-role="delete-batch-order"
+      &gt;
+        Delete
+      &lt;/button&gt;
+      &lt;ng-container *ngIf="hostRef.batchOrder.status === hostRef.Status.ENTERED"&gt;
+        &lt;div class="dropdown-divider mx-3 d-md-none"&gt;&lt;/div&gt;
+        &lt;button
+          type="button"
+          class="dropdown-item d-md-none"
+          [disabled]="!hostRef.batchOrdersPermissions.canApprove(hostRef.batchOrder)"
+          i18n="Approve batch order|Label for approve batch order tooltip@@batch-manager-list.batch-approvals.approve"
+          (click)="hostRef.onClickAction(hostRef.Actions.APPROVE);$event.stopPropagation();"
+          data-role="batch-manager-more-options-approve"
+        &gt;
+          Approve
+        &lt;/button&gt;
+        &lt;button
+          type="button"
+          class="dropdown-item d-md-none"
+          [disabled]="!hostRef.batchOrdersPermissions.canReject(hostRef.batchOrder)"
+          i18n="Reject batch order|Label for reject batch order@@batch-manager-list.batch-approvals.reject"
+          (click)="hostRef.onClickAction(hostRef.Actions.REJECT);$event.stopPropagation();"
+          data-role="batch-manager-more-options-reject"
+        &gt;
+          Reject
+        &lt;/button&gt;
+      &lt;/ng-container&gt;
+    &lt;/ng-template&gt;
+  &lt;/bb-dropdown-menu-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBatchBreachLimitReportCustomizable" class="discrete">bbBatchBreachLimitReportCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBatchBreachLimitReportCustomizable let-hostRef&gt;
+  &lt;bb-modal-ui [isOpen]="hostRef.isOpen" (cancel)="hostRef.onClose()" (confirm)="hostRef.onClose()"&gt;
+    &lt;bb-modal-header-ui role="heading"&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;header
+          class="bb-stack bb-stack__item--fill"
+          aria-labelledby="headerTtitle"
+        &gt;
+          &lt;bb-icon-ui class="bb-stack__item" name="error" color="danger"&gt;&lt;/bb-icon-ui&gt;
+          &lt;span
+            id="headerTtitle"
+            class="bb-stack__item highlight text-large"
+            i18n="@@batches.breach-limit-report.title"
+            data-role="limit-breach-modal-title"
+          &gt;
+            Limits breach
+          &lt;/span&gt;
+          &lt;div class="bbb-stack bb-stack__item bb-stack__item--push-right"&gt;
+            &lt;button
+              (click)="hostRef.print()"
+              type="button"
+              class="bb-stack__item btn border-0 btn-circle"
+            &gt;
+              &lt;!-- ACCESSIBILITY compliance: The style attributes' content is needed for NVDA to read content on hover --&gt;
+              &lt;span
+                class="sr-only"
+                aria-label="Print breach limit report"
+                i18n-aria-label="@@batches.breach-limit-report.button.print"
+                style="min-width: 10px; min-height: 10px;"
+              &gt;
+                Print breach limit report
+              &lt;/span&gt;
+              &lt;bb-icon-ui name="print"&gt;&lt;/bb-icon-ui&gt;
+            &lt;/button&gt;
+            &lt;button
+              (click)="hostRef.onClose()"
+              type="button"
+              class="bb-stack__item btn border-0 btn-circle"
+            &gt;
+              &lt;span
+                class="sr-only"
+                aria-label="Close breach limit report dialog"
+                i18n-aria-label="@@batches.breach-limit-report.button.close"
+                style="min-width: 10px; min-height: 10px;"
+              &gt;
+                Close breach limit report dialog
+              &lt;/span&gt;
+              &lt;bb-icon-ui name="clear"&gt;&lt;/bb-icon-ui&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/header&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui role="main"&gt;
+      &lt;ng-template bbCustomModalBody&gt;
+        &lt;div class="mb-4" i18n="@@batches.breach-limit-report.subtitle" data-role="limit-breach-modal-message"&gt;
+          Your batch could not be approved due to a limit breach. See the breached limits details below:
+        &lt;/div&gt;
+        &lt;div class="card card-body card--shadowless card--highlight mb-4"&gt;
+          &lt;div class="d-flex justify-content-between mb-3 align-items-center"&gt;
+            &lt;bb-payord-status-badge data-role="batch-status"
+              [status]="batchOrder?.status"
+            &gt;&lt;/bb-payord-status-badge&gt;
+            &lt;div class="d-flex align-items-center text-muted text-small"&gt;
+              &lt;bb-icon-ui name="event"&gt;&lt;/bb-icon-ui&gt;
+              &lt;span class="ml-1" data-role="batch-date"&gt;
+                {{ hostRef.batchOrder?.requestedExecutionDate | date: 'mediumDate' }}
+              &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="text-large highlight pb-3 border-bottom" data-role="batch-name"&gt;{{ hostRef.batchOrder?.name }}&lt;/div&gt;
+          &lt;div class="d-flex justify-content-between align-items-center mt-3"&gt;
+            &lt;div class="text-small" data-role="batch-total-payments"&gt;
+              {{ hostRef.batchOrder.totalTransactionsCount }}
+              &lt;ng-container i18n="@@batches.breach-limit-report.total-transactions-count"&gt;
+                { hostRef.batchOrder.totalTransactionsCount, plural, =1 {payment} other {payments}}
+              &lt;/ng-container&gt;
+            &lt;/div&gt;
+            &lt;div class="text-large highlight"&gt;
+              &lt;bb-amount-ui
+                class="bb-amount--currency-space" data-role="batch-total-amount"
+                [amount]="hostRef.batchOrder?.totalInstructedAmount?.amount"
+                [currency]="hostRef.batchOrder?.totalInstructedAmount?.currencyCode"
+                [mapCurrency]="false"
+              &gt;&lt;/bb-amount-ui&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;table class="table table-hover border-top-0"&gt;
+            &lt;thead class="bb-table__head--highlight"&gt;
+              &lt;tr&gt;
+                &lt;th scope="col" class="w-50 bb-table--text-start"&gt;&lt;/th&gt;
+                &lt;th scope="col" class="w-25 bb-table--text-end" i18n="@@batches.breach-limit-report.table.head.limit" data-role='breach-currency'&gt;Limit ({{hostRef.error.breachReport[0].currency}})&lt;/th&gt;
+                &lt;th scope="col" class="w-25 bb-table--text-end" i18n="@@batches.breach-limit-report.table.head.consumed"&gt;Consumed&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              &lt;tr *ngFor="let breachInfo of sortedBreachItems" data-role="limit-breach"&gt;
+                &lt;td class="bb-table--text-start" data-role="limit-type"&gt;
+                  &lt;span class="highlight" *ngIf="breachInfo.breachedLimitType === 'TRANSACTIONAL'" i18n="@@batches.breach-limit-report.table.transactional"&gt;
+                    Per transaction
+                  &lt;/span&gt;
+                  &lt;ng-container *ngIf="breachInfo.breachedLimitType !== 'TRANSACTIONAL'"&gt;
+                    &lt;span class="highlight" i18n="@@batches.breach-limit-report.table.period"&gt;
+                      {breachInfo.timeframe.period, select, DAILY {Daily} WEEKLY {Weekly} MONTHLY {Monthly} QUARTERLY {Quarterly} YEARLY {Yearly} other {{{breachInfo.timeframe.period | titlecase}}}}
+                    &lt;/span&gt;
+                    &lt;ng-container *ngIf="breachInfo.timeframe.period !== 'DAILY'"&gt;
+                      &lt;div [ngSwitch]="breachInfo.timeframe.period" class="text-muted" data-role="period"&gt;
+                        &lt;ng-container *ngSwitchCase="'WEEKLY'" i18n="@@batches.breach-limit-report.table.period.timeframe.till"&gt;
+                          Till {{breachInfo.timeframe.endTime | date: 'mediumDate'}}
+                        &lt;/ng-container&gt;
+                        &lt;ng-container *ngSwitchCase="'MONTHLY'" i18n="@@batches.breach-limit-report.table.period.timeframe.till"&gt;
+                          Till {{breachInfo.timeframe.endTime | date: 'mediumDate'}}
+                        &lt;/ng-container&gt;
+                        &lt;ng-container *ngSwitchCase="'QUARTERLY'"&gt;
+                          {{breachInfo.timeframe.startTime | date: 'mediumDate'}} - {{breachInfo.timeframe.endTime | date: 'mediumDate'}}
+                        &lt;/ng-container&gt;
+                        &lt;ng-container *ngSwitchCase="'YEARLY'"&gt;
+                          {{breachInfo.timeframe.startTime | date: 'mediumDate'}} - {{breachInfo.timeframe.endTime | date: 'mediumDate'}}
+                        &lt;/ng-container&gt;
+                      &lt;/div&gt;
+                    &lt;/ng-container&gt;
+                  &lt;/ng-container&gt;
+                &lt;/td&gt;
+                &lt;td class="bb-table--text-end" data-role="limit-amount"&gt;
+                  &lt;bb-amount-ui
+                    [amount]="breachInfo.currentThreshold"
+                  &gt;&lt;/bb-amount-ui&gt;
+                &lt;/td&gt;
+                &lt;td class="bb-table--text-end" data-role="limit-consumed"&gt;
+                  &lt;ng-container *ngIf="breachInfo.breachedLimitType === 'TRANSACTIONAL'"&gt;
+                    &amp;mdash;
+                  &lt;/ng-container&gt;
+                  &lt;ng-container *ngIf="breachInfo.breachedLimitType !== 'TRANSACTIONAL'"&gt;
+                    &lt;bb-amount-ui
+                      [amount]="breachInfo.currentConsumption"
+                    &gt;&lt;/bb-amount-ui&gt;
+                  &lt;/ng-container&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBatchManagerListSuccessNotificationCustomizable" class="discrete">bbBatchManagerListSuccessNotificationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBatchManagerListSuccessNotificationCustomizable
+  let-hostRef
+  let-action="context.action"
+  &gt;
+  &lt;span i18n="@@batch-manager.batch-order.notification.success" data-role="batch-approved-notification"&gt;
+    Batch was {action, select, APPROVED {approved} REJECTED {rejected} DELETED {deleted} CANCELLED {cancelled}}
+  &lt;/span&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBatchManagerListErrorNotificationCustomizable" class="discrete">bbBatchManagerListErrorNotificationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBatchManagerListErrorNotificationCustomizable
+  let-hostRef
+  let-action="context.action"
+  let-error="context.error"
+  &gt;
+  &lt;bb-batch-action-error-message
+    [error]="error"
+    [action]="action"
+    [attr.data-role]="'batch-reject-failed-notification'"
+    &gt;&lt;/bb-batch-action-error-message&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBatchManagerListLimitBreachBodyNotificationCustomizable" class="discrete">bbBatchManagerListLimitBreachBodyNotificationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBatchManagerListLimitBreachBodyNotificationCustomizable
+  let-hostRef
+  let-batchOrder="context.batchOrder"
+  &gt;
+  &lt;span i18n="batches.batch-order.notification.breach-limit.body"&gt;
+    Batch '{{batchOrder.name}}' could not be approved due to a limit breach.
+  &lt;/span&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBatchManagerListLimitBreachHeaderNotificationCustomizable" class="discrete">bbBatchManagerListLimitBreachHeaderNotificationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBatchManagerListLimitBreachHeaderNotificationCustomizable let-hostRef&gt;
+  &lt;span i18n="batches.batch-order.notification.breach-limit.header"&gt;Limits breach&lt;/span&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

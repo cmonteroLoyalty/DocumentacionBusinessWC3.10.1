@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Create manual batch payments</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="manual_batch_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Create manual batch payments</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html"><span class="toc-current">Create manual batch payments</span></a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="manual_batch_reference" class="sect0">Create manual batch payments</h1>
+          <div class="paragraph">
+<p>The <strong>Create manual batch payments</strong> widget expects a configuration defining the available batch types,
+the steps that make up the wizard, and the form fields in the steps.</p>
+</div>
+<div class="paragraph">
+<p>The overall structure of the configuration is as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="manual_batch_reference.html#manual_batch_main_configuration">Main configuration</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="manual_batch_reference.html#manual_batch_type_configuration">Batch type configuration</a>s: The batch types this configuration supports</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="manual_batch_reference.html#manual_batch_configuration_formgroup">Form group configuration</a>s: A group of form controls</p>
+<div class="paragraph">
+<p>The form group is linked to a step in the wizard.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="manual_batch_reference.html#manual_batch_configuration_formfield">Form field configuration</a>s: A form control</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="manual_batch_reference.html#manual_batch_steps_configuration">Step configuration</a>s: The steps in the wizard</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="manual_batch_main_configuration" class="discrete">Main configuration</h2>
+<div class="paragraph">
+<p>The TypeScript interface of the main widget configuration is as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">export interface ManualBatchesConfig {
+  availableTypes: Array&lt;ManualBatchTypeConfig&gt;;
+  enableTypeSelection: boolean | Array&lt;StepName&gt;;
+  steps?: Array&lt;StepperConfig&gt;;
+  options?: MultiPaymentWidgetOptions;
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>availableTypes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The list of <a href="manual_batch_reference.html#manual_batch_type_configuration">Batch type configuration</a>s available in the <strong>Create manual batch payments</strong> widget.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enableTypeSelection</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag to show batch type selection component. It accepts a collection of step identifiers
+where the component will be shown.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>steps</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. List of <a href="manual_batch_reference.html#manual_batch_steps_configuration">Step configuration</a>s.
+Each step configuration defines a step in the wizard.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Configuration options.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="manual_batch_type_configuration" class="discrete">Batch type configuration</h2>
+<div class="paragraph">
+<p>The batch type configuration defines the name, the form groups, and the associated business function.
+The TypeScript interface is as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">export interface ManualBatchTypeConfig {
+    name: string;
+    paymentType: string;
+    fields: Array&lt;PaymentFormFieldConfig | PaymentFormGroup&gt;;
+    customFields?: PaymentComponentsMap;
+    resourceName?: string;
+    businessFunction?: string;
+    hooks?: PaymentHooksOptions;
+    options?: PaymentTypeOptions;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This configuration has the following properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the batch type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The payment type that is sent to DBS when the all the payments are created.
+For example: <code>INTRACOMPANY_PAYMENT_CREDIT_USA</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fields</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of <a href="manual_batch_reference.html#manual_batch_configuration_formgroup">Form group configuration</a>s available in this batch type.
+In the form group configuration, you can map the form group to one of the steps of the wizard.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resourceName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Access Control resource that the customer needs to access this batch type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>businessFunction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Access Control business function that the customer needs to access this batch type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>customFields</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Map of custom form components for new payment components or to override the existing components.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hooks</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Map of functions that support extending the functionality of the batch type configuration.
+See <a href="adopt_manual_batch_widget.html#provide_hooks_to_the_manual_batch_configuration">Provide hooks to the manual batch configuration</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="manual_batch_ootb_configurations" class="discrete">Out-of-the-box batch type configurations</h3>
+<div class="paragraph">
+<p>The following batch type configuration is supported out of the box:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Batch type</th>
+<th class="tableblock halign-left valign-top">Exported name</th>
+<th class="tableblock halign-left valign-top">Required business function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intracompany payment credit USA</p>
+<p class="tableblock"><code>INTRACOMPANY_PAYMENT_CREDIT_USA</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BATCH_INTERNAL_TRANSFERS</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Batch - Intracompany Payments</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="manual_batch_steps_configuration" class="discrete">Step configuration</h2>
+<div class="paragraph">
+<p>The wizard can consist of multiple steps that show one or more form groups.
+Each step has the following configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">export interface StepperConfig {
+  stepName: StepName;
+  stepDisplayValue: string;
+  isActive: boolean;
+  isChecked: boolean;
+  buttonClass: Array&lt;string&gt;;
+  buttonConfig: Array&lt;StepperButtonConfig&gt;;
+  cssClasses?: Array&lt;string&gt;;
+  footerDetail?: MultiPaymentFooterOptions;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This configuration has the following properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stepName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the step. Used as identifier in <a href="manual_batch_reference.html#manual_batch_configuration_formgroup">Form group configuration</a> <code>stepName</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stepDisplayValue</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label to be shown in the <code>bb-stepper-step-ui</code> component.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isActive</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A flag indicating if the step should be shown initially as active.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isChecked</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A flag indicating if the step should be shown initially as checked.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>buttonClass</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An array of CSS classes to style the button bar of the step.
+For example <code>['fixed-bottom', 'bb-button-bar&#8212;&#8203;sticky']</code> to fix the button bar to the bottom and make it sticky.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>buttonConfig</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>The collection of buttons configuration for this step.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">export interface StepperButtonConfig {
+  type: string;
+  text: string;
+  action: StepperAction;
+  hooks?: MultiPaymentHooksConfig;
+}</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cssClasses</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An array of CSS classes to style the step container.
+For example: <code>['card', 'card-body']</code> to have a card style step.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>footerDetail</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>The configuration to show details in the footer alongside with the buttons</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">export interface MultiPaymentFooterOptions {
+  totalCount: boolean;
+  totalAmount: boolean;
+}</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+</tbody>
+</table>
+<h2 id="manual_batch_configuration_formgroup" class="discrete">Form group configuration</h2>
+<div class="paragraph">
+<p>The form group configuration is used to represent a form group fields together.
+It is also possible to create nested form groups.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">export interface MultipleFormGroup {
+    name: string;
+    title?: string;
+    stepName?: string;
+    collapsible?: boolean;
+    fields: Array&lt;PaymentFormFieldConfig | MultipleFormGroup&gt;;
+    cssClasses?: Array&lt;string&gt;;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This configuration has the following properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the form group. This is the Angular form group name, so it should be a string with no spaces.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Title for the form group.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stepName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. The step in the wizard where the form group is visible.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collapsible</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether users can collapse and expand the form group. If enabled, also set a <code>title</code> for this form group,
+in order to display a heading in the collapsed state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fields</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array of <a href="manual_batch_reference.html#manual_batch_configuration_formgroup">Form group configuration</a>s or <a href="manual_batch_reference.html#manual_batch_configuration_formfield">Form field configuration</a>s.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cssClasses</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An array of CSS classes to style the group.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="manual_batch_configuration_formfield" class="discrete">Form field configuration</h2>
+<div class="paragraph">
+<p>The form field configuration defines a single form control. It is not possible to nest form fields.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">export interface PaymentFormFieldConfig {
+    name: string;
+    type: PaymentComponents | string;
+    options: PaymentFormFieldOptions;
+    hooks?: PaymentFormFieldHooksOptions;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This configuration has the following properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the form control. This is the Angular form control name, so it should be a string with no spaces.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>The type of form control, a string that maps to a form control component name.
+See <a href="manual_batch_reference.html#manual_batch_configuration_components">Components</a> below for more details.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">export const PaymentComponentsMap = {
+    text: PayordTextboxComponent,
+    textarea: PayordTextAreaComponent,
+    address: PayordAddressComponent,
+    select: PayordSelectComponent,
+    radio: PayordRadioComponent,
+    debitAccountSelector: PayordDebitAccountSelectorComponent,
+    beneficiarySelector: PayordBeneficiarySelectorComponent,
+    schedule: PayordScheduleComponent,
+    amount: PayordAmountComponent,
+    checkbox: PayordCheckboxComponent,
+    switch: PayordSwitchComponent,
+    date: PayordDateComponent,
+    number: PayordNumberComponent,
+    phone: PayordPhoneComponent,
+    internalAccountSelector: PayordInternalAccountSelectorComponent,
+    compactAmount: PayordCompactAmountComponent,
+    scheduleHeader: PayordScheduleHeaderComponent,
+};</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A set of properties to customize each form control, see <a href="manual_batch_reference.html#manual_batch_generic_field_options">Generic form field options</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hooks</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Map of functions that support extending the functionality of the form control.
+See <a href="adopt_manual_batch_widget.html#provide_hooks_to_the_batch_form_field_configuration">Provide hooks to the form field configuration</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="manual_batch_generic_field_options" class="discrete">Generic form field options</h3>
+<div class="paragraph">
+<p>The below options are common to all form components. Any additional option specific to a particular field will be specified in the components section.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>label</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The label for the form control. Defaults to an empty string.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>placeholder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The placeholder for the form control. Defaults to an empty string.
+The placeholder option is not applicable to checkbox, radio and switch components.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cssClasses</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An array of CSS classes to style the form field. For example: <code>['d-inline-block', 'col-12', 'col-md-6']</code>.
+The classes in the form field config should occupy 50% or less of the width of the form in medium and large screens.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>validators</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An array of angular validation functions that the widget applies to the form control.
+For example: <code>[Validators.required, routingTransitNumberValidator]</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>asyncValidators</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Similar to validators an array of asynchronous validators that the widget applies to the form control.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>validationMessages</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An array of custom validation messages for different error types.
+For example: <code>[{ name: 'required', message: 'End date is required' }]</code>.
+See <a href="adopt_manual_batch_widget.html#provide_custom_manual_batch_validation_messages">Provide custom validation messages to the form field</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultValue</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It is the initial value the form control.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dependants</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An array of names of form fields which are depending on the current field.
+The field names provided in <code>dependants</code> are hidden by default and are displayed
+based on a value or condition. See <a href="adopt_manual_batch_widget.html#custom_batchtype_togglefields">Toggle fields</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>activateDependantsOn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A value or a function that determines when the <code>dependants</code> should be visible.
+See <a href="adopt_manual_batch_widget.html#custom_batchtype_togglefields">Toggle fields</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mapToField</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This property helps to map the correct parent of the form field. When a form control is placed
+in a group or section, it must be mapped to the appropriate parent so that the field value is sent correctly to
+the backend. See <a href="adopt_manual_batch_widget.html#custom_batchtype_repositionfields">Reposition fields</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isConditionalMandatory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This property helps to specify dependant fields as mandatory when they are visible.
+Don&#8217;t provide the dependant fields with <code>Validator.required</code>, since they are hidden by default.
+In those cases, set <code>isConditionalMandatory</code> to make the field required only when it is visible.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>helperText</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Text that is visible next to form control&#8217;s label.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional. Description of the form control. It is visible below the form control.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="manual_batch_configuration_components" class="discrete">Components</h3>
+<div class="paragraph">
+<p>This section lists the out-of-the-box supported payment form components and ways to configure them.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Text component</strong>: This component is similar to the <code>bb-input-text-ui</code> from Web Design System.
+It accepts the input properties of <code>bb-input-text-ui</code> as options.
+The textbox component accepts an option <code>showCharCounter</code> which shows the current count of typed characters.</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manual_batch_component_text.svg?ver=3.10.1" alt="manual batch component text">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    type: PaymentComponents.text,
+    name: 'name',
+    options: {
+        validators: [Validators.required, noWhitespaceValidator as ValidatorFn],
+        validationMessages: [{ message: 'Batch name is required', name: 'required' }],
+        label: 'Batch name',
+        showCharCounter: true,
+        maxLength: 25,
+        cssClasses: ['w-50'],
+    },
+},</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Textarea component</strong>: This component is similar to the <code>bb-input-textarea-ui</code> from Web Design System.
+It accepts the input properties of <code>bb-input-textarea-ui</code> as options.
+Provide <code>collapseOptions</code> to make the text area collapsed by default.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Regular textarea</strong>:</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_textarea.svg?ver=3.10.1" alt="payord textarea">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: CounterPartyFields.remittanceInformation,
+    type: PaymentComponents.textarea,
+    options: {
+        label: 'Message to beneficiary (optional)',
+        placeholder: 'Type your message here',
+        showCharCounter: true,
+        minLength: 0,
+        maxLength: 140,
+        rows: 3,
+        cols: 50,
+        cssClasses: ['d-inline-block', 'col-12', 'px-0'],
+        mapToField: PaymentBaseFields.counterparty,
+    },
+},</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Collapsed textarea</strong>:</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_textarea_collapsed.svg?ver=3.10.1" alt="payord textarea collapsed">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: CounterPartyFields.remittanceInformation,
+    type: PaymentComponents.textarea,
+    options: {
+        label: 'Message to beneficiary (optional)',
+        placeholder: 'Type your message here',
+        showCharCounter: true,
+        minLength: 0,
+        maxLength: 140,
+        rows: 3,
+        cols: 50,
+        cssClasses: ['d-inline-block', 'col-12', 'px-0'],
+        mapToField: PaymentBaseFields.counterparty,
+        collapseOptions: {
+            btnColor: 'link',
+            btnSize: 'md',
+            hideIcon: false,
+            icon: 'add',
+            iconSize: 'md',
+            label: 'Add message to beneficary',
+        }
+    },
+},</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Select component</strong>: This component is similar to the <code>bb-dropdown-single-select-ui</code> from Web Design System.
+It accepts the input properties of <code>bb-dropdown-single-select-ui</code> as options.</p>
+<div class="openblock">
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_select.svg?ver=3.10.1" alt="payord select">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: CounterPartyFields.accountType,
+    type: PaymentComponents.select,
+    options: {
+        label: 'Account type',
+        validators: [Validators.required],
+        options: [{
+            label: 'Savings',
+            value: 'SAVINGS',
+        }, {
+            label: 'Checking',
+            value: 'CHECKING',
+        }],
+        placeholder: 'Select an account type',
+        cssClasses: ['d-inline-block', 'col-6', 'align-top', 'pr-0'],
+    },
+},</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Radio component</strong>: This component is similar to the <code>bb-input-radio-group-ui</code> from Web Design System.
+It accepts the following input options.</p>
+<div class="openblock">
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_radio.svg?ver=3.10.1" alt="payord radio">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: CounterPartyFields.standardEntryClass,
+    type: PaymentComponents.radio,
+    options: {
+    label: 'Standard entry class (SEC Type)',
+    validators: [Validators.required],
+    cssClasses: ['d-inline-block', 'col-6', 'align-top', 'pl-0'],
+    mapToField: PaymentBaseFields.counterparty,
+    horizontal:true,
+    preselect: true,
+    options: [{
+            label: 'Personal(PPD)',
+            value: 'PPD',
+        },{
+            label: 'Business(CCD)',
+            value: 'CCD',
+        },
+    ]},
+},</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Checkbox component</strong>: This component is similar to the <code>bb-input-checkbox-ui</code> from Web Design System.
+It accepts the following input options.</p>
+<div class="openblock">
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_checkbox.svg?ver=3.10.1" alt="payord checkbox">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    type: PaymentComponents.checkbox,
+    name: RemittanceInfoFields.urgent,
+    options: {
+        label: 'This payment is urgent',
+    },
+},</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Switch component</strong>: This component is similar to the <code>bb-switch-ui</code> from Web Design System.
+It accepts the following input options:</p>
+<div class="openblock">
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_switch.svg?ver=3.10.1" alt="payord switch">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: 'isCorrespondentBankTransfer',
+    type: PaymentComponents.switch,
+    options: {
+        label: 'Transfer through correspondent bank',
+        cssClasses: ['d-block', 'align-top', 'pl-0', 'mb-0'],
+        labelPosition: 'right',
+    },
+},</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Number component</strong>: This component is similar to the <code>bb-input-number-ui</code> from Web Design System.
+It accepts the following input options:</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_number_input.svg?ver=3.10.1" alt="payord number input">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  name: ScheduleFields.repeat,
+  type: PaymentComponents.number,
+  options: {
+    isConditionalMandatory: true,
+    label: 'Repeat',
+    min: 2,
+    max: 200,
+    defaultValue: 2,
+    validationMessages: [
+      { name: 'required', message: 'Value is required' },
+      { name: 'max', message: 'Value exceeds maximum allowed occurances' },
+    ],
+  },
+},</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Phone component</strong>: This component is similar to the <code>bb-input-phone-ui</code> from Web Design System.
+It accepts the following input options:</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_phone_input.svg?ver=3.10.1" alt="payord phone input">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  name: 'phoneNumber',
+  type: PaymentComponents.phone,
+  options: {
+    label: 'Beneficiary phone number',
+  },
+},</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Amount component</strong>: This component is similar to the <code>bb-amount-ui</code> from Web Design System.
+The default value for the amount should be an object similar to the given example.
+It accepts the following input options:</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_amount.svg?ver=3.10.1" alt="payord amount">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    type: PaymentComponents.amount,
+    name: RemittanceInfoFields.amountCurrencyGroup,
+    options: {
+        label: 'Amount',
+        cssClasses: ['col-8', 'pl-0', 'mb-0'],
+        currencies: ['USD'],
+        defaultValue: {
+          amount: '5.00',
+          currency: 'USD',
+        },
+    },
+},</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Compact amount component</strong>: This component is a single combined field and not split into currency, amount, and decimal. It accepts the following input:</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_compact_amount.svg?ver=3.10.1" alt="payord compact amount">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  type: PaymentComponents.compactAmount,
+  name: RemittanceInfoFields.amountCurrencyGroup,
+  options: {
+    label: 'Amount',
+    cssClasses: ['bb-amount-input__field--large', 'bb-block', 'bb-block--lg', 'col-md-6'],
+    currency: 'USD',
+    autoDecimal: true,
+    validationMessages: [
+      {name: 'invalidAmount',
+      message: 'Please add amount of this transfer',
+      },
+    ],
+  },
+},</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>autoDecimal</code>: Sets the decimal automatically on the UI when the bank customer starts typing in the input field. <code>currency</code> is used as initial currency.</p>
+</div>
+</li>
+<li>
+<p><strong>Date component</strong>: This component is similar to the <code>bb-input-datepicker-ui</code> from Web Design System.
+It accepts the following input options:</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manual_batch_component_date.svg?ver=3.10.1" alt="manual batch component date">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    type: PaymentComponents.date,
+    name: 'requestedExecutionDate',
+    options: {
+        validators: [pastDateValidator as ValidatorFn, Validators.required],
+        validationMessages: [{ message: 'Execution date cannot be in past', name: 'pastDate' }],
+        label: 'Execution date',
+        cssClasses: ['w-50'],
+        overrideDateFormat: 'dd/MM/yyyy',
+        placeholder: 'DD/MM/YYYY',
+    },
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Credit debit selector component</strong>: This component allows customers to switch from credit to debit for
+the same batch type. For now only credit is supported.</p>
+<div class="paragraph">
+<p>A sample config for credit debit selector is below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manual_batch_component_credit_debit_selector.svg?ver=3.10.1" alt="manual batch component credit debit selector">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  type: PaymentComponents.creditDebitSelector,
+  name: 'creditDebitIndicator',
+  options: {
+    label: 'Internal transfers',
+    choices: [
+      { type: 'CREDIT', name: 'Send', description: 'Send money to multiple own accounts' },
+    ],
+  },
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Multipayment account selector component</strong>: This component is similar to the <code>bb-account-selector-ui</code> component
+from Web Design System. The widget injects the debit accounts as property named <code>items$</code> in <code>options</code> at runtime.
+When overriding <code>PaymentComponents.debitAccountSelector</code> using <code>customComponents</code> (see <a href="adopt_manual_batch_widget.html#custom_batchtype_overridecomponents">Override existing form components</a>),
+retrieve the debit accounts by subscribing to the <code>items$</code> observable that is injected into config options.
+The type of <code>items$</code> is as follows:</p>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { InternalAccountFormItem } from '@backbase/payments-common-ang';
+items$: Observable&lt;Array&lt;InternalAccountFormItem&gt;&gt;;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A sample config for debit account selector is below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_debit_account_selector.svg?ver=3.10.1" alt="payord debit account selector">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  type: PaymentComponents.multiPaymentAccountSelector,
+  name: InitiatorFields.initiatorAccountGroup,
+  options: {
+    label: 'From',
+    placeholder: 'Select an account',
+    validators: [Validators.required],
+    validationMessages: [{ message: 'Account is required', name: 'required' }],
+    arrangements: {
+      privilege: 'create',
+      ignoredProductKindNames: [ProductKinds.creditCard, ProductKinds.debitCard],
+    },
+    cssClasses: ['w-75'],
+    filterItems: false,
+    required: true,
+    showBankBranchCode: true,
+  },
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Multi payment card component</strong>: This component renders payments on demand. It allows customers to create, edit, or
+remove payments. It can handle up to a 1,000 payments thanks to the virtual scroll technique, that only renders the
+visible payments while scrolling up and down. It takes the maximum number of payments to manage from the configuration
+options, it is not allowed to create more payments than that maximum. The arrangements request can also be configured,
+in <code>options.arrangements</code>, to filter some arrangement types and which privilege is used to make the request.</p>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { InternalAccountFormItem } from '@backbase/payments-common-ang';
+items$: Observable&lt;Array&lt;InternalAccountFormItem&gt;&gt;;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A sample config for debit account selector is below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manual_batch_component_multipayment_card.svg?ver=3.10.1" alt="manual batch component multipayment card">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  type: PaymentComponents.multiPaymentCard,
+  name: InitiatorFields.initiatorAccountGroup,
+  options: {
+    label: 'To',
+    helperText: 'You can add up to %s transfers',
+    validators: [minimumOneAccount as ValidatorFn],
+    maximumNumberOfPayments: 100,
+    validationMessages: [{ message: 'Minimum one transfer is required', name: 'empty' }],
+    arrangements: {
+      privilege: 'view',
+      ignoredProductKindNames: [ProductKinds.creditCard, ProductKinds.debitCard, ProductKinds.loanAccount],
+    },
+    fieldsConfig: {
+      counterpartyName: {
+        validators: [Validators.required, accountsValidation(PaymentBaseFields.initiator)],
+        placeholder: 'Enter or select account',
+        dropdownIcon: '',
+        ariaLabel: '',
+        validationMessages: [
+          { message: 'Account is required', name: 'required' },
+          { message: 'Account is same as from', name: 'sameAccount' },
+        ],
+      },
+      amount: {
+        validators: [Validators.required, amountGreaterThanZero as ValidatorFn],
+        placeholder: '0.00',
+        ariaLabel: '',
+        currency: 'USD',
+        maxLength: 10,
+        validationMessages: [
+          { message: 'Amount is required', name: 'required' },
+          { message: 'Amount is required', name: 'invalidAmount' },
+        ],
+      },
+      description: {
+        validators: [],
+        placeholder: 'Enter Description',
+        label: 'Add Description',
+        helperText: 'Optional',
+        title: 'Description',
+      },
+    },
+    hooks: {
+      onBlur: verifyOnBlur,
+    },
+  },
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

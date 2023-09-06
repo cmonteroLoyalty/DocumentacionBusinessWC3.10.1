@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Cash Flow Forecasting common library</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="cash_flow_common_lib_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Cash Flow Forecasting common library</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html"><span class="toc-current">Cash Flow Forecasting common library</span></a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="cash_flow_common_lib_reference" class="sect0">Cash Flow Forecasting common library</h1>
+          <h2 id="_base_components" class="discrete">Base components</h2>
+<div class="paragraph">
+<p>Base components provide a common inheritance scheme, which purpose is
+to isolate logic and avoid duplication of the code with exactly the same user flow for different widgets.</p>
+</div>
+<h3 id="LinkStatusBaseComponent" class="discrete">LinkStatusBaseComponent</h3>
+<div class="paragraph">
+<p>An abstract class isolate logic with checking and setting status of the linking with the accounting software
+through the connection to own backend service. This is part of the initial flow for all of the cash flow widgets,
+to understand inheritance clearly check the inheritance scheme.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { LinkStatusBaseComponent } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Extends <a href="cash_flow_common_lib_reference.html#DestroyableComponent">DestroyableComponent</a>.</p>
+</div>
+<h4 id="_properties_2" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>smeLinkStatus$: Observable&lt;LinkStatus&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of SME link statuses</p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_methods" class="discrete">Methods</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>protected setSmeStatusAsAuthorized(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updates the link status to be <code>Authorized</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>protected abstract checkLinkStatus(status: LinkStatus): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method is used to check status on every SME link status update</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="FetchingDataBaseComponent" class="discrete">FetchingDataBaseComponent</h3>
+<div class="paragraph">
+<p>The abstract class isolates logic with polling backend while data is fetching from the accounting system.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { FetchingDataBaseComponent } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Extends <a href="cash_flow_common_lib_reference.html#LinkStatusBaseComponent">LinkStatusBaseComponent</a>.</p>
+</div>
+<h4 id="_properties_3" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() navigateToConnectAccountingSoftware: EventEmitter&lt;void&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Navigates to connect accounting software widget on emit</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>protected fetchingDataStatus$: Observable&lt;FetchingCallState&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fetching data status stream (used in the template)</p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_methods_2" class="discrete">Methods</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>protected checkLinkStatus(status: LinkStatus): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checks actual link status</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>protected abstract onDataSuccessfullyFetched(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method is called after fetching process completion</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_cashflowitembasecomponent" class="discrete">CashFlowItemBaseComponent</h3>
+<div class="paragraph">
+<p>The abstract class isolates the duplicating logic of working with the store for view receivables and manage payables widgets.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { CashFlowItemBaseComponent } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Extends <a href="cash_flow_common_lib_reference.html#FetchingDataBaseComponent">FetchingDataBaseComponent</a>.</p>
+</div>
+<h4 id="_properties_4" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() itemId:EventEmitter&lt;string&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emits on item selection</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isMobileView$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of mobile view flag</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isLoading$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of loading flag</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isError$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of error flag</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>items$: Observable&lt;CashFlowItem[]&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of items</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageSize$: Observable&lt;number&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of current page size</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>itemsTotalCount$: Observable&lt;number&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of items total count</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>currentPage$: Observable&lt;number&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of items current page number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasMoreItemsToLoad$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream that indicates if there are more items to load or no</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>searchParamsAvailable$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of search params available flag</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loadMoreMode$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of loading more flag</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>searchQuery$: Observable&lt;string&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of query for search</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>filter$: Observable&lt;PayablesFilter | ReceivablesFilter&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of active filter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isFilterPanelAvailable$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream that represents filter panel existence</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>syncDatetime$: Observable&lt;string | undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of last data sync timestamp</p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_methods_3" class="discrete">Methods</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onLoadMore(currentPage: number): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Event handler for load more click</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPageChange(page: number): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Event handler for page changed event</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onClearSearch(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to clear search</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSubmit(searchQuery: string): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to submit search</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>updateFilter(updatedFilter: string): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to update search params with filter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onItemSelected(item: CashFlowItem): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method emits selected item id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>protected onDataSuccessfullyFetched(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method is called after fetching process completion</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="DestroyableComponent" class="discrete">DestroyableComponent</h3>
+<div class="paragraph">
+<p>Isolates logic with a component that has been destroyed, mainly is used to unsubscribe from the streams inside the components.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { DestroyableComponent } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<h4 id="_properties_5" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>protected componentDestroyed$: Subject&lt;void&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Will pass signal that is triggered from <code>ngOnDestroy</code> lifecycle hook</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_trackablecomponent" class="discrete">TrackableComponent</h3>
+<div class="paragraph">
+<p>Isolates logic with tracking items by id while rendering and avoid duplicating logic with list and table components</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { TrackableComponent } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<h4 id="_methods_4" class="discrete">Methods</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>trackByItemId(_index: number, item: CashFlowItem): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Distinguish different cash flow items in <code>*ngFor</code> loop</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_ui_components_and_directives" class="discrete">UI components and directives</h2>
+<h3 id="_cashflowtotalamountitemcomponent" class="discrete">CashFlowTotalAmountItemComponent</h3>
+<div class="paragraph">
+<p>Component isolated view of total amount for view receivables and manage payables widgets.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { CashFlowTotalAmountItemComponent } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<h4 id="_screenshots_4" class="discrete">Screenshots</h4>
+<div class="paragraph">
+<p>Desktop view:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/cff/image-20200812-123630.png?ver=3.10.1" alt="image 20200812 123630"></span></p>
+</div>
+<div class="paragraph">
+<p>Mobile view:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/cff/image-20200812-123720.png?ver=3.10.1" alt="image 20200812 123720"></span></p>
+</div>
+<h4 id="_properties_6" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() item!: CashFlowItem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Item to display</p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_methods_5" class="discrete">Methods</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isPartiallyPaid(item: CashFlowItem): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checks for partially paid status</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_cashflowbuttonfiltercomponent" class="discrete">CashFlowButtonFilterComponent</h3>
+<div class="paragraph">
+<p>Component isolates view of the button filter for view receivables and manage payables widgets.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { CashFlowButtonFilterComponent } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<h4 id="_screenshots_5" class="discrete">Screenshots</h4>
+<div class="paragraph">
+<p>In the view receivables widget:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/cff/Screenshot_2020-04-27_14.38.42.png?ver=3.10.1" alt="Screenshot 2020 04 27 14.38.42"></span></p>
+</div>
+<div class="paragraph">
+<p>In the manage payables widget:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/cff/Screenshot_2020-04-27_14.38.51.png?ver=3.10.1" alt="Screenshot 2020 04 27 14.38.51"></span></p>
+</div>
+<h4 id="_properties_7" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() activeFilter!: ReceivablesFilter | PayablesFilter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Active filter property</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() filters!: ReceivablesFilter[] | PayablesFilter[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array of available filters</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() filterChanges: EventEmitter&lt;string&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emit value for new filter</p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_methods_6" class="discrete">Methods</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>updateFilter(filter: string): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updates selected filter</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_cashflowitemstatuscomponent" class="discrete">CashFlowItemStatusComponent</h3>
+<div class="paragraph">
+<p>Isolates view of the items status for view receivables and manage payables widgets.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { CashFlowItemStatusComponent } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<h4 id="_screenshots_6" class="discrete">Screenshots</h4>
+<div class="paragraph">
+<p>Desktop view:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/business_banking_3/cff/image-20200811-154051.png?ver=3.10.1" alt="image 20200811 154051"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/business_banking_3/cff/image-20200811-154118.png?ver=3.10.1" alt="image 20200811 154118"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/business_banking_3/cff/image-20200811-154141.png?ver=3.10.1" alt="image 20200811 154141"></span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Mobile view:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/business_banking_3/cff/image-20200811-154204.png?ver=3.10.1" alt="image 20200811 154204"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/business_banking_3/cff/image-20200811-154216.png?ver=3.10.1" alt="image 20200811 154216"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/business_banking_3/cff/image-20200811-154241.png?ver=3.10.1" alt="image 20200811 154241"></span></p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_properties_8" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() status!: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The exact status of cash flow item</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() statusMap: (typeof ReceivablesStatusMap) | (typeof PayablesStatusMap)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Map of statuses.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() defaultColor: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The default colour of the status badge. The default is <code>'secondary'</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() showAbbreviate: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag to show abbreviated format of the status. The default is <code>false</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() ItemStatusColorMap: object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Map of colours for item status.</p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_methods_7" class="discrete">Methods</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get isKnownStatus(): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Getter to check if the status is in the status map</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get defaultStatusAbbr(): string | boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Getter for abbreviation of the default status</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_cashflowdatafetchloadercomponent" class="discrete">CashFlowDataFetchLoaderComponent</h3>
+<div class="paragraph">
+<p>General data fetch loading component, that simulate data fetch process.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { CashFlowDataFetchLoaderComponent } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<h4 id="_screenshots_7" class="discrete">Screenshots</h4>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/cff/image-20200811-155138.png?ver=3.10.1" alt="image 20200811 155138"></span></p>
+</div>
+<h4 id="_properties_9" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountingPlatformName$: Observable&lt;string&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of accounting platform name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isAccountingPlatformLoading$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of loading flag</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_cashflowmaincontainercomponent" class="discrete">CashFlowMainContainerComponent</h3>
+<div class="paragraph">
+<p>The purpose of this component is isolating template logic with switching loading, error, data fetching, empty,
+and loaded screen to avoid duplication in the widgets template.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { CashFlowMainContainerComponent } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<h4 id="_screenshots_8" class="discrete">Screenshots</h4>
+<div class="paragraph">
+<p>The default loading state:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/cff/image-20200812-103953.png?ver=3.10.1" alt="image 20200812 103953"></span></p>
+</div>
+<div class="paragraph">
+<p>The default error state:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/cff/image-20200812-104511.png?ver=3.10.1" alt="image 20200812 104511"></span></p>
+</div>
+<div class="paragraph">
+<p>The default data fetching state:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/cff/image-20200812-104621.png?ver=3.10.1" alt="image 20200812 104621"></span></p>
+</div>
+<div class="paragraph">
+<p>The default empty state:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/cff/image-20200812-105241.png?ver=3.10.1" alt="image 20200812 105241"></span></p>
+</div>
+<h4 id="_properties_10" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() isErrorState: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag represents error state (default is <code>false</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() isLoadingState: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag represents loading  state (default is <code>false</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() isDataFetchingState: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag represents data fetch loading state (default is <code>false</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() isEmptyState: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag represents empty state (default is <code>false</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() contentWrapperClasses: string[] | string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Classes for inner content element wrapper (default is <code>'card-body'</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() cardClasses!: string[] | string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Classes for root card element</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() areFilterParamsAvailable: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag to show or hide filter controls (default is <code>false</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() customErrorState!: TemplateRef&lt;undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom error state template</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() customLoadingState!: TemplateRef&lt;undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Loading state template</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() customDataFetchingState!: TemplateRef&lt;undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom data fetching loading state template</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() customEmptyState!: TemplateRef&lt;undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom empty state template</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_cashflowforecastsettingsinitialcomponent" class="discrete">CashFlowForecastSettingsInitialComponent</h3>
+<div class="paragraph">
+<p>Component shows initial view for forecast and settings widget when forecast settings are not configured.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { CashFlowForecastSettingsInitialComponent } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<h4 id="_screenshots_9" class="discrete">Screenshots</h4>
+<div class="paragraph">
+<p>Desktop view:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/cff/image-20200812-120219.png?ver=3.10.1" alt="image 20200812 120219"></span></p>
+</div>
+<div class="paragraph">
+<p>Mobile view:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/cff/image-20200812-115825.png?ver=3.10.1" alt="image 20200812 115825"></span></p>
+</div>
+<h4 id="_properties_11" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() showHeading: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag represents visibility of heading  (default is <code>true</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() containerClasses?: string | string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Additional classes for <code>bb-state-container</code> wrapper element</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() setupForecast: EventEmitter&lt;void&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emits on button click</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly accountingPlatformName$: Observable&lt;string&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of accounting platform name</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_cashflowbankingaccountlistcomponent" class="discrete">CashFlowBankingAccountListComponent</h3>
+<div class="paragraph">
+<p>Displays list of banking accounts with possibility to select.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { CashFlowBankingAccountListComponent } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<h4 id="_screenshots_10" class="discrete">Screenshots</h4>
+<div class="paragraph">
+<p>Desktop view:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/cff/image-20200812-121212.png?ver=3.10.1" alt="image 20200812 121212"></span></p>
+</div>
+<div class="paragraph">
+<p>Mobile view:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/cff/image-20200812-121309.png?ver=3.10.1" alt="image 20200812 121309"></span></p>
+</div>
+<h4 id="_properties_12" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() bankingAccounts!: BankingAccount[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Banking accounts list</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() chosenBankingAccountsIds: string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chosen banking accounts ids (default is <code>[]</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() editMode: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag represents checkbox appearance (default is <code>true</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() toggleBankingAccount: EventEmitter&lt;string&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emit banking account uuid on select/deselect of account</p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_methods_8" class="discrete">Methods</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onToggleBankingAccount(bankingAccountId: string): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emit banking account uuid on select/deselect of account</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_cashflowbankingaccountlistitemcomponent" class="discrete">CashFlowBankingAccountListItemComponent</h3>
+<div class="paragraph">
+<p>Displays banking account details (used in <code>CashFlowBankingAccountListComponent</code>).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { CashFlowBankingAccountListItemComponent } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<h4 id="_screenshots_11" class="discrete">Screenshots</h4>
+<div class="paragraph">
+<p>Desktop view:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/cff/image-20200812-122301.png?ver=3.10.1" alt="image 20200812 122301"></span></p>
+</div>
+<div class="paragraph">
+<p>Mobile view:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/cff/image-20200812-122324.png?ver=3.10.1" alt="image 20200812 122324"></span></p>
+</div>
+<h4 id="_properties_13" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() bankingAccount!: BankingAccount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Banking account</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() editMode!: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag represents checkbox appearance</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() isChosen!: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag represents is banking account chosen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() toggleBankingAccount: EventEmitter&lt;string&gt;()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emit banking account uuid on select/deselect of account</p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_methods_9" class="discrete">Methods</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onToggleBankingAccount(bankingAccountId: string): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to emit banking account uuid on select/deselect of account</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_autoscrolldirective" class="discrete">AutoScrollDirective</h3>
+<div class="paragraph">
+<p>Scrolls to the element, on each stream emission passed through an <code>Input</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { AutoScrollDirective } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Extends <a href="cash_flow_common_lib_reference.html#DestroyableComponent">DestroyableComponent</a>.</p>
+</div>
+<h4 id="_selector" class="discrete">Selector</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">[bbAutoScroll]</code></pre>
+</div>
+</div>
+<h4 id="_properties_14" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input('bbAutoScroll') scrollToElement$!: Observable&lt;unknown&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">On each stream emissions directive does scroll to an element</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_services_and_mappers" class="discrete">Services and mappers</h2>
+<h3 id="_accountingplatformservice" class="discrete">AccountingPlatformService</h3>
+<div class="paragraph">
+<p>Service stores and manipulate accounting platform info.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { AccountingPlatformService } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<h4 id="_properties_15" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly accountingPlatform$: Observable&lt;AccountingPlatform&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of accounting platform</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly accountingPlatformCallState$: Observable&lt;CallState&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of accounting platform call states</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly accountingPlatformName$: Observable&lt;string&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of accounting platform name</p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_methods_10" class="discrete">Methods</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fetchAccountingPlatformInfo(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fetches accounting platform</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_cashflowsmelinkstatusservice" class="discrete">CashFlowSmeLinkStatusService</h3>
+<div class="paragraph">
+<p>Service stores and manipulate SME link status.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { CashFlowSmeLinkStatusService } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<h4 id="_properties_16" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly smeLinkStatus$: Observable&lt;LinkStatus&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of accounting platform</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly accountingPlatformId$: Observable&lt;string | undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of accounting platform id</p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_methods_11" class="discrete">Methods</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>updateLinkStatus(status: LinkStatus): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updates sme link status</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>updateAccountingPlatformId(accountingPlatformId: string): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updates accounting platform id</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_fetchingdataservice" class="discrete">FetchingDataService</h3>
+<div class="paragraph">
+<p>Service stores and manipulate data fetching process.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { FetchingDataService } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<h4 id="_properties_17" class="discrete">Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly fetchingDataStatus$: Observable&lt;FetchingCallState&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stream of data fetching status</p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_methods_12" class="discrete">Methods</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>checkDataFetchStatus(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to check data fetching status or to start data-fetch long polling</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setDataFetchingStatus(status: FetchingCallState): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updates data fetching status</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_forecastconfigurationmapper" class="discrete">ForecastConfigurationMapper</h3>
+<div class="paragraph">
+<p>Static mapper for converting banking accounts or accounting categories to appropriate models.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { ForecastConfigurationMapper } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<h4 id="_methods_13" class="discrete">Methods</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>static toAccountingCategories(accounts: Account[]): AccountingCategories</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts array of Account model to AccountingCategories model</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>static toBankingAccounts(products: ProductsummaryItem[]): BankingAccount[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts array of ProductsummaryItem model to array of Banking Accounts model</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_forecastconfigurationbasehttpservice" class="discrete">ForecastConfigurationBaseHttpService</h3>
+<div class="paragraph">
+<p>Abstract service isolates logic for fetching accounting categories and banking accounts.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { ForecastConfigurationBaseHttpService } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<h4 id="_methods_14" class="discrete">Methods</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getBankingAccounts(selectedIds?: string[]): Observable&lt;BankingAccount[]&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Load banking accounts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getAccountingCategories(selectedIds?: string[]): Observable&lt;AccountingCategories&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loads accounting categories</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_models" class="discrete">Models</h2>
+<div class="ulist">
+<ul>
+<li>
+<p><code>CallState</code> represents the status of API call. Possible values:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>INIT</code></p>
+</li>
+<li>
+<p><code>LOADING</code></p>
+</li>
+<li>
+<p><code>LOADED</code></p>
+</li>
+<li>
+<p><code>error</code>: Error message</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>FetchingCallState</code> represents the status of API call. Possible values:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>INIT</code></p>
+</li>
+<li>
+<p><code>LOADING</code></p>
+</li>
+<li>
+<p><code>LOADED</code></p>
+</li>
+<li>
+<p><code>FETCHING</code></p>
+</li>
+<li>
+<p><code>error</code>: Error message</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="_helpers" class="discrete">Helpers</h2>
+<h3 id="_call_state_helpers" class="discrete">Call state helpers</h3>
+<h4 id="_getcallstateerror" class="discrete">getCallStateError</h4>
+<div class="paragraph">
+<p>Helper function to extract error, if there is one.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { getCallStateError } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">export function getCallStateError(callState: CallState): string | null</code></pre>
+</div>
+</div>
+<h4 id="_isinitialstate" class="discrete">isInitialState</h4>
+<div class="paragraph">
+<p>Helper function checks call states for initial state.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { isInitialState } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">export function isInitialState(...callStates: FetchingCallState[]): boolean</code></pre>
+</div>
+</div>
+<h4 id="_isloadingstate" class="discrete">isLoadingState</h4>
+<div class="paragraph">
+<p>Helper function checks call states for loading state.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { isLoadingState } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">export function isLoadingState(...callStates: FetchingCallState[]): boolean</code></pre>
+</div>
+</div>
+<h4 id="_iserrorstate" class="discrete">isErrorState</h4>
+<div class="paragraph">
+<p>Helper function checks call states for error state.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { isErrorState } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">export function isErrorState(...callStates: FetchingCallState[]): boolean</code></pre>
+</div>
+</div>
+<h4 id="_isloadedstate" class="discrete">isLoadedState</h4>
+<div class="paragraph">
+<p>Helper function checks call states for loaded state.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { isLoadedState } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">export function isLoadedState(...callStates: FetchingCallState[]): boolean</code></pre>
+</div>
+</div>
+<h4 id="_isfetchingstate" class="discrete">isFetchingState</h4>
+<div class="paragraph">
+<p>Helper function checks call states for data fetching state.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { isFetchingState } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">export function isFetchingState(...callStates: FetchingCallState[]): boolean</code></pre>
+</div>
+</div>
+<h4 id="_loadingmapper" class="discrete">loadingMapper</h4>
+<div class="paragraph">
+<p>Helper mapper function for loading state (combine sme link state with loading states).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { loadingMapper } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">export function loadingMapper([linkStatus, ...statuses]: [LinkStatus, ...Array&amp;lt;FetchingCallState&gt;]): boolean</code></pre>
+</div>
+</div>
+<h4 id="_errormapper" class="discrete">errorMapper</h4>
+<div class="paragraph">
+<p>Helper mapper function for error state (combine sme link state with loading states).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { errorMapper } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">export function errorMapper([linkStatus, ...statuses]: [LinkStatus, ...Array&amp;lt;FetchingCallState&gt;]): boolean</code></pre>
+</div>
+</div>
+<h3 id="_other_helpers" class="discrete">Other helpers</h3>
+<h4 id="_checkfornull" class="discrete">checkForNull</h4>
+<div class="paragraph">
+<p>Helper function checks for null with keeping passed type (thow an error if <code>data</code> is <code>null</code>).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { checkForNull } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">export function checkForNull&amp;lt;T&gt;(data: T | null, errorMessage = 'Fetch data error'): T</code></pre>
+</div>
+</div>
+<h4 id="_filterbyselectedids" class="discrete">filterBySelectedIds</h4>
+<div class="paragraph">
+<p>Helper function filters the <code>items</code> array by <code>selectedIds</code> array (filter comparison uses <code>idKey</code>).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { filterBySelectedIds } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">export function filterBySelectedIds&amp;lt;T&gt;(items: T[] | undefined, selectedIds: T[keyof T][] | undefined, idKey: keyof T = 'id' as keyof T,): T[]</code></pre>
+</div>
+</div>
+<h3 id="_sme_link_status" class="discrete">SME link status</h3>
+<h4 id="_issmelinkfetchingstate" class="discrete">isSmeLinkFetchingState</h4>
+<div class="paragraph">
+<p>Helper function checks for accounting link <code>Initial</code> status.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { isSmeLinkFetchingState } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">export function isSmeLinkFetchingState(status: LinkStatus): boolean</code></pre>
+</div>
+</div>
+<h4 id="_issmelinkerrorstate" class="discrete">isSmeLinkErrorState</h4>
+<div class="paragraph">
+<p>Helper function checks for accounting link <code>Error</code> status.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { isSmeLinkErrorState } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">export function isSmeLinkErrorState(status: LinkStatus): boolean</code></pre>
+</div>
+</div>
+<h4 id="_issmelinkauthorizedstate" class="discrete">isSmeLinkAuthorizedState</h4>
+<div class="paragraph">
+<p>Helper function checks for accounting link <code>Authorized</code> status.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">import { isSmeLinkAuthorizedState } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">export function isSmeLinkAuthorizedState(status: LinkStatus): boolean</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

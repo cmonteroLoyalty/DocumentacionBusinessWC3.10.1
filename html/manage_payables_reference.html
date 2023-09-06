@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Manage payables</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="manage_payables_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Manage payables</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html"><span class="toc-current">Manage payables</span></a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="manage_payables_reference" class="sect0">Manage payables</h1>
+          <h2 id="_shared_library_3" class="discrete">Shared library</h2>
+<div class="paragraph">
+<p>All Cash Flow Forecasting widgets use a shared library, see <a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>.</p>
+</div>
+<h2 id="_selector_name_4" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name:
+<code>bb-cash-flow-cash-out-widget-ang</code></p>
+</div>
+<h2 id="_required_imports_4" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Widget module import</p>
+<div class="paragraph">
+<p>Import the following modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">import { CashFlowCashOutWidgetAngModule } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Data module imports</p>
+<div class="paragraph">
+<p>Import the following data modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">import { CashFlowDataHttpModule } from '@backbase/data-ang/cash-flow';</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="_extension_slots_19" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manage_payables_slots_1_2_3.svg?ver=3.10.1" alt="manage payables slots 1 2 3">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manage_payables_mobile_slots_1_4_5.svg?ver=3.10.1" alt="manage payables mobile slots 1 4 5">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="manage_payables_reference.html#bbCashFlowCashOutWidgetCustomizable">bbCashFlowCashOutWidgetCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_payables_reference.html#bbCashFlowCashOutTableCustomizable">bbCashFlowCashOutTableCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_payables_reference.html#bbCashFlowCashOutTableItemCustomizable">bbCashFlowCashOutTableItemCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_payables_reference.html#bbCashFlowCashOutListCustomizable">bbCashFlowCashOutListCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_payables_reference.html#bbCashFlowCashOutListItemCustomizable">bbCashFlowCashOutListItemCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbCashFlowCashOutWidgetCustomizable" class="discrete">bbCashFlowCashOutWidgetCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowCashOutWidgetCustomizable
+  let-hostRef
+  let-isLoading="context.isLoading"
+  let-isError="context.isError"
+  let-payables="context.payables"
+  let-totalCount="context.totalCount"
+  let-currentPage="context.currentPage"
+  let-pageSize="context.pageSize"
+  let-hasMorePayablesToLoad="context.hasMorePayablesToLoad"
+  let-searchParamsAvailable="context.searchParamsAvailable"
+  let-filter="context.filter"
+  let-filters="context.filters"
+  let-isMobileView="context.isMobileView"
+  let-searchQuery="context.searchQuery"
+  let-syncDatetime="context.syncDatetime"
+  let-isFilterPanelAvailable="context.isFilterPanelAvailable"
+&gt;
+  &lt;bb-cash-flow-main-container
+    [isErrorState]="isError"
+    [isLoadingState]="isLoading"
+    [isEmptyState]="!payables?.length"
+    [isFilterPanelAvailable]="isFilterPanelAvailable"
+  &gt;
+    &lt;ng-container cash-flow-filter-controls&gt;
+      &lt;div class="bb-cash-flow-search-params-container"&gt;
+        &lt;div class="bb-cash-flow-search-params-container__search"&gt;
+          &lt;bb-search-box-ui
+            [showClear]="true"
+            [showSearch]="true"
+            i18n-placeholder="Search placeholder@@cash-out.search.placeholder"
+            placeholder="Search"
+            data-role="search-field"
+            [ngModel]="searchQuery"
+            (submit)="hostRef.onSubmit($event)"
+            (clear)="hostRef.onClearSearch()"
+          &gt;
+          &lt;/bb-search-box-ui&gt;
+        &lt;/div&gt;
+        &lt;div
+          class="bb-cash-flow-search-params-container__filter-and-time-container"
+        &gt;
+          &lt;bb-cash-flow-last-updated-time
+            [dateTimestamp]="syncDatetime"
+            wrapperClasses="bb-cash-flow-search-params-container__time-of-last-update"
+          &gt;
+          &lt;/bb-cash-flow-last-updated-time&gt;
+          &lt;div class="bb-cash-flow-search-params-container__filter"&gt;
+            &lt;bb-cash-flow-button-filter
+              [activeFilter]="filter"
+              [filters]="filters"
+              (filterChanges)="hostRef.updateFilter($event)"
+            &gt;
+            &lt;/bb-cash-flow-button-filter&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;p
+        *ngIf="searchParamsAvailable &amp;&amp; !isLoading &amp;&amp; totalCount"
+        data-role="bb-cash-flow-cash-out-payable__found-number"
+        i18n="Total results found@@cash-out.search.search.total-count"
+      &gt;
+        {totalCount, plural, =1 {{{ totalCount }} result found} other
+        {{{ totalCount }} results found}}
+      &lt;/p&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-container cash-flow-widget-body&gt;
+      &lt;ng-container *ngIf="isMobileView; else tableView"&gt;
+        &lt;div class="bb-block" [class.bb-block--lg]="hasMorePayablesToLoad"&gt;
+          &lt;bb-cash-flow-cash-out-list
+            [payables]="payables"
+            (itemSelected)="hostRef.onItemSelected($event)"
+          &gt;&lt;/bb-cash-flow-cash-out-list&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-stack bb-stack--center"&gt;
+          &lt;bb-load-button-ui
+            *ngIf="hasMorePayablesToLoad"
+            [from]="currentPage"
+            [size]="pageSize"
+            [totalCount]="totalCount"
+            [isLoading]="isLoading"
+            (paramChange)="hostRef.onLoadMore(currentPage)"
+            i18n="Load more button@@cash-out.table.load-more"
+            color="secondary"
+            data-role="bb-cash-flow-cash-out-payable__load-more-btn"
+          &gt;
+            Load more
+          &lt;/bb-load-button-ui&gt;
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-template #tableView&gt;
+        &lt;bb-cash-flow-cash-out-table
+          [items]="payables"
+          (itemSelected)="hostRef.onItemSelected($event)"
+        &gt;&lt;/bb-cash-flow-cash-out-table&gt;
+        &lt;bb-pagination-ui
+          [page]="currentPage"
+          [boundaryLinks]="true"
+          [directionLinks]="true"
+          [totalItems]="totalCount"
+          [itemsPerPage]="pageSize"
+          [maxNavPages]="4"
+          (pageChange)="hostRef.onPageChange($event)"
+        &gt;
+        &lt;/bb-pagination-ui&gt;
+      &lt;/ng-template&gt;
+    &lt;/ng-container&gt;
+  &lt;/bb-cash-flow-main-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isLoading: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the payables are loading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isError: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether there is an error preventing the widget to load the payables.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>payables: CashFlowItem[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The list of payables.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>totalCount: number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total number of payables.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>currentPage: number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current page number.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageSize: number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of items on the page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasMorePayablesToLoad: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether there are more payables to load.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>searchParamsAvailable: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether search parameters are available.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>filter: PayablesFilter</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>filters: PayablesFilter[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The currently active filters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isMobileView: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether mobile view is currently active.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>searchQuery: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The search query.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>syncDatetime: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp of the last data synchronization with the accounting provider.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isFilterPanelAvailable: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the filter panel exists.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbCashFlowCashOutTableCustomizable" class="discrete">bbCashFlowCashOutTableCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowCashOutTableCustomizable
+  let-hostRef
+&gt;
+  &lt;div class="table-responsive"&gt;
+    &lt;table
+      class="table bb-cash-flow-table table-hover"
+      data-role="bb-cash-flow-cash-out-table"
+      [bbTable]="hostRef.items"
+      (rowClick)="hostRef.onItemClick($event)"
+      (sort)="hostRef.onSort($event)"
+      bbTableFocus
+    &gt;
+      &lt;caption
+        class="sr-only"
+        i18n="Cash out table caption@@cash-out.table.desktop.caption"
+      &gt;
+        Payables table
+      &lt;/caption&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th
+            tabindex="0"
+            scope="col"
+            i18n="Cash Out table status column@@cash-out.table.desktop.status"
+          &gt;
+            Status
+          &lt;/th&gt;
+          &lt;th
+            class="bb-cash-flow-table__date-header"
+            tabindex="0"
+            scope="col"
+            bbSortable="issueDate"
+            [attr.aria-sort]="hostRef.getAriaSort('issueDate')"
+            [direction]="hostRef.getSortDirection('issueDate')"
+          &gt;
+            &lt;span
+              class="th-content"
+              i18n="
+                Cash Out table issue date
+                column@@cash-out.table.desktop.issueDate"
+              &gt;Issue date&lt;/span
+            &gt;
+          &lt;/th&gt;
+          &lt;th
+            class="bb-cash-flow-table__date-header"
+            tabindex="0"
+            scope="col"
+            bbSortable="dueDate"
+            [attr.aria-sort]="hostRef.getAriaSort('dueDate')"
+            [direction]="hostRef.getSortDirection('dueDate')"
+          &gt;
+            &lt;span
+              class="th-content"
+              i18n="
+                Cash Out table due date column@@cash-out.table.desktop.dueDate"
+              &gt;Due date&lt;/span
+            &gt;
+          &lt;/th&gt;
+          &lt;th
+            class="bb-cash-flow-table__date-header"
+            tabindex="0"
+            scope="col"
+            bbSortable="expectedDate"
+            [attr.aria-sort]="hostRef.getAriaSort('expectedDate')"
+            [direction]="hostRef.getSortDirection('expectedDate')"
+          &gt;
+            &lt;span
+              class="th-content"
+              i18n="
+                Cash Out table expected date
+                column@@cash-out.table.desktop.expectedDate"
+              &gt;Expected date&lt;/span
+            &gt;
+          &lt;/th&gt;
+          &lt;th
+            tabindex="0"
+            scope="col"
+            bbSortable="counterparty"
+            [attr.aria-sort]="hostRef.getAriaSort('counterparty')"
+            [direction]="hostRef.getSortDirection('counterparty')"
+          &gt;
+            &lt;span
+              class="th-content"
+              i18n="
+                Cash Out table supplier and category
+                column@@cash-out.table.desktop.supplierCategory"
+              &gt;Supplier, category&lt;/span
+            &gt;
+          &lt;/th&gt;
+          &lt;th
+            class="bb-cash-flow-table__invoice-header"
+            tabindex="0"
+            scope="col"
+            i18n="Cash Out table invoice column@@cash-out.table.desktop.invoice"
+          &gt;
+            Invoice
+          &lt;/th&gt;
+          &lt;th
+            class="bb-text-align-right bb-cash-flow-table__ccy-header"
+            tabindex="0"
+            scope="col"
+            i18n="
+              Cash Out table currency column@@cash-out.table.desktop.currency"
+          &gt;
+            CCY
+          &lt;/th&gt;
+          &lt;th
+            class="bb-text-align-right"
+            tabindex="0"
+            scope="col"
+            i18n="
+              Cash Out table due amount column@@cash-out.table.desktop.dueAmount"
+          &gt;
+            Due amount
+          &lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr
+          bbCashFlowCashOutTableItem
+          *ngFor="let payable of hostRef.items; trackBy: hostRef.trackByItemId"
+          [payable]="payable"
+          [bbRow]="payable"
+        &gt;&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashFlowCashOutTableItemCustomizable" class="discrete">bbCashFlowCashOutTableItemCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowCashOutTableItemCustomizable
+  let-hostRef
+&gt;
+  &lt;td&gt;
+    &lt;bb-cash-flow-item-status
+      [status]="hostRef.payable.status"
+      showAbbreviated="true"
+      data-role="bb-cash-flow-cash-out-payable__status"
+      [attr.aria-label]="hostRef.payable.status"
+    &gt;&lt;/bb-cash-flow-item-status&gt;
+  &lt;/td&gt;
+  &lt;td data-role="bb-cash-flow-cash-out-payable__issue-date"&gt;
+    {{ hostRef.payable.issueDate | bbDate: hostRef.dateFormat }}
+  &lt;/td&gt;
+  &lt;td data-role="bb-cash-flow-cash-out-payable__due-date"&gt;
+    &lt;bb-cash-flow-item-due-date
+      [item]="hostRef.payable"
+      [overdueInDays]="true"
+    &gt;&lt;/bb-cash-flow-item-due-date&gt;
+  &lt;/td&gt;
+  &lt;td data-role="bb-cash-flow-cash-out-payable__expected-date"&gt;
+    &lt;bb-cash-flow-item-expected-date
+      [item]="hostRef.payable"
+      [editMode]="true"
+    &gt;&lt;/bb-cash-flow-item-expected-date&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;div class="bb-stack"&gt;
+      &lt;bb-icon-ui
+        name="savings-accounts"
+        backgroundType="square"
+        color="secondary"
+        size="sm"
+        class="bb-stack__item bb-stack__item--spacing-sm bb-stack__item--align-top bb-cash-flow-item-icon"
+      &gt;&lt;/bb-icon-ui&gt;
+      &lt;div&gt;
+        &lt;span
+          class="bb-text-semi-bold"
+          data-role="bb-cash-flow-cash-out-payable__counterparty-name"
+        &gt;
+          {{ hostRef.payable.counterparty.name }}
+        &lt;/span&gt;
+        &lt;div
+          class="bb-stack bb-text-support"
+          data-role="bb-cash-flow-cash-out-payable__category"
+        &gt;
+          {{ hostRef.payable.chartOfAccounts.category }}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/td&gt;
+  &lt;td data-role="bb-cash-flow-cash-out-payable__issue-number"&gt;
+    {{ hostRef.payable.number }}
+  &lt;/td&gt;
+  &lt;td
+    class="bb-text-align-right bb-text-semi-bold"
+    data-role="bb-cash-flow-cash-out-payable__currency-code"
+  &gt;
+    {{ hostRef.payable.currencyCode }}
+  &lt;/td&gt;
+  &lt;td class="bb-text-align-right bb-text-semi-bold"&gt;
+    &lt;bb-cash-flow-item-amount
+      [item]="hostRef.payable"
+    &gt;&lt;/bb-cash-flow-item-amount&gt;
+  &lt;/td&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashFlowCashOutListCustomizable" class="discrete">bbCashFlowCashOutListCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowCashOutListCustomizable
+  let-hostRef
+&gt;
+  &lt;div class="bb-list"&gt;
+    &lt;div
+      class="bb-list__item"
+      *ngFor="let payable of hostRef.payables; trackBy: hostRef.trackByItemId"
+      data-role="bb-cash-flow-cash-out-list-item-wrapper"
+      (bbKeyboardClick)="hostRef.onItemClick(payable)"
+    &gt;
+      &lt;bb-cash-flow-cash-out-list-item
+        [payable]="payable"
+      &gt;&lt;/bb-cash-flow-cash-out-list-item&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashFlowCashOutListItemCustomizable" class="discrete">bbCashFlowCashOutListItemCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowCashOutListItemCustomizable
+  let-hostRef
+&gt;
+  &lt;section
+    class="bb-stack bb-table-text-default"
+    data-role="bb-cash-flow-cash-out-list"
+  &gt;
+    &lt;bb-icon-ui
+      class="bb-stack__item bb-stack__item--align-top bb-cash-flow-item-icon"
+      name="savings-accounts"
+      backgroundType="square"
+      color="secondary"
+      size="sm"
+    &gt;&lt;/bb-icon-ui&gt;
+    &lt;div class="bb-block bb-block--full-width"&gt;
+      &lt;div class="bb-stack bb-stack--align-top"&gt;
+        &lt;div class="bb-stack__item"&gt;
+          &lt;span
+            role="heading"
+            aria-level="6"
+            class="bb-text-bold"
+            data-role="bb-cash-flow-cash-out-payable__counterparty-name"
+          &gt;
+            {{ hostRef.payable.counterparty.name }}
+          &lt;/span&gt;
+          &lt;div
+            class="bb-block bb-block--sm bb-text-support"
+            data-role="bb-cash-flow-cash-out-payable__category"
+          &gt;
+            {{ hostRef.payable.chartOfAccounts.category }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;bb-cash-flow-item-status
+          class="bb-stack__item bb-stack__item--push-right"
+          [status]="hostRef.payable.status"
+          data-role="bb-cash-flow-cash-out-payable__status"
+        &gt;&lt;/bb-cash-flow-item-status&gt;
+      &lt;/div&gt;
+      &lt;div
+        data-role="bb-cash-flow-cash-out-payable__issue-number"
+        class="bb-block bb-block--sm"
+      &gt;
+        {{ hostRef.payable.number }}
+      &lt;/div&gt;
+      &lt;div class="bb-stack bb-stack--align-top bb-stack--wrap"&gt;
+        &lt;bb-cash-flow-list-item-date
+          [item]="hostRef.payable"
+          class="bb-stack__item"
+        &gt;
+        &lt;/bb-cash-flow-list-item-date&gt;
+        &lt;div
+          class="bb-text-align-right bb-stack__item bb-stack__item--push-right"
+        &gt;
+          &lt;bb-cash-flow-item-amount
+            [item]="hostRef.payable"
+            [mobileView]="true"
+          &gt;&lt;/bb-cash-flow-item-amount&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;hr /&gt;
+  &lt;/section&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h2 id="_api_4" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 30%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CashFlowCashOutListComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bbCashFlowCashOutListCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>trackByItemId(_index: number, cashFlowItem: PayableItem | ReceivableItem)</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Methods track rendered items by ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CashFlowCashOutTableComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bbCashFlowCashOutTableCustomizable</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>CashFlowCashOutWidgetAngComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>bbCashFlowCashOutCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isSmeLinkErrorState(status: LinkStatus)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checks for accounting link Error status</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isSmeLinkFetchingState(status: LinkStatus)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checks for accounting link Initial status</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isInitialState(&#8230;&#8203;callStates: CallState[])</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents initial state for the current view</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isLoadingState(&#8230;&#8203;callStates: CallState[])</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents loading state for current view</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isErrorState(&#8230;&#8203;callStates: CallState[])</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents error state for current view</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>updateFilter(updatedFilter: string)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to update search params with the filter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSubmit(searchQuery: string)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to submit search</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onClearSearch()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to clear search</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onLoadMore(currentPage: number)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Event handler for load more click</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPageChange(page: number)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Event handler for page changed event</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_preferences_12" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>The widget has the following preferences that managers or administrators
+configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configurable for</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Number of payables per page</strong></p>
+<p class="tableblock">Maximum number of items per page.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>output.navigateToConnectAccountingSoftware</strong></p>
+<p class="tableblock">When the user has not set up the accounting provider, the widget redirects from this widget to another widget.
+For example, to the <strong>Connect accounting software</strong> widget where the user sets up the connection to an accounting provider.
+Set the target widget as follows: <code>navigation:name-of-the-widget-where-to-navigate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.navigateToConnectAccountingSoftware</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>output.paymentItemId</strong></p>
+<p class="tableblock">Parameter name that passes the payment ID from the <strong>Manage payables</strong> and the <strong>View receivables</strong> widgets
+to the <strong>Cash flow payment request details</strong> widget. The string you enter here should match the <code>input</code> parameter
+with the same name in the Cash flow payment request details widget.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.paymentItemId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>route-param paymentItemId</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

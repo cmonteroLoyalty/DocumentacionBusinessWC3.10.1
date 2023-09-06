@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>View and download business account statements</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="view_download_business_account_statements_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>View and download business account statements</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html"><span class="toc-current">View and download business account statements</span></a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="view_download_business_account_statements_reference" class="sect0">View and download business account statements</h1>
+          <div class="paragraph">
+<p>This page includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="view_download_business_account_statements_reference.html#bb_account_statment_business_widget_selector">Selector name</a></p>
+</li>
+<li>
+<p><a href="view_download_business_account_statements_reference.html#bb_account_statment_business_widget_required_imports">Required imports</a></p>
+</li>
+<li>
+<p><a href="view_download_business_account_statements_reference.html#bb_account_statment_business_widget_extension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="view_download_business_account_statements_reference.html#bb_account_statment_business_widget_hostref_api">API</a></p>
+</li>
+<li>
+<p><a href="view_download_business_account_statements_reference.html#bb_account_statment_business_widget_implementation">Implementation example</a></p>
+</li>
+<li>
+<p><a href="view_download_business_account_statements_reference.html#bb_account_statment_business_widget_preferences">Preferences</a></p>
+</li>
+</ul>
+</div>
+<h2 id="bb_account_statment_business_widget_selector" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;bb-account-statement-business-widget&gt;&lt;/bb-account-statement-business-widget&gt;</code></p>
+</div>
+<h2 id="bb_account_statment_business_widget_required_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Widget module import</p>
+<div class="paragraph">
+<p>Import the following modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { AccountStatementBusinessWidgetModule } from '@backbase/account-statement-business-widget-ang';</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="bb_account_statment_business_widget_extension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/view_download_business_account_statements_slots_1.svg?ver=3.10.1" alt="view download business account statements slots 1"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/view_download_business_account_statements_slots_2_3_5.svg?ver=3.10.1" alt="view download business account statements slots 2 3 5"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/view_download_business_account_statements_slot_4.svg?ver=3.10.1" alt="view download business account statements slot 4"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/view_download_business_account_statements_slot_7.svg?ver=3.10.1" alt="view download business account statements slot 7"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="view_download_business_account_statements_reference.html#bbAccountStatementBusinessFiltersCustomizable">bbAccountStatementBusinessFiltersCustomizable</a></p>
+</li>
+<li>
+<p><a href="view_download_business_account_statements_reference.html#bbAccountStatementBusinessStatementsContainerCustomizable">bbAccountStatementBusinessStatementsContainerCustomizable</a></p>
+</li>
+<li>
+<p><a href="view_download_business_account_statements_reference.html#bbAccountStatementBusinessTableCustomizable">bbAccountStatementBusinessTableCustomizable</a></p>
+</li>
+<li>
+<p><a href="view_download_business_account_statements_reference.html#bbAccountStatementBusinessDownloadFailureNotificationHeaderCustomizableDirective">bbAccountStatementBusinessDownloadFailureNotificationHeaderCustomizableDirective</a></p>
+</li>
+<li>
+<p><a href="view_download_business_account_statements_reference.html#bbAccountStatementBusinessWidgetCustomizable">bbAccountStatementBusinessWidgetCustomizable</a></p>
+</li>
+<li>
+<p><a href="view_download_business_account_statements_reference.html#bbAccountStatementDownloadsCustomizableDirective">bbAccountStatementDownloadsCustomizableDirective</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbAccountStatementBusinessFiltersCustomizable" class="discrete">bbAccountStatementBusinessFiltersCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbAccountStatementBusinessFiltersCustomizable
+  let-host
+  let-areFiltersApplied="context.areFiltersApplied"
+  let-filterForm="context.filterForm"
+&gt;
+  &lt;bb-collapsible-ui&gt;
+    &lt;form
+      [formGroup]="filterForm"
+    &gt;
+      &lt;ng-template
+        bbCollapsibleHeader
+        let-isOpen="isOpen"
+        let-toggle="toggle"
+      &gt;
+        &lt;div class="bb-block bb-block--md"&gt;
+          &lt;div class="card-header bb-stack bb-stack--wrap"&gt;
+            &lt;button
+              class="bb-stack__item bb-stack__item--spacing-lg bb-stack__item--push-left-sm-down bb-stack__break--sm-down"
+              bbButton
+              #filterButton
+              data-role="collapsible-filter-btn"
+              [color]="areFiltersApplied &amp;&amp; !isOpen ? 'primary' : 'secondary'"
+              [ngClass]="{ 'active': isOpen }"
+              (click)="toggle()"
+            &gt;
+              &lt;bb-icon-ui
+                [cropped]="true"
+                name="filter"
+              &gt;&lt;/bb-icon-ui&gt;
+              &lt;span
+                *ngIf="areFiltersApplied; else filterButtonTextDefault"
+                i18n="Filters applied|Filter form button filter label@@account-statement-business.filters.button.applied-label"
+              &gt;
+              Filters applied
+            &lt;/span&gt;
+              &lt;ng-template #filterButtonTextDefault&gt;
+              &lt;span
+                i18n="Filter|Filter form button filter label@@account-statement-business.filters.button.filter-label"
+              &gt;
+                Filter
+              &lt;/span&gt;
+              &lt;/ng-template&gt;
+            &lt;/button&gt;
+            &lt;bb-dropdown-single-select-ui
+              (change)="host.setCustomFilter()"
+              class="bb-stack__item bb-stack__break--sm-down"
+              formControlName="customFilterPeriods"
+              [required]="false"
+              [attr.data-role]="'dropdown-single-select'"
+            &gt;
+              &lt;bb-dropdown-single-select-option-ui
+                [value]="host.filterDatePeriods.Today"
+                label="Today"
+                i18n-label="Today option label@@bb-dropdown-single-select-option-ui.today.label"
+              &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+              &lt;bb-dropdown-single-select-option-ui
+                [value]="host.filterDatePeriods.Custom"
+                label="Custom"
+                i18n-label="Custom option label@@bb-dropdown-single-select-option-ui.custom.label"
+              &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+              &lt;bb-dropdown-single-select-option-ui
+                [value]="host.filterDatePeriods.Yesterday"
+                label="Yesterday"
+                i18n-label="Yesterday option label@@bb-dropdown-single-select-option-ui.yesterday.label"
+              &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+              &lt;bb-dropdown-single-select-option-ui
+                [value]="host.filterDatePeriods.ThisWeek"
+                label="This week"
+                i18n-label="This week option label@@bb-dropdown-single-select-option-ui.this-week.label"
+              &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+              &lt;bb-dropdown-single-select-option-ui
+                [value]="host.filterDatePeriods.LastWeek"
+                label="Last week"
+                i18n-label="Last week option label@@bb-dropdown-single-select-option-ui.last-week.label"
+              &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+              &lt;bb-dropdown-single-select-option-ui
+                [value]="host.filterDatePeriods.ThisMonth"
+                label="This month"
+                i18n-label="This month option label@@bb-dropdown-single-select-option-ui.this-month.label"
+              &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+              &lt;bb-dropdown-single-select-option-ui
+                [value]="host.filterDatePeriods.LastMonth"
+                label="Last month"
+                i18n-label="Last month option label@@bb-dropdown-single-select-option-ui.last-month.label"
+              &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+              &lt;bb-dropdown-single-select-option-ui
+                [value]="host.filterDatePeriods.ThisQuarter"
+                label="This quarter"
+                i18n-label="This quarter option label@@bb-dropdown-single-select-option-ui.this-quarter.label"
+              &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+              &lt;bb-dropdown-single-select-option-ui
+                [value]="host.filterDatePeriods.LastQuarter"
+                label="Last quarter"
+                i18n-label="Last quarter option label@@bb-dropdown-single-select-option-ui.last-quarter.label"
+              &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+              &lt;bb-dropdown-single-select-option-ui
+                [value]="host.filterDatePeriods.ThisYear"
+                label="This year"
+                i18n-label="This year option label@@bb-dropdown-single-select-option-ui.this-year.label"
+              &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+              &lt;bb-dropdown-single-select-option-ui
+                [value]="host.filterDatePeriods.AllTime"
+                label="All time"
+                i18n-label="All time option label@@bb-dropdown-single-select-option-ui.all-time.label"
+              &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+            &lt;/bb-dropdown-single-select-ui&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+
+      &lt;ng-template
+        bbCollapsibleBody
+        let-toggle="toggle"
+      &gt;
+        &lt;div class="card-body account-statements-filter__form-container" data-role="filter-form"&gt;
+          &lt;div class="row"&gt;
+            &lt;div
+              class="bb-block bb-block--md col-12 col-sm-6"
+            &gt;
+              &lt;bb-input-datepicker-ui
+                i18n-label="Book date|Filter form book date label@@account-statement-business.filters.datepicker-label"
+                label="Date range"
+                [labelClasses]="'form-label'"
+                [rangeSelection]="true"
+                aria-label="Book date"
+                i18n-aria-label="Book date filter aria label@@account-statement-business.filters.datepicker.aria-label"
+                [attr.aria-invalid]="filterForm.controls['bookDate'].hasError('invalidDateFormat')"
+                formControlName="bookDate"
+                data-role="book-date"
+              &gt;&lt;/bb-input-datepicker-ui&gt;
+              &lt;bb-input-validation-message-ui
+                class="position-absolute"
+                aria-live="polite"
+                [showErrors]="filterForm.controls['bookDate'].hasError('invalidDateFormat')"
+              &gt;
+                &lt;span
+                  i18n="Error invalid date format in book date range@@account-statement-business.filters.datepicker.error.invalid-date-format"
+                  data-role="invalid-book-date-error-message"
+                &gt;Invalid date format&lt;/span&gt;
+              &lt;/bb-input-validation-message-ui&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div
+            class="bb-button-bar"
+          &gt;
+            &lt;button
+              bbButton
+              type="submit"
+              buttonSize="sm"
+              class="bb-button-bar__button"
+              data-role="apply"
+              [disabled]="filterForm.pristine"
+              (click)="host.onSubmit(); toggle()"
+              i18n="Apply|Filter form button apply label@@account-statement-business.filters.button.apply-label"
+            &gt;
+              Apply
+            &lt;/button&gt;
+            &lt;button
+              bbButton
+              color="secondary"
+              buttonSize="sm"
+              class="bb-button-bar__button"
+              data-role="close"
+              (click)="toggle(); host.focusFilterButton();"
+              i18n="Close|Filter form button close label@@account-statement-business.filters.button.close-label"
+            &gt;
+              Close
+            &lt;/button&gt;
+            &lt;button
+              bbButton
+              color="link"
+              buttonSize="sm"
+              class="bb-button-bar__button"
+              data-role="clear-all"
+              *ngIf="filterForm.dirty || areFiltersApplied"
+              (click)="host.resetForm();"
+              i18n="Clear All|Filter form button clear label@@account-statement-business.filters.button.clear-label"
+            &gt;
+              Clear all
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/form&gt;
+  &lt;/bb-collapsible-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbAccountStatementBusinessStatementsContainerCustomizable" class="discrete">bbAccountStatementBusinessStatementsContainerCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbAccountStatementBusinessStatementsContainerCustomizable
+  let-hostRef
+  let-accountStatements="context.accountStatements"
+  let-totalCount="context.totalCount"
+  let-accountStatementsLoading="context.accountStatementsLoading"
+  let-loadingStates="context.loadingStates"
+  let-paginationParams="context.paginationParams"
+  let-sortingParams="context.sortingParams"
+  let-paginationType="context.paginationType"
+  let-paginationTypes="context.paginationTypes"
+&gt;
+  &lt;div class="bb-block bb-block--lg"&gt;
+    &lt;bb-account-statement-business-table
+      [accountStatements]="accountStatements"
+      [sortingParams]="sortingParams"
+      [loading]="accountStatementsLoading === loadingStates.LOADING_TABLE"
+      (sort)="hostRef.onSort($event)"
+    &gt;&lt;/bb-account-statement-business-table&gt;
+  &lt;/div&gt;
+
+  &lt;div class="bb-text-align-center" *ngIf="accountStatementsLoading !== loadingStates.LOADING_TABLE"&gt;
+    &lt;bb-load-button-ui
+      color="link"
+      [ngClass]="{ 'd-sm-none': paginationType !== paginationTypes.LoadMore }"
+      [isLoading]="accountStatementsLoading === loadingStates.LOADING_MORE"
+      [size]="paginationParams.size"
+      [from]="paginationParams.from"
+      [totalCount]="totalCount"
+      (paramChange)="hostRef.loadMore($event)"
+      data-role="load-more-button"
+    &gt;
+      &lt;span i18n="Load more|Load More button text@@account-statement-business.list.load-more"&gt;Load more&lt;/span&gt;
+    &lt;/bb-load-button-ui&gt;
+
+    &lt;bb-pagination-ui
+      class="d-none d-sm-block"
+      *ngIf="paginationType === paginationTypes.Pagination"
+      [page]="paginationParams.from"
+      [itemsPerPage]="paginationParams.size"
+      [totalItems]="totalCount"
+      [boundaryLinks]="true"
+      [directionLinks]="true"
+      (pageChange)="hostRef.handlePageChange($event)"
+      data-role="pagination"
+    &gt;&lt;/bb-pagination-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbAccountStatementBusinessTableCustomizable" class="discrete">bbAccountStatementBusinessTableCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbAccountStatementBusinessTableCustomizable
+  let-hostRef
+  let-accountStatements="context.accountStatements"
+  let-mimeTypeExtensions="context.mimeTypeExtensions"
+  let-loading="context.loading"
+&gt;
+  &lt;table
+    bbTableFocus
+    [bbTable]="accountStatements"
+    (sort)="hostRef.onSort($event)"
+    class="table"
+    aria-label="Account statements table"
+    i18n-aria-label="Aria label for account statements table@@account-statement-business.table.aria-label"
+  &gt;
+    &lt;colgroup&gt;
+      &lt;col width="35%"&gt;
+      &lt;col width="45%"&gt;
+      &lt;col width="10%"&gt;
+      &lt;col width="10%"&gt;
+    &lt;/colgroup&gt;
+    &lt;thead&gt;
+      &lt;tr class="d-sm-table-row d-none"&gt;
+        &lt;th
+          bbSortable="date"
+          [direction]="hostRef.getDirection('date')"
+          scope="col"
+          tabindex="0"
+        &gt;
+          &lt;span
+            class="th-content"
+            aria-label="Sort table by book date"
+            i18n-aria-label="Book date|table heading aria label@@account-statement-business.table-head.book-date.aria-label"
+            i18n="Book date|table heading@@account-statement-business.table-head.book-date"
+          &gt;Book date&lt;/span&gt;
+        &lt;/th&gt;
+        &lt;th
+          bbSortable="accountName"
+          [direction]="hostRef.getDirection('accountName')"
+          scope="col"
+          tabindex="0"
+        &gt;
+          &lt;span
+            class="th-content"
+            aria-label="Sort table by account"
+            i18n-aria-label="Account name, number|table heading aria label@@account-statement-business.table-head.account.aria-label"
+            i18n="Account name, number|table heading@@account-statement-business.table-head.account"
+          &gt;Account name, number&lt;/span&gt;
+        &lt;/th&gt;
+        &lt;th colspan="2"&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody *ngIf="!loading"&gt;
+      &lt;ng-container
+        *ngFor="let accountStatement of accountStatements"
+      &gt;
+        &lt;tr class="d-sm-table-row d-none"&gt;
+          &lt;td&gt; {{  accountStatement.date | date:'shortDate'  }} &lt;/td&gt;
+
+          &lt;td class="text-break"&gt;
+            &lt;div&gt; {{  accountStatement.accountName  }} &lt;/div&gt;
+            &lt;div class="bb-text-support"&gt; {{  accountStatement.accountNumber  }} &lt;/div&gt;
+          &lt;/td&gt;
+
+          &lt;td class="bb-text-align-center"&gt;
+            &lt;bb-account-statement-view-online-business-wrapper
+              [documents]="accountStatement.documents"
+            &gt;&lt;/bb-account-statement-view-online-business-wrapper&gt;
+          &lt;/td&gt;
+
+          &lt;td class="bb-text-align-center"&gt;
+            &lt;bb-account-statement-downloads
+              [documents]="accountStatement.documents"
+              [mimeTypeExtensions]="mimeTypeExtensions"
+              (downloadFailure)="hostRef.onDownloadFailure()"
+            &gt;&lt;/bb-account-statement-downloads&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;div class="d-sm-none bb-list__item"&gt;
+          &lt;div class="bb-block bb-block--md"&gt;
+            &lt;div class="bb-stack bb-stack--align-top"&gt;
+              &lt;div class="bb-stack__item"&gt;
+                &lt;div
+                  class="bb-block bb-block--xs bb-text-semi-bold"
+                  i18n="Book date|table heading@@account-statement-business.table-head.book-date"
+                &gt;Book date&lt;/div&gt;
+                &lt;div&gt; {{  accountStatement.date | date:'shortDate'  }} &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;bb-account-statement-view-online-business-wrapper
+                class="bb-stack__item bb-stack__item--push-right"
+                [documents]="accountStatement.documents"
+              &gt;&lt;/bb-account-statement-view-online-business-wrapper&gt;
+
+              &lt;bb-account-statement-downloads
+                class="bb-stack__item"
+                [documents]="accountStatement.documents"
+                [mimeTypeExtensions]="mimeTypeExtensions"
+                (downloadFailure)="hostRef.onDownloadFailure()"
+              &gt;&lt;/bb-account-statement-downloads&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div
+            class="bb-block bb-block--xs bb-text-semi-bold"
+            i18n="Account name|table heading@@account-statement-business.table-head.account-name"
+          &gt;Account name&lt;/div&gt;
+          &lt;div class="bb-block bb-block--md"&gt; {{  accountStatement.accountName  }} &lt;/div&gt;
+
+          &lt;div
+            class="bb-block bb-block--xs bb-text-semi-bold"
+            i18n="Account number|table heading@@account-statement-business.table-head.account-number"
+          &gt;Account number&lt;/div&gt;
+          &lt;div class="text-break"&gt; {{  accountStatement.accountNumber  }} &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+
+  &lt;bb-loading-indicator-ui
+    *ngIf="loading"
+    loaderSize="lg"
+  &gt;&lt;/bb-loading-indicator-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbAccountStatementBusinessDownloadFailureNotificationHeaderCustomizableDirective" class="discrete">bbAccountStatementBusinessDownloadFailureNotificationHeaderCustomizableDirective</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbAccountStatementBusinessDownloadFailureNotificationHeaderCustomizableDirective&gt;
+    &lt;span
+      i18n="Failed to download statement@@account-statement-business-table-row.error-notification.header"
+    &gt;The statement can not be downloaded now, try again later&lt;/span&gt;
+  &lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbAccountStatementBusinessWidgetCustomizable" class="discrete">bbAccountStatementBusinessWidgetCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbAccountStatementBusinessWidgetCustomizable
+  let-hostRef
+  let-accountStatements="context.accountStatements"
+  let-accountStatementsLoading="context.accountStatementsLoading"
+  let-accountStatementsFilterParams="context.accountStatementsFilterParams"
+  let-accountStatementsError="context.accountStatementsError"
+  let-accountIds="context.accountIds"
+  let-loadingStates="context.loadingStates"
+&gt;
+  &lt;div aria-live="polite" data-role="account-statements-container"&gt;
+    &lt;ng-container *ngIf="!accountStatementsError; else accountStatementsErrorState"&gt;
+      &lt;ng-container [ngSwitch]="accountIds.length"&gt;
+        &lt;ng-container *ngSwitchCase="1"&gt;
+          &lt;ng-container *ngIf="accountStatementsLoading !== loadingStates.LOADING; else loadingState"&gt;
+            &lt;ng-container
+              *ngIf="
+                accountStatements.length || accountStatementsFilterParams.dateFrom;
+                else accountStatementsEmptyState
+              "
+            &gt;
+              &lt;bb-account-statement-business-filters&gt;&lt;/bb-account-statement-business-filters&gt;
+              &lt;ng-container *ngIf="accountStatementsLoading !== loadingStates.LOADING_FILTERED; else loadingState"&gt;
+                &lt;ng-container *ngIf="accountStatements.length; else accountStatementsFilteredEmptyState"&gt;
+                  &lt;bb-account-statement-business-statements-container&gt;&lt;/bb-account-statement-business-statements-container&gt;
+                &lt;/ng-container&gt;
+              &lt;/ng-container&gt;
+            &lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+        &lt;/ng-container&gt;
+
+        &lt;ng-container *ngSwitchCase="0"&gt;
+          &lt;ng-container *ngTemplateOutlet="accountStatementsNoAccountsError"&gt;&lt;/ng-container&gt;
+        &lt;/ng-container&gt;
+
+        &lt;ng-container *ngSwitchDefault&gt;
+          &lt;ng-container *ngTemplateOutlet="accountStatementsMultipleAccountsError"&gt;&lt;/ng-container&gt;
+        &lt;/ng-container&gt;
+      &lt;/ng-container&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+
+  &lt;ng-template #loadingState&gt;
+    &lt;bb-loading-indicator-ui loaderSize="lg"&gt;&lt;/bb-loading-indicator-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #accountStatementsEmptyState&gt;
+    &lt;bb-empty-state-ui
+      class="bb-state-container"
+      iconSize="xxl"
+      iconModifier="description"
+      data-role="account-statements-empty-state"
+      title="No account statements found"
+      i18n-title="No account statements found@@account-statement-business.statements.empty-state.title"
+      subtitle="You don't have any account statements to be displayed for this account."
+      i18n-subtitle="
+        You don't have any account statements...@@account-statement-business.statements.empty-state.subtitle"
+    &gt;&lt;/bb-empty-state-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #accountStatementsErrorState&gt;
+    &lt;bb-empty-state-ui
+      class="bb-state-container"
+      iconSize="xxl"
+      iconModifier="error"
+      data-role="account-statements-error-state"
+      title="Account statements are not loading"
+      i18n-title="Account statements are not loading@@account-statement-business.statement-list.error-state.title"
+      subtitle="Try to reload the page or contact the system administrator."
+      i18n-subtitle="Try to reload the page@@account-statement-business.statement-list.error-state.subtitle"
+    &gt;
+    &lt;/bb-empty-state-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #accountStatementsFilteredEmptyState&gt;
+    &lt;bb-empty-state-ui
+      class="bb-state-container"
+      iconSize="xxl"
+      iconModifier="search"
+      data-role="account-statements-filters-empty-state"
+      i18n-title="Account statements filtered state title@@account-statement-business.statements.filtered.state.title"
+      title="No Results Found"
+      i18n-subtitle="
+        Account statements filtered state subtitle@@account-statement-business.statements.filtered.state.subtitle"
+      subtitle="We can’t find what you’re looking for. Please try a different criteria."
+    &gt;&lt;/bb-empty-state-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #accountStatementsNoAccountsError&gt;
+    &lt;bb-empty-state-ui
+      data-role="account-statements-error-no-accounts"
+      iconSize="xxl"
+      iconModifier="current-accounts"
+      iconClasses="text-muted"
+      title="You did not select an account yet"
+      i18n-title="
+        You did not select an account yet |Error title when no account is
+        selected@@account-statement-business.statements.error.no-account.title"
+      subtitle="No statements to show. You need to select a bank account first."
+      i18n-subtitle="
+        No statements to show. You need to select a bank account first. |Error subtitle when when no account is
+        selected@@account-statement-business.statements.error.no-account.subtitle"
+    &gt;&lt;/bb-empty-state-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #accountStatementsMultipleAccountsError&gt;
+    &lt;bb-empty-state-ui
+      data-role="account-statements-error-multiple-accounts"
+      iconSize="xxl"
+      iconModifier="error-outline"
+      iconClasses="text-muted"
+      title="You have selected multiple accounts"
+      i18n-title="
+        You have selected multiple accounts |Error title when getting multiple
+        accounts@@account-statement-business.statements.error.multiple-accounts.title"
+      subtitle="Please select only one account to display the account information."
+      i18n-subtitle="
+        Please select only one account to display the account information |Error subtitle when getting multiple
+        accounts@@account-statement-business.statements.error.multiple-accounts.subtitle"
+    &gt;&lt;/bb-empty-state-ui&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbAccountStatementDownloadsCustomizableDirective" class="discrete">bbAccountStatementDownloadsCustomizableDirective</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbAccountStatementDownloadsCustomizableDirective
+  let-hostRef
+  let-documents="context.documents"
+  let-mimeTypeExtensions="context.mimeTypeExtensions"
+&gt;
+  &lt;ng-container
+    *ngIf="documents.length; else emptyState"
+  &gt;
+    &lt;button
+      [attr.data-role]="'download-one'"
+      *ngIf="documents.length === 1; else documentsToDownload"
+      bbButton
+      color="link"
+      circle="true"
+      aria-label="Download one available format"
+      i18n-aria-label="Download one available format@@account-statement.download-one-format.aria-label"
+      [bbAccountStatementDownloadDoc]="documents[0]"
+      (bbAccountStatementDownloadDocFailure)="hostRef.onDownloadDocFailure($event)"
+      triggers="hover focus"
+      [bbTooltip]="singleDownloadTooltip"
+    &gt;
+      &lt;bb-icon-ui
+        name="get-app"
+        size="md"
+      &gt;&lt;/bb-icon-ui&gt;
+    &lt;/button&gt;
+    &lt;ng-template
+      #singleDownloadTooltip
+      i18n="Download single file@@account-statement.single.download.tooltip"
+    &gt;
+      Download {{ mimeTypeExtensions[documents[0].contentType] ? '- ' + mimeTypeExtensions[documents[0].contentType] : '- File' }}
+    &lt;/ng-template&gt;
+    &lt;ng-template #documentsToDownload&gt;
+      &lt;bb-dropdown-menu-ui
+        [attr.data-role]="'as-dropdown-menu'"
+        icon="get-app"
+        btnColor="link"
+        [btnCircle]="true"
+        container="body"
+        ariaLabel="Show downloads actions"
+        i18n-ariaLabel="Downloads dropdown menu aria label@@account-statement.downloads.dropdown-menu.aria-label"
+        triggers="hover focus"
+        [bbTooltip]="downloadDropdownMenuTooltip"
+    &gt;
+      &lt;ng-template bbDropdownMenuItem&gt;
+        &lt;a
+          *ngFor="let document of documents; index as index"
+          rel="noopener"
+          role="menuitem"
+          class="dropdown-item"
+          data-role="download-statement"
+          href=""
+          (click)="$event.preventDefault()"
+          [bbAccountStatementDownloadDoc]="document"
+          (bbAccountStatementDownloadDocFailure)="hostRef.onDownloadDocFailure($event)"
+        &gt;
+          &lt;span
+            *ngIf="mimeTypeExtensions[document.contentType]"
+            attr.aria-label="download as {{ mimeTypeExtensions[document.contentType] }}"
+            i18n-attr.aria-label="Download as aria label@@account-statement.downloads.downloads-as.aria-label"
+          &gt;{{ mimeTypeExtensions[document.contentType] }}&lt;/span&gt;
+            &lt;span
+              *ngIf="!mimeTypeExtensions[document.contentType]"
+              i18n="Download file@@account-statement.downloads.downloads.file"
+              attr.aria-label="download unknown extension file {{ index + 1 }}"
+              i18n-attr.aria-label="Download file with unknown extension@@account-statement.downloads.downloads-unknown.aria-label"
+            &gt;File {{ index + 1 }}&lt;/span&gt;
+          &lt;/a&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-dropdown-menu-ui&gt;
+    &lt;/ng-template&gt;
+    &lt;ng-template
+      #downloadDropdownMenuTooltip
+      i18n="Download dropdown menu@@account-statement.download.dropdown-menu.tooltip"
+    &gt;Download dropdown menu
+    &lt;/ng-template&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #emptyState&gt;
+    &lt;bb-icon-ui
+      [attr.data-role]="'empty-state'"
+      name="warning"
+      color="warning"
+      placement="bottom"
+      [bbTooltip]="tooltip"
+      triggers="hover focus"
+      tabindex="0"
+    &gt;&lt;/bb-icon-ui&gt;
+
+    &lt;ng-template #tooltip&gt;
+      &lt;span
+        i18n="Downloads are empty tooltip@@account-statement.downloads.empty-state.tooltip"
+      &gt;Download is not supported for this statement, please contact the bank&lt;/span&gt;
+    &lt;/ng-template&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h2 id="bb_account_statment_business_widget_hostref_api" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="40"><p class="tableblock"><code>AccountStatementBusinessWidgetComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock"><code>bbAccountStatementBusinessWidgetCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountStatements$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Observable that contains list of account statements.</p>
+<p class="tableblock">Type: <code>Observable&lt;AccountStatement[]&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountStatementsLoading$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Observable that contains loading state of account statements.</p>
+<p class="tableblock">Type: <code>Observable&lt;LoadingState&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountStatementsError$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Observable that contains error object for account statements. By default it is set to <code>undefined</code>.</p>
+<p class="tableblock">Type: <code>Observable&lt;Error | undefined&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountIds$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Observable that contains IDs of selected accounts from account selector widget. By default it is set to <code>[]</code>.</p>
+<p class="tableblock">Type: <code>Observable&lt;string[]&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageSize$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Observable that contains page size provided via widget preference. The default value is 24.</p>
+<p class="tableblock">Type: <code>Observable&lt;number&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loadingStates</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enum that contains all loading state of the widget. Contains following values:-
+<code>IDLE</code>, <code>LOADING</code>, <code>LOADING_MORE</code>, <code>LOADING_FILTERED</code></p>
+<p class="tableblock">Type: <code>enum</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountStatementsFilterParams$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Observable that contains filter parameters such as <code>dateFrom</code>, <code>dateTo</code> and <code>datePeriod</code> applied by customer.</p>
+<p class="tableblock">Type: <code>Observable&lt;AccountStatementsFilterParams&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock"><code>bbAccountStatementBusinessTableCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountStatements</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The list of account statements.</p>
+<p class="tableblock">Type: <code>AccountStatement[] | null | undefined</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sortingParams</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains sorting parameters such as sorting direction and <code>orderBy</code>.</p>
+<p class="tableblock">Type: <code>SortingParams | undefined</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loading</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean property to show/hide the loader.</p>
+<p class="tableblock">Type: <code>boolean</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sort</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An <code>EventEmitter</code> that emits value when <code>onSort</code> method is called.</p>
+<p class="tableblock">Type: <code>EventEmitter&lt;SortEvent&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSort(params: SortEvent)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method that is called when the bank customer click on sortable header.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onDownloadFailure()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method that is called when the bank customer is failed to download the document. It will show the notification message.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="12"><p class="tableblock"><code>bbAccountStatementBusinessStatementsContainerCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountStatements$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Observable that contains list of account statements.</p>
+<p class="tableblock">Type: <code>Observable&lt;AccountStatement[]&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountStatementsLoading$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Observable that contains loading state of account statements.</p>
+<p class="tableblock">Type: <code>Observable&lt;LoadingState&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>totalCount$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Observable that contains the total number of account statements.</p>
+<p class="tableblock">Type:  <code>Observable&lt;number&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sortingParams$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Observable that contains the sorting parameters such as sorting direction and column name.</p>
+<p class="tableblock">Type:  <code>Observable&lt;SortEvent | undefined&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paginationParams$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Observable that contains the pagination parameters such as page from and size.</p>
+<p class="tableblock">Type:  <code>Observable&lt;PaginationParams | undefined&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loadingStates</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enum that contains all loading state of the widget. Contains following values:-
+<code>IDLE</code>, <code>LOADING</code>, <code>LOADING_MORE</code>, <code>LOADING_FILTERED</code></p>
+<p class="tableblock">Type: <code>enum</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paginationTypes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enum that contains all possible pagination type. Contains following values:-
+<code>PAGINATION</code>, <code>LOAD_MORE</code></p>
+<p class="tableblock">Type: <code>enum</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paginationType$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Observable that contains the type of pagination set by the bank customer.</p>
+<p class="tableblock">Type:  <code>Observable&lt;PaginationType&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageSize$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Observable that contains page size provided via widget preference. The default value is is 24.</p>
+<p class="tableblock">Type: <code>Observable&lt;number&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSort(sortEvent: SortEvent)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method that is called when the bank customer clicks on a sortable header. It will dispatch an event to load account statements according to the new sort parameters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loadMore(params: LoadMoreParams)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method that is called when the bank customer clicks on the <strong>load more button</strong>. It will dispatch an event to load account statements according to the new <code>LoadMoreParams</code> parameters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handlePageChange(page: number)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method that is called when the bank customer clicks on a page number. It will dispatch an event to load account statements according to the new pagination parameters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock"><code>bbAccountStatementBusinessFiltersCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>areFiltersApplied$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Observable that contains <code>readonly</code> boolean value. It is used to toggle the <strong>Filters applied</strong> and <strong>Filter</strong> button.</p>
+<p class="tableblock">Type: <code>Observable&lt;boolean&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>filterDatePeriods</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enum that contains all possible value of DatePeriods. Contains following values:-
+<code>Today</code>, <code>Yesterday</code>, <code>This week</code>, <code>Last week</code>, <code>This month</code>, <code>Last month</code>, <code>This quarter</code>, <code>Last quarter</code>, <code>This year</code>, <code>All time</code>.</p>
+<p class="tableblock">Type: <code>enum</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>filterForm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A <code>FormGroup</code> that contains <code>formControl</code> of customFilterPeriods and bookDate(from, to).</p>
+<p class="tableblock">Type:  <code>FormGroup</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSubmit()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method that is called when the bank customer applies the filter. It will dispatch an event to load account statements according to the new filter parameters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>focusFilterButton()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method that moves the focus to the <strong>Filter applied</strong> button after applying the filter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resetForm()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method that resets the <code>filterForm</code> and dispatch an event to load account statements according to the default filter parameters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setCustomFilter()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method that dispatch an event to load account statements according to the filter parameters selected from custom filter period dropdown.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>bbAccountStatementDownloadsCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>documents</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An array of documents(pdf, csv etc) that can be downloaded.</p>
+<p class="tableblock">Type: <code>AccountStatementIdentification[]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mimeTypeExtensions</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A property containing the mapping of mime types of documents to constants. For example, <code>{'application/pdf': 'PDF', 'text/csv': 'CSV'}</code></p>
+<p class="tableblock">Type:  <code>MimeTypeExtensions</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>downloadFailure</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An <code>EventEmitter</code> that emits value when <code>onDownloadDocFailure</code> method is called.</p>
+<p class="tableblock">Type: <code>EventEmitter&lt;Error&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onDownloadDocFailure(error: Error)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method that is called when the bank customer is failed to download the document. It will emit the <code>downloadFailure</code> event.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="bb_account_statment_business_widget_implementation" class="discrete">Implementation example</h2>
+<div class="paragraph">
+<p>The following examples show the implementation of this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrapper widget module</p>
+<div class="listingblock">
+<div class="title">account-statement-business-widget-extended-ang.module.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AccountStatementBusinessWidgetModule } from '@backbase/account-statement-business-widget-ang';
+import { AccountStatementBusinessWidgetExtendedAngComponent } from './account-statement-business-widget-extended-ang.component';
+
+@NgModule({
+  declarations: [AccountStatementBusinessWidgetExtendedAngComponent],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    AccountStatementBusinessWidgetModule,
+    BackbaseCoreModule.withConfig({
+      classMap: { AccountStatementBusinessWidgetExtendedAngComponent }
+    })
+  ]
+})
+export class AccountStatementBusinessWidgetExtendedAngModule { }</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Wrapper widget component</p>
+<div class="listingblock">
+<div class="title">account-statement-business-widget-extended-ang.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+
+@Component({
+  selector: 'bb-account-statement-business-widget-extended-ang',
+  templateUrl: './account-statement-business-widget-extended-ang.component.html',
+  styles: []
+})
+export class AccountStatementBusinessWidgetExtendedAngComponent {
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Custom template</p>
+<div class="listingblock">
+<div class="title">account-statement-business-widget-extended-ang.component.html</div>
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;bb-account-statement-business-widget&gt;&lt;/bb-account-statement-business-widget&gt;
+&lt;ng-template
+  bbAccountStatementBusinessWidgetCustomizable
+  let-hostRef
+  let-accountStatements="context.accountStatements"
+  let-accountStatementsLoading="context.accountStatementsLoading"
+  let-accountStatementsFilterParams="context.accountStatementsFilterParams"
+  let-accountStatementsError="context.accountStatementsError"
+  let-accounts="context.accounts"
+  let-accountsLoading="context.accountsLoading"
+  let-accountsError="context.accountsError"
+  let-loadingStates="context.loadingStates"&gt;
+  place your customization here
+&lt;/ng-template&gt;
+
+&lt;ng-template
+  bbAccountStatementBusinessStatementsContainerCustomizable
+  let-hostRef
+  let-accounts="context"&gt;
+  place your customization here
+&lt;/ng-template&gt;
+
+&lt;ng-template
+  bbAccountStatementBusinessTableCustomizable
+  let-hostRef
+  let-accountStatements="context.accountStatements"
+  let-totalCount="context.totalCount"
+  let-accountStatementsLoading="context.accountStatementsLoading"
+  let-loadingStates="context.loadingStates"
+  let-paginationParams="context.paginationParams"
+  let-sortingParams="context.sortingParams"
+  let-paginationType="context.paginationType"
+  let-paginationTypes="context.paginationTypes"&gt;
+  place your customization here
+&lt;/ng-template&gt;
+
+&lt;ng-template
+  bbAccountStatementBusinessDownloadFailureNotificationHeaderCustomizableDirective
+  let-hostRef&gt;
+  place your customization here
+&lt;/ng-template&gt;
+
+&lt;ng-template
+  bbAccountStatementBusinessFiltersCustomizable
+  let-hostRef
+  let-areFiltersApplied="context.areFiltersApplied"
+  let-filterForm="context.filterForm"&gt;
+  place your customization here
+&lt;/ng-template&gt;
+
+&lt;ng-template
+  bbAccountStatementDownloadsCustomizableDirective
+  let-hostRef
+  let-documents="context.documents"
+  let-mimeTypeExtensions="context.mimeTypeExtensions"&gt;
+  place your customization here
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="bb_account_statment_business_widget_preferences" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>The widget has the following preferences that managers or administrators
+configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configurable for</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p><strong>Number of statements per page</strong></p>
+</div>
+<div class="paragraph">
+<p>The number of entries shown to the customer per page or screen</p>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.accountStatement.pageSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>24</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p><strong>Notification dismiss time in seconds (defaults to 5)</strong></p>
+</div>
+<div class="paragraph">
+<p>The time that the notifications triggered by this widget are visible.</p>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>notificationDismissTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sorting order (date, description, category)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.accountStatement.sortingOrder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>date</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sorting direction (ASC, DESC)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.accountStatement.sortingDirection</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DESC</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Pagination type (PAGINATION or LOAD_MORE)</strong>
+Selects pagination or a <strong>Load more</strong> button.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paginationType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Web: <code>PAGINATION</code></p>
+</li>
+<li>
+<p>Mobile: <code>LOAD_MORE</code></p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Relative filter datepicker limit</strong>
+The number of months the date-picker counts back from the present day and disallow selection. For example, if the value is 2 and the present date is 01/03/2020, the first selectable date will be 01/01/2020.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.accountStatement.dateRelative</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Absolute filter datepicker limit (yyyy-mm-dd)</strong>
+The absolute date the date-picker disallows selection. The order of the date elements has to be yyyy-mm-ddd, but <code>/`</code> and <code>.</code> are accepted as separators. If this preference is set, it overrides the value in <strong>Relative filter date-picker limit</strong>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

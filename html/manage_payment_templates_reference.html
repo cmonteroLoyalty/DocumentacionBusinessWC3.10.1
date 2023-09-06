@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Manage payment templates</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="manage_payment_templates_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Manage payment templates</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html"><span class="toc-current">Manage payment templates</span></a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="manage_payment_templates_reference" class="sect0">Manage payment templates</h1>
+          <div class="paragraph">
+<p>This page includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="manage_payment_templates_reference.html#manage_payment_templates_selector">Selector name</a></p>
+</li>
+<li>
+<p><a href="manage_payment_templates_reference.html#manage_payment_templates_required_imports">Required imports</a></p>
+</li>
+<li>
+<p><a href="manage_payment_templates_reference.html#manage_payment_templates_extension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="manage_payment_templates_reference.html#manage_payment_templates_preferences">Preferences</a></p>
+</li>
+<li>
+<p><a href="manage_payment_templates_reference.html#manage_payment_templates_access_control">Access Control</a></p>
+</li>
+</ul>
+</div>
+<h2 id="manage_payment_templates_selector" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name:</p>
+</div>
+<div class="paragraph">
+<p><code>bb-payord-manage-payment-templates-widget</code></p>
+</div>
+<h2 id="manage_payment_templates_required_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Widget module import</p>
+<div class="paragraph">
+<p>Import the following modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import {
+  IconModule,
+  SearchBoxModule,
+  DropdownSingleSelectModule,
+  EmptyStateModule,
+  PaginatorModule,
+  LoadingIndicatorModule,
+  AmountModule,
+} from '@backbase/ui-ang'</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="manage_payment_templates_extension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_payment_templates_slot_1.svg?ver=3.10.1" alt="manage payment templates slot 1"></span>
+<span class="image"><img src="./images/business_banking_3/manage_payment_templates_slot_2.svg?ver=3.10.1" alt="manage payment templates slot 2"></span>
+<span class="image"><img src="./images/business_banking_3/manage_payment_templates_slot_3.svg?ver=3.10.1" alt="manage payment templates slot 3"></span>
+<span class="image"><img src="./images/business_banking_3/manage_payment_templates_slot_4.svg?ver=3.10.1" alt="manage payment templates slot 4"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="manage_payment_templates_reference.html#bbManagePaymentTemplatesListHeaderCustomizableDirective">bbManagePaymentTemplatesListHeaderCustomizableDirective</a></p>
+</li>
+<li>
+<p><a href="manage_payment_templates_reference.html#bbManagePaymentTemplatesListCustomizableDirective">bbManagePaymentTemplatesListCustomizableDirective</a></p>
+</li>
+<li>
+<p><a href="manage_payment_templates_reference.html#bbManagePaymentTemplatesDetailsCustomizableDirective">bbManagePaymentTemplatesDetailsCustomizableDirective</a></p>
+</li>
+<li>
+<p><a href="manage_payment_templates_reference.html#bbManagePaymentTemplatesDetailsListCustomizableDirective">bbManagePaymentTemplatesDetailsListCustomizableDirective</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbManagePaymentTemplatesListHeaderCustomizableDirective" class="discrete">bbManagePaymentTemplatesListHeaderCustomizableDirective</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbManagePaymentTemplatesListHeaderCustomizableDirective [bbHostRef]="hostRef"&gt; &lt;/ng-container&gt;
+&lt;ng-template bbManagePaymentTemplatesListHeaderCustomizableDirective let-hostRef&gt;
+  &lt;ng-container&gt;
+    &lt;div class="bb-stack"&gt;
+      &lt;div class="bb-stack__item"&gt;
+        &lt;bb-search-box-ui
+          aria-label="Search templates"
+          data-role="templates-header-searchbox"
+          placeholder="Search template name"
+          i18n-placeholder="@@manage-payment-templates.placeholder.search"
+          [showSearch]="true"
+          [showClear]="true"
+          (valueChange)="hostRef.onSearchPaymentTemplates($event)" (clear)="hostRef.onSearchPaymentTemplates('')"
+        &gt;&lt;/bb-search-box-ui&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbManagePaymentTemplatesListCustomizableDirective" class="discrete">bbManagePaymentTemplatesListCustomizableDirective</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbManagePaymentTemplatesListCustomizableDirective [bbHostRef]="hostRef"&gt; &lt;/ng-container&gt;
+&lt;ng-template bbManagePaymentTemplatesListCustomizableDirective let-hostRef&gt;
+  &lt;ng-container *ngIf="!hostRef.isLoading;else loading"&gt;
+    &lt;ng-container *ngIf="hostRef.paymentTemplates"&gt;
+
+      &lt;div *ngIf="hostRef.paymentTemplates.items.length &amp;&amp; !hostRef.responseError" class="table-responsive"&gt;
+
+        &lt;div class="bb-block bb-block--xl"&gt;&lt;/div&gt;
+
+        &lt;div *ngIf="hostRef.searchTerm"&gt;
+          &lt;div class="bb-block bb-block--xs"&gt;&lt;/div&gt;
+          &lt;div class="bb-block bb-block--xs" data-role="results-found"
+            i18n="@@manage-payment-templates.results-found"&gt;
+            {hostRef.paymentTemplates.totalCount, plural, =1 {1 result found} other
+            {{{hostRef.paymentTemplates.totalCount}} results found}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;table
+          class="table table-hover bb-table"
+        &gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;td&gt;&lt;/td&gt;
+              &lt;th data-role="header-status" scope="col"&gt;
+                &lt;span
+                  class="th-content"
+                  i18n="Manage payment templates table header label| Manage payment templates header label for status@@manage-payment-templates.header.status"
+                &gt;
+                  Template name
+                &lt;/span&gt;
+              &lt;/th&gt;
+              &lt;th data-role="header-account-from" scope="col"&gt;
+                &lt;span
+                  class="th-content"
+                  i18n="Manage payment templates table header label| Manage payment templates header label for from@@manage-payment-templates.header.from"
+                &gt;
+                  From
+                &lt;/span&gt;
+              &lt;/th&gt;
+              &lt;th data-role="header-account-to" scope="col"&gt;
+                &lt;span
+                  class="th-content"
+                  i18n="Manage payment templates table header label| Manage payment templates header label for number of payments@@manage-payment-templates.header.payments-number"
+                &gt;
+                  To
+                &lt;/span&gt;
+              &lt;/th&gt;
+              &lt;th data-role="header-currency" scope="col" class="bb-table--text-end"&gt;
+                &lt;span
+                  class="th-content"
+                  i18n="Manage payment templates table header label| Manage payment templates header label for currency@@manage-payment-templates.header.currency"
+                &gt;
+                  Ccy
+                &lt;/span&gt;
+              &lt;/th&gt;
+              &lt;th
+                scope="col"
+                data-role="header-amount"
+                class="bb-table--text-end"
+              &gt;
+                &lt;span
+                  i18n="Manage payment templates table header label| Manage payment templates header label for amount@@manage-payment-templates.header.amount"
+                  class="th-content"
+                &gt;
+                  Amount
+                &lt;/span&gt;
+              &lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr
+            *ngFor="let template of hostRef.paymentTemplates?.items"
+            (keydown.enter)="hostRef.onTemplateClick(template)"
+            (click)="hostRef.onTemplateClick(template)"
+            tabindex="0"
+            &gt;
+              &lt;td data-role="payment-col-selection"&gt;
+                &lt;bb-icon-ui
+                  class="bb-text-disabled bb-stack__item"
+                  name="insert-drive-file"&gt;
+                &lt;/bb-icon-ui&gt;
+              &lt;/td&gt;
+
+              &lt;td data-role="payment-col-status"&gt;
+                &lt;div class="bb-text-bold"&gt;
+                  {{template.name}}
+                &lt;/div&gt;
+
+                &lt;div #paymentTypeHeading class="d-none" aria-hidden="true"&gt;
+                  &lt;ng-container [ngSwitch]="template?.details?.paymentType"&gt;
+                    &lt;ng-container
+                      i18n="@@manage-payment-templates.paymentType.us.foreign"
+                      *ngSwitchCase="'US_FOREIGN_WIRE'"
+                    &gt;
+                      US Foreign Wire Payment
+                    &lt;/ng-container&gt;
+                    &lt;ng-container
+                      i18n="@@manage-payment-templates.paymentType.us.foreign.intraCompany"
+                      *ngSwitchCase="'US_FOREIGN_WIRE_ILE'"
+                    &gt;
+                      US Foreign Wire Payment
+                    &lt;/ng-container&gt;
+                    &lt;ng-container
+                      i18n="@@manage-payment-templates.payment.details.paymentType.sepa.ct.closed"
+                      *ngSwitchCase="'SEPA_CT_CLOSED'"
+                    &gt;
+                      SEPA CT Transfer
+                    &lt;/ng-container&gt;
+                    &lt;ng-container
+                      i18n="@@manage-payment-templates.payment.details.paymentType.sepa.ct.ile"
+                      *ngSwitchCase="'SEPA_CT_ILE'"
+                    &gt;
+                      SEPA CT Transfer
+                    &lt;/ng-container&gt;
+                    &lt;ng-container *ngSwitchDefault&gt;
+                      {{ template?.details?.paymentType }}
+                    &lt;/ng-container&gt;
+                  &lt;/ng-container&gt;
+                &lt;/div&gt;
+
+                &lt;div
+                  class="bb-text-support"
+                  data-role="payment-type"
+                &gt;
+                  {{hostRef.mapPaymentType(template) ? hostRef.mapPaymentType(template) : paymentTypeHeading.textContent}}
+                &lt;/div&gt;
+              &lt;/td&gt;
+
+              &lt;td&gt;
+                &lt;div data-role="payment-col-debitor-name"&gt;
+                  {{template.details.originatorAccount.name}}
+                &lt;/div&gt;
+                &lt;div
+                  class="bb-text-support"
+                  data-role="payment-col-debitor-account"
+                &gt;
+                  {{template.details.originatorAccount.identification.identification}}
+                &lt;/div&gt;
+              &lt;/td&gt;
+
+              &lt;td&gt;
+                &lt;div data-role="payment-col-creditor-name"&gt;
+                  {{template.details.transferTransactionInformation.counterparty.name}}
+                &lt;/div&gt;
+                &lt;div
+                  class="bb-text-support"
+                  data-role="payment-col-creditor-account"
+                &gt;
+                  {{template.details.transferTransactionInformation.counterpartyAccount.identification.identification}}
+                &lt;/div&gt;
+              &lt;/td&gt;
+
+              &lt;td data-role="payment-col-currency"  class="bb-table--text-end"&gt;
+                &lt;span&gt;{{template.details.transferTransactionInformation.instructedAmount.currencyCode}}&lt;/span&gt;
+              &lt;/td&gt;
+
+              &lt;td data-role="payment-col-amount" class="bb-table--text-end"&gt;
+                &lt;bb-amount-ui
+                  [amount]="template.details.transferTransactionInformation.instructedAmount.amount"
+              &gt;&lt;/bb-amount-ui&gt;
+              &lt;/td&gt;
+
+              &lt;td data-role="create-payment-col-selection"&gt;
+                &lt;button
+                  bbButton
+                  buttonSize="md"
+                  color="unstyled"
+                  aria-label="Approve"
+                  i18n-aria-label="Button for create payment from template@@manage-payment-templates.create-payment.button"
+                  data-role="create-payment-button"
+                  bbTooltip="Create new payment from this template"
+                  triggers="hover focus"
+                  i18n-bbTooltip="Tooltip for create payment from template@@manage-payment-templates.create-payment.tooltip"
+                  (keydown.enter)="$event.stopPropagation(); hostRef.onSelectTemplate(template)"
+                  (click)="$event.stopPropagation(); hostRef.onSelectTemplate(template)"
+                &gt;
+                  &lt;bb-icon-ui
+                    name="payments"
+                    class="bb-stack__item"
+                  &gt;
+                  &lt;/bb-icon-ui&gt;
+                &lt;/button&gt;
+              &lt;/td&gt;
+
+              &lt;td class="text-right" *ngIf="hostRef.deletePermission"&gt;
+                &lt;bb-dropdown-menu-ui
+                  class="bb-button-bar__button"
+                  btnColor="unstyled"
+                  btnCircle="true"
+                  container="body"
+                  data-role="more-options"
+                  (click)="$event.stopPropagation()"
+                &gt;
+                  &lt;ng-template bbDropdownLabel&gt;
+                    &lt;bb-icon-ui name="ellipsis-h"&gt;&lt;/bb-icon-ui&gt;
+                  &lt;/ng-template&gt;
+                  &lt;ng-template bbDropdownMenuItem&gt;
+                    &lt;button
+                      role="menuitem"
+                      type="button"
+                      class="dropdown-item"
+                      placement="left"
+                      (click)="hostRef.manageConfirmationModal(template)"
+                      i18n="manage-payment-templates.remove.account"
+                      data-role="delete-template-dropdown"&gt;
+                      Delete
+                    &lt;/button&gt;
+                  &lt;/ng-template&gt;
+                &lt;/bb-dropdown-menu-ui&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+
+    &lt;bb-pagination-ui
+      [boundaryLinks]="true"
+      [directionLinks]="true"
+      [itemsPerPage]="hostRef.pageSize"
+      [maxNavPages]="hostRef.preferences.MAX_NAV_SIZE"
+      [page]="currentPage"
+      [totalItems]="hostRef.paymentTemplates?.totalCount"
+      (pageChange)="hostRef.onPageChange($event)"
+    &gt;&lt;/bb-pagination-ui&gt;
+  &lt;/ng-container&gt;
+
+  &lt;div *ngIf="!hostRef.paymentTemplates?.items.length &amp;&amp; !hostRef.responseError &amp;&amp; !hostRef.searchTerm &amp;&amp; !hostRef.isLoading" class="bb-state-container"&gt;
+    &lt;bb-empty-state-ui
+      title="No Templates"
+      subtitle="You don't have any templates to be&lt;br&gt;displayed."
+      iconSize="xxl"
+      iconModifier="insert-drive-file"
+      [showIcon]="true"
+      i18n-title="Manage payment templates empty state title| Manage payment templates title for empty state@@manage-payment-templates.empty.state.title"
+      i18n-subtitle="Manage payment templates empty state subtitle| Manage payment templates subtitle for empty state@@manage-payment-templates.empty.state.subtitle"
+    &gt;&lt;/bb-empty-state-ui&gt;
+  &lt;/div&gt;
+
+  &lt;div *ngIf="hostRef.responseError &amp;&amp; !hostRef.searchTerm" class="bb-state-container"&gt;
+    &lt;bb-empty-state-ui
+      title="Unknown Error"
+      subtitle="Try to reload the page or contact the system administrator."
+      iconSize="xxl"
+      iconModifier="info"
+      [showIcon]="true"
+      i18n-title="Manage payment templates error state title| Manage payment templates title for error state@@manage-payment-templates.error.state.title"
+      i18n-subtitle="Manage payment templates error state subtitle| Manage payment templates subtitle for error state@@manage-payment-templates.error.state.subtitle"
+    &gt;&lt;/bb-empty-state-ui&gt;
+  &lt;/div&gt;
+
+  &lt;div *ngIf="!hostRef.paymentTemplates?.items.length &amp;&amp; hostRef.searchTerm &amp;&amp; !hostRef.isLoading" class="bb-state-container"&gt;
+    &lt;bb-empty-state-ui
+      title="No Results Found"
+      subtitle="We can’t find what you’re looking for. Please try a different criteria."
+      iconSize="xxl"
+      iconModifier="search"
+      [showIcon]="true"
+      i18n-title="Manage payment templates no results state title| Manage payment templates title for no results state@@manage-payment-templates.no-results.state.title"
+      i18n-subtitle="Manage payment templates no results state subtitle| Manage payment templates subtitle for no results state@@manage-payment-templates.no-results.state.subtitle"
+    &gt;&lt;/bb-empty-state-ui&gt;
+  &lt;/div&gt;
+
+  &lt;ng-template #loading&gt;
+    &lt;bb-loading-indicator-ui text="Loading data..." i18n-text="@@manage-payment-templates.loading.text"&gt;
+    &lt;/bb-loading-indicator-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;bb-confirmation-dialog
+    [isOpen]="hostRef.confirmationModalOpen"
+    [confirmButtonColor]="'danger'"
+    (cancel)="hostRef.confirmationModalOpen = false"
+    (confirm)="hostRef.onDeleteTemplate(templateInfo)"
+  &gt;
+    &lt;span
+      title
+      data-role="delete-modal-title"
+      i18n="manage-payment-templates.confirmation-dialog.discard.title"
+    &gt;
+      Delete template?
+    &lt;/span&gt;
+    &lt;span
+      body
+      data-role="delete-modal-message"
+      i18n="manage-payment-templates.confirmation-dialog.discard.body"
+    &gt;
+      Are you sure you want to delete "{{ hostRef.templateInfo?.name }}" template? This action cannot be undone.
+    &lt;/span&gt;
+    &lt;span
+      confirmActionName
+      data-role="delete-button-modal"
+      i18n="manage-payment-templates.confirmation-dialog.discard.action.confirm"
+    &gt;
+      Delete
+    &lt;/span&gt;
+    &lt;span
+      cancelActionName
+      data-role="cancel-button-modal"
+      i18n="manage-payment-templates.confirmation-dialog.discard.action.cancel"
+    &gt;
+      Cancel
+    &lt;/span&gt;
+  &lt;/bb-confirmation-dialog&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbManagePaymentTemplatesDetailsCustomizableDirective" class="discrete">bbManagePaymentTemplatesDetailsCustomizableDirective</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbManagePaymentTemplatesDetailsCustomizableDirective [bbHostRef]="hostRef"&gt; &lt;/ng-container&gt;
+&lt;ng-template bbManagePaymentTemplatesDetailsCustomizableDirective let-hostRef&gt;
+  &lt;bb-modal-ui [isOpen]="hostRef.isOpen" (cancel)="hostRef.onClose()" (confirm)="hostRef.onClose()"&gt;
+    &lt;ng-container *ngIf="hostRef.paymentTemplate; else loading"&gt;
+      &lt;bb-modal-header-ui&gt;
+        &lt;ng-template bbCustomModalHeader&gt;
+          &lt;div class="bb-stack bb-stack--density-xs bb-block bb-block--md" data-role="payment-details-header"&gt;
+            &lt;div class="bb-stack__item"&gt;
+              &lt;bb-icon-ui class="bb-text-disabled bb-stack__item" name="insert-drive-file"&gt;
+              &lt;/bb-icon-ui&gt;
+            &lt;/div&gt;
+
+            &lt;div class="bb-stack__item"&gt;
+              &lt;bb-header-ui id="headerTitle" headingType="h2" [attr.data-role]="'template-name'"
+                [heading]="hostRef.paymentTemplate.name"&gt;&lt;/bb-header-ui&gt;
+            &lt;/div&gt;
+
+            &lt;div class="bb-stack__item bb-stack__item--push-right bb-stack__item--align-top"&gt;
+              &lt;div class="bb-stack"&gt;
+                &lt;div class="bb-stack__item d-none d-sm-block"&gt;
+                  &lt;button
+                    bbButton
+                    [circle]="true"
+                    buttonSize="sm"
+                    color="link-dark"
+                    (click)="hostRef.onPrint()"
+                    data-role="print-template-details-modal-header"
+                    aria-label="Print template detail dialog"
+                    i18n-aria-label="@@manage-templates.payment.not.found.header.print"
+                  &gt;
+                    &lt;bb-icon-ui color="muted" name="print"&gt;&lt;/bb-icon-ui&gt;
+                  &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div *ngIf="hostRef.deletePermission" class="bb-stack__item"&gt;
+                  &lt;bb-dropdown-menu-ui type="button" buttonSize="sm" btnCircle="true" icon="ellipsis-h"
+                    btnColor="link-dark" triggers="hover focus" bbTooltip="More actions" ariaLabel="More actions"
+                    data-role="payment-templates-header-action-dropdown"
+                    i18n-bbTooltip="@@manage-templates.details.more-action.tooltip"
+                    i18n-ariaLabel="@@manage-templates.details.more-action"&gt;
+                    &lt;ng-template bbDropdownMenuItem&gt;
+                      &lt;button
+                        placement="left" class="dropdown-item" triggers="hover focus"
+                        (click)="hostRef.confirmationModalOpen = true"
+                        data-role="cancel-template-details-modal-header"
+                        i18n="@@manage-templates.template.details.action.cancel"&gt;
+                        Delete
+                      &lt;/button&gt;
+                    &lt;/ng-template&gt;
+                  &lt;/bb-dropdown-menu-ui&gt;
+                &lt;/div&gt;
+
+                &lt;div class="bb-stack__item"&gt;
+                  &lt;button bbButton class="close m-0 p-0" circle="true" buttonSize="sm" color="unstyled" (click)="hostRef.onClose()"
+                    aria-label="Close template detail dialog" data-role="close-template-details-modal-header"
+                    i18n-aria-label="Close template detail dialog@@manage-templates.template.header.close"&gt;
+                    &lt;bb-icon-ui color="muted" name="clear"&gt;&lt;/bb-icon-ui&gt;
+                  &lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-modal-header-ui&gt;
+
+      &lt;div class="bb-subheader bb-subheader--regular modal-header py-0"&gt;
+        &lt;span class="bb-text-support"&gt;
+
+          &lt;span #paymentTypeHeading class="d-none" aria-hidden="true"&gt;
+            &lt;ng-container [ngSwitch]="hostRef.paymentTemplate?.details?.paymentType"&gt;
+              &lt;ng-container
+                i18n="@@manage-templates.payment.details.paymentType.us.foreign"
+                *ngSwitchCase="'US_FOREIGN_WIRE'"
+              &gt;
+                US Foreign Wire Payment
+              &lt;/ng-container&gt;
+              &lt;ng-container
+                i18n="@@manage-templates.payment.details.paymentType.us.foreign.intraCompany"
+                *ngSwitchCase="'US_FOREIGN_WIRE_ILE'"
+              &gt;
+                US Foreign Wire Payment
+              &lt;/ng-container&gt;
+              &lt;ng-container
+                i18n="@@manage-templates.payment.details.paymentType.sepa.ct.closed"
+                *ngSwitchCase="'SEPA_CT_CLOSED'"
+              &gt;
+                SEPA CT Transfer
+              &lt;/ng-container&gt;
+              &lt;ng-container
+                i18n="@@manage-templates.payment.details.paymentType.sepa.ct.ile"
+                *ngSwitchCase="'SEPA_CT_ILE'"
+              &gt;
+                SEPA CT Transfer
+              &lt;/ng-container&gt;
+              &lt;ng-container *ngSwitchDefault&gt;
+                {{ hostRef.paymentTemplate?.details?.paymentType }}
+              &lt;/ng-container&gt;
+            &lt;/ng-container&gt;
+          &lt;/span&gt;
+
+          &lt;span
+            data-role="payment-type"
+          &gt;
+            {{hostRef.dynamicPaymentTemplateDetails?.paymentTypeConfigName ? hostRef.dynamicPaymentTemplateDetails?.paymentTypeConfigName : paymentTypeHeading.textContent}}
+          &lt;/span&gt;
+
+          &lt;span data-role="payment-type-separator"&gt; • &lt;/span&gt;
+
+          &lt;span i18n="@@manage-templates.payment.details.created"&gt; Created &lt;/span&gt;
+          &lt;span i18n="@@manage-templates.payment.details.created.on"&gt;on &lt;/span&gt;
+          {{ hostRef.paymentTemplate?.createdAt | date }}
+          &lt;span i18n="@@manage-templates.payment.details.created.at"&gt;at &lt;/span&gt;
+          {{ hostRef.paymentTemplate?.createdAt | date: 'shortTime' }}
+        &lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div *ngIf="hostRef.paymentTemplate?.details?.instructionPriority === 'HIGH'"
+        class="bb-inline-stack bb-inline-stack__item pt-2 px-4 bb-text-support"&gt;
+        &lt;bb-icon-ui name="priority-high"&gt;&lt;/bb-icon-ui&gt;
+        &lt;div class="bb-inline-stack__item"&gt;&lt;/div&gt;
+        &lt;div class="bb-inline-stack__item bb-text-bold" i18n="@@manage-templates-urgent-transfer-label"&gt;
+          Urgent payment
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;bb-modal-body-ui&gt;
+        &lt;ng-template bbCustomModalBody&gt;
+          &lt;bb-manage-templates-details-list
+            class="bb-list"
+            [data]="hostRef.paymentTemplate"
+            [dynamicDetails]="{
+              bankBranchCodeLabel: hostRef.dynamicPaymentTemplateDetails?.bankBranchCodeFieldConfigLabel,
+              messageFieldLabel: hostRef.dynamicPaymentTemplateDetails?.messageFieldConfigLabel,
+              bankMessageFieldLabel: hostRef.dynamicPaymentTemplateDetails?.bankMessageFieldConfigLabel
+            }"
+            data-role="template-details-list"
+          &gt;&lt;/bb-manage-templates-details-list&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-modal-body-ui&gt;
+
+      &lt;bb-modal-footer-ui&gt;
+        &lt;ng-template bbCustomModalFooter&gt;
+          &lt;button
+            bbButton
+            data-role="new-payment-button"
+            color="primary"
+            (click)="hostRef.onSelectTemplate(paymentTemplate)"
+          &gt;
+            &lt;div class="bb-inline-stack"&gt;
+              &lt;bb-icon-ui name="payments" class="bb-inline-stack__item--spacing-sm"&gt;&lt;/bb-icon-ui&gt;
+              &lt;span
+                data-role="new-payment-button-text"
+                i18n="@@manage-templates.payment.details.new.payment.button"
+              &gt;
+                New payment
+              &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/button&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-modal-footer-ui&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-template #loading&gt;
+      &lt;bb-loading-indicator-ui&gt;&lt;/bb-loading-indicator-ui&gt;
+    &lt;/ng-template&gt;
+  &lt;/bb-modal-ui&gt;
+
+  &lt;bb-confirmation-dialog
+    [isOpen]="hostRef.confirmationModalOpen"
+    [confirmButtonColor]="'danger'"
+    (cancel)="hostRef.confirmationModalOpen = false"
+    (confirm)="hostRef.onDeleteTemplate(paymentTemplate)"
+  &gt;
+    &lt;span
+      title
+      data-role="delete-modal-title"
+      i18n="manage-templates.confirmation-dialog.discard.title"
+    &gt;
+      Delete template?
+    &lt;/span&gt;
+    &lt;span
+      body
+      data-role="delete-modal-message"
+      i18n="manage-templates.confirmation-dialog.discard.body"
+    &gt;
+      Are you sure you want to delete "{{ hostRef.paymentTemplate?.name }}" template? This action cannot be undone.
+    &lt;/span&gt;
+    &lt;span
+      confirmActionName
+      data-role="delete-button-modal"
+      i18n="manage-templates.confirmation-dialog.discard.action.confirm"
+    &gt;
+      Delete
+    &lt;/span&gt;
+    &lt;span
+      cancelActionName
+      data-role="cancel-button-modal"
+      i18n="manage-templates.confirmation-dialog.discard.action.cancel"
+    &gt;
+      Cancel
+    &lt;/span&gt;
+  &lt;/bb-confirmation-dialog&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbManagePaymentTemplatesDetailsListCustomizableDirective" class="discrete">bbManagePaymentTemplatesDetailsListCustomizableDirective</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbManagePaymentTemplatesDetailsListCustomizableDirective [bbHostRef]="hostRef"&gt; &lt;/ng-container&gt;
+&lt;ng-template bbManagePaymentTemplatesDetailsListCustomizableDirective let-hostRef&gt;
+  &lt;div class="bb-list__item"&gt;
+    &lt;div class="row break-word"&gt;
+      &lt;div class="bb-payment-account-details-card__container justify-content-center w-100"&gt;
+
+        &lt;!-- From --&gt;
+        &lt;div class="col-md-6 bb-block bb-block--md"&gt;
+          &lt;div i18n="@@manage-templates.payment.details.from" class="bb-text-bold bb-block bb-block--sm"&gt;From&lt;/div&gt;
+          &lt;div class="card card-sm card--shadowless card--highlight"&gt;
+            &lt;div class="card-body"&gt;
+              &lt;div class="bb-block bb-block--sm"&gt;
+                &lt;bb-icon-ui size="md" color="secondary" name="accounts" backgroundType="square"&gt;&lt;/bb-icon-ui&gt;
+              &lt;/div&gt;
+              &lt;div data-role="payment-debtor-account-name"&gt;{{ hostRef.data.details?.originatorAccount?.name }}&lt;/div&gt;
+              &lt;div data-role="payment-debtor-account-number" class="bb-text-support"&gt;
+                {{ hostRef.data.details?.originatorAccount?.identification | accountFormatter }}
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="d-none justify-content-center align-items-center d-md-flex"&gt;
+          &lt;bb-icon-ui class="bb-account-transfer-icon" name="arrow-forward"&gt;&lt;/bb-icon-ui&gt;
+        &lt;/div&gt;
+
+        &lt;!-- To --&gt;
+        &lt;div class="col-md-6 bb-block bb-block--md"&gt;
+          &lt;div i18n="@@manage-templates.payment.details.to" class="bb-text-bold bb-block bb-block--sm"&gt;To&lt;/div&gt;
+          &lt;div class="card card-sm card--shadowless card--highlight"&gt;
+            &lt;div class="card-body"&gt;
+              &lt;div class="bb-stack bb-block bb-block--sm"&gt;
+                &lt;bb-avatar-ui class="bb-stack__item" [name]="hostRef.transactionInformation?.counterparty.name" [size]="'md'"&gt;&lt;/bb-avatar-ui&gt;
+                &lt;bb-flag-icon
+                  *ngIf="hostRef.data?.details?.paymentType === 'INTERNATIONAL_TRANSFER'"
+                  class="bb-stack__item bb-stack__item--push-right"
+                  [countryCode]="hostRef.transactionInformation?.counterpartyBank?.postalAddress?.country" size="lg"&gt;&lt;/bb-flag-icon&gt;
+              &lt;/div&gt;
+              &lt;div data-role="payment-creditor-account-name"&gt;{{ hostRef.transactionInformation?.counterparty.name }}&lt;/div&gt;
+              &lt;div data-role="payment-creditor-account-number" class="bb-text-support"&gt;
+                {{ hostRef.transactionInformation?.counterpartyAccount?.identification | accountFormatter }}
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Amount --&gt;
+      &lt;div class="col-md-12"&gt;
+        &lt;div i18n="@@manage-templates.payment.details.amount" class="bb-text-bold"&gt;Amount&lt;/div&gt;
+        &lt;div data-role="payment-amount" class="bb-highlight bb-amount--currency-space"&gt;
+          &lt;bb-amount-ui
+            [mapCurrency]="false"
+            [amount]="hostRef.transactionInformation?.instructedAmount?.amount"
+            [currency]="hostRef.transactionInformation?.instructedAmount?.currencyCode"
+          &gt;&lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+        &lt;div *ngIf="hostRef.hasReadableValue(hostRef.transactionInformation.transferFee)" class="bb-amount--currency-space"&gt;
+          &lt;span i18n="@@manage-templates.payment.details.Transfer.fee.label"&gt;
+            Transfer fee:
+          &lt;/span&gt;
+
+          &lt;bb-amount-ui
+            [mapCurrency]="false"
+            [amount]="hostRef.transactionInformation?.transferFee.amount"
+            [currency]="hostRef.transactionInformation?.transferFee?.currencyCode"
+          &gt;&lt;/bb-amount-ui&gt;
+
+          &lt;div
+            class="bb-subtitle bb-text-support"
+            *ngIf="hostRef.transactionInformation.chargeBearer"
+            [ngSwitch]="hostRef.transactionInformation.chargeBearer"
+          &gt;
+            &lt;div *ngSwitchCase="'SHA'" i18n="@@manage-templates.payment.details.chargeBearer.SHA"&gt;
+              The fees is shared (SHA)
+            &lt;/div&gt;
+
+            &lt;div *ngSwitchCase="'OUR'" i18n="@@manage-templates.payment.details.chargeBearer.OUR"&gt;
+              You pay all the fees (OUR)
+            &lt;/div&gt;
+
+            &lt;div *ngSwitchCase="'BEN'" i18n="@@manage-templates.payment.details.chargeBearer.BEN"&gt;
+              Beneficiary pays all the fees (BEN)
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="bb-list__item"
+      *ngIf="hostRef.isAddressTruthy(hostRef.transactionInformation?.counterparty?.postalAddress) ||
+      hostRef.isCounterpartyBankDataAvailable()"
+  &gt;
+    &lt;!-- Beneficiary details --&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-md-12"
+          [ngClass]="{'bb-block bb-block--md': hostRef.isAddressTruthy(hostRef.transactionInformation?.counterparty?.postalAddress)}"
+      &gt;
+        &lt;div class="bb-highlight"
+            [ngClass]="{'bb-block bb-block--md': hostRef.isAddressTruthy(hostRef.transactionInformation?.counterparty?.postalAddress)}"
+            i18n="@@manage-templates.beneficiary.details"&gt;Beneficiary details&lt;/div&gt;
+        &lt;div class="break-word" *ngIf="hostRef.isAddressTruthy(hostRef.transactionInformation?.counterparty?.postalAddress)"&gt;
+          &lt;div i18n="@@manage-templates.payment.beneficiary.address" class="bb-text-bold" data-role="beneficiary-address-label"&gt;Beneficiary address&lt;/div&gt;
+          &lt;bb-full-address data-role="beneficiary-details-address" [address]="hostRef.transactionInformation?.counterparty?.postalAddress"&gt;
+          &lt;/bb-full-address&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;ng-container *ngIf="hostRef.transactionInformation?.counterpartyBank as counterpartyBank"&gt;
+        &lt;div class="col-md-6 bb-block bb-block--md" *ngIf="counterpartyBank?.name"&gt;
+          &lt;div i18n="@@manage-templates.payment.beneficiary.bank.name" class="bb-text-bold" data-role="bank-name-label"&gt;Bank name&lt;/div&gt;
+          &lt;div data-role="bank-name"&gt;{{counterpartyBank?.name}}&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="col-md-6" *ngIf="counterpartyBank?.bankBranchCode"&gt;
+          &lt;div
+            class="bb-text-bold"
+            data-role="payment-beneficiary-bank-branch-code-label-dynamic"
+            *ngIf="hostRef.dynamicDetails?.bankBranchCodeLabel;else staticLabelTemplate"
+          &gt;
+            {{ hostRef.dynamicDetails?.bankBranchCodeLabel }}
+          &lt;/div&gt;
+
+          &lt;ng-template #staticLabelTemplate&gt;
+            &lt;div
+              class="bb-text-bold"
+              i18n="@@manage-templates.payment.beneficiary-bank-details.bank-branch-code"
+              data-role="payment-beneficiary-bank-branch-code-label"
+            &gt;
+              Bank branch code
+            &lt;/div&gt;
+          &lt;/ng-template&gt;
+          &lt;div data-role="bank-branch-code"&gt;{{counterpartyBank?.bankBranchCode}}&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="col-md-6"
+          [ngClass]="{'bb-block bb-block--md': hostRef.isAddressTruthy(counterpartyBank?.postalAddress)}"
+          *ngIf="counterpartyBank?.bic"
+        &gt;
+          &lt;div i18n="@@manage-templates.payment.beneficiary.bic" class="bb-text-bold" data-role="bic-label"&gt;BIC&lt;/div&gt;
+          &lt;div data-role="beneficiary-bic"&gt;{{counterpartyBank?.bic}}&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Beneficiary bank address --&gt;
+        &lt;div class="col-md-12 break-word"
+          *ngIf="hostRef.isAddressTruthy(counterpartyBank?.postalAddress)"
+        &gt;
+          &lt;ng-container&gt;
+            &lt;div i18n="@@manage-templates.beneficiary-bank-details.address" class="bb-text-bold" data-role="bank-address-label"&gt;Bank address
+            &lt;/div&gt;
+            &lt;bb-full-address [address]="counterpartyBank?.postalAddress" data-role="bank-address"&gt;
+            &lt;/bb-full-address&gt;
+          &lt;/ng-container&gt;
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div
+      *ngIf="hostRef.transactionInformation?.counterpartyAccount?.accountType || hostRef.data?.details?.entryClass || hostRef.transactionInformation?.counterparty?.recipientId || hostRef.transactionInformation?.endToEndIdentification || hostRef.transactionInformation?.remittanceInformation?.content"
+      class="bb-list__item"&gt;
+      &lt;div
+        class="row break-word"
+        *ngIf="hostRef.transactionInformation?.counterpartyAccount?.accountType || hostRef.data?.details.entryClass"
+        [ngClass]="{'bb-block bb-block--md': hostRef.transactionInformation?.counterparty?.recipientId &amp;&amp; hostRef.data?.details?.entryClass}"
+      &gt;
+        &lt;!-- Account type --&gt;
+        &lt;div
+          class="col-md-6 bb-block bb-block--md"
+          *ngIf="hostRef.transactionInformation?.counterpartyAccount?.accountType"
+        &gt;
+          &lt;div i18n="Account type@@manage-templates.payment.details.account-type" class="bb-text-bold" data-role="payment-creditor-account-type-label"&gt;
+            Account type
+          &lt;/div&gt;
+          &lt;div data-role="payment-creditor-account-type"&gt;
+            {{hostRef.transactionInformation.counterpartyAccount?.accountType | titlecase}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Standard Entry Class --&gt;
+        &lt;div
+          class="col-md-6"
+          *ngIf="hostRef.data?.details?.entryClass"
+          [ngClass]="{'bb-block bb-block--md': hostRef.transactionInformation?.counterparty?.recipientId}"
+        &gt;
+          &lt;div i18n="Standard Entry Class@@manage-templates.payment.details.entry-class" class="bb-text-bold" data-role="payment-entry-class-label"&gt;
+            Standard Entry Class (SEC)
+          &lt;/div&gt;
+          &lt;div data-role="payment-entry-class"&gt;
+            &lt;ng-container [ngSwitch]="hostRef.data?.details?.entryClass"&gt;
+              &lt;ng-container
+                i18n="@@manage-templates.payment.details.entry-class.personal"
+                *ngSwitchCase="'PPD'"
+              &gt;Personal&lt;/ng-container&gt;
+              &lt;ng-container
+                i18n="@@manage-templates.payment.details.entry-class.business"
+                *ngSwitchCase="'CCD'"
+              &gt;Business&lt;/ng-container&gt;
+            &lt;/ng-container&gt;
+            ({{hostRef.data?.details?.entryClass}})
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Recipient ID --&gt;
+        &lt;div class="col-md-6" *ngIf="hostRef.transactionInformation?.counterparty?.recipientId"&gt;
+          &lt;div class="bb-text-bold" i18n="Recipient ID@@manage-templates.payment.beneficiary-bank-details.recipient-id" data-role="payment-counterparty-recipient-id-label"&gt;
+            Recipient ID
+          &lt;/div&gt;
+          &lt;div data-role="payment-counterparty-recipient-id"&gt;
+            {{hostRef.transactionInformation?.counterparty?.recipientId}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Reference --&gt;
+      &lt;div
+        class="row break-word"
+        *ngIf="hostRef.transactionInformation?.endToEndIdentification"
+      &gt;
+        &lt;div class="col-md-12"&gt;
+          &lt;div i18n="@@manage-templates.payment.details.execution.endToEndIdentification" class="bb-text-bold" data-role="reference-label"&gt;
+            Reference
+          &lt;/div&gt;
+          &lt;div data-role="reference"&gt;{{ hostRef.transactionInformation?.endToEndIdentification }}&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+
+      &lt;!-- Description --&gt;
+      &lt;div class="row break-word"&gt;
+        &lt;div
+          class="col-md-12"
+          *ngIf="hostRef.transactionInformation?.remittanceInformation"
+        &gt;
+          &lt;div
+            class="bb-text-bold"
+            i18n="@@manage-templates.payment.details.remittanceInformation.content"
+            data-role="payment-description-label"
+          &gt;
+            Payment description
+          &lt;/div&gt;
+          &lt;div data-role="payment-description"&gt;{{ hostRef.transactionInformation?.remittanceInformation.content }}&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;div class="bb-list__item" *ngIf="hostRef.transactionInformation?.correspondentBank as correspondentBank"&gt;
+    &lt;!-- Correspondent bank details --&gt;
+    &lt;div class="bb-highlight bb-block bb-block--md" i18n="@@manage-templates.correspondent.details"&gt;Correspondent bank details&lt;/div&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-md-6 bb-block bb-block--md" *ngIf="correspondentBank?.name"&gt;
+        &lt;div i18n="@@manage-templates.payment.correspondent.bank.name" class="bb-text-bold" data-role="correspondent-bank-name-label"&gt;Bank name&lt;/div&gt;
+        &lt;div data-role="correspondent-bank-name"&gt;{{correspondentBank?.name}}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="col-md-6" *ngIf="correspondentBank?.bankBranchCode"&gt;
+        &lt;div
+          class="bb-text-bold"
+          data-role="payment-correspondent-bank-branch-code-label-dynamic"
+          *ngIf="hostRef.dynamicDetails?.bankBranchCodeLabel;else staticLabelTemplate"
+        &gt;
+          {{ hostRef.dynamicDetails?.bankBranchCodeLabel }}
+        &lt;/div&gt;
+
+        &lt;ng-template #staticLabelTemplate&gt;
+          &lt;div
+            class="bb-text-bold"
+            i18n="@@manage-templates.payment.correspondent-bank-details.bank-branch-code"
+            data-role="payment-correspondent-bank-branch-code-label"
+          &gt;
+            Bank branch code
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+        &lt;div data-role="correspondent-bank-branch-code"&gt;{{correspondentBank?.bankBranchCode}}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="col-md-6"
+        [ngClass]="{'bb-block bb-block--md': hostRef.isAddressTruthy(correspondentBank?.postalAddress)}"
+        *ngIf="correspondentBank?.bic"
+      &gt;
+        &lt;div i18n="@@manage-templates.payment.correspondent.bic" class="bb-text-bold" data-role="correspondent-bic-label"&gt;BIC&lt;/div&gt;
+        &lt;div data-role="correspondent-bic"&gt;{{correspondentBank?.bic}}&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Correspondent bank address --&gt;
+      &lt;div class="col-md-12 break-word"
+        *ngIf="hostRef.isAddressTruthy(correspondentBank?.postalAddress)"
+      &gt;
+        &lt;div i18n="@@manage-templates.correspondent-bank-details.address" class="bb-text-bold" data-role="correspondent-bank-address-label"&gt;Bank address&lt;/div&gt;
+        &lt;bb-full-address [address]="correspondentBank?.postalAddress" data-role="correspondent-bank-address"&gt;
+        &lt;/bb-full-address&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Intermediary bank details --&gt;
+  &lt;div class="bb-list__item" *ngIf="hostRef.hasReadableValue(hostRef.transactionInformation?.intermediaryBank)"&gt;
+    &lt;div
+      class="bb-highlight bb-block bb-block--sm"
+      data-role="payment-intermediary-bank-details"
+      i18n="@@manage-templates.payment.intermediary-bank-details.label"
+    &gt;
+      Intermediary bank details
+    &lt;/div&gt;
+
+    &lt;div
+      class="row"
+      *ngIf="hostRef.transactionInformation?.intermediaryBank?.name || hostRef.transactionInformation?.intermediaryBank?.bankBranchCode || hostRef.transactionInformation?.intermediaryBank?.bic"
+    &gt;
+      &lt;div class="col-md-6 bb-block bb-block--md" *ngIf="hostRef.transactionInformation?.intermediaryBank?.name"&gt;
+        &lt;div class="bb-text-bold" i18n="@@manage-templates.payment.intermediary-bank-details.name"&gt;
+          Bank name
+        &lt;/div&gt;
+        &lt;div data-role="payment-intermediary-bank-name"&gt;
+          {{hostRef.transactionInformation?.intermediaryBank?.name}}
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div
+        class="col-md-6 bb-block bb-block--md"
+        *ngIf="hostRef.transactionInformation?.intermediaryBank?.bankBranchCode"
+      &gt;
+        &lt;div
+          class="bb-text-bold"
+          i18n="Bank branch code@@manage-templates.payment.intermediary-bank-details.bank-branch-code"
+          data-role="payment-beneficiary-bank-branch-code-label"
+        &gt;
+          Bank branch code
+        &lt;/div&gt;
+
+        &lt;div data-role="payment-intermediary-bank-branch-code"&gt;
+          {{ hostRef.transactionInformation?.intermediaryBank?.bankBranchCode }}
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="col-md-6" *ngIf="hostRef.transactionInformation?.intermediaryBank?.bic"
+        [ngClass]="{'bb-block bb-block--md': hostRef.isAddressTruthy(hostRef.transactionInformation?.intermediaryBank.postalAddress)}"
+      &gt;
+        &lt;div class="bb-text-bold" i18n="@@manage-templates.payment.intermediary-bank-details.bic"&gt;
+          BIC
+        &lt;/div&gt;
+        &lt;div data-role="payment-intermediary-bank-bic"&gt;
+          {{hostRef.transactionInformation?.intermediaryBank?.bic}}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="row break-word"
+        *ngIf="hostRef.isAddressTruthy(hostRef.transactionInformation?.intermediaryBank?.postalAddress)"
+    &gt;
+      &lt;!-- Intermediary bank address --&gt;
+      &lt;div class="col-md-12"&gt;
+        &lt;div i18n="@@manage-templates.intermediary-bank-details.address" class="bb-text-bold"&gt;Bank address&lt;/div&gt;
+        &lt;bb-full-address data-role="intermediary-bank-address" [address]="hostRef.transactionInformation?.intermediaryBank?.postalAddress"&gt;
+        &lt;/bb-full-address&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Messsages --&gt;
+  &lt;div class="row" *ngIf="hostRef.transactionInformation?.remittanceInformation || hostRef.transactionInformation?.messageToBank"&gt;
+    &lt;div class="col-md-12" [ngClass]="{'bb-block bb-block--md': hostRef.transactionInformation?.remittanceInformation &amp;&amp; hostRef.transactionInformation?.messageToBank}"&gt;
+      &lt;ng-container *ngIf="hostRef.transactionInformation?.remittanceInformation"&gt;
+        &lt;div
+          class="bb-text-bold"
+          data-role="payment-message-to-beneficiary-label-dynamic"
+          *ngIf="hostRef.dynamicDetails?.messageFieldLabel;else staticMessageLabelTemplate"
+        &gt;
+          {{ hostRef.dynamicDetails?.messageFieldLabel }}
+        &lt;/div&gt;
+        &lt;ng-template #staticMessageLabelTemplate&gt;
+          &lt;div i18n="@@manage-templates.payment.message-to-beneficiary" class="bb-text-bold"&gt;Message to beneficiary&lt;/div&gt;
+        &lt;/ng-template&gt;
+        &lt;div data-role="message-to-beneficiary"&gt;{{hostRef.transactionInformation?.remittanceInformation}}&lt;/div&gt;
+      &lt;/ng-container&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-md-12"&gt;
+      &lt;ng-container *ngIf="hostRef.transactionInformation?.messageToBank"&gt;
+        &lt;div
+          class="bb-text-bold"
+          data-role="payment-message-to-beneficiary-label-dynamic"
+          *ngIf="hostRef.dynamicDetails?.bankMessageFieldLabel;else staticBankMessageLabelTemplate"
+        &gt;
+          {{ hostRef.dynamicDetails?.bankMessageFieldLabel }}
+        &lt;/div&gt;
+        &lt;ng-template #staticBankMessageLabelTemplate&gt;
+          &lt;div i18n="@@manage-templates.payment.message-to-beneficiary-bank" class="bb-text-bold"&gt;Message to beneficiary's bank&lt;/div&gt;
+        &lt;/ng-template&gt;
+        &lt;div data-role="message-to-beneficiary-bank"&gt;{{hostRef.transactionInformation?.messageToBank}}&lt;/div&gt;
+      &lt;/ng-container&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h2 id="manage_payment_templates_hostref_api" class="discrete">API</h2>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ManageTemplatesListHeaderComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>bbManagePaymentTemplatesListHeaderCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>searchTemplates = new EventEmitter&lt;string&gt;()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Event handler for search templates.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ManageTemplatesListHeaderComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSearchPaymentTemplates(value: string)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to search templates.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="17"><p class="tableblock"><code>ManageTemplatesListComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="17"><p class="tableblock"><code>bbManagePaymentTemplatesListCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentTemplates: PaymentTemplatesData</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents the payment templates list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>responseError: BehaviorSubject&lt;any&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents the errors on the service response.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageSize: number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page size for payment templates table.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>searchTerm: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents the value emitted after searching a template.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>currentPage = 0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Holds current page index to items page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isLoading = false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag indicates if the list is loading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dynamicPaymentTemplateDetails: DynamicPaymentDetails</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extracted dynamic payment information out of injected payment config.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageChange = new EventEmitter&lt;number&gt;()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Changes will be triggered on page change.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deleteTemplate = new EventEmitter&lt;PaymentTemplate&gt;()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete template event emitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>templateItemClick = new EventEmitter&lt;PaymentTemplate&gt;()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Click template event emitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectTemplate = new EventEmitter&lt;PaymentTemplate&gt;()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select template event emitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPageChange(page: number)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to change the table page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>manageConfirmationModal(template: PaymentTemplate)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to manage confirmation modal visibility.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onDeleteTemplate(template: PaymentTemplate)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to delete a template.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onTemplateClick(template: PaymentTemplate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to check wether a template is clicked.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mapPaymentType(template: PaymentTemplate): string | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to map the payment type present in the selected template.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSelectTemplate(template: PaymentTemplate)</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to handle a template selection.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="20"><p class="tableblock"><code>ManagePaymentTemplatesDetailsComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="14"><p class="tableblock"><code>bbManagePaymentTemplatesDetailsCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isOpen = false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicator for details dialog open state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentTemplate: PaymentTemplate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected payment data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dynamicPaymentTemplateDetails?: DynamicPaymentDetails</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extracted dynamic payment information out of injected payment config.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletePermission = false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag indicates if the user has delete permission.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>close = new EventEmitter()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Changes will be trigged on close event emit.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>refresh = new EventEmitter()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initiates refresh of payments list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deleteTemplate = new EventEmitter&lt;PaymentTemplate&gt;()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete template event emitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectTemplate = new EventEmitter&lt;PaymentTemplate&gt;()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select template event emitter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onClose()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to close the details modal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPrint()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to print templates details.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>refreshList()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Refresh the template list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onDeleteTemplate(template: PaymentTemplate)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to delete a payment template.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSelectTemplate(template: PaymentTemplate)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to handle the template selection.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stopPropagation(event: Event)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prevents further propagation of the current event.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock"><code>bbManagePaymentTemplatesDetailsListCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data: PaymentTemplate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Payment template details.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">dynamicDetails: {
+    bankBranchCodeLabel: string;
+    messageFieldLabel: string;
+    bankMessageFieldLabel: string;
+  }</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamic payment details.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get transactionInformation(): PaymentTemplate | any</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Getter for template transaction information.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">hasReadableValue(
+    partialDetails:
+      | Pick&lt;
+          IdentifiedTransaction,
+          'correspondentBank' | 'intermediaryBank' | 'counterpartyBank' | 'transferFee' | 'remittanceInformation'
+        &gt;
+      | undefined,
+  ): boolean</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to validate wether template values are correct.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isAddressTruthy(address?: Address): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method to check if the address has value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isCounterpartyBankDataAvailable(): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validates if the counter party bank has values.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="manage_payment_templates_preferences" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>This widget has the following preferences that managers or administrators configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configured by</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Size of the page.</p>
+<p class="tableblock">Number of payment templates per page.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin, Manager</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>20</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Refresh templates event name.</p>
+<p class="tableblock">Event name that is used to refresh the template list.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>refreshTemplatesEventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin, Manager</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bb.refresh.payment.templates</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Time between searches.</p>
+<p class="tableblock">Time between each search request (in milliseconds).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>debounceTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>300</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Time for before the message is dismissed.</p>
+<p class="tableblock">The number of milliseconds until the notification is dismissed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dismissMessageTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Payment template selection</p>
+<p class="tableblock">Takes routing meta data.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.selectedPaymentTemplate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>memory</code> is defined in the Experience Manager, such as <code>memory selectedPaymentTemplate</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edit Payment template event</p>
+<p class="tableblock">Takes routing meta data.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.editPaymentTemplate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>memory</code> is defined in the Experience Manager, such as <code>memory editPaymentTemplate</code>.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="manage_payment_templates_access_control" class="discrete">Access Control</h2>
+<div class="paragraph">
+<p>A permission is the combination of a business function and a single privilege granted to a user
+on a given resource type. Privileges are enforced by Digital Banking Services. Widget behavior is affected by the permissions of the user accessing the widget.</p>
+</div>
+<div class="paragraph">
+<p>The following table describes how the widget behavior changes depending on the permissions of the user:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 15%;">
+<col style="width: 20%;">
+<col style="width: 15%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Resource</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Business function</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Privilege</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Widget behavior</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Payments</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Payment Templates</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current user views a list of saved payment templates.</p>
+<p class="tableblock">If the user does not have the permission to view, the widget shows an empty list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">delete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current user is able to see the button to delete saved payment template from the list.</p>
+<p class="tableblock">If the user does not have the permission to delete, the delete button will be unavailable.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

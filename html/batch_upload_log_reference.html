@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Manage batch file uploads</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="batch_upload_log_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Manage batch file uploads</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html"><span class="toc-current">Manage batch file uploads</span></a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="batch_upload_log_reference" class="sect0">Manage batch file uploads</h1>
+          <h2 id="_properties_20" class="discrete">Properties</h2>
+<div class="paragraph">
+<p>This widget has the following properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 25%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Label</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Admin</th>
+<th class="tableblock halign-left valign-top">Value type</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Number of batches per page</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Max. number of navigation pages</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxNavPages</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p><strong>Select the method for loading more batches</strong></p>
+</div>
+<div class="paragraph">
+<p>How to load more data. The possible values are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>pagination</code>: Click next page to load more data.</p>
+</li>
+<li>
+<p><code>load-more</code>: Scroll down to load more data.</p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loadMoreMethod</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pagination</code></p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_access_control_6" class="discrete">Access Control</h2>
+<div class="paragraph">
+<p>This widget has no access control, as <strong>Manage batch file uploads</strong> is a personal list that contains files that only the current user has uploaded.</p>
+</div>
+<h2 id="_extension_slots_13" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_file_uploads_slots_1_2.svg?ver=3.10.1" alt="manage_batch_file_uploads_slots_1_2"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_file_uploads_slots_3_4_5.svg?ver=3.10.1" alt="manage_batch_file_uploads_slots_3_4_5"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_file_uploads_slots_6_7.svg?ver=3.10.1" alt="manage_batch_file_uploads_slots_6_7"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_file_uploads_slots_8_9.svg?ver=3.10.1" alt="manage_batch_file_uploads_slots_8_9"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_file_uploads_slots_10_11.svg?ver=3.10.1" alt="manage_batch_file_uploads_slots_10_11"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_file_uploads_slots_12_13.svg?ver=3.10.1" alt="manage_batch_file_uploads_slots_12_13"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_batch_file_uploads_slots_14_15.svg?ver=3.10.1" alt="manage_batch_file_uploads_slots_14_15"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="batch_upload_log_reference.html#bbBatchLogCustomizable">bbBatchLogCustomizable</a></p>
+</li>
+<li>
+<p><a href="batch_upload_log_reference.html#bbBatchLogListCustomizable">bbBatchLogListCustomizable</a></p>
+</li>
+<li>
+<p><a href="batch_upload_log_reference.html#bbBatchUploadDetailsCustomizable">bbBatchUploadDetailsCustomizable</a></p>
+</li>
+<li>
+<p><a href="batch_upload_log_reference.html#bbBatchUploadDetailsContentCustomizable">bbBatchUploadDetailsContentCustomizable</a></p>
+</li>
+<li>
+<p><a href="batch_upload_log_reference.html#bbBatchUploadDetailsErrorCustomizable">bbBatchUploadDetailsErrorCustomizable</a></p>
+</li>
+<li>
+<p><a href="batch_upload_log_reference.html#bbInitiateBatchUploadFailureNotificationCustomizable">bbInitiateBatchUploadFailureNotificationCustomizable</a></p>
+</li>
+<li>
+<p><a href="batch_upload_log_reference.html#bbInitiateBatchUploadFailureHeaderNotificationCustomizable">bbInitiateBatchUploadFailureHeaderNotificationCustomizable</a></p>
+</li>
+<li>
+<p><a href="batch_upload_log_reference.html#bbInitiateBatchUploadDuplicateNotificationCustomizable">bbInitiateBatchUploadDuplicateNotificationCustomizable</a></p>
+</li>
+<li>
+<p><a href="batch_upload_log_reference.html#bbInitiateBatchUploadDuplicateHeaderNotificationCustomizable">bbInitiateBatchUploadDuplicateHeaderNotificationCustomizable</a></p>
+</li>
+<li>
+<p><a href="batch_upload_log_reference.html#bbInitiateBatchUploadSuccessNotificationCustomizable">bbInitiateBatchUploadSuccessNotificationCustomizable</a></p>
+</li>
+<li>
+<p><a href="batch_upload_log_reference.html#bbInitiateBatchUploadSuccessHeaderNotificationCustomizable">bbInitiateBatchUploadSuccessHeaderNotificationCustomizable</a></p>
+</li>
+<li>
+<p><a href="batch_upload_log_reference.html#bbInitiateBatchUploadCancelNotificationCustomizable">bbInitiateBatchUploadCancelNotificationCustomizable</a></p>
+</li>
+<li>
+<p><a href="batch_upload_log_reference.html#bbInitiateBatchUploadCancelHeaderNotificationCustomizable">bbInitiateBatchUploadCancelHeaderNotificationCustomizable</a></p>
+</li>
+<li>
+<p><a href="batch_upload_log_reference.html#bbInitiateBatchUploadUpdateDuplicateNotificationCustomizable">bbInitiateBatchUploadUpdateDuplicateNotificationCustomizable</a></p>
+</li>
+<li>
+<p><a href="batch_upload_log_reference.html#bbInitiateBatchUploadUpdateDuplicateHeaderNotificationCustomizable">bbInitiateBatchUploadUpdateDuplicateHeaderNotificationCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbBatchLogCustomizable" class="discrete">bbBatchLogCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBatchLogCustomizable let-hostRef&gt;
+  &lt;ng-container *ngIf="!hostRef.error; else errorState"&gt;
+    &lt;bb-batch-log-list
+      *ngIf="hostRef.batchUploads | async as batchUploads; else loadingLog"
+      [batchUploads]="batchUploads.items"
+      [loadMoreMethod]="hostRef.loadMoreMethod$ | async"
+      [batchUploadsPerPage]="hostRef.pageSize$ | async"
+      [totalBatchUploads]="batchUploads.totalCount"
+      [loadMoreFrom]="hostRef.loadMoreFrom"
+      [isLoading]="hostRef.isLoadingBatchUploads"
+      [maxNavPages]="hostRef.maxNavPages$ | async"
+      (pageChange)="hostRef.onPageChange($event)"
+      (loadMore)="hostRef.onLoadMore($event)"
+      (showDetails)="hostRef.onShowDetails($event)"
+    &gt;&lt;/bb-batch-log-list&gt;
+    &lt;bb-batch-upload-details
+      *ngIf="hostRef.selectedBatchUpload | async"
+      [batchUpload]="hostRef.selectedBatchUpload | async"
+      [isOpen]="hostRef.areDetailsOpen"
+      [loading]="hostRef.isLoadingBatchUploadsDetails"
+      [error]="hostRef.errorBatchUploadDetails"
+      (close)="hostRef.onCloseDetails()"
+      (submitDuplicateBatch)="hostRef.onSubmitDuplicateBatch($event)"
+      (deleteDuplicateBatch)="hostRef.onDeleteDuplicateBatch($event)"
+    &gt;&lt;/bb-batch-upload-details&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #errorState&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-empty-state-ui
+        i18n-title="@@batch-log.error.generic.title"
+        title="Page couldn't load"
+        i18n-subtitle="@@batch-log.error.generic.subtitle"
+        subtitle="Try to reload the page or contact the system administrator."
+        iconSize="xxl"
+        iconModifier="error"
+      &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #loadingLog&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-loading-indicator-ui text="Loading data..."&gt;&lt;/bb-loading-indicator-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #updateDuplicateNotificationHeader let-status="status" let-action="action"&gt;
+    &lt;span data-role="duplicate-notification-header"&gt;
+      &lt;ng-container i18n="@@batch-log.notification.duplicate.title.success" *ngIf="status === 'SUCCESS'"&gt;
+        Batch file {action, select, DELETE {deleted} other {processed}} successfully.
+      &lt;/ng-container&gt;
+      &lt;ng-container i18n="@@batch-log.notification.duplicate.title.failure" *ngIf="status === 'FAIL'"&gt;
+        Batch file {action, select, DELETE {deletion} other {submission}} failed.
+      &lt;/ng-container&gt;
+    &lt;/span&gt;
+  &lt;/ng-template&gt;
+  &lt;ng-template #updateDuplicateNotification let-status="status" let-action="action"&gt;
+    &lt;span data-role="duplicate-notification-desc"&gt;
+      &lt;ng-container *ngIf="status === 'SUCCESS'" i18n="@@batch-log.notification.update-duplicate.body.success"&gt;
+        The duplicate file was {action, select, DELETE {deleted} other {processed}}.
+      &lt;/ng-container&gt;
+      &lt;ng-container *ngIf="status === 'FAIL'" i18n="@@batch-log.notification.update-duplicate.body.failed"&gt;
+        Unable to {action, select, DELETE {delete} other {submit}} duplicate file.
+      &lt;/ng-container&gt;
+    &lt;/span&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBatchLogListCustomizable" class="discrete">bbBatchLogListCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBatchLogListCustomizable let-hostRef&gt;
+  &lt;ng-container *ngIf="hostRef.batchUploads?.length; else emptyState"&gt;
+    &lt;div class="table-responsive d-none d-xl-block"&gt;
+      &lt;table class="table bb-table" bbTableFocus [bbTable]="hostRef.batchUploads"&gt;
+        &lt;thead&gt;
+          &lt;tr class="align-middle"&gt;
+            &lt;th scope="col"&gt;
+              &lt;span
+                data-role="header-file-name"
+                i18n="
+                   Batch log table header label| Batch log header label for file
+                  name@@batch-log.list.header.file-name
+                "
+              &gt;
+                File name
+              &lt;/span&gt;
+            &lt;/th&gt;
+            &lt;th scope="col" class="bb-text-align-right"&gt;
+              &lt;span
+                i18n="Batch log table header label| Batch log header label for size@@batch-log.list.header.size"
+                data-role="header-size"
+              &gt;
+                Size
+              &lt;/span&gt;
+            &lt;/th&gt;
+            &lt;th scope="col"&gt;
+              &lt;span
+                i18n="
+                   Batch log table header label| Batch log header label for batch
+                  type@@batch-log.list.header.batch-type
+                "
+                data-role="header-batch-type"
+              &gt;
+                Batch type
+              &lt;/span&gt;
+            &lt;/th&gt;
+            &lt;th scope="col" class="bb-text-align-right"&gt;
+              &lt;span
+                i18n="
+                   Batch log table header label| Batch log header label for total of
+                  batches@@batch-log.list.header.batches-total
+                "
+                data-role="header-batches-total"
+              &gt;
+                # of batches
+              &lt;/span&gt;
+            &lt;/th&gt;
+            &lt;th scope="col"&gt;
+              &lt;span
+                i18n="
+                   Batch log table header label| Batch log header label for uploaded
+                  on@@batch-log.list.header.uploaded-on
+                "
+                data-role="header-uploaded-on"
+              &gt;
+                Uploaded on
+              &lt;/span&gt;
+            &lt;/th&gt;
+            &lt;th scope="col"&gt;
+              &lt;span
+                i18n="Batch log table header label| Batch log header label for status@@batch-log.list.header.status"
+                data-role="header-status"
+              &gt;
+                Status
+              &lt;/span&gt;
+            &lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr
+            [ngClass]="{ 'bb-text-support': hostRef.isProcessing(batchUpload.status) }"
+            data-role="upload-log-row"
+            *ngFor="let batchUpload of hostRef.batchUploads"
+            [bbRow]="batchUpload"
+          &gt;
+            &lt;td data-role="col-file-name"&gt;{{ batchUpload.file.name }}&lt;/td&gt;
+            &lt;td class="bb-text-align-right" data-role="col-size"&gt;
+              {{ batchUpload.file.size | bytes: 2 }}
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;div
+                [ngSwitch]="batchUpload.fileType"
+                class="bb-inline-stack bb-inline-stack--density-sm"
+                data-role="col-batch-type"
+              &gt;
+                &lt;ng-container *ngSwitchCase="'BB_SEPACT_CSV'"&gt;
+                  &lt;bb-icon-ui
+                    *ngIf="hostRef.isProcessing(batchUpload.status); else notProcessingFileIcon"
+                    class="bb-inline-stack__item bb-text-support"
+                    name="insert-drive-file"
+                  &gt;&lt;/bb-icon-ui&gt;
+                  &lt;ng-template #notProcessingFileIcon&gt;
+                    &lt;bb-icon-ui class="bb-inline-stack__item" name="file-bb-sepa"&gt;&lt;/bb-icon-ui&gt;
+                  &lt;/ng-template&gt;
+                  &lt;span
+                    class="bb-inline-stack__item"
+                    i18n="
+                       Batch type backbase sepa csv title| Batch name for type
+                      BB_SEPACT_CSV@@batch-log.list.type.sepa-ct-csv
+                    "
+                  &gt;
+                    Backbase SEPA
+                  &lt;/span&gt;
+                &lt;/ng-container&gt;
+                &lt;ng-container *ngSwitchCase="'NACHA_CREDIT'"&gt;
+                  &lt;bb-icon-ui
+                    *ngIf="hostRef.isProcessing(batchUpload.status); else notProcessingFileIcon"
+                    class="bb-inline-stack__item bb-text-support"
+                    name="insert-drive-file"
+                  &gt;&lt;/bb-icon-ui&gt;
+                  &lt;ng-template #notProcessingFileIcon&gt;
+                    &lt;bb-icon-ui
+                      class="bb-inline-stack__item"
+                      name="file-ach"
+                    &gt;&lt;/bb-icon-ui&gt;
+                  &lt;/ng-template&gt;
+                  &lt;span
+                    class="bb-inline-stack__item"
+                    i18n="
+                      Batch type ach credit title| Batch name for type
+                      NACHA_CREDIT@@batch-log.list.type.credit-ach
+                    "
+                  &gt;
+                    ACH Credit (Balanced)
+                  &lt;/span&gt;
+                &lt;/ng-container&gt;
+                &lt;ng-container *ngSwitchCase="'NACHA_DEBIT'"&gt;
+                  &lt;bb-icon-ui
+                    *ngIf="hostRef.isProcessing(batchUpload.status); else notProcessingFileIcon"
+                    class="bb-inline-stack__item bb-text-support"
+                    name="insert-drive-file"
+                  &gt;&lt;/bb-icon-ui&gt;
+                  &lt;ng-template #notProcessingFileIcon&gt;
+                    &lt;bb-icon-ui
+                      class="bb-inline-stack__item"
+                      name="file-ach"
+                    &gt;&lt;/bb-icon-ui&gt;
+                  &lt;/ng-template&gt;
+                  &lt;span
+                    class="bb-inline-stack__item"
+                    i18n="
+                      Batch type ach debit title| Batch name for type
+                      NACHA_DEBIT@@batch-log.list.type.debit-ach
+                    "
+                  &gt;
+                    ACH Debit (Balanced)
+                  &lt;/span&gt;
+                &lt;/ng-container&gt;
+              &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td class="bb-text-align-right"&gt;
+              &lt;span
+                *ngIf="batchUpload.totalBatchOrdersCount &gt;= 0"
+                i18n="Batches in uploaded file| Number of batches uploaded@@batch-log.list.label.total-batches"
+                data-role="col-total-batches"
+              &gt;
+                {{ batchUpload.totalBatchOrdersCount &gt; 0 ? batchUpload.totalBatchOrdersCount : '--' }}
+              &lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td data-role="col-uploaded-on"&gt;{{ batchUpload.createdAt | date: 'short' }}&lt;/td&gt;
+            &lt;td&gt;
+              &lt;div
+                [ngSwitch]="batchUpload.status"
+                class="bb-block bb-block--no-margin bb-inline-stack bb-stack--align-top"
+                data-role="col-status"
+              &gt;
+                &lt;ng-container *ngSwitchCase="'OPEN'"&gt;
+                  &lt;bb-icon-ui class="bb-inline-stack__item" name="warning" color="warning"&gt;&lt;/bb-icon-ui&gt;
+                  &lt;span class="bb-inline-stack__item" i18n="@@batch-log.list.status.open"&gt;Open&lt;/span&gt;
+                &lt;/ng-container&gt;
+                &lt;ng-container *ngSwitchCase="'UPLOADED'"&gt;
+                  &lt;bb-icon-ui class="bb-inline-stack__item" name="success" color="success"&gt;&lt;/bb-icon-ui&gt;
+                  &lt;span class="bb-inline-stack__item" i18n="@@batch-log.list.status.uploaded"&gt;Uploaded&lt;/span&gt;
+                &lt;/ng-container&gt;
+                &lt;ng-container *ngSwitchCase="'VALID'"&gt;
+                  &lt;bb-icon-ui class="bb-inline-stack__item" name="success" color="success"&gt;&lt;/bb-icon-ui&gt;
+                  &lt;span class="bb-inline-stack__item" i18n="@@batch-log.list.status.valid"&gt;Valid&lt;/span&gt;
+                &lt;/ng-container&gt;
+                &lt;ng-container *ngSwitchCase="'DUPLICATE'"&gt;
+                  &lt;bb-icon-ui class="bb-inline-stack__item" name="warning" color="warning"&gt;&lt;/bb-icon-ui&gt;
+                  &lt;div class="bb-inline-stack__item"&gt;
+                    &lt;span i18n="@@batch-log.list.status.duplicate"&gt;
+                      Duplicate file
+                    &lt;/span&gt;
+                    &lt;ng-container *ngTemplateOutlet="detailsButton; context: { batchUpload: batchUpload }"&gt;
+                    &lt;/ng-container&gt;
+                  &lt;/div&gt;
+                &lt;/ng-container&gt;
+                &lt;ng-container *ngSwitchCase="'DONE'"&gt;
+                  &lt;bb-icon-ui class="bb-inline-stack__item" name="success" color="success"&gt;&lt;/bb-icon-ui&gt;
+                  &lt;span class="bb-text-support" i18n="@@batch-log.list.status.processed"&gt;Processed&lt;/span&gt;
+                &lt;/ng-container&gt;
+                &lt;ng-container *ngSwitchCase="'FAILED'"&gt;
+                  &lt;bb-icon-ui class="bb-inline-stack__item" name="error" color="danger"&gt;&lt;/bb-icon-ui&gt;
+                  &lt;div class="bb-inline-stack__item"&gt;
+                    &lt;span i18n="@@batch-log.list.status.failed"&gt;
+                      Validation failed
+                    &lt;/span&gt;
+                    &lt;ng-container *ngTemplateOutlet="detailsButton; context: { batchUpload: batchUpload }"&gt;
+                    &lt;/ng-container&gt;
+                  &lt;/div&gt;
+                &lt;/ng-container&gt;
+                &lt;ng-container *ngSwitchCase="'READY' || 'ACKNOWLEDGED' || 'DOWNLOADING'"&gt;
+                  &lt;bb-icon-ui class="bb-inline-stack__item bb-text-support" name="autorenew"&gt;&lt;/bb-icon-ui&gt;
+                  &lt;span
+                    class="bb-inline-stack__item bb-text-support"
+                    i18n="@@batch-log-size-medium.list.status.failed"
+                  &gt;
+                    Processing...
+                  &lt;/span&gt;
+                &lt;/ng-container&gt;
+              &lt;/div&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+
+    &lt;div class="d-xl-none"&gt;
+      &lt;bb-batch-log-list-responsive
+        [batchUploads]="hostRef.batchUploads"
+        (detail)="hostRef.onShowDetails($event)"
+      &gt;&lt;/bb-batch-log-list-responsive&gt;
+    &lt;/div&gt;
+
+    &lt;div [ngSwitch]="hostRef.loadMoreMethod" class="d-flex justify-content-center"&gt;
+      &lt;ng-container *ngSwitchCase="hostRef.loadMoreEnum.PAGINATION"&gt;
+        &lt;bb-pagination-ui
+          [page]="0"
+          [maxNavPages]="hostRef.maxNavPages"
+          [totalItems]="hostRef.totalBatchUploads"
+          [itemsPerPage]="hostRef.batchUploadsPerPage"
+          [boundaryLinks]="true"
+          [directionLinks]="true"
+          (pageChange)="hostRef.onPageChange($event)"
+        &gt;&lt;/bb-pagination-ui&gt;
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="hostRef.loadMoreEnum.LOAD_MORE"&gt;
+        &lt;bb-load-button-ui
+          color="secondary"
+          i18n="Load more batch uploads|Load more button for loading more batch uploads@@batch-log-list.load.more"
+          [isLoading]="hostRef.isLoading"
+          [size]="hostRef.batchUploadsPerPage"
+          [from]="hostRef.loadMoreFrom"
+          [totalCount]="hostRef.totalBatchUploads"
+          (paramChange)="hostRef.onLoadMore($event)"
+        &gt;
+          Load more
+        &lt;/bb-load-button-ui&gt;
+      &lt;/ng-container&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #emptyState&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-empty-state-ui
+        i18n-title="@@batch-log.state.noUploads.title"
+        title="No Uploads"
+        i18n-subtitle="@@batch-log.state.noUploads.subtitle"
+        subtitle="You do not have any batch file uploads to be displayed."
+        iconSize="xxl"
+        iconModifier="batches"
+      &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBatchUploadDetailsCustomizable" class="discrete">bbBatchUploadDetailsCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBatchUploadDetailsCustomizable let-hostRef&gt;
+  &lt;bb-modal-ui [isOpen]="hostRef.isOpen" (cancel)="hostRef.onClose()" (confirm)="hostRef.onClose()"&gt;
+    &lt;bb-modal-header-ui role="heading"&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;header class="bb-stack" aria-labelledby="headerTtitle printBtn closeBtn"&gt;
+          &lt;span class="d-none" aria-hidden="true" i18n="@@batch-upload-duplicate-file-modal.headerTtitle" #heading&gt;
+            Batch file upload {hostRef.batchUpload?.status, select, OPEN {open} UPLOADING {uploading} UPLOADED
+            {uploaded} VALID {valid} DUPLICATE {duplicate} FAILED {failed} DONE {done}}
+          &lt;/span&gt;
+          &lt;bb-header-ui
+            id="headerTtitle"
+            headingType="h2"
+            class="bb-stack__item"
+            aria-label="Batch file is a duplicate"
+            [heading]="heading.textContent"
+          &gt;
+          &lt;/bb-header-ui&gt;
+          &lt;div class="bb-stack__item bb-stack__item--push-right d-print-none"&gt;
+            &lt;button
+              (click)="hostRef.print()"
+              [disabled]="hostRef.loading || hostRef.error"
+              bbButton
+              buttonSize="sm"
+              circle="true"
+              color="link-dark"
+            &gt;
+              &lt;!-- ACCESSIBILITY compliance: The style attributes' content is needed for NVDA to read content on hover--&gt;
+              &lt;span
+                class="sr-only"
+                id="printBtn"
+                style="min-width: 10px; min-height: 10px;"
+                aria-label="Print batch upload details"
+                i18n-aria-label="Print batch upload details@@batch-log.batch-upload.details.header.print"
+              &gt;
+                Print batch upload details dialog button
+              &lt;/span&gt;
+              &lt;bb-icon-ui name="print"&gt;&lt;/bb-icon-ui&gt;
+            &lt;/button&gt;
+            &lt;button
+              bbButton
+              buttonSize="sm"
+              circle="true"
+              color="link-dark"
+              (click)="hostRef.onClose()"
+              [ngClass]="{ 'd-none': hostRef.batchUpload?.status === 'DUPLICATE' }"
+            &gt;
+              &lt;span
+                class="sr-only"
+                id="closeBtn"
+                style="min-width: 10px; min-height: 10px;"
+                aria-label="Close upload detail"
+                i18n-aria-label="Close batch upload detail@@batch-log.batch-upload.details.header.close"
+              &gt;
+                Close batch upload details
+              &lt;/span&gt;
+              &lt;bb-icon-ui name="times"&gt;&lt;/bb-icon-ui&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/header&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui role="main"&gt;
+      &lt;ng-template bbCustomModalBody&gt;
+        &lt;ng-container *ngIf="!hostRef.loading; else loading"&gt;
+          &lt;ng-container *ngIf="!hostRef.error; else errorNotFound"&gt;
+            &lt;ng-container [ngSwitch]="hostRef.batchUpload?.status"&gt;
+              &lt;ng-container *ngSwitchCase="'DUPLICATE'"&gt;
+                &lt;bb-duplicate-batch-upload-details
+                  [duplicateBatchDetails]="hostRef.batchUpload"
+                  (deleteDuplicateBatch)="hostRef.onDeleteDuplicateBatch($event)"
+                  (submitDuplicateBatch)="hostRef.onSubmitDuplicateBatch($event)"
+                  (closeDuplicateBatch)="hostRef.onClose()"
+                &gt;
+                &lt;/bb-duplicate-batch-upload-details&gt;
+              &lt;/ng-container&gt;
+              &lt;div class="mb-5" *ngSwitchDefault&gt;
+                &lt;bb-batch-upload-details-content
+                  [batchUpload]="hostRef.batchUpload"
+                &gt;&lt;/bb-batch-upload-details-content&gt;
+              &lt;/div&gt;
+            &lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+        &lt;/ng-container&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+  &lt;/bb-modal-ui&gt;
+
+  &lt;ng-template #loading&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-loading-indicator-ui&gt;&lt;/bb-loading-indicator-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #errorNotFound&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-empty-state-ui
+        title="Batch upload not found"
+        i18n-title="@@batch-log.batch-upload.details.not-found.title"
+        iconSize="xxl"
+        iconModifier="error"
+      &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBatchUploadDetailsContentCustomizable" class="discrete">bbBatchUploadDetailsContentCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBatchUploadDetailsContentCustomizable let-hostRef&gt;
+  &lt;div *ngIf="hostRef.batchUpload.digest?.value" class="text-muted mb-4"&gt;
+    &lt;span *ngIf="hostRef.batchUpload.digest?.algorithm"&gt;{{ hostRef.batchUpload.digest?.algorithm }}:&lt;/span&gt;
+    &lt;span *ngIf="!hostRef.batchUpload.digest?.algorithm" i18n="@@batch-log.batch-upload.details-content.hash.label"
+      &gt;File hash:&lt;/span
+    &gt;&amp;nbsp;
+    &lt;span class="text-small"&gt;{{ hostRef.batchUpload.digest?.value }}&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;ng-container [ngSwitch]="hostRef.batchUpload.status"&gt;
+    &lt;ng-container *ngSwitchCase="'FAILED'"&gt;
+      &lt;div *ngIf="hostRef.batchUpload.errors?.length &gt; 0"&gt;
+        &lt;div
+          class="bg-light font-weight-bold p-2"
+          i18n="Batches in uploaded file| Number of batches uploaded@@batch-log.list.label.total-errors"
+        &gt;
+          {{ hostRef.batchUpload.errors?.length }} { hostRef.batchUpload.errors?.length, plural, =1 {error} other
+          {errors}}
+        &lt;/div&gt;
+        &lt;ul class="list-unstyled border-top mt-2"&gt;
+          &lt;li *ngFor="let error of hostRef.batchUpload.errors" class="border-bottom px-3 py-2 d-flex flex-column"&gt;
+            &lt;div class="bb-text-bold"&gt;
+              &lt;span i18n="@@batch-log.batch-upload.error-list.error.title"&gt; Error &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="bb-text-support bb-inline-stack"&gt;
+              &lt;bb-batch-upload-details-error
+                class="bb-inline-stack__item"
+                [error]="error"
+              &gt;&lt;/bb-batch-upload-details-error&gt;
+              &lt;span
+                class="bb-inline-stack__item bb-stack__item--push-right bb-stack__item--align-top bb-text-nowrap"
+                *ngIf="error.context.location"
+                i18n="@@batch-log.batch-upload.error-list.line.label"
+              &gt;
+                Line {{ error.context.location }}
+              &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-container *ngSwitchDefault&gt;
+      &lt;span i18n="@@batch-log.batch-upload.details-content.status.not.failed" class="font-weight-bold px-3 py-2"
+        &gt;Status of {{ hostRef.batchUpload.file?.name }} is {hostRef.batchUpload.status, select, OPEN {open}
+        UPLOADING {uploading} UPLOADED {uploaded} VALID {valid} DUPLICATE {duplicate} DONE {done}}&lt;/span
+      &gt;
+    &lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBatchUploadDetailsErrorCustomizable" class="discrete">bbBatchUploadDetailsErrorCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBatchUploadDetailsErrorCustomizable let-hostRef&gt;
+  &lt;ng-container [ngSwitch]="hostRef.error.key"&gt;
+    &lt;span
+      *ngSwitchCase="'ForbiddenAccessOriginatorAccount'"
+      i18n="@@batch-log.batch-upload.error-list.forbidden-access-own-account"
+      &gt;Forbidden access to originator account {{ hostRef.error.context.originatorAccount }}
+    &lt;/span&gt;
+
+    &lt;span
+      *ngSwitchCase="'ForbiddenCreateBatchUpload'"
+      i18n="@@batch-log.batch-upload.error-list.forbidden-create-batch-upload"
+      &gt;Forbidden to create batch uploads of type {{ hostRef.error.context.batchUploadType }}
+    &lt;/span&gt;
+
+    &lt;span
+      *ngSwitchCase="'UploadInvalidBatchType'"
+      i18n="@@batch-log.batch-upload.error-list.upload-invalid-batch-type"
+      &gt;Batch type {{ hostRef.error.context.batchType }} is not supported
+    &lt;/span&gt;
+
+    &lt;span *ngSwitchCase="'UploadExceedsMaxSize'" i18n="@@batch-log.batch-upload.error-list.upload-exceeds-max-size"
+      &gt;The request was rejected because its size exceeds the configured maximum ({{ hostRef.error.context.maxSize }}
+    &lt;/span&gt;
+
+    &lt;span *ngSwitchCase="'UploadMaxFileSize'" i18n="@@batch-log.batch-upload.error-list.upload-max-file-size"
+      &gt;File size ({{ hostRef.error.context.actual }}) exceeds the configured maximum ({{
+        hostRef.error.context.expected
+      }})
+    &lt;/span&gt;
+
+    &lt;span
+      *ngSwitchCase="'UploadFileExtensionInvalid'"
+      i18n="@@batch-log.batch-upload.error-list.upload-file-extension-invalid"
+      &gt;File extension ({{ hostRef.error.context.actual }}) is not one of the supported ones
+      {{ hostRef.error.context.expected }}
+    &lt;/span&gt;
+
+    &lt;span
+      *ngSwitchCase="'UploadFileSizeMismatch'"
+      i18n="@@batch-log.batch-upload.error-list.upload-file-size-mismatch"
+      &gt;The uploaded file size {{ hostRef.error.context.actual }} does not match the declared file size
+      {{ hostRef.error.context.expected }}
+    &lt;/span&gt;
+
+    &lt;span *ngSwitchCase="'TotalBatchMismatch'" i18n="@@batch-log.batch-upload.error-list.total-batch-mismatch"
+      &gt;Total number of batches ({{ hostRef.error.context.actual }}) does not match the expected number ({{
+        hostRef.error.context.expected
+      }})
+    &lt;/span&gt;
+
+    &lt;span *ngSwitchCase="'TotalPaymentsMismatch'" i18n="@@batch-log.batch-upload.error-list.total-payments-mismatch"
+      &gt;Total amount of batch ({{ hostRef.error.context.actual }}) does not match the expected amount ({{
+        hostRef.error.context.expected
+      }})
+    &lt;/span&gt;
+
+    &lt;span *ngSwitchCase="'TotalAmountMismatch'" i18n="@@batch-log.batch-upload.error-list.total-amount-mismatch"
+      &gt;Total amount of batch ({{ hostRef.error.context.actual }}) does not match the expected amount ({{
+        hostRef.error.context.expected
+      }})
+    &lt;/span&gt;
+
+    &lt;span
+      *ngSwitchCase="'AmountContainsTooManyDigits'"
+      i18n="@@batch-log.batch-upload.error-list.amount-too-many-digits"
+      &gt;The integer part of '{{ hostRef.error.context.amount }}' for '{{ hostRef.error.context.fieldName }}' exceeds
+      the maximum number of digits ({{ hostRef.error.context.maximum }})
+    &lt;/span&gt;
+
+    &lt;span
+      *ngSwitchCase="'AmountContainsTooManyDecimalDigits'"
+      i18n="@@batch-log.batch-upload.error-list.amount-too-many-decimal-digits"
+      &gt;The fractional part of '{{ hostRef.error.context.amount }}' for '{{ hostRef.error.context.fieldName }}'
+      exceeds the maximum number of decimal digits ({{ hostRef.error.context.maximum }})
+    &lt;/span&gt;
+
+    &lt;span *ngSwitchCase="'AmountIsNotPositive'" i18n="@@batch-log.batch-upload.error-list.amount-not-positive"
+      &gt;The value '{{ hostRef.error.context.amount }}' for '{{ hostRef.error.context.fieldName }}' must be a positive
+      number
+    &lt;/span&gt;
+
+    &lt;span *ngSwitchCase="'ValueNotAllowed'" i18n="@@batch-log.batch-upload.error-list.value-not-allowed"
+      &gt;Value '{{ hostRef.error.context.actual }}' of field '{{ hostRef.error.context.fieldName }}' is not matching
+      the allowed values {{ hostRef.error.context.expected }}
+    &lt;/span&gt;
+
+    &lt;span *ngSwitchCase="'MissingRequiredValue'" i18n="@@batch-log.batch-upload.error-list.missing-required-value"
+      &gt;Missing value for required field '{{ hostRef.error.context.fieldName }}'
+    &lt;/span&gt;
+
+    &lt;span *ngSwitchCase="'ValueLessThanMinimum'" i18n="@@batch-log.batch-upload.error-list.value-less-than-minimum"
+      &gt;The value '{{ hostRef.error.context.actual }}' of field '{{ hostRef.error.context.fieldName }}' is less than
+      minimum ({{ hostRef.error.context.expected }})
+    &lt;/span&gt;
+
+    &lt;span *ngSwitchCase="'ValueMoreThanMaximum'" i18n="@@batch-log.batch-upload.error-list.value-more-than-maximum"
+      &gt;The value '{{ hostRef.error.context.actual }}' of field '{{ hostRef.error.context.fieldName }}' exceeds
+      maximum ({{ hostRef.error.context.expected }})
+    &lt;/span&gt;
+
+    &lt;span
+      *ngSwitchCase="'LengthLessThanMinimum'"
+      i18n="@@batch-log.batch-upload.error-list.length-less-than-minimum"
+      &gt;Data size '{{ hostRef.error.context.actual }}' of field '{{ hostRef.error.context.fieldName }}' is less than
+      minimum ({{ hostRef.error.context.expected }})
+    &lt;/span&gt;
+
+    &lt;span
+      *ngSwitchCase="'LengthMoreThanMaximum'"
+      i18n="@@batch-log.batch-upload.error-list.length-more-than-maximum"
+      &gt;Data size '{{ hostRef.error.context.actual }}' of field '{{ hostRef.error.context.fieldName }}' exceeds
+      maximum ({{ hostRef.error.context.expected }})
+    &lt;/span&gt;
+
+    &lt;span *ngSwitchDefault&gt;{{ hostRef.error.message }}&lt;/span&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbInitiateBatchUploadFailureNotificationCustomizable" class="discrete">bbInitiateBatchUploadFailureNotificationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbInitiateBatchUploadFailureNotificationCustomizable let-name="context.name"&gt;
+  &lt;span
+    i18n="Failure notification for batch upload|Notification message that will be shown if batch upload has failed@@batch-upload.notification.failure"
+  &gt;
+    Unable to upload {{ name }}.
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #failureNotification&gt;
+  &lt;ng-container
+  bbInitiateBatchUploadFailureNotificationCustomizable
+    [bbHostRef]="hostRef"
+    [bbTemplateContext]="hostRef.notificationContext"
+    &gt;&lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbInitiateBatchUploadFailureHeaderNotificationCustomizable" class="discrete">bbInitiateBatchUploadFailureHeaderNotificationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbInitiateBatchUploadFailureHeaderNotificationCustomizable let-hostRef&gt;
+  &lt;span
+    i18n="Header for failure notification for batch upload@@batch-upload.notification.failure.title"
+    data-role="failure-notification"
+  &gt;
+    Batch upload failed
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #failureNotificationHeader&gt;
+  &lt;ng-container
+    bbInitiateBatchUploadFailureHeaderNotificationCustomizable
+    [bbHostRef]="hostRef"
+    &gt;&lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbInitiateBatchUploadDuplicateNotificationCustomizable" class="discrete">bbInitiateBatchUploadDuplicateNotificationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbInitiateBatchUploadDuplicateNotificationCustomizable let-hostRef let-name="context.name"&gt;
+  &lt;span
+    class="bb-subtitle bb-text-support"
+    data-role="duplicate-notification-desc"
+    i18n="Duplicate notification for batch upload|Notification message that will be shown if batch upload has been duplicateled@@batch-upload.notification.cancel"
+  &gt;
+    {{ name }} is a duplicate file
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #duplicateNotification&gt;
+  &lt;ng-container
+    bbInitiateBatchUploadDuplicateNotificationCustomizable
+    [bbHostRef]="hostRef"
+    [bbTemplateContext]="hostRef.notificationContext"
+    &gt;&lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbInitiateBatchUploadDuplicateHeaderNotificationCustomizable" class="discrete">bbInitiateBatchUploadDuplicateHeaderNotificationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbInitiateBatchUploadDuplicateHeaderNotificationCustomizable
+let-hostRef&gt;
+  &lt;span
+    data-role="duplicate-notification-header"
+    i18n="@@batch-upload.notification.duplicate.title"
+  &gt;
+    Batch file is a duplicate
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #duplicateNotificationHeader&gt;
+  &lt;ng-container
+    bbInitiateBatchUploadDuplicateHeaderNotificationCustomizable
+    [bbHostRef]="hostRef"
+    &gt;&lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbInitiateBatchUploadSuccessNotificationCustomizable" class="discrete">bbInitiateBatchUploadSuccessNotificationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbInitiateBatchUploadSuccessNotificationCustomizable
+  let-name="context.name"
+  let-hostRef&gt;
+  &lt;span
+    i18n="Success notification for batch upload|Notification message that will be shown if batch upload is successful@@batch-upload.notification.success"
+    data-role="success-notification"
+  &gt;
+    {{ name }} was successfully uploaded.
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #successNotification&gt;
+  &lt;ng-container
+    bbInitiateBatchUploadSuccessNotificationCustomizable
+    [bbHostRef]="hostRef"
+    [bbTemplateContext]="hostRef.notificationContext"
+    &gt;&lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbInitiateBatchUploadSuccessHeaderNotificationCustomizable" class="discrete">bbInitiateBatchUploadSuccessHeaderNotificationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbInitiateBatchUploadSuccessHeaderNotificationCustomizable
+  let-hostRef&gt;
+  &lt;span
+    data-role="notification-header"
+    i18n="Header for success notification for batch upload@@batch-upload.notification.success.title"
+  &gt;
+    Batch file was uploaded
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #successNotificationHeader&gt;
+  &lt;ng-container
+    bbInitiateBatchUploadSuccessHeaderNotificationCustomizable
+    [bbHostRef]="hostRef"
+    &gt;&lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbInitiateBatchUploadCancelNotificationCustomizable" class="discrete">bbInitiateBatchUploadCancelNotificationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbInitiateBatchUploadCancelNotificationCustomizable
+  let-name="context.name"&gt;
+  &lt;span
+    i18n="Cancel notification for batch upload|Notification message that will be shown if batch upload has been cancelled@@batch-upload.notification.cancel"
+  &gt;
+    {{ name }} upload is paused and waiting for your further action
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #cancelNotification&gt;
+  &lt;ng-container
+  bbInitiateBatchUploadCancelNotificationCustomizable
+    [bbHostRef]="hostRef"
+    [bbTemplateContext]="hostRef.notificationContext"
+    &gt;&lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbInitiateBatchUploadCancelHeaderNotificationCustomizable" class="discrete">bbInitiateBatchUploadCancelHeaderNotificationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbInitiateBatchUploadCancelHeaderNotificationCustomizable let-hostRef&gt;
+  &lt;span
+    data-role="notification-header"
+    i18n="Header for cancel notification for batch upload@@batch-upload.notification.cancel.title"
+  &gt;
+    Batch upload cancelled
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #cancelNotificationHeader&gt;
+  &lt;ng-container
+    bbInitiateBatchUploadCancelHeaderNotificationCustomizable
+    [bbHostRef]="hostRef"
+    &gt;&lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbInitiateBatchUploadUpdateDuplicateNotificationCustomizable" class="discrete">bbInitiateBatchUploadUpdateDuplicateNotificationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbInitiateBatchUploadUpdateDuplicateNotificationCustomizable
+  let-hostRef
+  let-status="context.status"
+  let-action="context.action"&gt;
+  &lt;span data-role="duplicate-notification-desc"&gt;
+    &lt;ng-container *ngIf="status === 'SUCCESS'" i18n="@@batch-upload.notification.update-duplicate.body.success"&gt;
+      The duplicate file was {action, select, DELETE {deleted} other {processed}}.
+    &lt;/ng-container&gt;
+    &lt;ng-container *ngIf="status === 'FAIL'" i18n="@@batch-upload.notification.update-duplicate.body.failed"&gt;
+      Unable to {action, select, DELETE {delete} other {submit}} duplicate file.
+    &lt;/ng-container&gt;
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #updateDuplicateNotification&gt;
+  &lt;ng-container
+    bbInitiateBatchUploadUpdateDuplicateNotificationCustomizable
+    [bbHostRef]="hostRef"
+    [bbTemplateContext]="hostRef.notificationContext"
+    &gt;&lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbInitiateBatchUploadUpdateDuplicateHeaderNotificationCustomizable" class="discrete">bbInitiateBatchUploadUpdateDuplicateHeaderNotificationCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbInitiateBatchUploadUpdateDuplicateHeaderNotificationCustomizable
+  let-hostRef
+  let-status="context.status"
+  let-action="context.action"&gt;
+  &lt;span
+    data-role="duplicate-notification-header"
+    i18n="@@batch-upload.notification.duplicate.title"&gt;
+    &lt;ng-container *ngIf="status === 'SUCCESS'"&gt;
+      Batch file {action, select, DELETE {deleted} other {processed}} successfully.
+    &lt;/ng-container&gt;
+    &lt;ng-container *ngIf="status === 'FAIL'"&gt;
+      Batch file {action, select, DELETE {deletion} other {submission}} failed.
+    &lt;/ng-container&gt;
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #updateDuplicateNotificationHeader&gt;
+  &lt;ng-container
+    bbInitiateBatchUploadUpdateDuplicateHeaderNotificationCustomizable
+    [bbHostRef]="hostRef"
+    [bbTemplateContext]="hostRef.notificationContext"
+    &gt;&lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

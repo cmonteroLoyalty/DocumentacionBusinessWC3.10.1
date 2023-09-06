@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Manage ACH debit</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="manage_ach_debit_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Manage ACH debit</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html"><span class="toc-current">Manage ACH debit</span></a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="manage_ach_debit_reference" class="sect0">Manage ACH debit</h1>
+          <h2 id="_preferences_9" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>The widget has the following preferences that managers or administrators
+can edit in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 57.9999%;">
+<col style="width: 20%;">
+<col style="width: 12%;">
+<col style="width: 10.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Label</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Value type</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Number of debits per page</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>20</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Max. number of navigation pages</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxNavPages</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Number of seconds to dismiss the notification</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>notificationDismissTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Select the method for loading more debit orders</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loadMoreMethod</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pagination</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Schedule type for the debits</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scheduleType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>one-off</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Preferences that have the <strong>Admin</strong> column
+checked, are only editable for administrators.</p>
+</div>
+<h2 id="_extension_slots_12" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_ach_debit_extension_slot_1.svg?ver=3.10.1" alt="manage ach debit extension slot 1"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_ach_debit_extension_slot_2.svg?ver=3.10.1" alt="manage ach debit extension slot 2"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="manage_ach_debit_reference.html#bbPayordDebitManageContainerCustomizable">bbPayordDebitManageContainerCustomizable</a></p>
+</li>
+<li>
+<p><a href="manage_ach_debit_reference.html#bbPayordDebitManageDebitViewCustomizable">bbPayordDebitManageDebitViewCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbPayordDebitManageContainerCustomizable" class="discrete">bbPayordDebitManageContainerCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbPayordDebitManageContainerCustomizable
+  [bbHostRef]="hostRef"
+&gt;&lt;/ng-container&gt;
+&lt;ng-template
+  bbPayordDebitManageContainerCustomizable
+  let-hostRef
+&gt;
+  &lt;bb-payord-debit-manage-list
+    [scheduleType]="hostRef.scheduleType$ |async"
+    [debitOrdersItems]="(hostRef.debitOrders$ | async)?.items"
+    [debitOrdersTotalCount]="(hostRef.debitOrders$ | async)?.totalCount"
+    [debitListLoadMoreState]="hostRef.debitListLoadMoreState$ | async"
+    [loadMoreMethod]="hostRef.loadMoreMethod$ | async"
+    [loadMoreFrom]="hostRef.loadMoreFrom"
+    [pageSize]="hostRef.pageSize$ | async"
+    [maxNavPages]="hostRef.maxNavPages$ | async"
+    [debitOrderListState]="hostRef.debitOrderListState$ | async"
+    [copyPermission]="hostRef.copyPermissions$ |async"
+    (changePage)="hostRef.changePage($event)"
+    (loadMore)="hostRef.loadMore($event)"
+    (viewDebitDetails)="hostRef.showDebitDetails($event)"
+    (approveDebitOrder)="hostRef.onApproveDebitOrder($event)"
+    (rejectDebitOrder)="hostRef.onRejectDebitOrder($event)"
+    (copyDebitOrder)="hostRef.onCopyDebitOrder($event)"
+    (cancelDebitOrder)="hostRef.onCancelDebitOrder($event)"
+    (deleteDebitOrder)="hostRef.onDeleteDebitOrder($event)"
+  &gt;&lt;/bb-payord-debit-manage-list&gt;
+&lt;/ng-template&gt;
+
+&lt;bb-payord-debit-manage-debit-view
+  #viewDebitDetails
+  [isOpen]="hostRef.showDetailModal"
+  [scheduleType]="hostRef.scheduleType$ |async"
+  [debitOrderData]="(hostRef.selectedDebitOrderForView$ |async)"
+&gt;
+  &lt;ng-container bbPayordDebitManageDebitViewHeader&gt;
+    &lt;div class="bb-stack"&gt;
+      &lt;div class="bb-stack__item bb-stack__item--fill"&gt;
+        &lt;h2
+          class="bb-stack bb-stack--density-xs bb-block bb-block--no-margin"
+          aria-label="dialog header for the selected debit order details"
+          i18n-aria-label="dialog header for the selected debit header details@@payord-manage-debit.debit.details.header"
+        &gt;
+          &lt;span class="bb-stack__item"&gt;Debit&lt;/span&gt;
+          &lt;span
+            class="bb-stack__item"
+            i18n="@@payord-manage-debit.debit.details.header"
+            *ngIf="(hostRef.scheduleType$ | async) === hostRef.scheduleTypes.RECURRING "
+          &gt;
+            (recurring)
+          &lt;/span&gt;
+        &lt;/h2&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-stack__item d-print-none"&gt;
+        &lt;div class="bb-stack bb-stack--density-xs"&gt;
+          &lt;div class="bb-stack__item"&gt;
+            &lt;bb-dropdown-menu-ui
+              btnColor="link-dark"
+              [btnCircle]="true"
+              buttonSize="sm"
+              class="bb-stack__item d-block"
+              data-role="more-options-modal-debit-btn"
+            &gt;
+              &lt;ng-template bbDropdownLabel&gt;
+                &lt;span
+                  i18n="More actions for debit order@@manage-debits-list.debit-order.action.more"
+                  class="sr-only"
+                &gt;
+                  More actions for debit order
+                &lt;/span&gt;
+                &lt;bb-icon-ui name="ellipsis-h"&gt;&lt;/bb-icon-ui&gt;
+              &lt;/ng-template&gt;
+              &lt;ng-template bbDropdownMenuItem&gt;
+                &lt;div
+                  [bbTooltip]="!(hostRef.copyPermissions$ | async) &amp;&amp; actionNotAvailable"
+                  triggers="hover focus"
+                  placement="left"
+                &gt;
+                  &lt;button
+                    class="dropdown-item"
+                    [disabled]="!(hostRef.copyPermissions$ | async)"
+                    (click)="hostRef.onCopyDebitOrder(viewDebitDetails.debitOrderData)"
+                    i18n="Copy Debit order|Cancel selected debit order@@payord-manage-debit.debit.details.action.copy"
+                    data-role="copy-debit-dropdown-mobile"
+                  &gt;
+                    Copy
+                  &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div
+                  [bbTooltip]="hostRef.isActionDisabled(viewDebitDetails.debitOrderData?.actions,hostRef.availableActions.CANCEL) &amp;&amp; actionNotAvailable"
+                  triggers="hover focus"
+                  placement="left"
+                &gt;
+                  &lt;button
+                    container="body"
+                    class="dropdown-item"
+                    i18n="Cancel action for debit order@@manage-debits-list.action.cancel"
+                    (click)="hostRef.onCancelDebitOrder(viewDebitDetails.debitOrderData)"
+                    [disabled]="hostRef.isActionDisabled(viewDebitDetails.debitOrderData?.actions,hostRef.availableActions.CANCEL)"
+                    data-role="cancel-debit-dropdown"
+                  &gt;
+                    Cancel
+                  &lt;/button&gt;
+                  &lt;button
+                    container="body"
+                    class="dropdown-item d-block d-sm-none"
+                    i18n="Print action for debit order@@manage-debits-list.action.print"
+                    (click)="hostRef.onPrint()"
+                    data-role="print-debit-modal"
+                  &gt;
+                    Print
+                  &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div
+                  [bbTooltip]="hostRef.isActionDisabled(viewDebitDetails.debitOrderData?.actions,hostRef.availableActions.DELETE) &amp;&amp; actionNotAvailable"
+                  triggers="hover focus"
+                  placement="left"
+                &gt;
+                  &lt;button
+                    class="dropdown-item"
+                    container="body"
+                    i18n="Delete Debit order|Cancel selected debit order@@payord-manage-debit.debit.details.action.delete"
+                    data-role="delete-debit-dropdown"
+                    *ngIf="viewDebitDetails.debitOrderData?.status === hostRef.status.ENTERED"
+                    [disabled]="hostRef.isActionDisabled(viewDebitDetails.debitOrderData?.actions,hostRef.availableActions.DELETE)"
+                    (click)="hostRef.onDeleteDebitOrder(viewDebitDetails.debitOrderData)"
+                  &gt;
+                    Delete
+                  &lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/ng-template&gt;
+            &lt;/bb-dropdown-menu-ui&gt;
+          &lt;/div&gt;
+
+          &lt;div class="bb-stack__item"&gt;
+            &lt;button
+              (click)="hostRef.onPrint()"
+              bbButton
+              [circle]="true"
+              color="link-dark"
+              size="sm"
+              class="d-none d-sm-flex"
+              aria-label="Print debit detail dialog"
+              data-role="print-debit-details-modal"
+              i18n-aria-label="Print debit detail dialog@@manage-debit.debit.header.print"
+            &gt;
+              &lt;bb-icon-ui name="print" size="md"&gt;&lt;/bb-icon-ui&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+
+          &lt;div class="bb-stack__item bb-stack__item--spacing-none"&gt;
+            &lt;button
+              (click)="hostRef.closeDebitOrderDetails()"
+              bbButton
+              color="link-dark"
+              [circle]="true"
+              size="sm"
+              class="bb-stack__item"
+              aria-label="Close debit detail dialog"
+              i18n-aria-label="Close debit detail dialog@@payord-manage-debit.debit.details.action.close"
+            &gt;
+              &lt;bb-icon-ui name="clear"&gt;&lt;/bb-icon-ui&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-container bbPayordDebitManageDebitViewFooter&gt;
+    &lt;div
+      *ngIf="viewDebitDetails.debitOrderData?.status === hostRef.status.ENTERED "
+      class="bb-stack bb-stack--wrap"&gt;
+      &lt;div class="bb-stack__item bb-stack__item--fill d-none d-md-block"&gt;&lt;/div&gt;
+      &lt;div class="bb-stack__item bb-stack__item--fill--sm-down"&gt;
+        &lt;div class="bb-stack bb-stack--wrap"&gt;
+          &lt;button
+            bbButton
+            type="submit"
+            color="danger"
+            data-role="reject-modal-debit-btn"
+            class="bb-stack__item bb-stack__item--fill--sm-down bb-stack__item--spacing-sm bb-stack__item--push-left-sm-down bb-block bb-block--md"
+            [disabled]="hostRef.isActionDisabled(viewDebitDetails.debitOrderData?.actions,hostRef.availableActions.REJECT)"
+            (click)="hostRef.openRejectModal()"
+            i18n="Reject debit order|Button text for rejecting the debit order@@payord-manage-debit.debit.details.action.reject"
+          &gt;Reject&lt;/button&gt;
+
+          &lt;div class="bb-stack__break bb-stack__break--sm-down"&gt;&lt;/div&gt;
+          &lt;button
+            bbButton
+            type="submit"
+            color="success"
+            class="bb-stack__item bb-stack__item--fill--sm-down bb-stack__item--spacing-none bb-block bb-block--md"
+            data-role="approve-modal-debit-btn"
+            [disabled]="hostRef.isActionDisabled(viewDebitDetails.debitOrderData?.actions,hostRef.availableActions.APPROVE)"
+            (click)="hostRef.openApproveModal()"
+            i18n="Approve debit order|Button text for approving the debit order@@payord-manage-debit.debit.details.action.approve"
+          &gt;Approve&lt;/button&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+&lt;/bb-payord-debit-manage-debit-view&gt;
+
+
+&lt;bb-confirmation-dialog
+  *ngIf="hostRef.isRejectModalOpen"
+  confirmButtonColor="danger"
+  [isOpen]="hostRef.isRejectModalOpen"
+  (cancel)="hostRef.closeRejectModal()"
+  (confirm)="hostRef.rejectDebitOrder()"
+&gt;
+  &lt;span
+    title
+    i18n="@@payord-debit-manage.confirmation-dialog.reject.title"
+  &gt;Reject item?
+  &lt;/span&gt;
+  &lt;span
+    body
+    i18n="@@payord-debit-manage.confirmation-dialog.reject.body"
+  &gt;Are you sure to reject an item? This action can not be undone.
+  &lt;/span&gt;
+  &lt;span
+    confirmActionName
+    i18n="@@payord-debit-manage.confirmation-dialog.reject.action.confirm"
+  &gt;Reject
+  &lt;/span&gt;
+  &lt;span
+    cancelActionName
+    i18n="@@payord-debit-manage.confirmation-dialog.reject.action.cancel"
+  &gt;Cancel
+  &lt;/span&gt;
+&lt;/bb-confirmation-dialog&gt;
+
+&lt;bb-confirmation-dialog
+  *ngIf="hostRef.isApproveModalOpen"
+  confirmButtonColor="success"
+  [isOpen]="hostRef.isApproveModalOpen"
+  (cancel)="hostRef.closeApproveModal()"
+  (confirm)="hostRef.approveDebitOrder()"
+&gt;
+  &lt;span
+    title
+    i18n="@@payord-debit-manage.confirmation-dialog.approve.title"
+  &gt;Approve item?
+  &lt;/span&gt;
+  &lt;span
+    body
+    i18n="@@payord-debit-manage.confirmation-dialog.approve.body"
+  &gt;Are you sure you want to approve this item? This action can not be undone.
+  &lt;/span&gt;
+  &lt;span
+    confirmActionName
+    i18n="@@payord-debit-manage.confirmation-dialog.approve.action.confirm"
+  &gt;Approve
+  &lt;/span&gt;
+  &lt;span
+    cancelActionName
+    i18n="@@payord-debit-manage.confirmation-dialog.approve.action.cancel"
+  &gt;Cancel
+  &lt;/span&gt;
+&lt;/bb-confirmation-dialog&gt;
+
+&lt;bb-confirmation-dialog
+  *ngIf="hostRef.isCancelModalOpen"
+  confirmButtonColor="danger"
+  [isOpen]="hostRef.isCancelModalOpen"
+  (cancel)="hostRef.closeCancelModal()"
+  (confirm)="hostRef.cancelDebitOrder()"
+&gt;
+  &lt;span
+    title
+    i18n="@@payord-debit-manage.confirmation-dialog.cancel.title"
+  &gt;Cancel item?
+  &lt;/span&gt;
+  &lt;span
+    body
+    i18n="@@payord-debit-manage.confirmation-dialog.cancel.body"
+  &gt;Are you sure to cancel an item? This action can not be undone.
+  &lt;/span&gt;
+  &lt;span
+    confirmActionName
+    i18n="@@payord-debit-manage.confirmation-dialog.approve.cancel.confirm"
+  &gt;Cancel Item
+  &lt;/span&gt;
+  &lt;span
+    cancelActionName
+    i18n="@@payord-debit-manage.confirmation-dialog.cancel.action.cancel"
+  &gt;Keep Item
+  &lt;/span&gt;
+&lt;/bb-confirmation-dialog&gt;
+
+&lt;bb-confirmation-dialog
+  *ngIf="hostRef.isDeleteModalOpen"
+  confirmButtonColor="danger"
+  [isOpen]="hostRef.isDeleteModalOpen"
+  (cancel)="hostRef.closeDeleteModal()"
+  (confirm)="hostRef.deleteDebitOrder()"
+&gt;
+  &lt;span
+    title
+    i18n="@@payord-debit-manage.confirmation-dialog.delete.title"
+  &gt;Delete item?
+  &lt;/span&gt;
+  &lt;span
+    body
+    i18n="@@payord-debit-manage.confirmation-dialog.delete.body"
+  &gt;Are you sure to delete an item? This action can not be undone.
+  &lt;/span&gt;
+  &lt;span
+    confirmActionName
+    i18n="@@payord-debit-manage.confirmation-dialog.approve.delete.confirm"
+  &gt;Delete Item
+  &lt;/span&gt;
+  &lt;span
+    cancelActionName
+    i18n="@@payord-debit-manage.confirmation-dialog.delete.action.cancel"
+  &gt;Keep Item
+  &lt;/span&gt;
+&lt;/bb-confirmation-dialog&gt;
+
+&lt;ng-template #approvalSuccessNotification&gt;
+  &lt;span
+    i18n="Success notification for debit creation action|Notification message that will be shown if debit creation was successful@@payord-debit-manage.approval.notification.success"
+  &gt;
+    Item was approved
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #approvalFailureNotification&gt;
+  &lt;span
+    i18n="Failure notification for approved payment action|Notification message that will be shown if payment approval failed@@payord-debit-manage.approval.notification.failure"
+  &gt;
+    Item was not approved
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #rejectSuccessNotification&gt;
+  &lt;span
+    i18n="Success notification for debit reject action|Notification message that will be shown if debit reject was successful@@payord-debit-manage.reject.notification.success"
+  &gt;
+    Item was rejected
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #rejectFailureNotification&gt;
+  &lt;span
+    i18n="Failure notification for reject debit action|Notification message that will be shown if debit reject failed@@payord-debit-manage.reject.notification.failure"
+  &gt;
+    Item was not rejected
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #cancelSuccessNotification&gt;
+  &lt;span
+    i18n="Success notification for debit cancel action|Notification message that will be shown if debit reject was successful@@payord-debit-manage.cancel.notification.success"
+  &gt;
+    Item was cancelled
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #cancelFailureNotification&gt;
+  &lt;span
+    i18n="Failure notification for cancel debit action|Notification message that will be shown if debit reject failed@@payord-debit-manage.cancel.notification.failure"
+  &gt;
+    Item was not cancelled
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #deleteSuccessNotification&gt;
+  &lt;span
+    i18n="Success notification for debit delete action|Notification message that will be shown if debit reject was successful@@payord-debit-manage.delete.notification.success"
+  &gt;
+    Item was deleted
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #deleteFailureNotification&gt;
+  &lt;span
+    i18n="Failure notification for delete debit action|Notification message that will be shown if debit reject failed@@payord-debit-manage.delete.notification.failure"
+  &gt;
+    Item was not deleted
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #actionNotAvailable&gt;
+  &lt;span i18n="@@manage-debits-list.action.not.available"&gt;No permissions&lt;/span&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbPayordDebitManageDebitViewCustomizable" class="discrete">bbPayordDebitManageDebitViewCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbPayordDebitManageDebitViewCustomizable [bbHostRef]="hostRef"&gt;&lt;/ng-container&gt;
+&lt;ng-template
+  bbPayordDebitManageDebitViewCustomizable
+  let-hostRef&gt;
+    &lt;bb-modal-ui
+      [isOpen]="hostRef.isOpen"
+      [modalOptions]="hostRef.modalOptions"&gt;
+      &lt;bb-modal-header-ui&gt;
+        &lt;ng-template bbCustomModalHeader&gt;
+          &lt;ng-content select="[bbPayordDebitManageDebitViewHeader]"&gt;&lt;/ng-content&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-modal-header-ui&gt;
+      &lt;bb-modal-body-ui&gt;
+        &lt;ng-template bbCustomModalBody&gt;
+          &lt;ng-content select="[bbPayordDebitManageDebitViewBody]"&gt;&lt;/ng-content&gt;
+          &lt;ng-container
+            bbPayordDebitManageDebitViewBody
+            *ngIf="hostRef.debitOrderData; else loadingView"&gt;
+
+            &lt;div class="bb-stack bb-stack--wrap bb-block bb-block--xl"&gt;
+              &lt;div class="bb-stack__item bb-block bb-block--sm"&gt;
+                &lt;bb-payord-status-badge
+                  [status]="hostRef.debitOrderData?.status"
+                &gt;&lt;/bb-payord-status-badge&gt;
+              &lt;/div&gt;
+              &lt;div class="bb-stack__break bb-stack__break--sm-down"&gt;&lt;/div&gt;
+              &lt;div class="bb-stack__item"&gt;
+                &lt;div
+                  class="bb-stack bb-stack--wrap bb-text-support bb-subheader bb-subheader--regular bb-stack--density-xs"
+                &gt;
+                  &lt;span class="bb-stack__item" i18n="@@payord-debit-manage.debit-view.created.by"
+                  &gt;Created by&lt;/span&gt;
+                  &lt;span class="bb-stack__item"&gt;{{ hostRef.debitOrderData?.createdBy }}&lt;/span&gt;
+                  &lt;span class="bb-stack__item" i18n="@@payord-debit-manage.debit-view.created.on"&gt;on&lt;/span&gt;
+                  &lt;span class="bb-stack__item"&gt;{{ hostRef.debitOrderData?.createdAt | date }}&lt;/span&gt;
+                  &lt;span class="bb-stack__item" i18n="@@payord-debit-manage.debit-view.created.at"&gt;at&lt;/span&gt;
+                  &lt;span class="bb-stack__item"&gt;{{ hostRef.debitOrderData?.createdAt | date: 'shortTime' }}&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="bb-list bb-list--density-none bb-block bb-block--xl"&gt;
+              &lt;div class="bb-list__item"&gt;
+                &lt;div class="row"&gt;
+                  &lt;!-- Collect from --&gt;
+                  &lt;div class="col-sm col-xs-12 bb-block bb-block--md" *ngIf="hostRef.debitOrderData?.transferTransactionInformation as transactionInformation"&gt;
+                    &lt;div&gt;
+                      &lt;span
+                        class="bb-text-bold"
+                        i18n="Collect From label|Label for Collect from@@payord-debit-manage.debit-view.collectFrom.label"
+                      &gt;From&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div *ngIf="transactionInformation?.counterparty?.name as counterPartyName"&gt;
+                      &lt;span class="bb-text-default"&gt;{{ counterPartyName }}&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div
+                      data-role="debtor-account-number-modal"
+                      *ngIf="transactionInformation?.counterpartyAccount?.identification?.identification as counterPartyAccountNumber"
+                    &gt;
+                      &lt;span class="bb-text-support"&gt;{{ counterPartyAccountNumber }}&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  &lt;!-- Amount --&gt;
+                  &lt;div
+                    class="col-sm col-xs-12 bb-block bb-block--md"
+                    *ngIf="hostRef.debitOrderData?.transferTransactionInformation?.instructedAmount as amount"
+                  &gt;
+                    &lt;div&gt;
+                      &lt;span
+                        class="bb-text-bold"
+                        i18n="Amountlabel|Label for the Amount field@@payord-debit-manage.debit-details.amount.label"
+                      &gt;Amount&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                      &lt;span
+                        class="bb-highlight bb-stack"
+                      &gt;
+                        &lt;span
+                          class="bb-stack__item bb-stack__item--spacing-sm"
+                        &gt;{{amount?.currencyCode || hostRef?.settings?.currency}}&lt;/span&gt;
+                        &lt;span
+                          class="bb-stack__item"
+                          data-role="amount-modal"
+                        &gt;{{amount?.amount | currency: amount?.currencyCode:''}}&lt;/span&gt;
+                      &lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="row"&gt;
+                  &lt;!-- Transfer to --&gt;
+                  &lt;div class="col-sm col-xs-12 bb-block bb-block--md"
+                    *ngIf="hostRef.debitOrderData?.originatorAccount"
+                  &gt;
+                    &lt;div&gt;
+                      &lt;span
+                        class="bb-text-bold"
+                        i18n="Transfer to label|Label of Trnasfer to@@payord-debit-manage.debit-details.transferTo.label"
+                      &gt;To&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div
+                      *ngIf="hostRef.debitOrderData?.originatorAccount?.name as name"
+                    &gt;
+                      &lt;span
+                        class="bb-text-default"
+                        i18n="Account Number label@@payord-debit-manage.debit-details.account.label"
+                      &gt;{{ name }}&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div
+                      data-role="originator-account-number-modal"
+                      *ngIf="hostRef.debitOrderData?.originatorAccount?.identification?.identification as accountNumber"
+                    &gt;
+                      &lt;span
+                        class="bb-text-support"
+                        i18n="Account Number@@payord-debit-manage.debit-details.accountNo.label"
+                      &gt;{{ accountNumber }}&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  &lt;!-- Mandate identifier --&gt;
+                  &lt;ng-container
+                    *ngIf="hostRef.debitOrderData?.transferTransactionInformation as transactionInformation"
+                  &gt;
+                    &lt;div class="col-sm col-xs-12 bb-block bb-block--md"
+                      *ngIf="transactionInformation?.mandateIdentifier as mendateId"
+                    &gt;
+                      &lt;div&gt;
+                        &lt;span
+                          class="bb-text-bold"
+                          i18n="Mandate number label|Label for the mandate identifier field@@payord-debit-manage.debit-view.mandateNumber.label"
+                        &gt;Mandate number&lt;/span&gt;
+                      &lt;/div&gt;
+                      &lt;div&gt;
+                        &lt;span class="bb-text-default"&gt;{{mendateId}}&lt;/span&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/ng-container&gt;
+                &lt;/div&gt;
+                &lt;div class="bb-block bb-block--sm"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="bb-list__item"&gt;
+                &lt;div class="bb-block bb-block--lg"&gt;&lt;/div&gt;
+                &lt;ng-container [ngSwitch]="hostRef.scheduleType"&gt;
+                  &lt;ng-container *ngSwitchCase="hostRef.debitTypes.ONEOFF"&gt;
+                    &lt;div *ngIf="hostRef.debitOrderData?.requestedExecutionDate as execDate"&gt;
+
+                      &lt;div class="row"&gt;
+                        &lt;div class="col-sm col-xs-12 bb-block bb-block--md"&gt;
+                          &lt;div&gt;
+                            &lt;span
+                              class="bb-text-bold"
+                              i18n="Next Execution Date label|Label of the AExecution date field@@payord-debit-manage.debit-view.nextExecDate.label"
+                            &gt;Next execution&lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;div&gt;
+                            &lt;span class="bb-text-default"&gt;{{execDate | date:'mediumDate'}}&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/ng-container&gt;
+                  &lt;ng-container *ngSwitchCase="hostRef.debitTypes.RECURRING"&gt;
+                    &lt;div *ngIf="hostRef.debitOrderData?.schedule as schedule"&gt;
+                      &lt;div class="row"&gt;
+                        &lt;!-- Next execution  --&gt;
+                        &lt;div
+                          class="col-sm col-xs-12 bb-block bb-block--md"
+                          *ngIf="schedule?.nextExecutionDate"
+                        &gt;
+                          &lt;div&gt;
+                            &lt;span
+                              class="bb-text-bold"
+                              i18n="Next Execution Date label|Label of the AExecution date field@@payord-debit-manage.debit-view.nextExecDate.label"
+                            &gt;Next execution&lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;div&gt;
+                            &lt;span class="bb-text-default"&gt;{{ schedule?.nextExecutionDate | date:'mediumDate' }}&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Frequency  --&gt;
+                        &lt;div
+                          class="col-sm col-xs-12 bb-block bb-block--md"
+                        &gt;
+                          &lt;div&gt;
+                            &lt;span
+                              class="bb-text-bold"
+                              i18n="Frequency label|Label for frequency field@@payord-debit-manage.debit-view.frequency.label"
+                            &gt;Frequency&lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;div&gt;
+                            &lt;span class="bb-text-default"&gt;{{ schedule?.transferFrequency | titlecase }}&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;div class="row"&gt;
+                        &lt;!-- Start Date  --&gt;
+                        &lt;div
+                          class="col-sm col-xs-12 bb-block bb-block--md"
+                          *ngIf="schedule?.startDate"
+                        &gt;
+                          &lt;div&gt;
+                            &lt;span
+                              class="bb-text-bold"
+                              i18n="Start Date label|Label for Start Date field@@payord-debit-manage.debit-view.startDate.label"
+                            &gt;Start date&lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;div&gt;
+                            &lt;span class="bb-text-default"&gt;{{ schedule?.startDate | date:'mediumDate' }}&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- End Date  --&gt;
+                        &lt;div
+                          class="col-sm col-xs-12 bb-block bb-block--md"
+                          *ngIf="schedule?.endDate"
+                        &gt;
+                          &lt;div&gt;
+                            &lt;span
+                              class="bb-text-bold"
+                              i18n="Occurances label|Label for Occurances field@@payord-debit-manage.debit-view.occurances.label"
+                            &gt;End Date&lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;div&gt;
+                            &lt;span class="bb-text-default"&gt;{{schedule?.endDate | date:'mediumDate'}}&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/ng-container&gt;
+                &lt;/ng-container&gt;
+              &lt;/div&gt;
+              &lt;div class="bb-list__item"&gt;
+                &lt;div class="bb-block bb-block--lg"&gt;&lt;/div&gt;
+                &lt;!-- Message to client --&gt;
+                &lt;div class="row"
+                     [ngClass]="{
+                      'bb-block': hostRef.debitOrderData?.transferTransactionInformation?.messageToBank,
+                      'bb-block--md': hostRef.debitOrderData?.transferTransactionInformation?.messageToBank
+                     }"
+                     *ngIf="hostRef.debitOrderData?.transferTransactionInformation?.remittanceInformation?.content as messageToClient"&gt;
+                  &lt;div class="col-sm"&gt;
+                    &lt;div&gt;
+                      &lt;span
+                        class="bb-text-bold"
+                        i18n="Meggase to client label|Label for Message to client@@payord-debit-manage.debit-view.messageToCleint.label"
+                      &gt;Message to client&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                      &lt;span class="bb-text-default"&gt;{{ messageToClient }}&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Message to bank --&gt;
+                &lt;div class="row"
+                  *ngIf="hostRef.debitOrderData?.transferTransactionInformation?.messageToBank as messageToBank"
+                &gt;
+                  &lt;div class="col-sm"&gt;
+                    &lt;div&gt;
+                      &lt;span
+                        class="bb-text-bold"
+                        i18n="Message to bank label|Label for the Message to bank field@@payord-debit-manage.debit-view.messageToBank.label"
+                      &gt;Message to bank&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                      &lt;span class="bb-text-default"&gt;{{ messageToBank }}&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;bb-collapsible-ui
+              *ngIf="hostRef.debitOrderData?.approvalDetails?.records?.length &gt; 0"
+            &gt;
+              &lt;ng-template
+                bbCollapsibleHeader
+                let-toggle="toggle"
+                let-isOpen="isOpen"
+              &gt;
+                &lt;div class="bb-stack"&gt;
+                  &lt;div class="bb-stack__item bb-stack__item--fill"&gt;
+                    &lt;bb-header-ui
+                      class="bb-block bb-block--no-margin"
+                      headingType="h3"
+                      i18n-heading="Approval log|Title to show approval logs@@payord-debit-manage.debit-view.approval-log.title"
+                      heading="Approval log"
+                    &gt;&lt;/bb-header-ui&gt;
+                  &lt;/div&gt;
+                  &lt;button
+                    bbButton
+                    class="bb-stack__item"
+                    color="outline"
+                    [circle]="true"
+                    (click)="toggle()"
+                    aria-label="Approval log toggle"
+                    i18n-aria-label="Approval log toggle label|Aria label for approval log toggle@@payord-debit-manage.debit-view.approval-log.toggle"
+                  &gt;
+                    &lt;bb-icon-ui [name]="isOpen ? 'toggle-up' : 'toggle-down'"&gt;&lt;/bb-icon-ui&gt;
+                  &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;hr class="bb-block bb-block--no-margin"/&gt;
+              &lt;/ng-template&gt;
+              &lt;ng-template bbCollapsibleBody&gt;
+                &lt;div class="bb-block bb-block--lg"&gt;&lt;/div&gt;
+                &lt;bb-item-log-ui [records]="hostRef.debitOrderData?.approvalDetails?.records"&gt;&lt;/bb-item-log-ui&gt;
+              &lt;/ng-template&gt;
+            &lt;/bb-collapsible-ui&gt;
+          &lt;/ng-container&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-modal-body-ui&gt;
+      &lt;bb-modal-footer-ui&gt;
+        &lt;ng-template bbCustomModalFooter&gt;
+          &lt;ng-content select="[bbPayordDebitManageDebitViewFooter]"&gt;&lt;/ng-content&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-modal-footer-ui&gt;
+    &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;
+
+
+&lt;ng-template #loadingView&gt;
+    &lt;div class="d-flex mt-5 justify-content-center"&gt;
+        &lt;bb-loading-indicator-ui
+          loaderSize="lg"
+        &gt;&lt;/bb-loading-indicator-ui&gt;
+    &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

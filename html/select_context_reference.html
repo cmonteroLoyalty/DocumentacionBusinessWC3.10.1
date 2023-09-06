@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Select context</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="select_context_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Select context</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html"><span class="toc-current">Select context</span></a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="select_context_reference" class="sect0">Select context</h1>
+          <div class="ulist">
+<ul>
+<li>
+<p><a href="select_context_reference.html#select_context_extension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="select_context_reference.html#select_context_preferences">Preferences</a></p>
+</li>
+</ul>
+</div>
+<h2 id="select_context_extension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/select_context_slots_1_2_3.svg?ver=3.10.1" alt="select context slots 1 2 3"></span></p>
+</div>
+<div class="paragraph">
+<p>The extension slots of this widget are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="select_context_reference.html#bbSelectContextContainerCustomizable">bbSelectContextContainerCustomizable</a></p>
+</li>
+<li>
+<p><a href="select_context_reference.html#bbSelectContextServiceAgreementItemCustomizable">bbSelectContextServiceAgreementItemCustomizable</a></p>
+</li>
+<li>
+<p><a href="select_context_reference.html#bbSelectContextServiceAgreementListCustomizable">bbSelectContextServiceAgreementListCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbSelectContextContainerCustomizable" class="discrete">bbSelectContextContainerCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">&lt;ng-template
+  bbSelectContextContainerCustomizable
+  let-hostRef
+  let-serviceAgreements="context.serviceAgreements"
+  let-loading="context.loading"
+  let-error="context.error"
+  let-params="context.params"
+  let-widgetProperties="context.widgetProperties"
+  let-currentContext="context.currentContext"
+  let-saving="context.saving"
+&gt;
+
+  &lt;div class="bb-select-context"&gt;
+    &lt;div class="bb-select-context__container"&gt;
+      &lt;ng-container *ngIf="serviceAgreements; else loadingTemplate"&gt;
+        &lt;bb-header-ui
+          *ngIf="!saving"
+          class="bb-block bb-block--md"
+          headingType="h2"
+          heading="Select context"
+          data-role="select-context-header"
+          i18n-heading="Select context|Select context label@@select-context.label.selectContext"
+        &gt;&lt;/bb-header-ui&gt;
+
+        &lt;bb-alert-ui
+          *ngIf="hostRef.savingError"
+          title="Unknown error"
+          i18n-title="Unknown Error|Unknown Error Label@@select-context.label.error.unknown"&gt;
+          &lt;span
+            i18n="Try again|Try again error message@@select-context.label.error.tryAgain"&gt;
+            Try to make action again or contact your system administrator.
+          &lt;/span&gt;
+        &lt;/bb-alert-ui&gt;
+
+        &lt;ng-container *ngIf="!saving &amp;&amp; (hostRef.searchValue || serviceAgreements.totalCount &gt; widgetProperties.showSearchAfter)"&gt;
+          &lt;bb-search-box-ui
+            class="bb-block bb-block--lg"
+            searchLabel="Search button"
+            i18n-searchLabel="Search button|Search button@@select-context.label.searchLabel"
+            showClear="true"
+            showSearch="true"
+            placeholder="Search"
+            i18n-placeholder="Search|Search placeholder@@select-context.label.search"
+            aria-label="Search service agreements"
+            i18n-aria-label="Search service agreements|Search service agreements@@select-context.aria-label.search"
+            data-role="Search"
+            (submit)="hostRef.search($event)"
+            (clear)="hostRef.search('')"
+          &gt;&lt;/bb-search-box-ui&gt;
+        &lt;/ng-container&gt;
+
+        &lt;ng-container *ngIf="!error; else errorTemplate"&gt;
+          &lt;ng-container *ngIf="!(loading &amp;&amp; params.from === 0); else loadingTemplate"&gt;
+            &lt;ng-container *ngIf="!saving; else savingTemplate"&gt;
+              &lt;ng-container *ngIf="serviceAgreements.items.length &gt; 0; else emptyTemplate"&gt;
+                &lt;bb-infinite-scroll-ui
+                  class="bb-infinite-scroll"
+                  [offset]="5"
+                  [disableScrollEnd]="loading || serviceAgreements.items.length === serviceAgreements.totalCount"
+                  (scrollEnd)="loadMore()"&gt;
+                  &lt;bb-service-agreement-list
+                    [serviceAgreements]="serviceAgreements.items"
+                    [loading]="loading"
+                    [currentContext]="currentContext"
+                    [searchValue]="hostRef.searchValue"
+                    [totalCount]="serviceAgreements.totalCount"
+                    [from]="params.from"
+                    (loadMore)="hostRef.loadMore()"
+                    (select)="hostRef.select($event)"
+                  &gt;&lt;/bb-service-agreement-list&gt;
+                &lt;/bb-infinite-scroll-ui&gt;
+              &lt;/ng-container&gt;
+            &lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+        &lt;/ng-container&gt;
+
+        &lt;ng-container *ngIf="widgetProperties.backOutput &amp;&amp; !saving"&gt;
+          &lt;div class="bb-block bb-block--lg"&gt;&lt;/div&gt;
+          &lt;div class="d-block"&gt;
+            &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+              &lt;button bbButton
+                      (click)="hostRef.goBack()"
+                      color="secondary"
+                      class="bb-button-bar__button"
+                      data-role="select-context-back-button"
+              &gt;
+                &lt;span i18n="Back button|Button to navigate back@@select-context.label.backButton"&gt;
+                  Back
+                &lt;/span&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/ng-container&gt;
+      &lt;/ng-container&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;ng-template #loadingTemplate&gt;
+    &lt;div class="bb-state-container bb-select-context__state"&gt;
+      &lt;bb-loading-indicator-ui
+      &gt;&lt;/bb-loading-indicator-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #savingTemplate&gt;
+    &lt;div class="bb-state-container bb-select-context__state"&gt;
+      &lt;bb-loading-indicator-ui
+        text="Processing the request..."
+        i18n-text="Processing the request|Text to show while saving the selected context@@select-context.label.processing"
+      &gt;&lt;/bb-loading-indicator-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #errorTemplate&gt;
+    &lt;div class="bb-state-container bb-select-context__state"&gt;
+      &lt;bb-select-context-error
+        [errorKind]="error?.kind"
+      &gt;&lt;/bb-select-context-error&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #emptyTemplate&gt;
+    &lt;div class="bb-state-container bb-select-context__state"&gt;
+      &lt;bb-empty-state-ui
+        *ngIf="hostRef.searchValue"
+        title="No Results Found"
+        i18n-title="Search empty state title|Empty state label when there is no search results@@select-context.search.empty.title"
+        subtitle="We can’t find what you’re looking for. Please try a different criteria."
+        i18n-subtitle="Search empty state subtitle|Empty state subtitle when there is no search results@@select-context.search.empty.subtitle"
+        iconModifier="search"
+        iconColor="muted"
+        iconSize="xxl"
+      &gt;&lt;/bb-empty-state-ui&gt;
+
+      &lt;bb-empty-state-ui
+        *ngIf="!hostRef.searchValue"
+        title="Permissions required."
+        i18n-title="Permissions required|Empty state label when user has no permissions@@select-context.permissions.empty.title"
+        subtitle="Please contact the administrator to activate your account."
+        i18n-subtitle="Permissions required subtilte|Empty state subtitle when user has no permissions@@select-context.permissions.empty.subtitle"
+        iconModifier="lock"
+        iconColor="muted"
+        iconSize="xxl"
+      &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbSelectContextServiceAgreementItemCustomizable" class="discrete">bbSelectContextServiceAgreementItemCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">&lt;ng-template
+  bbSelectContextServiceAgreementItemCustomizable
+  let-hostRef
+  let-item="context"&gt;
+
+  &lt;div class="bb-stack bb-stack--align-top"&gt;
+    &lt;div class="bb-stack__item"&gt;
+      &lt;bb-user-context-icon-ui
+        [isMaster]="item?.isMaster"
+        [name]="item?.name"
+      &gt;&lt;/bb-user-context-icon-ui&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-stack__item bb-stack__item--fill"&gt;
+      &lt;div class="bb-text-bold" data-role="service-agreement-item-name"&gt;{{item?.name}}&lt;/div&gt;
+      &lt;div class="bb-subtitle bb-text-support" data-role="service-agreement-item-description"&gt;{{item?.description}}&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbSelectContextServiceAgreementListCustomizable" class="discrete">bbSelectContextServiceAgreementListCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">&lt;ng-template
+  bbSelectContextServiceAgreementListCustomizable
+  let-hostRef
+  let-serviceAgreements="context.serviceAgreements"
+  let-currentContext="context.currentContext"
+  let-loading="context.loading"
+  let-searchValue="context.searchValue"
+  let-totalCount="context.totalCount"
+  let-from="context.from"&gt;
+
+  &lt;ng-container *ngIf="currentContext &amp;&amp; !searchValue"&gt;
+    &lt;div
+      data-role="current-context-label"
+      class="bb-select-context__subheader"
+      i18n="Current context|Current context label@@select-context.label.currentContext"&gt;
+      Current context
+    &lt;/div&gt;
+    &lt;div class="list-group list-group-flush"&gt;
+      &lt;div
+        role="button"
+        data-role="current-context-data"
+        tabindex="0"
+        (click)="hostRef.onSelect(currentContext)"
+        (keyup.enter)="hostRef.onSelect(currentContext)"
+        class="bb-select-context__current-context list-group-item list-group-item-action"
+      &gt;
+        &lt;bb-service-agreement-item
+          [item]="currentContext"
+        &gt;&lt;/bb-service-agreement-item&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="bb-select-context__subheader"
+         data-role="switch-context-label"
+      i18n="Switch to context|Switch to context label@@select-context.label.switchToContext"&gt;
+      Switch to context
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+
+  &lt;div class="bb-select-context__subheader" *ngIf="searchValue &amp;&amp; totalCount &gt; 0"&gt;
+  &lt;span i18n="Results found|Results found label@@select-context.label.resultsFound"&gt;
+    {totalCount, plural, =1 {1 result found} other {{{totalCount}} results found}}
+  &lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class="list-group list-group-flush"&gt;
+    &lt;div *ngFor="let item of serviceAgreements; let first = first; let last = last"
+      role="button"
+      tabindex="0"
+      [attr.data-role]="'service-agreement-list-item-' + item.name"
+      (click)="hostRef.onSelect(item)"
+      (keyup.enter)="hostRef.onSelect(item)"
+      [class.first]="first"
+      [class.last]="last"
+      class="list-group-item list-group-item-action bb-select-context__item"&gt;
+      &lt;bb-service-agreement-item
+        [item]="item"
+      &gt;&lt;/bb-service-agreement-item&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div [class.invisible]="!loading" *ngIf="serviceAgreements.length !== totalCount"&gt;
+    &lt;bb-loading-indicator-ui loaderSize="sm"&gt;&lt;/bb-loading-indicator-ui&gt;
+  &lt;/div&gt;
+
+  &lt;div class="bb-select-context__items-loaded-label" *ngIf="from &gt; 0 &amp;&amp; serviceAgreements.length === totalCount"&gt;
+    &lt;span *ngIf="!searchValue"
+      i18n="All items loaded|All items loaded label@@select-context.label.allItemsLoaded"&gt;
+      All items are loaded
+    &lt;/span&gt;
+    &lt;span *ngIf="searchValue"
+      i18n="All items loaded|All items loaded label@@select-context.label.allResultsLoaded"&gt;
+      All results are loaded
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h2 id="select_context_preferences" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>This widget has the following preferences that managers or administrators configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configured by</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Number of service agreements to load per page</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>7</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Show search if more than service agreements</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>showSearchAfter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Include current context</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>includeCurrentContext</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Redirect after successful context select</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectContextRedirectPage</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mpa:/index</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navigation after clicking back</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.back</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation-url:/login</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

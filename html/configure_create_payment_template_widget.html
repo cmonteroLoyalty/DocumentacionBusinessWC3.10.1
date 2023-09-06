@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Configure the Create payment template widget</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="configure_create_payment_template_widget" class="book toc2 toc-left">
+<div id="header">
+<h1>Configure the Create payment template widget</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html"><span class="toc-current">Configure the Create payment template widget</span></a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="configure_create_payment_template_widget" class="sect0">Configure the Create payment template widget</h1>
+          <div class="paragraph">
+<p>The <strong>Create payment template</strong> is a configurable option on top of the <strong>Initiate omni payment</strong> widget.
+Developers can use all the configuration options of <a href="adopt_omni_payment_widget.html">Initiate omni payment</a> widget for the creating the payment template.</p>
+</div>
+<div class="paragraph">
+<p>This section explains how to configure the <strong>Initiate omni payment</strong> widget to create payment templates:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="configure_create_payment_template_widget.html#create_payment_template_standalone">Configure create payment template</a></p>
+</li>
+<li>
+<p><a href="configure_create_payment_template_widget.html#create_payment_template_multiple_options">Add support for multiple payment types</a></p>
+</li>
+<li>
+<p><a href="configure_create_payment_template_widget.html#create_payment_template_modal">Render the widget inside a modal</a></p>
+</li>
+<li>
+<p><a href="configure_create_payment_template_widget.html#configure_edit_payment_template">Configure edit template</a></p>
+</li>
+</ul>
+</div>
+<h2 id="_prerequisites_3" class="discrete">Prerequisites</h2>
+<div class="paragraph">
+<p>Before you start, make sure you have the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Access to a local or shared developer environment.</p>
+</li>
+<li>
+<p>A project setup with Business Banking Widget Collection.</p>
+</li>
+<li>
+<p>A basic understanding of <a href="adopt_omni_payment_widget.html">Initiate omni payment</a> wiget.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Refer <a href="adopt_omni_payment_widget.html">adopt omni payment</a> and <a href="omni_payment_reference.html">out-of-the-box configurations</a> for details on configuring payment types.
+</td>
+</tr>
+</table>
+</div>
+<h2 id="create_payment_template_standalone" class="discrete">Configure create payment template</h2>
+<div class="paragraph">
+<p>Follow these steps to configure the <strong>Initiate omni payment</strong> widget to support create payment template:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Scaffold your widget</strong></p>
+<div class="paragraph">
+<p>To scaffold your widget, do one of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Scaffold an empty widget and copy the default routes from the <strong>Initiate omni payment</strong> widget.</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Use <a href="http://wa3.backbase.com/foundation/6.13.1/howto/schematics"><code>@bb-cli/schematics</code></a> to
+<a href="https://community.backbase.com/documentation/foundation_angular/6.13.1/widget_development_environment#scaffold_new_widget">scaffold an empty widget</a>.
+Give the widget a name, for example <code>create-payment-template-widget</code>.</p>
+</li>
+<li>
+<p>To copy the default routes of <code>PayordOmniPaymentWidgetAngComponent</code>, use the
+<a href="http://wa3.backbase.com/foundation/6.13.1/api/foundation-ang/core/public_api/CopyRoutes">CopyRoutes</a> decorator.
+For example:</p>
+<div class="listingblock">
+<div class="title">create-payment-template-widget.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+import { PayordOmniPaymentWidgetAngComponent } from '@backbase/payord-omni-payment-widget-ang';
+import { CopyRoutes } from '@backbase/foundation-ang/core';
+
+@Component({
+    selector: 'bb-create-payment-template-widget',
+    template: `
+        &lt;bb-payord-omni-payment-widget-ang&gt;&lt;/bb-payord-omni-payment-widget-ang&gt;
+    `,
+})
+@CopyRoutes(PayordOmniPaymentWidgetAngComponent)
+export class CreatePaymentTemplateWidgetComponent {}</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Provide necessary inputs to the omni payment widget</strong></p>
+<div class="paragraph">
+<p>Create necessary <code>OmniPaymentWidgetOptions</code> and specify <code>isTemplateMode</code> as <code>true</code>. Provide the widget options as inputs to the omni payment widget in the component template along with <code>paymentConfig</code> and <code>businessFunction</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">create-payment-template-widget.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+import { CopyRoutes } from '@backbase/foundation-ang/core';
+import { US_DOMESTIC_WIRE, OmniPaymentWidgetOptions } from '@backbase/payment-orders-ang/configs';
+import { PayordOmniPaymentWidgetAngComponent } from '@backbase/payord-omni-payment-widget-ang';
+
+@Component({
+  selector: 'bb-create-payment-template-widget',
+  template: `
+      &lt;bb-payord-omni-payment-widget-ang
+        [paymentConfig]="paymentConfig"
+        [businessFunction]="businessFunction"
+        [options]="options"
+      &gt;&lt;/bb-payord-omni-payment-widget-ang&gt;
+  `,
+})
+@CopyRoutes(PayordOmniPaymentWidgetAngComponent)
+export class CreatePaymentTemplateWidgetComponent {
+  paymentConfig = US_DOMESTIC_WIRE;
+  businessFunction = 'US Domestic Wire';
+
+  options: OmniPaymentWidgetOptions = {
+    defaultScheme: 'BBAN',
+    defaultCountry: 'US',
+    isTemplateMode: true,
+    successEventName: 'bb.refresh.payment.templates',
+  };
+}</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<h2 id="create_payment_template_multiple_options" class="discrete">Add support for multiple payment types</h2>
+<div class="paragraph">
+<p><strong>Add helpers to get <code>paymentType</code> and business function</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add helper functions in the component to get payment config and business function based on a payment type:</p>
+<div class="listingblock">
+<div class="title">create-payment-template-widget.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+import { CopyRoutes } from '@backbase/foundation-ang/core';
+import {
+  US_DOMESTIC_WIRE,
+  US_ACH_CREDIT,
+  INTERNATIONAL_TRANSFER,
+  OmniPaymentWidgetOptions,
+  PaymentTypeConfig,
+} from '@backbase/payment-orders-ang/configs';
+import { PayordOmniPaymentWidgetAngComponent } from '@backbase/payord-omni-payment-widget-ang';
+
+@Component({
+  selector: 'bb-create-payment-template-widget',
+  template: `
+    &lt;bb-payord-omni-payment-widget-ang
+      [paymentConfig]="paymentConfig"
+      [businessFunction]="businessFunction"
+      [options]="options"
+    &gt;&lt;/bb-payord-omni-payment-widget-ang&gt;
+  `,
+})
+@CopyRoutes(PayordOmniPaymentWidgetAngComponent)
+export class CreatePaymentTemplateWidgetComponent {
+  paymentConfig = US_DOMESTIC_WIRE;
+  businessFunction = 'US Domestic Wire';
+
+  options: OmniPaymentWidgetOptions | any = {
+    defaultScheme: 'BBAN',
+    defaultCountry: 'US',
+    isTemplateMode: true,
+    successEventName: 'bb.refresh.payment.templates',
+  };
+
+  getPaymentConfig(paymentType: string): PaymentTypeConfig {
+    switch (paymentType) {
+      case 'US_DOMESTIC_WIRE':
+        return US_DOMESTIC_WIRE;
+      case 'INTERNATIONAL_TRANSFER':
+        return INTERNATIONAL_TRANSFER;
+      default:
+        return US_ACH_CREDIT;
+    }
+  }
+
+  getBusinessFunction(paymentType: string): string {
+    switch (paymentType) {
+      case 'US_DOMESTIC_WIRE':
+        return 'US Domestic Wire';
+      case 'INTERNATIONAL_TRANSFER':
+        return 'US Foreign Wire';
+      default:
+        return 'ACH Credit Transfer';
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create payment template options for multiple payment types and include a component in template to choose between payment types.</p>
+<div class="listingblock">
+<div class="title">create-payment-template-widget.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+import { CopyRoutes } from '@backbase/foundation-ang/core';
+import {
+  US_DOMESTIC_WIRE,
+  US_ACH_CREDIT,
+  INTERNATIONAL_TRANSFER,
+  OmniPaymentWidgetOptions,
+  PaymentTypeConfig,
+} from '@backbase/payment-orders-ang/configs';
+import { PayordOmniPaymentWidgetAngComponent } from '@backbase/payord-omni-payment-widget-ang';
+import { BehaviorSubject } from 'rxjs';
+
+@Component({
+  selector: 'bb-create-payment-template-widget',
+  template: `
+    &lt;bb-horizontal-list-selector
+      *ngIf="templateItems?.length &gt; 1"
+      [options]="templateItems"
+      [activeItem]="selectedPaymentType$ | async"
+      (select)="selectedPaymentType$.next($event)"&gt;
+    &lt;/bb-horizontal-list-selector&gt;
+    &lt;ng-container [ngSwitch]="selectedPaymentType$ | async"&gt;
+      &lt;ng-container *ngFor="let item of templateItems;"&gt;
+        &lt;div *ngSwitchCase="item?.value" [attr.id]="item?.value"&gt;
+          &lt;bb-payord-omni-payment-widget-ang
+            [paymentConfig]="getPaymentConfig(item.value)"
+            [businessFunction]="getBusinessFunction(item.value)"
+            [options]="options"
+          &gt;&lt;/bb-payord-omni-payment-widget-ang&gt;
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+    &lt;/ng-container&gt;
+  `,
+})
+@CopyRoutes(PayordOmniPaymentWidgetAngComponent)
+export class CreatePaymentTemplateWidgetComponent {
+  templateItems = [
+    { value: "ACH_CREDIT", label: "ACH" },
+    { value: "US_DOMESTIC_WIRE", label: "Domestic Wire" },
+    { value: "INTERNATIONAL_TRANSFER", label: "International (SWIFT)" },
+  ];
+  selectedPaymentType$ = new BehaviorSubject&lt;string&gt;("ACH_CREDIT");
+  options: OmniPaymentWidgetOptions | any = {
+    defaultScheme: 'BBAN',
+    defaultCountry: 'US',
+    isTemplateMode: true,
+    successEventName: 'bb.refresh.payment.templates',
+  };
+
+  getPaymentConfig(paymentType: string): PaymentTypeConfig {
+    switch (paymentType) {
+      case 'US_DOMESTIC_WIRE':
+        return US_DOMESTIC_WIRE;
+      case 'INTERNATIONAL_TRANSFER':
+        return INTERNATIONAL_TRANSFER;
+      default:
+        return US_ACH_CREDIT;
+    }
+  }
+
+  getBusinessFunction(paymentType: string): string {
+    switch (paymentType) {
+      case 'US_DOMESTIC_WIRE':
+        return 'US Domestic Wire';
+      case 'INTERNATIONAL_TRANSFER':
+        return 'US Foreign Wire';
+      default:
+        return 'ACH Credit Transfer';
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<h2 id="create_payment_template_modal" class="discrete">Render the widget inside a modal</h2>
+<div class="paragraph">
+<p>Optionally the create payment template widget can be rendered inside a modal component. To render inside the modal follow the below steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Specify <code>isModalView</code> as true in <code>OmniPaymentWidgetOptions</code>. This is required to render modal specifc button group in the form.</p>
+</li>
+<li>
+<p>Specify <code>successEventName</code> with a unique name in the <code>OmniPaymentWidgetOptions</code>. This event should be specified in manage templates widget in order to refresh the manage templates list when a template is created.</p>
+</li>
+<li>
+<p>Wrap the widget template in a modal component and render the widget only when the modal is open.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<code>bb-routable-modal</code> is used in below example. <code>bb-routable-modal</code> requires a <code>modalWindowName</code> input, which is appended to url query params when the modal is opened. This modal can be triggered from the heading widget by configuring it&#8217;s widget property <code>Use action button event bus</code> as <code>true</code> and providing <code>Action button event bus name</code> same as the <code>modalWindowName</code>. Alternately the <code>bb-routable-modal</code> can be triggered using <code>RoutableModalService</code> which can be imported from <code>@backbase/payment-orders-ang/ui</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">create-payment-template-widget.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+import { CopyRoutes } from '@backbase/foundation-ang/core';
+import {
+  US_DOMESTIC_WIRE,
+  US_ACH_CREDIT,
+  INTERNATIONAL_TRANSFER,
+  OmniPaymentWidgetOptions,
+  PaymentTypeConfig,
+} from '@backbase/payment-orders-ang/configs';
+import { PayordOmniPaymentWidgetAngComponent } from '@backbase/payord-omni-payment-widget-ang';
+import { BehaviorSubject } from 'rxjs';
+
+@Component({
+  selector: 'bb-create-payment-template-widget',
+  template: `
+    &lt;bb-routable-modal
+      modalTitle="New Template"
+      modalTitleIcon="content-copy"
+      [closeButton]="false"
+      [modalWindowName]="modalViewName"
+      (visibilityChange)="onModalToggle($event)"
+    &gt;
+      &lt;ng-container *ngIf="isModalOpen$ | async"&gt;
+        &lt;bb-horizontal-list-selector
+          *ngIf="templateItems?.length &gt; 1"
+          [options]="templateItems"
+          [activeItem]="selectedPaymentType$ | async"
+          (select)="selectedPaymentType$.next($event)"
+        &gt;
+        &lt;/bb-horizontal-list-selector&gt;
+        &lt;ng-container [ngSwitch]="selectedPaymentType$ | async"&gt;
+          &lt;ng-container *ngFor="let item of templateItems"&gt;
+            &lt;div *ngSwitchCase="item?.value" [attr.id]="item?.value"&gt;
+              &lt;bb-payord-omni-payment-widget-ang
+                [paymentConfig]="getPaymentConfig(item.value)"
+                [businessFunction]="getBusinessFunction(item.value)"
+                [options]="options"
+              &gt;&lt;/bb-payord-omni-payment-widget-ang&gt;
+            &lt;/div&gt;
+          &lt;/ng-container&gt;
+        &lt;/ng-container&gt;
+      &lt;/ng-container&gt;
+    &lt;/bb-routable-modal&gt;
+  `,
+})
+@CopyRoutes(PayordOmniPaymentWidgetAngComponent)
+export class CreatePaymentTemplateWidgetComponent {
+  paymentConfig = US_DOMESTIC_WIRE;
+  businessFunction = 'US Domestic Wire';
+  templateItems = [
+    { value: 'ACH_CREDIT', label: 'ACH' },
+    { value: 'US_DOMESTIC_WIRE', label: 'Domestic Wire' },
+    { value: 'INTERNATIONAL_TRANSFER', label: 'International (SWIFT)' },
+  ];
+  selectedPaymentType$ = new BehaviorSubject&lt;string&gt;('ACH_CREDIT');
+  options: OmniPaymentWidgetOptions | any = {
+    defaultScheme: 'BBAN',
+    defaultCountry: 'US',
+    isTemplateMode: true,
+    successEventName: 'bb.refresh.payment.templates',
+    isModalView: true,
+  };
+  modalViewName = 'create-template-modal';
+  isModalOpen$ = new BehaviorSubject&lt;boolean&gt;(false);
+
+  onModalToggle(isModalOpen: boolean) {
+    this.isModalOpen$.next(isModalOpen);
+  }
+
+  getPaymentConfig(paymentType: string): PaymentTypeConfig {
+    switch (paymentType) {
+      case 'US_DOMESTIC_WIRE':
+        return US_DOMESTIC_WIRE;
+      case 'INTERNATIONAL_TRANSFER':
+        return INTERNATIONAL_TRANSFER;
+      default:
+        return US_ACH_CREDIT;
+    }
+  }
+
+  getBusinessFunction(paymentType: string): string {
+    switch (paymentType) {
+      case 'US_DOMESTIC_WIRE':
+        return 'US Domestic Wire';
+      case 'INTERNATIONAL_TRANSFER':
+        return 'US Foreign Wire';
+      default:
+        return 'ACH Credit Transfer';
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<h2 id="configure_edit_payment_template" class="discrete">Configure edit template</h2>
+<div class="paragraph">
+<p>To render omni payment in edit template mode you need to perform the following changes:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Specify <code>isTemplateMode</code> as <code>true</code> and <code>templateModeType</code> as <code>EDIT</code> in <code>OmniPaymentWidgetOptions</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  defaultScheme: 'BBAN',
+  defaultCountry: 'US',
+  successEventName: 'bb.refresh.payment.templates',
+  isModalView: true,
+  isTemplateMode: true,
+  templateModeType: 'EDIT',
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add an input in <code>model.xml</code> to accept the payment template details to be edited. This value will be emitted by the manage templates widget.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">&lt;property
+  name="input.editedPaymentTemplate"
+  viewHint="text-input,admin,designModeOnly"&gt;
+  &lt;value&gt;memory editTemplate&lt;/value&gt;
+&lt;/property&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the above example the value is received using in memory widget communication mechanism. The manage template widget should emit the template with the same name so our widget can receive it.</p>
+</div>
+</li>
+<li>
+<p>Add an input in the wrapper widget to receive the template to be editted from the item model</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">@Input()
+set editedPaymentTemplate(template: PaymentTemplate | undefined) {
+  if (template?.details) {
+    this.templateModeType$.next(TemplateModeType.EDIT);
+    this.selectedPaymentTemplate$.next(template);
+    this.routableModalService.openModal(&lt;string&gt;this.modalViewName);
+  }
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Provide the payment template details to the omni pament widget in the widget template as <code>paymentTemplate</code> input.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">  &lt;bb-payord-omni-payment-widget-ang
+    [paymentConfig]="getPaymentConfig(paymentType)"
+    [businessFunction]="getBusinessFunction(paymentType)"
+    [options]="getWidgetOptions()"
+    [paymentTemplate]="selectedPaymentTemplate$ | async"&gt;
+  &lt;/bb-payord-omni-payment-widget-ang&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">create-payment-template-widget.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+import { CopyRoutes } from '@backbase/foundation-ang/core';
+import {
+  US_DOMESTIC_WIRE,
+  US_ACH_CREDIT,
+  INTERNATIONAL_TRANSFER,
+  OmniPaymentWidgetOptions,
+  PaymentTypeConfig,
+} from '@backbase/payment-orders-ang/configs';
+import { PayordOmniPaymentWidgetAngComponent } from '@backbase/payord-omni-payment-widget-ang';
+import { PaymentTemplate } from '@backbase/data-ang/payment-template';
+import { RoutableModalService, OmniPaymentWidgetOptions } from '@backbase/payment-orders-ang';
+import { BehaviorSubject } from 'rxjs';
+
+enum TemplateModeType {
+  CREATE = 'CREATE',
+  EDIT = 'EDIT',
+}
+
+@Component({
+  selector: 'bb-create-payment-template-widget',
+  template: `
+    &lt;bb-routable-modal
+      [modalTitle]="templateModeType$?.value === 'EDIT' ? 'Edit Template': 'New Template'"
+      modalTitleIcon="content-copy"
+      [closeButton]="false"
+      [modalWindowName]="modalViewName"
+      (visibilityChange)="onModalToggle($event)"
+    &gt;
+      &lt;ng-container *ngIf="isModalOpen$ | async"&gt;
+        &lt;ng-container [ngSwitch]="templateModeType$ | async"&gt;
+          &lt;ng-container *ngSwitchCase="'EDIT'"&gt;
+             &lt;ng-container *ngTemplateOutlet="tmpl; context: { $implicit: (selectedPaymentTemplate$ | async)?.details?.paymentType}"&gt; &lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+          &lt;ng-container *ngSwitchDefault&gt;
+            &lt;bb-horizontal-list-selector
+              *ngIf="templateItems?.length &gt; 1"
+              [options]="templateItems"
+              [activeItem]="selectedPaymentType$ | async"
+              (select)="onSelectPaymentType($event)"
+            &gt;
+            &lt;/bb-horizontal-list-selector&gt;
+            &lt;ng-container [ngSwitch]="selectedPaymentType$ | async"&gt;
+              &lt;ng-container *ngFor="let item of templateItems"&gt;
+                &lt;div *ngSwitchCase="item?.value" [attr.id]="item?.value"&gt;
+                   &lt;ng-container *ngTemplateOutlet="tmpl; context: { $implicit: item.value }"&gt; &lt;/ng-container&gt;
+                &lt;/div&gt;
+              &lt;/ng-container&gt;
+            &lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+        &lt;/ng-container&gt;
+      &lt;/ng-container&gt;
+    &lt;/bb-routable-modal&gt;
+
+    &lt;ng-template let-paymentType #tmpl&gt;
+      &lt;bb-payord-omni-payment-widget-ang
+        [paymentConfig]="getPaymentConfig(paymentType)"
+        [businessFunction]="getBusinessFunction(paymentType)"
+        [options]="getWidgetOptions()"
+        [paymentTemplate]="selectedPaymentTemplate$ | async"
+      &gt;&lt;/bb-payord-omni-payment-widget-ang&gt;
+    &lt;/ng-template&gt;
+  `,
+})
+@CopyRoutes(PayordOmniPaymentWidgetAngComponent)
+export class CreatePaymentTemplateWidgetComponent {
+  paymentConfig = US_DOMESTIC_WIRE;
+  businessFunction = 'US Domestic Wire';
+  templateItems = [
+    { value: 'ACH_CREDIT', label: 'ACH' },
+    { value: 'US_DOMESTIC_WIRE', label: 'Domestic Wire' },
+    { value: 'INTERNATIONAL_TRANSFER', label: 'International (SWIFT)' },
+  ];
+  selectedPaymentType$ = new BehaviorSubject&lt;string&gt;('ACH_CREDIT');
+  options: OmniPaymentWidgetOptions | any = {
+    defaultScheme: 'BBAN',
+    defaultCountry: 'US',
+    isTemplateMode: true,
+    templateModeType: TemplateModeType.EDIT,
+    successEventName: 'bb.refresh.payment.templates',
+    isModalView: true,
+  };
+  modalViewName = 'create-template-modal';
+  isModalOpen$ = new BehaviorSubject&lt;boolean&gt;(false);
+  selectedPaymentTemplate$ = new BehaviorSubject&lt;PaymentTemplate | undefined&gt;(undefined);
+  templateModeType$ = new BehaviorSubject&lt;TemplateModeType | undefined&gt;(undefined);
+
+  @Input()
+  set editedPaymentTemplate(template: PaymentTemplate | undefined) {
+    if (template?.details) {
+      this.templateModeType$.next(TemplateModeType.EDIT);
+      this.selectedPaymentTemplate$.next(template);
+      this.routableModalService.openModal(&lt;string&gt;this.modalViewName);
+    }
+  }
+
+  constructor(private readonly routableModalService: RoutableModalService) {}
+
+  onModalToggle(isModalOpen: boolean) {
+    this.isModalOpen$.next(isModalOpen);
+
+    if (!isModalOpen) {
+      this.selectedPaymentType$.next('');
+      this.resetTemplateDetails();
+    }
+  }
+
+  onSelectPaymentType(paymentType: string) {
+    this.selectedPaymentType$.next(paymentType);
+    this.resetTemplateDetails();
+  }
+
+  resetTemplateDetails() {
+    this.selectedPaymentTemplate$.next(undefined);
+    this.templateModeType$.next(undefined);
+  }
+
+  getWidgetOptions(): OmniPaymentWidgetOptions | any {
+    return {
+      defaultScheme: 'BBAN',
+      defaultCountry: 'US',
+      isTemplateMode: true,
+      isModalView: true,
+      successEventName: 'bb.refresh.payment.templates',
+      templateModeType: this.templateModeType$.value,
+    };
+  }
+
+  getPaymentConfig(paymentType: string): PaymentTypeConfig {
+    switch (paymentType) {
+      case 'US_DOMESTIC_WIRE':
+        return US_DOMESTIC_WIRE;
+      case 'INTERNATIONAL_TRANSFER':
+        return INTERNATIONAL_TRANSFER;
+      default:
+        return US_ACH_CREDIT;
+    }
+  }
+
+  getBusinessFunction(paymentType: string): string {
+    switch (paymentType) {
+      case 'US_DOMESTIC_WIRE':
+        return 'US Domestic Wire';
+      case 'INTERNATIONAL_TRANSFER':
+        return 'US Foreign Wire';
+      default:
+        return 'ACH Credit Transfer';
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</body>
+</html>

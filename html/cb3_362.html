@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Widget Collection Business Banking v3.6.2</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="cb3_362" class="book toc2 toc-left">
+<div id="header">
+<h1>Widget Collection Business Banking v3.6.2</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html"><span class="toc-current">Widget Collection Business Banking v3.6.2</span></a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="cb3_362" class="sect0">Widget Collection Business Banking v3.6.2</h1>
+          <div class="paragraph">
+<p>The highlights for this release are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Capabilities</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Account Statements: no changes</p>
+</li>
+<li>
+<p><a href="cb3_362.html#cb3_actions_362">Actions v3.6.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Updated widget design</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="cb3_362.html#cb3_authentication_362">Authentication v3.6.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Set an action to perform after login</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Batches: no changes</p>
+</li>
+<li>
+<p>Card Management: no changes</p>
+</li>
+<li>
+<p><a href="cb3_362.html#cb3_cash_flow_forecasting_362">Cash flow forecasting v3.6.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>View the due amount</p>
+</li>
+<li>
+<p>View the time of the last update</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Contacts: no changes</p>
+</li>
+<li>
+<p>FX Trading: No changes</p>
+</li>
+<li>
+<p>Messages: no changes</p>
+</li>
+<li>
+<p><a href="cb3_362.html#cb3_notifications_362">Notifications v3.6.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Mark all notifications as read</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="cb3_362.html#cb3_payments_362">Payments v3.6.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Show payment summary for bulk approval</p>
+</li>
+<li>
+<p>Add approval comment for bulk approvals</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Places: no changes&gt;</p>
+</li>
+<li>
+<p><a href="cb3_362.html#cb3_products_362">Products v3.6.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add <code>Pagination Type</code> property to View business account list widget</p>
+</li>
+<li>
+<p>Add <code>Pagination Type</code> property to View business account balance history widget</p>
+</li>
+<li>
+<p>Show <code>All Accounts</code> label only in case user has selected favorite accounts</p>
+</li>
+<li>
+<p>Option to retrieve and show a specific product kind</p>
+</li>
+<li>
+<p>Migrate View business banking balance history widget to Theme 2.0</p>
+</li>
+<li>
+<p>Pin favorite accounts in the Account list business banking app</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="cb3_362.html#cb3_sweeping_362">Sweeping v3.6.2</a></p>
+</li>
+<li>
+<p><a href="cb3_362.html#cb3_transactions_362">Transactions v3.6.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Web: Ability to view the geolocation and address of a transaction</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="cb3_362.html#cb3_user_self_service_362">User Self Service v3.6.2</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>Manage user security</strong> widget enables users to change their passwords</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="cb3_362.html#cb3_migrate_362">Migration</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To find out which Backbase product versions have been verified together,
+see <a href="https://community.backbase.com/documentation/Business-Banking/3.6.2/bb_product_compatibility.html">Backbase product compatibility</a>.</p>
+</div>
+<h2 id="cb3_actions_362" class="discrete">Actions v3.6.2</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_58" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new feature:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Updated widget design</strong></p>
+<div class="paragraph">
+<p>The loading state has been added to the toggle switcher in the
+<a href="https://community.backbase.com/documentation/Business-Banking/3.6.2/web_actions#configure_business_approval_notification_settings">Configure business approval notification settings</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="cb3_authentication_362" class="discrete">Authentication v3.6.2</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_59" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Set an action to perform after login</strong></p>
+<div class="paragraph">
+<p>The <strong>Log in user</strong> widget now provides the
+<a href="https://community.backbase.com/documentation/Business-Banking/3.6.2/login_reference">Output Login Action</a> preference
+as an alternative to the <strong>Login Success Redirect To</strong> preference.
+Use this new preference to configure the widget to perform an
+action after a user successfully logs in.</p>
+</div>
+<div class="paragraph">
+<p>A developer
+<a href="https://community.backbase.com/documentation/Business-Banking/3.6.2/login_reference#output_login_action">sets up this action</a>,
+either by creating an output handler or wrapping a widget extension.
+For example, the developer can create an output handler that selects the context for the user
+if that user is assigned to only one service agreement.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="cb3_cash_flow_forecasting_362" class="discrete">Cash flow forecasting v3.6.2</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_60" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>View the due amount</strong></p>
+<div class="paragraph">
+<p>When viewing receivables and payables, the user can now view the outstanding amount to be
+paid on a partially paid payment order.</p>
+</div>
+</li>
+<li>
+<p><strong>View the time of the last update</strong></p>
+<div class="paragraph">
+<p>When viewing receivables and payables, the interface now shows the user a timestamp of the last time
+Cash Flow Forecasting was synced with the accounting software.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_known_issues_5" class="discrete">Known issues</h3>
+<div class="paragraph">
+<p>This release has the following known issues:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Discovered in v3.6.2</p>
+<div class="ulist">
+<ul>
+<li>
+<p>CME-673: Error in the console when trying to use search.</p>
+<div class="paragraph">
+<p>When using Ubuntu, the <strong>Manage payables</strong> and <strong>View receivables</strong> crashes when a user attempts a search.
+On other operating systems and browsers, the widget does not crash but throws an error in the console.</p>
+</div>
+<div class="paragraph">
+<p>There is no current workaround, and the team is currently investigating.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="cb3_notifications_362" class="discrete">Notifications v3.6.2</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_61" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Mark all notifications as read</strong></p>
+<div class="paragraph">
+<p>The notification recipient can now mark all notifications as read in the
+<a href="https://community.backbase.com/documentation/Business-Banking/3.6.2/web_notifications#manage_count_notifications">Manage and count notifications</a> widget.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="cb3_payments_362" class="discrete">Payments v3.6.2</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_62" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Show payment summary for bulk approvals</strong></p>
+<div class="paragraph">
+<p>With this feature, customers see a summary of payments selected in bulk for approval.
+The summary is grouped per currency, showing the number of payments and the aggregated amount.
+It also shows account name and account number, if all payments in a group are from the same account.
+If there are payments from multiple accounts in a group, it shows 'Multiple Accounts'.</p>
+</div>
+</li>
+<li>
+<p><strong>Add approval comment for bulk approvals</strong></p>
+<div class="paragraph">
+<p>Customers can now add an approval comment on the payment orders they are approving or rejecting in bulk.
+Adding an approval comment is optional and it has a maximum length of 140 characters.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="cb3_products_362" class="discrete">Products v3.6.2</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_63" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Add <code>Pagination Type</code> property to View business account list widget</strong></p>
+<div class="paragraph">
+<p>The bank user is now able to update Preferences section in Experience Manager for View business account list and configure the pagination type to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Default - switch from pagination to Load more option when screen resolution is in Responsive view.</p>
+</li>
+<li>
+<p>Pagination  - paginate the number of records on the screen regardless of the screen resolution.</p>
+</li>
+<li>
+<p>Load More - apply load more to the page, regardless of the screen resolution.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Add <code>Pagination Type</code> property to View business account balance history widget</strong></p>
+<div class="paragraph">
+<p>The bank user is now able to update Preferences section in Experience Manager for View business account balance history and configure the pagination type to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Default - switch from pagination to Load more option when screen resolution is in Responsive view.</p>
+</li>
+<li>
+<p>Pagination  - paginate the number of records on the screen regardless of the screen resolution.</p>
+</li>
+<li>
+<p>Load More - apply load more to the page, regardless of the screen resolution.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Show <code>All Accounts</code> label only in case user has selected favorite accounts</strong></p>
+<div class="paragraph">
+<p>The bank customer is now able to view <code>All accounts</code> label in View business account list widget only in case user has favorite accounts selected.</p>
+</div>
+</li>
+<li>
+<p><strong>Option to retrieve and show a specific product kind</strong></p>
+<div class="paragraph">
+<p>The bank user is now able to update Preferences section in Experience Manager for View business account list and filter for the Account Type that will be displayed in the overview list page.</p>
+</div>
+</li>
+<li>
+<p><strong>Migrate View business banking balance history widget to Theme 2.0</strong></p>
+<div class="paragraph">
+<p>View business banking balance history widget is now migrated to Theme 2.0. The widget was visually upgraded to offer an improved and simplified user experience for bank customers.
+The balance history charts have been updated and three new extension slots have been introduced for this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>bbBalanceHistoryLineChartCustomizable</code> - used for the whole balance history chart.</p>
+</li>
+<li>
+<p><code>bbBalanceHistoryLineChartSeriesTooltipCustomizable</code> - used to display the tooltip for positive and negative series.</p>
+</li>
+<li>
+<p><code>bbBalanceHistoryLineChartTooltipCustomizable</code> - used to show the tooltip for a single point in the graph.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Pin favorite accounts in the Account list business banking app</strong></p>
+<div class="paragraph">
+<p>A bank user can now pin listed accounts as favorites. The account is pinned to the top of the list for quick access.
+Once pinned, the bank user can view the account&#8217;s balance, currency, and balance trend.
+A maximum of six favorite accounts are shown at the top of the account list.
+The way a user pins an account as a favorite is platform specific:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>iOs: Swiping the listed account to the left reveals the option to select or deselect that account as a favorite.</p>
+</li>
+<li>
+<p>Android: Long-pressing a listed account reveals the option to select or deselect that account as a favorite.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_bug_fixes_40" class="discrete">Bug fixes</h3>
+<div class="paragraph">
+<p>This release includes the following bug fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>PRSUM-6489: Update list of preferences for Select business account widget</p>
+<div class="paragraph">
+<p><a href="https://community.backbase.com/documentation/Business-Banking/latest/product_summary_account_picker_reference">Preferences section</a> for
+Select business account widget is now updated.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="cb3_sweeping_362" class="discrete">Sweeping v3.6.2</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_known_issues_6" class="discrete">Known issues</h3>
+<div class="paragraph">
+<p>This release has the following known issue:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Discovered in v3.6.2</p>
+<div class="ulist">
+<ul>
+<li>
+<p>WM-2132: Error message appears after manually inputting valid date.</p>
+<div class="paragraph">
+<p>This issue affects the <strong>Create sweep</strong> widget when set to French locale. An error message stating <code>Please check your input</code>
+appears, even when the user inputs a valid date.</p>
+</div>
+<div class="paragraph">
+<p>To work around this issue, change the locale from French to English.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="cb3_transactions_362" class="discrete">Transactions v3.6.2</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_64" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Web: Ability to view the geolocation and address of a transaction</strong></p>
+<div class="paragraph">
+<p>The <strong>View transactions table</strong> widget now provides the ability to view
+the geolocation of a transaction in a map along with the open address
+so that bank customers easily identify their transactions.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_known_issues_7" class="discrete">Known issues</h3>
+<div class="paragraph">
+<p>This release has the following known issue:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Discovered in v3.6.2</p>
+<div class="ulist">
+<ul>
+<li>
+<p>WM-2132: Error message appears after manually inputting valid date.</p>
+<div class="paragraph">
+<p>This issue affects the <strong>View transactions table</strong> widget when set to French locale. An error message stating
+"Please check your input" appears, even when the user inputs a valid date.</p>
+</div>
+<div class="paragraph">
+<p>To work around this issue, change the locale from French to English.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="cb3_user_self_service_362" class="discrete">User Self Service v3.6.2</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_65" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Manage user security widget</strong></p>
+<div class="paragraph">
+<p>The
+<a href="https://community.backbase.com/documentation/Business-Banking/3.6.2/web_user_management#manage_user_security">Manage user security</a>
+widget has been added to Widget Collection Business Banking. This widget enables a user to
+change their password.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="cb3_migrate_362" class="discrete">Migration</h3>
+<div class="paragraph">
+<p>There are no migration steps specific to this release.</p>
+</div>
+</div>
+</body>
+</html>

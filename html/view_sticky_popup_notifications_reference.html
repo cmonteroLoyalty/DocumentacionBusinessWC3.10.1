@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>View sticky and pop-up notifications</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="view_sticky_popup_notifications_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>View sticky and pop-up notifications</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html"><span class="toc-current">View sticky and pop-up notifications</span></a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="view_sticky_popup_notifications_reference" class="sect0">View sticky and pop-up notifications</h1>
+          <div class="paragraph">
+<p>This page includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="view_sticky_popup_notifications_reference.html#view_sticky_popup_notifications_selector">Selector name</a></p>
+</li>
+<li>
+<p><a href="view_sticky_popup_notifications_reference.html#view_sticky_popup_notifications_required_imports">Required imports</a></p>
+</li>
+<li>
+<p><a href="view_sticky_popup_notifications_reference.html#view_sticky_popup_notifications_extension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="view_sticky_popup_notifications_reference.html#view_sticky_popup_notifications_hostref_api">API</a></p>
+</li>
+<li>
+<p><a href="view_sticky_popup_notifications_reference.html#view_sticky_popup_notifications_implementation">Implementation example</a></p>
+</li>
+<li>
+<p><a href="view_sticky_popup_notifications_reference.html#view_sticky_popup_notifications_preferences">Preferences</a></p>
+</li>
+</ul>
+</div>
+<h2 id="view_sticky_popup_notifications_selector" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name:
+<code>&lt;bb-notifications-popups-widget&gt;</code>.</p>
+</div>
+<h2 id="view_sticky_popup_notifications_required_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Angular Common module import:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { CommonModule } from '@angular/common';</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Backbase Core module import:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { BackbaseCoreModule } from '@backbase/foundation-ang/core';</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Widget module import:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NotificationsPopupsWidgetModule } from '@backbase/notifications-popups-widget-ang';</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="view_sticky_popup_notifications_extension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/view_sticky_popup_notifications_slots_1_2.svg?ver=3.10.1" alt="view sticky popup notifications slots 1 2"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/view_sticky_popup_notifications_slots_3-5.svg?ver=3.10.1" alt="view sticky popup notifications slots 3 5"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="view_sticky_popup_notifications_reference.html#bbNotificationsStickyListItemCustomizable">bbNotificationsStickyListItemCustomizable</a></p>
+</li>
+<li>
+<p><a href="view_sticky_popup_notifications_reference.html#bbNotificationsStickyListCustomizable">bbNotificationsStickyListCustomizable</a></p>
+</li>
+<li>
+<p><a href="view_sticky_popup_notifications_reference.html#bbNotificationsPopupsListCustomizable">bbNotificationsPopupsListCustomizable</a></p>
+</li>
+<li>
+<p><a href="view_sticky_popup_notifications_reference.html#bbNotificationsPopupsItemHeaderCustomizable">bbNotificationsPopupsItemHeaderCustomizable</a></p>
+</li>
+<li>
+<p><a href="view_sticky_popup_notifications_reference.html#bbNotificationsPopupsItemMessageCustomizable">bbNotificationsPopupsItemMessageCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbNotificationsStickyListItemCustomizable" class="discrete">bbNotificationsStickyListItemCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbNotificationsStickyListItemCustomizable let-host let-notification="context"&gt;
+  &lt;bb-alert-ui
+    [dismissible]="true"
+    [modifier]="host.parseNotificationSeverityLevel(notification?.level)"
+    [title]="notification?.title || ''"
+    (close)="host.onClose(notification)"
+  &gt;
+    &lt;div
+      class="bb-subtitle"
+      data-role="notification-sticky-message"
+      [innerHTML]="notification?.message | interpolateLink: notification:true:'alert-link'"
+    &gt;&lt;/div&gt;
+  &lt;/bb-alert-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbNotificationsStickyListCustomizable" class="discrete">bbNotificationsStickyListCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbNotificationsStickyListCustomizable let-host let-notifications="context.notifications"&gt;
+ &lt;bb-notifications-sticky-list-item
+   (focusin)="host.onFocus($event)"
+   *ngFor="let item of notifications; trackBy: host.trackById"
+   [notification]="item"
+   (close)="host.onReadNotification($event)"
+ &gt;&lt;/bb-notifications-sticky-list-item&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbNotificationsPopupsListCustomizable" class="discrete">bbNotificationsPopupsListCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbNotificationsPopupsListCustomizable let-hostRef let-notifications="context"&gt;
+  &lt;bb-notifications-popups-item
+    *ngFor="let notification of notifications; index as i"
+    [notification]="notification"
+    [notificationTimeout]="hostRef.getNotificationTimeoutByIndex(i, notifications.length)"
+  &gt;
+  &lt;/bb-notifications-popups-item&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbNotificationsPopupsItemHeaderCustomizable" class="discrete">bbNotificationsPopupsItemHeaderCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbNotificationsPopupsItemHeaderCustomizable let-hostRef let-notification="context"&gt;
+  &lt;span class="sr-only"&gt; {{ notification?.level || '' }}, &lt;/span&gt;
+  &lt;span&gt; {{ notification?.title || '' }} &lt;/span&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbNotificationsPopupsItemMessageCustomizable" class="discrete">bbNotificationsPopupsItemMessageCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default templates:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbNotificationsPopupsItemMessageCustomizable let-hostRef let-notification="context"&gt;
+  &lt;ng-container
+    *ngTemplateOutlet="(hostRef.popupMessageLineAmount$ | async) ? truncatedMessageContent : messageContent"
+  &gt;&lt;/ng-container&gt;
+  &lt;bb-notifications-capability-icon [origin]="notification?.origin"&gt;&lt;/bb-notifications-capability-icon&gt;
+  &lt;button
+    type="button"
+    *ngIf="hostRef.isMessageTruncated &amp;&amp; (hostRef.displayShowMoreButtonInPopup$ | async)"
+    class="btn-link-text bb-text-bold bb-notification__details-button"
+    (click)="hostRef.openNotificationDetails($event)"
+    aria-label="Show more notification details"
+    i18n="Notification pop-up show more button@notification.popup.show-more.button"
+    i18n-aria-label="Aria-label for show more button@@notification.popup.show-more.button.aria-label"
+  &gt;
+    Show more
+  &lt;/button&gt;
+
+  &lt;ng-template #messageContent&gt;
+    &lt;div class="bb-block bb-block--sm"&gt;
+      &lt;div
+        bbIsElementContentTruncated
+        [hostRef]="hostRef"
+        [innerHTML]="notification?.message | interpolateLink: notification"
+      &gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #truncatedMessageContent&gt;
+    &lt;bb-ellipsis-ui [tooltipTriggers]="''" [lineClamp]="hostRef.popupMessageLineAmount$ | async"&gt;
+      &lt;ng-container *ngTemplateOutlet="messageContent"&gt;&lt;/ng-container&gt;
+    &lt;/bb-ellipsis-ui&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h2 id="view_sticky_popup_notifications_hostref_api" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="11"><p class="tableblock"><code>NotificationsPopupsItemComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="11"><p class="tableblock"><code>bbNotificationsPopupsItemHeaderCustomizable</code>, <code>bbNotificationsPopupsItemMessageCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() notification: NotificationStreamItem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification popup item.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() notificationTimeout: number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The delay timeout for closing a notification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@ViewChild popupHeaderTemplate: TemplateRef&lt;any&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification header template.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@ViewChild popupMessageTemplate: TemplateRef&lt;any&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification message template.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly allowedRoutes$: Observable&lt;string[]&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Routes available for navigation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly autofocus$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream of the widget preference with a flag that defines if the notification popup should be auto-focused.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly displayShowMoreButtonInPopup$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream of the widget property with a flag that defines if the <strong>Show More</strong> button should be displayed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly popupMessageLineAmount$</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream of the widget preference with the number of lines to show as a notification message.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isMessageTruncated</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The boolean flag that shows if the notification message text exceeds the number of visible lines and is truncated.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>openNotificationDetails(event: Event): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to open notification details.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setIsContentTruncated(isMessageTruncated: boolean): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the truncation status of the notification message.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>NotificationsPopupsListComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>bbNotificationsPopupsListCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly popups$: Observable&lt;NotificationStreamItem[]&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification popups stream data in the reversed order.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getNotificationTimeoutByIndex(index: number, length: number): number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to get the close notification timeout value for each popup.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>NotificationsStickyListComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>bbNotificationsStickyListCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly notifications$: Observable&lt;NotificationsStream&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The sticky notification stream data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onReadNotification(notification: NotificationStreamItem | string): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to send the mark-notification-as-read request by ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>trackById(_index: number, notification: NotificationItem): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to differentiate notifications by IDs.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onFocus(event: { relatedTarget: HTMLElement }): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to change the focus.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>NotificationsStickyListItemComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>bbNotificationsStickyListItemCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() notification: NotificationStreamItem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification stream item.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() close: EventEmitter&lt;NotificationStreamItem | string&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification stream item close event that emits the notification stream item ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onClose(notification: NotificationStreamItem | string): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to handle the close event from the alert component.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>parseNotificationSeverityLevel(level: SeverityLevel): NotificationSeverityType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to parse the severity level into the alert modifier.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="view_sticky_popup_notifications_implementation" class="discrete">Implementation example</h2>
+<div class="paragraph">
+<p>The following examples show the implementation of this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrapper widget module</p>
+<div class="listingblock">
+<div class="title">notifications-popups-extended.module.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { NotificationsPopupsWidgetModule } from '@backbase/notifications-popups-widget-ang';
+import { NotificationsPopupsExtendedComponent } from './notifications-popups-extended.component';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    BackbaseCoreModule.withConfig({
+      classMap: { NotificationsPopupsExtendedComponent },
+    }),
+    NotificationsPopupsWidgetModule,
+  ],
+  declarations: [NotificationsPopupsExtendedComponent],
+  exports: [NotificationsPopupsExtendedComponent],
+})
+export class NotificationsPopupsExtendedModule {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Wrapper widget component</p>
+<div class="listingblock">
+<div class="title">notifications-popups-extended.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component, EventEmitter, Output } from '@angular/core';
+import { NotificationRouting } from '@backbase/notifications-common-ang';
+
+@Component({
+  selector: 'bb-notifications-popups-extended',
+  templateUrl: './notifications-popups-extended.component.html',
+})
+export class NotificationsPopupsExtendedComponent {
+  @Output() notificationRouting = new EventEmitter&lt;NotificationRouting&gt;();
+
+  onNotificationRoutingChange(rounting: NotificationRouting) {
+    this.notificationRouting.emit(rounting);
+  }
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Custom template</p>
+<div class="listingblock">
+<div class="title">notifications-popups-extended.component.html</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">&lt;bb-notifications-popups-widget (notificationRouting)="onNotificationRoutingChange($event)"&gt;
+  &lt;ng-template bbNotificationsPopupsListCustomizable let-hostRef let-notifications="context"&gt;
+    &lt;!-- place your customization here --&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template bbNotificationsStickyListCustomizable let-hostRef let-notifications="context.notifications"&gt;
+    &lt;!-- place your customization here --&gt;
+  &lt;/ng-template&gt;
+&lt;/bb-notifications-popups-widget&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="view_sticky_popup_notifications_preferences" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>This widget has the following preferences that managers or administrators configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configurable for</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+<th class="tableblock halign-left valign-top">Value type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Polling interval (seconds, 0 - stops execution of notifications)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pollingInterval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>String of allowed routes (conversation-view, arrangement-view, transaction-view, party-view&#8230;&#8203;)</strong></p>
+<p class="tableblock">Allowed routes for navigation from notifications to target widgets.
+See <a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>allowedRoutes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>conversation-view, arrangement-view, transaction-view, party-view, payment-view</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Comma-separated list of notifications origins to process (empty for all)</strong></p>
+<p class="tableblock">Filters the notifications to be displayed in the popup by their origin. For example,
+only notifications coming from Payments or Messages. Set this preference in a consistent
+manner with the <strong>Notification badge</strong> widget. Set the value in all capital letters.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>origins</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None (all notifications are displayed)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Comma-separated list of notifications severity levels to process (empty for all)</strong></p>
+<p class="tableblock">Filters the notifications to be displayed in the popup by their severity level. For example,
+only notifications with the severity level of <strong>Warning</strong> or <strong>Alert</strong>. Set this preference in a consistent
+manner with the <strong>Notification badge</strong> widget. Set the value in all capital letters.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>severityLevels</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None (all notifications are displayed)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Notification popup element is auto-focused upon opening</strong></p>
+<p class="tableblock">Whether the notification popup is auto-focused when a new notification is received.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>autofocus</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Display 'Show more' button when message is truncated</strong></p>
+<p class="tableblock">Whether the <strong>Show more</strong> button is displayed for truncated notifications.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>displayShowMoreButtonInPopup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Amount of lines for message body that will be shown</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>popupMessageLineAmount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Emits routing metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.notificationRouting</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Manage business approval notification preferences</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="configure_business_approval_notification_settings_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Manage business approval notification preferences</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html"><span class="toc-current">Manage business approval notification preferences</span></a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="configure_business_approval_notification_settings_reference" class="sect0">Manage business approval notification preferences</h1>
+          <div class="paragraph">
+<p>This page includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="configure_business_approval_notification_settings_reference.html#configure_business_approval_notification_settings_selector">Selector name</a></p>
+</li>
+<li>
+<p><a href="configure_business_approval_notification_settings_reference.html#configure_business_approval_notification_settings_imports">Required imports</a></p>
+</li>
+<li>
+<p><a href="configure_business_approval_notification_settings_reference.html#configure_business_approval_notification_settings_extension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="configure_business_approval_notification_settings_reference.html#configure_business_approval_notification_settings_hostref_api">API</a></p>
+</li>
+<li>
+<p><a href="configure_business_approval_notification_settings_reference.html#configure_business_approval_notification_settings_implementation">Implementation example</a></p>
+</li>
+<li>
+<p><a href="configure_business_approval_notification_settings_reference.html#configure_business_approval_notification_settings_preferences">Preferences</a></p>
+</li>
+<li>
+<p><a href="configure_business_approval_notification_settings_reference.html#configure_business_approval_notification_settings_access_control">Access Control</a></p>
+</li>
+</ul>
+</div>
+<h2 id="configure_business_approval_notification_settings_selector" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name: <code>&lt;bb-actions-business-approval-notifications-settings-widget-ang&gt;</code></p>
+</div>
+<h2 id="configure_business_approval_notification_settings_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Angular Common module import</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { CommonModule } from '@angular/common';</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Backbase Core module import</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { BackbaseCoreModule } from '@backbase/foundation-ang/core';</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Widget module import</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { ActionsBusinessApprovalNotificationsSettingsWidgetModule } from '@backbase/actions-business-approval-notifications-settings-widget-ang';</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="configure_business_approval_notification_settings_extension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/configure_business_approval_notification_settings_slots_1-3_5.svg?ver=3.10.1" alt="configure business approval notification settings slots 1 3 5"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/configure_business_approval_notification_settings_slot_4.svg?ver=3.10.1" alt="configure business approval notification settings slot 4"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="configure_business_approval_notification_settings_reference.html#bbActionsToggleRecipeFormCustomizableDirective">bbActionsToggleRecipeFormCustomizableDirective</a></p>
+</li>
+<li>
+<p><a href="configure_business_approval_notification_settings_reference.html#bbActionsBusinessApprovalNotificationsSettingsWidgetCustomizableDirective">bbActionsBusinessApprovalNotificationsSettingsWidgetCustomizableDirective</a></p>
+</li>
+<li>
+<p><a href="configure_business_approval_notification_settings_reference.html#bbActionsBusinessApprovalListCustomizableDirective">bbActionsBusinessApprovalListCustomizableDirective</a></p>
+</li>
+<li>
+<p><a href="configure_business_approval_notification_settings_reference.html#bbActionsBusinessApprovalWarningNotificationHeaderCustomizableDirective">bbActionsBusinessApprovalWarningNotificationHeaderCustomizableDirective</a></p>
+</li>
+<li>
+<p><a href="configure_business_approval_notification_settings_reference.html#bbActionsBusinessApprovalSuccessNotificationHeaderCustomizableDirective">bbActionsBusinessApprovalSuccessNotificationHeaderCustomizableDirective</a></p>
+</li>
+<li>
+<p><a href="configure_business_approval_notification_settings_reference.html#bbActionsScheduleNotificationsComponentCustomizableDirective">bbActionsScheduleNotificationsComponentCustomizableDirective</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbActionsToggleRecipeFormCustomizableDirective" class="discrete">bbActionsToggleRecipeFormCustomizableDirective</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbActionsToggleRecipeFormCustomizableDirective let-hostRef&gt;
+  &lt;ng-container *ngIf="hostRef.formGroup"&gt;
+    &lt;form [formGroup]="hostRef.formGroup"&gt;
+      &lt;div class="bb-block bb-block--md bb-stack"&gt;
+        &lt;div
+          class="bb-stack__item bb-text-support bb-text-bold"
+          [attr.data-role]="'toggle-recipe-label-' + hostRef.specification.id"
+        &gt;
+          {{ hostRef.label }}
+        &lt;/div&gt;
+        &lt;bb-switch-with-loading
+          [isLoading]="hostRef.isLoading"
+          class="bb-stack__item bb-stack__item--push-right"
+          formControlName="active"
+          (change)="hostRef.onSubmit(hostRef.formGroup.value)"
+          aria-label="{{ 'Switch on/off ' + hostRef.label }}"
+          i18n-aria-label="Toggle recipe aria label@@actions-common.actions-toggle-recipe-form.switcher.aria-label"
+          [attr.data-role]="'toggle-recipe-' + hostRef.specification.id"
+        &gt;&lt;/bb-switch-with-loading&gt;
+      &lt;/div&gt;
+      &lt;bb-actions-schedule-notifications
+        class="bb-stack__item"
+        *ngIf="hostRef.scheduleEnabled &amp;&amp; hostRef.formGroup.value?.active &amp;&amp; hostRef.actionRecipe"
+        [scheduleForm]="hostRef.formGroup.get('recurrence')"
+        [actionRecipe]="hostRef.actionRecipe"
+        (submit)="hostRef.onScheduleChange($event)"
+      &gt;&lt;/bb-actions-schedule-notifications&gt;
+    &lt;/form&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbActionsBusinessApprovalNotificationsSettingsWidgetCustomizableDirective" class="discrete">bbActionsBusinessApprovalNotificationsSettingsWidgetCustomizableDirective</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbActionsBusinessApprovalNotificationsSettingsWidgetCustomizableDirective
+  let-hostRef
+  let-loading="context.loading"
+  let-loadingError="context.loadingError"
+  let-specificationsWithActionRecipe="context.specificationsWithActionRecipe"
+  let-specificationsWithActionRecipeToApprove="context.specificationsWithActionRecipeToApprove"
+  let-notificationDismissTime="context.notificationDismissTime"
+&gt;
+  &lt;div class="card"&gt;
+    &lt;ng-container *ngIf="!loading; else loadingState"&gt;
+      &lt;ng-container *ngIf="!loadingError; else errorState"&gt;
+        &lt;div class="card-header"&gt;
+          &lt;bb-header-ui
+            headingType="h2"
+            headingClasses="bb-text-bold"
+            i18n-heading="
+              Approval notifications heading@@actions-business-approval-notifications-settings-widget.header"
+            heading="Approval notifications"
+          &gt;
+          &lt;/bb-header-ui&gt;
+        &lt;/div&gt;
+
+        &lt;div class="card-body"&gt;
+          &lt;bb-tab-group-ui class="bb-tab--default" (select)="hostRef.onTabSelect($event)"&gt;
+            &lt;bb-tab-ui
+              i18n="Notifications tab@actions-business-approval-notifications-settings.tab-group.notifications-tab"
+            &gt;
+              Created by me&lt;/bb-tab-ui
+            &gt;
+            &lt;bb-tab-ui
+              i18n="
+                Notifications to approve
+                tab@actions-business-approval-notifications-settings.tab-group.notifications-to-approve-tab
+              "
+            &gt;
+              I need to approve&lt;/bb-tab-ui
+            &gt;
+          &lt;/bb-tab-group-ui&gt;
+          &lt;div [hidden]="hostRef.activeTab !== 0" data-role="notifications-tab"&gt;
+            &lt;bb-actions-business-approval-list
+              subheadingLabel="Notify me when status of items created by me changes to Rejected"
+              i18n-subheadingLabel="
+                Notifications list
+                subheading@@actions-business-approval-notifications-settings.notifications-list.subheading"
+              [specificationsWithActionRecipe]="specificationsWithActionRecipe"
+              [notificationDismissTime$]="notificationDismissTime$"
+            &gt;&lt;/bb-actions-business-approval-list&gt;
+          &lt;/div&gt;
+          &lt;div [hidden]="hostRef.activeTab !== 1" data-role="notifications-to-approve-tab"&gt;
+            &lt;bb-actions-business-approval-list
+              subheadingLabel="Notify me when a new item is created that I can approve or reject"
+              i18n-subheadingLabel="
+                Notifications to approve list
+                subheading@@actions-business-approval-notifications-settings.notifications-to-approve-list.subheading"
+              [specificationsWithActionRecipe]="specificationsWithActionRecipeToApprove"
+              [notificationDismissTime$]="notificationDismissTime$"
+            &gt;&lt;/bb-actions-business-approval-list&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+  &lt;ng-template #loadingState&gt;
+    &lt;bb-loading-indicator-ui
+      class="bb-state-container"
+      loaderSize="lg"
+      text="Loading..."
+      i18n-text="Loading... text@@actions-business-approval-settings-page.title"
+    &gt;&lt;/bb-loading-indicator-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #errorState&gt;
+    &lt;bb-empty-state-ui
+      class="bb-state-container"
+      data-role="error-state"
+      iconSize="xxl"
+      iconModifier="error-outline"
+      title="Unknown Error"
+      i18n-title="
+        Actions business approval notifications settings are not loading
+        title@@actions-business-approval-settings-page.error-state.title"
+      subtitle="Try to reload the page or contact the system administrator."
+      i18n-subtitle="
+        Actions business approval notifications settings are not loading
+        subtitle@@actions-business-approval-settings-page.error-state.subtitle"
+    &gt;
+    &lt;/bb-empty-state-ui&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbActionsBusinessApprovalListCustomizableDirective" class="discrete">bbActionsBusinessApprovalListCustomizableDirective</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbActionsBusinessApprovalListCustomizableDirective
+  let-hostRef
+  let-specificationsWithActionRecipe="context.specificationsWithActionRecipe"
+&gt;
+  &lt;div data-role="approval-sub-header" class="bb-block bb-block--lg"&gt;
+    {{ hostRef.subheadingLabel }}
+  &lt;/div&gt;
+
+  &lt;bb-actions-toggle-recipe-form
+    *ngIf="specificationsWithActionRecipe[specificationIds.Payments] as specificationWithActionRecipe"
+    label="Payments"
+    i18n-label="Payments approval label@@actions-business-approval-notifications-settings.approval-list.payments"
+    (submit)="hostRef.onSubmit($event)"
+    [specification]="specificationWithActionRecipe.specification"
+    [actionRecipe]="specificationWithActionRecipe.actionRecipe"
+  &gt;&lt;/bb-actions-toggle-recipe-form&gt;
+
+  &lt;bb-actions-toggle-recipe-form
+    *ngIf="specificationsWithActionRecipe[specificationIds.Contacts] as specificationWithActionRecipe"
+    label="Contacts"
+    i18n-label="Contacts approval label@@actions-business-approval-notifications-settings.approval-list.contacts"
+    (submit)="hostRef.onSubmit($event)"
+    [specification]="specificationWithActionRecipe.specification"
+    [actionRecipe]="specificationWithActionRecipe.actionRecipe"
+  &gt;&lt;/bb-actions-toggle-recipe-form&gt;
+
+  &lt;bb-actions-toggle-recipe-form
+    *ngIf="specificationsWithActionRecipe[specificationIds.PaymentsToApprove] as specificationWithActionRecipe"
+    label="Payments"
+    i18n-label="Payments approval label@@actions-business-approval-notifications-settings.approval-list.payments"
+    (submit)="hostRef.onSubmit($event)"
+    [specification]="specificationWithActionRecipe.specification"
+    [actionRecipe]="specificationWithActionRecipe.actionRecipe"
+    [scheduleEnabled]="true"
+  &gt;&lt;/bb-actions-toggle-recipe-form&gt;
+
+  &lt;bb-actions-toggle-recipe-form
+    *ngIf="specificationsWithActionRecipe[specificationIds.ContactsToApprove] as specificationWithActionRecipe"
+    label="Contacts"
+    i18n-label="Contacts approval label@@actions-business-approval-notifications-settings.approval-list.contacts"
+    (submit)="hostRef.onSubmit($event)"
+    [specification]="specificationWithActionRecipe.specification"
+    [actionRecipe]="specificationWithActionRecipe.actionRecipe"
+  &gt;&lt;/bb-actions-toggle-recipe-form&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbActionsBusinessApprovalWarningNotificationHeaderCustomizableDirective" class="discrete">bbActionsBusinessApprovalWarningNotificationHeaderCustomizableDirective</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbActionsBusinessApprovalWarningNotificationHeaderCustomizableDirective&gt;
+  &lt;span
+    i18n="Notification header@@actions-business-approval-notifications-settings.approval-list.warning.notification.header"
+  &gt;Something went wrong, we couldn’t save changes to some of your notification settings&lt;/span&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbActionsBusinessApprovalSuccessNotificationHeaderCustomizableDirective" class="discrete">bbActionsBusinessApprovalSuccessNotificationHeaderCustomizableDirective</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbActionsBusinessApprovalSuccessNotificationHeaderCustomizableDirective&gt;
+  &lt;span
+    i18n="Notification header@@actions-business-approval-notifications-settings.approval-list.success.notification.header"
+  &gt;Changes saved&lt;/span&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbActionsScheduleNotificationsComponentCustomizableDirective" class="discrete">bbActionsScheduleNotificationsComponentCustomizableDirective</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbActionsScheduleNotificationsComponentCustomizableDirective let-hostRef&gt;
+  &lt;div class="row bb-block bb-block--md bb-stack bb-stack--align-baseline"&gt;
+    &lt;div class="col-3"&gt;
+      &lt;span i18n="Notify me label@@actions-common.actions-schedule-notifications.title"&gt; Notify me &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="col-3"&gt;
+      &lt;bb-dropdown-single-select-ui
+        iconName="caret-down"
+        [required]="true"
+        [(ngModel)]="hostRef.scheduleType"
+        (change)="hostRef.onScheduleTypeChange($event)"
+        aria-label="Schedule type"
+        i18n-aria-label="
+          Schedule type dropdown@@actions-common.actions-schedule-notifications.schedule-type-dropdown.aria-label"
+        data-role="notifications-schedule-type"
+      &gt;
+        &lt;bb-dropdown-single-select-option-ui
+          i18n-label="
+            Schedule type dropdown right away
+            option@@actions-common.actions-schedule-notifications.schedule-type-right-away-option.label"
+          label="Right away"
+          [value]="hostRef.ScheduleType.RightAway"
+        &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+        &lt;bb-dropdown-single-select-option-ui
+          i18n-label="
+            Schedule type dropdown custom
+            option@@actions-common.actions-schedule-notifications.schedule-type-custom-option.label"
+          label="Custom"
+          [value]="hostRef.ScheduleType.Custom"
+        &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+      &lt;/bb-dropdown-single-select-ui&gt;
+    &lt;/div&gt;
+    &lt;div
+      class="col-6 row bb-stack bb-stack--align-baseline no-gutters"
+      *ngIf="hostRef.scheduleType === hostRef.ScheduleType.Custom"
+    &gt;
+      &lt;span
+        class="col-1"
+        i18n="Schedule time picker title @@actions-common.actions-schedule-notifications.schedule-time-picker.title"
+        &gt;At&lt;/span
+      &gt;
+      &lt;form class="col-11" [formGroup]="hostRef.scheduleForm"&gt;
+        &lt;div
+          class="row no-gutters bb-block bb-block--md"
+          formArrayName="scheduleTime"
+          *ngFor="let ref of hostRef.scheduleTime.controls; let i = index; let last = last"
+        &gt;
+          &lt;bb-time-picker
+            class="col-6 actions-schedule-time-picker__dropdown"
+            [formControlName]="i"
+            [excludedOptions]="hostRef.selectedTimeOptions$ | async"
+            [controlRef]="ref"
+            [minutesStep]="hostRef.minutesStep"
+            (change)="hostRef.timeControlChange()"
+            data-role="schedule-time-picker"
+            i18n-aria-label="
+              Schedule time picker label @@actions-common.actions-schedule-notifications.schedule-time-picker.aria-label"
+            aria-label="actions-schedule-notifications-time-picker"
+          &gt;&lt;/bb-time-picker&gt;
+          &lt;button
+            bbButton
+            circle="true"
+            *ngIf="last &amp;&amp; i !== 0"
+            (click)="hostRef.deleteTimeOption(i)"
+            color="link"
+            aria-label="Delete time option"
+            i18n-aria-label="
+              Schedule delete time option
+              @@actions-common.actions-schedule-notifications.schedule-delete-time-option.aria-label"
+            data-role="delete-time-option"
+          &gt;
+            &lt;bb-icon-ui name="delete" class="text-muted"&gt;&lt;/bb-icon-ui&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;button
+          bbButton
+          class="bb-stack__item"
+          color="primary"
+          circle="true"
+          buttonSize="sm"
+          type="button"
+          *ngIf="hostRef.scheduleTime.controls.length &lt; hostRef.MaxOptionsQuantity"
+          (click)="hostRef.addTimeOption()"
+          aria-label="Add time option"
+          i18n-aria-label="
+            Schedule add time option @@actions-common.actions-schedule-notifications.schedule-time-add-option.aria-label"
+          data-role="add-time-option"
+        &gt;
+          &lt;bb-icon-ui name="add" size="sm"&gt;&lt;/bb-icon-ui&gt;
+        &lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="bb-block bb-block--md text-center bb-text-support" data-role="schedule-description"&gt;
+    &lt;em i18n="Schedule description@@actions-common.actions-schedule-notifications.schedule-description"&gt;
+      Notifications will be {hostRef.scheduleType, select, Custom {grouped and sent at specified time.} RightAway {sent
+      immediately.}}
+    &lt;/em&gt;
+    &lt;hr /&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h2 id="configure_business_approval_notification_settings_hostref_api" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock"><code>ActionsBusinessApprovalNotificationsSettingsWidgetComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock"><code>bbActionsBusinessApprovalNotificationsSettingsWidgetCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() notificationDismissTime$: Observable | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification dismissal time value stream.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() specificationIDs$: Observable | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The specification IDs value stream.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>specificationsWithActionRecipe$: Observable&lt;SpecificationsWithAction&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The specification with the action recipe.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>specificationsWithActionRecipeToApprove: Observable&lt;SpecificationsWithAction&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The specification with the action recipe that requires approval.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly loading$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream with the flag which shows if action recipes or specifications are currently loading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>activeTab: number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Currently selected tab index.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly loadingError$: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream with the flag which shows if there was an error loading action recipes or specifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onTabSelect(tabIndex: number): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to change the active tab index.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock"><code>ActionsBusinessApprovalListComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock"><code>bbActionsBusinessApprovalListCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() notificationDismissTime$: Observable | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification dismissal time value stream.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() specificationsWithActionRecipe: SpecificationsWithAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An object with action recipe specification and action recipe item data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() subheadingLabel: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The label of the tab subheading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@ViewChild warningNotificationHeaderTemplate: TemplateRef&lt;any&gt; | string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The warning notification header.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@ViewChild successNotificationHeaderTemplate: TemplateRef&lt;any&gt; | string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The success notification header.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly specificationIds</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specification IDs enum (Transactions, AccountBalance, Payments, Contacts).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSubmit(formValue: ActionRecipeFormItemValue): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method used to save an action recipe.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock"><code>ActionsToggleRecipeFormComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock"><code>bbActionsToggleRecipeFormCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() actionRecipe:ActionRecipeGetResponseBody;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The action recipe.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() specification: ActionRecipeSpecification;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The action specification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() label: string;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The label text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() submit: EventEmitter&lt;ActionRecipeFormItemValue&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output on form submission.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isLoading: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The flag that indicates the loading state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>formGroup: FormGroup | undefined;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The form to toggle the recipe.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSubmit(formValue: ActionRecipeFormItemValue): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method used to save the recipe toggle form value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock"><code>ActionsScheduleNotificationsComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock"><code>bbActionsScheduleNotificationsComponentCustomizableDirective</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() actionRecipe:ActionRecipeGetResponseBody;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The action recipe.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() scheduleForm: FormGroup;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The schedule form group.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() minutesStep: MinutesStep;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The minutes step in time options list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Output() submit: EventEmitter&lt;FormGroup&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output on the schedule form submission.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scheduleType: ScheduleType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected schedule type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ScheduleType: ScheduleType;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schedule type enum.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MaxOptionsQuantity: MaxOptionsQuantity;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The maximum quantity of options.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectedTimeOptions$: Observable&lt;number[]&gt;;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The stream of selected options.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectedTimeOptions: number[];</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The list of selected options.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scheduleTime: FormArray;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The getter for the count-controlled repetition.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onScheduleTypeChange(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method used when the schedule type changes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addTimeOption(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to add the time option.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deleteTimeOption(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method to delete the time option.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="configure_business_approval_notification_settings_implementation" class="discrete">Implementation example</h2>
+<div class="paragraph">
+<p>The following examples show the implementation of this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrapper widget module</p>
+<div class="listingblock">
+<div class="title">actions-business-approval-notifications-settings-extended.module.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { ActionsBusinessApprovalNotificationsSettingsWidgetModule } from '@backbase/actions-business-approval-notifications-settings-widget-ang';
+import { ActionsBusinessApprovalNotificationsSettingsExtendedComponent } from './actions-business-approval-notifications-settings-extended.component';
+
+@NgModule({
+  declarations: [ActionsBusinessApprovalNotificationsSettingsExtendedComponent],
+  imports: [
+    CommonModule,
+    BackbaseCoreModule.withConfig({
+      classMap: { ActionsBusinessApprovalNotificationsSettingsExtendedComponent },
+    }),
+    ActionsBusinessApprovalNotificationsSettingsWidgetModule,
+  ],
+  exports: [ActionsBusinessApprovalNotificationsSettingsExtendedComponent],
+})
+export class ActionsBusinessApprovalNotificationsSettingsExtendedModule {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Wrapper widget component</p>
+<div class="listingblock">
+<div class="title">actions-business-approval-notifications-settings-extended.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+
+@Component({
+  selector: 'bb-actions-business-approval-notifications-settings-extended',
+  templateUrl: './actions-business-approval-notifications-settings-extended.component.html',
+})
+export class ActionsBusinessApprovalNotificationsSettingsExtendedComponent {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Custom template</p>
+<div class="listingblock">
+<div class="title">actions-business-approval-notifications-settings-extended.component.html</div>
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;bb-actions-business-approval-notifications-settings-widget-ang&gt;
+  &lt;ng-template
+    bbActionsBusinessApprovalNotificationsSettingsWidgetCustomizableDirective
+    let-hostRef
+    let-loading="context.loading"
+    let-loadingError="context.loadingError"
+    let-specificationsWithActionRecipe="context.specificationsWithActionRecipe"
+  &gt;
+    &lt;!-- place your customization here --&gt;
+  &lt;/ng-template&gt;
+&lt;/bb-actions-business-approval-notifications-settings-widget-ang&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="configure_business_approval_notification_settings_preferences" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>This widget has the following preferences that managers or administrators configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configurable for</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p><strong>Notification dismiss time in seconds (defaults to 5)</strong></p>
+</div>
+<div class="paragraph">
+<p>The time period before a notification triggered by this widget is dismissed.</p>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>notificationDismissTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Comma-separated specification IDs to process</strong></p>
+<p class="tableblock">Specifies which specification and action recipes will be stored in the widget.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>specificationIDs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5, 6, 13, 14</code></p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="configure_business_approval_notification_settings_access_control" class="discrete">Access Control</h2>
+<div class="paragraph">
+<p>A permission is the combination of a business function and a single privilege granted to a user
+on a given resource type. Privileges are enforced by Digital Banking Services. Widget behavior is affected by the permissions of the user accessing the widget.</p>
+</div>
+<div class="paragraph">
+<p>The following table describes how the widget behavior changes depending on the permissions of the user:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 15%;">
+<col style="width: 20%;">
+<col style="width: 15%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Resource</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Business function</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Privilege</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Widget behavior</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">Actions</p></td>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">Manage Action Recipes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The user can view notification settings.</p>
+<p class="tableblock">If the user does not have the permission to view, the widget will display an empty list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">execute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The user can execute a notification setting.</p>
+<p class="tableblock">If the user does not have permission to execute, the widget will display an error when a submission is made.</p>
+<p class="tableblock">If the user does not have permission to approve, the widget will display an error when a submission is made.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">delete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The user can delete a notification setting.</p>
+<p class="tableblock">If the user does not have permission to delete, the widget will display an error when a submission is made.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">create</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The user can create a notification setting.</p>
+<p class="tableblock">If the user does not have permission to create, the widget will display an error when a submission is made.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">edit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The user can edit a notification setting.</p>
+<p class="tableblock">If the user does not have permission to edit, the widget will display an error when a submission is made.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

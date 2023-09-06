@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>View contact list</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="contact_list_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>View contact list</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html"><span class="toc-current">View contact list</span></a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="contact_list_reference" class="sect0">View contact list</h1>
+          <h2 id="_properties_24" class="discrete">Properties</h2>
+<div class="paragraph">
+<p>This widget has the following properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 20%;">
+<col style="width: 12%;">
+<col style="width: 18%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Label</th>
+<th class="tableblock halign-center valign-top">Name</th>
+<th class="tableblock halign-center valign-top">Value type</th>
+<th class="tableblock halign-center valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Number of contacts per page</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>pageSize</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">20</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Max. number of navigation pages</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>maxNavPages</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Time between each search requests (in milliseconds)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>debounceTime</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">300</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Select the method for loading more contacts</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>loadMoreMethod</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">pagination</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Create contact success event name</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>contactCreateSuccessEventName</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">bb.event.initiate.contact.create.success</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">output.selectedContact</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>output.selectedContact</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">navigation:</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_access_control_15" class="discrete">Access Control</h2>
+<div class="paragraph">
+<p>A permission is the combination of a business function and a single privilege granted to a user
+on a given resource type. Privileges are enforced by Digital Banking Services. Widget behavior is affected by the permissions of the user accessing the widget.</p>
+</div>
+<div class="paragraph">
+<p>The following table describes how the widget behavior changes depending on the permissions of the user:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 15%;">
+<col style="width: 20%;">
+<col style="width: 15%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Resource</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Business function</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Privilege</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Widget behavior</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contacts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contacts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current user views a list of saved contacts.</p>
+<p class="tableblock">If the user does not have the permission to view, the widget shows an empty list.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_extension_slots_28" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:
+<span class="image"><img src="./images/business_banking_3/view_contact_list_slots_1_2_3_4.svg?ver=3.10.1" alt="view_contact_list_slots_1_2_3_4"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="contact_list_reference.html#bbContactListContainerCustomizable">bbContactListContainerCustomizable</a></p>
+</li>
+<li>
+<p><a href="contact_list_reference.html#bbContactSearchCustomizable">bbContactSearchCustomizable</a></p>
+</li>
+<li>
+<p><a href="contact_list_reference.html#bbContactListCustomizable">bbContactListCustomizable</a></p>
+</li>
+<li>
+<p><a href="contact_list_reference.html#bbContactListItemCustomizable">bbContactListItemCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbContactListContainerCustomizable" class="discrete">bbContactListContainerCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbContactListContainerCustomizable let-hostRef&gt;
+  &lt;div class="col-md-9 col-12" *ngIf="!(hostRef.error || hostRef.isEmpty)"&gt;
+    &lt;bb-contact-search
+      class="d-block"
+      [debounceTime]="hostRef.debounceTime$ | async"
+      (searchContacts)="hostRef.onContactSearch($event)"&gt;
+    &lt;/bb-contact-search&gt;
+  &lt;/div&gt;
+  &lt;ng-container *ngIf="!hostRef.error; else errorState"&gt;
+    &lt;bb-contact-list
+      *ngIf="(hostRef.items$ | async) as items; else loading"
+      [contactGroups]="items.itemGroups"
+      [selectedContact]="hostRef.selectedContact"
+      [contactItems]="items.items"
+      [totalContacts]="items.totalCount"
+      [loadMoreMethod]="hostRef.loadMoreMethod"
+      [searchText]="hostRef.searchTerm"
+      [contactsPerPage]="hostRef.pageSize"
+      [loadMoreFrom]="hostRef.loadMoreFrom"
+      [maxNavPages]="hostRef.maxNavPages"
+      [isSearching]="hostRef.isSearching"
+      [isLoading]="hostRef.isLoadingContacts$ | async"
+      (pageChange)="hostRef.onPageChange($event)"
+      (loadMore)="hostRef.onLoadMore($event)"
+      (contactSelect)="hostRef.onContactSelected($event)"
+      &gt;&lt;/bb-contact-list&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #errorState&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-empty-state-ui
+        data-role="contact-manager-error-state"
+        i18n-title="@@contact-manager.error.state.title"
+        title="Page couldn’t load"
+        i18n-subtitle="@@contact-manager.error.state.subtitle"
+        subtitle="Try to reload the page or contact the system administrator."
+        iconSize="xxl"
+        iconModifier="error"&gt;
+      &lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #loading&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-loading-indicator-ui i18n-text="Loading text|Loading data label@@bb-contacts-list-loading-label" text="Loading data..."&gt;&lt;/bb-loading-indicator-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbContactSearchCustomizable" class="discrete">bbContactSearchCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbContactSearchCustomizable let-hostRef&gt;
+  &lt;div class="bb-block bb-block--md contact-search-container"&gt;
+    &lt;bb-search-box-ui
+      placeholder="Search"
+      i18n-placeholder="@@contact-list.placeholder.search"
+      [showSearch]="true"
+      [showClear]="true"
+      (submit)="hostRef.startSearching($event)"
+      (clear)="hostRef.clearSearching()"
+      [ngModel]="hostRef.searchTerm"
+      (ngModelChange)="hostRef.startSearching($event)"
+    &gt;&lt;/bb-search-box-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbContactListCustomizable" class="discrete">bbContactListCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbContactListCustomizable let-hostRef&gt;
+  &lt;div
+    *ngIf="hostRef.contactItems &amp;&amp; hostRef.contactItems.length"
+    class="bb-block bb-block--md"
+  &gt;
+    &lt;ul
+      class="bb-grouped-list bb-grouped-list--density-md"
+      data-role="existing-contact"
+      role="list"
+    &gt;
+      &lt;ng-container *ngFor="let item of hostRef.contactItems; let i = index"&gt;
+        &lt;li
+          *ngIf="isListHeading(item, i)"
+          class="bb-grouped-list__group bb-text-support bb-text-bold"
+          data-role="header-row"
+        &gt;
+          {{ hostRef.latestSeparator }}
+        &lt;/li&gt;
+        &lt;li
+          class="bb-grouped-list__item"
+          tabindex="0"
+          role="button"
+          aria-pressed="false"
+          data-role="list-row"
+          [ngClass]="{
+            'bb-grouped-list__item--is-active': selected === i,
+            'bb-grouped-list__item--no-separator': hasNoSeparatorClass(i)
+          }"
+          (click)="onContactSelect(item, i)"
+          (keyup.Space)="onContactSelect(item, i)"
+          (keyup.Enter)="onContactSelect(item, i)"
+          #contactItem
+        &gt;
+          &lt;bb-contact-list-item
+            [contactItem]="item"
+            [showAlias]="true"
+          &gt;&lt;/bb-contact-list-item&gt;
+        &lt;/li&gt;
+      &lt;/ng-container&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div
+    [ngSwitch]="hostRef.loadMoreMethod"
+    class="bb-pagination"
+  &gt;
+    &lt;ng-container *ngSwitchCase="'pagination'"&gt;
+      &lt;bb-pagination-ui
+        [page]="0"
+        [maxNavPages]="hostRef.maxNavPages"
+        [totalItems]="hostRef.totalContacts"
+        [itemsPerPage]="hostRef.contactsPerPage"
+        (pageChange)="hostRef.onPageChange($event)"
+        [boundaryLinks]="true"
+        [directionLinks]="true"
+      &gt;&lt;/bb-pagination-ui&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-container *ngSwitchCase="'load-more'"&gt;
+        &lt;bb-load-button-ui
+          class="bb-block bb-block--md"
+          color="secondary"
+          [isLoading]="hostRef.isLoading"
+          [size]="hostRef.contactsPerPage"
+          [from]="hostRef.loadMoreFrom"
+          [totalCount]="hostRef.totalContacts"
+          (paramChange)="hostRef.onLoadMore($event)"&gt;
+          &lt;ng-container  i18n="Load more contacts|Load more button for loading more contacts@@contact-manager-list.load.more"&gt;Load more&lt;/ng-container&gt;
+        &lt;/bb-load-button-ui&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+
+  &lt;ng-template #searching&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-loading-indicator-ui i18n-text="Searching text|Searching contacts label@@bb-contacts-list-searching-label" text="Searching..."&gt;&lt;/bb-loading-indicator-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #emptyState&gt;
+    &lt;ng-container *ngIf="!hostRef.searchText; else emptySearchState"&gt;
+      &lt;div class="bb-state-container"&gt;
+        &lt;bb-empty-state-ui
+          data-role="contact-manager-empty-state"
+          i18n-title="@@contact-manager.state.nocontacts.title"
+          title="No contacts"
+          i18n-subtitle="@@contact-manager.state.nocontacts.subtitle"
+          subtitle="You do not have any contacts to be displayed."
+          iconSize="xxl"
+          iconModifier="contacts"&gt;
+        &lt;/bb-empty-state-ui&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #emptySearchState&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-empty-state-ui
+        data-role="contact-manager-empty-state"
+        i18n-title="@@contact-manager.state.no-search-results.title"
+        title="No Results Found"
+        i18n-subtitle="@@contact-manager.state.no-search-results.subtitle"
+        subtitle="We can’t find what you’re looking for. Please try a different criteria."
+        iconSize="xxl"
+        iconModifier="search"&gt;
+      &lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbContactListItemCustomizable" class="discrete">bbContactListItemCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbContactListItemCustomizable let-hostRef&gt;
+&lt;div class="row bb-stack"&gt;
+    &lt;div class="bb-stack__item bb-stack__item--fill bb-block bb-block--xs break-word col-8"&gt;
+      &lt;label
+        for="name"
+        class="sr-only"
+        i18n="name@@bb-contact-list-item.label.name"
+        data-role="name-header"
+      &gt;
+        Name
+      &lt;/label&gt;
+      &lt;span
+        class="bb-text-bold break-word"
+        data-role="list-name"
+      &gt;
+        {{ hostRef.contactItem.name }}
+      &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div
+      *ngIf="hostRef.showAlias"
+      class="bb-stack__item bb-stack__item--push-left bb-block bb-block--xs break-word col-4"
+    &gt;
+      &lt;label
+        for="alias"
+        class="sr-only"
+        i18n="name@@bb-contact-list-item.label.alias"
+        data-role="alias-header"
+      &gt;
+        Alias
+      &lt;/label&gt;
+      &lt;span
+        class="bb-text-support break-word"
+        data-role="list-alias"
+      &gt;
+        {{ hostRef.contactItem.alias }}
+      &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+      &lt;div
+        *ngIf="showAccountNumber"
+        class="bb-block bb-block--xs break-word col-12"
+      &gt;
+      &lt;label
+        for="iban"
+        class="sr-only"
+        i18n="iban@@bb-contact-list-item.label.iban"
+        data-role="iban-header"
+      &gt;
+        Account number
+      &lt;/label&gt;
+      &lt;span
+        class="bb-text-support"
+        data-role="list-iban"
+      &gt;
+        {{ hostRef.contactItem &amp;&amp; hostRef.contactItem.accounts &amp;&amp; hostRef.contactItem.accounts[0] &amp;&amp; hostRef.contactItem.accounts[0].IBAN | bbIban }}
+      &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>View cash flow forecast</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="view_forecast_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>View cash flow forecast</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html"><span class="toc-current">View cash flow forecast</span></a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="view_forecast_reference" class="sect0">View cash flow forecast</h1>
+          <h2 id="_shared_library_4" class="discrete">Shared library</h2>
+<div class="paragraph">
+<p>All Cash Flow Forecasting widgets use a shared library, see <a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>.</p>
+</div>
+<h2 id="_selector_name_5" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name: <code>bb-cash-flow-forecast-widget-ang</code>.</p>
+</div>
+<h2 id="_required_imports_5" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Widget module import</p>
+<div class="paragraph">
+<p>Import the following modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">import { CashFlowForecastWidgetAngModule } from '@backbase/business-ang/cash-flow';</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Data module imports</p>
+<div class="paragraph">
+<p>Import the following data modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">import { CashFlowDataHttpModule } from '@backbase/data-ang/cash-flow';</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="_extension_slots_27" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/view_forecast_extension_slots_1_2_3_4_5_6.svg?ver=3.10.1" alt="view forecast extension slots 1 2 3 4 5 6"></span></p>
+</div>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="view_forecast_reference.html#bbCashFlowForecastCustomizable">bbCashFlowForecastCustomizable</a></p>
+</li>
+<li>
+<p><a href="view_forecast_reference.html#bbCashFlowForecastTableCustomizable">bbCashFlowForecastTableCustomizable</a></p>
+</li>
+<li>
+<p><a href="view_forecast_reference.html#bbCashFlowForecastCadenceSelectorCustomizable">bbCashFlowForecastCadenceSelectorCustomizable</a></p>
+</li>
+<li>
+<p><a href="view_forecast_reference.html#bbCashFlowForecastBarChartCustomizable">bbCashFlowForecastBarChartCustomizable</a></p>
+</li>
+<li>
+<p><a href="view_forecast_reference.html#bbCashFlowForecastChartBarCustomizable">bbCashFlowForecastChartBarCustomizable</a></p>
+</li>
+<li>
+<p><a href="view_forecast_reference.html#bbCashFlowForecastTooltipBodyCustomizable">bbCashFlowForecastTooltipBodyCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbCashFlowForecastCustomizable" class="discrete">bbCashFlowForecastCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowForecastCustomizable
+  let-hostRef
+  let-isError="context.isError"
+  let-isLoading="context.isLoading"
+  let-forecastReferencesExists="context.forecastReferencesExists"
+  let-forecastData="context.forecastData"
+  let-syncDatetime="context.syncDatetime"
+&gt;
+  &lt;bb-cash-flow-main-container
+    [isErrorState]="isError"
+    [isLoadingState]="isLoading"
+    [isEmptyState]="forecastData &amp;&amp; !forecastData?.length"
+    [contentWrapperClasses]="null"
+  &gt;
+    &lt;ng-container cash-flow-widget-body&gt;
+      &lt;ng-container
+        *ngIf="forecastReferencesExists &amp;&amp; forecastData; else initialState"
+      &gt;
+        &lt;div class="bb-cash-flow-forecast"&gt;
+          &lt;bb-cash-flow-forecast-table
+            [forecastData]="forecastData"
+          &gt;&lt;/bb-cash-flow-forecast-table&gt;
+          &lt;bb-cash-flow-last-updated-time
+            [dateTimestamp]="syncDatetime"
+            wrapperClasses="bb-cash-flow-forecast__creation-date"
+          &gt;
+          &lt;/bb-cash-flow-last-updated-time&gt;
+        &lt;/div&gt;
+        &lt;div
+          class="bb-state-container bb-cash-flow-forecast-mobile-state"
+          data-role="cash-flow-forecast-mobile-view-empty-state"
+        &gt;
+          &lt;bb-empty-state-ui
+            title="Available on a higher resolution"
+            i18n-title="
+              Title for mobile view empty
+              state@@forecast.state.mobileView.emptyState.title"
+            subtitle="You can view this page on a screen with resolution higher than 576px."
+            i18n-subtitle="
+              Message for mobile view empty
+              state@@forecast.state.mobileView.emptyState.message"
+            iconModifier="computer"
+            iconSize="xxl"
+          &gt;&lt;/bb-empty-state-ui&gt;
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+    &lt;/ng-container&gt;
+  &lt;/bb-cash-flow-main-container&gt;
+
+  &lt;ng-template #initialState&gt;
+    &lt;bb-cash-flow-forecast-settings-initial
+      containerClasses="bb-state-container--min-height"
+      (setupForecast)="hostRef.onSetupForecast()"
+    &gt;
+    &lt;/bb-cash-flow-forecast-settings-initial&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hostRef</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See API below</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isError: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether there is an error preventing the widget to load the forecast.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isLoading: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the forecast is loading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>forecastReferencesExists: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether there is an active connection to an accounting provider.
+If there no active connection to an accounting provider,
+the widget shows a message that explains what is missing.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>forecastData: ForecastItem[]</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>The accounting data returned by the accounting provider.
+If there is an active connection to an accounting provider, but no accounting data,
+the widget shows a message that explains what is missing.</p>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>syncDatetime: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp of the last data synchronization with the accounting provider.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbCashFlowForecastTableCustomizable" class="discrete">bbCashFlowForecastTableCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowForecastTableCustomizable
+  let-currencyCode="context.currencyCode"
+  let-hostRef
+&gt;
+  &lt;div class="bb-cash-flow-forecast-table row no-gutters" role="table"&gt;
+    &lt;div class="col-2 bb-cash-flow-forecast-table__header" role="rowgroup"&gt;
+      &lt;div class="bb-cash-flow-forecast-table__row" role="row"&gt;
+        &lt;div
+          class="bb-cash-flow-forecast-table__cell bb-cash-flow-forecast-table__cell--info"
+          data-role="bb-cash-flow-forecast-table__select-cadence"
+          [style.min-height.px]="hostRef.chartHeight"
+        &gt;
+          &lt;div class="bb-cash-flow-forecast-table-currency"&gt;
+            &lt;div
+              class="bb-subtitle bb-text-support bb-text-semi-bold"
+              i18n="
+                Forecast table currency title@@forecast.table.currency.title"
+            &gt;
+              Forecast currency
+            &lt;/div&gt;
+            &lt;div
+              data-role="bb-cash-flow-forecast-table__currency-code"
+              class="bb-highlight"
+            &gt;
+              {{ currencyCode }}
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;bb-cash-flow-forecast-cadence-selector
+            [forecastData]="hostRef.forecastData"
+            class="bb-cash-flow-forecast-table__cadence-selector"
+          &gt;
+          &lt;/bb-cash-flow-forecast-cadence-selector&gt;
+        &lt;/div&gt;
+        &lt;div
+          class="bb-subheader bb-text-support bb-cash-flow-forecast-table__cell bb-cash-flow-forecast-table__cell--general"
+          i18n="
+            Forecast table opening balance row
+            header@@forecast.table.header.openingBalance"
+          data-role="bb-cash-flow-forecast-table-header__opening-balance"
+          tabindex="0"
+          role="rowheader"
+          #openingBalanceHeader
+        &gt;
+          Opening Balance
+        &lt;/div&gt;
+        &lt;ng-container
+          *ngFor="
+            let category of hostRef.categoriesConfig
+              | keyvalue: hostRef.originalOrderComparator;
+            trackBy: hostRef.trackByMapKey
+          "
+        &gt;
+          &lt;div
+            class="bb-stack bb-text-semi-bold bb-cash-flow-forecast-table__cell bb-cash-flow-forecast-table__cell--category"
+            tabindex="0"
+            role="rowheader"
+            data-role="bb-cash-flow-forecast-table-header__category"
+            [attr.aria-expanded]="category.value.isExpanded"
+            (bbKeyboardClick)="
+              category.value.isExpanded = !category.value.isExpanded
+            "
+          &gt;
+            &lt;span class="bb-stack bb-stack__item bb-stack__item--fill"&gt;
+              &lt;bb-icon-ui
+                *ngIf="hostRef.categoriesIconMap[category.key]"
+                [name]="hostRef.categoriesIconMap[category.key]"
+                backgroundType="square"
+                color="secondary"
+                size="sm"
+                class="bb-stack__item"
+              &gt;&lt;/bb-icon-ui&gt;
+              &lt;bb-ellipsis-ui
+                class="bb-stack__item"
+                [text]="category.key"
+                tooltipTriggers="hover click"
+              &gt;&lt;/bb-ellipsis-ui&gt;
+            &lt;/span&gt;
+            &lt;bb-icon-ui
+              class="bb-stack__item"
+              size="sm"
+              [name]="category.value.isExpanded ? 'expand-less' : 'expand-more'"
+            &gt;&lt;/bb-icon-ui&gt;
+          &lt;/div&gt;
+          &lt;ng-container *ngIf="category.value.isExpanded"&gt;
+            &lt;div
+              *ngFor="
+                let accountName of category.value.accounts;
+                trackBy: hostRef.trackByValue
+              "
+              class="bb-cash-flow-forecast-table__cell bb-cash-flow-forecast-table__cell--account"
+              data-role="bb-cash-flow-forecast-table-header__account"
+              tabindex="0"
+              role="rowheader"
+            &gt;
+              &lt;bb-ellipsis-ui
+                class="bb-cash-flow-forecast-table-item-shrink"
+                [text]="accountName"
+                tooltipTriggers="hover click"
+              &gt;&lt;/bb-ellipsis-ui&gt;
+            &lt;/div&gt;
+          &lt;/ng-container&gt;
+        &lt;/ng-container&gt;
+        &lt;div
+          class="bb-subheader bb-text-support bb-cash-flow-forecast-table__cell bb-cash-flow-forecast-table__cell--general"
+          i18n="
+            Forecast table net change row
+            header@@forecast.table.header.netChange"
+          data-role="bb-cash-flow-forecast-table-header__net-change"
+          tabindex="0"
+          role="rowheader"
+          #netChangeHeader
+        &gt;
+          Net Change
+        &lt;/div&gt;
+        &lt;div
+          class="bb-subheader bb-text-support bb-cash-flow-forecast-table__cell bb-cash-flow-forecast-table__cell--general"
+          i18n="
+            Forecast table closing balance row
+            header@@forecast.table.header.closingBalance"
+          data-role="bb-cash-flow-forecast-table-header__cell"
+          tabindex="0"
+          role="rowheader"
+          #closingBalanceHeader
+        &gt;
+          Closing Balance
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div
+      class="col-10 bb-cash-flow-forecast-table__body"
+      tabindex="-1"
+      #scrollableTableRef
+    &gt;
+      &lt;div
+        class="bb-cash-flow-forecast-table__row-wrapper bb-cash-flow-forecast-table__chart-wrapper"
+      &gt;
+        &lt;div class="bb-cash-flow-forecast-table__row"&gt;
+          &lt;div
+            class="bb-cash-flow-forecast-table__cell"
+            data-role="bb-cash-flow-forecast-table-body__chart-cell"
+          &gt;
+            &lt;bb-cash-flow-forecast-bar-chart
+              [forecastData]="hostRef.forecastData"
+              class="bb-cash-flow-forecast__chart"
+            &gt;
+            &lt;/bb-cash-flow-forecast-bar-chart&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div
+        class="bb-cash-flow-forecast-table__row-wrapper bb-cash-flow-forecast-table__table-wrapper"
+        data-role="bb-cash-flow-forecast-table-body__table-row-wrapper"
+        role="rowgroup"
+      &gt;
+        &lt;div
+          *ngFor="
+            let forecastItem of hostRef.forecastData;
+            trackBy: hostRef.trackByStartDate
+          "
+          [bbForecastItemHover]="forecastItem.startDate"
+          [ngStyle]="{
+            'max-width.px': cellWidth,
+            'flex-basis.px': cellWidth
+          }"
+          [ngClass]="{
+            'bb-text-support': hostRef.isHistoryCadence(forecastItem),
+            'bb-cash-flow-forecast-table__row--current': hostRef.isCurrentCadence(
+              forecastItem
+            )
+          }"
+          class="bb-cash-flow-forecast-table__row"
+          data-role="bb-cash-flow-forecast-table-body__table-row"
+          tabindex="0"
+          role="row"
+        &gt;
+          &lt;div class="sr-only" role="columnheader"&gt;
+            &lt;bb-cash-flow-cadence-date-range
+              [forecastItem]="forecastItem"
+            &gt;&lt;/bb-cash-flow-cadence-date-range&gt;
+          &lt;/div&gt;
+          &lt;div
+            class="bb-cash-flow-forecast-table__cell bb-cash-flow-forecast-table__cell--general"
+            role="cell"
+          &gt;
+            &lt;span class="sr-only"&gt;{{ openingBalanceHeader.innerText }}&lt;/span&gt;
+            &lt;bb-amount-ui
+              [amount]="forecastItem.openingBalance"
+              [abbreviate]="true"
+            &gt;&lt;/bb-amount-ui&gt;
+          &lt;/div&gt;
+          &lt;ng-container
+            *ngFor="
+              let itemCategory of forecastItem.categoryBalanceChanges;
+              trackBy: hostRef.trackByCategoryName
+            "
+          &gt;
+            &lt;div
+              class="bb-cash-flow-forecast-table__cell bb-cash-flow-forecast-table__cell--category"
+              [class.bb-text-semi-bold]="
+                hostRef.isCategoryExpanded(itemCategory.categoryName)
+              "
+              role="cell"
+            &gt;
+              &lt;span class="sr-only"&gt;{{ itemCategory.categoryName }}&lt;/span&gt;
+              &lt;bb-amount-ui
+                [amount]="itemCategory.balanceChange"
+                [abbreviate]="true"
+              &gt;&lt;/bb-amount-ui&gt;
+            &lt;/div&gt;
+            &lt;ng-container
+              *ngIf="hostRef.isCategoryExpanded(itemCategory.categoryName)"
+            &gt;
+              &lt;div
+                *ngFor="
+                  let account of itemCategory.accountBalanceChanges;
+                  trackBy: hostRef.trackByAccountName
+                "
+                class="bb-cash-flow-forecast-table__cell bb-cash-flow-forecast-table__cell--account"
+                role="cell"
+              &gt;
+                &lt;span class="sr-only"&gt;{{ account.accountName }}&lt;/span&gt;
+                &lt;bb-amount-ui
+                  [amount]="account.balanceChange"
+                  [abbreviate]="true"
+                &gt;&lt;/bb-amount-ui&gt;
+              &lt;/div&gt;
+            &lt;/ng-container&gt;
+          &lt;/ng-container&gt;
+          &lt;div
+            class="bb-cash-flow-forecast-table__cell bb-cash-flow-forecast-table__cell--general"
+            role="cell"
+          &gt;
+            &lt;span class="sr-only"&gt;{{ netChangeHeader.innerText }}&lt;/span&gt;
+            &lt;bb-amount-ui
+              [amount]="forecastItem.netChange"
+              [abbreviate]="true"
+            &gt;&lt;/bb-amount-ui&gt;
+          &lt;/div&gt;
+          &lt;div
+            class="bb-cash-flow-forecast-table__cell bb-cash-flow-forecast-table__cell--general"
+            role="cell"
+          &gt;
+            &lt;span class="sr-only"&gt;{{ closingBalanceHeader.innerText }}&lt;/span&gt;
+            &lt;bb-amount-ui
+              [amount]="forecastItem.closingBalance"
+              [abbreviate]="true"
+            &gt;&lt;/bb-amount-ui&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hostRef</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See API below</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>currencyCode: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The currency code as configured in the forecast configuration.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbCashFlowForecastCadenceSelectorCustomizable" class="discrete">bbCashFlowForecastCadenceSelectorCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowForecastCadenceSelectorCustomizable
+  let-hostRef
+  let-selectedCadenceType="context.selectedCadenceType"
+&gt;
+  &lt;div class="card bb-cash-flow-forecast-cadence-dropdown"&gt;
+    &lt;bb-dropdown-menu-ui
+      #dropdownMenu
+      [autoClose]="true"
+      [fullWidth]="true"
+      btnColor="unstyled"
+      position="bottom-left"
+      dropDownButtonLabel="Selector for cadency"
+      i18n-dropDownButtonLabel="
+        Label for cadency selector@@forecast.cadency-selector.label"
+    &gt;
+      &lt;ng-template bbDropdownLabel&gt;
+        &lt;div
+          class="bb-stack bb-stack--align-bottom bb-cash-flow-forecast-cadence-dropdown__label"
+          data-role="forecast-cadence-dropdown__label"
+        &gt;
+          &lt;span class="bb-stack__item bb-text-semi-bold"&gt;
+            &lt;ng-template
+              *ngTemplateOutlet="
+                cadenceTypeRef;
+                context: { $implicit: selectedCadenceType }
+              "
+            &gt;&lt;/ng-template&gt;
+            &lt;span
+              class="bb-text-support bb-subtitle bb-cash-flow-forecast-cadence-dropdown__item-wrapper"
+              data-role="bb-cash-flow-cadence-date-range"
+            &gt;
+              &lt;span data-role="bb-cash-flow-cadence-start-date"&gt;{{
+                hostRef.forecastData[0].startDate
+                  | bbDate: hostRef.getDateFormat(selectedCadenceType)
+              }}&lt;/span&gt;
+              &lt;span&gt; - &lt;/span&gt;
+              &lt;span data-role="bb-cash-flow-cadence-end-date"&gt;{{
+                hostRef.forecastData[hostRef.forecastData.length - 1].endDate
+                  | bbDate: hostRef.getDateFormat(selectedCadenceType)
+              }}&lt;/span&gt;
+            &lt;/span&gt;
+          &lt;/span&gt;
+          &lt;div class="bb-stack__item bb-stack__item--push-right"&gt;
+            &lt;bb-icon-ui
+              [cropped]="true"
+              [name]="
+                dropdownMenu.dropdownDir?.isOpen() ? 'toggle-up' : 'toggle-down'
+              "
+            &gt;&lt;/bb-icon-ui&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+      &lt;ng-template bbDropdownMenuItem&gt;
+        &lt;button
+          *ngFor="let cadenceType of hostRef.cadenceTypes"
+          (bbKeyboardClick)="
+            hostRef.onCadenceSelect(
+              cadenceType,
+              cadenceType === selectedCadenceType
+            )
+          "
+          [class.active]="cadenceType === selectedCadenceType"
+          data-role="forecast-cadence-dropdown__button"
+          role="menuitem"
+          class="dropdown-item"
+        &gt;
+          &lt;ng-template
+            *ngTemplateOutlet="
+              cadenceTypeRef;
+              context: { $implicit: cadenceType }
+            "
+          &gt;
+          &lt;/ng-template&gt;
+        &lt;/button&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-dropdown-menu-ui&gt;
+  &lt;/div&gt;
+
+  &lt;ng-template let-cadenceType #cadenceTypeRef&gt;
+    &lt;span
+      class="bb-subtitle"
+      i18n="Cadence selector type@@forecast.cadence-selector.type"
+    &gt;
+      { cadenceType, select, Day {Daily} Week {Weekly} Month {Monthly} }
+    &lt;/span&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hostRef</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See API below</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectedCadenceType: ForecastCadenceType</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>The selected period. The <code>ForecastCadenceType</code> is an enumeration with the following values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Day</code></p>
+</li>
+<li>
+<p><code>Week</code></p>
+</li>
+<li>
+<p><code>Month</code></p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbCashFlowForecastBarChartCustomizable" class="discrete">bbCashFlowForecastBarChartCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowForecastBarChartCustomizable
+  let-hostRef
+  let-cadenceType="context.cadenceType"
+  xmlns:svg="http://www.w3.org/2000/svg"
+&gt;
+  &lt;ngx-charts-chart [view]="hostRef.view"&gt;
+    &lt;svg:g
+      class="bar-chart chart"
+      aria-labelledby="forecast-chart-title forecast-chart-description"
+      [attr.transform]="hostRef.transform"
+    &gt;
+      &lt;title
+        id="forecast-chart-title"
+        i18n="Bar chart title@@forecast.bar-chart.title"
+      &gt;
+        Bar chart of cash flow forecast
+      &lt;/title&gt;
+      &lt;desc
+        id="forecast-chart-description"
+        i18n="Bar chart description@@forecast.bar-chart.description"
+      &gt;
+        A cash flow forecast is a calculated plan of when cash will come into
+        and out of your business, clearly showing what you will have in your
+        bank account at the end of the month.
+      &lt;/desc&gt;
+      &lt;svg:g
+        ngx-charts-y-axis
+        [yScale]="hostRef.yScale"
+        [dims]="hostRef.dims"
+        [showGridLines]="hostRef.showGridLines"
+        [ticks]="hostRef.yTicks"
+        data-role="bb-cash-flow-forecast-chart-y-axis"
+        aria-hidden="true"
+      /&gt;
+
+      &lt;svg:line
+        [attr.x1]="hostRef.baseline.xStart"
+        [attr.x2]="hostRef.baseline.xEnd"
+        [attr.y1]="hostRef.baseline.yStart"
+        [attr.y2]="hostRef.baseline.yEnd"
+        class="bb-cash-flow-forecast-chart-baseline"
+        data-role="bb-cash-flow-forecast-chart-baseline"
+      /&gt;
+
+      &lt;svg:g role="list"&gt;
+        &lt;svg:g
+          bb-cash-flow-forecast-bar
+          role="listitem"
+          *ngFor="let barArea of hostRef.barAreas"
+          [bar]="barArea.bar"
+          [tooltip]="barArea.tooltip"
+          [label]="barArea.label"
+          [cadence]="barArea.cadence"
+          [roundEdgesOfTheBars]="hostRef.roundEdgesOfTheBars"
+          [tooltipTemplate]="chartTooltip"
+          [isTooltipDisabled]="hostRef.isTooltipDisabled"
+          data-role="bb-cash-flow-forecast-chart-bar-area"
+        /&gt;
+      &lt;/svg:g&gt;
+    &lt;/svg:g&gt;
+
+    &lt;svg:line
+      [attr.x1]="hostRef.currentCadenceBorders.xStart"
+      [attr.x2]="hostRef.currentCadenceBorders.xStart"
+      [attr.y1]="hostRef.currentCadenceBorders.yStart"
+      [attr.y2]="hostRef.currentCadenceBorders.yEnd"
+      data-role="bb-cash-flow-forecast-chart-current-cadence-border"
+      class="bb-cash-flow-forecast-chart-current-cadence-border"
+    /&gt;
+    &lt;svg:line
+      [attr.x1]="hostRef.currentCadenceBorders.xEnd"
+      [attr.x2]="hostRef.currentCadenceBorders.xEnd"
+      [attr.y1]="hostRef.currentCadenceBorders.yStart"
+      [attr.y2]="hostRef.currentCadenceBorders.yEnd"
+      data-role="bb-cash-flow-forecast-chart-current-cadence-border"
+      class="bb-cash-flow-forecast-chart-current-cadence-border"
+    /&gt;
+    &lt;svg:text
+      [attr.x]="hostRef.currentCadenceLabel.x"
+      [attr.y]="hostRef.currentCadenceLabel.y"
+      class="bb-cash-flow-forecast-chart-label"
+      data-role="bb-cash-flow-forecast-chart-current-cadence-label"
+      i18n="
+        Forecast chart current cadence
+        label@@forecast.chart.current-cadence.label"
+      text-anchor="middle"
+    &gt;
+      { cadenceType, select, Day {Today} Week {This week} Month {This month} }
+    &lt;/svg:text&gt;
+  &lt;/ngx-charts-chart&gt;
+
+  &lt;ng-template #chartTooltip let-forecastItem="data"&gt;
+    &lt;bb-cash-flow-forecast-tooltip-body
+      [forecastItem]="forecastItem"
+    &gt;&lt;/bb-cash-flow-forecast-tooltip-body&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hostRef</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See API below</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cadenceType: ForecastCadenceType</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>The selected period. The <code>ForecastCadenceType</code> is an enumeration with the following values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Day</code></p>
+</li>
+<li>
+<p><code>Week</code></p>
+</li>
+<li>
+<p><code>Month</code></p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbCashFlowForecastChartBarCustomizable" class="discrete">bbCashFlowForecastChartBarCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowForecastChartBarCustomizable
+  let-hostRef
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg"
+&gt;
+  &lt;svg:g
+    class="bb-cash-flow-forecast-chart-bar-group"
+    [bbTooltip]="hostRef.tooltipTemplate"
+    [placement]="hostRef.tooltipPlacement"
+    [disableTooltip]="hostRef.isTooltipDisabled"
+    container="body"
+    triggers="manual"
+    tooltipClass="bb-cash-flow-forecast-chart-tooltip-window"
+    [bbAreaTooltip]="hostRef.tooltip.context"
+    [bbForecastItemHover]="hostRef.cadence.startDate"
+    tabindex="0"
+    focusable="true"
+  &gt;
+    &lt;svg:rect
+      [attr.height]="hostRef.tooltip.height"
+      [attr.width]="hostRef.tooltip.width"
+      [attr.x]="hostRef.tooltip.x"
+      [attr.y]="hostRef.tooltip.y"
+      [class.bb-cash-flow-forecast-chart-bar-group__tooltip-area--current]="
+        hostRef.tooltip.isCurrent
+      "
+      [attr.data-role]="
+        'bb-cash-flow-forecast-chart-tooltip-area' +
+        (hostRef.tooltip.isCurrent ? '-current' : '')
+      "
+      class="bb-cash-flow-forecast-chart-bar-group__tooltip-area"
+    /&gt;
+
+    &lt;svg:g
+      ngx-charts-bar
+      [height]="hostRef.bar.height"
+      [width]="hostRef.bar.width"
+      [x]="hostRef.bar.x"
+      [y]="hostRef.bar.y"
+      [fill]="hostRef.bar.color"
+      [data]="hostRef.bar.data"
+      [orientation]="'vertical'"
+      [roundEdges]="hostRef.roundEdgesOfTheBars"
+      aria-hidden="true"
+      data-role="bb-cash-flow-forecast-chart-bar"
+    /&gt;
+
+    &lt;svg:g data-role="bb-cash-flow-forecast-chart-bar-label"&gt;
+      &lt;svg:text
+        [attr.x]="hostRef.label.x"
+        [attr.y]="hostRef.label.y"
+        class="bb-cash-flow-forecast-chart-label"
+        text-anchor="middle"
+        #labelRef
+      /&gt;
+      &lt;xhtml:div class="d-none" [bbSvgAmountLabel]="labelRef"&gt;
+        &lt;bb-amount-ui
+          [amount]="hostRef.bar.data.value"
+          [abbreviate]="true"
+        &gt;&lt;/bb-amount-ui&gt;
+      &lt;/xhtml:div&gt;
+    &lt;/svg:g&gt;
+
+    &lt;svg:g
+      bb-bar-cadence-label
+      [cadence]="hostRef.cadence"
+      data-role="bb-cash-flow-forecast-chart-cadence"
+    /&gt;
+  &lt;/svg:g&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot has no object properties in its custom context.
+For the properties that are accessible via <code>hostRef</code>, see API below.</p>
+</div>
+<h3 id="bbCashFlowForecastTooltipBodyCustomizable" class="discrete">bbCashFlowForecastTooltipBodyCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbCashFlowForecastSettingsAccountingCategoriesListCustomizable
+  let-hostRef
+&gt;
+  &lt;div
+    class="bb-block bb-block--xl cash-flow-configuration-accounting-category-list"
+  &gt;
+    &lt;bb-collapsible-card-ui
+      data-role="bb-cash-flow-forecast-settings-accounting-categories-list__item"
+      class="bb-collapsible-list"
+      *ngFor="let categoryItem of hostRef.accountingCategories"
+    &gt;
+      &lt;div bbCollapsibleTitle&gt;
+        &lt;div class="cash-flow-configuration-accounting-category-item bb-stack"&gt;
+          &lt;span class="cash-flow-configuration-accounting-category-item__label"&gt;
+            &lt;span
+              class="bb-text-default bb-text-semi-bold"
+              data-role="bb-cash-flow-forecast-settings-accounting-categories-list__item-title"
+            &gt;
+              {{ categoryItem[0] }}
+            &lt;/span&gt;
+            &lt;span
+              class="bb-text-support bb-subtitle"
+              data-role="bb-cash-flow-forecast-settings-accounting-categories-list__item-subtitle"
+            &gt;
+              {{ categoryItem[1].length }}
+              &lt;ng-container
+                i18n="
+                  Accounting categories list category
+                  subtitle@@cash-flow.forecast-configuration.accounting-page.list.category.subtitle"
+                &gt;{categoryItem[1].length , plural, =1 {subcategory} other
+                {subcategories}}
+              &lt;/ng-container&gt;
+            &lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;ul
+        bbCollapsibleBody
+        class="bb-list bb-list--density-none bb-list--infinite"
+      &gt;
+        &lt;li
+          *ngFor="let item of categoryItem[1]"
+          data-role="bb-cash-flow-forecast-settings-accounting-categories-list__item-child"
+          class="cash-flow-configuration-accounting-category-item cash-flow-configuration-accounting-category-item--child bb-list__item"
+        &gt;
+          &lt;div
+            class="cash-flow-configuration-accounting-category-item__label-wrapper"
+          &gt;
+            &lt;span
+              class="bb-stack cash-flow-configuration-accounting-category-item__label"
+            &gt;
+              &lt;span
+                class="bb-text-default"
+                data-role="bb-cash-flow-forecast-settings-accounting-categories-list__item-child-title"
+              &gt;
+                {{ item.nominalCode }} • {{ item.name }}
+              &lt;/span&gt;
+              &lt;span
+                class="bb-text-support bb-subtitle"
+                data-role="bb-cash-flow-forecast-settings-accounting-categories-list__item-child-subtitle"
+              &gt;
+                {{ item.description }}
+              &lt;/span&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/bb-collapsible-card-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot has no object properties in its custom context.
+For the properties that are accessible via <code>hostRef</code>, see API below.</p>
+</div>
+<h2 id="_api_6" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 30%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CashFlowForecastWidgetAngComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bbCashFlowForecastCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSetupForecast(): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method opens modal window for forecast setup</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="15"><p class="tableblock"><code>ForecastTableComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="15"><p class="tableblock"><code>bbCashFlowForecastTableCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>forecastData!: ForecastItem[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mapped historical and projected data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>categoriesIconMap: Record&lt;AccountingCategoriesNames, string&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Map of categories and icons</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scrollableTableRef!: ElementRef&lt;HTMLTableElement&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scrollable table container view reference</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>chartHeight: number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chart height in the table including the border width</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cellWidth: number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Table cell width that reflects the chart tooltip area width</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>categoriesConfig: Map&lt;string, ForecastExpandableCategory&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Map contains information about categories or accounts and the expand state for categories</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>originalOrderComparator: ()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comparator for <code>KeyValuePipe</code> which keeps default order</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isCategoryExpanded(categoryName: string): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checks expand state for the category</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isCurrentCadence(item: ForecastItem): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checks cadence for the <code>Current</code> flag</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isHistoryCadence(item: ForecastItem): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checks cadence for the <code>History</code> flag</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>trackByMapKey&lt;T&gt;(_index: number, item: T): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tracks map entry by key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>trackByCategoryName(_index: number, item: CategoryBalanceChange): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tracks list item by category name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>trackByAccountName(_index: number, item: AccountBalanceChange): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tracks list item by account name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>trackByStartDate(_index: number, item: ForecastItem): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tracks forecast list item by start date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>trackByValue(_index: number, value: string): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tracks list item by value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>CadenceSelectorComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>bbCashFlowForecastCadenceSelectorCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() forecastData!: ForecastItem[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mapped historical and projected data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly cadenceTypes: ForecastCadenceType[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Collection of available cadences</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onCadenceSelect(cadenceType: ForecastCadenceType, isSameSelected: boolean): void</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>Save selected cadence to store. Parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>cadenceType</code>: Selected cadence</p>
+</li>
+<li>
+<p><code>isSameSelected</code>: Whether the same cadence was selected</p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getDateFormat(cadenceType: ForecastCadenceType): string</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>Method to get correct date format for cadence type. Parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>cadenceType</code>: Selected cadence</p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="17"><p class="tableblock"><code>CashFlowForecastBarChartComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="17"><p class="tableblock"><code>bbCashFlowForecastBarChartCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() forecastData!: ForecastItem[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mapped historical and projected data in format suitable for chart</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() colorSchemeType = ColorSchemeType.Ordinal</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The color scheme type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() numberOfYTicks: number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The number of ticks on y axis</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() showGridLines: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag to show or hide grid lines behind the chart</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() roundEdgesOfTheBars: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag to make edges of the bar rounded or squared</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() showDataLabel: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag to show or hide data labels under chart bars</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() colorScheme: ColorScheme = { domain: [] }</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The color scheme of the chart</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() isTooltipDisabled: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag to enable / disable bar tooltip</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly transform = `translate(${this.chartOffset.left} , ${this.chartOffset.top})`</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transform for chart itself</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly currentCadenceLabel: ChartPositionBase</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Current cadence label dimensions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly currentCadenceBorders: ChartLine</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Current cadence borders dimensions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>view!: [number, number]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">View defines size of chart container with [width, height] structure</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>yTicks!: number[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y axis ticks</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>yScale!: ScaleLinear&lt;number, number&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scale for Y axis</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dims!: ViewDimensions</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The actual size of the chart itself</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>baseline!: ChartLine</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Baseline dimensions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>barAreas!: ChartBarArea[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bar areas dimensions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock"><code>CashFlowForecastBarComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock"><code>bbCashFlowForecastChartBarCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() bar!: ChartBar</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bar details for rendering</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() tooltip!: ChartTooltipArea</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tooltip details for rendering</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() label!: ChartPositionBase</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label details for rendering</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() cadence!: ChartCadence</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cadence details for rendering</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() roundEdgesOfTheBars: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag to make edges of the bar rounded or squared</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() tooltipTemplate!: TemplateRef&lt;ForecastItem&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Area tooltip template</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() tooltipPlacement: PlacementArray</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array of preferred tooltip placements</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Input() isTooltipDisabled: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flag represents tooltip disabled state</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_preferences_20" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>The widget has the following preferences that managers or administrators
+configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configurable for</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>output.navigateToConnectAccountingSoftware</strong></p>
+<p class="tableblock">When the user has not set up the accounting provider, the widget redirects from this widget to another widget.
+For example, to the <strong>Connect accounting software</strong> widget where the user sets up the connection to an accounting provider.
+Set the target widget as follows: <code>navigation:name-of-the-widget-where-to-navigate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.navigateToConnectAccountingSoftware</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

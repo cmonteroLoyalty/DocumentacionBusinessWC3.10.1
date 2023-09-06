@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Approve contact change requests</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="contact_manager_pending_approvals_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Approve contact change requests</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html"><span class="toc-current">Approve contact change requests</span></a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="contact_manager_pending_approvals_reference" class="sect0">Approve contact change requests</h1>
+          <h2 id="_properties" class="discrete">Properties</h2>
+<div class="paragraph">
+<p>This widget has the following properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 57.9999%;">
+<col style="width: 20%;">
+<col style="width: 12%;">
+<col style="width: 10.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Label</th>
+<th class="tableblock halign-center valign-top">Name</th>
+<th class="tableblock halign-center valign-top">Value type</th>
+<th class="tableblock halign-center valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milliseconds to dismiss any notification message</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>notificationDismissTime</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">5000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Number of approvals per page</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>pageSize</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">20</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Max. number of navigation pages</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>maxNavPages</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Select the method for loading more approvals</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>loadMoreMethod</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">pagination</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Event name to listen successfully created contact</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>contactCreateSuccessEventName</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">bb.event.initiate.contact.create.success</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_access_control" class="discrete">Access Control</h2>
+<div class="paragraph">
+<p>A permission is the combination of a business function and a single privilege granted to a user
+on a given resource type. Privileges are enforced by Digital Banking Services. Widget behavior is affected by the permissions of the user accessing the widget.</p>
+</div>
+<div class="paragraph">
+<p>The following table describes how the widget behavior changes depending on the permissions of the user:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 15%;">
+<col style="width: 20%;">
+<col style="width: 15%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Resource</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Business function</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Privilege</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Widget behavior</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contacts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contacts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">approve</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>The current user can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Approve</strong> a contact edit request</p>
+</li>
+<li>
+<p><strong>Reject</strong> a contact edit request</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the user does not have the permission to approve, the approval and rejection buttons are disabled.</p>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_extension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/approve_contact_change_requests_slots_1_2.svg?ver=3.10.1" alt="approve_contact_change_requests_slots_1_2"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/approve_contact_change_requests_slot_3.svg?ver=3.10.1" alt="approve_contact_change_requests_slot_3"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="contact_manager_pending_approvals_reference.html#bbContactManagerPendingApprovalsContainerComponentCustomizable">bbContactManagerPendingApprovalsContainerComponentCustomizable</a></p>
+</li>
+<li>
+<p><a href="contact_manager_pending_approvals_reference.html#bbContactManagerPendingApprovalsListComponentCustomizable">bbContactManagerPendingApprovalsListComponentCustomizable</a></p>
+</li>
+<li>
+<p><a href="contact_manager_pending_approvals_reference.html#bbContactManagerPendingApprovalsDetailsCustomizable">bbContactManagerPendingApprovalsDetailsCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbContactManagerPendingApprovalsContainerComponentCustomizable" class="discrete">bbContactManagerPendingApprovalsContainerComponentCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbContactManagerPendingApprovalsContainerComponentCustomizable let-hostRef&gt;
+  &lt;ng-container *ngIf="!hostRef.error else errorState"&gt;
+    &lt;ng-container *ngIf="hostRef.approvals$ | async as pendingApprovals; else loadingList"&gt;
+      &lt;bb-contact-manager-pending-approvals-list
+        [approvals]="pendingApprovals.items"
+        [totalCount]="pendingApprovals.totalCount"
+        [loadMoreMethod]="hostRef.loadMoreMethod"
+        [pageSize]="hostRef.pageSize"
+        [maxNavPages]="hostRef.maxNavPages"
+        [loadMoreFrom]="hostRef.loadMoreFrom"
+        (pageChange)="hostRef.onPageChange($event)"
+        (loadMore)="hostRef.onLoadMore($event)"
+        (approve)="hostRef.onApprove($event)"
+        (reject)="hostRef.onReject($event)"
+        (showDetails)="hostRef.onShowDetails($event)"
+        (goto)="hostRef.onGoto($event)"
+      &gt;&lt;/bb-contact-manager-pending-approvals-list&gt;
+    &lt;/ng-container&gt;
+
+    &lt;bb-contact-manager-pending-approvals-details
+      [approval]="hostRef.selectedItem"
+      [isOpen]="hostRef.isShowDetailsOpened"
+      [approvalDetails]="hostRef.selectedApprovalDetails | async"
+      (close)="hostRef.onCloseDetails()"
+      (approve)="hostRef.onApprove($event)"
+      (reject)="hostRef.onReject($event)"
+    &gt;&lt;/bb-contact-manager-pending-approvals-details&gt;
+
+    &lt;bb-confirm-action-dialog
+      [isOpen]="hostRef.isApproveConfirmOpened"
+      confirmButtonColor="success"
+      (confirm)="hostRef.onConfirmApprove()"
+      (cancel)="hostRef.onCancelApprove()"
+    &gt;
+      &lt;span title
+        i18n="@@contact-manager-pending-approvals.confirm-action-dialog.approve.title"
+        data-role="contact-request-approve-confirm-dialog-title"
+      &gt;
+        Accept contact
+        {hostRef.selectedItem?.action, select, CREATE {creation} UPDATE {update} DELETE {deletion}}?
+      &lt;/span&gt;
+      &lt;span body
+        i18n="@@contact-manager-pending-approvals.confirm-action-dialog.approve.body"
+        data-role="contact-request-approve-confirm-dialog-body"
+      &gt;
+        Are you sure you want to accept this contact
+        {hostRef.selectedItem?.action, select, CREATE {creation} UPDATE {update} DELETE {deletion}}? This action cannot be undone.
+      &lt;/span&gt;
+      &lt;span cancelButtonLabel
+        i18n="@@contact-manager-pending-approvals.confirm-action-dialog.approve.button.cancel"
+        data-role="contact-request-approve-confirm-dialog-cancel-button"
+      &gt;
+        Not now
+      &lt;/span&gt;
+      &lt;span confirmButtonLabel
+        i18n="@@contact-manager-pending-approvals.confirm-action-dialog.approve.button.confirm"
+        data-role="contact-request-approve-confirm-dialog-approve-button"
+      &gt;
+        Accept
+      &lt;/span&gt;
+    &lt;/bb-confirm-action-dialog&gt;
+
+    &lt;bb-confirm-action-dialog
+      [isOpen]="hostRef.isRejectConfirmOpened"
+      confirmButtonColor="danger"
+      (confirm)="hostRef.onConfirmReject()"
+      (cancel)="hostRef.onCancelReject()"
+    &gt;
+      &lt;span title
+        i18n="@@contact-manager-pending-approvals.confirm-action-dialog.reject.title"
+        data-role="contact-request-reject-confirm-dialog-title"
+      &gt;
+        Reject contact
+        {hostRef.selectedItem?.action, select, CREATE {creation} UPDATE {update} DELETE {deletion}}?
+      &lt;/span&gt;
+      &lt;span body
+        i18n="@@contact-manager-pending-approvals.confirm-action-dialog.reject.body"
+        data-role="contact-request-reject-confirm-dialog-body"
+      &gt;
+        Are you sure you want to reject this contact
+        {hostRef.selectedItem?.action, select, CREATE {creation} UPDATE {update} DELETE {deletion}}? This action cannot be undone.
+      &lt;/span&gt;
+      &lt;span cancelButtonLabel
+        i18n="@@contact-manager-pending-approvals.confirm-action-dialog.reject.button.cancel"
+        data-role="contact-request-reject-confirm-dialog-cancel-button"
+      &gt;
+        Not now
+      &lt;/span&gt;
+      &lt;span confirmButtonLabel
+        i18n="@@contact-manager-pending-approvals.confirm-action-dialog.reject.button.confirm"
+        data-role="contact-request-reject-confirm-dialog-reject-button"
+      &gt;
+        Reject
+      &lt;/span&gt;
+    &lt;/bb-confirm-action-dialog&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #loadingList&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-loading-indicator-ui
+        text="Loading pending approvals..."
+        i18n-text="@@contact-manager-pending-approvals.loading.list.text"
+      &gt;&lt;/bb-loading-indicator-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #errorState&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-empty-state-ui
+        i18n-title="@@contact-manager-pending-approvals.error.generic.title"
+        title="Page couldn't load"
+        i18n-subtitle="@@contact-manager-pending-approvals.error.generic.subtitle"
+        subtitle="Try to reload the page or contact the system administrator."
+        iconSize="xxl"
+        iconModifier="error"
+      &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #approveContactSuccess&gt;
+    &lt;span i18n="@@contact-manager-pending-approvals.notification.approve.success" data-role="contact-request-approve-success-notification"&gt;
+      Request approved successfully
+    &lt;/span&gt;
+  &lt;/ng-template&gt;
+  &lt;ng-template #approveContactError&gt;
+    &lt;span i18n="@@contact-manager-pending-approvals.notification.approve.error" data-role="contact-request-approve-error-notification"&gt;
+      Request approval failed
+    &lt;/span&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #rejectContactSuccess&gt;
+    &lt;span i18n="@@contact-manager-pending-approvals.notification.reject.success" data-role="contact-request-reject-success-notification"&gt;
+      Request rejected successfully
+    &lt;/span&gt;
+  &lt;/ng-template&gt;
+  &lt;ng-template #rejectContactError&gt;
+    &lt;span i18n="@@contact-manager-pending-approvals.notification.reject.error" data-role="contact-request-reject-error-notification"&gt;
+      Request rejection failed
+    &lt;/span&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbContactManagerPendingApprovalsListComponentCustomizable" class="discrete">bbContactManagerPendingApprovalsListComponentCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbContactManagerPendingApprovalsListComponentCustomizable let-hostRef&gt;
+  &lt;div class="table-responsive" *ngIf="hostRef.approvals.length &gt; 0 else emptyState"&gt;
+    &lt;table class="table table-hover"
+          [bbTable]="hostRef.approvals"
+          bbTableFocus
+          (rowClick)="hostRef.onShowDetails($event)"&gt;
+      &lt;thead&gt;
+        &lt;tr data-role="list-header"&gt;
+          &lt;th scope="col"&gt;
+            &lt;span i18n="@@contact-manager-pending-approvals.header.status" data-role="list-header-status"&gt;
+              Status
+            &lt;/span&gt;
+          &lt;/th&gt;
+          &lt;th scope="col"&gt;
+            &lt;span i18n="@@contact-manager-pending-approvals.header.name" data-role="list-header-name"&gt;
+              Name
+            &lt;/span&gt;
+          &lt;/th&gt;
+          &lt;th scope="col"&gt;
+            &lt;span i18n="@@contact-manager-pending-approvals.header.request" data-role="list-header-request"&gt;
+              Request
+            &lt;/span&gt;
+          &lt;/th&gt;
+          &lt;th scope="col"&gt;
+            &lt;span i18n="@@contact-manager-pending-approvals.header.creation-date" data-role="list-header-creation-date"&gt;
+              Creation date
+            &lt;/span&gt;
+          &lt;/th&gt;
+          &lt;th scope="col" class="text-right"&gt;
+          &lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr *ngFor="let approval of hostRef.approvals" [bbRow]="approval" data-role="list-row-values"&gt;
+          &lt;td&gt;
+            &lt;bb-badge-ui
+              data-role="list-row-status"
+              class="d-none d-md-block"
+              [color]="hostRef.approvalStatusColorMap[approval?.status]"
+              [abbr]="(approval?.status).slice(0, 3)"
+              [text]="approval?.status"
+            &gt;&lt;/bb-badge-ui&gt;
+            &lt;bb-badge-ui
+              class="d-md-none d-lg-none"
+              [color]="hostRef.approvalStatusColorMap[approval?.status]"
+              [text]="approval.status"
+            &gt;&lt;/bb-badge-ui&gt;
+          &lt;/td&gt;
+          &lt;td&gt;
+            &lt;div class="font-weight-bold break-word" data-role="list-row-name"&gt;
+              {{ approval.data.name }}
+            &lt;/div&gt;
+            &lt;div class="text-muted"&gt;
+              {{ approval.data.accounts.length }}
+              &lt;ng-container i18n="@@contact-manager-pending-approvals.list.accounts"&gt;
+                {approval.data.accounts.length, select, 1 {account} other {accounts}}
+              &lt;/ng-container&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;
+            &lt;div i18n="@@contact-manager-pending-approvals.list.request"
+                 class="text-dark"
+                 data-role="list-row-request"&gt;
+                {approval.action, select, CREATE {New contact} UPDATE {Update contact} DELETE {Delete contact}}
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td data-role="list-row-creation-date"&gt;
+              &lt;ng-container&gt;{approval?.creationTime | relativeDate, select, Today { Today } Yesterday { Yesterday } other
+              {{{ approval?.creationTime | date:'mediumDate' }}} }
+              &lt;/ng-container&gt;
+              &lt;span class="text-muted"&gt;
+                &lt;ng-container i18n="@@contact-manager-pending-approvals.list.created.at"&gt; at &lt;/ng-container&gt;
+                &lt;ng-container&gt; {{approval?.creationTime | date: 'shortTime'}} &lt;/ng-container&gt;
+              &lt;/span&gt;
+          &lt;/td&gt;
+          &lt;td class="bb-toolbar text-right"&gt; &lt;!-- TODO: Remove text-right class when theme V1 is deprecated --&gt;
+            &lt;div class="bb-toolbar__section bb-toolbar__section--align-end"&gt;
+              &lt;button bbButton
+                [circle]="true"
+                class="bb-toolbar__item"
+                color="success"
+                buttonSize="sm"
+                (click)="$event.stopPropagation();hostRef.onApprove(approval)"
+                bbTooltip="Approve contact"
+                i18n-bbTooltip="Approve contact request@@contact-manager-pending-approvals.list.approve"
+                triggers="hover focus"
+                aria-label="Approve contact"
+                i18n-aria-label="Approve contact request@@contact-manager-pending-approvals.list.approve"
+                data-role="contact-request-approve-button"
+              &gt;
+                &lt;bb-icon-ui name="check"&gt;&lt;/bb-icon-ui&gt;
+              &lt;/button&gt;
+              &lt;button bbButton
+                [circle]="true"
+                class="bb-toolbar__item"
+                color="danger"
+                buttonSize="sm"
+                (click)="$event.stopPropagation();hostRef.onReject(approval)"
+                bbTooltip="Reject contact"
+                i18n-bbTooltip="Reject contact request@@contact-manager-pending-approvals.list.reject"
+                triggers="hover focus"
+                aria-label="Reject contact"
+                i18n-aria-label="Reject contact request@@contact-manager-pending-approvals.list.reject"
+                data-role="contact-request-reject-button"
+              &gt;
+                &lt;bb-icon-ui name="times"&gt;&lt;/bb-icon-ui&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+
+  &lt;div [ngSwitch]="hostRef.loadMoreMethod" class="d-flex justify-content-center"&gt;
+    &lt;ng-container *ngSwitchCase="'pagination'"&gt;
+      &lt;bb-pagination-ui
+        [page]="0"
+        [maxNavPages]="hostRef.maxNavPages"
+        [totalItems]="hostRef.totalCount"
+        [itemsPerPage]="hostRef.pageSize"
+        (pageChange)="hostRef.onPageChange($event)"
+        [boundaryLinks]="true"
+        [directionLinks]="true"
+      &gt;&lt;/bb-pagination-ui&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-container *ngSwitchCase="'load-more'"&gt;
+      &lt;bb-load-button-ui
+        color="secondary"
+        [isLoading]="hostRef.isLoading"
+        [size]="hostRef.pageSize"
+        [from]="hostRef.loadMoreFrom"
+        [totalCount]="hostRef.totalCount"
+        (paramChange)="hostRef.onLoadMore($event)"
+      &gt;
+        &lt;ng-container i18n="@@contact-manager-pending-approvals-list.load.more"&gt;Load more&lt;/ng-container&gt;
+      &lt;/bb-load-button-ui&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+
+  &lt;ng-template #emptyState&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-empty-state-ui
+        i18n-title="@@contact-manager-pending-approvals.state.nocontacts.title"
+        title="No contacts to approve"
+        i18n-subtitle="@@contact-manager-pending-approvals.state.nocontacts.subtitle"
+        subtitle="You don't have any contact requests to approve."
+        iconSize="xxl"
+        iconModifier="contacts"
+        data-role="contact-manager-pending-approvals-empty-state"
+      &gt;
+      &lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbContactManagerPendingApprovalsDetailsCustomizable" class="discrete">bbContactManagerPendingApprovalsDetailsCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbContactManagerPendingApprovalsDetailsCustomizable let-hostRef&gt;
+  &lt;bb-modal-ui
+    [isOpen]="hostRef.isOpen"
+    (cancel)="hostRef.onClose()"
+    (confirm)="hostRef.onClose()"
+  &gt;
+    &lt;bb-modal-header-ui&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;header class="bb-block bb-block-md row col-12" aria-labelledby="headerTtitle printBtn closeBtn"&gt;
+          &lt;div class="bb-stack"&gt;
+            &lt;bb-header-ui
+              headingType="h3"
+              heading="Contact request"
+              headingClasses="bb-stack__item"
+              data-role="contact-request-details-title"
+              i18n-heading="@@contact-manager-pending-approvals-details.header.title"
+            &gt;
+            &lt;/bb-header-ui&gt;
+            &lt;div class="bb-stack__item bb-sta bb-stack__item--push-right d-print-none"&gt;
+              &lt;button
+                (click)="hostRef.print()"
+                bbButton
+                buttonSize="sm"
+                circle="true"
+                color="link-dark"
+                bbTooltip="Print"
+                i18n-bbTooltip="@@contact-manager-pending-approvals-details.header.print.tooltip"
+                aria-label="Print contact details"
+                i18n-aria-label="@@contact-manager-pending-approvals-details.header.print"
+                [disabled]="hostRef.loading || hostRef.error"
+              &gt;
+                &lt;!-- ACCESSIBILITY compliance: The style attributes' content is needed for NVDA to read content on hover--&gt;
+                &lt;span
+                  class="sr-only"
+                  id="printBtn"
+                  style="min-width: 10px; min-height: 10px;"
+                  aria-label="Print batch upload details"
+                  i18n-aria-label="Print batch upload details@@batch-log.batch-upload.details.header.print"
+                &gt;
+                  Print batch upload details dialog button
+                &lt;/span&gt;
+                &lt;bb-icon-ui name="print"&gt;&lt;/bb-icon-ui&gt;
+              &lt;/button&gt;
+              &lt;button
+                bbButton
+                buttonSize="sm"
+                circle="true"
+                color="link-dark"
+                (click)="hostRef.onClose()"
+                aria-label="Close contact details dialog"
+                i18n-aria-label="@@contact-manager-pending-approvals-details.header.close"
+                bbTooltip="Close"
+                data-role="contact-request-details-close-button"
+
+              &gt;
+                &lt;span
+                  class="sr-only"
+                  id="closeBtn"
+                  style="min-width: 10px; min-height: 10px;"
+                  aria-label="Close upload detail"
+                  i18n-aria-label="Close batch upload detail@@batch-log.batch-upload.details.header.close"
+                &gt;
+                  Close batch upload details
+                &lt;/span&gt;
+                &lt;bb-icon-ui name="times"&gt;&lt;/bb-icon-ui&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div
+            class="bb-inline-stack__item"
+            *ngIf="hostRef.approvalDetails?.approvalDetails"
+          &gt;
+            &lt;span&gt;
+              &lt;bb-badge-ui
+                [color]="hostRef.statusBadgeColorMap[hostRef.approvalDetails?.approvalDetails.status]"
+                [text]="hostRef.getStatus(hostRef.approvalDetails)"
+                data-role="contact-request-details-status"
+              &gt;&lt;/bb-badge-ui&gt;
+            &lt;/span&gt;
+            &lt;span
+              class="bb-inline-stack__item bb-text-support text-small"
+              data-role="contact-request-details-created-on-date"
+            &gt;
+              &lt;ng-container i18n="@@contact-manager-pending-approvals-details.created.by"&gt;
+              Created by &lt;b&gt;{{hostRef.approval?.creatorBbId}}&lt;/b&gt; on
+              &lt;/ng-container&gt;
+              &lt;ng-container i18n="@@contact-manager-pending-approvals-details.created.date.relative"&gt;
+                {hostRef.approval?.creationTime | relativeDate, select, Today { Today } Yesterday { Yesterday } other
+                {{{ hostRef.approval?.creationTime | date:'mediumDate' }}} }
+              &lt;/ng-container&gt;
+              &lt;ng-container i18n="@@contact-manager-pending-approvals-details.created.at"&gt;
+                at
+              &lt;/ng-container&gt;
+              &lt;ng-container&gt;
+                {{hostRef.approval?.creationTime | date: 'shortTime'}}
+              &lt;/ng-container&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/header&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody&gt;
+        &lt;ng-container *ngIf="hostRef.approvalDetails; else loading"&gt;
+          &lt;div aria-live="assertive" *ngIf="hostRef.approvalDetails.approvalDetails; else errorFetchingDetails"&gt;
+            &lt;bb-contact-item-details
+              *ngIf="hostRef.approval"
+              [contactItem]="hostRef.approval.data"&gt;
+            &lt;/bb-contact-item-details&gt;
+
+            &lt;bb-collapsible-ui data-role="approval-log-toggle" *ngIf="hostRef.approvalDetails?.approvalDetails?.records?.length"&gt;
+              &lt;ng-template bbCollapsibleHeader let-toggle="toggle" let-isOpen="isOpen"&gt;
+                &lt;div class="bb-block bb-block-xl bb-stack"&gt;
+                  &lt;div class="bb-stack__item bb-stack__item--fill"&gt;
+                    &lt;b i18n="@@contact-manager-pending-approvals-details.approvalLog"&gt;
+                      Approval log
+                    &lt;/b&gt;
+                  &lt;/div&gt;
+                  &lt;div class="bb-stack__item bb-stack__item--push-right"&gt;
+                    &lt;button
+                      (click)="toggle()"
+                      bbButton
+                      color="outline"
+                      aria-label="Approval log toggle"
+                      i18n-aria-label="@@bb-approval-log.toggle.label"
+                      data-role="approval-log-toggle-button"
+                      bbTooltip="Toggle"
+                      triggers="hover focus"
+                      i18n-bbTooltip="@@contact-manager-pending-approvals-details.approval-log-toggle.tooltip"&gt;
+                      &lt;bb-icon-ui [name]="isOpen ? 'toggle-up' : 'toggle-down'"&gt;&lt;/bb-icon-ui&gt;
+                    &lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;hr&gt;
+              &lt;/ng-template&gt;
+              &lt;ng-template bbCollapsibleBody&gt;
+                &lt;div aria-live="assertive"&gt;
+                  &lt;bb-item-log-ui
+                    [isPending]="hostRef.approvalDetails?.approvalDetails?.status === 'PENDING'"
+                    [records]="hostRef.approvalDetails?.approvalDetails?.records"&gt;
+                  &lt;/bb-item-log-ui&gt;
+                &lt;/div&gt;
+              &lt;/ng-template&gt;
+            &lt;/bb-collapsible-ui&gt;
+          &lt;/div&gt;
+        &lt;/ng-container&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+    &lt;bb-modal-footer-ui&gt;
+      &lt;ng-template bbCustomModalFooter&gt;
+        &lt;div
+          *ngIf="hostRef.approvalDetails?.approvalDetails &amp;&amp; hostRef.approvalDetails?.approvalDetails.status === 'PENDING'"
+          class="bb-button-bar"
+          &gt;
+          &lt;button
+            bbButton
+            color="danger"
+            (click)="hostRef.onReject()"
+            data-role="contact-request-details-reject-button"
+            class="bb-button-bar__button"
+          &gt;
+            &lt;ng-container i18n="@@contact-manager-pending-approvals-details.button.reject"&gt;
+              Reject
+            &lt;/ng-container&gt;
+          &lt;/button&gt;
+          &lt;button
+            bbButton
+            color="success"
+            autofocus="true"
+            class="bb-button-bar__button"
+            (click)="hostRef.onApprove()"
+            data-role="contact-request-details-approve-button"
+          &gt;
+            &lt;ng-container i18n="@@contact-manager-pending-approvals-details.button.approve"&gt;
+              Approve
+            &lt;/ng-container&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-footer-ui&gt;
+  &lt;/bb-modal-ui&gt;
+
+  &lt;ng-template #loading&gt;
+    &lt;bb-loading-indicator-ui&gt;&lt;/bb-loading-indicator-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #errorFetchingDetails&gt;
+    &lt;div class="d-flex justify-content-center"&gt;
+      &lt;bb-empty-state-ui
+        class="bb-empty-state-container d-flex align-items-center"
+        title="Contact request not found"
+        i18n-title="@@contact-manager-pending-approvals-details.not-found.title"
+        title="No approval details found"
+        i18n-title="@@contact-manager-pending-approvals-details.not-found.title"
+        i18n-subtitle="@@contact-manager-pending-approvals-details.not-found.subtitle"
+        subtitle="Unable to find approval details for this contact request."
+        iconSize="xxl"
+        iconModifier="error"
+      &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

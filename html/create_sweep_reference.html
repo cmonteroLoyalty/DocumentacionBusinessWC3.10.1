@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Create sweep</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="create_sweep_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Create sweep</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html"><span class="toc-current">Create sweep</span></a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="create_sweep_reference" class="sect0">Create sweep</h1>
+          <h2 id="_preferences_4" class="discrete">Preferences</h2>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 41.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 8.3336%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configurable for</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default Rule Type</strong></p>
+<p class="tableblock">Sets the default rule type of a sweep.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultRuleType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>one-way</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default Condition</strong></p>
+<p class="tableblock">Sets the default rule condition for a one-way sweep.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultCondition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>is-higher-than</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default Frequency Count</strong></p>
+<p class="tableblock">Sets the number of Frequency periods the sweep is repeated.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultFrequencyCount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default Frequency Period</strong></p>
+<p class="tableblock">Sets the type of period when the sweep is repeated.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultFrequencyPeriod</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EvryDay</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default Starting At Time (hh:mm a)</strong></p>
+<p class="tableblock">Sets the default time when a single or the first intraday sweep is performed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultStartingAtTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>9:00 AM</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default Ending At Time (hh:mm a)</strong></p>
+<p class="tableblock">Sets the default time when an intraday sweeping ends.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultEndingAtTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>6:00 PM</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default Continue Every Hours</strong></p>
+<p class="tableblock">Sets the default number of hours to define intervals for intraday sweeps.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultContinueEveryHours</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default Continue Every Step Minutes</strong></p>
+<p class="tableblock">Sets the step value in number of minutes for the range that the bank customer can choose from for <strong>Continue every</strong>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultContinueEveryStepMinutes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>15</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default Starting At Time Step Minutes</strong></p>
+<p class="tableblock">Sets the step value in number of minutes for the range that the bank customer can choose from for <strong>Starting at</strong>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultStartingAtTimeStepMinutes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>30</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default Ending At Time Step Minutes</strong></p>
+<p class="tableblock">Sets the step value in number of minutes for the range that the bank customer can choose from for <strong>Ending at</strong>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultEndingAtTimeStepMinutes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>30</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_access_control_3" class="discrete">Access Control</h2>
+<div class="paragraph">
+<p>This widget has no access control.</p>
+</div>
+<h2 id="_extension_slots_6" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_sweep_slots_1.svg?ver=3.10.1" alt="create sweep slots 1"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_sweep_slots_2.svg?ver=3.10.1" alt="create sweep slots 2"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_sweep_slots_3.svg?ver=3.10.1" alt="create sweep slots 3"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_sweep_slots_4.svg?ver=3.10.1" alt="create sweep slots 4"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementCreateSweepModalCustomizable">bbCashManagementCreateSweepModalCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementSweepEditorFormCustomizable">bbCashManagementSweepEditorFormCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementSweepPagesContainerStepperCustomizable">bbCashManagementSweepPagesContainerStepperCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementSweepBasicInfoPageCustomizable">bbCashManagementSweepBasicInfoPageCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementSweepRuleTypeEditorCustomizable">bbCashManagementSweepRuleTypeEditorCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementSweepConditionEditorCustomizable">bbCashManagementSweepConditionEditorCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementSweepSchedulePageCustomizable">bbCashManagementSweepSchedulePageCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementSweepStartDateSelectorCustomizable">bbCashManagementSweepStartDateSelectorCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementSweepExpiryDateSelectorCustomizable">bbCashManagementSweepExpiryDateSelectorCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementSweepRepeatSettingsEditorCustomizable">bbCashManagementSweepRepeatSettingsEditorCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementSweepRepeatPeriodSelectorCustomizable">bbCashManagementSweepRepeatPeriodSelectorCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementSweepRepeatPeriodStartTimeSelectorCustomizable">bbCashManagementSweepRepeatPeriodStartTimeSelectorCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementSweepContinuingEveryTimeSelectorCustomizable">bbCashManagementSweepContinuingEveryTimeSelectorCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementSweepRepeatPeriodEndTimeSelectorCustomizable">bbCashManagementSweepRepeatPeriodEndTimeSelectorCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementSweepSummaryPageCustomizable">bbCashManagementSweepSummaryPageCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementCreateSweepModalCustomizable_discard">bbCashManagementCreateSweepModalCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementCreateSweepConfirmationModalCustomizable">bbCashManagementCreateSweepConfirmationModalCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_sweep_reference.html#bbCashManagementSweepAccountSelectorCustomizable">bbCashManagementSweepAccountSelectorCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbCashManagementCreateSweepModalCustomizable" class="discrete">bbCashManagementCreateSweepModalCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbCashManagementCreateSweepModalCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementCreateSweepModalCustomizable let-hostRef&gt;
+  &lt;bb-modal-ui
+    [modalOptions]="hostRef.modalOptions"
+    [isOpen]="true"
+    data-role="cash-management-create-sweep-modal"
+    (cancel)="hostRef.tryToCloseModal()"
+  &gt;
+    &lt;bb-modal-header-ui data-role="cash-management-create-sweep-modal-window-header"&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;bb-header-ui
+          headingType="h2"
+          heading="New Sweep"
+          i18n-heading="Create sweep modal header@@cash-management.create-sweep.create-sweep-modal.header"
+          ngbAutofocus
+        &gt;
+        &lt;/bb-header-ui&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody&gt;
+        &lt;bb-cash-management-sweep-editor-form (tryClose)="hostRef.tryToCloseModal()" (sweepCreated)="hostRef.onSweepCreated($event.newSweep)"&gt;
+        &lt;/bb-cash-management-sweep-editor-form&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementSweepEditorFormCustomizable" class="discrete">bbCashManagementSweepEditorFormCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbCashManagementSweepEditorFormCustomizable
+  [bbHostRef]="this"
+  [bbTemplateContext]="{
+    isLoading: isLoading$ | async
+  }"
+&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementSweepEditorFormCustomizable let-hostRef let-isLoading="context.isLoading"&gt;
+  &lt;div class="create-sweep-form-wrapper" #pageWrapper&gt;
+    &lt;bb-cash-management-sweep-pages-container [showStepper]="true" #pageContainer&gt;
+      &lt;ng-template
+        bbCashManagementSweepPage
+        let-navigation
+        label="Set type of rule"
+        i18n-label="Create Sweep modal stepper Step 1 label@@cash-management.create-sweep.modal.stepper.step-1.label"
+        ariaLabel="Step 1 out of 3"
+        i18n-ariaLabel="Create Sweep modal stepper Step 1 aria-label@@cash-management.create-sweep.modal.stepper.step-1.aria-label"
+      &gt;
+        &lt;hr class="my-4"    /&gt;
+        &lt;div  #basicInfoEl&gt;
+          &lt;bb-cash-management-sweep-basic-info-page
+            [sweepFormData]="hostRef.sweepFormData?.get('basic')"
+            data-role="cash-management-create-sweep-basic-info-page"
+          &gt;
+          &lt;/bb-cash-management-sweep-basic-info-page&gt;
+        &lt;/div&gt;
+        &lt;div class="row justify-content-sm-end mt-5 pb-3"&gt;
+          &lt;div class="bb-button-bar"&gt;
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              bbButton
+              i18n="Create Sweep modal navigation Next button@@cash-management.create-sweep.modal.navigation.next"
+              aria-label="Next"
+              i18n-aria-label="Create Sweep modal navigation Next button@@cash-management.create-sweep.modal.navigation.next"
+              type="button"
+              data-role="cash-management-create-sweep-basic-info-page-nav-next-button"
+              (click)="
+              hostRef.navigateToError(basicInfoEl);
+              hostRef.navigateToTop(pageWrapper);
+                hostRef.markBasicPageAsTouched() &amp;&amp;
+                  hostRef.sweepFormData.get('basic').valid &amp;&amp;
+                  navigation.goToNextPage()
+              "
+            &gt;
+              Next
+            &lt;/button&gt;
+
+            &lt;ng-container *ngTemplateOutlet="cancelBtn"&gt;&lt;/ng-container&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+
+      &lt;ng-template
+        bbCashManagementSweepPage
+        let-navigation
+        label="Schedule sweep"
+        i18n-label="Create Sweep modal stepper Step 2 label@@cash-management.create-sweep.modal.stepper.step-2.label"
+        ariaLabel="Step 2 out of 3"
+        i18n-ariaLabel="Create Sweep modal stepper Step 2 aria-label@@cash-management.create-sweep.modal.stepper.step-2.aria-label"
+      &gt;
+        &lt;hr class="my-4" /&gt;
+
+        &lt;bb-cash-management-sweep-schedule-page
+          [sweepFormData]="hostRef.sweepFormData?.get('schedule')"
+          data-role="cash-management-create-sweep-schedule-page"
+        &gt;
+        &lt;/bb-cash-management-sweep-schedule-page&gt;
+
+        &lt;div class="row justify-content-sm-end mt-5 pb-3"&gt;
+          &lt;div class="bb-button-bar"&gt;
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              i18n="Create Sweep modal navigation Next button@@cash-management.create-sweep.modal.navigation.next"
+              aria-label="Next"
+              i18n-aria-label="Create Sweep modal navigation Next button@@cash-management.create-sweep.modal.navigation.next"
+              type="button"
+              data-role="cash-management-create-sweep-schedule-page-nav-next-button"
+              (click)="
+                      hostRef.navigateToTop(pageWrapper);
+                hostRef.markSchedulePageAsTouched() &amp;&amp;
+                  hostRef.sweepFormData.get('schedule').valid &amp;&amp;
+                  navigation.goToNextPage()
+              "
+            &gt;
+              Next
+            &lt;/button&gt;
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              color="secondary"
+              i18n="Create Sweep modal navigation Back button@@cash-management.create-sweep.modal.navigation.back"
+              aria-label="Back"
+              i18n-aria-label="Create Sweep modal navigation Back button@@cash-management.create-sweep.modal.navigation.back"
+              type="button"
+              data-role="cash-management-create-sweep-schedule-page-nav-back-button"
+              (click)="navigation.goToPrevPage();  hostRef.navigateToTop(pageWrapper); hostRef.setAmountToDefault()"
+            &gt;
+              Back
+            &lt;/button&gt;
+            &lt;ng-container *ngTemplateOutlet="cancelBtn"&gt;&lt;/ng-container&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+
+      &lt;ng-template
+        bbCashManagementSweepPage
+        let-navigation
+        label="Review sweep"
+        i18n-label="Create Sweep modal stepper Step 3 label@@cash-management.create-sweep.modal.stepper.step-3.label"
+        ariaLabel="Step 3 out of 3"
+        i18n-ariaLabel="Create Sweep modal stepper Step 3 aria-label@@cash-management.create-sweep.modal.stepper.step-3.aria-label"
+      &gt;
+        &lt;hr class="my-4" /&gt;
+
+        &lt;bb-cash-management-sweep-summary-page
+          [sweepFormData]="hostRef.sweepFormData"
+          data-role="cash-management-create-sweep-summary-page"
+        &gt;
+        &lt;/bb-cash-management-sweep-summary-page&gt;
+
+        &lt;div class="row justify-content-sm-end mt-5 pb-3"&gt;
+          &lt;div class="bb-button-bar"&gt;
+            &lt;div class="btn-group pt-2 pb-2 col-12 col-sm-auto pr-0 pl-0 pr-sm-2 pl-sm-2 pt-sm-0 pb-sm-0"&gt;
+              &lt;button    class="bb-button-bar__button"
+                         bbButton
+                         (click)="hostRef.sweepFormData.valid &amp;&amp; !isLoading &amp;&amp; hostRef.submitForm()"
+                         data-role="cash-management-create-sweep-summary-page-submit-button"
+                         aria-label="Submit"
+                         i18n-aria-label="Create Sweep modal navigation Submit button@@cash-management.create-sweep.modal.navigation.submit"
+              &gt;
+                &lt;span
+                  i18n="Create Sweep modal navigation Submit button@@cash-management.create-sweep.modal.navigation.submit"
+                  [ngClass]="{ invisible: isLoading }"
+                &gt;
+                  Submit
+                &lt;/span&gt;
+                &lt;bb-loading-indicator-ui
+                  *ngIf="isLoading"
+                  class="position-absolute"
+                  loaderSize="sm"
+                &gt;&lt;/bb-loading-indicator-ui&gt;
+              &lt;/button&gt;
+              &lt;bb-dropdown-menu-ui
+                class="btn-group mb-3 mb-sm-0"
+                icon="caret-down"
+                data-role="cash-management-create-sweep-modal-window-split-button"
+              &gt;
+                &lt;ng-template bbDropdownMenuItem&gt;
+                  &lt;a
+                    role="menuitem"
+                    (bbKeyboardClick)="hostRef.sweepFormData.valid &amp;&amp; hostRef.onButtonDropdownSelect(pageContainer)"
+                    data-role="cash-management-create-sweep-modal-window-split-button-create-new-option"
+                  &gt;
+                    &lt;span
+                      class="dropdown-item"
+                      role="button"
+                      i18n="Create Sweep modal navigation Submit and Create new button@@cash-management.create-sweep.modal.navigation.submit.createNew"
+                    &gt;
+                      Submit &amp; Create new
+                    &lt;/span&gt;
+                  &lt;/a&gt;
+                &lt;/ng-template&gt;
+              &lt;/bb-dropdown-menu-ui&gt;
+            &lt;/div&gt;
+            &lt;button
+              bbButton
+              class="bb-button-bar__button"
+              color="secondary"
+              data-role="cash-management-create-sweep-summary-page-nav-back-button"
+              (click)="navigation.goToPrevPage();  hostRef.navigateToTop(pageWrapper);"
+              type="button"
+              i18n="Create Sweep modal navigation Back button@@cash-management.create-sweep.modal.navigation.back"
+              aria-label="Back"
+              i18n-aria-label="Create Sweep modal navigation Back button@@cash-management.create-sweep.modal.navigation.back"
+            &gt;
+              Back
+            &lt;/button&gt;
+            &lt;ng-container *ngTemplateOutlet="cancelBtn"&gt;&lt;/ng-container&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-cash-management-sweep-pages-container&gt;
+  &lt;/div&gt;
+
+  &lt;ng-template #cancelBtn&gt;
+    &lt;button
+      bbButton
+      class="bb-button-bar__button bb-button-bar__button--across"
+      color="link"
+      data-role="cash-management-create-sweep-modal-window-close-button"
+      (click)="hostRef.onTryClose()"
+      i18n="Close Sweep modal button@@cash-management.create-sweep.modal.close"
+      aria-label="Cancel"
+      i18n-aria-label="Close Sweep modal button@@cash-management.create-sweep.modal.close"
+    &gt;
+      Cancel
+    &lt;/button&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;
+
+
+
+&lt;ng-template #notificationSuccess&gt;
+  &lt;span i18n="Create sweep notification success@@cash-management.create-sweep.notification.success" class="bb-cash-management-sweep-name-wrapper"&gt;
+    Sweep {{ this.sweepName }} was created successfully.
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #notificationSuccessHeader&gt;
+  &lt;span i18n="Create sweep notification success header@@cash-management.create-sweep.notification.success.header"&gt;
+    Success!
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #notificationError&gt;
+  &lt;span class="text-break" i18n="Create sweep notification error@@cash-management.create-sweep.notification.error"&gt;
+    Sweep {{ this.sweepName }} could not be created. Please try again.
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #notificationErrorHeader&gt;
+  &lt;span i18n="Create sweep notification error header@@cash-management.create-sweep.notification.error.header"&gt;
+    Failure!
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+
+
+&lt;div&gt;
+
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementSweepPagesContainerStepperCustomizable" class="discrete">bbCashManagementSweepPagesContainerStepperCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbCashManagementSweepPagesContainerStepperCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementSweepPagesContainerStepperCustomizable let-hostRef&gt;
+  &lt;ng-container *ngIf="hostRef.showStepper"&gt;
+    &lt;ng-container *ngFor="let page of hostRef.pages"&gt;
+        &lt;b *ngIf="hostRef.currentPage === page" class="d-block d-sm-none pl-3"&gt;
+          {{page.data.label}}
+        &lt;/b&gt;
+    &lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+  &lt;bb-stepper-ui *ngIf="hostRef.showStepper" data-role="cash-management-create-sweep-stepper"&gt;
+    &lt;bb-stepper-step-ui
+      *ngFor="let page of hostRef.pages"
+      [label]="page.data.label"
+      [ariaLabel]="page.data.ariaLabel"
+      [isChecked]="page.state.isChecked"
+      [isActive]="page.state.isActive || hostRef.currentPage === page"
+      [isCurrent]="hostRef.currentPage === page"
+    &gt;
+    &lt;/bb-stepper-step-ui&gt;
+  &lt;/bb-stepper-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementSweepBasicInfoPageCustomizable" class="discrete">bbCashManagementSweepBasicInfoPageCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbCashManagementSweepBasicInfoPageCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementSweepBasicInfoPageCustomizable let-hostRef&gt;
+  &lt;div class="position-relative"&gt;
+    &lt;bb-input-text-ui
+      [id]="'sweep-name'"
+      [required]="true"
+      [autofocus]="true"
+      [formControl]="hostRef.nameControl"
+      label="Sweep name"
+      labelClasses="font-weight-bold"
+      i18n-label="Label of Sweep name input@@cash-management.create-sweep.sweep-name-editor.label"
+      aria-label="Sweep name"
+      i18n-aria-label="Aria Label of Sweep name input@@cash-management.create-sweep.sweep-name-editor.aria-label"
+      placeholder="Enter name"
+      i18n-placeholder="Placeholder for Sweep name input@@cash-management.create-sweep.sweep-name-editor.placeholder"
+      data-role="cash-management-sweep-name-input"
+    &gt;
+    &lt;/bb-input-text-ui&gt;
+    &lt;bb-input-validation-message-ui
+      class="position-absolute"
+      [showErrors]="hostRef.nameControl?.invalid &amp;&amp; (hostRef.nameControl?.dirty || hostRef.nameControl?.touched)"
+    &gt;
+      &lt;span
+        data-role="cash-management-sweep-name-required-validation-message"
+        i18n="Field is required validation message@@cash-management.create-sweep.sweep-name-editor.validation.messages.required"
+        *ngIf="hostRef.nameControl?.hasError('required')"
+      &gt;
+        Please enter sweep name
+      &lt;/span&gt;
+    &lt;/bb-input-validation-message-ui&gt;
+  &lt;/div&gt;
+  &lt;div class="row my-4"&gt;
+    &lt;bb-cash-management-sweep-rule-type-editor
+      class="col-12 col-sm-7 mw-100 sweep-rule-editor"
+      [formGroup]="hostRef.sweepFormData"
+    &gt;
+    &lt;/bb-cash-management-sweep-rule-type-editor&gt;
+  &lt;/div&gt;
+  &lt;bb-cash-management-sweep-condition-editor
+    i18n-currencyPlaceholder="Currency placeholder of amount inputs@@cash-management.create-sweep.sweep-basic-info-page.currency-placeholder"
+    currencyPlaceholder="CCY"
+    [formGroup]="hostRef.sweepFormData"
+  &gt;&lt;/bb-cash-management-sweep-condition-editor&gt;
+  &lt;div class="pt-2"&gt;
+    &lt;hr class="my-4" /&gt;
+  &lt;/div&gt;
+  &lt;label class="bb-label" for="sweep-description" data-role="cash-management-sweep-description-label"&gt;
+    &lt;span i18n="Sweep description label@@cash-management.create-sweep.sweep-description-editor.label"&gt;Description&lt;/span&gt;
+    &lt;span&gt;&amp;nbsp;&lt;/span&gt;
+    &lt;span class="bb-label__annotation"
+          i18n="Sweep description optional label@@cash-management.create-sweep.sweep-description-editor.optional.label"
+      &gt;(Optional)&lt;/span
+    &gt;
+  &lt;/label&gt;
+  &lt;bb-textarea-ui
+    [id]="'sweep-description'"
+    aria-label="Sweep description"
+    i18n-aria-label="Sweep description aria-label@@cash-management.create-sweep.sweep-description-editor.aria-label"
+    placeholder="Enter description"
+    i18n-placeholder="Sweep description placeholder@@cash-management.create-sweep.sweep-description-editor.placeholder"
+    [formControl]="hostRef.descControl"
+    data-role="cash-management-sweep-description-textarea"
+    [showCharCounter]="true"
+    [minLength]="0"
+    [maxLength]="140"
+    [rows]="3"
+    [cols]="50"
+    wrap="hard"
+  &gt;
+  &lt;/bb-textarea-ui&gt;
+
+  &lt;ng-container
+    bbCashManagementSweepBasicInfoPageCustomFieldsCustomizable
+    [bbHostRef]="hostRef"
+  &gt;&lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementSweepRuleTypeEditorCustomizable" class="discrete">bbCashManagementSweepRuleTypeEditorCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbCashManagementSweepRuleTypeEditorCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementSweepRuleTypeEditorCustomizable let-hostRef&gt;
+  &lt;div class="btn-group btn-group-toggle d-flex sweep-rule-type-wrapper mt-2"&gt;
+    &lt;button
+      bbButton
+      class="w-100 sweep-rule-type"
+      [color]="hostRef.ruleTypeControl?.value === hostRef.sweepRuleTypes.OneWay ? 'primary' : 'secondary'"
+      [block]="true"
+      (click)="hostRef.onSelect(hostRef.sweepRuleTypes.OneWay)"
+      aria-label="One way"
+      i18n-aria-label="One way sweep rule type@@cash-management.create-sweep.sweep-rule-type-editor.type.one-way"
+      data-role="cash-management-sweep-rule-type-one-way"
+    &gt;
+      &lt;span i18n="One way sweep rule type@@cash-management.create-sweep.sweep-rule-type-editor.type.one-way"&gt;
+        One way
+      &lt;/span&gt;
+      &lt;span&gt;
+        &amp;nbsp;
+      &lt;/span&gt;
+      &lt;span i18n="Sweep word@@cash-management.create-sweep.sweep-rule-type-editor.sweep" class="d-sm-inline d-none"&gt;
+        sweep
+      &lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button
+      bbButton
+      [block]="true"
+      (click)="hostRef.onSelect(hostRef.sweepRuleTypes.TwoWay)"
+      class="w-100 mt-0 sweep-rule-type"
+      [color]="hostRef.ruleTypeControl?.value === hostRef.sweepRuleTypes.TwoWay ? 'primary' : 'secondary'"
+      aria-label="Two way"
+      i18n-aria-label="One way sweep rule type@@cash-management.create-sweep.sweep-rule-type-editor.type.two-way"
+      data-role="cash-management-sweep-rule-type-two-way"
+    &gt;
+      &lt;span i18n="Two way sweep rule type@@cash-management.create-sweep.sweep-rule-type-editor.type.two-way"&gt;
+        Two way
+      &lt;/span&gt;
+      &lt;span&gt;
+        &amp;nbsp;
+      &lt;/span&gt;
+      &lt;span i18n="Sweep word@@cash-management.create-sweep.sweep-rule-type-editor.sweep" class="d-sm-inline d-none"&gt;
+        sweep
+      &lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementSweepConditionEditorCustomizable" class="discrete">bbCashManagementSweepConditionEditorCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbCashManagementSweepConditionEditorCustomizable
+              [bbHostRef]="this"
+&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementSweepConditionEditorCustomizable let-hostRef&gt;
+  &lt;div class="mb-4 d-flex flex-column"&gt;
+    &lt;bb-header-ui
+      data-role="cash-management-create-sweep-heading-first"
+      headingType="h6"
+      headingClasses="mb-4"
+      heading="If the following conditions are met:"
+      i18n-heading="Sweep condition editor header@@cash-management.create-sweep.sweep-condition-editor.header"
+    &gt;
+    &lt;/bb-header-ui&gt;
+    &lt;div class="mb-3 position-relative"&gt;
+      &lt;label
+        for="sweep-target-account"
+        class="font-weight-bold"
+        data-role="cash-management-create-sweep-condition-target-account-label"
+        i18n="Target account label@@cash-management.create-sweep.sweep-condition-editor.target-account.label"
+      &gt;Balance of the account&lt;/label&gt;
+      &lt;bb-cash-management-sweep-account-selector
+        id="sweep-target-account"
+        aria-label="Balance of the account"
+        i18n-aria-label="Target account label@@cash-management.create-sweep.sweep-condition-editor.target-account.label"
+        [placeholder]="'Select target account'"
+        i18n-placeholder="Target account placeholder@@cash-management.create-sweep.sweep-condition-editor.target-account.placeholder"
+        [accountList]="hostRef.accounts$ | async"
+        [selectedAccountControl]="hostRef.targetAccountControl"
+        data-role="cash-management-create-sweep-condition-target-account-selector"
+      &gt;&lt;/bb-cash-management-sweep-account-selector&gt;
+
+      &lt;bb-input-validation-message-ui
+        [showErrors]="
+          hostRef.targetAccountControl?.invalid &amp;&amp;
+          (hostRef.targetAccountControl?.dirty || hostRef.targetAccountControl?.touched)
+        "
+      &gt;
+        &lt;span
+          data-role="cash-management-sweep-target-account-required-validation-message"
+          i18n="Account is required validation message@@cash-management.create-sweep.sweep-condition-editor.target-account.validation.messages.required"
+          *ngIf="hostRef.targetAccountControl?.hasError('required')"
+        &gt;
+          Please select an account
+        &lt;/span&gt;
+      &lt;/bb-input-validation-message-ui&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-12 col-sm-5 d-flex align-items-end mb-2"&gt;
+        &lt;bb-dropdown-single-select-ui
+          [iconName]="'caret-down'"
+          class="w-100"
+          aria-label="Sweep conditions"
+          i18n-aria-label="Sweep conditions dropdown@@cash-management.create-sweep.sweep-condition-editor.sweep-conditions-dropdown.label"
+          data-role="cash-management-create-sweep-conditions-dropdown"
+          [formControl]="hostRef.sweepConditionControl"
+        &gt;
+          &lt;bb-dropdown-single-select-option-ui
+            i18n-label="Sweep conditions dropdown is higher than option@@cash-management.create-sweep.sweep-condition-dropdown-option.isHigherThan"
+            label="is higher than"
+            [value]="hostRef.SweepTransferCondition.IsHigherThan"
+          &gt;
+          &lt;/bb-dropdown-single-select-option-ui&gt;
+          &lt;bb-dropdown-single-select-option-ui
+            i18n-label="Sweep conditions dropdown is lower than option@@cash-management.create-sweep.sweep-condition-dropdown-option.isLowerThan"
+            label="is lower than"
+            [value]="hostRef.SweepTransferCondition.IsLowerThan"
+          &gt;
+          &lt;/bb-dropdown-single-select-option-ui&gt;
+        &lt;/bb-dropdown-single-select-ui&gt;
+      &lt;/div&gt;
+      &lt;div class="col-12 col-sm-7"&gt;
+        &lt;div class="d-flex"&gt;
+          &lt;div class="col px-0"&gt;
+            &lt;bb-currency-input-ui
+              maxlength="13"
+              data-role="cash-management-create-sweep-amount-editor"
+              i18n-integerLabel="Label of Sweep amount input@@cash-management.create-sweep.sweep-amount-editor.label"
+              integerLabel="Amount"
+              labelClasses="font-weight-bold"
+              [integer]="true"
+              [formControl]="hostRef.amountControl"
+              [currencies]="hostRef.selectedTargetAccountCurrency$ | async"
+              [allowNegativeValue]="true"
+            &gt;
+            &lt;/bb-currency-input-ui&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row" *ngIf="hostRef.ruleTypeControl?.value === hostRef.ruleType.TwoWay"&gt;
+      &lt;div class="col-12 col-sm-5 d-flex align-items-end mb-2"&gt;
+        &lt;bb-dropdown-single-select-ui
+          [iconName]="'caret-down'"
+          class="w-100"
+          [disabled]="true"
+          aria-label="Sweep conditions"
+          i18n-aria-label="Sweep conditions dropdown@@cash-management.create-sweep.sweep-condition-editor.sweep-conditions-dropdown.label"
+          data-role="cash-management-create-sweep-conditions-is-higher-than-dropdown"
+          [ngModel]="hostRef.SweepTransferCondition.IsHigherThan"
+        &gt;
+          &lt;bb-dropdown-single-select-option-ui
+            i18n-label="Sweep conditions dropdown is higher than option@@cash-management.create-sweep.sweep-condition-dropdown-option.isHigherThan"
+            label="is higher than"
+            [value]="hostRef.SweepTransferCondition.IsHigherThan"
+          &gt;
+          &lt;/bb-dropdown-single-select-option-ui&gt;
+        &lt;/bb-dropdown-single-select-ui&gt;
+      &lt;/div&gt;
+      &lt;div class="col-12 col-sm-7 mt-sm-0"&gt;
+        &lt;div class="d-flex" data-role="cash-management-create-sweep-is-higher-than-amount-container"&gt;
+          &lt;div class="col px-0"&gt;
+            &lt;bb-currency-input-ui
+              [validateByLowerBound]="hostRef.lowerBoundAmountControl?.value"
+              class="d-block sweep-amount"
+              maxlength="13"
+              data-role="cash-management-create-sweep-is-higher-than-amount-editor"
+              [integer]="true"
+              i18n-integerLabel="Label of Sweep amount input@@cash-management.create-sweep.sweep-amount-editor.label"
+              integerLabel="Amount"
+              labelClasses="font-weight-bold"
+              [formControl]="hostRef.upperBoundAmountControl"
+              [currencies]="hostRef.selectedTargetAccountCurrency$ | async"
+              [allowNegativeValue]="true"
+            &gt;
+              &lt;bb-input-validation-message-ui
+                bbValidationMessage
+                [showErrors]="
+                hostRef.upperBoundAmountControl?.invalid &amp;&amp;
+                (hostRef.upperBoundAmountControl?.dirty ||
+                  hostRef.upperBoundAmountControl?.touched)
+              "
+              &gt;
+                &lt;span
+                  data-role="cash-management-sweep-amount-validation-message"
+                  i18n="Sweep amount validation message@@cash-management.create-sweep.sweep-amount-editor.validation.messages.amount"
+                &gt;
+                  Please check the amounts
+                &lt;/span&gt;
+              &lt;/bb-input-validation-message-ui&gt;
+            &lt;/bb-currency-input-ui&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;hr class="my-4" /&gt;
+  &lt;div class="position-relative"&gt;
+    &lt;bb-header-ui
+      data-role="cash-management-create-sweep-heading-second"
+      headingType="h6"
+      headingClasses="mb-4"
+      heading="Then do the following:"
+      i18n-heading="Sweep condition editor action header@@cash-management.create-sweep.sweep-condition-editor.action.header"
+    &gt;
+    &lt;/bb-header-ui&gt;
+    &lt;label
+      *ngIf="hostRef.ruleTypeControl?.value | isTwoWaySweep"
+      for="sweep-swept-account"
+      class="font-weight-bold d-flex align-items-center"
+      data-role="cash-management-create-sweep-condition-swept-account-label"
+    &gt;
+      &lt;bb-icon-ui name="vertical-align-center" class="mr-2 text-dark" data-role="create-sweep-basic-rule-type"&gt;
+      &lt;/bb-icon-ui&gt;
+      &lt;span
+        i18n="Swept account label@@cash-management.create-sweep.sweep-condition-editor.two-way-sweep.swept-account.label"
+      &gt;
+        Transfer the difference from / to account
+      &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label
+      *ngIf="
+        !(hostRef.ruleTypeControl?.value | isTwoWaySweep) &amp;&amp;
+        hostRef.sweepConditionControl?.value === hostRef.SweepTransferCondition.IsHigherThan
+      "
+      for="sweep-swept-account"
+      class="font-weight-bold d-flex align-items-center"
+      data-role="cash-management-create-sweep-condition-swept-account-label"
+    &gt;
+      &lt;bb-icon-ui name="vertical-align-bottom" class="mr-2 text-info" data-role="create-sweep-basic-rule-type"&gt;
+      &lt;/bb-icon-ui&gt;
+      &lt;span
+        i18n="Swept account label@@cash-management.create-sweep.sweep-condition-editor.surplus-sweep.swept-account.label"
+      &gt;
+        Transfer the difference to account
+      &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label
+      *ngIf="
+        !(hostRef.ruleTypeControl?.value | isTwoWaySweep) &amp;&amp;
+        hostRef.sweepConditionControl?.value === hostRef.SweepTransferCondition.IsLowerThan
+      "
+      for="sweep-swept-account"
+      class="font-weight-bold d-flex align-items-center"
+      data-role="cash-management-create-sweep-condition-swept-account-label"
+    &gt;
+      &lt;bb-icon-ui name="vertical-align-top" class="mr-2 text-danger" data-role="create-sweep-basic-rule-type"&gt;
+      &lt;/bb-icon-ui&gt;
+      &lt;span
+        i18n="Swept account label@@cash-management.create-sweep.sweep-condition-editor.maintenance-sweep.swept-account.label"
+      &gt;
+        Transfer the difference from account
+      &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;bb-cash-management-sweep-account-selector
+      id="sweep-swept-account"
+      aria-label="Transfer the difference to account"
+      i18n-aria-label="Swept account label@@cash-management.create-sweep.sweep-condition-editor.swept-account.label"
+      [placeholder]="'Select swept account'"
+      i18n-placeholder="Swept account placeholder@@cash-management.create-sweep.sweep-condition-editor.swept-account.placeholder"
+      [accountList]="hostRef.sweptAccounts$ | async"
+      [selectedAccountControl]="hostRef.sweptAccountControl"
+      data-role="cash-management-create-sweep-condition-swept-account-selector"
+    &gt;&lt;/bb-cash-management-sweep-account-selector&gt;
+    &lt;bb-input-validation-message-ui
+      class="position-absolute"
+      [showErrors]="
+        hostRef.sweptAccountControl?.invalid &amp;&amp;
+        (hostRef.sweptAccountControl?.dirty || hostRef.sweptAccountControl?.touched)
+      "
+    &gt;
+      &lt;span
+        data-role="cash-management-sweep-swept-account-required-validation-message"
+        i18n="Account is required validation message@@cash-management.create-sweep.sweep-condition-editor.swept-account.validation.messages.required"
+        *ngIf="hostRef.sweptAccountControl?.hasError('required')"
+      &gt;
+        Please select an account
+      &lt;/span&gt;
+    &lt;/bb-input-validation-message-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementSweepSchedulePageCustomizable" class="discrete">bbCashManagementSweepSchedulePageCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbCashManagementSweepSchedulePageCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementSweepSchedulePageCustomizable let-hostRef&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-12 col-sm-5"&gt;
+      &lt;bb-cash-management-sweep-start-date-selector [formGroup]="hostRef.sweepFormData"&gt;
+      &lt;/bb-cash-management-sweep-start-date-selector&gt;
+    &lt;/div&gt;
+    &lt;div class="col-12 col-sm-7 mt-4 mt-sm-0"&gt;
+      &lt;bb-cash-management-sweep-expiry-date-selector
+        [minDate]="hostRef.minExpiryDate$ | async"
+        [formGroup]="hostRef.sweepFormData"
+      &gt;
+      &lt;/bb-cash-management-sweep-expiry-date-selector&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;hr class="my-4" /&gt;
+  &lt;bb-cash-management-sweep-repeat-settings-editor
+    [formGroup]="hostRef.sweepFormData"
+    data-role="cash-management-sweep-repeat-settings-editor"
+  &gt;
+  &lt;/bb-cash-management-sweep-repeat-settings-editor&gt;
+
+  &lt;ng-container
+    bbCashManagementSweepSchedulePageCustomFieldsCustomizable
+    [bbHostRef]="hostRef"
+  &gt;&lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementSweepStartDateSelectorCustomizable" class="discrete">bbCashManagementSweepStartDateSelectorCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbCashManagementSweepStartDateSelectorCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementSweepStartDateSelectorCustomizable let-hostRef&gt;
+  &lt;bb-input-datepicker-ui
+    [id]="'sweep-start-date'"
+    label="Start date"
+    i18n-label="Sweep start date label@@cash-management.create-sweep.sweep-start-date-selector.label"
+    labelClasses="font-weight-bold"
+    icon="calendar-today"
+    aria-label="Start date"
+    i18n-aria-label="Sweep start date label@@cash-management.create-sweep.sweep-start-date-selector.label"
+    data-role="cash-management-sweep-start-date-input"
+    [required]="true"
+    [minDate]="hostRef.minSelectableDate"
+    [formControl]="hostRef.startDateControl"
+  &gt;
+  &lt;/bb-input-datepicker-ui&gt;
+  &lt;bb-input-validation-message-ui
+    data-role="cash-management-start-date-validation-error"
+    [showErrors]="hostRef.startDateControl?.invalid"
+  &gt;
+    &lt;span
+      *ngIf="hostRef.startDateControl?.hasError('required')"
+      i18n="Sweep start date required error@@cash-management.create-sweep.sweep-start-date-selector.required.error-message"
+    &gt;
+      Please select a date
+    &lt;/span&gt;
+    &lt;span
+      *ngIf="hostRef.startDateControl?.hasError('invalidDateFormat')"
+      i18n="Sweep start date format error@@cash-management.create-sweep.sweep-start-date-selector.format.error-message"
+    &gt;
+      Please provide valid format
+    &lt;/span&gt;
+    &lt;span
+      *ngIf="
+        hostRef.startDateControl?.hasError('dateLessThanMinDate') &amp;&amp;
+        !hostRef.startDateControl?.hasError('invalidDateFormat')
+      "
+      i18n="Sweep start date invalid date error@@cash-management.create-sweep.sweep-start-date-selector.invalid-date.error-message"
+    &gt;
+      Please select another date starting from today
+    &lt;/span&gt;
+  &lt;/bb-input-validation-message-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementSweepExpiryDateSelectorCustomizable" class="discrete">bbCashManagementSweepExpiryDateSelectorCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbCashManagementSweepExpiryDateSelectorCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementSweepExpiryDateSelectorCustomizable let-hostRef&gt;
+  &lt;label
+    i18n="Sweep expiry date type label@@cash-management.create-sweep.sweep-expiry-date-selector.label"
+    class="font-weight-bold"
+  &gt;
+    Expiry date
+  &lt;/label&gt;
+  &lt;div class="d-flex"&gt;
+    &lt;bb-input-radio-group-ui
+      aria-label="Sweep expiry date type"
+      i18n-aria-label="Sweep expiry date type label@@cash-management.create-sweep.sweep-expiry-date-selector.expiry-type.label"
+      data-role="cash-management-sweep-expiry-date-type"
+      [formControl]="hostRef.expiryTypeControl"
+    &gt;
+      &lt;bb-input-radio-ui
+        [value]="hostRef.SweepExpiryType.Never"
+        label="Never"
+        i18n-label="Sweep expiry date type never label@@cash-management.create-sweep.sweep-expiry-date-selector.expiry-type.never.label"
+        data-role="cash-management-sweep-expiry-date-type-option-never"
+      &gt;
+      &lt;/bb-input-radio-ui&gt;
+      &lt;bb-input-radio-ui
+        [value]="hostRef.SweepExpiryType.OnDate"
+        label="On"
+        i18n-label="Sweep expiry date type on date label@@cash-management.create-sweep.sweep-expiry-date-selector.expiry-type.on-date.label"
+        data-role="cash-management-sweep-expiry-date-type-option-on-date"
+      &gt;
+      &lt;/bb-input-radio-ui&gt;
+    &lt;/bb-input-radio-group-ui&gt;
+    &lt;div class="align-self-end mb-2 w-100 position-relative"&gt;
+      &lt;bb-input-datepicker-ui
+        [minDate]="hostRef.minDate"
+        aria-label="Expiry date"
+        i18n-aria-label="Sweep expiry date label@@cash-management.create-sweep.sweep-expiry-date-selector.label"
+        icon="calendar-today"
+        data-role="cash-management-sweep-expiry-date-input"
+        [required]="hostRef.expiryTypeControl?.value === hostRef.SweepExpiryType.OnDate"
+        [formControl]="hostRef.expiryDateControl"
+        placement="bottom-right"
+      &gt;
+      &lt;/bb-input-datepicker-ui&gt;
+      &lt;bb-input-validation-message-ui
+        class="position-absolute"
+        data-role="cash-management-expiry-date-validation-error"
+        [showErrors]="hostRef.expiryDateControl?.invalid"
+      &gt;
+        &lt;span
+          *ngIf="hostRef.expiryDateControl?.hasError('invalidDateFormat')"
+          i18n="Sweep expiry date format error@@cash-management.create-sweep.sweep-expiry-date-selector.format.error-message"
+        &gt;
+          Please provide valid format
+        &lt;/span&gt;
+        &lt;span
+          *ngIf="
+            hostRef.expiryDateControl?.hasError('dateLessThanMinDate') &amp;&amp;
+            !hostRef.expiryDateControl?.hasError('invalidDateFormat')
+          "
+          i18n="Sweep expiry date invalid date error@@cash-management.create-sweep.sweep-expiry-date-selector.invalidDate.error-message"
+        &gt;
+          Please select a future date
+        &lt;/span&gt;
+        &lt;span
+          *ngIf="hostRef.expiryDateControl?.hasError('required')"
+          i18n="Sweep expiry date required error@@cash-management.create-sweep.sweep-expiry-date-selector.required.error-message"
+        &gt;
+          Please select a date
+        &lt;/span&gt;
+      &lt;/bb-input-validation-message-ui&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementSweepRepeatSettingsEditorCustomizable" class="discrete">bbCashManagementSweepRepeatSettingsEditorCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbCashManagementSweepRepeatSettingsEditorCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementSweepRepeatSettingsEditorCustomizable let-hostRef&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-12 col-sm-7 mb-4"&gt;
+      &lt;bb-cash-management-sweep-repeat-period-selector [formGroup]="hostRef.form"&gt;
+      &lt;/bb-cash-management-sweep-repeat-period-selector&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row mb-3" *ngIf="hostRef.frequencyPeriodControl?.value === hostRef.SweepRepeatPeriod.Month"&gt;
+    &lt;div class="col-12 col-sm-6"&gt;
+      &lt;bb-sweep-repeat-month-day-selector
+        [formControl]="hostRef.repeatMonthlyOnControl"
+        [selectedStartDate]="hostRef.startDateControl.value"
+      &gt;
+      &lt;/bb-sweep-repeat-month-day-selector&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row mb-3" *ngIf="hostRef.frequencyPeriodControl?.value === hostRef.SweepRepeatPeriod.Week"&gt;
+    &lt;div class="col-12 col-sm-6"&gt;
+      &lt;bb-cash-management-sweep-repeat-week-day-selector [formControl]="hostRef.repeatWeeklyOnControl"&gt;
+      &lt;/bb-cash-management-sweep-repeat-week-day-selector&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row mb-3"&gt;
+    &lt;div class="col-12 col-sm-6"&gt;
+      &lt;bb-cash-management-sweep-repeat-period-start-time-selector
+        [timeStepMinutes]="hostRef.startingTimeStep$ | async"
+        [formGroup]="hostRef.form"
+      &gt;
+      &lt;/bb-cash-management-sweep-repeat-period-start-time-selector&gt;
+    &lt;/div&gt;
+    &lt;div
+      class="col-12 col-sm-6 d-flex align-items-center pt-4"
+      *ngIf="hostRef.frequencyPeriodControl?.value === hostRef.SweepRepeatPeriod.Day"
+    &gt;
+      &lt;bb-input-checkbox-ui
+        [id]="'repeat-during-day'"
+        label="Repeat during the day"
+        i18n-label="Sweep Repeat during day label@@cash-management.create-sweep.sweep-repeat-during-day-checkbox..label"
+        [formControl]="hostRef.repeatDuringDayControl"
+        data-role="cash-management-create-sweep-repeat-during-day-checkbox"
+      &gt;
+      &lt;/bb-input-checkbox-ui&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;ng-container *ngIf="hostRef.frequencyPeriodControl?.value === hostRef.SweepRepeatPeriod.Day"&gt;
+    &lt;div *ngIf="hostRef.repeatDuringDayControl?.value" data-role="cash-management-repeat-during-day-panel"&gt;
+      &lt;bb-cash-management-sweep-continuing-every-time-selector
+        [timeStepMinutes]="hostRef.continueEveryStepMinutes$ | async"
+        [formGroup]="hostRef.form"
+      &gt;
+      &lt;/bb-cash-management-sweep-continuing-every-time-selector&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-12 col-sm-7"&gt;
+          &lt;bb-cash-management-sweep-repeat-period-end-time-selector
+            [timeStepMinutes]="hostRef.endingTimeStep$ | async"
+            [formGroup]="hostRef.form"
+          &gt;
+          &lt;/bb-cash-management-sweep-repeat-period-end-time-selector&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementSweepRepeatPeriodSelectorCustomizable" class="discrete">bbCashManagementSweepRepeatPeriodSelectorCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbCashManagementSweepRepeatPeriodSelectorCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementSweepRepeatPeriodSelectorCustomizable let-hostRef&gt;
+  &lt;div class="position-relative"&gt;
+    &lt;label
+      class="font-weight-bold"
+      for="sweep-repeat-every"
+      i18n="Sweep Repeat every label@@cash-management.create-sweep.sweep-repeat-period-selector.label"
+    &gt;
+      Repeat every
+    &lt;/label&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-3 pr-0"&gt;
+        &lt;bb-input-number-ui
+          [id]="'sweep-repeat-every'"
+          min="1"
+          max="999"
+          [required]="true"
+          aria-label="Repeat every"
+          i18n-aria-label="Sweep Repeat every label@@cash-management.create-sweep.sweep-repeat-period-selector.aria-label"
+          data-role="cash-management-create-sweep-repeat-number-input"
+          [formControl]="hostRef.repeatCountControl"
+        &gt;
+        &lt;/bb-input-number-ui&gt;
+      &lt;/div&gt;
+      &lt;div class="col-9"&gt;
+        &lt;bb-dropdown-single-select-ui
+          [iconName]="'caret-down'"
+          [formControl]="hostRef.repeatPeriodControl"
+          [required]="true"
+          aria-label="Sweep repeat period"
+          i18n-aria-label="Sweep repeat periods dropdown@@cash-management.create-sweep.sweep-repeat-period-selector.periods.aria-label"
+          data-role="cash-management-create-sweep-repeat-period-selector"
+        &gt;
+          &lt;bb-dropdown-single-select-option-ui
+            i18n-label="Sweep repeat periods dropdown day option@@cash-management.create-sweep.sweep-repeat-period-selector.periods.day-option-label"
+            label="Day"
+            [value]="hostRef.SweepRepeatPeriod.Day"
+          &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+          &lt;bb-dropdown-single-select-option-ui
+            i18n-label="Sweep repeat periods dropdown week option@@cash-management.create-sweep.sweep-repeat-period-selector.periods.week-option-label"
+            label="Week"
+            [value]="hostRef.SweepRepeatPeriod.Week"
+          &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+          &lt;bb-dropdown-single-select-option-ui
+            i18n-label="Sweep repeat periods dropdown month option@@cash-management.create-sweep.sweep-repeat-period-selector.periods.month-option-label"
+            label="Month"
+            [value]="hostRef.SweepRepeatPeriod.Month"
+          &gt;&lt;/bb-dropdown-single-select-option-ui&gt;
+        &lt;/bb-dropdown-single-select-ui&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;bb-input-validation-message-ui
+      class="position-absolute"
+      [showErrors]="
+        hostRef.repeatCountControl?.invalid &amp;&amp;
+        (hostRef.repeatCountControl?.dirty || hostRef.repeatCountControl?.touched)
+      "
+    &gt;
+      &lt;span
+        data-role="cash-management-sweep-repeat-every-required-validation-message"
+        i18n="Sweep repeat every required validation message@@cash-management.create-sweep.sweep-repeat-period-selector.validation.messages.required"
+        *ngIf="hostRef.repeatCountControl?.hasError('required')"
+      &gt;
+        Please enter a value greater than zero
+      &lt;/span&gt;
+      &lt;span
+        data-role="cash-management-min-sweep-repeat-every-validation-message"
+        i18n="Sweep repeat every min validation message@@cash-management.create-sweep.sweep-repeat-period-selector.validation.messages.required.min"
+        *ngIf="hostRef.repeatCountControl?.hasError('min')"
+      &gt;
+        Please enter a value greater than zero
+      &lt;/span&gt;
+      &lt;span
+        data-role="cash-management-max-sweep-repeat-every-validation-message"
+        i18n="Sweep repeat every max validation message@@cash-management.create-sweep.sweep-repeat-period-selector.validation.messages.required.max"
+        *ngIf="hostRef.repeatCountControl?.hasError('max')"
+      &gt;
+        Please enter a value less than {{ hostRef.repeatCountControl?.errors?.max?.max }}
+      &lt;/span&gt;
+    &lt;/bb-input-validation-message-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementSweepRepeatPeriodStartTimeSelectorCustomizable" class="discrete">bbCashManagementSweepRepeatPeriodStartTimeSelectorCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbCashManagementSweepRepeatPeriodStartTimeSelectorCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementSweepRepeatPeriodStartTimeSelectorCustomizable let-hostRef&gt;
+  &lt;label for="sweep-starting-at" class="font-weight-bold"&gt;
+    &lt;ng-container
+      *ngIf="
+        hostRef.frequencyPeriodControl?.value | isIntradaySweep: hostRef.repeatDuringDayControl?.value;
+        else atTemplate
+      "
+    &gt;
+      &lt;span i18n="Sweep Starting At input label@@cash-management.create-sweep.sweep-repeat-period.starting-at.label"&gt;
+        Starting at
+      &lt;/span&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-template #atTemplate&gt;
+      &lt;span i18n="Sweep At input label@@cash-management.create-sweep.sweep-repeat-period.at.label"&gt;
+        At
+      &lt;/span&gt;
+    &lt;/ng-template&gt;
+  &lt;/label&gt;
+  &lt;bb-cash-management-sweep-time-selector
+    [id]="'sweep-starting-at'"
+    [required]="true"
+    [formControl]="hostRef.startingAtControl"
+    [timeStepMinutes]="hostRef.timeStepMinutes"
+    aria-label="At"
+    i18n-aria-label="Sweep Starting At input aria label@@cash-management.create-sweep.sweep-repeat-period.starting-at.aria-label"
+    data-role="cash-management-create-sweep-repeat-period-starting-at-dropdown"
+  &gt;
+  &lt;/bb-cash-management-sweep-time-selector&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementSweepContinuingEveryTimeSelectorCustomizable" class="discrete">bbCashManagementSweepContinuingEveryTimeSelectorCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbCashManagementSweepContinuingEveryTimeSelectorCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementSweepContinuingEveryTimeSelectorCustomizable let-hostRef&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-12 d-flex align-items-base"&gt;
+      &lt;label
+        for="sweep-continuing-every"
+        class="font-weight-bold"
+        i18n="Sweep continuing every type label@@cash-management.create-sweep.sweep-continuing-every-selector.label"
+        data-role="cash-management-create-sweep-continuing-every-label"
+      &gt;
+        Continuing every
+      &lt;/label&gt;
+      &lt;bb-icon-ui
+        name="info"
+        size="xs"
+        bbTooltip="Please select the interval for the intraday activation of the sweep. In case no interval is selected, then the sweep will only run once a day, at the 'Starting at' time"
+        triggers="hover focus"
+        aria-label="Please select the interval for the intraday activation of the sweep. In case no interval is selected, then the sweep will only run once a day, at the 'Starting at' time"
+        i18n-bbTooltip="Cash Management Create Sweep Continuing Every additional information@@cash-management.create-sweep.sweep-continuing-every-selector.additional-info"
+        i18n-aria-label="Cash Management Create Sweep Continuing Every additional information aria label@@cash-management.create-sweep.sweep-continuing-every-selector.additional-info.aria-label"
+        tabindex="0"
+        placement="top"
+        class="ml-2 text-muted h-75"
+        data-role="cash-management-create-sweep-continuing-every-info"
+        tabindex="0"
+      &gt;&lt;/bb-icon-ui&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row mb-3"&gt;
+    &lt;div class="col-12 col-sm-6"&gt;
+      &lt;bb-time-interval-selector
+        [id]="'sweep-continuing-every'"
+        [stepMinutes]="hostRef.timeStepMinutes"
+        [formControl]="hostRef.dayRepeatEveryMinutesControl"
+        data-role="cash-management-time-selector"
+      &gt;&lt;/bb-time-interval-selector&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementSweepRepeatPeriodEndTimeSelectorCustomizable" class="discrete">bbCashManagementSweepRepeatPeriodEndTimeSelectorCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbCashManagementSweepRepeatPeriodEndTimeSelectorCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementSweepRepeatPeriodEndTimeSelectorCustomizable let-hostRef&gt;
+  &lt;label
+    data-role="cash-management-sweep-ending-at-type-label"
+    i18n="Sweep ending at type label@@cash-management.create-sweep.sweep-ending-at-selector.label"
+    class="font-weight-bold"
+  &gt;
+    Ending at
+  &lt;/label&gt;
+  &lt;div class="d-flex"&gt;
+    &lt;bb-input-radio-group-ui
+      [required]="true"
+      aria-label="Sweep ending at type"
+      i18n-aria-label="Sweep ending at type label@@cash-management.create-sweep.sweep-ending-at-selector.expiry-type.label"
+      data-role="cash-management-sweep-ending-at-type"
+      class="col-auto p-0"
+      [formControl]="hostRef.endingTypeControl"
+    &gt;
+      &lt;bb-input-radio-ui
+        [value]="hostRef.sweepEndingType.EndOfDay"
+        label="End of day"
+        i18n-label="Sweep ending at type end of day label@@cash-management.create-sweep.sweep-ending-at-selector.ending-type.end-of-day.label"
+        data-role="cash-management-sweep-ending-at-type-option-end-of-day"
+      &gt;
+      &lt;/bb-input-radio-ui&gt;
+      &lt;bb-input-radio-ui
+        [value]="hostRef.sweepEndingType.At"
+        label="At"
+        i18n-label="Sweep ending at type on time label@@cash-management.create-sweep.sweep-ending-at-selector.ending-type.at.label"
+        data-role="cash-management-sweep-ending-at-type-option-at"
+      &gt;
+      &lt;/bb-input-radio-ui&gt;
+    &lt;/bb-input-radio-group-ui&gt;
+    &lt;div class="align-self-end mb-2 w-100 position-relative"&gt;
+      &lt;bb-cash-management-sweep-time-selector
+        [id]="'sweep-ending-at'"
+        [required]="true"
+        [formControl]="hostRef.endingAtControl"
+        [timeStepMinutes]="hostRef.timeStepMinutes"
+        [bbValidate]="hostRef.minTimeValidator"
+        aria-label="Ending at"
+        i18n-aria-label="Sweep Ending At input label@@cash-management.create-sweep.sweep-repeat-period.ending-at.aria-label"
+        data-role="cash-management-create-sweep-repeat-period-ending-at-dropdown"
+      &gt;
+      &lt;/bb-cash-management-sweep-time-selector&gt;
+      &lt;bb-input-validation-message-ui class="position-absolute" [showErrors]="hostRef.endingAtControl?.invalid"&gt;
+        &lt;span
+          *ngIf="hostRef.endingAtControl?.hasError('minTime')"
+          data-role="cash-management-ending-at-time-validation-error"
+          i18n="Sweep ending at time min time error@@cash-management.create-sweep.sweep-repeat-period-end-time-selector.min-time.error-message"
+        &gt;
+          Please select future time
+        &lt;/span&gt;
+      &lt;/bb-input-validation-message-ui&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementSweepSummaryPageCustomizable" class="discrete">bbCashManagementSweepSummaryPageCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbCashManagementSweepSummaryPageCustomizable
+  [bbHostRef]="this"
+  [bbTemplateContext]="{
+    sweep: sweep
+  }"
+&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementSweepSummaryPageCustomizable let-hostRef let-sweep="context.sweep"&gt;
+  &lt;bb-cash-management-sweep-details [sweep]="sweep"&gt; &lt;/bb-cash-management-sweep-details&gt;
+
+  &lt;ng-container
+    bbCashManagementSweepSummaryPageCustomFieldsCustomizable
+    [bbHostRef]="hostRef"
+  &gt;&lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementCreateSweepModalCustomizable_discard" class="discrete">bbCashManagementCreateSweepModalCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbCashManagementCreateSweepModalCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+&lt;ng-template bbCashManagementCreateSweepModalCustomizable let-hostRef&gt;
+  &lt;bb-modal-ui
+    [modalOptions]="hostRef.modalOptions"
+    [isOpen]="true"
+    data-role="cash-management-create-sweep-modal"
+    (cancel)="hostRef.tryToCloseModal()"
+  &gt;
+    &lt;bb-modal-header-ui  data-role="cash-management-create-sweep-modal-window-header"&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;bb-header-ui
+          headingType="h2"
+          heading="New Sweep"
+          i18n-heading="Create sweep modal header@@cash-management.create-sweep.create-sweep-modal.header"
+          ngbAutofocus
+        &gt;
+        &lt;/bb-header-ui&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody&gt;
+        &lt;bb-cash-management-sweep-editor-form (tryClose)="hostRef.tryToCloseModal()" (sweepCreated)="hostRef.onSweepCreated($event.newSweep)"&gt;
+        &lt;/bb-cash-management-sweep-editor-form&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementCreateSweepConfirmationModalCustomizable" class="discrete">bbCashManagementCreateSweepConfirmationModalCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbCashManagementCreateSweepConfirmationModalCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbCashManagementCreateSweepConfirmationModalCustomizable let-hostRef&gt;
+  &lt;bb-confirm-modal
+    data-role="cash-management-create-sweep-close-confirmation-modal"
+    [isOpen]="hostRef.isCloseConfirmationOpen"
+    [modalOptions]="hostRef.modalOptions"
+    (cancel)="hostRef.cancelModalClosing()"
+    (confirm)="hostRef.approveModalClosing()"
+    confirmBtnColor="danger"
+    heading="Discard the sweep?"
+    i18n-heading="Create sweep modal close confirmation header@@cash-management.create-sweep.create-sweep-modal.close.confirmation-header"
+    message="Are you sure you want to discard the creation of the sweep? Entered data will be lost and this action cannot be undone."
+    i18n-message="Text of the confirmation message before closing modal@@cash-management.create-sweep.create-sweep-modal.close.confirmation-body-text"
+    cancelBtnText="Cancel"
+    i18n-cancelBtnText="Cancel Modal close button for create new sweep scenario@@cash-management.create-sweep.close-confirmation.cancel"
+    confirmBtnText="Discard"
+    i18n-confirmBtnText="Approve discard of new sweep creation button for create new sweep scenario@@cash-management.create-sweep.close-confirmation.discard"
+  &gt;&lt;/bb-confirm-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbCashManagementSweepAccountSelectorCustomizable" class="discrete">bbCashManagementSweepAccountSelectorCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbCashManagementSweepAccountSelectorCustomizable
+  [bbHostRef]="this"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbCashManagementSweepAccountSelectorCustomizable
+  let-hostRef
+&gt;
+  &lt;bb-account-selector-ui
+    [disableScrollEnd]="true"
+    [ngClass]="{'sweep-account-selector--invalid': hostRef.selectedAccountControl.invalid &amp;&amp; hostRef.selectedAccountControl.touched}"
+    [items]="hostRef.accountList"
+    (change)="hostRef.changeAccount($event)"
+    [selectedItems]="hostRef.selectedAccount"
+    [dropdownPosition]="'bottom'"
+    [multiple]="false"
+    [placeholder]="hostRef.placeholder"
+    [disabled]="hostRef.selectedAccountControl.disabled"
+  &gt;
+    &lt;ng-template bbCustomOptionItem let-item$="item$" let-item="item"&gt;
+      &lt;bb-product-item-basic-account-ui
+        [active]="item$.selected"
+        [productNumber]="item.iban || item.bban"
+        [amount]="item.availableBalance"
+        [currency]="item.currency"
+        [title]="item.name"
+      &gt;
+        &lt;ng-template bbCustomProductItemBasicAccountDetailsFormatter let-amount="amount" let-currency="currency"&gt;
+          &lt;bb-amount-ui
+            class="font-weight-bold"
+            [amount]="amount"
+            [currency]="currency"
+            [mapCurrency]="false"
+          &gt;&lt;/bb-amount-ui&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-product-item-basic-account-ui&gt;
+    &lt;/ng-template&gt;
+
+    &lt;ng-template bbCustomSingleSelectedItemLabel let-item="item"&gt;
+      &lt;bb-product-item-basic-account-ui
+        [active]="true"
+        [amount]="item.availableBalance"
+        [currency]="item.currency"
+        [productNumber]="item.iban || item.bban"
+        [title]="item.name"
+      &gt;
+        &lt;ng-template bbCustomProductItemBasicAccountDetailsFormatter let-amount="amount" let-currency="currency"&gt;
+          &lt;bb-amount-ui
+            class="font-weight-bold"
+            [amount]="amount"
+            [currency]="currency"
+            [mapCurrency]="false"
+          &gt;&lt;/bb-amount-ui&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-product-item-basic-account-ui&gt;
+    &lt;/ng-template&gt;
+  &lt;/bb-account-selector-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

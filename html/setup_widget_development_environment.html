@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Set up a widget development environment</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="setup_widget_development_environment" class="book toc2 toc-left">
+<div id="header">
+<h1>Set up a widget development environment</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html"><span class="toc-current">Set up a widget development environment</span></a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="setup_widget_development_environment" class="sect0">Set up a widget development environment</h1>
+          <div class="paragraph">
+<p>This section shows you how to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="setup_widget_development_environment.html#widget_development_environment">Set up your widget development environment</a></p>
+</li>
+<li>
+<p><a href="setup_widget_development_environment.html#run_widgets_locally">Run your widget on a standalone server</a></p>
+</li>
+<li>
+<p><a href="setup_widget_development_environment.html#run_widgets_in_experience">Run your widgets in an experience</a></p>
+</li>
+</ul>
+</div>
+<h2 id="widget_development_environment" class="discrete">Set up your widget development environment</h2>
+<div class="paragraph">
+<p>Follow these steps to set up your widget development environment:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Install NodeJS and npm</strong></p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>NodeJS is a JavaScript runtime for Backbase CLI (bb-cli) tools which
+helps you automate common tasks during widget development.</p>
+</div>
+<div class="paragraph">
+<p>Download 14.x version of NodeJS from <a href="https://nodejs.org/en/download" class="bare">https://nodejs.org/en/download</a> and
+follow the installation instructions for latest LTS version.</p>
+</div>
+<div class="paragraph">
+<p>By default npm (NodeJS Package Manager) is installed at the same time.
+Make sure that your npm version is <code>&gt;=6.14.13</code> to avoid known problems with older versions.</p>
+</div>
+<div class="paragraph">
+<p>If you need a newer version of npm, run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">npm install -g npm@^6.14.13</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Add npm user</strong></p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Run the following command in your shell. When prompted, provide your <code>repo.backbase.com</code> login credentials and email:</p>
+</div>
+<div class="listingblock">
+<div class="title">npm adduser</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">npm adduser --registry=https://repo.backbase.com/artifactory/api/npm/npm-backbase/ --always-auth --scope=@backbase</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will set your npm client to get all the packages belonging to <code>@backbase</code> scope from Backbase registry.</p>
+</div>
+<div class="paragraph">
+<p>As a result of this command you can expect your npm configuration file: <code>~/.npmrc</code> (On Windows: <code>%USERPROFILE%/.npmrc</code>) to have following content:</p>
+</div>
+<div class="listingblock">
+<div class="title">npmrc file content</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">@backbase:registry=https://repo.backbase.com/artifactory/api/npm/npm-backbase/
+//repo.backbase.com/artifactory/api/npm/npm-backbase/:_authToken=&lt;YOUR_UNIQUE_AUTHENTICATION_TOKEN&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you get an <code>EACCES</code> error when trying to install, see
+<a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">Fixing npm permissions</a>.</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Install the <a href="https://cli.angular.io/">angular-cli</a></strong></p>
+<div class="paragraph">
+<p>The Angular CLI is a command-line interface tool that you use
+to initialize, develop, scaffold, and maintain Angular applications.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">npm install -g @angular/cli@11.1.0</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Install the <a href="https://www.npmjs.com/package/@bb-cli/schematics">Backbase schematics</a></strong></p>
+<div class="paragraph">
+<p><code>@bb-cli/schematics</code> is package used for scaffolding Backbase Widget
+Architecture 3 files, you will need access to Backbase private npm repo,
+before running.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">npm install -g @bb-cli/schematics@5.x</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+If your project uses other Backbase packages such as <code>data-ang</code>, <code>retail-ang</code>, <code>wealth-ang</code>, or
+<code>universal-ang</code>, ensure they are at a version compliant with the version of <code>schematics</code> that you install. To check
+the correct version of <code>schematics</code> for earlier versions of Foundation Angular, see the specific documentation for that
+version.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<h2 id="run_widgets_locally" class="discrete">Run your widget on a standalone server</h2>
+<div class="paragraph">
+<p>Follow these steps to test your widget on a standalone server:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Scaffold a new project</strong></p>
+<div class="paragraph">
+<p>Use Angular CLI in combination with Backbase schematics:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">ng new my-example-project --collection=@bb-cli/schematics</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default Backbase dependencies, like <code>@backbase/foundation-ang</code>, will be retrieved from Backbase&#8217;s registry.
+If you&#8217;re hosting Backbase dependencies on your own registry you should use the <code>--registry</code> option.</p>
+</div>
+<div class="paragraph">
+<p>This creates the following file structure in <code>my-example-project</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>my-example-project
+    ├─ .editorconfig
+    ├─ .git
+    ├─ .gitignore
+    ├─ .npmrc
+    ├─ .prettierrc
+    ├─ README.md
+    ├─ angular.json
+    ├─ apps
+    ├─ libs
+    ├─ node_modules
+    │    └─ ...
+    ├─ package-lock.json
+    ├─ package.json
+    ├─ tscoinfig.json
+    └─ tslint.json.xml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is a basic project structure.</p>
+</div>
+<div class="paragraph">
+<p>In the response you are warned to install peer dependencies. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">npm WARN @backbase/foundation-ang@3.33.0 requires a peer of rxjs@6.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN @backbase/data-http-ang@1.52.5 requires a peer of @backbase/core-ang@^2.50.1 but none is installed. You must install peer dependencies yourself.
+npm WARN @backbase/tab-container-ang@1.12.1 requires a peer of rxjs@~6.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN @backbase/column-container-ang@1.12.1 requires a peer of rxjs@~6.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN @backbase/panel-container-ang@1.12.1 requires a peer of rxjs@~6.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN ajv-keywords@3.4.0 requires a peer of ajv@^6.9.1 but none is installed. You must install peer dependencies yourself.
+npm WARN axe-webdriverjs@0.2.0 requires a peer of selenium-webdriver@^2.46.1 but none is installed. You must install peer dependencies yourself.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Update them all manually. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">npm install rxjs --save</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Add an application container and a widget</strong></p>
+<div class="paragraph">
+<p>In order to start using your project,
+you must add at least one application container and one widget to the basic project structure. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">cd my-example-project
+npm run ng -- generate app --name=my-example-app</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This scaffolds an app inside the <code>apps</code> directory of your project.</p>
+</div>
+</li>
+<li>
+<p><a href="https://community.backbase.com/documentation/Design-System/3.10.1/install_theme"><strong>Install the Backbase theme</strong></a></p>
+</li>
+<li>
+<p><strong>Add a widget</strong></p>
+<div class="paragraph">
+<p>Add an existing or new widget to your project:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://community.backbase.com/documentation/foundation_angular/6.13.1/using_widget_collections">Install an existing widget</a></p>
+</li>
+<li>
+<p>Scaffold a new one:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">npm run ng -- generate widget --name=example-widget --npmScope=example-widget</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>npmScope</code> option is compulsory if no scope has been provided during scaffolding the project or thereafter.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Test your application on a standalone server</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">npm start</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<h2 id="run_widgets_in_experience" class="discrete">Run your widgets in an experience</h2>
+<div class="paragraph">
+<p>Follow these steps to run your widgets in an experience on Customer Experience Services:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://community.backbase.com/documentation/app_manager/1.2.0/create_developer_environment">Create a developer environment</a>.</p>
+</li>
+<li>
+<p><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a></p>
+</li>
+</ol>
+</div>
+</div>
+</body>
+</html>

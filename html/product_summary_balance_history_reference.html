@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>View business account balance history</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="product_summary_balance_history_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>View business account balance history</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html"><span class="toc-current">View business account balance history</span></a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="product_summary_balance_history_reference" class="sect0">View business account balance history</h1>
+          <div class="paragraph">
+<p>This page includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="product_summary_balance_history_reference.html#product_summary_balance_history_selector">Selector name</a></p>
+</li>
+<li>
+<p><a href="product_summary_balance_history_reference.html#product_summary_balance_history_required_imports">Required imports</a></p>
+</li>
+<li>
+<p><a href="product_summary_balance_history_reference.html#product_summary_balance_history_extension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="product_summary_balance_history_reference.html#product_summary_balance_history_hostref_api">API</a></p>
+</li>
+<li>
+<p><a href="product_summary_balance_history_reference.html#product_summary_balance_history_implementation">Implementation example</a></p>
+</li>
+<li>
+<p><a href="product_summary_balance_history_reference.html#product_summary_balance_history_peferences">Preferences</a></p>
+</li>
+<li>
+<p><a href="product_summary_balance_history_reference.html#product_summary_balance_history_access_control">Access Control</a></p>
+</li>
+</ul>
+</div>
+<h2 id="product_summary_balance_history_selector" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name: <code>bb-product-summary-balance-history-widget</code></p>
+</div>
+<h2 id="product_summary_balance_history_required_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<h3 id="_widget_module_import" class="discrete">Widget module import</h3>
+<div class="paragraph">
+<p>Import the following modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { LineChartModule } from '@swimlane/ngx-charts';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ProductSummaryBalanceHistoryWidgetModule } from '@backbase/product-summary-balance-history-widget-ang';</code></pre>
+</div>
+</div>
+<h2 id="product_summary_balance_history_extension_slots" class="discrete">Extension slots</h2>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/view_business_account_balance_history_slots_1_2_3_4_5_6_9.svg?ver=3.10.1" alt="view business account balance history slots 1 2 3 4 5 6 9">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/view_business_account_balance_history_slot_7.svg?ver=3.10.1" alt="view business account balance history slot 7">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/view_business_account_balance_history_slot_8.svg?ver=3.10.1" alt="view business account balance history slot 8">
+</div>
+</div>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="product_summary_balance_history_reference.html#bbProductSummaryBalanceHistoryWidgetCustomizable">bbProductSummaryBalanceHistoryWidgetCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_balance_history_reference.html#bbBalanceHistoryContainerCustomizable">bbBalanceHistoryContainerCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_balance_history_reference.html#bbBalanceHistoryFooterCustomizable">bbBalanceHistoryFooterCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_balance_history_reference.html#bbBalanceHistoryHeaderCustomizable">bbBalanceHistoryHeaderCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_balance_history_reference.html#bbBalanceHistoryTableCustomizable">bbBalanceHistoryTableCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_balance_history_reference.html#bbBalanceHistoryLineChartCustomizable">bbBalanceHistoryLineChartCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_balance_history_reference.html#bbBalanceHistoryLineChartSeriesTooltipCustomizable">bbBalanceHistoryLineChartSeriesTooltipCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_balance_history_reference.html#bbBalanceHistoryLineChartTooltipCustomizable">bbBalanceHistoryLineChartTooltipCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_balance_history_reference.html#bbBalanceHistoryLineChartLegendCustomizable">bbBalanceHistoryLineChartLegendCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbProductSummaryBalanceHistoryWidgetCustomizable" class="discrete">bbProductSummaryBalanceHistoryWidgetCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbProductSummaryBalanceHistoryWidgetCustomizable
+  let-hostRef&gt;
+    &lt;bb-balance-history-container
+      class="bb-account-balance-history"
+      [size]="hostRef.size"
+      [showChartLegend]="hostRef.showChartLegend"
+      [paginationType]="hostRef.paginationType"
+    &gt;&lt;/bb-balance-history-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBalanceHistoryContainerCustomizable" class="discrete">bbBalanceHistoryContainerCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbBalanceHistoryContainerCustomizable
+  let-hostRef
+  let-balanceHistorySeries="context.balanceHistorySeries"
+  let-balanceHistoryPaginated="context.balanceHistoryPaginated"
+  let-paginationParams="context.paginationParams"
+  let-isSmallScreen="context.isSmallScreen"
+  let-loadingSeries="context.loadingSeries"
+  let-loadingPaginated="context.loadingPaginated"
+  let-accountId="context.accountId"
+  let-requestParamsSeries="context.requestParamsSeries"
+  let-errorPaginated="context.errorPaginated"
+  let-errorSeries="context.errorSeries"
+  let-showChartLegend="context.showChartLegend"&gt;
+
+  &lt;ng-container *ngIf="((hostRef.multiple | async) === false); else multipleAccounts"&gt;
+    &lt;bb-balance-history-empty-state [isEmpty]="accountId != ''"&gt;
+      &lt;div class="bb-block bb-block--xl"&gt;
+        &lt;bb-balance-history-header
+          [exportAvailable]="!errorSeries &amp;&amp; !loadingSeries &amp;&amp; balanceHistorySeries?.length &gt; 0"
+          [filterPeriod]="paginationParams.timePeriod"
+          (dateChange)="hostRef.onDateChange($event)"
+          (periodChange)="hostRef.onPeriodChange($event)"
+          (exportAs)="hostRef.exportBalanceHistoryTo($event, requestParamsSeries)"
+        &gt;
+        &lt;/bb-balance-history-header&gt;
+      &lt;/div&gt;
+
+      &lt;ng-container
+        *ngIf="loadingSeries || loadingPaginated || !(errorSeries &amp;&amp; errorPaginated);
+        else errorBalanceHistory"
+      &gt;
+        &lt;ng-container
+          *ngIf="loadingSeries || loadingPaginated || balanceHistorySeries?.length || balanceHistoryPaginated?.items.length;
+          else emptyBalanceHistory"
+        &gt;
+          &lt;bb-product-summary-loading
+            [isLoading]="loadingSeries"
+            text="Loading Balance History"
+            i18n-text="Loading Balance History|Balance history Chart@@balance-history-container.chart.loading-text"
+            aria-hidden="true"
+          &gt;
+            &lt;ng-container *ngIf="!errorSeries; else errorTemplateCharts"&gt;
+              &lt;ng-container *ngIf="balanceHistorySeries &amp;&amp; balanceHistorySeries.length &gt; 0; else emptyTemplateCharts"&gt;
+
+                &lt;div class="bb-block bb-block--lg"&gt;
+                  &lt;bb-line-chart-ui
+                    classes="bb-account-balance-history__line-chart"
+                    data-role="balance-history-chart"
+                    [dataSeries]="balanceHistorySeries"
+                    [currency]="hostRef.currency"
+                    [xAxisTickFormatFunction]="hostRef.xAxisTickFormat"
+                    [yAxisTickFormatFunction]="hostRef.yAxisTickFormat"
+                    [customColors]="hostRef.getColors()"&gt;
+                  &lt;/bb-line-chart-ui&gt;
+                &lt;/div&gt;
+                &lt;div class="bb-block bb-block--xl"&gt;
+                  &lt;bb-line-chart-legend-ui
+                    *ngIf="showChartLegend"
+                    [dataSeries]="balanceHistorySeries"
+                    [currency]="hostRef.currency"
+                    [customColors]="hostRef.getColors()"&gt;
+                  &lt;/bb-line-chart-legend-ui&gt;
+                &lt;/div&gt;
+
+              &lt;/ng-container&gt;
+
+              &lt;!-- Empty state template Charts--&gt;
+              &lt;ng-template #emptyTemplateCharts&gt;
+                &lt;div class="bb-block bb-block--md"&gt;
+                  &lt;bb-empty-state-ui
+                    i18n-title="The data could not be found
+                    |Charts Empty state@@balance-history-container.empty.template.charts"
+                    title="The data could not be found"
+                    i18n-subtitle="Try reloading the page or contacting the system administration.
+                    |Charts Empty state@@balance-history-container.empty.template.charts.subtitle"
+                    subtitle="Try reloading the page or contacting the system administration."
+                    iconSize="xxl"
+                    iconModifier="show-chart"&gt;
+                  &lt;/bb-empty-state-ui&gt;
+                &lt;/div&gt;
+              &lt;/ng-template&gt;
+            &lt;/ng-container&gt;
+
+            &lt;!-- Error template Charts--&gt;
+            &lt;ng-template #errorTemplateCharts&gt;
+              &lt;div class="bb-block bb-block--md"&gt;
+                &lt;bb-empty-state-ui
+                  [title]="hostRef.processErrorMessages(errorSeries?.messages)"
+                  i18n-subtitle="Try reloading the page or contacting the system administration.
+                  |Chart Error State@product-summary.balance-history-container.error-subtitle.loading.chart"
+                  subtitle="Try reloading the page or contacting the system administration."
+                  iconModifier="error-outline"
+                  iconSize="xxl"
+                  iconColor="gray"
+                  iconClasses="text-muted"
+                &gt;&lt;/bb-empty-state-ui&gt;
+              &lt;/div&gt;
+            &lt;/ng-template&gt;
+          &lt;/bb-product-summary-loading&gt;
+
+          &lt;bb-product-summary-loading
+            [isLoading]="loadingPaginated"
+            text="Loading Balance History"
+            i18n-text="Loading Balance History|Balance history table@@balance-history-container.table.loading-text"
+          &gt;
+            &lt;ng-container *ngIf="!errorPaginated; else errorTemplateTable"&gt;
+              &lt;ng-container *ngIf="balanceHistoryPaginated &amp;&amp; balanceHistoryPaginated.items.length &gt; 0; else emptyTemplateTable"&gt;
+                &lt;div class="bb-block bb-block--xl"&gt;
+                  &lt;bb-balance-history-table
+                    [balanceHistoryData]="balanceHistoryPaginated.items"&gt;
+                  &lt;/bb-balance-history-table&gt;
+                &lt;/div&gt;
+                &lt;bb-balance-history-footer
+                  [page]="paginationParams.from"
+                  (pageChange)="hostRef.onPageChange($event)"
+                  (loadMore)="hostRef.onLoadMore()"
+                  [loading]="loadingPaginated"
+                  [totalItems]="balanceHistoryPaginated.count"
+                  [hasMore]="balanceHistoryPaginated.items.length !== balanceHistoryPaginated.count"
+                  [paginationParams]="hostRef.requestParamsPaginated | async"&gt;
+                &lt;/bb-balance-history-footer&gt;
+              &lt;/ng-container&gt;
+
+              &lt;!-- Empty state template Table --&gt;
+              &lt;ng-template #emptyTemplateTable&gt;
+                &lt;bb-empty-state-ui
+                  data-role="balance-history-empty-state"
+                  i18n-title="The data could not be found
+                  |Table empty state@@balance-history-container.empty.template.charts"
+                  title="The data could not be found"
+                  i18n-subtitle="Try reloading the page or contacting the system administration.
+                  |Table Empty state@@balance-history-container.empty.template.table.subtitle"
+                  subtitle="Try reloading the page or contacting the system administration."
+                  iconSize="xxl"
+                  iconModifier="show-chart"&gt;
+                &lt;/bb-empty-state-ui&gt;
+              &lt;/ng-template&gt;
+            &lt;/ng-container&gt;
+
+            &lt;!-- Error template Table--&gt;
+            &lt;ng-template #errorTemplateTable&gt;
+              &lt;bb-empty-state-ui
+                [title]="hostRef.processErrorMessages(errorPaginated?.messages)"
+                i18n-subtitle="Try reloading the page or contacting the system administration.
+                |Table Error State@product-summary.balance-history-container.error-subtitle.loading.table"
+                subtitle="Try reloading the page or contacting the system administration."
+                iconModifier="error-outline"
+                iconSize="xxl"
+                iconColor="gray"
+                iconClasses="text-muted"
+              &gt;&lt;/bb-empty-state-ui&gt;
+            &lt;/ng-template&gt;
+          &lt;/bb-product-summary-loading&gt;
+        &lt;/ng-container&gt;
+      &lt;/ng-container&gt;
+    &lt;/bb-balance-history-empty-state&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #multipleAccounts&gt;
+    &lt;bb-empty-state-ui
+      data-role="product-summary-balance-history-error-multi-selection"
+      iconSize="xxl"
+      iconModifier="error-outline"
+      iconClasses="text-muted"
+      title="You have selected multiple accounts"
+      i18n-title="You have selected multiple accounts
+      |Error title when getting multiple accounts@@balance-history-container.error.multiple.title"
+      subtitle="Please select only one account to display the balance history"
+      i18n-subtitle="Please select only one account to display the balance history
+      |Error subtitle when getting multiple accounts@@balance-history-container.error.multiple.subtitle"
+    &gt;&lt;/bb-empty-state-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #emptyBalanceHistory&gt;
+    &lt;bb-empty-state-ui
+      data-role="product-summary-balance-history-empty-balance-history"
+      i18n-title="The data could not be found
+      |Balance history empty data title@@balance-history-container.empty-balance-history.title"
+      title="The data could not be found"
+      i18n-subtitle="Try reloading the page or contacting the system administration.
+      |Balance history empty data subtitle@@balance-history-container.empty-balance-history.subtitle"
+      subtitle="Try reloading the page or contacting the system administration."
+      iconSize="xxl"
+      iconModifier="show-chart"&gt;
+      &gt;&lt;/bb-empty-state-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #errorBalanceHistory&gt;
+    &lt;bb-empty-state-ui
+      data-role="product-summary-balance-history-error-balance-history"
+      [title]="hostRef.processErrorMessages(errorSeries?.messages || errorPaginated?.messages)"
+      i18n-subtitle="Try reloading the page or contacting the system administration.
+      |Balance history fetching data error@product-summary.balance-history-container.error-subtitle.loading.table"
+      subtitle="Try reloading the page or contacting the system administration."
+      iconModifier="error-outline"
+      iconSize="xxl"
+      iconColor="gray"
+      iconClasses="text-muted"
+    &gt;&lt;/bb-empty-state-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;span
+    *ngIf="!loadingSeries &amp;&amp; (errorSeries || !balanceHistorySeries?.length)"
+    aria-live="assertive"
+    class="sr-only"
+    role="status"
+    i18n="The data could not be found. Balance history data can not be exported.
+      |Balance history can not be exported@product-summary.balance-history-container.status.export.unavailable"
+  &gt;
+    The data could not be found. Balance history data can not be exported.
+  &lt;/span&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>balanceHistorySeries: BalanceHistoryDataSeries[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Balance history chart area data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>balanceHistoryPaginated: BalanceHistoryPaginated</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Balance history table data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paginationParams: BalanceHistoryPaginationParams</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pagination data for chart and table.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isSmallScreen: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies whether screen size is small. (<code>true</code> if element&#8217;s width smaller or equal to <code>640px</code>).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loadingSeries: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines if chart data fetching is in progress.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loadingPaginated: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines if table data fetching is in progress.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountId: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected account id. Obtained from the routing parameters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requestParamsSeries: GetBalanceHistoryRequestSeriesObjectType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request parameters for getting balance history chart items.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>errorSeries: BalanceHistoryError</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains chart data fetching errors.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>errorPaginated: BalanceHistoryError</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains table data fetching errors.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>showChartLegend: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies whether chart legend should be displayed or not. Obtained from input <code>showChartLegend</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multiple</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets whether the bank customer can see details for multiple accounts at a time.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbBalanceHistoryFooterCustomizable" class="discrete">bbBalanceHistoryFooterCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbBalanceHistoryFooterCustomizable
+  let-hostRef
+  let-paginationParams="context.paginationParams"
+  let-page="context.page"
+  let-hasMore="context.hasMore"
+  let-totalItems="context.totalItems"
+  &gt;
+  &lt;div class="bb-stack bb-stack--center bb-stack--density-none"&gt;
+    &lt;bb-pagination-ui
+      class="bb-stack__item"
+      *ngIf="paginationParams.params.paginationType === hostRef.PaginationType.PAGINATION &amp;&amp; (totalItems &gt; paginationParams.params.size)"
+      [page]="page"
+      [boundaryLinks]="true"
+      [totalItems]="totalItems"
+      [itemsPerPage]="paginationParams.params.size"
+      (pageChange)="hostRef.onPageChange($event)"&gt;
+    &lt;/bb-pagination-ui&gt;
+
+    &lt;bb-load-button-ui
+      class="bb-stack__item"
+      type="button"
+      color="secondary"
+      *ngIf="paginationParams.params.paginationType === hostRef.PaginationType.LOAD_MORE &amp;&amp; hostRef.hasMore"
+      [size]="paginationParams.params.size"
+      [totalCount]="totalItems"
+      (paramChange)="hostRef.onLoadMore()"
+      [isLoading]="hostRef.loading"&gt;
+      &lt;span i18n="Load more|Load more button@@accounts-overview-footer.pagination.button.load-more"&gt;
+        Load more
+      &lt;/span&gt;
+    &lt;/bb-load-button-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paginationParams: GetBalanceHistoryRequestPaginatedObjectType | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pagination parameters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page: number | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Current page number in pagination.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasMore: boolean | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates if a pagination should be displayed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>totalItems: number | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total number of items. Used for pagination.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbBalanceHistoryHeaderCustomizable" class="discrete">bbBalanceHistoryHeaderCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBalanceHistoryHeaderCustomizable let-hostRef&gt;
+  &lt;div class="bb-balance-history-header bb-stack" [formGroup]="hostRef.formGroup"&gt;
+    &lt;div class="bb-balance-history-header__datepicker bb-stack__item d-none d-lg-block"&gt;
+      &lt;bb-input-datepicker-ui
+        (ngModelChange)="hostRef.onDateChange($event)"
+        [minDate]="hostRef.defaultMinDate"
+        [maxDate]="hostRef.defaultMaxDate"
+        [rangeSelection]="true"
+        formControlName="dateRangeControl"
+        iconColor="dark"
+        aria-label="Date range from to"
+        i18n-aria-label="Date range from to@@product-summary-balance-history-header.date-range"
+      &gt;&lt;/bb-input-datepicker-ui&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-balance-history-header__filter bb-stack__item bb-stack__item--fill d-none d-lg-block"&gt;
+      &lt;div
+        class="btn-group"
+        role="group"
+        aria-label="Filter balance history"
+        i18n-aria-label="Filter balance history@@product-summary-balance-history-header.filter-buttons.title"
+      &gt;
+        &lt;button
+          bbButton
+          color="secondary"
+          [class.active]="hostRef.filterPeriod === 'lastDay'"
+          [attr.aria-pressed]="hostRef.filterPeriod === 'lastDay'"
+          aria-label="Filter one day"
+          data-role="filter-button-one-day"
+          i18n-aria-label="Filter one day@@product-summary-balance-history-header.filter-buttons.last-day"
+          i18n="One Day@@product-summary-balance-history-header.filter-buttons.last-day"
+          (click)="hostRef.onPeriodChange('lastDay')"
+        &gt;D
+        &lt;/button&gt;
+        &lt;button
+          bbButton
+          color="secondary"
+          [class.active]="hostRef.filterPeriod === 'lastWeek'"
+          [attr.aria-pressed]="hostRef.filterPeriod === 'lastWeek'"
+          aria-label="Filter one week"
+          data-role="filter-button-one-week"
+          i18n-aria-label="Filter one week@@product-summary-balance-history-header.filter-buttons.last-week"
+          i18n="One Week@@product-summary-balance-history-header.filter-buttons.last-week"
+          (click)="hostRef.onPeriodChange('lastWeek')"
+        &gt;W
+        &lt;/button&gt;
+        &lt;button
+          bbButton
+          color="secondary"
+          [class.active]="hostRef.filterPeriod === 'lastMonth'"
+          [attr.aria-pressed]="hostRef.filterPeriod === 'lastMonth'"
+          aria-label="Filter one month"
+          data-role="filter-button-one-month"
+          i18n-aria-label="Filter one month@@product-summary-balance-history-header.filter-buttons.last-month"
+          i18n="One Month@@product-summary-balance-history-header.filter-buttons.last-month"
+          (click)="hostRef.onPeriodChange('lastMonth')"
+        &gt;M
+        &lt;/button&gt;
+        &lt;button
+          bbButton
+          color="secondary"
+          [class.active]="hostRef.filterPeriod === 'lastYear'"
+          [attr.aria-pressed]="hostRef.filterPeriod === 'lastYear'"
+          aria-label="Filter one year"
+          data-role="filter-button-one-year"
+          i18n-aria-label="Filter one year@@product-summary-balance-history-header.filter-buttons.last-year"
+          i18n="One Year@@product-summary-balance-history-header.filter-buttons.last-year"
+          (click)="hostRef.onPeriodChange('lastYear')"
+        &gt;Y
+        &lt;/button&gt;
+        &lt;button
+          bbButton
+          color="secondary"
+          [class.active]="hostRef.filterPeriod === 'all'"
+          [attr.aria-pressed]="hostRef.filterPeriod === 'all'"
+          aria-label="Filter all"
+          data-role="filter-button-all"
+          i18n-aria-label="Filter all@@product-summary-balance-history-header.filter-buttons.all"
+          i18n="All@@product-summary-balance-history-header.filter-buttons.all"
+          (click)="hostRef.onPeriodChange('all')"
+        &gt;All
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-balance-history-header__filter bb-stack__item bb-stack__item--fill d-lg-none"&gt;
+      &lt;bb-dropdown-menu-ui
+        container="body"
+        icon="caret-down"
+        btnColor="secondary"
+      &gt;
+        &lt;ng-template bbDropdownLabel&gt;
+            &lt;span i18n="Period|Period dropdown label@@product-summary-balance-history-header.filter-dropdown.period"&gt;
+              {hostRef.filterPeriod, select, other {Period: Custom Period} lastDay {Period: Yesterday}
+                lastWeek {Period: Last Week} lastMonth {Period: Last Month}
+                lastYear {Period: Last Year} all {Period: All}
+                customPeriod {Period: Custom Period}}
+            &lt;/span&gt;
+        &lt;/ng-template&gt;
+        &lt;ng-template bbDropdownMenuItem&gt;
+          &lt;a
+            role="menuitem"
+            class="dropdown-item bb-dropdown-single-select"
+            aria-label="Filter one day"
+            i18n-aria-label="Filter one day|Filter one day aria label
+              @@product-summary-balance-history-header.filter-dropdown.last-day"
+            tabindex="0"
+            (click)="hostRef.onPeriodChange('lastDay')"
+          &gt;
+              &lt;span
+                i18n="Yesterday|Filter by one day@@product-summary-balance-history-header.filter-dropdown.last-day"&gt;
+                Yesterday
+              &lt;/span&gt;
+          &lt;/a&gt;
+          &lt;a
+            role="menuitem"
+            class="dropdown-item bb-dropdown-single-select"
+            aria-label="Filter last week"
+            i18n-aria-label="Filter one day|Filter one day aria label
+              @@product-summary-balance-history-header.filter-dropdown.last-week"
+            tabindex="0"
+            (click)="hostRef.onPeriodChange('lastWeek')"
+          &gt;
+              &lt;span
+                i18n="Last Week|Filter by one week@@product-summary-balance-history-header.filter-dropdown.last-week"&gt;
+                Last Week
+              &lt;/span&gt;
+          &lt;/a&gt;
+          &lt;a
+            role="menuitem"
+            class="dropdown-item bb-dropdown-single-select"
+            aria-label="Filter last month"
+            i18n-aria-label="Filter by one month|Filter by  aria label
+              @@product-summary-balance-history-header.filter-dropdown.last-month"
+            tabindex="0"
+            (click)="hostRef.onPeriodChange('lastMonth')"
+          &gt;
+              &lt;span
+                i18n="Last Month|Filter by month@@product-summary-balance-history-header.filter-dropdown.last-month"&gt;
+                Last Month
+              &lt;/span&gt;
+          &lt;/a&gt;
+          &lt;a
+            role="menuitem"
+            class="dropdown-item bb-dropdown-single-select"
+            aria-label="Filter last year"
+            i18n-aria-label="Filter by one year|Filter by  aria label
+              @@product-summary-balance-history-header.filter-dropdown.last-year"
+            tabindex="0"
+            (click)="hostRef.onPeriodChange('lastYear')"
+          &gt;
+              &lt;span
+                i18n="Last year|Filter by year@@product-summary-balance-history-header.filter-dropdown.last-year"&gt;
+                Last Year
+              &lt;/span&gt;
+          &lt;/a&gt;
+          &lt;a
+            role="menuitem"
+            class="dropdown-item bb-dropdown-single-select"
+            aria-label="Filter All"
+            i18n-aria-label="Filter by All|Filter by  aria label
+              @@product-summary-balance-history-header.filter-dropdown.all"
+            tabindex="0"
+            (click)="hostRef.onPeriodChange('all')"
+          &gt;
+              &lt;span
+                i18n="All|Filter by All@@product-summary-balance-history-header.filter-dropdown.all"&gt;
+                All
+              &lt;/span&gt;
+          &lt;/a&gt;
+          &lt;a
+            role="menuitem"
+            class="dropdown-item bb-dropdown-single-select"
+            aria-label="Filter custom period"
+            i18n-aria-label="Filter by custom period|Filter by  aria label
+              @@product-summary-balance-history-header.filter-dropdown.custom-period"
+            tabindex="0"
+            (click)="hostRef.showCustomPeriodCalendar = !hostRef.showCustomPeriodCalendar"
+          &gt;
+              &lt;span
+                i18n="Custom Period|Filter by custom period
+                  @@product-summary-balance-history-header.filter-dropdown.custom-period"
+              &gt;
+                Custom Period
+              &lt;/span&gt;
+          &lt;/a&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-dropdown-menu-ui&gt;
+      &lt;div class="bb-balance-history-header__custom-period"
+           *ngIf="hostRef.showCustomPeriodCalendar"&gt;
+        &lt;bb-input-datepicker-ui
+          (ngModelChange)="hostRef.onDateChange($event)"
+          [minDate]="hostRef.defaultMinDate"
+          [maxDate]="hostRef.defaultMaxDate"
+          [rangeSelection]="true"
+          formControlName="dateRangeControl"
+          iconColor="dark"
+          aria-label="Date range from to"
+          i18n-aria-label="Date range from to@@product-summary-balance-history-header.filter-dropdown.custom-period"
+        &gt;&lt;/bb-input-datepicker-ui&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-balance-history-header__dropdown bb-stack__item bb-stack__item--align-top"&gt;
+      &lt;bb-dropdown-menu-ui
+        *ngIf="hostRef.exportAvailable else exportNotAvailableDropdown"
+        bbTooltip="Download"
+        i18n-bbTooltip="Download@@balance.history.header.aria.label.button.export.as.tooltip.download"
+        triggers="hover"
+        container="body"
+        icon="get-app"
+        iconSize="md"
+        btnCircle="true"
+        btnColor="secondary"
+        aria-label="Download options"
+        i18n-aria-label="Download options@@balance.history.header.aria.label.button.export.as.downloadOptions"
+        data-role="balance-history-download-options-dropdown"
+      &gt;
+        &lt;ng-template bbDropdownMenuItem&gt;
+          &lt;a *ngFor="let option of hostRef.exportToOptions"
+             role="menuitem"
+             class="dropdown-item"
+             (bbKeyboardClick)="hostRef.onExportAs(option)"
+          &gt;
+            {{ option }}
+          &lt;/a&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-dropdown-menu-ui&gt;
+      &lt;ng-template #exportNotAvailableDropdown&gt;
+        &lt;bb-dropdown-menu-ui
+          disabled="true"
+          bbTooltip="Balance history not found"
+          i18n-bbTooltip="Balance history not found@@balance.history.header.aria.label.button.export.as.tooltip.downloadNotAvailable"
+          triggers="hover"
+          container="body"
+          icon="get-app"
+          iconSize="md"
+          btnCircle="true"
+          btnColor="secondary"
+          aria-label="Download options are not available, not enough information"
+          i18n-aria-label="Download options are not available, not enough information@@balance.history.header.aria.label.button.export.as.downloadOptionsNotAvailable"
+          data-role="balance-history-download-options-dropdown"
+        &gt;&lt;/bb-dropdown-menu-ui&gt;
+      &lt;/ng-template&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbBalanceHistoryTableCustomizable" class="discrete">bbBalanceHistoryTableCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbBalanceHistoryTableCustomizable
+  let-hostRef
+  let-balanceHistoryData="context"
+&gt;
+  &lt;table class="bb-balance-history-table table table-hover"
+         [bbTable]="balanceHistoryData"&gt;
+    &lt;caption class="sr-only"
+             i18n="Balance History|Description for the balance history table@@product-summary-balance-history-table.description"&gt;
+      Balance history
+    &lt;/caption&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;
+          &lt;span class="highlight text-small"
+                i18n="Date@@product-summary-balance-history-table.date"&gt;
+            Date
+          &lt;/span&gt;
+      &lt;/th&gt;
+      &lt;th scope="col"
+          class="bb-text-align-right"&gt;
+          &lt;span class="highlight text-small"
+                i18n="Amount@@product-summary-balance-history-table.amount"&gt;
+            Amount
+          &lt;/span&gt;
+          &lt;span *ngIf="balanceHistoryData &amp;&amp; balanceHistoryData.length"&gt;
+            ({{balanceHistoryData[0]?.value?.currency }})
+          &lt;/span&gt;
+      &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;tr *ngFor="let item of balanceHistoryData"
+        [bbRow]="item"&gt;
+      &lt;td class="bb-balance-history-table__date-cell"&gt;
+        {{ item.dateTo | date:'longDate' }}
+      &lt;/td&gt;
+      &lt;td class="bb-balance-history-table__value-cell bb-text-align-right break-word"&gt;
+        &lt;bb-amount-ui data-role="balance-history-balance"
+                      [amount]="item.value.balance"
+        &gt;&lt;/bb-amount-ui&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>context: BalanceHistory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Table data.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbBalanceHistoryLineChartCustomizable" class="discrete">bbBalanceHistoryLineChartCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbBalanceHistoryLineChartCustomizable
+  let-hostRef
+  let-autoScale="context.autoScale"
+  let-dataSeries="context.dataSeries"
+  let-gradient="context.gradient"
+  let-customColors="context.customColors"
+  let-xAxis="context.xAxis"
+  let-yAxis="context.yAxis"
+  let-legend="context.legend"
+  let-showXAxisLabel="context.showXAxisLabel"
+  let-showYAxisLabel="context.showYAxisLabel"
+  let-xAxisLabel="context.xAxisLabel"
+  let-yAxisLabel="context.yAxisLabel"
+  let-animations="context.animations"
+  let-showRefLines="context.showRefLines"
+  let-referenceLines="context.referenceLines"
+  let-showRefLabels="context.showRefLabels"
+  &gt;
+  &lt;div class="bb-stack bb-product-summary-line-chart" [ngClass]="hostRef.classes"&gt;
+    &lt;ngx-charts-line-chart
+      [autoScale]="autoScale"
+      [results]="dataSeries"
+      [gradient]="gradient"
+      [customColors]="customColors"
+      [xAxis]="xAxis"
+      [yAxis]="yAxis"
+      [legend]="legend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [showRefLines]="showRefLines"
+      [showRefLabels]="showRefLabels"
+      [referenceLines]="referenceLines"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisTickFormatting]="hostRef.yAxisTickFormat"
+      [xAxisTickFormatting]="hostRef.xAxisTickFormat"
+      [yAxisLabel]="yAxisLabel"
+      [animations]="animations"&gt;
+
+      &lt;ng-template #tooltipTemplate let-model="model"&gt;
+        &lt;ng-container bbBalanceHistoryLineChartTooltipCustomizable [bbHostRef]="hostRef" [bbTemplateContext]="{ model: model }"&gt;
+          &lt;ng-template bbBalanceHistoryLineChartTooltipCustomizable let-hostRef let-model="context.model"&gt;
+            &lt;div class="bb-product-summary-line-chart__tooltip"&gt;
+              &lt;div data-role="tooltip-header"&gt;
+                {{model.name | date: hostRef.tooltipDateFormat }}
+              &lt;/div&gt;
+              &lt;div&gt;
+                {{hostRef.currency}}
+                &lt;span data-role="tooltip-item-value"&gt;
+                  &lt;bb-amount-ui
+                    [amount]="model.value"
+                    [showPlusSign]="hostRef.showTooltipAmountSign"
+                    [showPercent]="hostRef.showTooltipAmountPercent"
+                  &gt;&lt;/bb-amount-ui&gt;
+                &lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/ng-template&gt;
+        &lt;/ng-container&gt;
+      &lt;/ng-template&gt;
+
+      &lt;ng-template #seriesTooltipTemplate let-model="model"&gt;
+        &lt;ng-container bbBalanceHistoryLineChartSeriesTooltipCustomizable [bbHostRef]="hostRef" [bbTemplateContext]="{ model: model }"&gt;
+          &lt;ng-template bbBalanceHistoryLineChartSeriesTooltipCustomizable let-hostRef let-model="context.model"&gt;
+            &lt;div class="bb-product-summary-line-chart__tooltip"&gt;
+              &lt;div data-role="tooltip-header"&gt;
+                {{model[0]?.name | date: hostRef.tooltipDateFormat }}
+              &lt;/div&gt;
+              &lt;div *ngFor="let item of model"&gt;
+                {{hostRef.currency}}
+                &lt;span data-role="tooltip-item-value"&gt;
+                  &lt;bb-amount-ui
+                    [amount]="item.value"
+                    [showPlusSign]="hostRef.showTooltipAmountSign"
+                    [showPercent]="hostRef.showTooltipAmountPercent"
+                  &gt;&lt;/bb-amount-ui&gt;
+                &lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/ng-template&gt;
+        &lt;/ng-container&gt;
+      &lt;/ng-template&gt;
+    &lt;/ngx-charts-line-chart&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>autoScale: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines scale mode of the chart.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dataSeries: BalanceHistoryDataSeries[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chart data series.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gradient: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fill method (gradient or solid color).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>customColors: { name: 'positive'|'negative'; value?: string }[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Colors for negative and positive areas.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xAxis: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines whether X axis should be displayed or hidden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>yAxis: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines whether Y axis should be displayed or hidden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>legend: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines whether chart legend should be displayed or hidden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>showXAxisLabel: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines whether x axis labels should be displayed or hidden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>showYAxisLabel: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines whether y axis labels should be displayed or hidden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>showRefLines: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines if the reference line should be shown behind the chart. This line is to distinguish the positive and negative areas.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>showRefLabels: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines if the reference labels should be shown or hidden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>referenceLines: ChartReferenceLine[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reference lines that can be shown behind the chart.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xAxisLabel: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label for X axis.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>yAxisLabel: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label for Y axis.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>animations: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies if animations are enabled or not.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbBalanceHistoryLineChartSeriesTooltipCustomizable" class="discrete">bbBalanceHistoryLineChartSeriesTooltipCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBalanceHistoryLineChartSeriesTooltipCustomizable let-hostRef let-model="context.model"&gt;
+  &lt;div class="bb-product-summary-line-chart__tooltip"&gt;
+    &lt;div data-role="tooltip-header"&gt;
+      {{model[0]?.name | date: hostRef.tooltipDateFormat }}
+    &lt;/div&gt;
+    &lt;div *ngFor="let item of model"&gt;
+      {{hostRef.currency}}
+      &lt;span data-role="tooltip-item-value"&gt;
+        &lt;bb-amount-ui
+          [amount]="item.value"
+          [showPlusSign]="hostRef.showTooltipAmountSign"
+          [showPercent]="hostRef.showTooltipAmountPercent"
+        &gt;&lt;/bb-amount-ui&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>model: { name: Date, series: 'positive'|'negative', value: string }</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The model of the selected chart item.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbBalanceHistoryLineChartTooltipCustomizable" class="discrete">bbBalanceHistoryLineChartTooltipCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbBalanceHistoryLineChartTooltipCustomizable let-hostRef let-model="context.model"&gt;
+  &lt;div class="bb-product-summary-line-chart__tooltip"&gt;
+    &lt;div data-role="tooltip-header"&gt;
+      {{model.name | date: hostRef.tooltipDateFormat }}
+    &lt;/div&gt;
+    &lt;div&gt;
+      {{hostRef.currency}}
+      &lt;span data-role="tooltip-item-value"&gt;
+        &lt;bb-amount-ui
+          [amount]="model.value"
+          [showPlusSign]="hostRef.showTooltipAmountSign"
+          [showPercent]="hostRef.showTooltipAmountPercent"
+        &gt;&lt;/bb-amount-ui&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>model: { name: Date, series: 'positive'|'negative', value: string, color: string }[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The model of the selected chart item.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbBalanceHistoryLineChartLegendCustomizable" class="discrete">bbBalanceHistoryLineChartLegendCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbBalanceHistoryLineChartLegendCustomizable
+  let-hostRef
+  let-dataSeries="context.dataSeries"
+  let-customColors="context.customColors"
+&gt;
+  &lt;bb-chart-legend-ui
+    [currency]="hostRef.currency"
+    [maxValue]="hostRef.getMax()"
+    [minValue]="hostRef.getMin()"
+    [positiveColor]="hostRef.getPositiveColor()"
+    [negativeColor]="hostRef.getNegativeColor()"
+  &gt;&lt;/bb-chart-legend-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dataSeries: BalanceHistoryDataSeries[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chart data series.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>customColors: { name: 'positive'|'negative'; value?: string }[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Colors for negative and positive areas.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="product_summary_balance_history_hostref_api" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ProductSummaryBalanceHistoryWidgetComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bbProductSummaryBalanceHistoryWidgetCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no public API</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="12"><p class="tableblock"><code>BalanceHistoryContainerComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="12"><p class="tableblock"><code>bbBalanceHistoryContainerCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onDateChange(dateRange: DateRangeModel)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Change <code>paginationParams: BehaviorSubject&lt;BalanceHistoryPaginationParams&gt;</code> and <code>seriesParams: BehaviorSubject&lt;BalanceHistorySeriesParams&gt;</code>. Leads to fetching chart and table data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPeriodChange(period: FilterPeriod)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Change <code>paginationParams: BehaviorSubject&lt;BalanceHistoryPaginationParams&gt;</code> and <code>seriesParams: BehaviorSubject&lt;BalanceHistorySeriesParams&gt;</code>. Leads to fetching chart and table data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exportBalanceHistoryTo(type: string, requestParamsSeriesValue: GetBalanceHistoryRequestSeriesObjectType)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exports balance history data with a specified format</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>currency: string|undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Currency sign of the balance history items (if present in backend response).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xAxisTickFormat(tick: Date): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transforms date to a formatted string ('EE d' format), uses Angular <code>DatePipe</code> for transformations.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>yAxisTickFormat(): ''</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A utility method. Returns empty string.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getColors(): { name: 'positive'|'negative'; value?: string }[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns array of chart colors ('positive', 'negative');</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>processErrorMessages(messages: string[]): string|undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A utility method. Combines an array of error messages to a single error message.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPageChange(page: number)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets <code>from</code> parameter in <code>paginationParams: BehaviorSubject&lt;BalanceHistoryPaginationParams&gt;</code>. Leads to fetching paginated data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onLoadMore()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Changes <code>from</code> parameter in <code>paginationParams: BehaviorSubject&lt;BalanceHistoryPaginationParams&gt;</code>. Leads to fetching items from the next page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requestParamsPaginated: Observable&lt;GetBalanceHistoryRequestPaginatedObjectType&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request parameters for getting balance history table items.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multiple: BehaviorSubject&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets whether the bank customer can see details for multiple accounts at a time.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock"><code>BalanceHistoryFooterComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock"><code>bbBalanceHistoryFooterCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PaginationType: Enum</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides access to a <code>PaginationType</code> enum from the template.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPageChange(page: number)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emits <code>pageChange: EventEmitter&lt;number&gt;</code> event.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasMore: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates if a pagination should be displayed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onLoadMore()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emits <code>loadMore: EventEmitter&lt;void&gt;</code> event if loading is not in progress already.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loading: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates if loading is in progress.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>BalanceHistoryHeaderComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>bbBalanceHistoryHeaderCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onDateChange(event: DateRangeModel)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emits <code>dateChange: EventEmitter&lt;DateRangeModel&gt;</code> event.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultMinDate: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum date value in datepicker (2 years behind the current date). <code>Readonly</code> property.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultMaxDate: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum date value in datepicker (today). <code>Readonly</code> property.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>formGroup: FormGroup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A form group to allow using the header component with Angular Reactive Forms approach. <code>Readonly</code> property.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>filterPeriod: FilterPeriod</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chosen filter period. <code>lastWeek</code> by default.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPeriodChange(period: FilterPeriod)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updates <code>initialDate</code> property. Emits <code>periodChange: EventEmitter&lt;FilterPeriod&gt;</code> event.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>showCustomPeriodCalendar: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies if a datepicker for custom period should be displayed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exportToOptions: Array&lt;string&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array of available formats for export.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exportAvailable: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies if export functionality available.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onExportAs(exportType: string)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emits <code>exportAs: EventEmitter&lt;string&gt;</code> event.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock"><code>LineChartComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock"><code>bbBalanceHistoryLineChartCustomizable</code>,
+<code>bbBalanceHistoryLineChartTooltipCustomizable</code>,
+<code>bbBalanceHistoryLineChartSeriesTooltipCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>classes: string | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom classes that should be applied to chart area.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>yAxisTickFormat(tick: any): Function</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formats y axis labels with a function provided to component input <code>yAxisTickFormatFunction: (tick: any)</code> or with a default formatter if input is empty.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xAxisTickFormat(tick: any): Function</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formats y axis labels with a function provided to component input <code>xAxisTickFormatFunction: (tick: any)</code> or with a default formatter if input is empty.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tooltipDateFormat: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Format applied to the dates displayed inside the tooltips.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>currency: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Currency sign used with the dates displayed inside the tooltips.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>showTooltipAmountSign: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines whether to show +/- sign for values inside the tooltips.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>showTooltipAmountPercent: boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines whether to show % sign for values inside the tooltips.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock"><code>LineChartLegendComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock"><code>bbBalanceHistoryLineChartLegendCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>currency: string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Currency sign used inside chart legend.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getMax(): number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns maximum available value in data series.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getMin(): number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns minimum available value in data series.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getPositiveColor(): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides color for positive area. Takes color from the <code>customColors</code> input.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getNegativeColor(): string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides color for negative area. Takes color from the <code>customColors</code> input.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="product_summary_balance_history_implementation" class="discrete">Implementation example</h2>
+<div class="paragraph">
+<p>The following examples show the implementation of this widget:</p>
+</div>
+<h3 id="_wrapper_widget_module" class="discrete">Wrapper widget module</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { LineChartModule } from '@swimlane/ngx-charts';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ProductSummaryBalanceHistoryWidgetModule } from '@backbase/product-summary-balance-history-widget-ang';
+import { ProductSummaryBalanceHistoryWidgetExtendedComponent } from './product-summary-balance-history-widget-extended.component';
+
+@NgModule({
+  declarations: [ProductSummaryBalanceHistoryWidgetExtendedComponent],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    BackbaseCoreModule.withConfig({
+      classMap: { ProductSummaryBalanceHistoryWidgetExtendedComponent },
+    }),
+    LineChartModule,
+    ProductSummaryBalanceHistoryWidgetModule,
+  ],
+  exports: [ProductSummaryBalanceHistoryWidgetModule, ProductSummaryBalanceHistoryWidgetExtendedComponent],
+})
+export class ProductSummaryBalanceHistoryWidgetExtendedModule {}</code></pre>
+</div>
+</div>
+<h3 id="_wrapper_widget_component" class="discrete">Wrapper widget component</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+import { BalanceHistoryCommonService, DownloadResourcesService } from '@backbase/product-summary-common-ang';
+
+@Component({
+  selector: 'bb-product-summary-balance-history-widget-extended',
+  templateUrl: './product-summary-balance-history-widget-extended.component.html',
+  providers: [BalanceHistoryCommonService, DownloadResourcesService],
+})
+export class ProductSummaryBalanceHistoryWidgetExtendedComponent {}</code></pre>
+</div>
+</div>
+<h3 id="_custom_template" class="discrete">Custom template</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;bb-product-summary-balance-history-widget&gt;&lt;/bb-product-summary-balance-history-widget&gt;</code></pre>
+</div>
+</div>
+<h2 id="product_summary_balance_history_peferences" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>This widget has the following preferences that managers or administrators configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configured by</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Number of balances per page</strong></p>
+<p class="tableblock">Set the number of the balances that the widget displays per page.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Show chart legend</strong></p>
+<p class="tableblock">Set to <code>false</code> to hide the chart legend in the widget.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>showChartLegend</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p><strong>Pagination Type</strong></p>
+</div>
+<div class="paragraph">
+<p>Options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>default</code></p>
+</li>
+<li>
+<p><code>pagination</code></p>
+</li>
+<li>
+<p><code>load more</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Change to use a different pagination type.</p>
+</div>
+<div class="paragraph">
+<p>By default, pagination type is based on resolution and changes automatically.</p>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paginationType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>select</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>default</code></p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="product_summary_balance_history_access_control" class="discrete">Access Control</h2>
+<div class="paragraph">
+<p>A permission is the combination of a business function and a single privilege granted to a user
+on a given resource type. Privileges are enforced by Digital Banking Services. Widget behavior is affected by the permissions of the user accessing the widget.</p>
+</div>
+<div class="paragraph">
+<p>The following table describes how the widget behavior changes depending on the permissions of the user:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 15%;">
+<col style="width: 20%;">
+<col style="width: 15%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Resource</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Business function</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Privilege</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Widget behavior</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Product Summary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Product Summary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current user views the history of an account balance in tabular or graphical view.</p>
+<p class="tableblock">If the user does not have the permission to view, the widget displays an empty page.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

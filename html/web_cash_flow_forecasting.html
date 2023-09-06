@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Web widgets</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="web_cash_flow_forecasting" class="book toc2 toc-left">
+<div id="header">
+<h1>Web widgets</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html"><span class="toc-current">Web widgets</span></a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="web_cash_flow_forecasting" class="sect0">Web widgets</h1>
+          <div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+This section describes an add-on. You may use this add-on only if you have
+purchased an appropriate license for this add-on based on a signed Product Order Form.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The web widgets included in this capability are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_cash_flow_forecasting.html#connect_accounting_software_business_web_widgets">Connect accounting software</a>: Displays the flow of connecting to accounting software
+for Cash Flow Forecasting.</p>
+</li>
+<li>
+<p><a href="web_cash_flow_forecasting.html#configure_forecast_business_web_widgets">Configure forecast</a>: Configure a forecast wizard.</p>
+</li>
+<li>
+<p><a href="web_cash_flow_forecasting.html#manage_payables_business_web_widgets">Manage payables</a>: Displays a list of available payables of a company,
+based on the information retrieved from the accounting software.</p>
+</li>
+<li>
+<p><a href="web_cash_flow_forecasting.html#cash_flow_payment_request_details_business_web_widgets">Cash flow payment request details</a>: Displays modals which detail specific information about a selected payable or recievable.</p>
+</li>
+<li>
+<p><a href="web_cash_flow_forecasting.html#view_forecast_business_web_widgets">View cash flow forecast</a>: Display the forecast bar chart.</p>
+</li>
+<li>
+<p><a href="web_cash_flow_forecasting.html#view_receivables_business_web_widgets">View receivables</a>: Displays a list of available receivables of a company,
+based on the information retrieved from the accounting software.</p>
+</li>
+<li>
+<p><a href="web_cash_flow_forecasting.html#manage_forecast_settings_business_web_widgets">Manage forecast settings</a>: Displays the configuations and settings for Cash Flow Forecasting,
+and for the linked accounting software.</p>
+</li>
+</ul>
+</div>
+<h2 id="connect_accounting_software_business_web_widgets" class="discrete">Connect accounting software</h2>
+<div class="paragraph">
+<p><strong>Connect accounting software</strong> displays the flow of connecting the user to their accounting software
+for Cash Flow Forecasting.</p>
+</div>
+<div class="paragraph">
+<p>Cash Flow Forecasting uses Codat, a third-party software to aggregate the financial data from the online accounting systems.</p>
+</div>
+<div class="paragraph">
+<p>The user connects to their accounting software through <strong>Connect accounting software</strong>.
+If there is no active connection, the widget displays a button to open up a modal that guides
+the user trough setting up the connection.</p>
+</div>
+<div class="paragraph">
+<p>The financial data must be supplied by a linked provider of third-party software.</p>
+</div>
+<div class="paragraph">
+<p>The user must select and log in to the supported
+accounting software in order to create a dedicated SME company with Codat. If there are multiple users
+with access to the accounting software and Cash Flow Forecasting, they will be linked to this SME company.</p>
+</div>
+<div class="paragraph">
+<p>If the user’s log in is successful, the data fetching from the accounting software will be initiated.</p>
+</div>
+<h3 id="_screenshots" class="discrete">Screenshots</h3>
+<div class="paragraph">
+<p>The widget supports the following user flows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>No connection:</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/connect_accounting_software_no_connection_view.svg?ver=3.10.1" alt="connect accounting software no connection view"></span></p>
+</div>
+</li>
+<li>
+<p>Set up connection modal:</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/connect_accounting_software_understand.svg?ver=3.10.1" alt="connect accounting software understand"></span></p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_features_11" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Connect accounting software.</p>
+</li>
+</ul>
+</div>
+<h3 id="_endpoints" class="discrete">Endpoints</h3>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/cashflow-client-api.html#api-Sme-getSme">GET https://ips_host:ips_port/gateway/api/cashflow-service/client-api/v1/sme</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/cashflow-client-api.html#api-AccountingPlatforms-getAccountingPlatforms">GET https://ips_host:ips_port/gateway/api/cashflow-service/client-api/v1/accounting-platforms</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/cashflow-client-api.html#api-Sme-postSme">POST https://ips_host:ips_port/gateway/api/cashflow-service/client-api/v1/sme</a></p>
+</div>
+<h3 id="_related_topics_13" class="discrete">Related topics</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>References: <a href="connect_accounting_software_reference.html">Connect accounting software</a></p>
+</li>
+<li>
+<p>To understand the process better, read <a href="https://community.backbase.com/documentation/DBS/2.21.1/connect_accounting_provider">Connect an accounting provider</a>
+in the DBS documentation.</p>
+</li>
+</ul>
+</div>
+<div class="sect1">
+        <h2 id="configure_forecast_business_web_widgets">Configure forecast</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>The <strong>Configure forecast</strong> widget allows the user to configure Cash Flow Forecasting.</p>
+</div>
+<h3 id="_features_12" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Select forecast currency</p>
+<div class="paragraph">
+<p>The forecast currency determines which accounts should be included in the forecast.
+The list of available currencies is taken from the list of open accounts.</p>
+</div>
+<div class="paragraph">
+<p>US Dollar is preselected by default. If US Dollar is not available, then the first currency is taken from the list of available currencies.</p>
+</div>
+<div class="paragraph">
+<p>Multi-currency or currency conversion is not supported, meaning it is not possible to create a forecast that
+includes accounts in multiple currencies.</p>
+</div>
+</li>
+<li>
+<p>Select accounts: Select one or multiple accounts to have their balances included in the forecast.</p>
+</li>
+<li>
+<p>Filter the list of accounts by the account name.</p>
+</li>
+<li>
+<p>Select accounting categories that you want to include in the forecast.</p>
+</li>
+<li>
+<p>Filter the list of accounting categories by the account name.</p>
+</li>
+</ul>
+</div>
+<h3 id="_screenshots_2" class="discrete">Screenshots</h3>
+<div class="paragraph">
+<p>The widget supports the following user flows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a forecast configuration</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select accounts</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/configure_forecast_create_select_accounts_view.svg?ver=3.10.1" alt="configure forecast create select accounts view"></span></p>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>Error message when no account is selected:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/configure_forecast_create_next_no_accounts_view.svg?ver=3.10.1" alt="configure forecast create next no accounts view"></span></p>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>Successful filter:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/configure_forecast_create_filter_accounts_list_view.svg?ver=3.10.1" alt="configure forecast create filter accounts list view"></span></p>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>No results found:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/configure_forecast_create_filter_accounts_list_no_results_view.svg?ver=3.10.1" alt="configure forecast create filter accounts list no results view"></span></p>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Select accounting categories</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/configure_forecast_create_select_accounting_categories_view.svg?ver=3.10.1" alt="configure forecast create select accounting categories view"></span></p>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>Error message when no accounting category is selected:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/configure_forecast_create_finish_no_accounting_categories_selected_view.svg?ver=3.10.1" alt="configure forecast create finish no accounting categories selected view"></span></p>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>Successful filter:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/configure_forecast_create_filter_accounting_categories_view.svg?ver=3.10.1" alt="configure forecast create filter accounting categories view"></span></p>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>No results found:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/configure_forecast_create_filter_accounting_categories_no_results_view.svg?ver=3.10.1" alt="configure forecast create filter accounting categories no results view"></span></p>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Edit a forecast configuration</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select accounts</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/configure_forecast_edit_select_accounts_view.svg?ver=3.10.1" alt="configure forecast edit select accounts view"></span></p>
+</div>
+</li>
+<li>
+<p>Select accounting categories</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/configure_forecast_edit_select_accounting_categories_view.svg?ver=3.10.1" alt="configure forecast edit select accounting categories view"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Edit accounts</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/configure_forecast_edit_accounts_view.svg?ver=3.10.1" alt="configure forecast edit accounts view">
+</div>
+</div>
+</li>
+<li>
+<p>Edit accounting categories</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/configure_forecast_edit_accounting_categories_view.svg?ver=3.10.1" alt="configure forecast edit accounting categories view">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<h3 id="_related_topics_14" class="discrete">Related topics</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>References: <a href="configure_forecast_reference.html">Configure forecast</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+<div class="sect1">
+        <h2 id="manage_payables_business_web_widgets">Manage payables</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>The <strong>Manage payables</strong> widget allows the user to view a list of their company&#8217;s available payables.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manage_payables_understand.svg?ver=3.10.1" alt="loaded payables screen">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manage_payables_understand_mobile.svg?ver=3.10.1" alt="mobile view">
+</div>
+</div>
+<div class="paragraph">
+<p>When the user views the list of payables, the widget displays all payables available to the customer
+in the accounting software. The user will also view the timestamp of the last time the interface synced with the
+accounting software, showing that the information is correct as of the time and date displayed.
+Each listed item, a receivable, includes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Status:</strong>  The current state of the bill.</p>
+</li>
+<li>
+<p><strong>Issue date:</strong>  The issue date of the bill.</p>
+</li>
+<li>
+<p><strong>Due date:</strong>  The date when the bill must be fully paid.</p>
+</li>
+<li>
+<p><strong>Currency:</strong>  The currency of the bill.</p>
+</li>
+<li>
+<p><strong>Amount due:</strong>  The amount of funds the business expects to pay to a supplier.</p>
+</li>
+<li>
+<p><strong>Total amount:</strong>  The amount of the bill, inclusive of tax.</p>
+</li>
+<li>
+<p><strong>Supplier:</strong> The name of an entity that issued the bill.</p>
+</li>
+<li>
+<p><strong>Category:</strong> The account that the business uses to record transactions.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Payables with only a portion of the full amount paid have the status <strong>Partiallypaid</strong>.
+In the <strong>Amount due</strong>, the user sees the outstanding amount to be paid out of the total amount of the invoice.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manage_payables_understand_filter.svg?ver=3.10.1" alt="filter payables">
+</div>
+</div>
+<div class="paragraph">
+<p>The user may filter the list of payables by status, such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>All:</strong> Displays the entire list, set as default.</p>
+</li>
+<li>
+<p><strong>Open</strong></p>
+</li>
+<li>
+<p><strong>Paid</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The user may isolate listed payables further by initiating a search of a
+supplier name or reference number.</p>
+</div>
+<h3 id="_features_13" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>View list of payables.</p>
+</li>
+<li>
+<p>View the due amount.</p>
+</li>
+<li>
+<p>View the time of last update.</p>
+</li>
+<li>
+<p>Filter list of payables.</p>
+</li>
+<li>
+<p>Search list of payables.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_15" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="manage_payables_reference.html">Manage payables</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+<div class="sect1">
+        <h2 id="cash_flow_payment_request_details_business_web_widgets">Cash flow payment request details</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>The <strong>Cash flow payment request details</strong> widget displays modals which detail specific information about a selected payable or recievable. The widget retrieves the required infomation from the user&#8217;s connected accounting software via Codat.</p>
+</div>
+<div class="paragraph">
+<p>The modal window displays each receivable or payable with the following list items:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ID: A unique identifier of an invoice in the accounting system.</p>
+</li>
+<li>
+<p>Status: The current state of the invoice</p>
+</li>
+<li>
+<p>Issue date: The date when an invoice was issued.</p>
+</li>
+<li>
+<p>Due date: date when an invoice has to be fully paid.</p>
+</li>
+<li>
+<p>Expected date: The date when an invoice is expected to be paid.</p>
+</li>
+<li>
+<p>Currency: The currency of the invoice.</p>
+</li>
+<li>
+<p>Amount due: The amount of funds the business expects to receive or pay.</p>
+</li>
+<li>
+<p>Paid amount: The amount of funds the business expects to receive or pay.</p>
+</li>
+<li>
+<p>Total amount: The amount of the invoice, inclusive of tax.</p>
+</li>
+<li>
+<p>Customer name: The name of an entity that an invoice was issued to.</p>
+</li>
+<li>
+<p>Category: The account a business uses to record accounting transactions.</p>
+</li>
+</ul>
+</div>
+<h4 id="_receivable_item_details" class="discrete">Receivable item details</h4>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payment_request_details_receivable_understand.svg?ver=3.10.1" alt="payment request details receivable understand">
+</div>
+</div>
+<h4 id="_payable_item_details" class="discrete">Payable item details</h4>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payment_request_details_payable_understand.svg?ver=3.10.1" alt="payment request details payable understand">
+</div>
+</div>
+<h3 id="_features_14" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>View details of a selected receivables.</p>
+</li>
+<li>
+<p>View details of a selected payable.</p>
+</li>
+</ul>
+</div>
+<h2 id="view_forecast_business_web_widgets" class="discrete">View cash flow forecast</h2>
+<div class="paragraph">
+<p>The <strong>View cash flow forecast</strong> widget shows the forecast for the cash flow in the form of a bar chart and a table.</p>
+</div>
+<div class="paragraph">
+<p>The widget requires:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Active connection to an accounting provider:
+<a href="web_cash_flow_forecasting.html#connect_accounting_software_business_web_widgets">Connect accounting software</a></p>
+</li>
+<li>
+<p>Forecast configured:
+<a href="web_cash_flow_forecasting.html#configure_forecast_business_web_widgets">Configure forecast</a></p>
+</li>
+<li>
+<p>Accounting data: If there is an active connection to an accounting provider,
+but that does not return any accounting data to Cash Flow Forecasting, the widget shows a
+message that explains what is missing.</p>
+</li>
+</ul>
+</div>
+<h3 id="_features_15" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>View historic and future closing balances plotted on a <a href="web_cash_flow_forecasting.html#view_forecast_barchart_business_web_widgets">bar chart</a></p>
+</li>
+<li>
+<p>View balance and cash flow details in a <a href="web_cash_flow_forecasting.html#view_forecast_table_business_web_widgets">table</a></p>
+</li>
+<li>
+<p>Selector for the period:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Daily (default): Shows the last 7 days and the upcoming 14 days</p>
+</li>
+<li>
+<p>Weekly: Shows the last 4 weeks and the upcoming 10 weeks</p>
+</li>
+<li>
+<p>Monthly: Shows the last 3 months and the upcoming 12 months</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_screenshots_3" class="discrete">Screenshots</h3>
+<div class="paragraph">
+<p>The widget supports the following flows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Active connection with no accounting data:</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/view_forecast_no_data_view.svg?ver=3.10.1" alt="view forecast no data view"></span></p>
+</div>
+</li>
+<li>
+<p>Forecast:</p>
+<div class="paragraph">
+<p>When there is an active connection with accounting data,
+the widget shows the forecast graph based on the
+<a href="web_cash_flow_forecasting.html#configure_forecast_business_web_widgets">forecast configuration</a>:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/view_forecast_understand.svg?ver=3.10.1" alt="view forecast understand"></span></p>
+</div>
+<div class="paragraph">
+<p>When you hover over or tap on the chart, a tooltip displays the balance information:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/view_forecast_tooltip_view.svg?ver=3.10.1" alt="view forecast tooltip view"></span></p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="view_forecast_barchart_business_web_widgets" class="discrete">Bar chart details</h3>
+<div class="paragraph">
+<p>The bar chart has the following specific features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>X-axis</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The x-axis is always visible.</p>
+</li>
+<li>
+<p>The x-axis is scrollable.</p>
+</li>
+<li>
+<p>The increments on the x-axis are daily, weekly, or monthly and correspond to the selected period.</p>
+</li>
+<li>
+<p>The labels of the increments on the x-axis are as follows:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Daily: Month day, year. For example:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Nov 21, 2017</p>
+</li>
+<li>
+<p>Jan 5, 2020</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Weekly: W number of the week, year. For example:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>W3, 2017</p>
+</li>
+<li>
+<p>W54, 2018</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Monthly: Month year. For example:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Jan 2018</p>
+</li>
+<li>
+<p>Feb 2018</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Y-axis</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The y-axis is never visible. The balance values are displayed above each bar.</p>
+</li>
+<li>
+<p>The increments of the y-axis scale with the the balance values in the current bar chart.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Grid lines</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The horizontal grid lines are always visible and align with the y-axis increments.</p>
+</li>
+<li>
+<p>Vertical grid lines are never visible.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Tooltip</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Trigger the tooltip with a mouse hover (desktop) over or a tap (mobile) on the chart.
+This action shows the tooltip with information on the selected bar
+and highlights the selected bar.</p>
+</li>
+<li>
+<p>The tooltip shows different information depending on the timeframe of the selected bar:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Past balance</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Jan 1, 2019</strong></p>
+<p class="tableblock">Balance: USD 1,234.00</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Current balance</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Feb 4, 2020</strong></p>
+<p class="tableblock">Current: USD 10,123.00</p>
+<p class="tableblock">Forecast: USD 11,124.00</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Future balance</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Mar 1, 2020</strong></p>
+<p class="tableblock">Forecast: USD 900,231.00</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Dismiss the tooltip by navigating the mouse away or by a second tap.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="view_forecast_table_business_web_widgets" class="discrete">Table details</h3>
+<div class="paragraph">
+<p>The table below the bar chart displays the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Opening Balance</strong>: The balance at the beginning of the period increment.</p>
+</li>
+<li>
+<p><strong>Cash In</strong>: Total amount of receivables in this period increment. Expand to split it out into category groups and categories.</p>
+</li>
+<li>
+<p><strong>Cash Out</strong>: Total amount of payables in this period increment. Expand to split it out into category groups and categories.</p>
+</li>
+<li>
+<p><strong>Net Change</strong>: The net amount of receivables minus payables.</p>
+</li>
+<li>
+<p><strong>Closing Balance</strong>: The balance at the end of the period increment.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_16" class="discrete">Related topics</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>References: <a href="view_forecast_reference.html">View cash flow forecast</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+<div class="sect1">
+        <h2 id="view_receivables_business_web_widgets">View receivables</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>The <strong>View receivables</strong> widget allows the user to view a list of their company&#8217;s available receivables.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/view_receivables_understand.svg?ver=3.10.1" alt="view receivables">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/view_receivables_understand_mobile.svg?ver=3.10.1" alt="view receivables understand mobile">
+</div>
+</div>
+<div class="paragraph">
+<p>When the user views the list of receivables, the widget displays all receivables fetched from the accounting
+software. The user will also view the timestamp of the last time the interface synced with the
+accounting software, showing that the information is correct as of the time and date displayed.</p>
+</div>
+<div class="paragraph">
+<p>Each listed receivable includes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Status:</strong>  The current state of the invoice.</p>
+</li>
+<li>
+<p><strong>Issue date:</strong>  The issue date of the invoice.</p>
+</li>
+<li>
+<p><strong>Due date:</strong>  The date when the invoice must be fully paid.</p>
+</li>
+<li>
+<p><strong>Currency:</strong>  The currency of the invoice.</p>
+</li>
+<li>
+<p><strong>Amount due:</strong>  The amount of funds the business expects to be paid by a customer.</p>
+</li>
+<li>
+<p><strong>Total amount:</strong>  The amount of the invoice, inclusive of tax.</p>
+</li>
+<li>
+<p><strong>Supplier:</strong> The name of an entity issued with the invoice.</p>
+</li>
+<li>
+<p><strong>Category:</strong> The account that the business uses to record transactions.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Receivables with only a portion of the full amount received have the status <strong>Partiallypaid</strong>.
+In the <strong>Amount due</strong>, the user sees the outstanding amount to be received out of the total amount of the invoice.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/view_receivables_understand_filter.svg?ver=3.10.1" alt="filter recievables">
+</div>
+</div>
+<div class="paragraph">
+<p>The user may filter the list of receivables by status, such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>All:</strong> Displays the entire list, set as default.</p>
+</li>
+<li>
+<p><strong>Open</strong></p>
+</li>
+<li>
+<p><strong>Paid</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The user may isolate listed receivables further by initiating a search of a
+customer&#8217;s name or reference number.</p>
+</div>
+<h3 id="_features_16" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>View list of receivables.</p>
+</li>
+<li>
+<p>View the due amount.</p>
+</li>
+<li>
+<p>View the time of last update.</p>
+</li>
+<li>
+<p>Filter list of receivables.</p>
+</li>
+<li>
+<p>Search list of receivables.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_17" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="view_receivables_reference.html">View receivables</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+<div class="sect1">
+        <h2 id="manage_forecast_settings_business_web_widgets">Manage forecast settings</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>The <strong>Manage forecast settings</strong> widget displays the configuations and settings for Cash Flow Forecasting and for the linked accounting software.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manage_forecast_settings_understand.svg?ver=3.10.1" alt="manage forecast settings understand">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manage_forecast_settings_understand_setup.svg?ver=3.10.1" alt="manage forecast settings understand setup">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manage_forecast_settings_understand_mobile.svg?ver=3.10.1" alt="manage forecast settings understand mobile">
+</div>
+</div>
+<div class="paragraph">
+<p>By selecting the <strong>Settings</strong> tab, the user is able to view and edit the settings of a selected forecast. The flow for editing a forecast follows the same path as creating a forecast, requiring a currency, banking accounts, and accounting categories or accounts.</p>
+</div>
+<h3 id="_features_17" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>View forecast settings.</p>
+<div class="paragraph">
+<p>The widget displays the forecast settings the user provided when creating the a forecast. The settings are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Currency of the selected forecast.</p>
+</li>
+<li>
+<p>The list of bank accounts included in the selected forecast.</p>
+</li>
+<li>
+<p>The list of accounting categories and accounts included in the selected forecast.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Edit forecast settings.</p>
+<div class="paragraph">
+<p>The user can use <strong>Manage forecast settings</strong> to edit a selected forecast.</p>
+</div>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+</div>
+</body>
+</html>

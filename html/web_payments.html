@@ -1,0 +1,2457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Web widgets</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="web_payments" class="book toc2 toc-left">
+<div id="header">
+<h1>Web widgets</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html"><span class="toc-current">Web widgets</span></a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="web_payments" class="sect0">Web widgets</h1>
+          <div class="paragraph">
+<p><a href="payments_understand.html">Understand Payments</a> describes the functionalities of Payments.
+The following web widgets deliver these functionalities:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Initiate payment</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_payments.html#omni_payment">Initiate omni payment</a>: Dynamic payment widget that you can easily configure for various payment types.
+It comes with out-of-the-box configurations for US domestic wire transfer, ACH credit transfer,
+SEPA credit transfer (beta), CHAPS transfer (beta), and Faster Payments (beta), and
+international transfers.</p>
+</li>
+<li>
+<p><a href="web_payments.html#initiate_payment_wizard_business_web_widgets">Initiate payment wizard</a>: A single universal interface that guides the business bank account user through the initiate payment process.
+Supports SEPA credit transfer, Faster Payments, CHAPS, and international transfers.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Initiate US payment: ACH debit payment</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_payments.html#ach_debit_business_web_widgets">Initiate ACH debit</a>: Direct debit widget that you can easily configure and extend to create new debits.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Manage payment orders</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_payments.html#manage_payments_business_web_widgets">Manage payments</a>: View all payment orders for the accounts you are entitled to access after login.</p>
+</li>
+<li>
+<p><a href="web_payments.html#manage_ach_debit_business_web_widgets">Manage ACH debit</a>: View all one-time and recurring debits for the accounts you are entitled to access after login.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Manage payment templates</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_payments.html#manage_payment_templates_business_web_widgets">Manage payment templates</a>: View generated payment templates.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Stop checks</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_payments.html#request_stop_checks_business_web_widgets">Request stop checks</a>: Submit a request to stop the clearance of an issued or lost check.</p>
+</li>
+<li>
+<p><a href="web_payments.html#stop_checks_list_business_web_widgets">View stop check payment requests</a>: View submitted stop check requests.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="omni_payment" class="discrete">Initiate omni payment</h2>
+<div class="paragraph">
+<p>The <strong>Initiate omni payment</strong> widget is a base widget that is fully customizable with a TypeScript configuration to support different payment types. It comes with out-of-the-box configurations for common payment types.</p>
+</div>
+<h3 id="_supported_payment_types" class="discrete">Supported payment types</h3>
+<div class="paragraph">
+<p>The widget supports the following payment types out of the box:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Initiate US payment: US domestic wire transfer</strong></p>
+<div class="paragraph">
+<p>Payment type for outgoing US domestic wire transfers.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_wire.svg?ver=3.10.1" alt="Create Wire"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_wire_review.svg?ver=3.10.1" alt="Create wire review"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_wire_confirmation.svg?ver=3.10.1" alt="Create wire confirmation"></span></p>
+</div>
+</li>
+<li>
+<p><strong>Initiate US payment: ACH credit transfer</strong></p>
+<div class="paragraph">
+<p>Payment type for outgoing ACH transfers.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_ach_credit.svg?ver=3.10.1" alt="Initiate ACH Credit.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_ach_credit_review.svg?ver=3.10.1" alt="Initiate ACH Credit review.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_ach_credit_confirmation.svg?ver=3.10.1" alt="Initiate ACH Credit confirmation.svg"></span></p>
+</div>
+</li>
+<li>
+<p><strong>Initiate EU payment: SEPA credit transfer</strong></p>
+<div class="paragraph">
+<p>Payment type for outgoing SEPA Credit transfers.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_sepa_credit.svg?ver=3.10.1" alt="Initiate SEPA Credit.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_sepa_credit_review.svg?ver=3.10.1" alt="Initiate SEPA Credit review.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_sepa_credit_confirmation.svg?ver=3.10.1" alt="Initiate SEPA Credit review.svg"></span></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The below payment types (CHAPS, Faster Payments) in the <strong>Initiate omni payment</strong> widget are currently released as beta.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Initiate UK payment: CHAPS transfer</strong></p>
+<div class="paragraph">
+<p>Payment type for outgoing CHAPS transfers.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_chaps_transfer.svg?ver=3.10.1" alt="Initiate CHAPS transfer.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_chaps_transfer_review.svg?ver=3.10.1" alt="Initiate CHAPS transfer review.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_chaps_transfer_confirmation.svg?ver=3.10.1" alt="Initiate CHAPS transfer confirmation.svg"></span></p>
+</div>
+</li>
+<li>
+<p><strong>Initiate UK payment: Faster Payments</strong></p>
+<div class="paragraph">
+<p>Payment type for outgoing UK faster payments.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_uk_fps.svg?ver=3.10.1" alt="Initiate faster payments.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_uk_fps_review.svg?ver=3.10.1" alt="Initiate faster payments review.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_uk_fps_confirmation.svg?ver=3.10.1" alt="Initiate faster payments confirmation.svg"></span></p>
+</div>
+</li>
+<li>
+<p><strong>International transfer</strong></p>
+<div class="paragraph">
+<p>Payment type for outgoing international transfer.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_international_transfer.svg?ver=3.10.1" alt="International transfer.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_international_transfer_review.svg?ver=3.10.1" alt="International transfer review.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/create_international_transfer_confirmation.svg?ver=3.10.1" alt="International transfer confirmation.svg"></span></p>
+</div>
+<div class="paragraph">
+<p>This configuration features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Show allowed currencies only.</p>
+</li>
+<li>
+<p>Show allowed countries only.</p>
+</li>
+<li>
+<p>Show exchange rate, indicative, between debit account currency and payment amount currency.</p>
+</li>
+<li>
+<p>Show delivery options:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Settlement time</p>
+</li>
+<li>
+<p>Cut off times</p>
+</li>
+<li>
+<p>Transfer fees</p>
+</li>
+<li>
+<p>Urgent transfer</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Show fee sharing options:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>OUR</p>
+</li>
+<li>
+<p>BEN</p>
+</li>
+<li>
+<p>SHA</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Route the payment via domestic or foreign correspondent and intermediary banks.</p>
+</li>
+<li>
+<p>Show a summary of amounts and charges.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For the international transfer type, the user may enter a <strong>Purpose of payment</strong>. The <strong>Purpose of payment</strong> field will have different formats depending on the country of the payment beneficiary, these are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>An optional free text field.</p>
+</li>
+<li>
+<p>A mandatory free text field.</p>
+</li>
+<li>
+<p>A mandatory field, selected from a drop-down list of codes.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The user is sees an explanatory description of each of the available codes.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The format is determined by receiving the <a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_options#payments_options_countries">sanctioned countries endpoint</a>.</p>
+</div>
+<div class="paragraph">
+<p>For certain countries, a <strong>Purpose of payment</strong> is a mandatory requirement, and some will require specific responses from the pre-defined list in the drop-down.
+In others, the <strong>Purpose of payment</strong> is entirely optional and can be authored by the payee.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>An optional free text field.
+<span class="image"><img src="./images/business_banking_3/omni_payment_international_transfer_purpose_of_payment_optional_understand.svg?ver=3.10.1" alt="Purpose of payment optional"></span></p>
+</li>
+<li>
+<p>A mandatory free text field.
+<span class="image"><img src="./images/business_banking_3/omni_payment_international_transfer_purpose_of_payment_mandatory_freetext_understand.svg?ver=3.10.1" alt="Purpose of payment mandatory free text"></span></p>
+</li>
+<li>
+<p>A mandatory field, selected from a drop-down list of codes.
+<span class="image"><img src="./images/business_banking_3/omni_payment_international_transfer_purpose_of_payment_code_list_understand.svg?ver=3.10.1" alt="Purpose of payment mandatory code list dropdown"></span></p>
+</li>
+</ol>
+</div>
+<h3 id="_features_34" class="discrete">Features</h3>
+<div class="paragraph">
+<p>When making a payment, the bank customer specifies the <strong>To</strong> and <strong>From</strong> accounts and the amount, adds an optional memo, and sets the payment schedule. All those fields are configurable. See <a href="omni_payment_reference.html">widget reference</a> for details.</p>
+</div>
+<div class="paragraph">
+<p>By default, the widget displays currency symbols (for example, $) for <strong>To</strong> and <strong>From</strong> account balances. However, developers can configure the widget to display currency
+codes (for example, USD) instead.</p>
+</div>
+<div class="paragraph">
+<p>The bank customer may click the <strong>X Clear</strong> button next to the <strong>Transfer to</strong> section of the payment form to remove entered beneficiary details without clearing the entered information in <strong>From</strong> account and <strong>Payment details</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Developers customize the widget with either out-of-the-box, or custom configurations.
+See: <a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>.</p>
+</div>
+<h3 id="_payment_templates" class="discrete">Payment templates</h3>
+<div class="paragraph">
+<p>The bank customer can save a successfully completed payment as a template from the payment confirmation view.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/x-product/create_chaps_transfer_confirmation.svg?ver=3.10.1" alt="create chaps transfer confirmation">
+</div>
+</div>
+<div class="paragraph">
+<p>The bank customer must give the template a name up to a maximum of 50 characters in order to save it,
+the number of characters remaining is displayed.
+A notification informs the bank customer if the template saves successfully.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/x-product/initiate_omni_payment_save_template.svg?ver=3.10.1" alt="initiate omni payment save template">
+</div>
+</div>
+<div class="paragraph">
+<p>When a bank customer initiates an omni payment, they may use a template by clicking on the <strong>Select a template</strong> dropdown.
+This shows templates that the user has access to and that are associated with the currently initiated payment type.
+By default, the first 20 templates show in the dropdown. The bank customer may search for the template by its name.
+The user is only able to view templates they are allowed to create a payment from, this is determined by the entitlements of the user.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/x-product/initiate_omni_payment_select_template.svg?ver=3.10.1" alt="initiate omni payment select template">
+</div>
+</div>
+<div class="paragraph">
+<p>When a bank customer selects a template, data saved in the template will automatically fill the payment form. The prefilled information includes showing the indicative currency rates at the time when the template was applied for cross-currency payments.
+It also includes preselected payment and fee sharing options.
+The bank customer is able to overwrite any prefilled data.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Find out which payment details are stored in the template in the DBS documentation:
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/manage_payment_templates">Manage payment templates</a>.
+</td>
+</tr>
+</table>
+</div>
+<h3 id="_error_handling" class="discrete">Error handling</h3>
+<div class="paragraph">
+<p>In the <strong>Payment entry form</strong> screen, if a user inputs erroneous data that is not the correct form expected in a field, the omni payment widget displays a <strong>Payment data error</strong>.
+The <strong>Continue</strong> button is unavailable until the user corrects each error.
+If there are no errors, the user presses <strong>Continue</strong> to navigate to the next screen.
+The widget initiates backend validations using the <code>Validate</code> endpoint.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/omni_payment_field_error_understand.svg?ver=3.10.1" alt="omni payment field error understand"></span></p>
+</div>
+<div class="paragraph">
+<p>If there are validation or technical failures, both an error message and notification display.
+Errors are stacked at the top of the <strong>Payment entry form</strong> modal, and separate notifications display at the widget screen&#8217;s top right.
+The page scrolls, automatically navigating the user to the first error in the stack.</p>
+</div>
+<div class="paragraph">
+<p>In the <strong>Review and Submit form</strong> screen, the user can <strong>Submit</strong>, <strong>Edit</strong>, and <strong>Discard</strong> the payment.
+If they click <strong>Submit</strong>, the omni payment widget initiates the <code>Submit</code> endpoint.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/omni_payment_submit_validation_error.svg?ver=3.10.1" alt="omni payment submit validation error"></span></p>
+</div>
+<div class="paragraph">
+<p>If validation and technical errors are thrown, the notifications will appear both at the top of the modal screen and the widget screen&#8217;s top right.
+The user will only be navigated to the <strong>Success form</strong> screen if there are no errors reported.
+The type of errors thrown can be, for example, if the <code>Submit</code> endpoint is not found or if there is a breach report.</p>
+</div>
+<div class="paragraph">
+<p>The user is notified of an error if the selected beneficiary account is the same as the debit account. While this error exists, the user cannot continue with the payment flow.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/omni_payment_same_account_error.svg?ver=3.10.1" alt="omni payment same account error"></span></p>
+</div>
+<h4 id="_breach_report" class="discrete">Breach report</h4>
+<div class="paragraph">
+<p>If the submit payment operation is unsuccessful due to certain limits breach, the user sees a breach report.
+In the report, the modal displays amounts for these breached limits, their current consumption and submitted payment details.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/omni-payment-review-payment-failure-understand.svg?ver=3.10.1" alt="omni payment review payment failure understand">
+</div>
+</div>
+<div class="paragraph">
+<p>The user may select <strong>See details</strong> to further understand the cause of the breach.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/omni-payment-breach-report-understand.svg?ver=3.10.1" alt="omni payment breach report understand">
+</div>
+</div>
+<h4 id="_closed_payments" class="discrete">Closed payments</h4>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/omni_payment_closed_payment_restrictions_new_contact.svg?ver=3.10.1" alt="omni payment closed payment restrictions new contact"></span></p>
+</div>
+<div class="paragraph">
+<p>If a business banking user only has the privilege 'CREATE' attributed to their account permissions for a payment type, the user can only make closed payments for that payment type, and are unable to enter beneficiary information into the <strong>Initiate omni payment</strong> widget.</p>
+</div>
+<div class="paragraph">
+<p>A user who can only make closed payments are only able to select a beneficiary from their own accounts or their contacts.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/omni_payment_closed_payment_restrictions_1.svg?ver=3.10.1" alt="omni payment closed payment restrictions 1"></span></p>
+</div>
+<div class="paragraph">
+<p>Once a beneficiary is selected, the user is unable to enter information into empty fields or edit and remove fields filled with predefined payment information. All predefined details are greyed out to mark fields as unusable.</p>
+</div>
+<div class="paragraph">
+<p>These details are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Beneficiary name</p>
+</li>
+<li>
+<p>Beneficiary account number</p>
+</li>
+<li>
+<p>Bank branch code</p>
+</li>
+<li>
+<p>Country</p>
+<div class="paragraph">
+<p>If there is a predefined country set in the country field, it is unusable. Otherwise, the user is allowed to select a country.</p>
+</div>
+</li>
+<li>
+<p>Beneficiary bank name</p>
+</li>
+<li>
+<p>Beneficiary bank address</p>
+</li>
+<li>
+<p>BIC/SWIFT code</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/omni_payment_closed_payment_restrictions_2.svg?ver=3.10.1" alt="omni payment closed payment restrictions 2"></span></p>
+</div>
+<div class="paragraph">
+<p>The user is able to click the <strong>X Clear</strong> button next to the <strong>Transfer to</strong> section of the payment form to remove all beneficiary information, bringing them back to the initial state.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Save as a contact</strong> option is unavailable to the user as the predefined beneficiary information selected by the user will already be a saved contact or own account.</p>
+</div>
+<div class="paragraph">
+<p>If in the case that a user enters beneficiary information manually before selecting a payment account. If the account only allows for closed payments, an error will occur. The beneficiary details are frozen, and a red warning around the beneficiary selector will indicate to the user that they must use a predefined contact or own account.</p>
+</div>
+<div class="paragraph">
+<p>Similarly, payments initiated from a payment template via the payment template selector will throw a similar error if the selected payment account only allows for closed payments.</p>
+</div>
+<div class="paragraph">
+<p>The checking process for closed payments permissions is configurable within the <strong>Initiate omni payment</strong> widget, with separate configurations for Payments and Payment templates. The default value for both of these configurations is ‘Check not performed’.</p>
+</div>
+<h3 id="_endpoints_2" class="discrete">Endpoints</h3>
+<div class="paragraph">
+<p>This widget uses the following endpoints out of the box:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Upon loading the widget:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://community.backbase.com/documentation/DBS/2.21.1/retrieve_products">Retrieve arrangements</a>:</p>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/arrangement-client-api.html#api-ProductSummary-getArrangementsByBusinessFunction">GET https://ips_host:ips_port/gateway/api/arrangement-manager/client-api/v2/productsummary/context/arrangements</a></p>
+</div>
+</li>
+<li>
+<p>Retrieve contacts:</p>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/contact-manager-client-api.html#api-Contacts-getContacts">GET https://ips_host:ips_port/gateway/api/contact-manager/client-api/v2/contacts</a></p>
+</div>
+</li>
+<li>
+<p><a href="https://community.backbase.com/documentation/DBS/2.21.1/manage_payment_templates">Retrieve payment templates</a>:</p>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-template-client-api.html#api-PaymentTemplates-getPaymentTemplates">GET https://ips_host:ips_port/gateway/api/payment-order-service/client-api/v2/payment-templates</a></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>After entering the payment details, the widget validates the payment order:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://community.backbase.com/documentation/DBS/2.21.1/create_payment_order">Validate a payment order</a>:</p>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-order-client-api.html#api-PaymentOrders-postValidate">POST https://ips_host:ips_port/gateway/api/payment-order-service/client-api/v2/payment-orders/validate</a></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>The customer submits the payment order:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://community.backbase.com/documentation/DBS/2.21.1/create_payment_order">Create a payment order</a>:</p>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-order-client-api.html#api-PaymentOrders-postPaymentOrders">POST https://ips_host:ips_port/gateway/api/payment-order-service/client-api/v2/payment-orders</a></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The customer saves the payment order as a template:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://community.backbase.com/documentation/DBS/2.21.1/manage_payment_templates">Create a payment template</a>:</p>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-template-client-api.html#api-PaymentTemplates-postPaymentTemplates">POST https://ips_host:ips_port/gateway/api/payment-order-service/client-api/v2/payment-templates</a></p>
+</div>
+</li>
+<li>
+<p>Update a payment order</p>
+<div class="paragraph">
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-order-client-api.html#api-PaymentOrders-putPaymentOrderById">PUT https://ips_host:ips_port/gateway/api/payment-order-service/client-api/v2/payment-orders/{paymentOrderId}</a></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<h3 id="_related_topics_34" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="omni_payment_reference.html">Initiate omni payment</a></p>
+</li>
+</ul>
+</div>
+<h2 id="initiate_payment_wizard_business_web_widgets" class="discrete">Initiate payment wizard</h2>
+<div class="paragraph">
+<p>The <strong>Initiate payment wizard</strong> uses is a UI that guides the account user through creating a payment in any payment type the bank supports.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/initiate_payment_wizard_SEPA_understand.svg?ver=3.10.1" alt="initiate payment wizard SEPA understand">
+</div>
+</div>
+<div class="paragraph">
+<p>In contrast to the omni-payment widget solution where the account user can define separate entry points for each payment type, the <strong>Initiate payment wizard</strong> widget offers a single unified UI that guides the user to the correct payment types based on the initial inputs. The widget also provides possible delivery options for each possible payment types such as instruction priority, transfer fee, fee sharing options, the execution timeframe, and the cutoff time.</p>
+</div>
+<div class="paragraph">
+<p>This helps the user to make an informed choice while maintaining the control over the payment method.
+You can re-use the omni payment configurations for the supported payment types or methods to power the payment wizard widget.
+Payment types supported by the <strong>Initiate payment wizard</strong> widget are SEPA CT, Faster Payments, CHAPS and International transfers.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/create_international_transfer.svg?ver=3.10.1" alt="create international transfer">
+</div>
+</div>
+<div class="paragraph">
+<p>When the account user opens the payment wizard, they will see the following fields:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>From account</strong>: Required, select an account.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Select shows all accounts the user has access to and are allowed to debit, across all supported payment types.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Amount</strong> and currency: Required, choose currency and a enter an amount to pay.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Set to default currency set up by the bank.</p>
+</li>
+<li>
+<p>Change currency to a different available currency.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Most popular currencies displayed at the top of the list.</p>
+</li>
+<li>
+<p>Displays country three letter ISO code and name of currency.</p>
+</li>
+<li>
+<p>Search for a currency by its ISO code and name.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Transfer to</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Beneficiary&#8217;s name</strong>: Required, select a saved beneficiary or enter a new one.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Shows all accounts the user has access to and are allowed to credit, except the account currently selected, in the <strong>From account</strong> field.</p>
+</li>
+<li>
+<p>Shows all beneficiary accounts listed in users contacts.</p>
+</li>
+<li>
+<p>Auto-populates beneficiary name, account, bank country and bank branch code, if available.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Country</strong>: Required, appears when initiating an international transfer.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Shows by default the beneficiary bank&#8217;s home country.</p>
+</li>
+<li>
+<p>Change the country to another available country.</p>
+</li>
+<li>
+<p>Displays the name and national flag of the country, and the country&#8217;s ISO code.</p>
+</li>
+<li>
+<p>Search for a country by its ISO code and name.</p>
+</li>
+<li>
+<p>Changing the country shall also change the account credentials required for
+ each country.
+For example, IBAN for Belgium, or BBAN and BSB code for Australia.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Delivery</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Frequency: Required, how often the payment is made. Once for a singular payment.</p>
+</li>
+<li>
+<p>Execution date: Required, The date the payment shall be made.</p>
+</li>
+<li>
+<p>Standard and Urgent delivery selection: Required, displayed with cost and time taken to deliver payments.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The bank customer may click the <strong>X Clear</strong> button next to the <strong>Transfer to</strong> section of the payment form to remove entered beneficiary details without clearing the entered information in <strong>From account</strong> and <strong>Payment details</strong>.</p>
+</div>
+<div class="paragraph">
+<p>For the international transfer type, the user may enter a <strong>Purpose of payment</strong>. The <strong>Purpose of payment</strong> field will have different formats depending on the country of the payment beneficiary, these are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>An optional free text field.</p>
+</li>
+<li>
+<p>A mandatory free text field.</p>
+</li>
+<li>
+<p>A mandatory field, selected from a drop-down list of codes.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The user is sees an explanatory description of each of the available codes.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The format is determined by receiving the <a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_options#payments_options_countries">sanctioned countries endpoint</a>.</p>
+</div>
+<div class="paragraph">
+<p>For certain countries, a <strong>Purpose of payment</strong> is a mandatory requirement, and some will require specific responses from the pre-defined list in the drop-down.
+In others, the <strong>Purpose of payment</strong> is entirely optional and can be authored by the payee.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>An optional free text field.
+<span class="image"><img src="./images/business_banking_3/omni_payment_international_transfer_purpose_of_payment_optional_understand.svg?ver=3.10.1" alt="Purpose of payment optional"></span></p>
+</li>
+<li>
+<p>A mandatory free text field.
+<span class="image"><img src="./images/business_banking_3/omni_payment_international_transfer_purpose_of_payment_mandatory_freetext_understand.svg?ver=3.10.1" alt="Purpose of payment mandatory free text"></span></p>
+</li>
+<li>
+<p>A mandatory field, selected from a drop-down list of codes.
+<span class="image"><img src="./images/business_banking_3/omni_payment_international_transfer_purpose_of_payment_code_list_understand.svg?ver=3.10.1" alt="Purpose of payment mandatory code list dropdown"></span></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Once the account user has entered all required details,
+the available payment type, or types if there are multiple, display.
+In the case that there are multiple payment types and the required fields for the payment types are different,
+such as ACH Credit or a domestic wire,
+the user is asked to select from different delivery options for each displayed payment type.
+Once the user selects a delivery option, the user is shown additional fields specific to that payment type.
+The user will see a cost overview for the transfer and the cost of selected delivery option.
+If available, the user is also shown a fee sharing option.</p>
+</div>
+<div class="paragraph">
+<p>The account user has the option to add their own description of their payment for reference purposes.</p>
+</div>
+<h3 id="_error_handling_2" class="discrete">Error handling</h3>
+<div class="paragraph">
+<p>In the <strong>Payment entry form</strong> screen, if a user inputs erroneous data that is not the correct form expected in a field, the payment wizard displays a <strong>Payment data error</strong>.
+The <strong>Continue</strong> button is unavailable until the user corrects each error.
+If there are no errors, the user presses <strong>Continue</strong> to navigate to the next screen.
+The widget initiates backend validations using the <code>Validate</code> endpoint.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/omni_payment_field_error_understand.svg?ver=3.10.1" alt="omni payment field error understand"></span></p>
+</div>
+<div class="paragraph">
+<p>If there are validation or technical failures, both an error message and notification display.
+Errors are stacked at the top of the <strong>Payment entry form</strong> modal, and separate notifications display at the widget screen&#8217;s top right.
+The page scrolls, automatically navigating the user to the first error in the stack.</p>
+</div>
+<div class="paragraph">
+<p>In the <strong>Review and Submit form</strong> screen, the user can <strong>Submit</strong>, <strong>Edit</strong>, and <strong>Discard</strong> the payment.
+If they click <strong>Submit</strong>, the payment wizard initiates the <code>Submit</code> endpoint.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/omni_payment_submit_validation_error.svg?ver=3.10.1" alt="omni payment submit validation error"></span></p>
+</div>
+<div class="paragraph">
+<p>If validation and technical errors are thrown, the notifications will appear both at the top of the modal screen and the widget screen&#8217;s top right.
+The user will only be navigated to the <strong>Success form</strong> screen if there are no errors reported.
+The type of errors thrown can be, for example, if the <code>Submit</code> endpoint is not found or if there is a breach report.</p>
+</div>
+<div class="paragraph">
+<p>The user is notified of an error if the selected beneficiary account is the same as the debit account. While this error exists, the user cannot continue with the payment flow.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/omni_payment_same_account_error.svg?ver=3.10.1" alt="omni payment same account error"></span></p>
+</div>
+<h4 id="_payment_templates_2" class="discrete">Payment templates</h4>
+<div class="paragraph">
+<p>When a payment is submitted, the user has the ability to save the successfully submitted payment as a template for future payments.
+The user can select and apply a saved payment template, which allows the wizard to quickly prefill the details for a new payment based on the payment template&#8217;s saved information.
+When selecting a saved template to create a new payment, the user is only able to view templates they are allowed to create a payment from, this is determined by the entitlements of the user.</p>
+</div>
+<div class="paragraph">
+<p>The prefilled information includes showing the indicative currency rates at the time when the template was applied for cross-currency payments.
+It also includes preselected payment and fee sharing options.
+If the template does not have a country, the widget prefills a country. The prefilled country is calculated as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the beneficiary account in the template is an IBAN, the prefilled country is extracted from the IBAN.</p>
+</li>
+<li>
+<p>If the beneficiary account in the template is a BBAN, the prefilled country is
+the default country from the configured list of sanctioned countries.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The bank customer is able to overwrite any prefilled data.</p>
+</div>
+<div class="paragraph">
+<p>If submit payment operation is unsuccessful due to limit breaches, the user sees a breach report listing these limit breaches.
+In the report, the modal displays amounts for these breached limits, their current consumption and submitted payment details.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/omni-payment-review-payment-failure-understand.svg?ver=3.10.1" alt="omni payment review payment failure understand">
+</div>
+</div>
+<div class="paragraph">
+<p>The user may select <strong>See details</strong> to further understand the cause of the breach.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/omni-payment-breach-report-understand.svg?ver=3.10.1" alt="omni payment breach report understand">
+</div>
+</div>
+<h3 id="_features_35" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Single universal user interface guides the user to initiate a payment.</p>
+</li>
+<li>
+<p>Supports SEPA CT, Faster Payments, CHAPS, International transfer types.</p>
+</li>
+<li>
+<p>Select from saved contacts or enter new payment details.</p>
+</li>
+<li>
+<p>Save payment details as a new contact.</p>
+</li>
+<li>
+<p>Set up a <a href="glossary.html#glossary_standing_order">standing order</a>.</p>
+</li>
+<li>
+<p>Save a created payment as a payment template for future payments.</p>
+</li>
+<li>
+<p>Search for payment template.</p>
+</li>
+<li>
+<p>Select and apply saved payment template to complete a new payment.</p>
+</li>
+<li>
+<p>Displays breach report when submitted payment fails due to limit breaches.</p>
+</li>
+</ul>
+</div>
+<div class="sect1">
+        <h2 id="ach_debit_business_web_widgets">Initiate ACH debit</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p><strong>Initiate ACH debit</strong> widget enables the bank customers to create outgoing direct debits.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/Create_ach_debit.svg?ver=3.10.1" alt="Create ACH"></span></p>
+</div>
+<div class="paragraph">
+<p>The bank customer sets the account to <strong>Transfer to</strong> in the following way:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select an account from the bank customer&#8217;s own accounts.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The bank customer sets the account to <strong>Collect from</strong> in one of the following ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select an account from a contact in the contact list.</p>
+</li>
+<li>
+<p>Enter new contact and account details. In this case, the bank customer has the
+opportunity to add the contact to the contact list while creating a
+debit.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For all debits, bank customer can set the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Scheduled</strong>: plan the debit to be executed on a later date.</p>
+</li>
+<li>
+<p><strong>Recurring</strong>: plan the debit to be executed daily, weekly, monthly,
+quarterly, or annually. The recurring debit either never ends, ends
+after a fixed number of occurrences, or ends on a particular
+date.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Initiate ACH debit</strong> uses the existing <strong>Manage business contacts</strong> widget functionality in the following ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select a debtor from <strong>Manage business contacts</strong>.</p>
+</li>
+<li>
+<p>Save a new debtor to <strong>Manage business contacts</strong>.</p>
+</li>
+</ul>
+</div>
+<h3 id="_features_36" class="discrete">Features</h3>
+<div class="paragraph">
+<p>This widget has the following features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create new ACH Debit in page view.</p>
+</li>
+<li>
+<p>Review and submit ACH Debit.</p>
+</li>
+</ul>
+</div>
+<h3 id="_create_ach_debit" class="discrete">Create ACH debit</h3>
+<div class="paragraph">
+<p>To create an ACH debit, you click <strong>Create Debit</strong> and perform the following steps in the <strong>New ACH Debit</strong> page view.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Enter ACH debit</p>
+<div class="paragraph">
+<p>In this step, you initiate the ACH debit and define the following parameters:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 50%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Optional/Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Transfer to</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the creditor account number, that is, the beneficiary account of the debit.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Amount</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the amount covered by the debit.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Currency</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the currency to be used for the transaction. By default, it is set to the same currency as the beneficiary account.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Mandate identifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the mandate by which the corresponding direct debit will be authorized.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Collect from</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the name of the party to be debited.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Account number</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the source account of the debit.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Save as new contact</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables you to add the debtor&#8217;s details to the contact manager as a new contact.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Routing transit number (ABA)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the routing number of the account to be debited.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Bank name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the name of the debtor’s bank.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Add client address</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the debtor’s address.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Add bank address</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the debtor’s bank address.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Scheduling</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the date at which the one-off debit should be executed. For scheduling recurring debits, you specify the start date and
+either the number of recurrences or the end date.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Message to client</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify a message to the debtor.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Message to bank</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify a message to the bank.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Click <strong>Continue</strong> to move to the review and submit view of the ACH debit transaction.</p>
+</div>
+</li>
+<li>
+<p>Review and submit ACH debit</p>
+<div class="paragraph">
+<p>In this step you review, edit and submit the ACH debit.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/ach_debit_review_and_submit.svg?ver=3.10.1" alt="Review and Submit View"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To edit:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click <strong>Edit</strong> to navigate to the <strong>New ACH debit</strong> view.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>To submit:</p>
+<div class="paragraph">
+<p>Submit action can be performed in following ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Submit</strong></p>
+</li>
+<li>
+<p><strong>Submit and Approve</strong></p>
+</li>
+<li>
+<p><strong>Submit and Create New</strong></p>
+<div class="paragraph">
+<p>A notification appears after the <strong>Submit</strong> action, to indicate the success or failure of the request.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>To cancel:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click <strong>Cancel</strong> to not proceed with the ACH debit transaction. A confirmation window appears to validate your choice.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/ach_debit_cancel.svg?ver=3.10.1" alt="ACH Cancel View"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<h3 id="_related_topics_35" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="ach_debit_reference.html">Initiate ACH debit</a>.</p>
+</li>
+</ul>
+</div>
+<h2 id="manage_ach_debit_business_web_widgets" class="discrete">Manage ACH debit</h2>
+<div class="paragraph">
+<p>The <strong>Manage ACH debit</strong> widget displays an overview of one-time and recurring debits that the current user is entitled to access.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_ach_debit_widget_1.svg?ver=3.10.1" alt="Manage ACH Debit widget 1"></span></p>
+</div>
+<div class="paragraph">
+<p>Pagination is available by default. Administrators can configure the widget in Experience Manager to load list items incrementally.
+To use this feature, the user clicks the <strong>Load More</strong> button.</p>
+</div>
+<div class="paragraph">
+<p>The widget displays the following attributes for each debit:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Status:</strong> Displays the status of the debit as an icon. The possible statuses are:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>ACC</strong>, accepted - specifies that debit is successfully sent to the core banking system. The core banking system is still processing it.</p>
+</li>
+<li>
+<p><strong>CAN</strong>, cancelled - specifies that debit is cancelled and will not be processed any further.</p>
+</li>
+<li>
+<p><strong>CAN</strong>, cancellation pending - specifies that the user requested to cancel a debit, but the debit was already sent to the core banking system. Awaiting response from the core banking system to confirm the cancellation.</p>
+</li>
+<li>
+<p><strong>ENT</strong>, entered - specifies that the debit is yet to be approved or rejected.</p>
+</li>
+<li>
+<p><strong>PRO</strong>, processed - specifies that the core banking system successfully processed the debit.</p>
+</li>
+<li>
+<p><strong>REA</strong>, ready - specifies that the debit is approved and ready to be sent to the bank.</p>
+</li>
+<li>
+<p><strong>REJ</strong>, rejected - specifies that the debit was manually rejected by an end-user, or rejected by the bank.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Collect From:</strong> Specifies the account from which the debit will be collected.</p>
+</li>
+<li>
+<p><strong>Transfer To:</strong> Specifies the user’s account to which funds will be deposited.</p>
+</li>
+<li>
+<p><strong>Ccy:</strong> Specifies the currency applicable to the corresponding debit.</p>
+</li>
+<li>
+<p><strong>Amount:</strong> Specifies the amount covered by the corresponding debit.</p>
+</li>
+<li>
+<p><strong>Exec. date:</strong> Specifies the date on which the corresponding debit is to be executed, if authorized. This field only applies to one-off debits.</p>
+</li>
+<li>
+<p><strong>Scheduling:</strong> The frequency with which the corresponding recurring debit is to be processed, including start and end dates. This field only applies to recurring debits.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_ach_debit_widget_2.svg?ver=3.10.1" alt="Manage ACH Debit widget 2"></span></p>
+</div>
+<div class="paragraph">
+<p>Select a record in the table to display additional information about the debit:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Created by:</strong> Specifies the source account of the payment order and the date of the creation.</p>
+</li>
+<li>
+<p><strong>Created at:</strong> Specifies the date and time when the payment order was created.</p>
+</li>
+<li>
+<p><strong>Payment Reference:</strong> Specifies the customer reference for the corresponding payment order.</p>
+</li>
+<li>
+<p><strong>Description:</strong> Specifies the custom description of the payment assigned at the time of its creation.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To approve a debit in the list, the user clicks <strong>✔</strong> next to the item. To reject a debit, the user clicks <strong>✗</strong>.
+A modal dialog appears where the user confirms their approval or rejection.
+To end the operation without approving or rejecting the debit, the user clicks <strong>Cancel</strong>.
+To approve or reject a debit in detailed view, the user clicks the <strong>Approve</strong> or the <strong>Reject</strong> button.</p>
+</div>
+<div class="paragraph">
+<p>To cancel or delete a debit, click the <strong>&#8230;&#8203;</strong> button and select the <strong>Cancel</strong> or <strong>Delete</strong> option from the drop-down menu. The <strong>Cancel</strong> and <strong>Delete</strong> options are only available if the debit has not had any approvals.
+The <strong>Delete</strong> operation can only be performed by the user who created the debit.</p>
+</div>
+<div class="paragraph">
+<p>To copy a debit, click the <strong>&#8230;&#8203;</strong> button and select the <strong>Copy</strong> option from the drop-down menu. This copies the details of the initial debit to a new debit.
+The user can now change any information on the new debit and proceed.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_ach_debit_copy_cancel_delete.svg?ver=3.10.1" alt="Manage ACH Debit widget copy cancel delete"></span></p>
+</div>
+<div class="paragraph">
+<p>To print a debit, click on the particular debit to view its details and then click the <span class="image"><img src="./images/business_banking_3/manage_ach_debit_print_icon_new.png?ver=3.10.1" alt="Print Icon"></span> icon.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_ach_debit_print.svg?ver=3.10.1" alt="Manage ACH Debit widget print"></span></p>
+</div>
+<div class="paragraph">
+<p>This widget interfaces with the
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_understand.html">Payments</a> DBS capability using the
+<a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/payment-order-client-api.html">payment-order-client-api</a>.</p>
+</div>
+<h3 id="_features_37" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>View the list of one-time and recurring debits.</p>
+</li>
+<li>
+<p>Load debits incrementally.</p>
+</li>
+<li>
+<p>View details of an ACH debit.</p>
+</li>
+<li>
+<p>Approve an ACH debit.</p>
+</li>
+<li>
+<p>Reject an ACH debit. Click debit to see more details.</p>
+</li>
+<li>
+<p>Cancel an ACH debit.</p>
+</li>
+<li>
+<p>Copy an ACH debit.</p>
+</li>
+<li>
+<p>Delete an ACH debit.</p>
+</li>
+<li>
+<p>Print an ACH debit.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_36" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="manage_ach_debit_reference.html">Manage ACH debit</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+<div class="sect1">
+        <h2 id="manage_payments_business_web_widgets">Manage payments</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>This widget displays an overview of one-off payment orders and standing orders that the current user is
+entitled to access.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_payments_understand.svg?ver=3.10.1" alt="manage payments understand"></span></p>
+</div>
+<div class="paragraph">
+<p>The widget shows the payment orders in a list. The view shows <strong>All orders</strong> as a list by default, however the user can also select <strong>My orders</strong>
+to isolate payment orders that share the same user ID as the current user. The view will display a list of only the user&#8217;s payment orders.
+The lists are sorted from the most recently created payment order to the oldest, grouped by requested execution date.
+To sort a list by a different attribute, the user clicks the attribute in the column header.
+To reverse the sorting order, the user clicks the attribute again.
+The user may select the standing order tab to view automatic payments initiated by the accounts the user has access to.</p>
+</div>
+<div class="paragraph">
+<p>Pagination is available by default. Administrators can configure the widget in Experience Manager to load list items incrementally.
+To use this feature, the user clicks the <strong>Load More</strong> button.</p>
+</div>
+<div class="paragraph">
+<p>The widget displays the following attributes for each payment order:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Status:</strong> Displays the current status of the corresponding payment
+order as an icon. On mouse hover, additional information is shown.
+The possible statuses are:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>ACC</strong>, accepted - specifies that the payment order is successfully sent to the core banking system.
+The core banking system is still processing it.</p>
+</li>
+<li>
+<p><strong>CAN</strong>, cancelled - specifies that the payment is cancelled and will not be processed any further.</p>
+</li>
+<li>
+<p><strong>CAN</strong>, cancellation pending - specifies that the user requested to cancel a payment, but the payment order
+was already sent to the core banking system. Awaiting response from the core banking system
+to confirm the cancellation.</p>
+</li>
+<li>
+<p><strong>ENT</strong>, entered - specifies that the payment order is yet to be approved or rejected.</p>
+</li>
+<li>
+<p><strong>PRO</strong>, processed - specifies that the core banking system successfully processed the payment order.</p>
+</li>
+<li>
+<p><strong>REA</strong>, ready - specifies that the payment order is ready to be sent to the bank.</p>
+</li>
+<li>
+<p><strong>REJ</strong>, rejected - specifies that the payment order is manually rejected by the end-user, or rejected by the bank.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>From:</strong> Specifies the source account of the corresponding payment.
+order.</p>
+</li>
+<li>
+<p><strong>To:</strong> Specifies the counter-party account of the corresponding payment order.</p>
+</li>
+<li>
+<p><strong>Ccy:</strong> Specifies the currency applicable to the corresponding payment order.</p>
+</li>
+<li>
+<p><strong>Amount:</strong> Specifies the amount covered by the corresponding payment order.</p>
+</li>
+<li>
+<p><strong>Exec. date:</strong> Specifies the date on which the corresponding payment is to be
+executed, if authorized.</p>
+</li>
+</ul>
+</div>
+<h3 id="_standing_and_one_off_payments" class="discrete">Standing and one-off payments</h3>
+<div class="paragraph">
+<p>Customers are able to view standing orders, by opening the <strong>Standing</strong> tab.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_payments_understand_standing_order.svg?ver=3.10.1" alt="manage payments understand standing order"></span></p>
+</div>
+<div class="paragraph">
+<p>Standing orders have additional attributes for each payment order:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Start date:</strong> The date of when the standing order initiates.</p>
+</li>
+<li>
+<p><strong>Frequency:</strong> The number of payments made in a length of time.</p>
+</li>
+<li>
+<p><strong>End date:</strong> The date of when the standing order will end. Only shown if there is an <code>endDate</code> property present.</p>
+</li>
+<li>
+<p><strong>End after (x) occurences</strong>: The standing order will end after a payments are made a set number of times, (x).</p>
+</li>
+<li>
+<p><strong>Next execution date</strong>: Shows the date of the next payment execution, only shown if data is present.</p>
+</li>
+</ul>
+</div>
+<h3 id="_sepa_ct_payments" class="discrete">SEPA CT payments</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manage_payments_details_standing_order.svg?ver=3.10.1" alt="manage payments details standing order">
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_payment_details.svg?ver=3.10.1" alt="manage payment details"></span></p>
+</div>
+<div class="paragraph">
+<p>SEPA CT payment is one of the payment functionalities provided out-of-the box. Once a SEPA CT payment is selected from the list, the following detailed information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Created by:</strong> Specifies the source account of the payment order and
+the date of the creation.</p>
+</li>
+<li>
+<p><strong>Created at:</strong> Specifies the date and time when the payment order was created.</p>
+</li>
+<li>
+<p><strong>Payment Reference:</strong> Specifies the customer reference for the corresponding payment
+order.</p>
+</li>
+<li>
+<p><strong>Description:</strong> Specifies the custom description of the payment assigned at the time
+of its creation, if applicable.</p>
+</li>
+<li>
+<p><strong>Approval log:</strong> Specifies the approval status, the name of the approver, and the timestamp of the approval, if applicable.</p>
+</li>
+</ul>
+</div>
+<h3 id="_international_transfer" class="discrete">International transfer</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_payments_international_oneoff_understand.svg?ver=3.10.1" alt="manage payments international oneoff understand"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_payments_international_standing_understand.svg?ver=3.10.1" alt="manage payments international standing understand"></span></p>
+</div>
+<div class="paragraph">
+<p>International transfers is another payment functionality supported by <strong>Manage payments</strong>. When an International transfer is selected, the following details are shown:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>From: Account the user is paying with.</p>
+</li>
+<li>
+<p>To: Beneficiary account</p>
+</li>
+<li>
+<p>Amount: The amount to the paid.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Currency</p>
+</li>
+<li>
+<p>Transfer Fee: Cost of the transaction, to be charged to the user&#8217;s account.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Beneficiary bank details:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bank name.</p>
+</li>
+<li>
+<p>BIC.</p>
+</li>
+<li>
+<p>Bank address.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Correspondant bank details:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bank name.</p>
+</li>
+<li>
+<p>Bank branch code.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Intermediary bank details:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bank name.</p>
+</li>
+<li>
+<p>Bank branch code.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Execution date: Date the payment was made.</p>
+</li>
+<li>
+<p>Message to beneficiary bank: Custom message the user may write for the beneficiary&#8217;s bank.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For a standing international transfer order, the following details are shown:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Start date: Date of the first payment.</p>
+</li>
+<li>
+<p>End date: Date of the last payment.</p>
+</li>
+<li>
+<p>Frequency: How often payments are made, for example, annually, monthly, weekly, daily.</p>
+</li>
+<li>
+<p>Next execution: Date of the next payment.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For the international transfer type, the user may enter a <strong>Purpose of payment</strong>. The <strong>Purpose of payment</strong> field will have different formats depending on the country of the payment beneficiary, these are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>An optional free text field.</p>
+</li>
+<li>
+<p>A mandatory free text field.</p>
+</li>
+<li>
+<p>A mandatory field, selected from a drop-down list of codes.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The user is sees an explanatory description of each of the available codes.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The format is determined by receiving the <a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_options#payments_options_countries">sanctioned countries endpoint</a>.</p>
+</div>
+<div class="paragraph">
+<p>For certain countries, a <strong>Purpose of payment</strong> is a mandatory requirement, and some will require specific responses from the pre-defined list in the drop-down.
+In others, the <strong>Purpose of payment</strong> is entirely optional and can be authored by the payee.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>An optional free text field.
+<span class="image"><img src="./images/business_banking_3/omni_payment_international_transfer_purpose_of_payment_optional_understand.svg?ver=3.10.1" alt="Purpose of payment optional"></span></p>
+</li>
+<li>
+<p>A mandatory free text field.
+<span class="image"><img src="./images/business_banking_3/omni_payment_international_transfer_purpose_of_payment_mandatory_freetext_understand.svg?ver=3.10.1" alt="Purpose of payment mandatory free text"></span></p>
+</li>
+<li>
+<p>A mandatory field, selected from a drop-down list of codes.
+<span class="image"><img src="./images/business_banking_3/omni_payment_international_transfer_purpose_of_payment_code_list_understand.svg?ver=3.10.1" alt="Purpose of payment mandatory code list dropdown"></span></p>
+</li>
+</ol>
+</div>
+<h3 id="_filter_payments" class="discrete">Filter payments</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manage_payments_understand_filter.svg?ver=3.10.1" alt="manage payments understand filter">
+</div>
+</div>
+<div class="paragraph">
+<p>Customers are able to view specific one-off payment orders or standing orders by using the filter to isolate a subset of payments.</p>
+</div>
+<div class="paragraph">
+<p>The filter uses the following criteria:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Status:</strong>  One or multiple statuses, selected from the dropdown.</p>
+</li>
+<li>
+<p><strong>Amount:</strong> The amount, or a range specified in the min and max fields.</p>
+</li>
+<li>
+<p><strong>Execution date:</strong>  A date, or a date range specified in the calendar.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>From either the one-off or standing order tabs, the customer selects their desired filter options, the customer can close the filter panel without affecting their selection.
+If there are no payment orders found under the criteria selected in the filter, the widget shows an empty page.
+When the customer clears the filter, the listed payment orders refreshes, and the customer returns to the unfiltered
+first page of the selected tab. The customer can initiate a new search while also using the filter,
+the search acts as a further filter on the payment order list.
+The search or filter function does not override any listed payments the customer has already selected.</p>
+</div>
+<h3 id="_approval_of_payments" class="discrete">Approval of payments</h3>
+<div class="paragraph">
+<p>If the user has the appropriate <a href="https://community.backbase.com/documentation/DBS/2.21.1/entitlements_understand#access_control_concepts">permissions</a>,
+they are able to approve or reject a payment order or multiple payment orders at once. To use this feature,
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/approvals_understand">Approvals</a> must be
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/approvals_configure">enabled in Digital Banking Services</a>.</p>
+</div>
+<div class="paragraph">
+<p>To approve a payment order in the list, the user clicks ✔ next to the item.
+To reject a payment order, the user clicks ✗.</p>
+</div>
+<div class="paragraph">
+<p>The buttons will be visible or unavailable depending on the users permissions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The ✔ button is visible and enabled if the user has permission to approve.</p>
+</li>
+<li>
+<p>The ✔ button is visible but disabled if the user does not have permission to approve or if the user has already taken an action, but additional approvals are required from another user.</p>
+</li>
+<li>
+<p>The ✗ button is visible and enabled if the user has permission to reject.</p>
+</li>
+<li>
+<p>The ✗ button is visible but disabled if the user does not have permission to reject.</p>
+</li>
+<li>
+<p>The ✔ and ✗ buttons are hidden to the user if the status of the payment is not "Entered" status.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When managing approvals for single payment orders or payment orders selected in bulk, a modal dialog appears for the user
+to confirm their approval or rejection. The modal dialog summarizes the selected payments.
+Payment orders are grouped by currency, and if they come from the same account, the summary shows the account details.
+If the payment orders are from different accounts, the summary shows <strong>Multiple accounts</strong>.
+The user optionally adds a comment of up to 140 characters to their action.
+The initiator of the payment and potential other approvers can view this comment in the Approval log section.
+To cancel, the user clicks <strong>Cancel</strong>.
+To approve or reject a payment order in the modal dialog, the user clicks the <strong>Approve</strong> or the <strong>Reject</strong> button.
+To print the details of a payment order, the user clicks the printer icon.</p>
+</div>
+<div class="paragraph">
+<p>The following features help a user to manage multiple payment orders at the same time:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select or de-select multiple payment orders on a page.</p>
+</li>
+<li>
+<p>Select or de-select all payment orders on a page.</p>
+</li>
+<li>
+<p>Select multiple payment orders across multiple pages.</p>
+</li>
+<li>
+<p>Clear the selection with one click.</p>
+</li>
+<li>
+<p>View the number of selected payments.</p>
+</li>
+<li>
+<p>View the summarized information of selected payments in the approval flow.</p>
+</li>
+<li>
+<p>Approve or reject all the selected payment orders together with one action.</p>
+</li>
+<li>
+<p>Add a comment to a selected payment order.</p>
+</li>
+<li>
+<p>Add a comment to multiple payment orders selected in bulk.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the approval failed for at least one of the payment orders,
+the user sees a notification with a link to detailed information about the reason of the error, for example limit breach.
+If the approval failed for several items,
+the error message also indicates the number of the errors,
+along with a link to a list including detailed information about each error.</p>
+</div>
+<div class="paragraph">
+<p>To withdraw a payment order, the user clicks the <strong>Cancel</strong> button.
+A modal dialog appears where the user confirms or cancels their action.</p>
+</div>
+<div class="paragraph">
+<p>In the search field, the user can enter the following criteria:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Own account number.</p>
+</li>
+<li>
+<p>Own account name.</p>
+</li>
+<li>
+<p>Counterparty account number.</p>
+</li>
+<li>
+<p>Counterparty account name.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This widget interfaces with the
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_understand.html">Payments</a> DBS capability using the
+<a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/payment-order-client-api.html">payment-order-client-api</a>.</p>
+</div>
+<h3 id="_features_38" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>View list of one-off payment orders.</p>
+</li>
+<li>
+<p>View list of standing orders.</p>
+</li>
+<li>
+<p>View the list of payment orders which the current user has initiated.</p>
+</li>
+<li>
+<p>View the payment orders for accounts the current user is entitled to access.</p>
+</li>
+<li>
+<p>Load payment orders incrementally.</p>
+</li>
+<li>
+<p>Access all payment orders through indexed pages.</p>
+</li>
+<li>
+<p>Display payment order details when selecting a record.</p>
+</li>
+<li>
+<p>View multiple payment order types.</p>
+</li>
+<li>
+<p>Approve or reject an individual payment order from both list and detailed views.</p>
+</li>
+<li>
+<p>Cancel an individual payment order from both list and detailed views.</p>
+</li>
+<li>
+<p>Search for payment orders.</p>
+</li>
+<li>
+<p>Filter for payment orders.</p>
+</li>
+<li>
+<p>Identify intracompany payment orders.</p>
+</li>
+<li>
+<p>Print the details of a payment order.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_37" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="manage_payments_reference.html">Manage payments</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+<div class="sect1">
+        <h2 id="manage_payment_templates_business_web_widgets">Manage payment templates</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>The <strong>Manage payment templates</strong> widget allows the customer to create a payment template, view generated templates, examine the payment details of a selected template, and delete a template from the list.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manage_payment_templates_understand.svg?ver=3.10.1" alt="manage payment templates understand">
+</div>
+</div>
+<div class="paragraph">
+<p>The widget displays the following for each payment template in a tabular format:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Template name</strong>: Name created by the user.</p>
+</li>
+<li>
+<p><strong>From</strong>: Account name and number.</p>
+</li>
+<li>
+<p><strong>To</strong>: Account name and number.</p>
+</li>
+<li>
+<p><strong>Currency</strong>: Currency used.</p>
+</li>
+<li>
+<p><strong>Amount</strong>: Amount to pay.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>By default, the list is sorted by <strong>Template name</strong> in ascending order.
+The business user can identify the payment type for each template, which displays with the <strong>Template name</strong>. <strong>Manage payment templates</strong> widget displays all templates the user is allowed to view, which is determined by the user&#8217;s entitlements.</p>
+</div>
+<div class="paragraph">
+<p>If the business user has permission to create a payment template, they will be able to see the <strong>Create template</strong> button. Once clicked, the user is presented with a modal window, where they select an available payment type.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_payment_templates_create_template_modal.svg?ver=3.10.1" alt="manage payment templates create template modal"></span></p>
+</div>
+<div class="paragraph">
+<p>The user enters valid payment details in each of the modal&#8217;s fields. Once completed, the user clicks the <strong>Save</strong> button on the modal. If the details are valid, a success notification appears in the top right of the screen and the template is added to the list.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_payment_templates_success_notification.svg?ver=3.10.1" alt="manage payment templates success notification"></span></p>
+</div>
+<div class="paragraph">
+<p>If there is a backend validation error, a failure notification displays.</p>
+</div>
+<div class="paragraph">
+<p>The customer may easily isolate specific templates from the list by using the search function.
+If the employee&#8217;s search matches the information saved in the templates, the list displays only the matched templates, and the number of results found.</p>
+</div>
+<div class="paragraph">
+<p>A template can be edited or deleted by clicking on the triple-dot button '<strong>&#8230;&#8203;</strong>' on a listed template entry and selecting one option.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manage_payment_templates_edit_delete.svg?ver=3.10.1" alt="manage payment templates edit delete">
+</div>
+</div>
+<div class="paragraph">
+<p>When editing a template, the bank customer sees a modal view prefilled with the template&#8217;s saved data.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/manage_payment_templates_edit_template_modal.svg?ver=3.10.1" alt="manage payment templates edit template modal">
+</div>
+</div>
+<div class="paragraph">
+<p>The bank customer may edit the data and click <strong>Save</strong> to confirm the changes or <strong>Cancel</strong> to return to the list screen, leaving the template unchanged.</p>
+</div>
+<div class="paragraph">
+<p>The list of templates, and the details view of a particular template, allows user to create a payment directly from a template. Once clicked, user is redirected to either the <strong>Initiate payment wizard</strong> or the <strong>Initiate omni payment</strong> widget, prefilled with payment details saved in the selected template. The redirection is configurable and by default the user is directed towards <strong>Initiate payment wizard</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The prefilled information includes showing the indicative currency rates at the time when the template was applied for cross-currency payments. It also includes preselected payment and fee sharing options. The bank customer is able to overwrite any prefilled data.</p>
+</div>
+<div class="paragraph">
+<p>The default redirection can be changed by updating the <code>bb-payments-routing-container-ang</code> container component. A switch case statement is provided, this is based on the payment type with three possible navigation values (<code>viewPaymentWizard</code>, <code>viewWirePayment</code> and <code>viewAchPayment</code>). The user is allowed to add all needed cases for each payment type.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">@Input() set selectedPaymentTemplate(template: PaymentTemplate | undefined) {
+  if (template?.details) {
+    switch (template.details.paymentType) {
+    //Cases for omni payment widget should be added here
+      default:
+        this.viewPaymentWizard.emit(template);
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_payment_templates_create_payment.svg?ver=3.10.1" alt="manage payment templates create payment"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_payment_templates_create_payment_modal.svg?ver=3.10.1" alt="manage payment templates create payment modal"></span></p>
+</div>
+<h4 id="_purpose_of_payment" class="discrete">Purpose of payment</h4>
+<div class="paragraph">
+<p>For the international transfer type, the user may enter a <strong>Purpose of payment</strong>. The <strong>Purpose of payment</strong> field will have different formats depending on the country of the payment beneficiary, these are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>An optional free text field.</p>
+</li>
+<li>
+<p>A mandatory free text field.</p>
+</li>
+<li>
+<p>A mandatory field, selected from a drop-down list of codes.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The user is sees an explanatory description of each of the available codes.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The format is determined by receiving the <a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_options#payments_options_countries">sanctioned countries endpoint</a>.</p>
+</div>
+<div class="paragraph">
+<p>For certain countries, a <strong>Purpose of payment</strong> is a mandatory requirement, and some will require specific responses from the pre-defined list in the drop-down.
+In others, the <strong>Purpose of payment</strong> is entirely optional and can be authored by the payee.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>An optional free text field.
+<span class="image"><img src="./images/business_banking_3/omni_payment_international_transfer_purpose_of_payment_optional_understand.svg?ver=3.10.1" alt="Purpose of payment optional"></span></p>
+</li>
+<li>
+<p>A mandatory free text field.
+<span class="image"><img src="./images/business_banking_3/omni_payment_international_transfer_purpose_of_payment_mandatory_freetext_understand.svg?ver=3.10.1" alt="Purpose of payment mandatory free text"></span></p>
+</li>
+<li>
+<p>A mandatory field, selected from a drop-down list of codes.
+<span class="image"><img src="./images/business_banking_3/omni_payment_international_transfer_purpose_of_payment_code_list_understand.svg?ver=3.10.1" alt="Purpose of payment mandatory code list dropdown"></span></p>
+</li>
+</ol>
+</div>
+<h3 id="_features_39" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>View generated payment templates.</p>
+</li>
+<li>
+<p>Search for payment templates.</p>
+</li>
+<li>
+<p>View details of generated payment template.</p>
+</li>
+<li>
+<p>Delete payment template.</p>
+</li>
+<li>
+<p>Create a new payment template.</p>
+</li>
+<li>
+<p>Create a new payment from a selected payment.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_38" class="discrete">Related topics</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="manage_payment_templates_reference.html">Manage payment templates</a></p>
+</li>
+</ul>
+</div>
+<h2 id="request_stop_checks_business_web_widgets" class="discrete">Request stop checks</h2>
+<div class="paragraph">
+<p>In this widget, the bank customer submits requests to the bank to stop check payments.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/request_stop_checks_business_understand.svg?ver=3.10.1" alt="request stop checks business understand"></span></p>
+</div>
+<div class="paragraph">
+<p>If the bank customer issued a check, but wants to request the bank to not honor the payments,
+they submit a request to stop the clearance of an issued or lost check. This feature is helpful in the following scenarios:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The customer is short of funds, and wants to avoid the scenario of a bounced check.</p>
+</li>
+<li>
+<p>The customer lost a signed check, and wants to prevent the bank from honoring it.</p>
+</li>
+<li>
+<p>The customer lost an entire check book, and requests a bank to not honor checks that fall within a range of serial numbers.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To submit a stop check request, the bank customer fills in the check details form.
+If the request concerns a single check, the customer selects <strong>Single</strong>. If the request concerns multiple checks,
+the customer selects <strong>Multiple</strong>, and specifies the range of serial numbers.</p>
+</div>
+<div class="paragraph">
+<p>To specify the reason of the request, the customer has the following options to choose from in a drop-down:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Insufficient funds</p>
+</li>
+<li>
+<p>Incorrect amount or other details</p>
+</li>
+<li>
+<p>Lost or stolen checks or check books</p>
+</li>
+<li>
+<p>Checks mailed to wrong address</p>
+</li>
+<li>
+<p>Dispute over purchases</p>
+</li>
+<li>
+<p>Lost in mail</p>
+</li>
+<li>
+<p>Other</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Once the check details form is completed, the bank customer clicks <strong>Continue</strong>,
+and reviews the details of the request. To confirm the request, they click <strong>Submit</strong>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/request_stop_checks_business_understand.svg?ver=3.10.1" alt="request stop checks business understand"></span></p>
+</div>
+<h3 id="_features_40" class="discrete">Features</h3>
+<div class="paragraph">
+<p>This widget has the following features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Submit a stop check request for one or multiple checks.</p>
+</li>
+<li>
+<p>Review the details of the request.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_39" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="request_stop_checks_reference.html">Request stop checks</a></p>
+</li>
+</ul>
+</div>
+<h2 id="stop_checks_list_business_web_widgets" class="discrete">View stop check payment requests</h2>
+<div class="paragraph">
+<p>In this widget, the bank customer views their submitted requests to the bank to stop check payments.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/stop_checks_understand.svg?ver=3.10.1" alt="stop checks understand"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/stop_checks_details_view.svg?ver=3.10.1" alt="stop checks details view"></span></p>
+</div>
+<div class="paragraph">
+<p>If the bank customer issued a check, but wants to request the bank to not honor the payments,
+they submit a request to stop the clearance of an issued or lost check.
+This feature is helpful in the following scenarios:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The customer is short of funds, and wants to avoid the scenario of a bounced check.</p>
+</li>
+<li>
+<p>The customer lost a signed check, and wants to prevent the bank from honoring it.</p>
+</li>
+<li>
+<p>The customer lost an entire check book, and requests a bank to not honor checks that fall within a range of serial numbers.</p>
+</li>
+</ul>
+</div>
+<h3 id="_features_41" class="discrete">Features</h3>
+<div class="paragraph">
+<p>This widget has the following features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>View stop check requests.</p>
+</li>
+<li>
+<p>View details of a specific stop check request.</p>
+</li>
+<li>
+<p>Print the details of a stop check request.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_40" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="stop_checks_list_reference.html">View stop check payment requests</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+</div>
+</body>
+</html>

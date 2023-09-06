@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Log in user</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="login_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Log in user</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html"><span class="toc-current">Log in user</span></a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="login_reference" class="sect0">Log in user</h1>
+          <h2 id="_preferences_8" class="discrete">Preferences</h2>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 57.9999%;">
+<col style="width: 20%;">
+<col style="width: 12%;">
+<col style="width: 10.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Editable for</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Login Success Redirect To</strong></p>
+<p class="tableblock">Set the URI pattern to configure the redirect URL. The widget redirects the user to this URL when they
+log in successfully.</p>
+<p class="tableblock">If you configure this preference, do not set a value in the <strong>Output Login Action</strong> preference.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loginSuccessRedirectTo</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mpa:/index</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Output Login Action</strong></p>
+<p class="tableblock">Set the <a href="login_reference.html#output_login_action">action to perform</a> after successful login.</p>
+<p class="tableblock">If you configure this preference, remove the value from the <strong>Login Success Redirect To</strong> preference.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.loginAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_access_control_5" class="discrete">Access Control</h2>
+<div class="paragraph">
+<p>The user does not require any permissions to access this widget&#8217;s functionality.</p>
+</div>
+<h2 id="_extension_slots_11" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p><span class="image"><img src="./images/retail_banking/login.png?ver=3.10.1" alt="login"></span></p>
+</div>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="login_reference.html#bbIamLoginCustomizable">bbIamLoginCustomizable</a></p>
+</li>
+<li>
+<p><a href="login_reference.html#bbIamLoginFormCustomizable">bbIamLoginFormCustomizable</a></p>
+</li>
+<li>
+<p><a href="login_reference.html#bbIamLoginAddtionalFieldsCustomizable">bbIamLoginAddtionalFieldsCustomizable</a></p>
+</li>
+<li>
+<p><a href="login_reference.html#bbIamLoginFormHeaderCustomizable">bbIamLoginFormHeaderCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbIamLoginCustomizable" class="discrete">bbIamLoginCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbIamLoginCustomizable let-hostRef&gt;
+  &lt;bb-login-form (loginSuccess)="hostRef.onLoginSuccess()"&gt;&lt;/bb-login-form&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbIamLoginFormCustomizable" class="discrete">bbIamLoginFormCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbIamLoginFormCustomizable let-hostRef let-loginForm="context"&gt;
+  &lt;ng-container
+    bbIamLoginFormHeaderCustomizable
+    [bbHostRef]="hostRef"
+  &gt;&lt;/ng-container&gt;
+  &lt;ng-container *ngIf="hostRef.currentError | async as currentError"&gt;
+    &lt;bb-alert-ui *ngIf="currentError === hostRef.errorType.AUTH"
+      i18n-title="Login auth error alert title@@login.form.error.alert.auth.title"
+      title="Incorrect username or password."
+      i18n-message="Login auth error alert message@@login.form.error.alert.auth.message"
+      message="Please try again."
+      data-role="login-form-auth-error-message"&gt;
+    &lt;/bb-alert-ui&gt;
+    &lt;bb-alert-ui *ngIf="currentError === hostRef.errorType.UNKNOWN"
+      i18n-title="Login unknown error alert title@@login.form.error.alert.unknown.title"
+      title="An error occurred while accessing the service."
+      i18n-message="Login unknown error alert message@@login.form.error.alert.unknown.message"
+      message="Please try again."
+      data-role="login-form-unknown-error-message"&gt;
+    &lt;/bb-alert-ui&gt;
+    &lt;bb-alert-ui *ngIf="currentError === hostRef.errorType.INCOMPLETE"
+      i18n-title="Login incomplete form error alert title@@login.form.error.alert.incomplete.title"
+      title="Enter a username and password."
+      i18n-message="Login incomplete form error alert message@@login.form.error.alert.incomplete.message"
+      message="Please try again."
+      data-role="login-form-incomplete-form-error-message"&gt;
+    &lt;/bb-alert-ui&gt;
+  &lt;/ng-container&gt;
+  &lt;div class="form-group"&gt;
+    &lt;bb-input-text-ui
+      i18n-label="Username|Login form. Username label text@@login.form.username"
+      label="Username"
+      labelClasses="font-weight-bold"
+      formControlName="username"
+      data-role="login-form-username-input"
+      [autofocus]="true"&gt;
+    &lt;/bb-input-text-ui&gt;
+  &lt;/div&gt;
+  &lt;div class="form-group"&gt;
+    &lt;bb-input-password-ui
+      i18n-label="Password|Login form. Password label text@@login.form.password"
+      label="Password"
+      labelClasses="font-weight-bold"
+      formControlName="password"
+      data-role="login-form-password-input"
+      [showVisibilityControl]="true"&gt;
+    &lt;/bb-input-password-ui&gt;
+  &lt;/div&gt;
+  &lt;div class="bb-button-bar bb-button-bar--reverse"&gt;
+    &lt;bb-load-button-ui
+      type="submit"
+      color="primary"
+      class="bb-button-bar__button"
+      i18n="Log in|Login form. Login button text@@login.form.submitButton"
+      data-role="login-form-submit-button"
+      [isLoading]="hostRef.isSubmitting | async"&gt;
+      Log in
+    &lt;/bb-load-button-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbIamLoginAddtionalFieldsCustomizable" class="discrete">bbIamLoginAddtionalFieldsCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbIamLoginAddtionalFieldsCustomizable let-hostRef let-loginForm="context"&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbIamLoginFormHeaderCustomizable" class="discrete">bbIamLoginFormHeaderCustomizable</h3>
+<div class="paragraph">
+<p>Configure this extension slot as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbIamLoginFormHeaderCustomizable let-hostRef&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h2 id="loginURLRedirect" class="discrete">Login redirect URL</h2>
+<div class="paragraph">
+<p>To replace the redirect URL for a login request, follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a new provider by either adding it to the module class or creating a new file.</p>
+</li>
+<li>
+<p>Configure the provider as follows:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Set the <code>apiRoot</code> to the desired login URL.</p>
+</li>
+<li>
+<p>Reference the injectable <code>BB_LOGIN_HEADER_CONFIG_TOKEN</code>. This replaces the contents of any other
+configuration that uses this string.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">export const LoginConfigCustomProvider: Array&lt;Provider&gt; = [{
+  provide: BB_LOGIN_HEADER_CONFIG_TOKEN,
+  useValue: {
+    Accept: '*/*',
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Cache-Control': 'no-cache, no-store, must-revalidate',
+  },
+}, {
+  provide: BB_LOGIN_URL_CONFIG_TOKEN,
+  useValue: {
+    baseUri: '',
+    gatewayRoot: "/gateway",
+    apiRoot: 'https://example.newroute.com/gateway/api',
+    authUri: '/auth',
+    loginUri: '/login',
+  }
+}]</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Import the new provider into the <code>app.module.ts</code> or the <code>login-widget.module.ts</code> module.</p>
+</li>
+<li>
+<p>Add the provider to the providers array.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">@NgModule({
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BackbaseCoreModule.withConfig({
+      classMap: { LoginWidgetComponent },
+    }),
+    FocusModule,
+  ],
+  declarations: [...components, ...customizables],
+  exports: [...components, ...customizables],
+  providers: [... LoginCustomFormProvider, ...],
+})</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Reimport your config providers. The new provider is injected and replaces the previous one.</p>
+<div class="paragraph">
+<p>The widget then uses the redirect URL specified in the <code>apiRoot</code>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+This widget does not support mock providers, because it does not use a data module.
+Instead, the widget sends a request to the login URL directly through the HTTP client.
+If you have not configured an authentication service in your local development environment,
+the widget throws an HTTP <code>404 Not Found</code> error.
+</td>
+</tr>
+</table>
+</div>
+<h2 id="output_login_action" class="discrete">Output login action</h2>
+<div class="paragraph">
+<p>To perform an action after successful login, follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Set up the action for the widget to perform</strong></p>
+<div class="paragraph">
+<p>For example, if a user is assigned to only one service agreement, you can set the widget to
+select the context for the user.</p>
+</div>
+<div class="paragraph">
+<p>Either:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Configure an output handler</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>To redirect the user to another page, use the URL output handler. This takes the value
+<code>/&lt;experience&gt;/index</code> and appends it to the base URL. Alternatively, you can
+provide the entire URL, for example, <code>mywebsite.com/homepage</code>.</p>
+</li>
+<li>
+<p>To perform an action instead of a redirect, use the
+<a href="https://community.backbase.com/documentation/web_sdk/1.16.2/understand">Web SDK</a>
+to develop your own output handler.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Wrap a widget extension</strong></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Extend the login widget as needed.</p>
+</li>
+<li>
+<p>Include an output for <code>loginAction</code> on the <code>login-widget</code> element:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;bb-login-widget-ang (loginAction)="performExtraAction()"&gt;&lt;/bb-login-widget-ang&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This enables the widget to perform an action after login.</p>
+</div>
+</li>
+<li>
+<p>Provide your own mechanism for performing regular page navigation. For example, configure
+outputting and use the URL output handler as above.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Configure the Log in user widget preferences</strong></p>
+<div class="paragraph">
+<p>Configure the <strong>Log in user</strong> widget preferences as follows:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Remove the value from the <code>loginSuccessRedirectTo</code> preference.</p>
+</li>
+<li>
+<p>Configure the <code>output.loginAction</code> preference to hook into the action using the output handler,
+or leave it blank if performing a widget extension.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</body>
+</html>

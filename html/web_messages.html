@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Web widgets</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="web_messages" class="book toc2 toc-left">
+<div id="header">
+<h1>Web widgets</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html"><span class="toc-current">Web widgets</span></a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="web_messages" class="sect0">Web widgets</h1>
+          <div class="paragraph">
+<p><a href="messages_understand.html">Understand Messages</a> describes the functionalities of Messages.
+The following web widgets deliver these functionalities:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Manage messages</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="web_messages.html#create_message_business_web_widgets">Compose message by the customer</a>: Create and send a message to a bank employee</p>
+</li>
+<li>
+<p><a href="web_messages.html#messages_conversations_list_business_web_widgets">View messages by the customer</a>: View all sent and inbox messages</p>
+</li>
+<li>
+<p><a href="web_messages.html#messages_conversation_thread_business_web_widgets">View conversation thread by the customer</a>: View all messages from a single conversation</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="create_message_business_web_widgets" class="discrete">Compose message by the customer</h2>
+<div class="paragraph">
+<p>In the <strong>Compose message by the customer</strong> widget, bank customers interact with their bank
+in a secure environment.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/x-product/create_message_customer_understand.png?ver=3.10.1" alt="create message customer understand">
+</div>
+</div>
+<div class="paragraph">
+<p>The required fields include <strong>Topic</strong>, <strong>Subject</strong>, and <strong>Body</strong>. The customer can
+also attach a file, save the message as a draft, or discard it. If the message
+is saved as a draft, it then appears in the <strong>Drafts</strong> tab in the
+<strong>View messages by the customer</strong> widget.</p>
+</div>
+<div class="paragraph">
+<p>This widget supports the following features of rich text:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bold</p>
+</li>
+<li>
+<p>Italic</p>
+</li>
+<li>
+<p>Underline</p>
+</li>
+<li>
+<p>Strike-through</p>
+</li>
+<li>
+<p>Paragraph</p>
+</li>
+<li>
+<p>Ordered list</p>
+</li>
+<li>
+<p>Unordered list</p>
+</li>
+<li>
+<p>Code</p>
+</li>
+<li>
+<p>Link, including deep links</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This widget interfaces with the
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/messages_understand.html">Messages</a>
+DBS capability using the <a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/message-client-api.html">message-client-api</a>.</p>
+</div>
+<h3 id="_features_28" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Select message topic.</p>
+</li>
+<li>
+<p>Specify message subject.</p>
+</li>
+<li>
+<p>Compose message body.</p>
+</li>
+<li>
+<p>Attach a file to the message.</p>
+</li>
+<li>
+<p>Delete an attachment before sending.</p>
+</li>
+<li>
+<p>Discard a message before sending.</p>
+</li>
+<li>
+<p>Save a message as draft.</p>
+</li>
+<li>
+<p>Send a message.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_28" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="create_message_reference.html">Compose message by the customer</a></p>
+</li>
+</ul>
+</div>
+<h2 id="messages_conversations_list_business_web_widgets" class="discrete">View messages by the customer</h2>
+<div class="paragraph">
+<p>In this widget, the bank customer sees their incoming messages and conversations at a glance.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/x-product/view_conversation_list_customer_understand.png?ver=3.10.1" alt="view conversation list customer understand">
+</div>
+</div>
+<div class="paragraph">
+<p>The following information is listed for each message or conversation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Importance</strong>: Specifies the importance of the root message.</p>
+</li>
+<li>
+<p><strong>From</strong>: Specifies the human-readable sender name or label.</p>
+</li>
+<li>
+<p><strong>Draft</strong>: Specifies whether the conversation has a draft attached to it.</p>
+</li>
+<li>
+<p><strong>Attachment</strong>: Specifies whether the conversation has files attached.</p>
+</li>
+<li>
+<p><strong>Subject</strong>: Specifies the subject of the root message.</p>
+</li>
+<li>
+<p><strong>Topic</strong>: Specifies the topic that the message concerns, for example Savings. The user selects this from a list of available topics.</p>
+</li>
+<li>
+<p><strong>Date</strong>: Specifies the date of last received message in the conversation.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The bank customer loads more conversations by clicking <strong>Load more</strong>. Unread messages are highlighted.</p>
+</div>
+<div class="paragraph">
+<p>To refresh the list of conversations, the bank customer clicks the refresh icon.</p>
+</div>
+<div class="paragraph">
+<p>When clicking a conversation in the list, the customer accesses the <strong>View conversation thread by the customer</strong> widget.</p>
+</div>
+<div class="paragraph">
+<p>This widget interfaces with the
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/messages_understand.html">Messages</a>
+DBS capability using the <a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/message-client-api.html">message-client-api</a>.</p>
+</div>
+<h3 id="_features_29" class="discrete">Features</h3>
+<div class="paragraph">
+<p>This widget provides the following features for the bank customer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Mark conversations as read or unread.</p>
+</li>
+<li>
+<p>Delete conversations that were not marked non-deletable by the sender.</p>
+</li>
+<li>
+<p>View information about a conversation, including sender, subject, importance, topic, and date.</p>
+</li>
+<li>
+<p>View <strong>Inbox</strong>, <strong>Sent</strong>, and <strong>Drafts</strong> separately.</p>
+</li>
+<li>
+<p>Access the <strong>View conversation thread by the customer</strong> widget.</p>
+</li>
+<li>
+<p>Load more conversations.</p>
+</li>
+<li>
+<p>Refresh the list.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The widget polls the backend service to retrieve the number of unread conversations.
+The <a href="https://community.backbase.com/documentation/universal_collection_angular/7.1.0/navigation_spa_widget">Navigation SPA widget</a> displays this
+counter as a badge next to <strong>Inbox</strong>.</p>
+</div>
+<h3 id="_related_topics_29" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="messages_conversations_list_reference.html">View messages by the customer</a></p>
+</li>
+</ul>
+</div>
+<div class="sect1">
+        <h2 id="messages_conversation_thread_business_web_widgets">View conversation thread by the customer</h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+<p>In the <strong>View conversation thread by the customer</strong> widget, the bank customer views a single conversation thread
+and replies to a message in that conversation, if possible.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/x-product/view_conversation_thread_customer_understand.png?ver=3.10.1" alt="view conversation thread customer understand">
+</div>
+</div>
+<div class="paragraph">
+<p>The bank customer accesses this widget by clicking a list item in the
+<strong>View messages by the customer</strong> widget.
+Once in a conversation thread, individual messages can be opened by clicking them.</p>
+</div>
+<div class="paragraph">
+<p>The bank customer replies to the conversation by clicking <strong>Reply</strong>. It is possible to send multiple replies to the same message.
+The <strong>Reply</strong> button is not available if the message was marked as read-only by the sender or
+if the message is a mailout.</p>
+</div>
+<div class="paragraph">
+<p>A text input field is available with text markup controls.
+By default, the input is limited to 300 characters. If necessary, the bank customer attaches files
+to the message.</p>
+</div>
+<div class="paragraph">
+<p>The bank customer saves the message by clicking <strong>Save as draft</strong> or
+discards their message by clicking <strong>Discard</strong>. If the message is saved as a draft,
+it then appears in the <strong>Drafts</strong> tab in the conversation list as well as attached to the
+conversation when the customer reopens the conversation.</p>
+</div>
+<div class="paragraph">
+<p>This widget interfaces with the
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/messages_understand.html">Messages</a>
+DBS capability using the <a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/dbs.html#specs/message-client-api.html">message-client-api</a>.</p>
+</div>
+<h3 id="_features_30" class="discrete">Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>View a single conversation thread.</p>
+</li>
+<li>
+<p>Download an attachment from an incoming message.</p>
+</li>
+<li>
+<p>Send a reply to the conversation unless it is a read-only message or a mailout.</p>
+</li>
+<li>
+<p>Attach a file to the reply.</p>
+</li>
+<li>
+<p>Delete the attachment before sending.</p>
+</li>
+<li>
+<p>Mark the conversation as read or unread.</p>
+</li>
+<li>
+<p>Delete the conversation unless it was marked non-deletable by the sender.</p>
+</li>
+<li>
+<p>Save the message as draft.</p>
+</li>
+</ul>
+</div>
+<h3 id="_related_topics_30" class="discrete">Related topics</h3>
+<div class="paragraph">
+<p>For further information, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference - <a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+</div>
+</body>
+</html>

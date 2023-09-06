@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Create FX trade order</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="create_fx_trade_order_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Create FX trade order</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html"><span class="toc-current">Create FX trade order</span></a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="create_fx_trade_order_reference" class="sect0">Create FX trade order</h1>
+          <h2 id="_preferences_3" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>The widget has the following preferences that managers or administrators
+configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configurable for</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>expireTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the restricted time period to submit a trade order, MM:SS.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>02:00</code></p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_extension_slots_5" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/create_fx_trade_order_slots_1-6.svg?ver=3.10.1" alt="create fx trade order slots 1 6"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/create_fx_trade_order_slot_7.svg?ver=3.10.1" alt="create fx trade order slot 7"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/create_fx_trade_order_slots_1_2_8_9.svg?ver=3.10.1" alt="create fx trade order slots 1 2 8 9"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/x-product/create_fx_trade_order_slots_9_10.svg?ver=3.10.1" alt="create fx trade order slots 9 10"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="create_fx_trade_order_reference.html#bbFxRatesTradeOrderWidgetCustomizable">bbFxRatesTradeOrderWidgetCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_fx_trade_order_reference.html#bbTradeOrderModalCustomizable">bbTradeOrderModalCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_fx_trade_order_reference.html#bbTradeOrderStepCustomizable">bbTradeOrderStepCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_fx_trade_order_reference.html#bbFxCurrencyPairCustomizable">bbFxCurrencyPairCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_fx_trade_order_reference.html#bbFxRatesAccountsSelectorCustomizable">bbFxRatesAccountsSelectorCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_fx_trade_order_reference.html#bbFxRatesFavoriteButtonCustomizable">bbFxRatesFavoriteButtonCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_fx_trade_order_reference.html#bbRatesChangedModalCustomizable">bbRatesChangedModalCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_fx_trade_order_reference.html#bbSpotOrderStepCustomizable">bbSpotOrderStepCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_fx_trade_order_reference.html#bbSpotOrderTimerCustomizable">bbSpotOrderTimerCustomizable</a></p>
+</li>
+<li>
+<p><a href="create_fx_trade_order_reference.html#bbDiscardModalCustomizable">bbDiscardModalCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbFxRatesTradeOrderWidgetCustomizable" class="discrete">bbFxRatesTradeOrderWidgetCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbFxRatesTradeOrderWidgetCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+&lt;ng-template bbFxRatesTradeOrderWidgetCustomizable let-hostRef&gt;
+  &lt;bb-trade-order-modal
+    [currenciesRateId]="hostRef.selectedCurrenciesRateId$ | async"
+  &gt;&lt;/bb-trade-order-modal&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbTradeOrderModalCustomizable" class="discrete">bbTradeOrderModalCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbTradeOrderModalCustomizable
+  [bbHostRef]="this"
+  [bbTemplateContext]="{
+    currenciesRateId: currenciesRateId$ | async,
+    isModalOpen: isModalOpen$ | async,
+    tradeOrderDetail: tradeOrderDetail$ | async
+  }"
+&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbTradeOrderModalCustomizable
+             let-hostRef
+             let-isModalOpen="context.isModalOpen"
+             let-tradeOrderDetail="context.tradeOrderDetail"
+             let-currenciesRateId="context.currenciesRateId"&gt;
+  &lt;bb-modal-ui
+    [isOpen]="isModalOpen"
+    [modalOptions]="{
+      backdrop: 'static',
+      centered: true,
+      keyboard: true,
+      size: 'lg',
+      windowClass: 'bb-fx-rates-trade-order-modal'
+    }"
+    (isOpenChange)="hostRef.onOpenChange($event)"
+  &gt;
+    &lt;ng-container *ngIf="isModalOpen"&gt;
+      &lt;bb-trade-order-step
+        *ngIf="!tradeOrderDetail"
+        [currenciesRateId]="currenciesRateId"
+        (tradeOrderDetail)="hostRef.tradeOrderDetail = $event"
+        (close)="hostRef.close()"
+      &gt;&lt;/bb-trade-order-step&gt;
+      &lt;bb-spot-order-step
+        *ngIf="tradeOrderDetail"
+        [tradeOrderDetail]="tradeOrderDetail"
+        (backToEdit)="hostRef.tradeOrderDetail = $event"
+        (close)="hostRef.close()"
+      &gt;&lt;/bb-spot-order-step&gt;
+    &lt;/ng-container&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbTradeOrderStepCustomizable" class="discrete">bbTradeOrderStepCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbTradeOrderStepCustomizable
+  [bbHostRef]="this"
+  [bbTemplateContext]="{
+    pendingSubmit: pendingSubmit$ | async,
+    currenciesRateId: currenciesRateId$ | async,
+    loadingCurrenciesRate: loadingCurrenciesRate$ | async,
+    orderState: orderState$ | async
+  }"
+&gt;&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbTradeOrderStepCustomizable
+  let-hostRef
+  let-pendingSubmit="context.pendingSubmit"
+  let-currenciesRateId="context.currenciesRateId"
+  let-loadingCurrenciesRate="context.loadingCurrenciesRate"
+  let-orderState="context.orderState"
+&gt;
+  &lt;ng-container *ngIf="!(hostRef.loadingState$ | async); else currenciesRateLoading"&gt;
+    &lt;ng-container *ngIf="hostRef.currenciesRate$ | async; let currenciesRate"&gt;
+      &lt;bb-modal-header-ui&gt;
+        &lt;ng-template bbCustomModalHeader&gt;
+          &lt;div class="row w-100 align-items-center"&gt;
+            &lt;div class="col-11 col-sm-11"&gt;
+              &lt;bb-header-ui
+                data-role="fx-rates-pair-key"
+                headingType="h2"
+                heading="{{currenciesRate.pairKey}}"
+                i18n-heading="Forex order modal header text@@fx-trade-order-modal.header.text"
+                headingClasses="m-0"
+              &gt;
+              &lt;/bb-header-ui&gt;
+            &lt;/div&gt;
+            &lt;div class="col-1 pr-0 text-right"&gt;
+              &lt;bb-fx-rates-favorite-button
+                [favorite]="currenciesRate.isFavorite"
+                [pairKey]="currenciesRate.pairKey"
+              &gt;&lt;/bb-fx-rates-favorite-button&gt;
+            &lt;/div&gt;
+            &lt;div class="col-12"&gt;
+                &lt;span
+                  class="text-small text-muted"
+                  data-role="fx-rates-rate-spot-exchange"
+                  i18n="Spot Exchange Rate text with currency information@@fx-trade-order-modal.spot-exchange-text"
+                &gt;
+             {{currenciesRate.baseCurrency}}{{currenciesRate.quoteCurrency}} Spot Exchange Rate
+                &lt;/span&gt;
+                &lt;span
+                data-role="fx-rates-rate-as-of-time"
+                class="text-muted text-small"
+                i18n="Time when rates changed@@fx-trade-order-modal.rate-changes.time.information"
+                &gt;
+                  (as of {{currenciesRate.time | date: 'hh:mm z'}}).
+                &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-modal-header-ui&gt;
+      &lt;bb-modal-body-ui&gt;
+        &lt;ng-template bbCustomModalBody&gt;
+          &lt;div class="row"&gt;
+            &lt;div class="col" #tradeOrderModalCurrencyPair&gt;
+              &lt;bb-fx-rates-currency-pair
+                [bid]="currenciesRate.bid"
+                [ask]="currenciesRate.ask"
+                [buyingFormControl]="hostRef.tradeOrderForm.get('buying')"
+                [sellingFormControl]="hostRef.tradeOrderForm.get('selling')"
+                [defaultOrder]="hostRef.defaultOrder"
+                [lastChanged]="hostRef.lastChanged"
+                (orderState)="hostRef.onOrderStateChange($event)"
+                (lastChangedCurrencyInput)="hostRef.onLastChangedCurrencyInput($event)"
+                i18n-sellingDecimalLabel="Label of Selling currency input decimal@@fx-trading.currency-pair.selling-decimal.label"
+                sellingDecimalLabel="Decimal part of Selling"
+                i18n-sellingIntegerLabel="Label of Selling currency input integer part@@fx-trading.currency-pair.selling.label"
+                sellingIntegerLabel="Selling"
+                i18n-buyingIntegerLabel="Label of Buying currency input integer part@@fx-trading.currency-pair.buying.label"
+                buyingIntegerLabel="Buying"
+                i18n-buyingDecimalLabel="Label of Buying currency input decimal part@@fx-trading.currency-pair.buying-decimal.label"
+                buyingDecimalLabel="Decimal part of Buying"
+                i18n-insufficientFundsError="Insufficient funds validation error message@@fx-trading.currency-pair.validation.insufficient-funds"
+                insufficientFundsError="Insufficient funds"
+                i18n-zeroAmountError="Please enter amount validation error message@@fx-trading.currency-pair.validation.zero-amount"
+                zeroAmountError="Please enter amount"
+              &gt;&lt;/bb-fx-rates-currency-pair&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="row mt-4"&gt;
+            &lt;div class="col" #tradeOrderModalAccounts&gt;
+              &lt;bb-fx-rates-accounts-selector
+                [payingFromAccounts]="hostRef.payingFromAccounts$ | async"
+                [payingToAccounts]="hostRef.payingToAccounts$ | async"
+                [fromFormControl]="hostRef.tradeOrderForm.get('fromAccount')"
+                [toFormControl]="hostRef.tradeOrderForm.get('toAccount')"
+              &gt;&lt;/bb-fx-rates-accounts-selector&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-modal-body-ui&gt;
+      &lt;bb-modal-footer-ui&gt;
+        &lt;ng-template bbCustomModalFooter&gt;
+          &lt;div class="bb-button-bar"&gt;
+            &lt;button
+              bbButton
+              block="true"
+              class="bb-button-bar__button col-sm-2 ml-sm-3"
+              data-role="fx-rates-place-order-btn"
+              (click)="hostRef.onNext()"
+              (keydown.enter)="hostRef.onNext()"
+            &gt;
+              &lt;bb-loading-indicator-ui
+                *ngIf="pendingSubmit"
+                class="position-absolute"
+                [loaderSize]="'sm'"
+                data-role="fx-rates-loading-spinner"
+              &gt;&lt;/bb-loading-indicator-ui&gt;
+              &lt;span [ngClass]="{ invisible: pendingSubmit }"
+                    i18n="Place order button@@fx-trade-order-modal.button.place-order"&gt;Next&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button
+              bbButton
+              block="true"
+              color="secondary"
+              class="bb-button-bar__button  col-sm-2 m-0"
+              data-role="fx-rates-cancel-btn"
+              i18n="Cancel button text@@fx-trade-order-modal.button.cancelButton"
+              (click)="hostRef.onClose()"
+              (keydown.enter)="hostRef.onClose()"
+            &gt;  Cancel &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-modal-footer-ui&gt;
+    &lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-container *ngIf="currenciesRateId"&gt;
+    &lt;bb-rates-changed-modal
+      [baseCurrency]="loadingCurrenciesRate?.baseCurrency"
+      [quoteCurrency]="loadingCurrenciesRate?.quoteCurrency"
+      [bid]="hostRef.bid$ | async"
+      [ask]="hostRef.ask$ | async"
+      [validForm]="hostRef.tradeOrderForm['valid']"
+      [orderState]="hostRef.orderState$ | async"
+      (nextStep)="hostRef.onNextStep($event)"
+    &gt;&lt;/bb-rates-changed-modal&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #currenciesRateLoading&gt;
+  &lt;!-- TODO: placeholder for form loading state --&gt;
+  &lt;div class="align-items-center d-flex justify-content-center" style="height: 50vh"&gt;
+    &lt;bb-loading-indicator-ui loaderSize="md" text="Loading..."&gt;&lt;/bb-loading-indicator-ui&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #tradeOrderErrorNotificationHeader&gt;
+  &lt;h5
+    i18n="Error notification header message@@fx-trade-order-modal.notification.error-header"
+  &gt;Unknown Error&lt;/h5&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #tradeOrderErrorNotificationMessage&gt;
+  &lt;p
+    i18n="Error notification message@@fx-trade-order-modal.notification.error-message"
+  &gt;Try to reload the page or contact the system administrator.&lt;/p&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbRatesChangedModalCustomizable" class="discrete">bbRatesChangedModalCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbRatesChangedModalCustomizable let-hostRef&gt;
+  &lt;bb-modal-ui
+    [isOpen]="hostRef.modalOpen"
+    [modalOptions]="{
+      backdrop: 'static',
+      keyboard: true,
+           windowClass: 'bb-fx-rates-changed-modal'
+    }"&gt;
+    &lt;ng-container&gt;
+      &lt;bb-modal-header-ui&gt;
+        &lt;ng-template bbCustomModalHeader&gt;
+          &lt;bb-header-ui
+            headingType="h4"
+            heading="Rates changed"
+            i18n-heading="Rates changed modal header text@@fx-rates-changed.header.text"
+          &gt;
+          &lt;/bb-header-ui&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-modal-header-ui&gt;
+      &lt;bb-modal-body-ui&gt;
+        &lt;ng-template bbCustomModalBody&gt;
+          &lt;p *ngIf="hostRef.validForm === true" i18n="Rates changed message@@fx-rates-changed.message.text"&gt;
+            Rates have been changed. Check and continue to review to confirm order.
+          &lt;/p&gt;
+          &lt;p *ngIf="hostRef.validForm === false" i18n="Rates changed message@@fx-rates-changed.message_invalid.text"&gt;
+            Rates have been changed. Insufficient funds for transactions. Please edit your order.
+          &lt;/p&gt;
+
+          &lt;table&gt;
+            &lt;tbody&gt;
+            &lt;tr *ngIf="hostRef.basePriceOld !== hostRef.basePriceNew" data-role="fx-rates-base-rate-changes"&gt;
+              &lt;td&gt;
+                &lt;div class="text-black col-12 m-0 p-0 pr-1 pl-1"&gt;
+                  &lt;del data-role="fx-rates-old-base-rate"&gt;
+                    {{hostRef.basePriceOld}}
+                  &lt;/del&gt;
+                &lt;/div&gt;
+              &lt;/td&gt;
+              &lt;td&gt;
+                &lt;bb-icon-ui class="align-text-top" color="secondary" name="arrow-forward" size="md"&gt;&lt;/bb-icon-ui&gt;
+              &lt;/td&gt;
+              &lt;td&gt;
+                &lt;div class="bg-new-rates text-black  col-12 m-0 p-0 pr-1 pl-1"&gt;
+                  &lt;b data-role="fx-rates-new-base-rate"&gt;
+                    {{hostRef.basePriceNew}}
+                  &lt;/b&gt;
+                &lt;/div&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr *ngIf="hostRef.quotePriceOld !== hostRef.quotePriceNew" data-role="fx-rates-quote-rate-changes"&gt;
+              &lt;td&gt;
+                &lt;div class="text-black col-auto m-0 pt-3 pt-sm-0 pb-0 pr-1 pl-1"&gt;
+                  &lt;del data-role="fx-rates-old-quote-rate"&gt;
+                    {{hostRef.quotePriceOld}}
+                  &lt;/del&gt;
+                &lt;/div&gt;
+              &lt;/td&gt;
+              &lt;td&gt;
+                &lt;bb-icon-ui class="align-text-top" color="secondary" name="arrow-forward" size="md"&gt;&lt;/bb-icon-ui&gt;
+              &lt;/td&gt;
+              &lt;td&gt;
+                &lt;div class="bg-new-rates text-black col-auto m-0 p-0 pr-1 pl-1"&gt;
+                  &lt;b data-role="fx-rates-new-quote-rate"&gt;
+                    {{hostRef.quotePriceNew}}
+                  &lt;/b&gt;
+                &lt;/div&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-modal-body-ui&gt;
+    &lt;/ng-container&gt;
+    &lt;bb-modal-footer-ui&gt;
+      &lt;ng-template bbCustomModalFooter&gt;
+        &lt;div class="bb-button-bar"&gt;
+          &lt;button
+            bbButton
+            class="bb-button-bar__button"
+            i18n="Continue to review button@@fx-rates-changed.button.continueButton"
+            data-role="fx-rates-changed-continue-btn"
+            *ngIf="hostRef.validForm"
+            (click)="hostRef.goToNextStep()"
+            (keydown.enter)="hostRef.goToNextStep()"
+          &gt; Continue to review &lt;/button&gt;
+          &lt;button
+            bbButton
+            color="link"
+            class="bb-button-bar__button"
+            data-role="fx-rates-changed-cancel-btn"
+            (click)="hostRef.closeModal(false)"
+            (keydown.enter)="hostRef.closeModal(false)"
+            i18n="Back to edit button text@@fx-rates-changed.button.backToEdit"
+          &gt; Back to edit &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-footer-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbFxRatesAccountsSelectorCustomizable" class="discrete">bbFxRatesAccountsSelectorCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbFxRatesAccountsSelectorCustomizable
+  [bbHostRef]="this"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbFxRatesAccountsSelectorCustomizable
+  let-hostRef
+&gt;
+  &lt;div class="mb-4"&gt;
+    &lt;h6
+      i18n="Header for paying from account selector@@fx-trading.account-selector.header.text.paying-from"
+      id="fx-rate-from-account-selector-label"
+    &gt;Paying from&lt;/h6&gt;
+    &lt;hr class="my-1"&gt;
+    &lt;div class="mt-3 mb-4 position-relative"&gt;
+      &lt;bb-account-selector-ui
+        [ngClass]="{'fx-rates-account-selector--invalid': hostRef.fromFormControl.invalid &amp;&amp; hostRef.fromFormControl.touched}"
+        [items]="hostRef.payingFromAccounts"
+        (change)="hostRef.changeFromAccount($event)"
+        [selectedItems]="hostRef.selectedFromAccount"
+        [dropdownPosition]="'bottom'"
+        aria-describedby="fx-rate-from-account-error-message"
+        aria-labelledby="fx-rate-from-account-selector-label"
+        class="fx-rates-account-selector"
+        placeholder="Select Account"
+        data-role="fx-rate-account-from-selector"
+        i18n-placeholder="Select Account|Select Account placeholder@@fx-trading.account-selector.paying.placeholder"
+      &gt;
+        &lt;ng-template bbCustomOptionItem let-item$="item$" let-item="item"&gt;
+          &lt;bb-product-item-basic-account-ui
+            [active]="item$.selected"
+            [productNumber]="item.IBAN || item.BBAN"
+            [amount]="item.balance"
+            [currency]="item.currency"
+            [title]="item.name"
+          &gt;
+            &lt;ng-template bbCustomProductItemBasicAccountDetailsFormatter let-amount="amount" let-currency="currency"&gt;
+              &lt;bb-amount-ui
+                class="font-weight-bold"
+                [amount]="amount"
+                [currency]="currency"
+                [mapCurrency]="false"
+              &gt;&lt;/bb-amount-ui&gt;
+            &lt;/ng-template&gt;
+          &lt;/bb-product-item-basic-account-ui&gt;
+        &lt;/ng-template&gt;
+
+        &lt;ng-template bbCustomSingleSelectedItemLabel let-item="item"&gt;
+          &lt;bb-product-item-basic-account-ui
+            [active]="true"
+            [amount]="item.balance"
+            [currency]="item.currency"
+            [productNumber]="item.IBAN || item.BBAN"
+            [title]="item.name"
+          &gt;
+            &lt;ng-template bbCustomProductItemBasicAccountDetailsFormatter let-amount="amount" let-currency="currency"&gt;
+              &lt;bb-amount-ui
+                class="font-weight-bold"
+                [amount]="amount"
+                [currency]="currency"
+                [mapCurrency]="false"
+              &gt;&lt;/bb-amount-ui&gt;
+            &lt;/ng-template&gt;
+          &lt;/bb-product-item-basic-account-ui&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-account-selector-ui&gt;
+      &lt;bb-input-validation-message-ui
+        data-role="fx-rate-from-account-error-message"
+        [showErrors]="hostRef.fromFormControl.invalid &amp;&amp; hostRef.fromFormControl.touched"
+        id="fx-rate-from-account-error-message"
+        role="alert"
+      &gt;
+        &lt;span
+          i18n="Select an account validation message@@fx-trading.account-selector.error.message"
+        &gt;
+          Please select an account
+        &lt;/span&gt;
+      &lt;/bb-input-validation-message-ui&gt;
+    &lt;/div&gt;
+    &lt;h6
+      i18n="Header for paying to account selector@@fx-trading.account-selector.header.text.paying-to"
+      id="fx-rate-to-account-selector-label"
+    &gt;Paying to&lt;/h6&gt;
+    &lt;hr class="my-1"&gt;
+    &lt;div class="mt-3 mb-4 position-relative"&gt;
+      &lt;bb-account-selector-ui
+        [ngClass]="{'fx-rates-account-selector--invalid': hostRef.toFormControl.invalid &amp;&amp; hostRef.toFormControl.touched}"
+        [items]="hostRef.payingToAccounts"
+        [multiple]="false"
+        (change)="hostRef.changeToAccount($event)"
+        [selectedItems]="hostRef.selectedToAccount"
+        [dropdownPosition]="'bottom'"
+        aria-describedby="fx-rate-to-account-error-message"
+        aria-labelledby="fx-rate-to-account-selector-label"
+        class="fx-rates-account-selector"
+        placeholder="Select Account"
+        data-role="fx-rate-account-to-selector"
+        i18n-placeholder="Select Account|Select Account placeholder@@fx-trading.account-selector.receiving.placeholder"
+      &gt;
+        &lt;ng-template bbCustomOptionItem let-item$="item$" let-item="item"&gt;
+          &lt;bb-product-item-basic-account-ui
+            [active]="item$.selected"
+            [productNumber]="item.IBAN || item.BBAN"
+            [amount]="item.balance"
+            [currency]="item.currency"
+            [title]="item.name"
+          &gt;
+            &lt;ng-template bbCustomProductItemBasicAccountDetailsFormatter let-amount="amount" let-currency="currency"&gt;
+              &lt;bb-amount-ui
+                class="font-weight-bold"
+                [amount]="amount"
+                [currency]="currency"
+                [mapCurrency]="false"
+              &gt;&lt;/bb-amount-ui&gt;
+            &lt;/ng-template&gt;
+          &lt;/bb-product-item-basic-account-ui&gt;
+        &lt;/ng-template&gt;
+
+        &lt;ng-template bbCustomSingleSelectedItemLabel let-item="item"&gt;
+          &lt;bb-product-item-basic-account-ui
+            [active]="true"
+            [amount]="item.balance"
+            [currency]="item.currency"
+            [productNumber]="item.IBAN || item.BBAN"
+            [title]="item.name"
+          &gt;
+            &lt;ng-template bbCustomProductItemBasicAccountDetailsFormatter let-amount="amount" let-currency="currency"&gt;
+              &lt;bb-amount-ui
+                class="font-weight-bold"
+                [amount]="amount"
+                [currency]="currency"
+                [mapCurrency]="false"
+              &gt;&lt;/bb-amount-ui&gt;
+            &lt;/ng-template&gt;
+          &lt;/bb-product-item-basic-account-ui&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-account-selector-ui&gt;
+      &lt;bb-input-validation-message-ui
+        data-role="fx-rate-to-account-error-message"
+        [showErrors]="hostRef.toFormControl.invalid &amp;&amp; hostRef.toFormControl.touched"
+        id="fx-rate-to-account-error-message"
+        role="alert"
+      &gt;
+        &lt;span
+          i18n="Select an account validation message@@fx-trading.account-selector.error.message"
+        &gt;
+          Please select an account
+        &lt;/span&gt;
+      &lt;/bb-input-validation-message-ui&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbFxCurrencyPairCustomizable" class="discrete">bbFxCurrencyPairCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbFxCurrencyPairCustomizable
+  [bbHostRef]="this"
+  [bbTemplateContext]="{
+    isMobileView: isMobileView$ | async
+  }"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbFxCurrencyPairCustomizable
+  let-hostRef
+  let-isMobileView="context.isMobileView"
+&gt;
+  &lt;div class="bb-currency-pair"&gt;
+    &lt;div class="bb-currency-pair__switcher"
+         [ngClass]="{'bb-currency-pair__switcher--reverse': !hostRef.defaultOrder}"
+         data-role="fx-rates-currency-pair-switcher-block"&gt;
+      &lt;div class="bb-currency-pair__order-label"
+           i18n="Label of Selling currency input@@fx-trading.currency-pair.selling.label"&gt;
+        SELLING
+      &lt;/div&gt;
+      &lt;div class="bb-currency-pair__action-column"&gt;
+        &lt;button bbButton
+                color="outline-info"
+                buttonSize="sm"
+                [circle]="true"
+                aria-label="Currency switcher"
+                i18n-aria-label="Aria-label for currency switcher@@fx-trading.currency-pair.switcher.aria-label"
+                data-role="fx-rates-currency-pair-switcher"
+                (click)="hostRef.changeOrder()"&gt;
+          &lt;bb-icon-ui name="swap-horiz"&gt;&lt;/bb-icon-ui&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-currency-pair__order-label"
+           i18n="Label of Selling currency input@@fx-trading.currency-pair.buying.label"&gt;
+        BUYING
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="bb-currency-pair__currency-exchange-info"&gt;
+      &lt;ng-container *ngTemplateOutlet="isMobileView ? mobileCurrencyRow : defaultCurrencyRow"&gt;&lt;/ng-container&gt;
+      &lt;div class="row mt-1 d-none d-sm-flex"&gt;
+        &lt;div class="col text-right pr-0"&gt;
+          &lt;div
+            data-role="fx-rates-currency-pair-base-price"
+            class="bb-currency-pair__price"&gt;
+            {{hostRef.sellingPriceMessage}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-currency-pair__action-column"&gt;
+        &lt;/div&gt;
+        &lt;div class="col pl-0"&gt;
+          &lt;div
+            data-role="fx-rates-currency-pair-quote-price"
+            class="bb-currency-pair__price"&gt;
+            {{hostRef.buyingPriceMessage}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="row mt-2 mt-sm-3"&gt;
+        &lt;div class="col pr-sm-0" [hidden]="isMobileView &amp;&amp; !hostRef.defaultOrder"&gt;
+          &lt;bb-currency-input-ui
+            data-role="fx-rates-selling-currency-input"
+            class="d-block"
+            maxlength="13"
+            [formControl]="hostRef.sellingFormControl"
+            [integerLabel]="hostRef.defaultOrder ? hostRef.sellingIntegerLabel : hostRef.buyingIntegerLabel"
+            [decimalLabel]="hostRef.defaultOrder ? hostRef.sellingDecimalLabel : hostRef.buyingDecimalLabel"
+            [integerLabelSrOnly]="true"
+            [decimalLabelSrOnly]="true"
+            aria-describedby="currency-pair-selling-errors"
+          &gt;
+            &lt;bb-input-validation-message-ui
+              bbValidationMessage
+              data-role="fx-rates-currency-pair-selling-validation-error"
+              [showErrors]="hostRef.sellingFormControl?.invalid &amp;&amp; hostRef.sellingFormControl?.touched"
+              id="currency-pair-selling-errors"
+            &gt;
+              &lt;span *ngIf="hostRef.sellingFormControl?.hasError('insufficientFunds')"&gt;
+                {{hostRef.insufficientFundsError}}
+              &lt;/span&gt;
+              &lt;span *ngIf="hostRef.sellingFormControl?.hasError('required')"&gt;
+                {{hostRef.zeroAmountError}}
+              &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/bb-currency-input-ui&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-currency-pair__action-column" [hidden]="isMobileView"&gt;&lt;/div&gt;
+        &lt;div class="col pl-sm-0" [hidden]="isMobileView &amp;&amp; hostRef.defaultOrder"&gt;
+          &lt;bb-currency-input-ui
+            data-role="fx-rates-buying-currency-input"
+            class="d-block"
+            maxlength="13"
+            [formControl]="hostRef.buyingFormControl"
+            [integerLabel]="hostRef.defaultOrder ? hostRef.buyingIntegerLabel : hostRef.sellingIntegerLabel"
+            [decimalLabel]="hostRef.defaultOrder ? hostRef.buyingDecimalLabel : hostRef.sellingDecimalLabel"
+            [integerLabelSrOnly]="true"
+            [decimalLabelSrOnly]="true"
+            aria-describedby="currency-pair-buying-errors"
+          &gt;
+            &lt;bb-input-validation-message-ui
+              bbValidationMessage
+              data-role="fx-rates-currency-pair-buying-validation-error"
+              [showErrors]="hostRef.buyingFormControl?.invalid &amp;&amp; hostRef.buyingFormControl?.touched"
+              id="currency-pair-buying-errors"
+            &gt;
+              &lt;span *ngIf="hostRef.buyingFormControl?.hasError('insufficientFunds')"&gt;
+                {{hostRef.insufficientFundsError}}
+              &lt;/span&gt;
+              &lt;span *ngIf="hostRef.buyingFormControl?.hasError('required')"&gt;
+                {{hostRef.zeroAmountError}}
+              &lt;/span&gt;
+            &lt;/bb-input-validation-message-ui&gt;
+          &lt;/bb-currency-input-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-currency-pair__result-price text-right" *ngIf="isMobileView"&gt;
+        &lt;div [hidden]="hostRef.defaultOrder"&gt;
+          =
+          &lt;bb-amount-ui [amount]="hostRef.sellingFormControl.value.amount"&gt;&lt;/bb-amount-ui&gt;
+          {{hostRef.sellingFormControl.value.currency}}
+        &lt;/div&gt;
+        &lt;div [hidden]="!hostRef.defaultOrder"&gt;
+          =
+          &lt;bb-amount-ui [amount]="hostRef.buyingFormControl.value.amount"&gt;&lt;/bb-amount-ui&gt;
+          {{hostRef.buyingFormControl.value.currency}}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;ng-template #mobileCurrencyRow&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col bb-fx-rate bb-fx-rate--active"
+           [hidden]="!hostRef.defaultOrder"
+           data-role="fx-rates-rate-bid-block"
+      &gt;
+        &lt;div
+          class="bb-fx-rate__label"
+          i18n="Bid rate label@@fx-trade-order-modal.label.bid"
+        &gt;Bid&lt;/div&gt;
+        &lt;h5 class="bb-fx-rate__value"
+            data-role="fx-rates-rate-bid-value"&gt;{{hostRef.bid | number:'1.0-8'}}&lt;/h5&gt;
+      &lt;/div&gt;
+
+      &lt;div class="col text-right bb-fx-rate bb-fx-rate--active"
+           [hidden]="hostRef.defaultOrder"
+           data-role="fx-rates-rate-ask-block"
+      &gt;
+        &lt;div
+          class="bb-fx-rate__label"
+          i18n="Ask rate label@@fx-trade-order-modal.label.ask"
+        &gt;Ask&lt;/div&gt;
+        &lt;h5 class="bb-fx-rate__value"
+            data-role="fx-rates-rate-ask-value"&gt;{{hostRef.ask | number:'1.0-8'}}&lt;/h5&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row mt-2"&gt;
+      &lt;div class="col pr-0"&gt;
+        &lt;h1 class="bb-currency-pair__currency"&gt;{{hostRef.sellingFormControl?.value?.currency}}&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-currency-pair__action-column bb-currency-pair__currency-arrow"&gt;
+        &lt;bb-icon-ui
+          [ngClass]="{'bb-fx-rates-buying-arrow': !hostRef.defaultOrder}"
+          data-role="fx-rates-buying-arrow"
+          name="arrow-right-alt"
+          size="xl"
+          color="dark"
+        &gt;&lt;/bb-icon-ui&gt;
+      &lt;/div&gt;
+      &lt;div class="col pl-0 text-right"&gt;
+        &lt;h1 class="bb-currency-pair__currency"&gt;{{hostRef.buyingFormControl?.value?.currency}}&lt;/h1&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+  &lt;ng-template #defaultCurrencyRow&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col pr-0 d-flex"&gt;
+        &lt;div class="row align-self-stretch flex-fill"&gt;
+          &lt;div class="col-sm col-12 pr-sm-0 bb-fx-rate"
+               [ngClass]="{'bb-fx-rate--active': hostRef.defaultOrder}"
+               data-role="fx-rates-rate-bid-block"
+          &gt;
+            &lt;div
+              class="bb-fx-rate__label"
+              i18n="Bid rate label@@fx-trade-order-modal.label.bid"
+            &gt;Bid&lt;/div&gt;
+            &lt;h5 class="bb-fx-rate__value"
+                data-role="fx-rates-rate-bid-value"&gt;{{hostRef.bid | number:'1.0-8'}}&lt;/h5&gt;
+          &lt;/div&gt;
+          &lt;div class="col-sm col-12 pl-sm-2 mt-2 mt-sm-0 text-sm-right align-self-end"&gt;
+            &lt;h1 class="bb-currency-pair__currency"&gt;{{hostRef.sellingFormControl?.value?.currency}}&lt;/h1&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-currency-pair__action-column bb-currency-pair__currency-arrow"&gt;
+        &lt;bb-icon-ui
+          [ngClass]="{'bb-fx-rates-buying-arrow': !hostRef.defaultOrder}"
+          data-role="fx-rates-buying-arrow"
+          name="arrow-right-alt"
+          size="xl"
+          color="dark"
+        &gt;&lt;/bb-icon-ui&gt;
+      &lt;/div&gt;
+      &lt;div class="col pl-0 d-flex"&gt;
+        &lt;div class="row flex-row-reverse align-self-stretch flex-fill"&gt;
+          &lt;div class="col-sm col-12 pl-sm-2 text-right bb-fx-rate"
+               [ngClass]="{'bb-fx-rate--active': !hostRef.defaultOrder}"
+               data-role="fx-rates-rate-ask-block"
+          &gt;
+            &lt;div
+              class="bb-fx-rate__label"
+              i18n="Ask rate label@@fx-trade-order-modal.label.ask"
+            &gt;Ask&lt;/div&gt;
+            &lt;h5 class="bb-fx-rate__value"
+                data-role="fx-rates-rate-ask-value"&gt;{{hostRef.ask | number:'1.0-8'}}&lt;/h5&gt;
+          &lt;/div&gt;
+          &lt;div class="col-sm col-12 pr-sm-0 mt-2 mt-sm-0 align-self-end text-right text-sm-left"&gt;
+            &lt;h1 class="bb-currency-pair__currency"&gt;{{hostRef.buyingFormControl?.value?.currency}}&lt;/h1&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbFxRatesFavoriteButtonCustomizable" class="discrete">bbFxRatesFavoriteButtonCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbFxRatesFavoriteButtonCustomizable
+  [bbHostRef]="this",
+  [bbTemplateContext]="{
+    favoriteState: favoriteState$ | async
+  }"
+&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbFxRatesFavoriteButtonCustomizable
+  let-hostRef
+  let-favoriteState="context.favoriteState"
+&gt;
+
+  &lt;button
+    bbButton
+    circle="true"
+    buttonSize="sm"
+    aria-label="Favorite button"
+    i18n-aria-label="Aria-label for favorite button@@fx-trading.favorite-button.button.aria-label"
+    color="link"
+    (click)="hostRef.favoriteChange($event)"
+    data-role="favorite-button"
+    (keydown.enter)="hostRef.favoriteChange($event)"
+  &gt;
+    &lt;bb-icon-ui name="{{favoriteState ? 'star' : 'star-border'}}" size="md" color="primary"&gt;&lt;/bb-icon-ui&gt;
+  &lt;/button&gt;
+
+&lt;/ng-template&gt;
+
+&lt;ng-template #favoriteButtonErrorNotificationHeader&gt;
+  &lt;h5
+    i18n="Error notification header message@@fx-spot-order-modal.notification.error-header"
+  &gt;Unknown Error&lt;/h5&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #favoriteButtonErrorNotificationMessage&gt;
+  &lt;p
+    i18n="Error notification message@@fx-spot-order-modal.notification.error-message"
+  &gt;Try to reload the page or contact the system administrator.&lt;/p&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbSpotOrderStepCustomizable" class="discrete">bbSpotOrderStepCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbSpotOrderStepCustomizable
+  [bbHostRef]="this"
+  [bbTemplateContext]="{
+    pendingSubmit: pendingSubmit$ | async
+  }"
+&gt;&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbSpotOrderStepCustomizable
+  let-hostRef
+  let-pendingSubmit="context.pendingSubmit"
+&gt;
+  &lt;ng-container *ngIf="hostRef.tradeOrderDetail$ | async; let tradeOrderDetail"&gt;
+    &lt;bb-modal-header-ui&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;bb-header-ui
+          ngbAutofocus
+          headingType="h2"
+          heading="{{'Review ' + tradeOrderDetail.currenciesRate.pairKey + ' order'}}"
+          i18n-heading="Review &amp; Submit modal header text@@fx-spot-order-modal.header.text"
+        &gt;
+        &lt;/bb-header-ui&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody&gt;
+        &lt;div class="row bg-gray-light-300 m-0 m-sm-1 pt-3 pb-3 rounded"&gt;
+          &lt;div class="col-12"&gt;
+              &lt;div class="row"&gt;
+                &lt;div class="col-12 col-sm text-sm-right text-muted"&gt;
+                  &lt;div class="mb-2 d-none d-sm-block"&gt;
+                    &lt;ng-container *ngTemplateOutlet="tradeOrderDetail.orderState ? sellingLabelText : buyingLabelText"&gt;&lt;/ng-container&gt;
+                  &lt;/div&gt;
+                  &lt;div&gt;
+                    &lt;h2 #headerSelling data-role="fx-rate-spot-order-selling"&gt;
+                    &lt;span #headerSellingCurrency class="d-inline-block"&gt;
+                      {{tradeOrderDetail.selling.currency}}
+                    &lt;/span&gt;
+                    &lt;span [class.d-block]="headerBuying.offsetWidth &lt; (headerBuyingCurrency.offsetWidth + headerBuyingAmount.offsetWidth)"&gt;
+                      &lt;span #headerSellingAmount&gt;{{(tradeOrderDetail.selling.amount | number:'1.2-8')}}&lt;/span&gt;
+                    &lt;/span&gt;
+                    &lt;/h2&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-auto text-center pt-sm-1 mt-sm-4 mb-sm-auto"&gt;
+                  &lt;div class="ml-2 ml-sm-0"&gt;
+                    &lt;bb-icon-ui
+                      class="bb-fx-rates-buying-arrow bb-fx-rates-buying-arrow-sm"
+                      [ngClass]="{'bb-fx-rates-buying-arrow bb-fx-rates-buying-arrow-sm' : !tradeOrderDetail.orderState, 'bb-fx-rates-selling-arrow-sm' : tradeOrderDetail.orderState}"
+                      name="trending-flat"
+                      size="xl"
+                      color="dark"
+                    &gt;&lt;/bb-icon-ui&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-12 col-sm"&gt;
+                  &lt;div class="mb-2 d-none d-sm-block"&gt;
+                    &lt;ng-container *ngTemplateOutlet="!tradeOrderDetail.orderState ? sellingLabelText : buyingLabelText"&gt;&lt;/ng-container&gt;
+                  &lt;/div&gt;
+                  &lt;div&gt;
+                    &lt;h2 #headerBuying data-role="fx-rate-spot-order-buying"&gt;
+                    &lt;span #headerBuyingCurrency class="d-inline-block"&gt;
+                      {{tradeOrderDetail.buying.currency}}
+                    &lt;/span&gt;
+                    &lt;span [class.d-block]="headerSelling.offsetWidth &lt; (headerSellingCurrency.offsetWidth + headerSellingAmount.offsetWidth)"&gt;
+                      &lt;span #headerBuyingAmount&gt;{{(tradeOrderDetail.buying.amount | number:'1.2-8')}}&lt;/span&gt;
+                    &lt;/span&gt;
+                    &lt;/h2&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-12"&gt;
+            &lt;bb-spot-order-timer [expireTime]="hostRef.expireTime$ | async" [tradeOrderDetail]="tradeOrderDetail" (timeExpired)="hostRef.timeExpired = $event" &gt;
+            &lt;/bb-spot-order-timer&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class="row mb-4 m-sm-1"&gt;
+          &lt;div class="col-12 col-sm pr-sm-0 pl-sm-0 pt-3 pl-lg-4 pr-lg-4 "&gt;
+            &lt;ng-container *ngTemplateOutlet="tradeOrderDetail.orderState ? fromAccount : toAccount"&gt;&lt;/ng-container&gt;
+          &lt;/div&gt;
+          &lt;div class="col-auto text-middle m-auto pt-4 d-none d-sm-block"&gt;
+            &lt;div&gt;
+              &lt;bb-icon-ui
+                [ngClass]="{'bb-fx-rates-buying-arrow' : !tradeOrderDetail.orderState}"
+                name="trending-flat"
+                size="xl"
+                color="dark"
+              &gt;&lt;/bb-icon-ui&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-12 col-sm pr-sm-0 pl-sm-0 pt-3 pl-lg-4 pr-lg-4"&gt;
+            &lt;ng-container *ngTemplateOutlet="!tradeOrderDetail.orderState ? fromAccount : toAccount"&gt;&lt;/ng-container&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+    &lt;ng-template #fromAccount&gt;
+      &lt;b class="d-block mt-3 mb-2"
+         i18n="Title for selling account@@fx-trade-order-modal.transaction.from-account"&gt;From account&lt;/b&gt;
+      &lt;p class=" m-0 mt-1 text-small"
+         data-role="fx-rate-spot-body-fromAccount-name"&gt;
+        {{tradeOrderDetail?.fromAccount?.name}} {{'(' + tradeOrderDetail?.fromAccount?.currency + ')'}}
+      &lt;/p&gt;
+      &lt;p class=" m-0 mt-1 text-muted text-small"
+         data-role="fx-rate-spot-body-fromAccount-IBAN"&gt;
+        {{(tradeOrderDetail?.fromAccount?.IBAN || tradeOrderDetail?.fromAccount?.BBAN) | bbIban}}
+      &lt;/p&gt;
+      &lt;div class="text-right text-sm-left"&gt;
+        &lt;b class="mt-1 mb-0 text-dark font-weight-medium text-small"  data-role="fx-rate-spot-order-fromAccount-balance"&gt;
+          {{tradeOrderDetail?.fromAccount?.currency}} {{tradeOrderDetail?.fromAccount?.balance | number:'1.2-8'}}
+        &lt;/b&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+    &lt;ng-template #toAccount&gt;
+      &lt;b class="d-block mt-3 mb-2"
+         i18n="Title for buying account@@fx-trade-order-modal.transaction.to-account"&gt;To account&lt;/b&gt;
+      &lt;p class="m-0 mt-1 text-small"
+         data-role="fx-rate-spot-body-toAccount-name"&gt;
+        {{tradeOrderDetail?.toAccount?.name}} {{'(' + tradeOrderDetail?.toAccount?.currency + ')'}}
+      &lt;/p&gt;
+      &lt;p class="m-0 mt-1 text-muted text-small"
+         data-role="fx-rate-spot-body-toAccount-IBAN"&gt;
+        {{(tradeOrderDetail?.toAccount?.IBAN || tradeOrderDetail?.toAccount?.BBAN) | bbIban}}
+      &lt;/p&gt;
+      &lt;div class="text-right text-sm-left"&gt;
+        &lt;b class="mt-1 mb-0 text-dark font-weight-medium text-small" data-role="fx-rate-spot-order-toAccount-balance"&gt;
+          {{tradeOrderDetail?.toAccount?.currency}} {{tradeOrderDetail?.toAccount?.balance | number:'1.2-8'}}
+        &lt;/b&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+    &lt;ng-template #sellingLabelText&gt;
+      &lt;b
+        class="text-uppercase text-muted text-small"
+        i18n="Title for selling currency value@@fx-trade-order-modal.transaction.selling-currency"
+      &gt;
+        Selling
+      &lt;/b&gt;
+    &lt;/ng-template&gt;
+    &lt;ng-template #buyingLabelText&gt;
+      &lt;b
+        class="text-uppercase text-muted text-small"
+        i18n="Title for buying currency value@@fx-trade-order-modal.transaction.buying-currency"
+      &gt;
+        Buying
+      &lt;/b&gt;
+    &lt;/ng-template&gt;
+  &lt;/ng-container&gt;
+
+  &lt;bb-modal-footer-ui&gt;
+    &lt;ng-template bbCustomModalFooter&gt;
+      &lt;div class="bb-button-bar"&gt;
+        &lt;button
+          bbButton
+          class="bb-button-bar__button ml-sm-2"
+          data-role="fx-rates-submit-btn"
+          (click)="hostRef.submitBtnClick$.next()"
+          (keydown.enter)="hostRef.submitBtnClick$.next()"
+          [disabled]="hostRef.timeExpired"
+        &gt;
+          &lt;bb-loading-indicator-ui
+            *ngIf="pendingSubmit"
+            class="position-absolute"
+            [loaderSize]="'sm'"
+            data-role="fx-rates-loading-spinner"
+          &gt;&lt;/bb-loading-indicator-ui&gt;
+          &lt;span [ngClass]="{ invisible: pendingSubmit }"
+                i18n="Submit button text@@fx-spot-order-modal.button.submit"&gt;Submit&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;button
+          bbButton
+          color="secondary"
+          class="bb-button-bar__button ml-sm-2"
+          data-role="fx-rates-discard-btn"
+          i18n="Discard button text@@fx-spot-order-modal.button.discard"
+          (click)="hostRef.openDiscardModal()"
+          (keydown.enter)="hostRef.openDiscardModal()"
+        &gt;Discard&lt;/button&gt;
+        &lt;button
+          bbButton
+          color="link"
+          class="bb-button-bar__button bb-button-bar__button--across"
+          i18n="Back to edit button text@@fx-spot-order-modal.button.back-to-edit"
+          data-role="fx-rates-back-to-edit-btn"
+          (click)="hostRef.backToTradeOrder()"
+          (keydown.enter)="hostRef.backToTradeOrder()"
+        &gt;Back to edit&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/bb-modal-footer-ui&gt;
+
+  &lt;bb-discard-modal
+    [toggle]="hostRef.isDiscardModalOpened"
+    (toggleChange)="hostRef.onDiscardModal($event)"
+  &gt;&lt;/bb-discard-modal&gt;
+
+&lt;/ng-template&gt;
+
+&lt;ng-template #spotOrderSuccessfulNotificationHeader&gt;&lt;/ng-template&gt;
+
+&lt;ng-template #spotOrderSuccessfulNotificationMessage&gt;
+  &lt;p
+    i18n="Successful notification message@@fx-spot-order-modal.notification.success-message"
+  &gt;Transaction successfully executed&lt;/p&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #spotOrderErrorNotificationHeader&gt;
+  &lt;h5
+    i18n="Error notification header message@@fx-spot-order-modal.notification.error-header"
+  &gt;Unknown Error&lt;/h5&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #spotOrderErrorNotificationMessage&gt;
+  &lt;p
+    i18n="Error notification message@@fx-spot-order-modal.notification.error-message"
+  &gt;Try to reload the page or contact the system administrator.&lt;/p&gt;
+&lt;/ng-template&gt;
+
+&lt;span [hidden]="true" #viewTransactionButton
+      i18n="View transaction button@@fx-spot-order-modal.notification.button.view-transaction"&gt;
+      View transaction
+&lt;/span&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbSpotOrderTimerCustomizable" class="discrete">bbSpotOrderTimerCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container
+  bbSpotOrderTimerCustomizable
+  [bbHostRef]="this"
+  [bbTemplateContext]="{remainingSeconds: remainingSeconds$  | async }"
+&gt;&lt;/ng-container&gt;
+
+&lt;ng-template
+  bbSpotOrderTimerCustomizable
+  let-hostRef
+  let-remainingSeconds="context.remainingSeconds"
+&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-12 col-sm-8 col-lg-6 m-auto"&gt;
+    &lt;div&gt;
+      &lt;div class="d-block d-sm-none"&gt;
+        &lt;b
+          class="text-muted text-small"
+          i18n="Current price text@@fx-spot-order-timer.current-price.text"
+        &gt;
+          Current price
+        &lt;/b&gt;
+        &lt;bb-header-ui
+          data-role="fx-rates-spot-timer-price"
+          headingType="h4"
+          heading="{{hostRef.price | number:'1.0-8'}}"
+        &gt;
+        &lt;/bb-header-ui&gt;
+      &lt;/div&gt;
+      &lt;div class="d-none d-sm-block text-center mt-2 mb-4"&gt;
+        &lt;bb-header-ui
+          data-role="fx-rates-spot-timer-price-detail"
+          headingType="h4"
+          heading="{{hostRef.priceDetail}}"
+        &gt;
+        &lt;/bb-header-ui&gt;
+      &lt;/div&gt;
+      &lt;bb-header-ui
+        *ngIf="remainingSeconds !== 0"
+        headingType="h6"
+        headingClasses="font-weight-normal"
+        heading="Buying price expires in"
+        i18n-heading="Buying price expires in text@@fx-spot-order-timer.price.text"
+        class="text-center"
+      &gt;
+      &lt;/bb-header-ui&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf="remainingSeconds !== 0"&gt;
+      &lt;div class="m-2 mt-1"&gt;
+        &lt;bb-progressbar-ui data-role="fx-rates-spot-timer-bar" [value]="hostRef.progress$ | async" height="6px"&gt; &lt;/bb-progressbar-ui&gt;
+      &lt;/div&gt;
+      &lt;div class="m-2"&gt;
+        &lt;p  class="text-primary text-center" data-role="fx-rates-spot-timer-msg"&gt;
+          &lt;b&gt;{{hostRef.minutes$ | async}}:{{hostRef.seconds$ | async}}&lt;/b&gt;
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  &lt;div class="col-12" *ngIf="remainingSeconds === 0"&gt;
+    &lt;div class="mr-2 ml-2" data-role="fx-rates-spot-expire-alert"&gt;
+      &lt;bb-alert-ui
+        [title]="'Buying price expired! Go back to order screen to see updated price.'"
+        i18n-title="'Buying price expired alert text@@fx-spot-order-timer.alert.title'"
+        [modifier]="'warning'"
+        [dismissible]="false"
+      &gt;&lt;/bb-alert-ui&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbDiscardModalCustomizable" class="discrete">bbDiscardModalCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-container bbDiscardModalCustomizable [bbHostRef]="this"&gt;&lt;/ng-container&gt;
+
+&lt;ng-template bbDiscardModalCustomizable let-hostRef&gt;
+  &lt;bb-modal-ui
+    [isOpen]="hostRef.isModalOpen"
+    [modalOptions]="{
+        backdrop: 'static',
+        keyboard: true
+      }"
+    (isOpenChange)="hostRef.emitToggleChange($event)"
+  &gt;
+    &lt;ng-container&gt;
+      &lt;bb-modal-header-ui&gt;
+        &lt;ng-template bbCustomModalHeader&gt;
+          &lt;bb-header-ui
+            headingType="h4"
+            heading="Discard trade?"
+            i18n-heading="Discard modal header text@@fx-rates-discard.header.text"
+          &gt;
+          &lt;/bb-header-ui&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-modal-header-ui&gt;
+      &lt;bb-modal-body-ui&gt;
+        &lt;ng-template bbCustomModalBody&gt;
+          &lt;p class="m-0"
+             i18n="Discard modal confirmation message@@fx-rates-discard.message.text"&gt;
+            Are you sure you want to discard this trade? All filled data will be lost
+          &lt;/p&gt;
+        &lt;/ng-template&gt;
+      &lt;/bb-modal-body-ui&gt;
+    &lt;/ng-container&gt;
+    &lt;bb-modal-footer-ui&gt;
+      &lt;ng-template bbCustomModalFooter&gt;
+        &lt;div class="bb-button-bar"&gt;
+          &lt;button
+            bbButton
+            color="danger"
+            class="bb-button-bar__button"
+            i18n="Discard button@@fx-rates-discard.button.discard"
+            data-role="fx-rates-discard-discard-btn"
+            (click)="hostRef.emitToggleChange(true)"
+            (keydown.enter)="hostRef.emitToggleChange(true)"
+          &gt;Discard&lt;/button&gt;
+          &lt;button
+            bbButton
+            color="secondary"
+            class="bb-button-bar__button"
+            data-role="fx-rates-discard-keep-reviewing-btn"
+            (click)="hostRef.emitToggleChange(false)"
+            (keydown.enter)="hostRef.emitToggleChange(false)"
+            i18n="Keep reviewing button@@fx-rates-discard.button.keep-reviewing"
+          &gt;Keep reviewing&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-footer-ui&gt;
+  &lt;/bb-modal-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

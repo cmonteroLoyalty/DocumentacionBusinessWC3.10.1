@@ -1,0 +1,2760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>View business account details</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="product_summary_account_details_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>View business account details</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html"><span class="toc-current">View business account details</span></a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="product_summary_account_details_reference" class="sect0">View business account details</h1>
+          <div class="ulist">
+<ul>
+<li>
+<p><a href="product_summary_account_details_reference.html#bb_product_summary_account_details_widget_selector">Selector name</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bb_product_summary_account_details_widget_required_imports">Required imports</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bb_product_summary_account_details_widget_extension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bb_product_summary_account_details_widget_hostref_api">API</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bb_product_summary_account_details_widget_implementation">Implementation example</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bb_product_summary_account_details_widget_access_control">Access Control</a></p>
+</li>
+</ul>
+</div>
+<h2 id="bb_product_summary_account_details_widget_selector" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name: <code>bb-product-summary-account-details-widget</code></p>
+</div>
+<h2 id="bb_product_summary_account_details_widget_required_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Widget module import</p>
+<div class="paragraph">
+<p>Import the following modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { ProductSummaryAccountDetailsWidgetModule } from '@backbase/product-summary-account-details-widget-ang';</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="bb_product_summary_account_details_widget_extension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>The extension slots of this widget are:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/view_business_account_details_slots_1_2_3_6_7_8_9_10_11_12_13.svg?ver=3.10.1" alt="view business account details slots 1 2 3 6 7 8 9 10 11 12 13"></span>
+<span class="image"><img src="./images/business_banking_3/view_business_account_details_slots_4.svg?ver=3.10.1" alt="view business account details slots 4"></span>
+<span class="image"><img src="./images/business_banking_3/view_business_account_details_slots_5.svg?ver=3.10.1" alt="view business account details slots 5"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="product_summary_account_details_reference.html#bbProductSummaryDetailsViewCustomizable">bbProductSummaryDetailsViewCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bbProductSummaryDetailsHeaderCustomizable">bbProductSummaryDetailsHeaderCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bbProductSummaryDetailsCustomizable">bbProductSummaryDetailsCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bbProductSummaryDetailsNoAccountSelectedCustomizable">bbProductSummaryDetailsNoAccountSelectedCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bbProductSummaryDetailsLoadingCustomizable">bbProductSummaryDetailsLoadingCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bbProductSummaryDetailsCreditCardCustomizable">bbProductSummaryDetailsCreditCardCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bbProductSummaryDetailsCurrentAccountCustomizable">bbProductSummaryDetailsCurrentAccountCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bbProductSummaryDetailsDebitCardCustomizable">bbProductSummaryDetailsDebitCardCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bbProductSummaryDetailsInvestmentAccountCustomizable">bbProductSummaryDetailsInvestmentAccountCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bbProductSummaryDetailsLoanCustomizable">bbProductSummaryDetailsLoanCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bbProductSummaryDetailsOtherCustomizable">bbProductSummaryDetailsOtherCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bbProductSummaryDetailsSavingsAccountCustomizable">bbProductSummaryDetailsSavingsAccountCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_details_reference.html#bbProductSummaryDetailsTermDepositCustomizable">bbProductSummaryDetailsTermDepositCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbProductSummaryDetailsViewCustomizable" class="discrete">bbProductSummaryDetailsViewCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbProductSummaryDetailsViewCustomizable
+  let-hostRef
+  let-item="context"
+&gt;
+  &lt;ng-container
+    bbProductSummaryDetailsHeaderCustomizable
+    [bbHostRef]="hostRef"
+    [bbTemplateContext]="item"
+  &gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-container
+    bbProductSummaryDetailsCustomizable
+    [bbHostRef]="hostRef"
+    [bbTemplateContext]="item"
+  &gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>context: AccountArrangementItem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An item containing product details.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbProductSummaryDetailsHeaderCustomizable" class="discrete">bbProductSummaryDetailsHeaderCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbProductSummaryDetailsHeaderCustomizable
+  let-hostRef
+  let-item="context"
+&gt;
+  &lt;bb-product-summary-account-details-header
+    data-role="account-details-header"
+    (aliasUpdated)="hostRef.onAliasUpdated(item.id, $event)"
+    [aliasLevel]="hostRef.accountAliasDisplayingLevel"
+    [canEditAlias]="hostRef.canEditAlias | async"
+    [product]="item"
+  &gt;&lt;/bb-product-summary-account-details-header&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>context: AccountArrangementItem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An item containing product details.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbProductSummaryDetailsCustomizable" class="discrete">bbProductSummaryDetailsCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbProductSummaryDetailsCustomizable
+             let-hostRef
+             let-item="context"&gt;
+  &lt;ng-container [ngSwitch]="item.productKindName"&gt;
+    &lt;!-- Current Account --&gt;
+    &lt;ng-container *ngSwitchCase="hostRef.productKindNames.CURRENT_ACCOUNT"&gt;
+      &lt;bb-current-account-details
+        [product]="item"
+        [maskableAttributes]="hostRef.maskableAttributes"
+        (unmaskAttribute)="hostRef.onUnmaskAttribute($event, item)"
+        (maskAttribute)="hostRef.onMaskAttribute($event, item)"
+      &gt;
+      &lt;/bb-current-account-details&gt;
+    &lt;/ng-container&gt;
+    &lt;!-- Savings Account --&gt;
+    &lt;ng-container *ngSwitchCase="hostRef.productKindNames.SAVINGS_ACCOUNT"&gt;
+      &lt;bb-savings-account-details
+        [product]="item"
+        [maskableAttributes]="hostRef.maskableAttributes"
+        (unmaskAttribute)="hostRef.onUnmaskAttribute($event, item)"
+        (maskAttribute)="hostRef.onMaskAttribute($event, item)"
+      &gt;
+      &lt;/bb-savings-account-details&gt;
+    &lt;/ng-container&gt;
+    &lt;!-- Term Deposit --&gt;
+    &lt;ng-container *ngSwitchCase="hostRef.productKindNames.TERM_DEPOSIT"&gt;
+      &lt;bb-term-deposit-details
+        [product]="item"
+        [maskableAttributes]="hostRef.maskableAttributes"
+        (unmaskAttribute)="hostRef.onUnmaskAttribute($event, item)"
+        (maskAttribute)="hostRef.onMaskAttribute($event, item)"
+      &gt;
+      &lt;/bb-term-deposit-details&gt;
+    &lt;/ng-container&gt;
+    &lt;!-- Loan --&gt;
+    &lt;ng-container *ngSwitchCase="hostRef.productKindNames.LOAN"&gt;
+      &lt;bb-loan-details
+        [product]="item"
+        [maskableAttributes]="hostRef.maskableAttributes"
+        (unmaskAttribute)="hostRef.onUnmaskAttribute($event, item)"
+        (maskAttribute)="hostRef.onMaskAttribute($event, item)"
+      &gt;
+      &lt;/bb-loan-details&gt;
+    &lt;/ng-container&gt;
+    &lt;!-- Credit Card --&gt;
+    &lt;ng-container *ngSwitchCase="hostRef.productKindNames.CREDIT_CARD"&gt;
+      &lt;bb-credit-card-details
+        [product]="item"
+        [maskableAttributes]="hostRef.maskableAttributes"
+        (unmaskAttribute)="hostRef.onUnmaskAttribute($event, item)"
+        (maskAttribute)="hostRef.onMaskAttribute($event, item)"
+      &gt;
+      &lt;/bb-credit-card-details&gt;
+    &lt;/ng-container&gt;
+    &lt;!-- Debit Card --&gt;
+    &lt;ng-container *ngSwitchCase="hostRef.productKindNames.DEBIT_CARD"&gt;
+      &lt;bb-debit-card-details
+        [product]="item"
+        [maskableAttributes]="hostRef.maskableAttributes"
+        (unmaskAttribute)="hostRef.onUnmaskAttribute($event, item)"
+        (maskAttribute)="hostRef.onMaskAttribute($event, item)"
+      &gt;
+      &lt;/bb-debit-card-details&gt;
+    &lt;/ng-container&gt;
+    &lt;!-- Investment Account --&gt;
+    &lt;ng-container *ngSwitchCase="hostRef.productKindNames.INVESTMENT_ACCOUNT"&gt;
+      &lt;bb-investment-account-details
+        [product]="item"
+        [maskableAttributes]="hostRef.maskableAttributes"
+        (unmaskAttribute)="hostRef.onUnmaskAttribute($event, item)"
+        (maskAttribute)="hostRef.onMaskAttribute($event, item)"
+      &gt;
+      &lt;/bb-investment-account-details&gt;
+    &lt;/ng-container&gt;
+    &lt;!--
+        Other (Default):
+        This template can be used to add more custom productKinds.
+        The productKind is passed to the template so a customer can add
+        additional switch/if statements to determine what product template should be displayed
+      --&gt;
+    &lt;ng-container *ngSwitchDefault&gt;
+      &lt;bb-other-account-details
+        [product]="item"
+        [maskableAttributes]="hostRef.maskableAttributes"
+        (unmaskAttribute)="hostRef.onUnmaskAttribute($event, item)"
+        (maskAttribute)="hostRef.onMaskAttribute($event, item)"
+      &gt;
+      &lt;/bb-other-account-details&gt;
+    &lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>context: AccountArrangementItem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An item containing product details.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbProductSummaryDetailsNoAccountSelectedCustomizable" class="discrete">bbProductSummaryDetailsNoAccountSelectedCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbProductSummaryDetailsNoAccountSelectedCustomizable
+             let-hostRef&gt;
+  &lt;bb-empty-state-ui
+    i18n-title="
+      No product details found tittle|Empty state title label when there are no
+      product details@@account.details.empty.title
+    "
+    title="No product details found"
+    i18n-subtitle="
+      No product details found subtitle|Empty state subtitle label when there
+      are no product details@@account.details.empty.subtitle
+    "
+    subtitle="No product details, product not selected."
+  &gt;
+  &lt;/bb-empty-state-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbProductSummaryDetailsLoadingCustomizable" class="discrete">bbProductSummaryDetailsLoadingCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbProductSummaryDetailsLoadingCustomizable
+             let-hostRef&gt;
+  &lt;ng-container *ngIf="hostRef.error | async as error; else loading"&gt;
+    &lt;bb-empty-state-ui
+      title=""
+      [subtitle]="hostRef.processErrorMessages(error.messages)"
+      iconModifier="error"
+      iconSize="xxl"
+      iconColor="gray"
+      iconClasses="text-muted"
+    &gt;&lt;/bb-empty-state-ui&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-template #loading&gt;
+    &lt;bb-loading-indicator-ui
+      i18n-text="@@account.details.loadingAccounts"
+      text="Loading Accounts"
+    &gt;&lt;/bb-loading-indicator-ui&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbProductSummaryDetailsCreditCardCustomizable" class="discrete">bbProductSummaryDetailsCreditCardCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbProductSummaryDetailsCreditCardCustomizable
+  let-hostRef
+  let-product="context.product"
+  let-info="context.infoAvailability"
+&gt;
+  &lt;div class="bb-list" data-role="credit-card-details-list"&gt;
+    &lt;div class="bb-list__item" *ngIf="info.accountName || info.numbers || info.balance"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.accountName"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.name | bbIsDefined"
+             data-role="credit-card-name"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Name|Account name label credit card@@account.details.credit.card.label.name"
+               data-role="credit-card-name-title"&gt;
+            Name
+          &lt;/div&gt;
+          &lt;div data-role="credit-card-name-value"&gt;
+            {{ product.name }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.productTypeName | bbIsDefined"
+             data-role="credit-card-productTypeName"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Type|Account type label credit card@@account.details.credit.card.label.productTypeName"
+               data-role="credit-card-productTypeName-title"&gt;
+            Account Type
+          &lt;/div&gt;
+          &lt;div data-role="credit-card-productTypeName-value"&gt;
+            {{ product.productTypeName }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.numbers"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.number | bbIsDefined"
+             data-role="credit-card-number"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Card number|Card number label credit card@@account.details.credit.card.label.number"
+               data-role="credit-card-number-title"&gt;
+            Card number
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;span aria-live="assertive"&gt;
+              &lt;bb-product-number
+                type="cardNumber"
+                [number]="product.number"
+                [unmaskable]="hostRef.maskableAttribute.Number | bbIsInArray: product.unmaskableAttributes"
+                [masked]="hostRef.isMasked(hostRef.maskableAttribute.Number)"
+                (unmask)="hostRef.onUnmaskAttribute($event)"
+                (mask)="hostRef.onMaskAttribute($event)"
+              &gt;&lt;/bb-product-number&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.availableBalance | bbIsDefined"
+             data-role="credit-card-availableBalance"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Available Balance|Available Balance label credit card@@account.details.credit.card.label.availableBalance"
+               data-role="credit-card-availableBalance-title"&gt;
+            Available balance
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="credit-card-availableBalance-value"
+            [currency]="product.currency"
+            [amount]="product.availableBalance"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.balance"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bookedBalance | bbIsDefined"
+             data-role="credit-card-bookedBalance"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Booked Balance|Booked Balance label credit card@@account.details.credit.card.label.bookedBalance"
+               data-role="credit-card-bookedBalance-title"&gt;
+            Booked balance
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="credit-card-bookedBalance-value"
+            [currency]="product.currency"
+            [amount]="product.bookedBalance"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.currency | bbIsDefined"
+             data-role="credit-card-currency"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="currency |currency label credit card@@account.details.credit.card.label.currency"
+               data-role="credit-card-currency-title"&gt;
+            Currency
+          &lt;/div&gt;
+          &lt;div data-role="credit-card-currency-value"&gt;
+            {{ product.currency  }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-list__item" *ngIf="info.interest"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.accountInterestRate | bbIsDefined"
+             data-role="credit-card-interest-rate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Interest Rate|Interest Rate label credit card@@account.details.credit.card.label.interestRate"
+               data-role="credit-card-interest-rate-title"&gt;
+            Interest rate
+          &lt;/div&gt;
+          &lt;div data-role="credit-card-interest-rate-value"&gt;
+            {{product.accountInterestRate}}%
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.creditLimit | bbIsDefined"
+             data-role="credit-card-creditLimit"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Credit Limit|Credit Limit label credit card@@account.details.credit.card.label.creditLimit"
+               data-role="credit-card-creditLimit-title"&gt;
+            Credit limit
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="credit-card-creditLimit-value"
+            [currency]="product.currency"
+            [amount]="product.creditLimit"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-list__item" *ngIf="info.payment || info.validity"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.payment"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.minimumPayment | bbIsDefined"
+             data-role="credit-card-minimumPayment"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Minimum payment|Minimum payment label credit card@@account.details.credit.card.label.minimumPayment"
+               data-role="credit-card-minimumPayment-title"&gt;
+            Minimum payment
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="credit-card-minimumPayment-value"
+            [currency]="product.currency"
+            [amount]="product.minimumPayment"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.minimumPaymentDueDate | bbIsDefined"
+             data-role="credit-card-minimumPaymentDueDate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Minimum Payment Due Date|Minimum Payment Due Date label credit card@@account.details.credit.card.label.minimumPaymentDueDate"
+               data-role="credit-card-minimumPaymentDueDate-title"&gt;
+            Minimum payment due date
+          &lt;/div&gt;
+          &lt;div data-role="credit-card-minimumPaymentDueDate-value"&gt;
+            {{product.minimumPaymentDueDate | date: 'longDate'}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.validity"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.validThru | bbIsDefined"
+             data-role="credit-card-validThru"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Valid Thru|Valid Thru label credit card@@account.details.credit.card.label.validThru"
+               data-role="credit-card-validThru-title"&gt;
+            Valid thru
+          &lt;/div&gt;
+          &lt;div data-role="credit-card-validThru-value"&gt;
+            {{product.validThru | date: 'longDate'}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>product: ProductType | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The account details fetched from the server.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>infoAvailability: ProductDetailsAvailability</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Info sections availability in a <code>Record&lt;string, boolean&gt;</code> format.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbProductSummaryDetailsCurrentAccountCustomizable" class="discrete">bbProductSummaryDetailsCurrentAccountCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbProductSummaryDetailsCurrentAccountCustomizable
+  let-hostRef
+  let-product="context.product"
+  let-info="context.infoAvailability"
+&gt;
+  &lt;div class="bb-list" data-role="current-account-details-list"&gt;
+    &lt;div class="bb-list__item" *ngIf="info.accountName || info.numbers || info.codes || info.balance"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.accountName"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.name | bbIsDefined"
+             data-role="current-account-name"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Name|Account name label current account @@account.details.current.account.label.name"
+               data-role="current-account-name-title"&gt;
+            Name
+          &lt;/div&gt;
+          &lt;div data-role="current-account-name-value"&gt;
+            {{ product.name }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.productTypeName | bbIsDefined"
+             data-role="current-account-productTypeName"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Type|Account type label current account
+               @@account.details.current.account.label.productTypeName"
+               data-role="current-account-productTypeName-title"&gt;
+            Account Type
+          &lt;/div&gt;
+          &lt;div data-role="current-account-productTypeName-value"&gt;
+            {{ product.productTypeName }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.numbers"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.IBAN | bbIsDefined"
+             data-role="current-account-iban"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="IBAN|IBAN label current account @@account.details.current.account.label.iban"
+               data-role="current-account-iban-title"&gt;
+            IBAN
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;span aria-live="assertive"&gt;
+              &lt;bb-product-number
+                type="iban"
+                [number]="product.IBAN"
+                [unmaskable]="hostRef.maskableAttribute.IBAN | bbIsInArray: product.unmaskableAttributes"
+                [masked]="hostRef.isMasked(hostRef.maskableAttribute.IBAN)"
+                (unmask)="hostRef.onUnmaskAttribute($event)"
+                (mask)="hostRef.onMaskAttribute($event)"
+              &gt;&lt;/bb-product-number&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.BBAN | bbIsDefined"
+             data-role="current-account-bban"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="BBAN|BBAN label current account @@account.details.current.account.label.bban"
+               data-role="current-account-bban-title"&gt;
+            BBAN
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;span aria-live="assertive"&gt;
+              &lt;bb-product-number
+                type="bban"
+                [number]="product.BBAN"
+                [unmaskable]="hostRef.maskableAttribute.BBAN | bbIsInArray: product.unmaskableAttributes"
+                [masked]="hostRef.isMasked(hostRef.maskableAttribute.BBAN)"
+                (unmask)="hostRef.onUnmaskAttribute($event)"
+                (mask)="hostRef.onMaskAttribute($event)"
+              &gt;&lt;/bb-product-number&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.codes"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.BIC | bbIsDefined"
+             data-role="current-account-bic"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="BIC|BIC label current account @@account.details.current.account.label.bic"
+               data-role="current-account-bic-title"&gt;
+            BIC
+          &lt;/div&gt;
+          &lt;div data-role="current-account-bic-value"&gt;
+            {{ product.BIC }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.currency | bbIsDefined"
+             data-role="current-account-currency"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="currency |currency label current account @@account.details.current.account.label.currency"
+               data-role="current-account-currency-title"&gt;
+            Currency
+          &lt;/div&gt;
+          &lt;div data-role="current-account-currency-value"&gt;
+            {{ product.currency }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.balance"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.availableBalance | bbIsDefined"
+             data-role="current-account-availableBalance"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Available Balance|Available Balance label current account
+              @@account.details.current.account.label.availableBalance"
+              data-role="current-account-availableBalance-title"&gt;
+            Available balance
+          &lt;/div&gt;
+          &lt;bb-amount-ui data-role="current-account-availableBalance-value"
+                        [currency]="product.currency"
+                        [amount]="product.availableBalance"
+                        [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bookedBalance | bbIsDefined"
+             data-role="current-account-bookedBalance"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Booked Balance|Booked Balance label current account
+               @@account.details.current.account.label.bookedBalance"
+               data-role="current-account-bookedBalance-title"&gt;
+            Booked balance
+          &lt;/div&gt;
+          &lt;bb-amount-ui data-role="current-account-bookedBalance-value"
+                        [currency]="product.currency"
+                        [amount]="product.bookedBalance"
+                        [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-list__item" *ngIf="info.creditLimit || info.creditUsage"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.creditLimit"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.creditLimit | bbIsDefined"
+             data-role="current-account-creditLimit"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Credit limit|Credit limit label current account @@account.details.current.account.label.creditLimit"
+               data-role="current-account-creditLimit-title"&gt;
+            Credit limit
+          &lt;/div&gt;
+          &lt;bb-amount-ui data-role="current-account-creditLimit-value"
+                        [currency]="product.currency"
+                        [amount]="product.creditLimit"
+                        [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.creditLimitInterestRate | bbIsDefined"
+             data-role="current-account-creditLimitInterestRate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="
+              Credit limit interest rate|Credit limit interest rate label current account
+              @@account.details.current.account.label.creditLimitInterestRate"
+              data-role="current-account-creditLimitInterestRate-title"&gt;
+            Credit limit interest rate
+          &lt;/div&gt;
+          &lt;bb-amount-ui data-role="current-account-creditLimitInterestRate-value"
+                        [currency]="product.currency"
+                        [amount]="product.creditLimitInterestRate"
+                        [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.creditUsage"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.creditLimitUsage | bbIsDefined"
+             data-role="current-account-creditLimitUsage"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Credit limit usage|Credit limit usage label current account
+              @@account.details.current.account.label.creditLimitUsage"
+              data-role="current-account-creditLimitUsage-title"&gt;
+            Credit limit usage
+          &lt;/div&gt;
+          &lt;bb-amount-ui data-role="current-account-creditLimitUsage-value"
+                        [currency]="product.currency"
+                        [amount]="product.creditLimitUsage"
+                        [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.creditLimitExpiryDate | bbIsDefined"
+             data-role="current-account-creditLimitExpiryDate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Credit limit expiry date|Credit limit expiry date label current account
+              @@account.details.current.account.label.creditLimitExpiryDate"
+              data-role="current-account-creditLimitExpiryDate-title"&gt;
+            Credit limit expiry date
+          &lt;/div&gt;
+          &lt;div data-role="current-account-creditLimitExpiryDate-value"&gt;
+            {{ product.creditLimitExpiryDate | date: 'longDate' }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-list__item" *ngIf="info.interest"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.accountInterestRate | bbIsDefined"
+             data-role="current-account-accountInterestRate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Interest Rate|Interest Rate label current account
+               @@account.details.current.account.label.interestRate"
+               data-role="current-account-accountInterestRate-title"&gt;
+            Interest rate
+          &lt;/div&gt;
+          &lt;div data-role="current-account-accountInterestRate-value"&gt;{{ product.accountInterestRate }}%&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.accruedInterest | bbIsDefined"
+             data-role="current-account-accruedInterest"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Accrued Interest|Accrued Interest label current account
+              @@account.details.current.account.label.account.accruedInterest"
+              data-role="current-account-accruedInterest-title"&gt;
+            Accrued interest
+          &lt;/div&gt;
+          &lt;bb-amount-ui data-role="current-account-accruedInterest-value"
+                        [currency]="product.currency"
+                        [amount]="product.accruedInterest"
+                        [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-list__item" *ngIf="info.branch || info.debitCards || info.updateDate"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.branch"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bankBranchCode | bbIsDefined"
+             data-role="current-account-bankBranchCode"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Branch Code|Branch Code label current account
+               @@account.details.current.account.label.bankBranchCode"
+               data-role="current-account-bankBranchCode-title"&gt;
+            Branch code
+          &lt;/div&gt;
+          &lt;div data-role="current-account-bankBranchCode-value"&gt;
+            {{ product.bankBranchCode }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bankBranchCode2 | bbIsDefined"
+             data-role="current-account-bankBranchCode2"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Branch Code 2|Branch Code 2 label current account
+               @@account.details.current.account.label.bankBranchCode2"
+               data-role="current-account-bankBranchCode2-title"&gt;
+            Branch code 2
+          &lt;/div&gt;
+          &lt;div data-role="current-account-bankBranchCode2-value"&gt;
+            {{ product.bankBranchCode2 }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.debitCards"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.debitCards | bbIsDefined"
+             data-role="current-account-debitCardNumber"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Debit Card Number|Debit Card Number label current account
+              @@account.details.current.account.label.debitcardnumber"
+              data-role="current-account-debitCardNumber-title"&gt;
+            Debit card number
+          &lt;/div&gt;
+            &lt;bb-product-number
+              type="cardNumber"
+              [number]="product.debitCards[0]?.number"
+            &gt;&lt;/bb-product-number&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.debitCards | bbIsDefined"
+             data-role="current-account-debitCardExpiryDate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Debit card expiry date|Debit card expiry date label current account
+              @@account.details.current.account.label.debitcardExpiryDate"
+              data-role="current-account-debitCardExpiryDate-title"&gt;
+            Debit card expiry date
+          &lt;/div&gt;
+          &lt;div data-role="current-account-debitCardExpiryDate-value"&gt;
+            {{ product.debitCards[0]?.expiryDate | date: 'longDate' }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.updateDate"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" data-role="current-account-accountOpeningDate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Opening date|Opening date label current account
+               @@account.details.current.account.label.accountOpeningDate"
+               data-role="current-account-accountOpeningDate-title"&gt;
+            Opening date
+          &lt;/div&gt;
+          &lt;div data-role="current-account-accountOpeningDate-value"&gt;
+            {{ product.accountOpeningDate | date: 'longDate' }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>product: ProductType | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The account details fetched from the server.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>infoAvailability: ProductDetailsAvailability</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Info sections availability in a <code>Record&lt;string, boolean&gt;</code> format.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbProductSummaryDetailsDebitCardCustomizable" class="discrete">bbProductSummaryDetailsDebitCardCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbProductSummaryDetailsDebitCardCustomizable
+  let-hostRef
+  let-product="context.product"
+  let-info="context.infoAvailability"
+&gt;
+  &lt;div class="bb-list" data-role="debit-card-details-list"&gt;
+    &lt;div class="bb-list__item" *ngIf="info.accountName || info.numbers || info.branch || info.currency"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.accountName"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.name | bbIsDefined"
+             data-role="debit-card-name"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Name|Account name label debit card@@account.details.debit.card.label.name"
+               data-role="debit-card-name-title"&gt;
+            Name
+          &lt;/div&gt;
+          &lt;div data-role="debit-card-name-value"&gt;
+            {{product.name}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.productTypeName | bbIsDefined"
+             data-role="debit-card-productTypeName"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Type|Account type label debit card@@account.details.debit.card.label.productTypeName"
+               data-role="debit-card-productTypeName-title"&gt;
+            Account Type
+          &lt;/div&gt;
+          &lt;div data-role="debit-card-productTypeName-value"&gt;
+            {{product.productTypeName}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.numbers"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.number | bbIsDefined"
+             data-role="debit-card-number"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Card number|Card number label debit card@@account.details.debit.card.label.number"
+               data-role="debit-card-number-title"&gt;
+            Card number
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;span aria-live="assertive"&gt;
+              &lt;bb-product-number
+                type="cardNumber"
+                [number]="product.number"
+                [unmaskable]="hostRef.maskableAttribute.Number | bbIsInArray: product.unmaskableAttributes"
+                [masked]="hostRef.isMasked(hostRef.maskableAttribute.Number)"
+                (unmask)="hostRef.onUnmaskAttribute($event)"
+                (mask)="hostRef.onMaskAttribute($event)"
+              &gt;&lt;/bb-product-number&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bookedBalance | bbIsDefined"
+             data-role="debit-card-bookedBalance"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Booked Balance|Booked Balance label debit card@@account.details.debit.card.label.bookedBalance"
+               data-role="debit-card-bookedBalance-title"&gt;
+            Booked balance
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="debit-card-bookedBalance-value"
+            [currency]="product.currency"
+            [amount]="product.bookedBalance"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.branch"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bankBranchCode | bbIsDefined"
+             data-role="debit-card-bankBranchCode"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Branch Code|Branch Code label debit card
+               @@account.details.debit.card.label.bankBranchCode"
+               data-role="debit-card-bankBranchCode-title"&gt;
+            Branch code
+          &lt;/div&gt;
+          &lt;div data-role="debit-card-bankBranchCode-value"&gt;
+            {{ product.bankBranchCode }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bankBranchCode2 | bbIsDefined"
+             data-role="debit-card-bankBranchCode2"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Branch Code 2|Branch Code 2 label debit card
+               @@account.details.debit.card.label.bankBranchCode2"
+               data-role="debit card-bankBranchCode2-title"&gt;
+            Branch Code 2
+          &lt;/div&gt;
+          &lt;div data-role="debit-card-bankBranchCode2-value"&gt;
+            {{ product.bankBranchCode2 }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.currency"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.currency | bbIsDefined"
+             data-role="debit-card-currency"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="currency |currency label debit card@@account.details.debit.card.label.currency"
+               data-role="debit-card-currency-title"&gt;
+            Currency
+          &lt;/div&gt;
+          &lt;div data-role="debit-card-currency-value"&gt;
+            {{ product.currency  }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-list__item" *ngIf="info.accountHolder || info.cards"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.accountHolder"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.accountOpeningDate | bbIsDefined"
+             data-role="debit-card-accountOpeningDate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Opening Date|Account Opening Date label debit card@@account.details.debit.card.label.accountOpeningDate"
+               data-role="debit-card-accountOpeningDate-title"&gt;
+            Opening date
+          &lt;/div&gt;
+          &lt;div data-role="debit-card-accountOpeningDate-value"&gt;
+            {{ product.accountOpeningDate | date: 'longDate' }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.accountHolderNames | bbIsDefined"
+             data-role="debit-card-accountHolderNames"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Holder Name |Account Holder Name label debit card@@account.details.debit.card.label.accountHolderNames"
+               data-role="debit-card-accountHolderNames-title"&gt;
+            Card holder name
+          &lt;/div&gt;
+          &lt;div data-role="debit-card-accountHolderNames-value"&gt;
+            {{ product.accountHolderNames  }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.cards"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.validThru | bbIsDefined"
+             data-role="debit-card-validThru"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               data-role="debit-card-validThru-title"
+               i18n="Valid Thru|Valid Thru label debit card@@account.details.debit.card.label.validThru"&gt;
+            Valid thru
+          &lt;/div&gt;
+          &lt;div data-role="debit-card-validThru-value"&gt;
+            {{ product.validThru | date: 'longDate' }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.debitCards | bbIsDefined"
+             data-role="debit-card-debitCardNumber"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Debit Card Number|Debit Card Number label debit card@@account.details.debit.card.label.debitcardnumber"
+               data-role="debit-card-debitCardNumber-title"&gt;
+            Debit card number
+          &lt;/div&gt;
+          &lt;div data-role="debit-card-debitCardNumber-value"&gt;
+            {{ product.debitCards[0]?.number }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>product: ProductType | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The account details fetched from the server.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>infoAvailability: ProductDetailsAvailability</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Info sections availability in a <code>Record&lt;string, boolean&gt;</code> format.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbProductSummaryDetailsInvestmentAccountCustomizable" class="discrete">bbProductSummaryDetailsInvestmentAccountCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbProductSummaryDetailsInvestmentAccountCustomizable
+  let-hostRef
+  let-product="context.product"
+  let-info="context.infoAvailability"
+&gt;
+  &lt;div class="bb-list" data-role="investment-account-details-list"&gt;
+    &lt;div class="bb-list__item" *ngIf="info.accountName || info.numbers || info.branch || info.currency"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.accountName"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.name | bbIsDefined"
+             data-role="investment-account-name"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Name|Account name label investment account@@account.details.investment.account.label.name"
+               data-role="investment-account-name-title"&gt;
+            Name
+          &lt;/div&gt;
+          &lt;div data-role="investment-account-name-value"&gt;
+            {{ product.name }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.productTypeName | bbIsDefined"
+             data-role="investment-account-productTypeName"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Type|Account type label investment account@@account.details.investment.account.label.productTypeName"
+               data-role="investment-account-productTypeName-title"&gt;
+            Account Type
+          &lt;/div&gt;
+          &lt;div data-role="investment-account-productTypeName-value"&gt;
+            {{ product.productTypeName }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.numbers"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.BBAN | bbIsDefined"
+             data-role="investment-account-bban"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="BBAN|BBAN label investment account@@account.details.investment.account.label.bban"
+               data-role="investment-account-bban-title"&gt;
+            BBAN
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;span aria-live="assertive"&gt;
+              &lt;bb-product-number
+                type="bban"
+                [number]="product.BBAN"
+                [unmaskable]="hostRef.maskableAttribute.BBAN | bbIsInArray: product.unmaskableAttributes"
+                [masked]="hostRef.isMasked(hostRef.maskableAttribute.BBAN)"
+                (unmask)="hostRef.onUnmaskAttribute($event)"
+                (mask)="hostRef.onMaskAttribute($event)"
+              &gt;&lt;/bb-product-number&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.totalInvestmentValue | bbIsDefined"
+             data-role="investment-account-totalInvestmentValue"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Total investment value|Total investment value label investment account@@account.details.investment.account.label.totalInvestmentValue"
+               data-role="investment-account-totalInvestmentValue-title"&gt;
+            Total investment value
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="investment-account-totalInvestmentValue-value"
+            [currency]="product.currency"
+            [amount]="product.totalInvestmentValue"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.branch"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bankBranchCode | bbIsDefined"
+             data-role="investment-account-bankBranchCode"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Branch Code|Branch Code label investment account
+               @@account.details.investment.account.label.bankBranchCode"
+               data-role="investment-account-bankBranchCode-title"&gt;
+            Branch code
+          &lt;/div&gt;
+          &lt;div data-role="investment-account-bankBranchCode-value"&gt;
+            {{ product.bankBranchCode }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bankBranchCode2 | bbIsDefined"
+             data-role="debit-card-bankBranchCode2"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Branch Code 2|Branch Code 2 label investment account
+               @@account.details.investment.account.label.bankBranchCode2"
+               data-role="investment-account-bankBranchCode2-title"&gt;
+            Branch Code 2
+          &lt;/div&gt;
+          &lt;div data-role="investment-account-bankBranchCode2-value"&gt;
+            {{ product.bankBranchCode2 }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.currency"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.currency | bbIsDefined"
+             data-role="investment-account-currency"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="currency |currency label investment account@@account.details.investment.account.label.currency"
+               data-role="investment-account-currency-title"&gt;
+            Currency
+          &lt;/div&gt;
+          &lt;div data-role="investment-account-currency-value"&gt;
+            {{ product.currency  }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>product: ProductType | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The account details fetched from the server.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>infoAvailability: ProductDetailsAvailability</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Info sections availability in a <code>Record&lt;string, boolean&gt;</code> format.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbProductSummaryDetailsLoanCustomizable" class="discrete">bbProductSummaryDetailsLoanCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbProductSummaryDetailsLoanCustomizable
+  let-hostRef
+  let-product="context.product"
+  let-info="context.infoAvailability"
+&gt;
+  &lt;div class="bb-list" data-role="loan-account-details-list"&gt;
+    &lt;div class="bb-list__item" *ngIf="info.accountName || info.numbers || info.branch || info.balance"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.accountName"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.name | bbIsDefined"
+             data-role="loan-name"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Name|Account name label loan@@account.details.loan.label.name"
+               data-role="loan-name-title"&gt;
+            Name
+          &lt;/div&gt;
+          &lt;div data-role="loan-name-value"&gt;
+            {{ product.name }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.productTypeName | bbIsDefined"
+             data-role="loan-productTypeName"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Type|Account type label loan@@account.details.loan.label.productTypeName"
+               data-role="loan-productTypeName-title"&gt;
+            Account Type
+          &lt;/div&gt;
+          &lt;div data-role="loan-productTypeName-value"&gt;
+            {{ product.productTypeName }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.numbers"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.BBAN | bbIsDefined"
+             data-role="loan-bban"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="BBAN|BBAN label loan@@account.details.loan.label.bban"
+               data-role="loan-bban-title"&gt;
+            BBAN
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;span aria-live="assertive"&gt;
+              &lt;bb-product-number
+                type="bban"
+                [number]="product.BBAN"
+                [unmaskable]="hostRef.maskableAttribute.BBAN | bbIsInArray: product.unmaskableAttributes"
+                [masked]="hostRef.isMasked(hostRef.maskableAttribute.BBAN)"
+                (unmask)="hostRef.onUnmaskAttribute($event)"
+                (mask)="hostRef.onMaskAttribute($event)"
+              &gt;&lt;/bb-product-number&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.currency | bbIsDefined"
+             data-role="loan-currency"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="currency |currency label loan@@account.details.loan.label.currency"
+               data-role="loan-currency-title"&gt;
+            Currency
+          &lt;/div&gt;
+          &lt;div data-role="loan-currency-value"&gt;
+            {{ product.currency  }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.branch"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bankBranchCode | bbIsDefined"
+             data-role="loan-bankBranchCode"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Branch Code|Branch Code label loan
+               @@account.details.loan.label.bankBranchCode"
+               data-role="loan-bankBranchCode-title"&gt;
+            Branch code
+          &lt;/div&gt;
+          &lt;div data-role="loan-bankBranchCode-value"&gt;
+            {{ product.bankBranchCode }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bankBranchCode2 | bbIsDefined"
+             data-role="loan-bankBranchCode2"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Branch Code 2|Branch Code 2 label loan
+               @@account.details.loan.label.bankBranchCode2"
+               data-role="loan-bankBranchCode2-title"&gt;
+            Branch Code 2
+          &lt;/div&gt;
+          &lt;div data-role="loan-bankBranchCode2-value"&gt;
+            {{ product.bankBranchCode2 }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.balance"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bookedBalance | bbIsDefined"
+             data-role="loan-bookedBalance"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Booked Balance|Booked Balance label loan@@account.details.loan.label.bookedBalance"
+               data-role="loan-bookedBalance-title"&gt;
+            Booked balance
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="loan-bookedBalance-value"
+            [currency]="product.currency"
+            [amount]="product.bookedBalance"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-list__item" *ngIf="info.interest || info.arrears"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.interest"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.accountInterestRate | bbIsDefined"
+             data-role="loan-accountInterestRate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Interest Rate|Interest Rate label loan@@account.details.loan.label.accountInterestRate"
+               data-role="loan-accountInterestRate-title"&gt;
+            Interest rate
+          &lt;/div&gt;
+          &lt;div data-role="loan-accountInterestRate-value"&gt;
+            {{ product.accountInterestRate }}%
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.principalAmount | bbIsDefined"
+             data-role="loan-principalAmount"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Principal amount|Principal amount label loan@@account.details.loan.label.principalAmount"
+               data-role="loan-principalAmount-title"&gt;
+            Principal amount
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="loan-principalAmount-value"
+            [currency]="product.currency"
+            [amount]="product.principalAmount"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.arrears"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.amountInArrear | bbIsDefined"
+             data-role="loan-amountInArrear"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Amount in arrears|Amount in arrears label loan@@account.details.loan.label.amountInArrear"
+               data-role="loan-amountInArrear-title"&gt;
+            Amount in arrears
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="loan-amountInArrear-value"
+            [currency]="product.currency"
+            [amount]="product.amountInArrear"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-list__item" *ngIf="info.recurrence || info.term || info.settlement"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.recurrence"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.startDate | bbIsDefined"
+             data-role="loan-startDate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Start date|Start date label loan@@account.details.loan.label.startDate"
+               data-role="loan-startDate-title"&gt;
+            Start date
+          &lt;/div&gt;
+          &lt;div data-role="loan-startDate-value"&gt;
+            {{ product.startDate | date: 'longDate' }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.monthlyInstalmentAmount | bbIsDefined"
+             data-role="loan-monthlyInstalmentAmount"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Monthly instalment amount|Monthly instalment amount label loan@@account.details.loan.label.monthlyInstalmentAmount"
+               data-role="loan-monthlyInstalmentAmount-title"&gt;
+            Monthly instalment amount
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="loan-monthlyInstalmentAmount-value"
+            [currency]="product.currency"
+            [amount]="product.monthlyInstalmentAmount"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.term"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.termUnit | bbIsDefined"
+             data-role="loan-termUnit"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Term|Term label loan@@account.details.loan.label.termUnit"
+               data-role="loan-termUnit-title"&gt;
+            Term
+          &lt;/div&gt;
+          &lt;div data-role="loan-termUnit-value"&gt;
+            {{ product.termUnit }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.maturityDate | bbIsDefined"
+             data-role="loan-maturityDate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Maturity date|Maturity date label loan@@account.details.loan.label.maturityDate"
+               data-role="loan-maturityDate-title"&gt;
+            Maturity date
+          &lt;/div&gt;
+          &lt;div data-role="loan-maturityDate-value"&gt;
+            {{ product.maturityDate | date: 'longDate' }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.settlement"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.interestSettlementAccount | bbIsDefined"
+             data-role="loan-interestSettlementAccount"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Interest settlement account|Interest settlement account label loan@@account.details.loan.label.interestSettlementAccount"
+               data-role="loan-interestSettlementAccount-title"&gt;
+            Interest settlement account
+          &lt;/div&gt;
+          &lt;div data-role="loan-interestSettlementAccount-value"&gt;
+            {{ product.interestSettlementAccount }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>product: ProductType | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The account details fetched from the server.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>infoAvailability: ProductDetailsAvailability</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Info sections availability in a <code>Record&lt;string, boolean&gt;</code> format.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbProductSummaryDetailsOtherCustomizable" class="discrete">bbProductSummaryDetailsOtherCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbProductSummaryDetailsOtherCustomizable
+  let-hostRef
+  let-product="context.product"
+  let-info="context.infoAvailability"
+&gt;
+  &lt;div class="bb-list" data-role="other-details-list"&gt;
+    &lt;div class="bb-list__item" *ngIf="info.accountName || info.numbers || info.balance || info.branch"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.accountName"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.name | bbIsDefined"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Name|Account name label other@@account.details.other.label.name"&gt;
+            Name
+          &lt;/div&gt;
+          &lt;div data-role="other-name"&gt;
+            {{ product.name }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.productTypeName | bbIsDefined"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Type|Account type label other@@account.details.other.label.productTypeName"&gt;
+            Account Type
+          &lt;/div&gt;
+          &lt;div data-role="other-productTypeName"&gt;
+            {{ product.productTypeName }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.numbers"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.BBAN | bbIsDefined"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="BBAN|BBAN label other@@account.details.other.label.bban"&gt;
+            BBAN
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;span data-role="other-bban"
+                  aria-live="assertive"&gt;
+              &lt;bb-product-number
+                type="bban"
+                [number]="product.BBAN"
+                [unmaskable]="hostRef.maskableAttribute.BBAN | bbIsInArray: product.unmaskableAttributes"
+                [masked]="hostRef.isMasked(hostRef.maskableAttribute.BBAN)"
+                (unmask)="hostRef.onUnmaskAttribute($event)"
+                (mask)="hostRef.onMaskAttribute($event)"
+              &gt;&lt;/bb-product-number&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.currency | bbIsDefined"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="currency |currency label other@@account.details.other.label.currency"&gt;
+            Currency
+          &lt;/div&gt;
+          &lt;div data-role="other-currency"&gt;
+            {{ product.currency  }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.balance"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bookedBalance | bbIsDefined"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Booked Balance|Booked Balance label other@@account.details.other.label.bookedBalance"&gt;
+            Booked balance
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="other-bookedBalance"
+            [currency]="product.currency"
+            [amount]="product.bookedBalance"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.availableBalance | bbIsDefined"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Available Balance|Available Balance label other@@account.details.other.label.availableBalance"&gt;
+            Available balance
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="other-availableBalance"
+            [currency]="product.currency"
+            [amount]="product.availableBalance"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.branch"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bankBranchCode | bbIsDefined"
+             data-role="other-bankBranchCode"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Branch Code|Branch Code label other
+               @@account.details.other.label.bankBranchCode"
+               data-role="other-bankBranchCode-title"&gt;
+            Branch code
+          &lt;/div&gt;
+          &lt;div data-role="other-bankBranchCode-value"&gt;
+            {{ product.bankBranchCode }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bankBranchCode2 | bbIsDefined"
+             data-role="other-bankBranchCode2"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Branch Code 2|Branch Code 2 label other
+               @@account.details.other.label.bankBranchCode2"
+               data-role="other-bankBranchCode2-title"&gt;
+            Branch Code 2
+          &lt;/div&gt;
+          &lt;div data-role="other-bankBranchCode2-value"&gt;
+            {{ product.bankBranchCode2 }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-list__item" *ngIf="info.interest"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.accountInterestRate | bbIsDefined"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Interest Rate|Interest Rate label other@@account.details.other.label.accountInterestRate"&gt;
+            Interest rate
+          &lt;/div&gt;
+          &lt;div data-role="other-interest-rate"&gt;
+            {{ product.accountInterestRate }}%
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.accruedInterest | bbIsDefined"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Accrued Interest|Accrued Interest label other@@account.details.other.label.account.accruedInterest"&gt;
+            Accrued interest
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="other-accruedInterest"
+            [currency]="product.currency"
+            [amount]="product.accruedInterest"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>product: ProductType | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The account details fetched from the server.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>infoAvailability: ProductDetailsAvailability</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Info sections availability in a <code>Record&lt;string, boolean&gt;</code> format.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbProductSummaryDetailsSavingsAccountCustomizable" class="discrete">bbProductSummaryDetailsSavingsAccountCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbProductSummaryDetailsSavingsAccountCustomizable
+  let-hostRef
+  let-product="context.product"
+  let-info="context.infoAvailability"
+&gt;
+  &lt;div class="bb-list" data-role="savings-account-details-list"&gt;
+    &lt;div class="bb-list__item" *ngIf="info.accountName || info.numbers || info.codes || info.balance"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.accountName"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.name | bbIsDefined"
+             data-role="savings-account-name"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Name|Account name label savings account
+                    @@account.details.savings.account.label.name"
+               data-role="savings-account-name-title"&gt;
+            Name
+          &lt;/div&gt;
+          &lt;div data-role="savings-account-name-value"&gt;
+            {{ product.name }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.productTypeName | bbIsDefined"
+             data-role="savings-account-productTypeName"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Type|Account type label savings account
+                        @@account.details.savings.account.label.productTypeName"
+               data-role="savings-account-productTypeName-title"&gt;
+            Account Type
+          &lt;/div&gt;
+          &lt;div data-role="savings-account-productTypeName-value"&gt;
+            {{ product.productTypeName }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.numbers"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.IBAN | bbIsDefined"
+             data-role="savings-account-iban"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="IBAN|IBAN label savings account
+                        @@account.details.savings.account.label.iban"
+               data-role="savings-account-iban-title"&gt;
+            IBAN
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;span aria-live="assertive"&gt;
+              &lt;bb-product-number
+                type="iban"
+                [number]="product.IBAN"
+                [unmaskable]="hostRef.maskableAttribute.IBAN | bbIsInArray: product.unmaskableAttributes"
+                [masked]="hostRef.isMasked(hostRef.maskableAttribute.IBAN)"
+                (unmask)="hostRef.onUnmaskAttribute($event)"
+                (mask)="hostRef.onMaskAttribute($event)"
+              &gt;&lt;/bb-product-number&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.BBAN | bbIsDefined"
+             data-role="savings-account-bban"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="BBAN|BBAN label savings account
+                       @@account.details.savings.account.label.bban"
+               data-role="savings-account-bban-title"&gt;
+            BBAN
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;span aria-live="assertive"&gt;
+              &lt;bb-product-number
+                type="bban"
+                [number]="product.BBAN"
+                [unmaskable]="hostRef.maskableAttribute.BBAN | bbIsInArray: product.unmaskableAttributes"
+                [masked]="hostRef.isMasked(hostRef.maskableAttribute.BBAN)"
+                (unmask)="hostRef.onUnmaskAttribute($event)"
+                (mask)="hostRef.onMaskAttribute($event)"
+              &gt;&lt;/bb-product-number&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.codes"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.BIC | bbIsDefined"
+             data-role="savings-account-bic"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="BIC|BIC label savings account
+                        @@account.details.savings.account.label.bic"
+               data-role="savings-account-bic-title"&gt;
+            BIC
+          &lt;/div&gt;
+          &lt;div data-role="savings-account-bic-value"&gt;
+            {{ product.BIC  }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.currency | bbIsDefined"
+             data-role="savings-account-currency"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="currency |currency label savings account
+                       @@account.details.savings.account.label.currency"
+               data-role="savings-account-currency-title"&gt;
+            Currency
+          &lt;/div&gt;
+          &lt;div data-role="savings-account-currency-value"&gt;
+            {{ product.currency  }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.balance"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bookedBalance | bbIsDefined"
+             data-role="savings-account-bookedBalance"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Booked Balance|Booked Balance label savings account
+                       @@account.details.savings.account.label.bookedBalance"
+               data-role="savings-account-bookedBalance-title"&gt;
+            Booked balance
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="savings-account-bookedBalance-value"
+            [currency]="product.currency"
+            [amount]="product.bookedBalance"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-list__item" *ngIf="info.requirements || info.interest"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.requirements"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.minimumRequiredBalance | bbIsDefined"
+             data-role="savings-account-minimumRequiredBalance"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Minimum required balance|Minimum required balance label savings account
+                       @@account.details.savings.account.label.minimumRequiredBalance"
+               data-role="savings-account-minimumRequiredBalance-title"&gt;
+            Minimum required balance
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="savings-account-minimumRequiredBalance-value"
+            [currency]="product.currency"
+            [amount]="product.minimumRequiredBalance"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.interest"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.accountInterestRate | bbIsDefined"
+             data-role="savings-account-accountInterestRate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Interest Rate|Interest Rate label savings account
+                       @@account.details.savings.account.label.accountInterestRate"
+               data-role="savings-account-accountInterestRate-title"&gt;
+            Interest rate
+          &lt;/div&gt;
+          &lt;div data-role="savings-account-accountInterestRate-value"&gt;
+            {{ product.accountInterestRate }}%
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.accruedInterest | bbIsDefined"
+             data-role="savings-account-accruedInterest"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Accrued Interest|Accrued Interest label savings account
+                       @@account.details.savings.account.label.account.accruedInterest"
+               data-role="savings-account-accruedInterest-title"&gt;
+            Accrued interest
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="savings-account-accruedInterest-value"
+            [currency]="product.currency"
+            [amount]="product.accruedInterest"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-list__item" *ngIf="info.branch || info.updateDate"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.branch"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bankBranchCode | bbIsDefined"
+             data-role="savings-account-bankBranchCode"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Branch Code|Branch Code label savings account
+                       @@account.details.savings.account.label.bankBranchCode"
+               data-role="savings-account-bankBranchCode-title"&gt;
+            Branch code
+          &lt;/div&gt;
+          &lt;div data-role="savings-account-bankBranchCode-value"&gt;
+            {{ product.bankBranchCode }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bankBranchCode2 | bbIsDefined"
+             data-role="savings-account-bankBranchCode2"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Branch Code 2|Branch Code 2 label savings account
+               @@account.details.savings.account.label.bankBranchCode2"
+               data-role="savings-account-bankBranchCode2-title"&gt;
+            Branch Code 2
+          &lt;/div&gt;
+          &lt;div data-role="savings-account-bankBranchCode2-value"&gt;
+            {{ product.bankBranchCode2 }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.updateDate"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.accountOpeningDate | bbIsDefined"
+             data-role="savings-account-accountOpeningDate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Opening date|Opening date label savings account
+                       @@account.details.savings.account.label.accountOpeningDate"
+               data-role="savings-account-accountOpeningDate-title"&gt;
+            Opening date
+          &lt;/div&gt;
+          &lt;div data-role="savings-account-accountOpeningDate-value"&gt;
+            {{ product.accountOpeningDate | date: 'longDate' }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.lastUpdateDate | bbIsDefined"
+             data-role="savings-account-lastUpdateDate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Last Update Date|Last Update Date label savings account
+                       @@account.details.savings.account.label.lastUpdateDate"
+               data-role="savings-account-lastUpdateDate-title"&gt;
+            Last update date
+          &lt;/div&gt;
+          &lt;div data-role="savings-account-lastUpdateDate-value"&gt;
+            {{ product.lastUpdateDate | date: 'longDate' }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>product: ProductType | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The account details fetched from the server.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>infoAvailability: ProductDetailsAvailability</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Info sections availability in a <code>Record&lt;string, boolean&gt;</code> format.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbProductSummaryDetailsTermDepositCustomizable" class="discrete">bbProductSummaryDetailsTermDepositCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbProductSummaryDetailsTermDepositCustomizable
+  let-hostRef
+  let-product="context.product"
+  let-info="context.infoAvailability"
+&gt;
+  &lt;div class="bb-list" data-role="term-deposit-details-list"&gt;
+    &lt;div class="bb-list__item" *ngIf="info.accountName || info.numbers"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.accountName"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.name | bbIsDefined"
+             data-role="term-deposit-name"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Name|Account name label term deposit
+              @@account.details.term.deposit.label.name"
+              data-role="term-deposit-name-title"&gt;
+            Name
+          &lt;/div&gt;
+          &lt;div data-role="term-deposit-name-value"&gt;
+            {{ product.name }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.productTypeName | bbIsDefined"
+             data-role="term-deposit-productTypeName"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Account Type|Account type label term deposit
+              @@account.details.term.deposit.label.productTypeName"
+              data-role="term-deposit-productTypeName-title"&gt;
+            Account Type
+          &lt;/div&gt;
+          &lt;div data-role="term-deposit-productTypeName-value"&gt;
+            {{ product.productTypeName }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.numbers"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.BBAN | bbIsDefined"
+             data-role="term-deposit-bban"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="BBAN|BBAN label term deposit
+              @@account.details.term.deposit.label.bban"
+               data-role="term-deposit-bban-title"&gt;
+            BBAN
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;span aria-live="assertive"&gt;
+              &lt;bb-product-number
+                type="bban"
+                [number]="product.BBAN"
+                [unmaskable]="hostRef.maskableAttribute.BBAN | bbIsInArray: product.unmaskableAttributes"
+                [masked]="hostRef.isMasked(hostRef.maskableAttribute.BBAN)"
+                (unmask)="hostRef.onUnmaskAttribute($event)"
+                (mask)="hostRef.onMaskAttribute($event)"
+              &gt;&lt;/bb-product-number&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.currency | bbIsDefined"
+             data-role="term-deposit-currency"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="currency |currency label term deposit
+              @@account.details.term.deposit.label.currency"
+               data-role="term-deposit-currency-title"&gt;
+            Currency
+          &lt;/div&gt;
+          &lt;div data-role="term-deposit-currency-value"&gt;
+            {{ product.currency  }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-list__item" *ngIf="info.principalAmount || info.interest"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.principalAmount"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.principalAmount | bbIsDefined"
+             data-role="term-deposit-principalAmount"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Principal amount|Principal amount label term deposit
+              @@account.details.term.deposit.label.principalAmount"
+               data-role="term-deposit-principalAmount-title"&gt;
+            Principal amount
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="term-deposit-principalAmount-value"
+            [currency]="product.currency"
+            [amount]="product.principalAmount"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.accountInterestRate | bbIsDefined"
+             data-role="term-deposit-accountInterestRate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Interest Rate|Interest Rate label term deposit
+              @@account.details.term.deposit.label.accountInterestRate"
+               data-role="term-deposit-accountInterestRate-title"&gt;
+            Interest rate
+          &lt;/div&gt;
+          &lt;div data-role="term-deposit-accountInterestRate-value"&gt;
+            {{ product.accountInterestRate }}%
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.interest"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.accruedInterest | bbIsDefined"
+             data-role="term-deposit-accruedInterest"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Accrued Interest|Accrued Interest label term deposit
+              @@account.details.term.deposit.label.account.accruedInterest"
+               data-role="term-deposit-accruedInterest-title"&gt;
+            Accrued interest
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="term-deposit-accruedInterest-value"
+            [currency]="product.currency"
+            [amount]="product.accruedInterest"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-list__item" *ngIf="info.term || info.maturity || info.renewal || info.settlement"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.term"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.startDate | bbIsDefined"
+        data-role="term-deposit-startDate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Start date|Start date label term-deposit
+              @@account.details.term-deposit.label.startDate"
+               data-role="term-deposit-startDate-title"&gt;
+            Start date
+          &lt;/div&gt;
+          &lt;div data-role="term-deposit-startDate-value"&gt;
+            {{ product.startDate | date: 'longDate' }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.termUnit | bbIsDefined"
+             data-role="term-deposit-termUnit"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Term Unit|Term Unit label term-deposit
+              @@account.details.term-deposit.label.termUnit"
+               data-role="term-deposit-termUnit-title"&gt;
+            Term
+          &lt;/div&gt;
+          &lt;div data-role="term-deposit-termUnit-value"&gt;
+            {{ product.termUnit }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.maturity"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.maturityDate | bbIsDefined"
+             data-role="term-deposit-maturityDate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Maturity date|Maturity date label term-deposit
+              @@account.details.term-deposit.label.maturityDate"
+               data-role="term-deposit-maturityDate-title"&gt;
+            Maturity date
+          &lt;/div&gt;
+          &lt;div data-role="term-deposit-maturityDate-value"&gt;
+            {{ product.maturityDate | date: 'longDate' }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.maturityAmount | bbIsDefined"
+             data-role="term=deposit-maturityAmount"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Maturity Amount|Maturity Amount label term-deposit
+              @@account.details.term-deposit.label.maturityAmount"
+              data-role="term=deposit-maturityAmount-title"&gt;
+            Maturity amount
+          &lt;/div&gt;
+          &lt;bb-amount-ui
+            data-role="term=deposit-maturityAmount-value"
+            [currency]="product.currency"
+            [amount]="product.maturityAmount"
+            [mapCurrency]="false"&gt;
+          &lt;/bb-amount-ui&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.renewal"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.autoRenewalIndicator | bbIsDefined"
+             data-role="term-deposit-autoRenewalIndicator"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Auto Renewal Indicator|Auto Renewal Indicator label term deposit
+              @@account.details.term-deposit.label.autoRenewalIndicator"
+               data-role="term-deposit-autoRenewalIndicator-title"&gt;
+            Auto Renewal Indicator
+          &lt;/div&gt;
+          &lt;div data-role="term-deposit-autoRenewalIndicator-value"&gt;
+            {{ product.autoRenewalIndicator }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.interestPaymentFrequencyNumber | bbIsDefined"
+             data-role="term-deposit-interestPaymentFrequencyNumber"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Number of times interest is settled on the account|Number of times interest is settled on the account label term deposit
+              @@account.details.term-deposit.label.interestPaymentFrequencyNumber"
+              data-role="term-deposit-interestPaymentFrequencyNumber-title"&gt;
+            Number of times interest is settled on the account
+          &lt;/div&gt;
+          &lt;div data-role="term-deposit-interestPaymentFrequencyNumber-value"&gt;
+            {{ product.interestPaymentFrequencyNumber }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.settlement"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.interestSettlementAccount | bbIsDefined"
+             data-role="term-deposit-interestSettlementAccount"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Interest settlement account|Interest settlement account label term deposit
+              @@account.details.term-deposit.label.interestSettlementAccount"
+              data-role="term-deposit-interestSettlementAccount-title"&gt;
+            Interest settlement account
+          &lt;/div&gt;
+          &lt;div data-role="term-deposit-interestSettlementAccount-value"&gt;
+            {{ product.interestSettlementAccount }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bb-list__item" *ngIf="info.branch || info.updateDate"&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.branch"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bankBranchCode | bbIsDefined"
+             data-role="term-deposit-bankBranchCode"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Branch Code|Branch Code label term deposit
+              @@account.details.term.deposit.label.bankBranchCode"
+              data-role="term-deposit-bankBranchCode-title"&gt;
+            Branch code
+          &lt;/div&gt;
+          &lt;div data-role="term-deposit-bankBranchCode-value"&gt;
+            {{ product.bankBranchCode }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.bankBranchCode2 | bbIsDefined"
+             data-role="term-deposit-bankBranchCode2"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Branch Code 2|Branch Code 2 label term deposit
+              @@account.details.term.deposit.label.bankBranchCode2"
+               data-role="term-deposit-bankBranchCode2-title"&gt;
+            Branch code 2
+          &lt;/div&gt;
+          &lt;div data-role="term-deposit-bankBranchCode2-value"&gt;
+            {{ product.bankBranchCode2 }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="bb-account-details-row bb-stack bb-stack--wrap bb-stack--align-top" *ngIf="info.updateDate"&gt;
+        &lt;div class="bb-account-details-item bb-stack__item bb-stack__item--fill" *ngIf="product.accountOpeningDate | bbIsDefined"
+             data-role="term-deposit-accountOpeningDate"&gt;
+          &lt;div class="bb-block bb-block--sm bb-text-bold"
+               i18n="Opening date|Opening date label term deposit
+              @@account.details.term.deposit.label.accountOpeningDate"
+               data-role="term-deposit-accountOpeningDate-title"&gt;
+            Opening date
+          &lt;/div&gt;
+          &lt;div data-role="term-deposit-accountOpeningDate-value"&gt;
+            {{ product.accountOpeningDate | date: 'longDate' }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>product: ProductType | undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The account details fetched from the server.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>infoAvailability: ProductDetailsAvailability</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Info sections availability in a <code>Record&lt;string, boolean&gt;</code> format.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="bb_product_summary_account_details_widget_hostref_api" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="14"><p class="tableblock"><code>ProductSummaryAccountDetailsComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="14"><p class="tableblock"><code>bbProductSummaryDetailsViewCustomizable</code>
+<code>bbProductSummaryDetailsHeaderCustomizable</code>
+<code>bbProductSummaryDetailsCustomizable</code>
+<code>bbProductSummaryDetailsNoAccountSelectedCustomizable</code>
+<code>bbProductSummaryDetailsLoadingCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>processErrorMessages(messages: string[] | undefined)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Joins the specified error messages to display on the template.</p>
+<p class="tableblock">Returns: <code>string</code> with the concatenated error message.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>productKindNames</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of supported product kind names.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>error</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the fetching of the account details failed, this property
+holds the errors coming from the server. The widget uses this property to display errors.
+Type: <code>Observable&lt;AccountError | undefined&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onMaskAttribute</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Event handler for product kind details components like <code>bb-current-account-details</code>.
+Emits <code>UnmaskedProductEventPayload</code> to <code>unmaskedProductEvent</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onUnmaskAttribute</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Event handler for product kind details components like <code>bb-current-account-details</code>.
+Emits <code>UnmaskedProductEventPayload</code> to <code>unmaskedProductEvent</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maskableAttributes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of maskable attributes to store their states.</p>
+<p class="tableblock">Type: <code>ProductMaskableAttribute[]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly productKindNames: ProductKindNames</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of supported product kind names</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maskableAttributes: ProductMaskableAttribute[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of maskable attributes to store their states</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onUnmaskAttribute(attributeName: MaskableAttribute, product: ProductType)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Event handler for product kind details components. Emits <code>unmaskedProductEvent</code> with <code>UnmaskedProductEventPayload</code> payload.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onMaskAttribute(attributeName: MaskableAttribute, product: ProductType)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Event handler for product kind details components. Emits <code>unmaskedProductEvent</code> with <code>UnmaskedProductEventPayload</code> payload.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly error: Observable&lt;AccountError | undefined&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the fetching of the account details failed, this property holds the errors coming from the server</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly accountAliasDisplayingLevel: AccountAliasDisplayingLevel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displaying level of account aliases</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onAliasUpdated(id: string, alias: string): void</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updates alias of product summary item, by id.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly canEditAlias: Observable&lt;boolean&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines if user has permissions to edit alias.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>ProductSummaryAccountDetailsBaseComponent</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><code>bbProductSummaryDetailsCreditCardCustomizable</code>
+<code>bbProductSummaryDetailsCurrentAccountCustomizable</code>
+<code>bbProductSummaryDetailsDebitCardCustomizable</code>
+<code>bbProductSummaryDetailsInvestmentAccountCustomizable</code>
+<code>bbProductSummaryDetailsLoanCustomizable</code>
+<code>bbProductSummaryDetailsOtherCustomizable</code>
+<code>bbProductSummaryDetailsSavingsAccountCustomizable</code>
+<code>bbProductSummaryDetailsTermDepositCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readonly maskableAttribute: MaskableAttribute</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All unmaskable attributes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onUnmaskAttribute(attributeName: MaskableAttribute)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Event handler for the <code>click</code> event of the unmask buttons.
+Emits <code>MaskableAttribute</code> to the <code>unmaskAttribute</code> output.
+Sets <code>unmaskedAttributes[attributeName]</code> to <code>true</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onMaskAttribute(attributeName: MaskableAttribute)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Event handler for the <code>click</code> event of the mask buttons.
+Emits <code>MaskableAttribute</code> to the <code>maskAttribute</code> Output.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isMasked(attributeName: MaskableAttribute): boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the specified <code>attributeName</code> is masked.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="bb_product_summary_account_details_widget_implementation" class="discrete">Implementation example</h2>
+<div class="paragraph">
+<p>The following examples show the implementation of this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrapper widget module</p>
+<div class="listingblock">
+<div class="title">account-details-widget-extended.module.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { ProductSummaryAccountDetailsWidgetModule } from '@backbase/product-summary-account-details-widget-ang';
+import { ProductSummaryAccountDetailsWidgetExtendedComponent } from './product-summary-account-details-widget-extended.component';
+
+@NgModule({
+  declarations: [ProductSummaryAccountDetailsWidgetExtendedComponent],
+  imports: [
+    CommonModule,
+    BackbaseCoreModule.withConfig({
+      classMap: { ProductSummaryAccountDetailsWidgetExtendedComponent },
+    }),
+    ProductSummaryAccountDetailsWidgetModule,
+  ],
+  exports: [ProductSummaryAccountDetailsWidgetModule, ProductSummaryAccountDetailsWidgetExtendedComponent],
+})
+export class ProductSummaryAccountDetailsWidgetExtendedModule {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Wrapper widget component</p>
+<div class="listingblock">
+<div class="title">account-details-widget-extended.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+
+@Component({
+  selector: 'bb-product-summary-account-details-widget-extended',
+  templateUrl: './product-summary-account-details-widget-extended.component.html',
+})
+export class ProductSummaryAccountDetailsWidgetExtendedComponent {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Custom template</p>
+<div class="listingblock">
+<div class="title">account-details-widget-extended.component.html</div>
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;bb-product-summary-account-details-widget&gt;&lt;/bb-product-summary-account-details-widget&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="bb_product_summary_account_details_widget_access_control" class="discrete">Access Control</h2>
+<div class="paragraph">
+<p>A permission is the combination of a business function and a single privilege granted to a user
+on a given resource type. Privileges are enforced by Digital Banking Services. Widget behavior is affected by the permissions of the user accessing the widget.</p>
+</div>
+<div class="paragraph">
+<p>The following table describes how the widget behavior changes depending on the permissions of the user:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 15%;">
+<col style="width: 20%;">
+<col style="width: 15%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Resource</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Business function</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Privilege</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Widget behavior</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contacts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contacts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current user views the details of a selected account from the <strong>View business account list</strong> widget.</p>
+<p class="tableblock">If the user does not have the permission to view, the widget shows an empty page.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

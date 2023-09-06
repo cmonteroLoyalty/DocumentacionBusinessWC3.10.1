@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Adopt the Create manual batch payments widget</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="adopt_manual_batch_widget" class="book toc2 toc-left">
+<div id="header">
+<h1>Adopt the Create manual batch payments widget</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html"><span class="toc-current">Adopt the Create manual batch payments widget</span></a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="adopt_manual_batch_widget" class="sect0">Adopt the Create manual batch payments widget</h1>
+          <div class="paragraph">
+<p>The <strong>Create manual batch payments</strong> widget is configurable to support different batch types.
+Developers have the option to use one of the <a href="manual_batch_reference.html">out-of-the-box configurations</a>,
+or to create a custom configuration. If the widget is configured using a custom configuration file,
+there are additional configuration options available.</p>
+</div>
+<div class="paragraph">
+<p>This section explains how to adopt the <strong>Create manual batch payments</strong> widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="adopt_manual_batch_widget.html#manual_batch_configure_batch_type">Configure a batch type</a>: Apply an out-of-the-box or a custom batch type configuration.</p>
+</li>
+<li>
+<p><a href="adopt_manual_batch_widget.html#manual_batch_advanced_config_options">Advanced configuration options</a>: Reposition fields, toggle fields, and override existing form components.</p>
+</li>
+</ul>
+</div>
+<h2 id="_prerequisites_5" class="discrete">Prerequisites</h2>
+<div class="paragraph">
+<p>Before you start, make sure you have the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Access to a local or shared developer environment.</p>
+</li>
+<li>
+<p>A project setup with Business Banking Widget Collection.</p>
+</li>
+<li>
+<p>The batch type is available on the backend, see
+<a href="https://community.backbase.com/documentation/DBS/2.21.1/payments_configure_custom_manual_batch_type">Configure a custom manual batch type</a>.</p>
+</li>
+</ul>
+</div>
+<h2 id="manual_batch_configure_batch_type" class="discrete">Configure a batch type</h2>
+<div class="paragraph">
+<p>Follow these steps to configure the <strong>Create manual batch payments</strong> widget with an out-of-the-box or a custom batch type:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Scaffold your widget</strong></p>
+<div class="paragraph">
+<p>To scaffold your widget, do one of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Scaffold an empty widget.</p>
+<div class="paragraph">
+<p>Use <a href="http://wa3.backbase.com/foundation/6.13.1/howto/schematics"><code>@bb-cli/schematics</code></a> to
+<a href="https://community.backbase.com/documentation/foundation_angular/6.13.1/widget_development_environment#scaffold_new_widget">scaffold an empty widget</a>.
+Give the widget a name, for example <code>us-internal-transfers-widget-ang</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="title">us-internal-transfers-widget-ang.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+
+@Component({
+    selector: 'bb-us-internal-transfers-widget-ang',
+    template: `
+      &lt;bb-payord-multi-payment-widget-ang&gt;&lt;/bb-payord-multi-payment-widget-ang&gt;
+    `,
+})
+export class UsInternalTransfersWidgetAngComponent {}</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Create a custom batch type configuration</strong></p>
+<div class="paragraph">
+<p>Skip this step if you want to use an out-of-the-box configuration.</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create your configuration file and save it in the widget folder. For example, <code>internal_transfers_config.ts</code>.
+Structure the batch form in different steps and specify the form groups and fields for each step. See the <a href="manual_batch_reference.html">Create manual batch payments</a> reference.</p>
+<div class="paragraph">
+<p>For example, for internal transfers:</p>
+</div>
+<div class="listingblock">
+<div class="title">internal_transfers_config.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import {
+  MultipleFormGroup,
+  PaymentComponents,
+  StepperConfig,
+  ManualBatchTypeConfig,
+  ProductKinds,
+  PaymentBaseFields,
+  InitiatorFields,
+  StepperAction,
+  ManualBatchesConfig,
+} from '@backbase/payment-orders-ang';
+import { ValidatorFn, Validators } from '@angular/forms';
+import {
+  accountsValidation,
+  amountGreaterThanZero,
+  minimumOneAccount,
+  noWhitespaceValidator,
+  pastDateValidator,
+} from '@backbase/payments-common-ang';
+
+const batchInfo: MultipleFormGroup = {
+  name: 'batchInfo',
+  title: 'Internal transfers',
+  subTitle: 'Add the main batch information',
+  fields: [
+    {
+      type: PaymentComponents.text,
+      name: 'name',
+      options: {
+        validators: [Validators.required, noWhitespaceValidator as ValidatorFn],
+        validationMessages: [{ message: 'Batch name is required', name: 'required' }],
+        label: 'Batch name',
+        showCharCounter: true,
+        maxLength: 25,
+        cssClasses: ['w-50'],
+      },
+    },
+    {
+      type: PaymentComponents.date,
+      name: 'requestedExecutionDate',
+      options: {
+        validators: [pastDateValidator as ValidatorFn, Validators.required],
+        validationMessages: [{ message: 'Execution date cannot be in past', name: 'pastDate' }],
+        label: 'Execution date',
+        cssClasses: ['w-50'],
+        overrideDateFormat: 'dd/MM/yyyy',
+        placeholder: 'DD/MM/YYYY',
+      },
+    },
+  ],
+  stepName: 'batchInfo',
+};
+
+const creditDebitSelection: MultipleFormGroup = {
+  name: 'creditDebitSelection',
+  fields: [
+    {
+      type: PaymentComponents.creditDebitSelector,
+      name: 'creditDebitIndicator',
+      options: {
+        label: 'Internal transfers',
+        choices: [
+          { type: 'CREDIT', name: 'Send', description: 'Send money to multiple own accounts' },
+        ],
+      },
+    },
+  ],
+  stepName: 'transferDetails',
+};
+
+const initiator: MultipleFormGroup = {
+  name: PaymentBaseFields.initiator,
+  cssClasses: ['bb-block', 'bb-block--xl'],
+  fields: [
+    {
+      type: PaymentComponents.multiPaymentAccountSelector,
+      name: InitiatorFields.initiatorAccountGroup,
+      options: {
+        label: 'From',
+        placeholder: 'Select an account',
+        validators: [Validators.required],
+        validationMessages: [{ message: 'Account is required', name: 'required' }],
+        arrangements: {
+          privilege: 'create',
+          ignoredProductKindNames: [ProductKinds.creditCard, ProductKinds.debitCard],
+        },
+        cssClasses: ['w-75'],
+        filterItems: false,
+        required: true,
+        showBankBranchCode: true,
+      },
+    },
+  ],
+  stepName: 'transferDetails',
+  separator: {
+    icon: { name: 'arrow-downward', color: 'dark' },
+  },
+};
+
+const payments: MultipleFormGroup = {
+  name: PaymentBaseFields.counterparty,
+  cssClasses: ['bb-block', 'bb-block--xl'],
+  fields: [
+    {
+      type: PaymentComponents.multiPaymentCard,
+      name: InitiatorFields.initiatorAccountGroup,
+      options: {
+        label: 'To',
+        helperText: 'You can add up to %s transfers',
+        validators: [minimumOneAccount as ValidatorFn],
+        maximumNumberOfPayments: 100,
+        validationMessages: [{ message: 'Minimum one transfer is required', name: 'empty' }],
+        arrangements: {
+          privilege: 'view',
+          ignoredProductKindNames: [ProductKinds.creditCard, ProductKinds.debitCard, ProductKinds.loanAccount],
+        },
+        fieldsConfig: {
+          counterpartyName: {
+            validators: [Validators.required, accountsValidation(PaymentBaseFields.initiator)],
+            placeholder: 'Enter or select account',
+            dropdownIcon: '',
+            ariaLabel: '',
+            validationMessages: [
+              { message: 'Account is required', name: 'required' },
+              { message: 'Account is same as from', name: 'sameAccount' },
+            ],
+          },
+          amount: {
+            validators: [Validators.required, amountGreaterThanZero as ValidatorFn],
+            placeholder: '0.00',
+            ariaLabel: '',
+            currency: 'USD',
+            maxLength: 10,
+            validationMessages: [
+              { message: 'Amount is required', name: 'required' },
+              { message: 'Amount is required', name: 'invalidAmount' },
+            ],
+          },
+          description: {
+            validators: [],
+            placeholder: 'Enter Description',
+            label: 'Add Description',
+            helperText: 'Optional',
+            title: 'Description',
+          },
+        },
+      },
+    },
+  ],
+  stepName: 'transferDetails',
+};
+
+export const INTERNAL_TRANSFERS: ManualBatchTypeConfig = {
+  fields: [batchInfo, creditDebitSelection, initiator, payments],
+  name: 'Internal transfers',
+  description: 'Send money to multiple own accounts',
+  paymentType: 'INTRACOMPANY_PAYMENT_CREDIT_USA',
+  resourceName: 'Batch',
+  businessFunction: 'Batch - Intracompany Payments',
+};
+
+export const INTERNAL_TRANSFERS_STEPS_CONFIG: Array&lt;StepperConfig&gt; = [
+  {
+    stepName: 'batchInfo',
+    stepDisplayValue: 'Batch info',
+    cssClasses: ['card', 'card-body'],
+    isActive: true,
+    isChecked: false,
+    buttonClass: [],
+    buttonConfig: [
+      {
+        type: 'primary',
+        text: 'Next: Transfer details',
+        action: StepperAction.NEXT,
+      },
+    ],
+  },
+  {
+    stepName: 'transferDetails',
+    stepDisplayValue: 'Transfer details',
+    isActive: false,
+    isChecked: false,
+    cssClasses: ['pb-5', 'mb-5'],
+    buttonClass: ['py-4', 'fixed-bottom', 'bb-button-bar--sticky', 'px-sm-3'],
+    footerDetail: { totalAmount: true, totalCount: true },
+    buttonConfig: [
+      {
+        type: 'secondary',
+        text: 'Back',
+        action: StepperAction.BACK,
+      },
+      {
+        type: 'primary',
+        text: 'Next: Review',
+        action: StepperAction.NEXT,
+      },
+    ],
+  },
+  {
+    stepName: 'review',
+    stepDisplayValue: 'Review',
+    cssClasses: ['card', 'card-body', 'bb-block', 'bb-block--lg'],
+    isActive: false,
+    isChecked: false,
+    buttonClass: [],
+    buttonConfig: [
+      {
+        type: 'secondary',
+        text: 'Edit',
+        action: StepperAction.BACK,
+      },
+      {
+        type: 'primary',
+        text: 'Submit',
+        action: StepperAction.SUBMIT,
+      },
+    ],
+  },
+];</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Provide the custom configuration to the widget component</strong></p>
+<div class="paragraph">
+<p>Provide the batch type and steps configuration as input of the <code>PayordMultiPaymentWidgetAngComponent</code>
+in the template. For example:</p>
+</div>
+<div class="listingblock">
+<div class="title">UsInternalTransfersWidgetAngModule</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { UsInternalTransfersWidgetAngComponent } from './us-internal-transfers-widget-ang.component';
+import { PayordMultiPaymentWidgetAngModule } from '@backbase/payord-omni-payment-widget-ang';
+
+@NgModule({
+    declarations: [UsInternalTransfersWidgetAngComponent],
+    imports: [
+        CommonModule,
+        BackbaseCoreModule.withConfig({
+            classMap: { UsInternalTransfersWidgetAngComponent },
+        }),
+        PayordMultiPaymentWidgetAngModule,
+    ],
+})
+export class UsInternalTransfersWidgetAngModule {}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">UsInternalTransfersWidgetAngComponent</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component } from '@angular/core';
+import { PayordMultiPaymentWidgetAngComponent } from '@backbase/payord-omni-payment-widget-ang';
+import { ManualBatchesConfig } from '@backbase/payment-orders-ang';
+import { INTERNAL_TRANSFERS, INTERNAL_TRANSFERS_STEPS_CONFIG } from './internal_transfers_config';
+
+@Component({
+  selector: 'bb-us-internal-transfers-widget-ang',
+  template: `
+    &lt;bb-payord-multi-payment-widget-ang
+      [config]="config"
+    &gt;&lt;/bb-payord-multi-payment-widget-ang&gt;
+  `,
+})
+export class UsInternalTransfersWidgetAngComponent {
+  public config: ManualBatchesConfig = {
+    availableTypes: [INTERNAL_TRANSFERS],
+    enableTypeSelection: false,
+    steps: INTERNAL_TRANSFERS_STEPS_CONFIG,
+    options: {
+      debounceTime: 300,
+    }
+  };
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Optional properties</strong></p>
+<div class="paragraph">
+<p>Additionally, you can provide the following optional properties to customize the widget:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>successEventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Event name that the widget publishes upon creation of a new batch order.
+The default value is <code>bb.event.batch.create.success</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>debounceTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines the waiting time between user keystrokes before requesting an arrangements search.
+This avoids sending unnecessary requests while the user is still typing the search term.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</div>
+<h2 id="manual_batch_advanced_config_options" class="discrete">Advanced configuration options</h2>
+<div class="paragraph">
+<p>If you customized the widget by creating a custom configuration, the following advanced options are available:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="adopt_manual_batch_widget.html#custom_steps_configuration_btn_section">Configure steps button section</a></p>
+</li>
+<li>
+<p><a href="adopt_manual_batch_widget.html#custom_batchtype_repositionfields">Reposition fields</a></p>
+</li>
+<li>
+<p><a href="adopt_manual_batch_widget.html#custom_batchtype_togglefields">Toggle fields</a></p>
+</li>
+<li>
+<p><a href="adopt_manual_batch_widget.html#custom_batchtype_overridecomponents">Override existing form components</a></p>
+</li>
+<li>
+<p><a href="adopt_manual_batch_widget.html#provide_custom_manual_batch_validation_messages">Provide custom validation messages to the form field</a></p>
+</li>
+<li>
+<p><a href="adopt_manual_batch_widget.html#attach_async_validators_to_the_batch_form_field">Attach asynchronous validators to the form field</a></p>
+</li>
+<li>
+<p><a href="adopt_manual_batch_widget.html#provide_hooks_to_the_batch_form_field_configuration">Provide hooks to the form field configuration</a></p>
+</li>
+<li>
+<p><a href="adopt_manual_batch_widget.html#provide_hooks_to_the_manual_batch_configuration">Provide hooks to the manual batch configuration</a></p>
+</li>
+</ul>
+</div>
+<h3 id="custom_steps_configuration_btn_section" class="discrete">Configure steps button section</h3>
+<div class="paragraph">
+<p>The buttons shown in every step can be configured in the step&#8217;s configuration object.
+There are some default actions to navigate between the steps and to submit the manual batch from the review step.
+It also supports hooks named <code>onClick</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Action name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>NEXT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Navigates to the next step if all the steps validations are passed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BACK</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Navigates back to the previous steps</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SUBMIT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Submits the manual batch form if the form is valid</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">export function onClickEvent({ doneFn, stepperConfig, action }: MultipaymentHooksParams) {
+  if (doneFn) {
+    doneFn(stepperConfig, action);
+  }
+}
+
+export const STEPPER_CONFIG: Array&lt;StepperConfig&gt; = [
+  {
+    stepName: 'batchInfo',
+    stepDisplayValue: 'Batch info',
+    cssClasses: ['card', 'card-body'],
+    isActive: true,
+    isChecked: false,
+    buttonClass: [],
+    buttonConfig: [
+      {
+        type: 'primary',
+        text: 'Next: Transfer details',
+        action: StepperAction.NEXT,
+        hooks: {
+          onClick: onClickEvent,
+        },
+      },
+    ],
+  },
+  {
+    stepName: 'transferDetails',
+    stepDisplayValue: 'Transfer details',
+    isActive: false,
+    isChecked: false,
+    cssClasses: ['pb-5', 'mb-5'],
+    buttonClass: ['py-4', 'fixed-bottom', 'bb-button-bar--sticky', 'px-sm-3'],
+    footerDetail: { totalAmount: true, totalCount: true },
+    buttonConfig: [
+      {
+        type: 'secondary',
+        text: 'Back',
+        action: StepperAction.BACK,
+      },
+      {
+        type: 'primary',
+        text: 'Next: Review',
+        action: StepperAction.NEXT,
+      },
+    ],
+  },
+  {
+    stepName: 'review',
+    stepDisplayValue: 'Review',
+    cssClasses: ['card', 'card-body', 'bb-block', 'bb-block--lg'],
+    isActive: false,
+    isChecked: false,
+    buttonClass: [],
+    buttonConfig: [
+      {
+        type: 'secondary',
+        text: 'Edit',
+        action: StepperAction.BACK,
+      },
+      {
+        type: 'primary',
+        text: 'Submit',
+        action: StepperAction.SUBMIT,
+      },
+    ],
+  },
+];</code></pre>
+</div>
+</div>
+<h3 id="custom_batchtype_repositionfields" class="discrete">Reposition fields</h3>
+<div class="paragraph">
+<p>By default, each form field is displayed along with other fields in the same group, since the form fields are contained in groups.
+For example, all counterparty fields are placed in the same section in the payment form, and all remittance fields are grouped together.</p>
+</div>
+<div class="paragraph">
+<p>In order to display a form control from one section in a different section, add a <code>mapToField</code> property to the form control and
+set it to the original section so that it is mapped to correct value when sent to the backend.</p>
+</div>
+<div class="paragraph">
+<p>For example, to display the <code>CounterPartyFields.accountNumber</code> field in the remittance section, add the <code>mapToField</code> property
+and set it to <code>PaymentBaseFields.counterparty</code>, which is the group name, or the logical parent, of <code>CounterPartyFields.accountNumber</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: PaymentBaseFields.remittanceInfo,
+    title: 'Payment details',
+    fields: [{
+        name: RemittanceInfoFields.amountCurrencyGroup,
+        type: PaymentComponents.amount,
+        options: {
+            label: 'Amount',
+            currencies: ['EUR'],
+        }
+    },{
+        name: CounterPartyFields.accountNumber,
+        type: PaymentComponents.text,
+        options: {
+            validators: [Validators.required],
+            label: 'Account number',
+            mapToField: PaymentBaseFields.counterparty
+        },
+    }],
+}</code></pre>
+</div>
+</div>
+<h3 id="custom_batchtype_togglefields" class="discrete">Toggle fields</h3>
+<div class="paragraph">
+<p>For some use cases, form controls should be hidden by default and appear based on an action on another field.
+The <strong>Create manual batch payments</strong> widget supports toggling of fields with the <code>dependants</code> and <code>activateDependantsOn</code> form field options.
+Toggling fields is supported for fields that share a common ancestor group. Toggling a field from a different ancestor group is not supported.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Appear on any value</strong></p>
+<div class="paragraph">
+<p>Use the <code>dependants</code> option to specify fields that should appear when the form field is not empty.</p>
+</div>
+<div class="paragraph">
+<p>For example, the <code>CounterPartyFields.accountNumber</code> field should appear only when a beneficiary is selected.
+Use the following configuration to achieve this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: PaymentBaseFields.counterparty,
+    title: 'Transfer to',
+    fields: [{
+        name: CounterPartyFields.name,
+        type: PaymentComponents.beneficiarySelector,
+        options: {
+            label: 'Beneficiary name',
+            placeholder: 'Select a beneficiary',
+            dependants: [
+                CounterPartyFields.accountNumber,
+            ],
+        },
+    },{
+        name: CounterPartyFields.accountNumber,
+        type: PaymentComponents.text,
+        options: {
+            validators: [Validators.required],
+            label: 'Account number',
+        },
+    }],
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Appear on a specific value</strong></p>
+<div class="paragraph">
+<p>Use the <code>activateDependantsOn</code> option to specify fields that should appear when the form field has a specific value.
+The dependent fields appear when the form field&#8217;s value is equal to the value of the <code>activateDependantsOn</code> property.</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>The following form controls support toggling of dependent fields with <code>dependants</code> and <code>activateDependantsOn</code> properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Radio</p>
+</li>
+<li>
+<p>Checkbox</p>
+</li>
+<li>
+<p>Switch</p>
+</li>
+<li>
+<p>Select</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  name: CounterPartyFields.correspondentBank,
+  fields: [
+    {
+      name: 'isCorrespondentBankTransfer',
+      type: PaymentComponents.switch,
+      options: {
+        label: 'Transfer through correspondent bank',
+        cssClasses: ['d-block', 'align-top', 'px-0', 'pr-md-3', 'mb-0'],
+        labelPosition: 'right',
+        dependants: [
+          CounterPartyFields.bankName,
+          CounterPartyFields.bankBranchCode,
+        ],
+        activateDependantsOn: true,
+      },
+    },
+    {
+      name: CounterPartyFields.bankBranchCode,
+      type: PaymentComponents.text,
+      options: {
+        label: 'Routing Transit Number (ABA)',
+        maxLength: 9,
+        cssClasses: ['d-inline-block', 'col-md-6', 'align-top', 'px-0', 'pr-md-3', 'mt-3'],
+        validators: [routingTransitNumberValidator],
+        isConditionalMandatory: true,
+      },
+    },
+    {
+      name: CounterPartyFields.bankName,
+      type: PaymentComponents.text,
+      options: {
+        label: 'Bank name (optional)',
+        cssClasses: ['d-inline-block', 'col-md-6', 'align-top', 'px-0', 'pr-md-3', 'mt-3'],
+      },
+    }
+  ],
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Appear on a custom condition</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>activateDependantsOn</code> option alternatively takes a function. The dependant fields appear based on the value returned by the function. The function is provided wit the of the input as parameter and it should return an array of dependant names or undefined.
+For example: the below config displays diffent dependants based on different values.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">  name: PaymentBaseFields.schedule,
+  fields: [
+    {
+      name: ScheduleFields.endType,
+      type: PaymentComponents.radio,
+      options: {
+        label: 'End',
+        preselect: true,
+        isConditionalMandatory: true,
+        cssClasses: ['d-inline-block', 'col-md-2', 'align-top', 'px-0', 'bb-schedule__end-type'],
+        defaultValue: ScheduleEndType.NEVER,
+        options: [
+          { label: 'Never', value: ScheduleEndType.NEVER },
+          { label: 'On date', value: ScheduleEndType.ON },
+          { label: 'After', value: ScheduleEndType.AFTER },
+        ],
+        dependants: [ScheduleFields.endDate, ScheduleFields.repeat],
+        activateDependantsOn(value: string) {
+          switch (value) {
+            case ScheduleEndType.ON:
+              return [ScheduleFields.endDate];
+            case ScheduleEndType.AFTER:
+              return [ScheduleFields.repeat];
+            default:
+              return;
+          }
+        },
+      },
+    },
+    {
+      name: ScheduleFields.endDate,
+      type: PaymentComponents.date,
+      options: {
+        cssClasses: ['d-inline-block', 'col-md-10', 'align-top', 'px-0', 'bb-schedule__end-date'],
+        validators: [endDateAfterStartDateValidator as ValidatorFn],
+        validationMessages: [
+          { name: 'required', message: 'End date is required' },
+          { name: 'lessThanStartDate', message: 'End date cannot be before start date' },
+        ],
+        isConditionalMandatory: true,
+        defaultValue: new Date().toISOString(),
+      },
+    },
+    {
+      name: ScheduleFields.repeat,
+      type: PaymentComponents.number,
+      options: {
+        isConditionalMandatory: true,
+        description: 'times',
+        min: 2,
+        max: 200,
+        defaultValue: 2,
+        validationMessages: [
+          { name: 'required', message: 'Value is required' },
+          { name: 'max', message: 'Value exceeds maximum allowed occurances' },
+        ],
+        cssClasses: ['d-inline-block', 'col-md-9', 'align-top', 'px-0', 'bb-schedule__repeat'],
+      },
+    },
+  ],
+}</code></pre>
+</div>
+</div>
+<h3 id="custom_batchtype_overridecomponents" class="discrete">Override existing form components</h3>
+<div class="paragraph">
+<p>Add a new form field or override an existing form control with a customized component using the <code>customFields</code> property.
+To add a new toggle component to the <strong>Create manual batch payments</strong> widget or to override an existing component, provide the component type with a new custom component.
+The custom component should implement <code>PaymentFormField</code> or <code>ActivatableFormField</code> and it should be an Angular form control.
+You should also register the custom field in the <code>entryComponents</code> section of the <code>NgModule</code> decorator.</p>
+</div>
+<div class="paragraph">
+<p>The following configuration shows how to add custom fields:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NewToggleCompoent } from 'new-toggle';
+import { CustomTextCompoent } from 'custom-text';
+
+export const SEPA: PaymentTypeConfig = {
+    fields: [initiator, counterParty, remittanceInfo, schedule],
+    name: 'Sepa',
+    paymentType: 'SEPA_CREDIT_TRANSFER',
+    customFields: {
+        toggle: NewToggleCompoent,
+        text: CustomTextCompoent
+    }
+};</code></pre>
+</div>
+</div>
+<h3 id="provide_custom_manual_batch_validation_messages" class="discrete">Provide custom validation messages to the form field</h3>
+<div class="paragraph">
+<p>You can provide custom validation messages to the form field configuration similar to other options.
+The validation messages can be provided with <code>validationMessages</code> property of the <code>options</code> in a form field configuration.
+The validation message item is an object that contains the name of the error and the valiadtion message.
+If more than one validation error is applicable the error message is displayed based on the order of validation item in the array.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { endDateAfterStartDateValidator } from '@backbase/payments-common-ang';
+{
+  type: PaymentComponents.date,
+  name: ScheduleFields.endDate,
+  options: {
+    cssClasses: ['d-inline-block', 'col-md-10', 'align-top', 'px-0', 'bb-schedule__end-date'],
+    validators: [endDateAfterStartDateValidator as ValidatorFn],
+    validationMessages: [
+      { name: 'required', message: 'End date is required' },
+      { name: 'lessThanStartDate', message: 'End date cannot be before start date' },
+    ],
+    isConditionalMandatory: true,
+    defaultValue: new Date().toISOString(),
+  },
+},</code></pre>
+</div>
+</div>
+<h3 id="attach_async_validators_to_the_batch_form_field" class="discrete">Attach asynchronous validators to the form field</h3>
+<div class="paragraph">
+<p>You can provide an asynchronous validator to the form field configuration similar to other properties.
+To attach an asynchronous validator to the form field, include the asynchronous validator in the <code>asyncValidators</code> property array
+of the <code>options</code> in a form field configuration.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  name: CounterPartyFields.accountNumber,
+  type: PaymentComponents.text,
+  options: {
+    validators: [Validators.required],
+    asyncValidators: [asyncIbanValidator],
+    label: 'IBAN',
+    isIban: true,
+  },
+}</code></pre>
+</div>
+</div>
+<h3 id="provide_hooks_to_the_batch_form_field_configuration" class="discrete">Provide hooks to the form field configuration</h3>
+<div class="paragraph">
+<p>Using hooks you can dynamically change a property in the form field instance or modify a field&#8217;s value based on
+another form field. There are two hooks supported by a manual batch form field config, they are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>onInit</code>: Triggered when the form field configuration is created.</p>
+</li>
+<li>
+<p><code>onDestroy</code>: Triggered when the form field configuration is destroyed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The form field hooks function would receive <code>FormFieldHooksParams</code> that contains the following details:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>component</code>: The instance of the form field component.</p>
+</li>
+<li>
+<p><code>control</code>: The angular form control of the field.</p>
+</li>
+<li>
+<p><code>group</code>: The parent form group that contains the form field.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Some form components such as <code>PaymentComponents.debitAccountSelector</code>, <code>PaymentComponents.internalAccountSelector</code>,
+and <code>PaymentComponents.schedule</code> are registered as groups, so the <code>control</code> value of the <code>FormFieldHooksParams</code> might be unavailable.
+In these cases <code>group</code> contains the <code>formGroup</code> instance of the component.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  name: 'batchName',
+  type: PaymentComponents.text,
+  options: {
+    validators: [Validators.required],
+    label: 'Batch Name',
+  },
+  hooks: {
+    onInit({ component, control, group }: FormFieldHooksParams) {
+      // Your custom logic here
+    },
+    onDestroy({ component, control, group }: FormFieldHooksParams) {
+      // Your custom logic here
+    },
+  },
+},</code></pre>
+</div>
+</div>
+<h3 id="provide_hooks_to_the_manual_batch_configuration" class="discrete">Provide hooks to the manual batch configuration</h3>
+<div class="paragraph">
+<p>You can provide hooks to the payment configuration similar to the form field configuration.
+There are four hooks supported by a manual batch config, they are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>onInit</code>: Triggered when the manual batch form is initialized.</p>
+</li>
+<li>
+<p><code>onDestroy</code>: Triggered when the manual batch form is destroyed.</p>
+</li>
+<li>
+<p><code>onSave</code>: Triggered when you click on continue and go to the review screen.</p>
+</li>
+<li>
+<p><code>onSubmit</code>: Triggered when you submit the manual batch in the review screen.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>onSave</code> and <code>onSubmit</code> manual batch hooks function would receive <code>PaymentHooksParams</code> that contains the following details:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>doneFn</code>: A callback function you should trigger when the hook is completed.</p>
+</li>
+<li>
+<p><code>form</code>: The entire manual batch form.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+To prevent the flow of the widget in the <code>onSave</code> or <code>onSubmit</code> hook, call the <code>doneFn</code> with the parameter <code>false</code>: <code>doneFn(false)</code>.
+This prevents the widget from saving or submitting the manual batch.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">export const INTERNAL_TRANSFER: ManualBatchTypeConfig = {
+  name: 'Internal transfers',
+  paymentType: 'INTRACOMPANY_PAYMENT_CREDIT_USA',
+  fields: [batchInfo, creditDebitSelection, initiator, payments],
+  hooks: {
+    onInit: () =&gt; {
+      console.log('onInit');
+    },
+    onDestroy: () =&gt; {
+      console.log('onDestroy');
+    },
+    onSave: ({ form, doneFn }?: PaymentHooksParams) =&gt; {
+      if (doneFn) {
+        console.log('onSave');
+        // Trigger the done function.
+        doneFn();
+      }
+    },
+    onSubmit: ({ form, doneFn }?: PaymentHooksParams) =&gt; {
+      if (doneFn) {
+        console.log('onSave');
+        // Trigger the done function.
+        doneFn();
+      }
+    }
+  }
+};</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

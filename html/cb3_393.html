@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Business Banking Widget Collection v3.9.3</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="cb3_393" class="book toc2 toc-left">
+<div id="header">
+<h1>Business Banking Widget Collection v3.9.3</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html"><span class="toc-current">Business Banking Widget Collection v3.9.3</span></a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="cb3_393" class="sect0">Business Banking Widget Collection v3.9.3</h1>
+          <div class="paragraph">
+<p>The highlights for this release are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Capabilities</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="cb3_393.html#cb3_account_statements_393">Account statements v3.9.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Accessibility fixes</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="cb3_393.html#cb3_card_management_393">Card Management v3.9.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bug fix</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="cb3_393.html#cb3_notifications_393">Notifications v3.9.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ability to show or hide the notification preferences icon</p>
+</li>
+<li>
+<p>UI improvements in <strong>Notification badge</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="cb3_393.html#cb3_payments_393">Payments v3.9.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Prefilling country for a template with no country</p>
+</li>
+<li>
+<p>New beneficiary selector</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="cb3_393.html#cb3_products_393">Products v3.9.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Synchronized backend and frontend account masking</p>
+</li>
+<li>
+<p>Application-level configuration of account number format</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="cb3_393.html#cb3_transactions_393">Transactions v3.9.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>View enlarged check images on mobile</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="cb3_393.html#cb3_user_self_service_393">User Self Service v3.9.3</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>New output for handling the termination of sessions on password change</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To find out which Backbase product versions have been verified together,
+see <a href="https://community.backbase.com/documentation/Business-Banking/3.9.3/bb_product_compatibility.html">Backbase product compatibility</a>.</p>
+</div>
+<h2 id="cb3_account_statements_393" class="discrete">Account statements v3.9.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_bug_fixes_8" class="discrete">Bug fixes</h3>
+<div class="paragraph">
+<p>This release includes the following bug fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Accessibility issue: Screen reader - Link purpose</p>
+<div class="paragraph">
+<p>Users using a screen reader now have additional information about the account name and book date for preview
+and download actions for each statement in the <strong>View and download business account statements</strong> widget.</p>
+</div>
+</li>
+<li>
+<p>Accessibility issue: Screen reader - Info &amp; Relationship</p>
+<div class="paragraph">
+<p>Column header names were added for the <strong>Preview &amp; Download</strong> options in the
+<strong>View and download business account statements</strong> widget,
+in order for screen readers to properly read them.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="cb3_card_management_393" class="discrete">Card Management v3.9.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_bug_fixes_9" class="discrete">Bug fixes</h3>
+<div class="paragraph">
+<p>This release includes the following bug fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MAINT-11197: Card Management Travel Notice: Correct status of the card is not reflected when user selects a card while creating a travel notice.</p>
+<div class="paragraph">
+<p>Card statuses are now correctly reflected in the <strong>View travel notice</strong> widget.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="cb3_notifications_393" class="discrete">Notifications v3.9.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_17" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>New displaySettingsButton preference</strong></p>
+<div class="paragraph">
+<p>A new <code>displaySettingsButton</code> boolean preference has been added to the <strong>Notification badge</strong> widget. The preference controls whether the notification settings icon is displayed or not. This can be useful for apps where setting up notification preferences
+is not available. The preference is set to <code>true</code> by default. See
+<a href="https://community.backbase.com/documentation/Business-Banking/3.9.3/notification_badge_reference#notification_badge_preferences">reference documentation</a> for details.</p>
+</div>
+</li>
+<li>
+<p><strong>Show more renamed to See more</strong></p>
+<div class="paragraph">
+<p>The <strong>Show more</strong> link text changed to <strong>See more</strong> in the <strong>Notification badge</strong> widget.</p>
+</div>
+</li>
+<li>
+<p><strong>Shade and hover</strong></p>
+<div class="paragraph">
+<p>The <strong>See more</strong> link is now underlined when hovered over in the <strong>Notification badge</strong> widget.
+Also, the shade is added to the each message in the list on hover for better UX.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="cb3_payments_393" class="discrete">Payments v3.9.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_18" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Web: Prefilling country for a template with no country</strong></p>
+<div class="paragraph">
+<p>The <strong>Initiate payment wizard</strong> widget now prefills a country after applying a template
+that does not have a country. The prefilled country is calculated as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the beneficiary account in the template is an IBAN, the prefilled country is extracted from the IBAN.</p>
+</li>
+<li>
+<p>If the beneficiary account in the template is a BBAN, the prefilled country is
+the default country from the configured list of sanctioned countries.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Web: New beneficiary selector</strong></p>
+<div class="paragraph">
+<p>The <strong>Initiate omni payment</strong> and <strong>Initiate payment wizard</strong> widgets come with a new beneficiary selector.
+It includes following features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Both the <strong>Contacts</strong> and <strong>Own accounts</strong> tabs in the beneficiary selector
+independently support pagination with scrolling.</p>
+</li>
+<li>
+<p>When all records are loaded, the tab displays <em>End of data</em>.</p>
+</li>
+<li>
+<p>When both the <strong>From account</strong> and <strong>Own account</strong> fields have the same account selected,
+the widget shows an error for the beneficiary.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_bug_fixes_10" class="discrete">Bug fixes</h3>
+<div class="paragraph">
+<p>This release includes the following bug fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MAINT-11505: Beneficiary selector component - bug while adding and removing details</p>
+<div class="paragraph">
+<p>While adding beneficiary details manually and then removing the beneficiary name with the cross button
+or by deleting, the contacts/own accounts tabs are shown as empty.
+This is fixed in the new beneficiary selector mentioned in the <strong>New features</strong> above.
+Both tabs now show the first set of data in this scenario.</p>
+</div>
+</li>
+<li>
+<p>MAINT-11703: Currency input does not support locales with thousand separators</p>
+<div class="paragraph">
+<p>For the locale <code>nl-NL</code>, a dot <code>.</code> is added at every 4th position for an amount of 4 or more digits.
+Similarly, for <code>en-ZA</code> locale, a space is added at every 4th position.
+The widget sends these amounts with thousand separators to the service, while
+it should remove the thousand separators before sending.
+It was fixed by using a custom separator based on the locale.</p>
+</div>
+</li>
+<li>
+<p>MAINT-11710: Omni Payment - error message improvements</p>
+<div class="paragraph">
+<p>The validation error message that is shown on the payment entry form and the review form
+starts with a non-translatable text 'Payment data error'.
+This text is made translatable as well as added with a configurable flag
+<code>isErrorTitleDisplayed</code> to remove it completely.
+Default value of this flag is <code>true</code>, which shows this text.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="cb3_products_393" class="discrete">Products v3.9.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_19" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Web: Synchronized backend and frontend account masking</strong></p>
+<div class="paragraph">
+<p>Rather than consuming unmasked account numbers from the backend and masking them in the frontend,
+the masking is now done in the backend.
+The frontend is fully synchronized with the backend and visualizes the account number that the backend
+returns.</p>
+</div>
+</li>
+<li>
+<p><strong>Web: Application-level configuration of account number format</strong></p>
+<div class="paragraph">
+<p>The spacing required for the formatting of the account number is now configurable per account type.
+Spacing can be set for every N characters.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_bug_fixes_11" class="discrete">Bug fixes</h3>
+<div class="paragraph">
+<p>This release includes the following bug fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MAINT-11504: [Accounts Overview]: Placing multiple widgets on the same view causes incorrect network requests</p>
+</li>
+</ul>
+</div>
+<h3 id="_deprecations_3" class="discrete">Deprecations</h3>
+<div class="paragraph">
+<p>This release includes the following deprecations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In v3.10.0:</p>
+<div class="paragraph">
+<p>Due to the new formatting and functionality for account masking introduced in this release,
+the following classes are deprecated:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Support ceases for the following classes:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Deprecated class</th>
+<th class="tableblock halign-left valign-top">Replacement class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-account-details-widget-ang &gt; ProductSummaryAccountDetailsComponent &gt; productNumberFormat</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="13"><p class="tableblock">Use number format pipes with the default configuration from product-summary or ui-ang instead.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-accounts-overview-ang &gt; AccountsOverviewTableComponent &gt; ibanNumberFormat</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-accounts-overview-ang &gt; AccountsOverviewTableComponent &gt; bbanNumberFormat</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-accounts-overview-ang &gt; AccountsOverviewTableComponent &gt; productNumberFormat</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-common-ang &gt; ProductSummaryAccountDetailsBaseComponent &gt; productNumberFormat</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-common-ang &gt; DefaultNumberFormat</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-common-ang &gt; ShowFullNumberFormat</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-ui &gt; ProductItemCardComponent &gt; ibanNumberFormat</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-ui &gt; ProductItemCardComponent &gt; bbanNumberFormat</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-ui &gt; ProductItemCardComponent &gt; productNumberFormat</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-ui &gt; ProductItemCustomTitleComponent &gt; productNumberFormat</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-ui &gt; ProductKindCollapsibleComponent &gt; numberFormat</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-ui &gt; ProductKindComponent &gt; productNumberFormat</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-common-ang &gt; ProductSummaryDetailsBaseComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ProductSummaryAccountDetailsBaseComponent</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-common-ang &gt; PaymentCardNumberFormat</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AccountsDisplayingFormat</code> from <code>@backbase/ui-ang</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-common-ang &gt; ProductNumberFormatPipe</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use <code>bbAccountNumber</code> pipe</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-account-details-widget-ang &gt; View business account details widget &gt; showBalanceHistoryChart</code> configuration property</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">Applicable for theme-v1 only</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-account-details-widget-ang &gt; ProductSummaryAccountDetailsComponent &gt; showBalanceHistoryChart</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-account-details-widget-ang &gt; ProductSummaryAccountDetailsComponent &gt; balanceHistorySeries</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-account-picker-ang &gt; AccountPickerContainerComponent &gt; groupByItems</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use <code>isFavorite</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-accounts-overview-ang &gt; AccountsOverviewTableComponent &gt; isCardNumber</code></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Use <code>isCardNumber</code> from <code>@backbase/product-summary-common-ang</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@backbase/product-summary-ui &gt; ProductItemCardComponent &gt; isCardNumber</code></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="cb3_transactions_393" class="discrete">Transactions v3.9.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_20" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Web: View enlarged check images on mobile</strong></p>
+<div class="paragraph">
+<p>The <strong>View transactions table</strong> widget now supports responsive view for enlarged check images,
+so that the bank customer can enlarge images on their mobile device.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="cb3_user_self_service_393" class="discrete">User Self Service v3.9.3</h2>
+<div class="paragraph">
+<p>This release note explains changes to this capability.</p>
+</div>
+<h3 id="_new_features_21" class="discrete">New features</h3>
+<div class="paragraph">
+<p>This release provides the following new feature:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Web: New output for handling the termination of sessions on password change</strong></p>
+<div class="paragraph">
+<p>The <a href="https://community.backbase.com/documentation/Business-Banking/3.9.3/web_user_management#manage_user_security">Manage user security</a> widget now
+emits a <code>widgetStatus</code> event that shows a user has successfully changed their password. This new output makes it
+possible for other components to handle the password change correctly.</p>
+</div>
+<div class="paragraph">
+<p>For example, if the User Manager service is
+<a href="https://community.backbase.com/documentation/DBS/2.20.3/configure_user_manager#end_users_sessions">configured to end a user&#8217;s active sessions</a> when
+the user changes their password, ensure the widgets don&#8217;t attempt to make any requests to the backend services,
+and present a way for the user to navigate to the login page to authenticate with their new password.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

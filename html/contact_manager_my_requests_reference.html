@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Manage contact change requests</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="contact_manager_my_requests_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Manage contact change requests</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html"><span class="toc-current">Manage contact change requests</span></a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="contact_manager_my_requests_reference" class="sect0">Manage contact change requests</h1>
+          <h2 id="_properties_22" class="discrete">Properties</h2>
+<div class="paragraph">
+<p>This widget has the following properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 20%;">
+<col style="width: 12%;">
+<col style="width: 18%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Label</th>
+<th class="tableblock halign-center valign-top">Name</th>
+<th class="tableblock halign-center valign-top">Value type</th>
+<th class="tableblock halign-center valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Number of contact requests per page</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>pageSize</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">20</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Max. number of navigation pages</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>maxNavPages</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Select the method for loading more contact requests</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>loadMoreMethod</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">pagination</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milliseconds to dismiss any notification message</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>notificationDismissTime</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">5000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Create contact success event name</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>contactCreateSuccessEventName</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">bb.event.initiate.contact.create.success</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_access_control_9" class="discrete">Access Control</h2>
+<div class="paragraph">
+<p>A permission is the combination of a business function and a single privilege granted to a user
+on a given resource type. Privileges are enforced by Digital Banking Services. Widget behavior is affected by the permissions of the user accessing the widget.</p>
+</div>
+<div class="paragraph">
+<p>The following table describes how the widget behavior changes depending on the permissions of the user:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 15%;">
+<col style="width: 20%;">
+<col style="width: 15%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Resource</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Business function</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Privilege</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Widget behavior</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">Contacts</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">Contacts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current user views a list contact edit requests they have created.</p>
+<p class="tableblock">If the user does not have the permission to view, the widget shows an empty list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">delete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current user deletes contact edit requests they have created.</p>
+<p class="tableblock">If the user does not have the permission to view, the widget shows an empty list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">edit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current user is able to edit a contact edit request they have created.</p>
+<p class="tableblock">If the user does not have the permission to view, the widget shows an empty list.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_extension_slots_17" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:
+<span class="image"><img src="./images/business_banking_3/manage_contact_change_requests_slots_1_2.svg?ver=3.10.1" alt="manage_contact_change_requests_slots_1_2"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/business_banking_3/manage_contact_change_requests_slot_3.svg?ver=3.10.1" alt="manage_contact_change_requests_slot_3"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="contact_manager_my_requests_reference.html#bbRequestsListContainerCustomizable">bbRequestsListContainerCustomizable</a></p>
+</li>
+<li>
+<p><a href="contact_manager_my_requests_reference.html#bbRequestsListCustomizable">bbRequestsListCustomizable</a></p>
+</li>
+<li>
+<p><a href="contact_manager_my_requests_reference.html#bbContactRequestItemDetailsCustomizable">bbContactRequestItemDetailsCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbRequestsListContainerCustomizable" class="discrete">bbRequestsListContainerCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbRequestsListContainerCustomizable let-hostRef&gt;
+  &lt;ng-container *ngIf="!hostRef.error; else errorState"&gt;
+    &lt;bb-requests-list
+      *ngIf="hostRef.items$ | async as requestsList else loadingList"
+      [items]="requestsList.items"
+      [totalCount]="requestsList.totalCount"
+      [loadMoreMethod]="hostRef.loadMoreMethod"
+      [contactCreateSuccessEventName]="hostRef.contactCreateSuccessEventName"
+      [pageSize]="hostRef.pageSize"
+      [isLoading]="hostRef.isLoadingList"
+      [maxNavPages]="hostRef.maxNavPages"
+      [loadMoreFrom]="hostRef.loadMoreFrom"
+      (pageChange)="hostRef.onPageChange($event)"
+      (loadMore)="hostRef.onLoadMore($event)"
+      (showDetails)="hostRef.onShowDetails($event)"
+      (delete)="hostRef.onDeleteItem($event)"
+      (goto)="hostRef.onGoto($event)"
+    &gt;&lt;/bb-requests-list&gt;
+    &lt;bb-contact-request-item-details
+      [contactItem]="hostRef.selectedItem"
+      [isOpen]="hostRef.showDetails"
+      [loading]="hostRef.isLoadingItemDetails"
+      [error]="hostRef.errorContactItemDetails"
+      (close)="hostRef.onCloseDetails()"
+      (delete)="hostRef.onDeleteItem($event)"
+      [approvalDetails]="hostRef.selectedApprovalDetails | async"
+    &gt;&lt;/bb-contact-request-item-details&gt;
+    &lt;bb-confirm-action-dialog
+      [isOpen]="hostRef.isDeleteConfirmOpened"
+      [confirmButtonColor]="'danger'"
+      (confirm)="hostRef.onConfirmDelete()"
+      (cancel)="hostRef.onCancelDelete()"
+    &gt;
+      &lt;span title i18n="@@contact-manager-my-requests.confirm-action-dialog.title"&gt;
+        {hostRef.selectedItem?.status, select, REJECTED { Delete } other {Withdraw}} contact
+        {hostRef.selectedItem?.action, select, CREATE {creation} UPDATE {update} DELETE {deletion}} request?
+      &lt;/span&gt;
+      &lt;span body i18n="@@contact-manager-my-requests.confirm-action-dialog.body"&gt;
+        Are you sure to {hostRef.selectedItem?.status, select, REJECTED { delete } other {withdraw}} the contact
+        {hostRef.selectedItem?.action, select, CREATE {creation} UPDATE {update} DELETE {deletion}} request? Entered data will be lost.
+      &lt;/span&gt;
+      &lt;span cancelButtonLabel i18n="@@contact-manager-my-requests.confirm-action-dialog.button.cancel"&gt;
+        Not now
+      &lt;/span&gt;
+      &lt;span confirmButtonLabel i18n="@@contact-manager-my-requests.confirm-action-dialog.button.confirm"&gt;
+        {hostRef.selectedItem?.status, select, REJECTED { Delete } other {Withdraw}}
+      &lt;/span&gt;
+    &lt;/bb-confirm-action-dialog&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #errorState&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-empty-state-ui
+        i18n-title="@@contact-manager-my-requests-list.error.generic.title"
+        title="Page couldn't load"
+        i18n-subtitle="@@contact-manager-my-requests-list.error.generic.subtitle"
+        subtitle="Try to reload the page or contact the system administrator."
+        iconSize="xxl"
+        iconModifier="error"
+      &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #loadingList&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-loading-indicator-ui
+        text="Loading data..."
+        i18n-text="@@contact-manager-my-requests.loading.text"&gt;
+      &lt;/bb-loading-indicator-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #deleteContactSuccess&gt;
+    &lt;span data-role="delete-contact-success-notification" i18n="@@contact-manager-my-requests.notification.delete.success"&gt;
+      Request deleted successfully
+    &lt;/span&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #deleteContactError&gt;
+    &lt;span data-role="delete-contact-fail-notification" i18n="@@contact-manager-my-requests.notification.delete.error"&gt;
+      Delete request failed
+    &lt;/span&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #cancelContactError&gt;
+    &lt;span data-role="cancel-contact-fail-notification" i18n="@@contact-manager-my-requests.notification.cancel.error"&gt;
+      Withdraw request failed
+    &lt;/span&gt;
+  &lt;/ng-template&gt;
+  &lt;ng-template #cancelContactSuccess&gt;
+    &lt;span data-role="cancel-contact-success-notification" i18n="@@contact-manager-my-requests.notification.cancel.success"&gt;
+      Request withdrawn successfully
+    &lt;/span&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbRequestsListCustomizable" class="discrete">bbRequestsListCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbRequestsListCustomizable let-hostRef&gt;
+  &lt;ng-container *ngIf="hostRef.items.length else emptyState"&gt;
+    &lt;div class="bb-my-requests table-responsive"&gt;
+      &lt;table class="table table-hover"
+        [bbTable]="hostRef.items"
+        bbTableFocus
+        (rowClick)="hostRef.onShowDetails($event)"
+      &gt;
+        &lt;thead&gt;
+          &lt;tr data-role="my-requests-list-header-row"&gt;
+            &lt;th scope="col"&gt;
+              &lt;span
+              i18n="@@contact-manager-my-requests-header.status" data-role="list-header-status"
+              &gt;
+                Status
+              &lt;/span&gt;
+            &lt;/th&gt;
+            &lt;th scope="col"&gt;
+              &lt;span i18n="@@contact-manager-my-requests-header.name" data-role="list-header-name"&gt;
+                Name
+              &lt;/span&gt;
+            &lt;/th&gt;
+            &lt;th scope="col"&gt;
+              &lt;span i18n="@@contact-manager-my-requests-header.request" data-role="list-header-request"&gt;
+                Request
+              &lt;/span&gt;
+            &lt;/th&gt;
+            &lt;th scope="col"&gt;
+              &lt;span i18n="@@contact-manager-my-requests-header.creationDate" data-role="list-header-creation-date"&gt;
+                Creation date
+              &lt;/span&gt;
+            &lt;/th&gt;
+            &lt;th
+              scope="col"
+              class="text-right"
+            &gt;
+            &lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr *ngFor="let requestItem of hostRef.items" [bbRow]="requestItem" data-role="list-row-values"&gt;
+            &lt;td&gt;
+              &lt;bb-badge-ui
+                data-role="list-row-status"
+                class="d-none d-md-block"
+                [color]="hostRef.statusBadgeColorMap[requestItem.status]"
+                [abbr]="(requestItem?.status).slice(0, 3)"
+                [text]="requestItem?.status"
+              &gt;&lt;/bb-badge-ui&gt;
+              &lt;bb-badge-ui
+                class="d-md-none d-lg-none"
+                [color]="hostRef.statusBadgeColorMap[requestItem?.status]"
+                [text]="requestItem.status"
+              &gt;&lt;/bb-badge-ui&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;div class="bb-text-bold break-word" data-role="list-row-name"&gt;
+                {{ requestItem.data.name }}
+              &lt;/div&gt;
+              &lt;div class="bb-text-support"&gt;
+                {{ requestItem.data.accounts.length }}
+                &lt;ng-container i18n="@@contact-manager-my-requests-list.accounts.label"&gt;{requestItem.data.accounts.length, select, 1 {account} other {accounts}}&lt;/ng-container&gt;
+              &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;div class="text-dark" i18n="@@contact-manager-my-requests-list.contact.action" data-role="list-row-request"&gt;
+                  {requestItem.action, select, CREATE {New contact} UPDATE {Update contact} DELETE {Delete contact}}
+              &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td data-role="list-row-creation-date"&gt;
+                &lt;ng-container i18n="@@contact-manager-my-requests-list.created.date"&gt;
+                  {requestItem?.creationTime | relativeDate, select, Today { Today } Yesterday { Yesterday } other
+                  {{{ requestItem?.creationTime | date:'mediumDate' }}} }
+                &lt;/ng-container&gt;
+                &lt;span class="bb-text-support"&gt;
+                    &lt;ng-container i18n="@@contact-manager-my-requests-list.created.at"&gt; at &lt;/ng-container&gt;
+                    &lt;ng-container&gt; {{requestItem?.creationTime| date: 'shortTime'}} &lt;/ng-container&gt;
+                &lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td class="text-right"&gt;
+              &lt;button
+                bbButton
+                data-role="cancel-delete-button"
+                circle="true"
+                color="link-dark"
+                buttonSize="sm"
+                [bbTooltip]="requestItem.status === 'REJECTED'? deleteTooltip : cancelTooltip"
+                triggers="hover focus"
+                (click)="hostRef.onDelete($event, requestItem)"&gt;
+                &lt;bb-icon-ui [name]="requestItem.status === 'REJECTED'? 'delete': 'cancel'"&gt;&lt;/bb-icon-ui&gt;
+              &lt;/button&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+
+    &lt;div [ngSwitch]="hostRef.loadMoreMethod" class="d-flex justify-content-center"&gt;
+      &lt;ng-container *ngSwitchCase="'pagination'"&gt;
+        &lt;bb-pagination-ui
+          [page]="0"
+          [maxNavPages]="hostRef.maxNavPages"
+          [totalItems]="hostRef.totalCount"
+          [itemsPerPage]="hostRef.pageSize"
+          (pageChange)="hostRef.onPageChange($event)"
+          [boundaryLinks]="true"
+          [directionLinks]="true"
+        &gt;&lt;/bb-pagination-ui&gt;
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngSwitchCase="'load-more'"&gt;
+        &lt;bb-load-button-ui
+          color="secondary"
+          [isLoading]="hostRef.isLoading"
+          [size]="hostRef.pageSize"
+          [from]="hostRef.loadMoreFrom"
+          [totalCount]="hostRef.totalCount"
+          (paramChange)="hostRef.onLoadMore($event)"
+        &gt;
+          &lt;ng-container i18n="@@bb-contact-manager-my-request-list.load.more"&gt;Load more&lt;/ng-container&gt;
+        &lt;/bb-load-button-ui&gt;
+      &lt;/ng-container&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #deleteTooltip&gt;
+    &lt;span i18n="@@contact-my-requests.tooltip.delete"&gt;Delete request&lt;/span&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #cancelTooltip&gt;
+    &lt;span i18n="@@contact-my-requests.tooltip.cencel"&gt;Withdraw request&lt;/span&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #emptyState&gt;
+    &lt;div class="bb-state-container"&gt;
+      &lt;bb-empty-state-ui
+        data-role="contact-manager-my-requests-empty-state"
+        i18n-title="@@contact-manager-my-requests.state.nocontacts.title"
+        title="No contact requests"
+        i18n-subtitle="@@contact-manager-my-requests.state.nocontacts.subtitle"
+        subtitle="You don't have any contact requests to be displayed."
+        iconSize="xxl"
+        iconModifier="contacts"&gt;
+      &lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbContactRequestItemDetailsCustomizable" class="discrete">bbContactRequestItemDetailsCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbContactRequestItemDetailsCustomizable let-hostRef&gt;
+  &lt;bb-modal-ui
+    [isOpen]="hostRef.isOpen"
+    (cancel)="hostRef.onClose()"
+    (confirm)="hostRef.onClose()"
+  &gt;
+    &lt;bb-modal-header-ui&gt;
+      &lt;ng-template bbCustomModalHeader&gt;
+        &lt;header class="bb-block bb-block-md row col-12" aria-labelledby="headerTtitle printBtn closeBtn"&gt;
+          &lt;div class="bb-stack"&gt;
+            &lt;bb-header-ui
+              headingType="h3"
+              heading="My contact request"
+              headingClasses="bb-stack__item"
+              data-role="contact-request-details-title"
+              i18n-heading="@@contact-request-item.details.header.title"
+            &gt;
+            &lt;/bb-header-ui&gt;
+            &lt;div class="bb-stack__item bb-sta bb-stack__item--push-right d-print-none"&gt;
+              &lt;button
+                (click)="hostRef.print()"
+                bbButton
+                buttonSize="sm"
+                circle="true"
+                color="link-dark"
+                bbTooltip="Print"
+                aria-label="Print contact details"
+                i18n-bbTooltip="@@contact-request-item.details.header.print.tooltip"
+                i18n-aria-label="@@contact-request-item.details.header.print"
+                [disabled]="hostRef.loading || hostRef.error"
+              &gt;
+                &lt;!-- ACCESSIBILITY compliance: The style attributes' content is needed for NVDA to read content on hover--&gt;
+                &lt;span
+                  class="sr-only"
+                  id="printBtn"
+                  style="min-width: 10px; min-height: 10px;"
+                  aria-label="Print batch upload details"
+                  i18n-aria-label="Print batch upload details@@batch-log.batch-upload.details.header.print"
+                &gt;
+                  Print batch upload details dialog button
+                &lt;/span&gt;
+                &lt;bb-icon-ui name="print"&gt;&lt;/bb-icon-ui&gt;
+              &lt;/button&gt;
+              &lt;button
+                bbButton
+                buttonSize="sm"
+                circle="true"
+                color="link-dark"
+                (click)="hostRef.onClose()"
+                bbTooltip="Close"
+                aria-label="Close contact details dialog"
+                i18n-bbTooltip="@@contact-request-item.details.header.close.tooltip"
+                i18n-aria-label="@@contact-request-item.details.header.close"
+              &gt;
+                &lt;span
+                  class="sr-only"
+                  id="closeBtn"
+                  style="min-width: 10px; min-height: 10px;"
+                  aria-label="Close upload detail"
+                  i18n-aria-label="Close batch upload detail@@batch-log.batch-upload.details.header.close"
+                &gt;
+                  Close batch upload details
+                &lt;/span&gt;
+                &lt;bb-icon-ui name="times"&gt;&lt;/bb-icon-ui&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div
+            class="bb-inline-stack"
+            *ngIf="hostRef.approvalDetails?.approvalDetails"
+          &gt;
+            &lt;bb-badge-ui
+              class="bb-inline-stack__item"
+              data-role="contact-request-details-status"
+              [color]="hostRef.statusBadgeColorMap[hostRef.approvalDetails?.approvalDetails.status]"
+              [text]="hostRef.getStatus(hostRef.approvalDetails)"
+            &gt;&lt;/bb-badge-ui&gt;
+            &lt;span
+              class="bb-inline-stack__item bb-text-support text-small"
+              data-role="contact-request-details-created-on-date"
+            &gt;
+              &lt;ng-container i18n="@@contact.request.details.created.on"&gt;
+                Created on
+              &lt;/ng-container&gt;
+              &lt;ng-container i18n="@@contact.request.details.created.date.relative"&gt;
+                {hostRef.contactItem?.creationTime | relativeDate, select, Today { Today } Yesterday { Yesterday } other
+                {{{ hostRef.contactItem?.creationTime | date:'mediumDate' }}} }
+              &lt;/ng-container&gt;
+              &lt;ng-container i18n="@@contact.request.details.created.at"&gt;
+                at
+              &lt;/ng-container&gt;
+              &lt;ng-container&gt;
+                {{hostRef.contactItem?.creationTime | date: 'shortTime'}}
+              &lt;/ng-container&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/header&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-header-ui&gt;
+    &lt;bb-modal-body-ui&gt;
+      &lt;ng-template bbCustomModalBody&gt;
+        &lt;ng-container *ngIf="hostRef.approvalDetails; else loading"&gt;
+          &lt;div
+            aria-live="assertive"
+            *ngIf="hostRef.approvalDetails.approvalDetails; else errorFetchingDetails"
+          &gt;
+            &lt;bb-contact-item-details
+              *ngIf="hostRef.contactItem"
+              [contactItem]="hostRef.contactItem.data"&gt;
+            &lt;/bb-contact-item-details&gt;
+
+            &lt;bb-collapsible-ui
+              data-role="approval-log-toggle"
+              *ngIf="hostRef.approvalDetails?.approvalDetails?.records?.length"
+            &gt;
+              &lt;ng-template
+                bbCollapsibleHeader
+                let-toggle="toggle"
+                let-isOpen="isOpen"
+              &gt;
+                &lt;div class="bb-block bb-block-xl bb-stack"&gt;
+                  &lt;div class="bb-stack__item bb-stack__item--fill"&gt;
+                    &lt;b i18n="@@contact-request-item.details.approvalLog"&gt;
+                      Approval log
+                    &lt;/b&gt;
+                  &lt;/div&gt;
+                  &lt;div class="bb-stack__item bb-stack__item--push-right"&gt;
+                    &lt;button
+                      (click)="toggle()"
+                      bbButton
+                      color="outline"
+                      aria-label="Approval log toggle"
+                      i18n-aria-label="@@bb-approval-log.toggle.label"
+                      data-role="approval-log-toggle-button"
+                      bbTooltip="Toggle"
+                      triggers="hover focus"
+                      i18n-bbTooltip="@@contact-request-item.details.approval-log-toggle.tooltip"
+                    &gt;
+                      &lt;bb-icon-ui [name]="isOpen ? 'toggle-up' : 'toggle-down'"&gt;&lt;/bb-icon-ui&gt;
+                    &lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;hr&gt;
+              &lt;/ng-template&gt;
+              &lt;ng-template bbCollapsibleBody&gt;
+                &lt;div aria-live="assertive"&gt;
+                  &lt;bb-item-log-ui
+                    [isPending]="hostRef.approvalDetails?.approvalDetails?.status === 'PENDING'"
+                    [records]="hostRef.approvalDetails?.approvalDetails?.records"&gt;
+                  &lt;/bb-item-log-ui&gt;
+                &lt;/div&gt;
+              &lt;/ng-template&gt;
+            &lt;/bb-collapsible-ui&gt;
+          &lt;/div&gt;
+        &lt;/ng-container&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-body-ui&gt;
+    &lt;bb-modal-footer-ui&gt;
+      &lt;ng-template bbCustomModalFooter&gt;
+        &lt;div *ngIf="hostRef.approvalDetails?.approvalDetails &amp;&amp; hostRef.approvalDetails?.approvalDetails.status !== 'APPROVED'"&gt;
+          &lt;button
+            bbButton
+            color="secondary"
+            (click)="hostRef.deleteContactRequestItem()"
+            data-role="cancel-delete-request"
+          &gt;
+            &lt;ng-container i18n="@@contact.request.details.cancel-delete.btn.label"&gt;
+              {hostRef.approvalDetails?.approvalDetails?.status, select, REJECTED {Delete request} other {Cancel request}}
+            &lt;/ng-container&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/bb-modal-footer-ui&gt;
+  &lt;/bb-modal-ui&gt;
+
+  &lt;ng-template #loading&gt;
+    &lt;bb-loading-indicator-ui&gt;&lt;/bb-loading-indicator-ui&gt;
+  &lt;/ng-template&gt;
+
+  &lt;ng-template #errorFetchingDetails&gt;
+    &lt;div class="d-flex justify-content-center"&gt;
+      &lt;bb-empty-state-ui
+        class="bb-empty-state-container d-flex align-items-center"
+        title="No approval details found"
+        i18n-title="@@contact-request-item.details.not-found.title"
+        i18n-subtitle="@@contact-request-item.details.not-found.subtitle"
+        subtitle="Unable to find approval details for this contact request."
+        iconSize="xxl"
+        iconModifier="error"
+      &gt;&lt;/bb-empty-state-ui&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html>

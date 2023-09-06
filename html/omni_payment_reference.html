@@ -1,0 +1,1972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Initiate omni payment</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="omni_payment_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Initiate omni payment</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html"><span class="toc-current">Initiate omni payment</span></a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html">Select business account</a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="omni_payment_reference" class="sect0">Initiate omni payment</h1>
+          <div class="paragraph">
+<p>This reference includes the following information:</p>
+</div>
+<h2 id="omni_payment_ootb_configurations" class="discrete">Out-of-the-box payment type configurations</h2>
+<div class="paragraph">
+<p>The following payment type configurations are supported out of the box:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 34%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Payment type</th>
+<th class="tableblock halign-left valign-top">Exported name</th>
+<th class="tableblock halign-left valign-top">Required business function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initiate US payment: US domestic wire transfer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>US_DOMESTIC_WIRE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">US Domestic Wire</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initiate EU payment: SEPA credit transfer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SEPA</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SEPA CT</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initiate UK payment: CHAPS transfer (beta)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CHAPS</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UK CHAPS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initiate UK payment: Faster Payments (beta)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>UK_FASTER_PAYMENT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UK Faster Payments</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initiate international transfer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>INTERNATIONAL_TRANSFER</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">US Foreign Wire</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initiate US payment: ACH credit transfer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>US_ACH_CREDIT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACH Credit Transfer</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="omni_payment_configuration" class="discrete">Configuration structure</h2>
+<div class="paragraph">
+<p>Customize the widget with a TypeScript configuration, which
+specifies the details of each form field in a payment form.
+The structure of the configuration is as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">export interface PaymentTypeConfig {
+  name: string;
+  paymentType: string;
+  fields: Array&lt;PaymentFormFieldConfig | PaymentFormGroup&gt;;
+  customFields?: PaymentComponentsMap;
+  businessFunction?: string;
+  hooks?: PaymentHooksOptions;
+  options?: PaymentTypeOptions;
+  description?: string
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This configuration has the following properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the payment type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The payment type that is sent to DBS when the payment is submitted. For example: <code>SEPA_CREDIT_TRANSFER</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fields</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>An array that can have one or more of the five configuration groups below. Each configuration group contains
+a <a href="omni_payment_reference.html#omni_payment_configuration_formgroup">Form group configuration</a> or a <a href="omni_payment_reference.html#omni_payment_configuration_formfield">Form field configuration</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>initiator</code>: Contains the details of the initiator fields such as debit account, etc.</p>
+</li>
+<li>
+<p><code>counterParty</code>: Contains the details of the counter party fields such as account number, bank code, address, etc.</p>
+</li>
+<li>
+<p><code>remittanceInfo</code>: Contains the details of the currency, amount details, payment reference, etc.</p>
+</li>
+<li>
+<p><code>schedule</code>: Contains the details for scheduling.</p>
+</li>
+<li>
+<p><code>additions</code>: Optional. Contains the details of any additional field that is not specified in
+the Digital Banking Services specification.</p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>businessFunction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An optional business function of the payment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>customFields</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An optional map of custom form components for new payment components or to override the existing components.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hooks</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An optional map of functions that can be provided to extend the functionality of the payment config.
+See <a href="adopt_omni_payment_widget.html#provide_hooks_to_the_payment_configuration">Provide hooks to the payment configuration</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An optional field to set any options.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description of the payment type.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="omni_payment_configuration_formgroup" class="discrete">Form group configuration</h3>
+<div class="paragraph">
+<p>The form group configuration is used to represent a form group fields together.
+It is also possible to create nested form groups.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">export interface PaymentFormGroup {
+  fields: Array&lt;PaymentFormFieldConfig | PaymentFormGroup&gt;;name: string;
+  title?: string;
+  subTitle?: string;
+  collapsible?: boolean;
+  cssClasses?: Array&lt;string&gt;;
+  options?: PaymentFormFieldOptions;
+  separator?: FormSeparatorConfig;
+  hasDynamicTitle?: boolean;
+  clearOptions?: ClearOptions;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This configuration has the following properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the form group. This is the Angular form group name, so it should be a string with no spaces.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An optional title for the form group.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>subTitle</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An optional subtitle for the form group.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collapsible</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether users can collapse and expand the form group. If enabled, also set a <code>title</code> for this form group,
+in order to display a heading in the collapsed state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fields</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array of <a href="omni_payment_reference.html#omni_payment_configuration_formgroup">Form group configuration</a> or <a href="omni_payment_reference.html#omni_payment_configuration_formfield">Form field configuration</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cssClasses</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array of css classes that can be used to style the group.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Form group options.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>separator</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to add a separator line and icon to form group.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hasDynamicTitle</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to render the selected beneficiary name as part of the title in the <code>PayordBeneficiaryHeader</code> component.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clearOptions</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clear button options for <code>PayordBeneficiaryHeader</code> component.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="omni_payment_configuration_formfield" class="discrete">Form field configuration</h3>
+<div class="paragraph">
+<p>The form field configuration is used to represent a single form control in the payment form.
+It is not possible to nest form fields.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">export interface PaymentFormFieldConfig {
+    name: string;
+    type: PaymentComponents | string;
+    options: PaymentFormFieldOptions;
+    hooks?: PaymentFormFieldHooksOptions;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This configuration has the following properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the form control. This is the Angular form control name, so it should be a string with no spaces.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>The type of form control, a string that maps to a form control component name.
+See <a href="omni_payment_reference.html#omni_payment_configuration_components">Components</a> below for more details.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">export const PaymentComponentsMap = {
+  text: PayordTextboxComponent,
+  textarea: PayordTextAreaComponent,
+  address: PayordAddressComponent,
+  select: PayordSelectComponent,
+  radio: PayordRadioComponent,
+  debitAccountSelector: PayordDebitAccountSelectorComponent,
+  beneficiarySelector: PayordBeneficiarySelectorComponent,
+  schedule: PayordScheduleComponent,
+  amount: PayordAmountComponent,
+  checkbox: PayordCheckboxComponent,
+  switch: PayordSwitchComponent,
+  date: PayordDateComponent,
+  number: PayordNumberComponent,
+  phone: PayordPhoneComponent,
+  internalAccountSelector: PayordInternalAccountSelectorComponent,
+  compactAmount: PayordCompactAmountComponent,
+  scheduleHeader: PayordScheduleHeaderComponent,
+  buttonGroup: PayordButtonGroupComponent,
+  countrySelector: PayordCountrySelectorComponent,
+  sanctionedCountrySelector: PayordSanctionedCountrySelectorComponent,
+  multiPaymentCard: MultiPaymentCardComponent,
+  internalAmountOptions: PayordInternalAmountOptionsComponent,
+  header: PayordHeaderComponent,
+  purposeOfPayment: PayordPurposeOfPaymentComponent,
+  alert: PayordAlertComponent,
+  scheduleSwitch: PayordScheduleSwitchComponent,
+  beneficiaryGroupHeader: PayordBeneficiaryGroupHeaderComponent,
+  multiPaymentAccountSelector: MultiPaymentAccountSelectorComponent,
+  contactSelector: PayordContactSelectorComponent,
+};</code></pre>
+</div>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>A set of properties to customize each form control. Some of the most common form field options are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>label</code> - Label for the form control.</p>
+</li>
+<li>
+<p><code>placeholder</code> - Placeholder for the form control.</p>
+</li>
+<li>
+<p><code>cssClasses</code> - Array of CSS classes used to style the form control.</p>
+</li>
+<li>
+<p><code>validators</code> - Array of Angular form validators to validate the form control.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It is possible to provide custom validators to any field.</p>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hooks</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An optional map of functions that can be provided to extend the functionality of the form control.
+See <a href="adopt_omni_payment_widget.html#provide_hooks_to_the_form_field_configuration">Provide hooks to the form field configuration</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="omni_payment_generic_field_options" class="discrete">Generic form field options</h3>
+<div class="paragraph">
+<p>The below options are common to all payment components. Any additional option specific to a particular field will be specified in the components section.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>label</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The label for the form control. Defaults to an empty string.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>placeholder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The placeholder for the form control. Defaults to an empty string. The placeholder option is not applicable to checkbox, radio and switch components.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cssClasses</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An array of css classes that can be used to style the form field. For example: <code>['d-inline-block', 'col-12', 'col-md-6']</code> classes can be provided to a form field config to occupy 50% width of the form in medium and large screens.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>validators</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An array of angular validation functions that can be applied on a form control. For example: <code>[Validators.required, routingTransitNumberValidator]</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>asyncValidators</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Similar to validators an array of async validators can be applied on a form control.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>validationMessages</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An array of custom validation messages for different error types. Example: <code>[{ name: 'required', message: 'End date is required' }]</code> . See <a href="adopt_omni_payment_widget.html#provide_custom_validation_messages">Provide custom validation messages to the form field</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultValue</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It is the initial value the form control.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dependants</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An array of names of form fields which are dependent on the current field. The field names provided in <code>dependants</code> are hidden by default and are displayed based on a value or condition. See <a href="adopt_omni_payment_widget.html#custom_paymenttype_togglefields">Toggle fields</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>activateDependantsOn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A value or a function that determines when the <code>dependants</code> should be visible. See <a href="adopt_omni_payment_widget.html#custom_paymenttype_togglefields">Toggle fields</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mapToField</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This property helps to map the correct parent of the form field. When a form control is placed in a group or section, it must be mapped to the appropriate parent so that the field value is sent to backend correctly. See <a href="adopt_omni_payment_widget.html#custom_paymenttype_repositionfields">Reposition fields</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isConditionalMandatory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This property helps to specify dependant fields as mandatory when they are visible. The dependant fields should not be provided with <code>Validator.required</code> since it will be hidden by default. So providing the <code>isConditionalMandatory</code> will make a field required when it is visible and optional when it is hidden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>helperText</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An optional text that will be placed next to form control&#8217;s label.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An optional description for the form control. It will be place below the form control.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="omni_payment_configuration_components" class="discrete">Components</h3>
+<div class="paragraph">
+<p>This section lists the out-of-the-box supported payment form components and ways to configure them.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Text component</strong>: This component is similar to the <code>bb-input-text-ui</code> from Web Design System,
+and it accepts the input properties of <code>bb-input-text-ui</code> as options. The textbox component accepts an option <code>isIban</code> which can be used to format the value of textbox in iban format.</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_text.svg?ver=3.10.1" alt="payord text">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: CounterPartyFields.bankBranchCode,
+    type: PaymentComponents.text,
+    options: {
+        label: 'Routing transit number',
+        helperText: ' (ABA)',
+        description: 'Routing transit number is a nine-digit number used to identify a bank.',
+        maxLength: 9,
+        cssClasses: ['d-inline-block', 'col-6', 'align-top', 'pr-0', 'mt-3'],
+        isIban: true,
+        validators: [Validators.required, routingTransitNumberValidator],
+    },
+},</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Textarea component</strong>: This component is similar to the <code>bb-input-textarea-ui</code> from Web Design System.
+It accepts the input properties of <code>bb-input-textarea-ui</code> as options.
+Provide <code>collapseOptions</code> to make the text area collapsed by default.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Regular textarea</strong>:</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_textarea.svg?ver=3.10.1" alt="payord textarea">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: CounterPartyFields.remittanceInformation,
+    type: PaymentComponents.textarea,
+    options: {
+        label: 'Message to beneficiary (optional)',
+        placeholder: 'Type your message here',
+        showCharCounter: true,
+        minLength: 0,
+        maxLength: 140,
+        rows: 3,
+        cols: 50,
+        cssClasses: ['d-inline-block', 'col-12', 'px-0'],
+        mapToField: PaymentBaseFields.counterparty,
+    },
+},</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Collapsed textarea</strong>:</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_textarea_collapsed.svg?ver=3.10.1" alt="payord textarea collapsed">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: CounterPartyFields.remittanceInformation,
+    type: PaymentComponents.textarea,
+    options: {
+        label: 'Message to beneficiary (optional)',
+        placeholder: 'Type your message here',
+        showCharCounter: true,
+        minLength: 0,
+        maxLength: 140,
+        rows: 3,
+        cols: 50,
+        cssClasses: ['d-inline-block', 'col-12', 'px-0'],
+        mapToField: PaymentBaseFields.counterparty,
+        collapseOptions: {
+            btnColor: 'link',
+            btnSize: 'md',
+            hideIcon: false,
+            icon: 'add',
+            iconSize: 'md',
+            label: 'Add message to beneficary',
+        }
+    },
+},</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Select component</strong>: This component is similar to the <code>bb-dropdown-single-select-ui</code> from Web Design System.
+It accepts the input properties of <code>bb-dropdown-single-select-ui</code> as options.</p>
+<div class="openblock">
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_select.svg?ver=3.10.1" alt="payord select">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: CounterPartyFields.accountType,
+    type: PaymentComponents.select,
+    options: {
+        label: 'Account type',
+        validators: [Validators.required],
+        options: [{
+            label: 'Savings',
+            value: 'SAVINGS',
+        }, {
+            label: 'Checking',
+            value: 'CHECKING',
+        }],
+        placeholder: 'Select an account type',
+        cssClasses: ['d-inline-block', 'col-6', 'align-top', 'pr-0'],
+    },
+},</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Radio component</strong>: This component is similar to the <code>bb-input-radio-group-ui</code> from Web Design System.
+It accepts the following input options.</p>
+<div class="openblock">
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_radio.svg?ver=3.10.1" alt="payord radio">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: CounterPartyFields.standardEntryClass,
+    type: PaymentComponents.radio,
+    options: {
+    label: 'Standard entry class (SEC Type)',
+    validators: [Validators.required],
+    cssClasses: ['d-inline-block', 'col-6', 'align-top', 'pl-0'],
+    mapToField: PaymentBaseFields.counterparty,
+    horizontal:true,
+    preselect: true,
+    options: [{
+            label: 'Personal(PPD)',
+            value: 'PPD',
+        },{
+            label: 'Business(CCD)',
+            value: 'CCD',
+        },
+    ]},
+},</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Checkbox component</strong>: This component is similar to the <code>bb-input-checkbox-ui</code> from Web Design System.
+It accepts the following input options.</p>
+<div class="openblock">
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_checkbox.svg?ver=3.10.1" alt="payord checkbox">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    type: PaymentComponents.checkbox,
+    name: RemittanceInfoFields.urgent,
+    options: {
+        label: 'This payment is urgent',
+    },
+},</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Switch component</strong>: This component is similar to the <code>bb-switch-ui</code> from Web Design System.
+It accepts the following input options:</p>
+<div class="openblock">
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_switch.svg?ver=3.10.1" alt="payord switch">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: 'isCorrespondentBankTransfer',
+    type: PaymentComponents.switch,
+    options: {
+        label: 'Transfer through correspondent bank',
+        cssClasses: ['d-block', 'align-top', 'pl-0', 'mb-0'],
+        labelPosition: 'right',
+    },
+},</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Date component</strong>: This component is similar to the <code>bb-input-datepicker-ui</code> from Web Design System,
+and it accepts the following input options:</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_date_input.svg?ver=3.10.1" alt="payord date input">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  type: PaymentComponents.date,
+  name: ScheduleFields.startDate,
+  options: {
+    label: 'Pay on',
+    cssClasses: ['d-inline-block', 'col-md-6', 'align-top', 'px-0', 'pl-md-3'],
+    validators: [Validators.required, pastDateValidator as ValidatorFn],
+    defaultValue: new Date().toISOString(),
+  },
+},</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Number component</strong>: This component is similar to the <code>bb-input-number-ui</code> from Web Design System.
+It accepts the following input options:</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_number_input.svg?ver=3.10.1" alt="payord number input">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  name: ScheduleFields.repeat,
+  type: PaymentComponents.number,
+  options: {
+    isConditionalMandatory: true,
+    label: 'Repeat',
+    min: 2,
+    max: 200,
+    defaultValue: 2,
+    validationMessages: [
+      { name: 'required', message: 'Value is required' },
+      { name: 'max', message: 'Value exceeds maximum allowed occurances' },
+    ],
+  },
+},</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Phone component</strong>: This component is similar to the <code>bb-input-phone-ui</code> from Web Design System.
+It accepts the following input options:</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_phone_input.svg?ver=3.10.1" alt="payord phone input">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  name: 'phoneNumber',
+  type: PaymentComponents.phone,
+  options: {
+    label: 'Beneficiary phone number',
+  },
+},</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Amount component</strong>: This component is similar to the <code>bb-amount-ui</code> from Web Design System.
+The default value for the amount should be an object similar to the given example.
+It accepts the following input options:</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_amount.svg?ver=3.10.1" alt="payord amount">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    type: PaymentComponents.amount,
+    name: RemittanceInfoFields.amountCurrencyGroup,
+    options: {
+        label: 'Amount',
+        cssClasses: ['col-8', 'pl-0', 'mb-0'],
+        currencies: ['USD'],
+        defaultValue: {
+          amount: '5.00',
+          currency: 'USD',
+        },
+    },
+},</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Compact amount component</strong>: This component is a single combined field and not split into currency, amount, and decimal. It accepts the following input:</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_compact_amount.svg?ver=3.10.1" alt="payord compact amount">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  type: PaymentComponents.compactAmount,
+  name: RemittanceInfoFields.amountCurrencyGroup,
+  options: {
+    label: 'Amount',
+    cssClasses: ['bb-amount-input__field--large', 'bb-block', 'bb-block--lg', 'col-md-6'],
+    currency: 'USD',
+    autoDecimal: true,
+    validationMessages: [
+      {name: 'invalidAmount',
+      message: 'Please add amount of this transfer',
+      },
+    ],
+  },
+},</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>autoDecimal</code>: Sets the decimal automatically on the UI when the bank customer starts typing in the input field. <code>currency</code> is used as initial currency.</p>
+</div>
+</li>
+<li>
+<p><strong>Debit account selector component</strong>: This component is similar to the <code>bb-account-selector-ui</code>
+from Web Design System and it accepts the following input options.
+The widget injects the debit accounts as property named <code>items$</code> in <code>options</code> at runtime. When overriding <code>PaymentComponents.debitAccountSelector</code> using <code>customComponents</code> (see <a href="adopt_omni_payment_widget.html#custom_paymenttype_overridecomponents">Override existing form components</a>) the debit accounts can be retrieved by subscribing to the <code>items$</code> observable that is injected into config options.
+The type of <code>items$</code> is given below:</p>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { InternalAccountFormItem } from '@backbase/payments-common-ang';
+items$: Observable&lt;Array&lt;InternalAccountFormItem&gt;&gt;;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A sample config for debit account selector is below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_debit_account_selector.svg?ver=3.10.1" alt="payord debit account selector">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    type: PaymentComponents.debitAccountSelector,
+    name: InitiatorFields.initiatorAccountGroup,
+    options: {
+        placeholder: 'Select an account',
+        cssClasses: ['mb-0'],
+        validationMessages: [
+            {
+                message: 'You can not do payments to new beneficiary from this account.',
+                name: 'hasOnlyClosedPaymentPermission',
+            },
+        ],
+    },
+},</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Internal account selector component</strong>: This component is similar to the <code>bb-product-selector-ui</code>
+from Web Design System. This component is used in the account selectors of both the <strong>From</strong> and the <strong>To</strong> accounts.
+Depending on where the component is used, the widget injects debitor or the creditor accounts as a property named <code>items$</code>, and external accounts as <code>connectedItems$</code> in <code>options</code> at runtime. This component has the following configurable options:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>productNumberFormat</code>: To modify the number format for masking.</p>
+</li>
+<li>
+<p><code>groupingshowCurrencySymbol</code>: To render a currency symbol instead of the currency abbreviation. For exmple : <strong>$</strong> instead of <strong>USD</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The type of <code>items$</code> is the following:</p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { InternalAccountFormItem } from '@backbase/payments-common-ang';
+items$: Observable&lt;Array&lt;InternalAccountFormItem&gt;&gt;;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>+
+A sample configuration for the internal account selector is the following:</p>
+</div>
+<div class="paragraph">
+<p>+
+image::business_banking_3/payord_internal_account_selector.svg[]</p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { ProductKinds, AccountBalances } from '@backbase/payment-orders-ang/configs';
+{
+  type: PaymentComponents.internalAccountSelector,
+  name: CounterPartyFields.counterPartyAccountGroup,
+  options: {
+    label: 'To',
+    placeholder: 'Select an account',
+    cssClasses: ['bb-block', 'bb-block--xl'],
+    productKind: ProductKinds.savings,
+    accountBalanceType: AccountBalances.available,
+    showCurrencySymbol: true,
+    validationMessages: [
+      {
+        name: 'required',
+        message: 'Please select an account from the list to transfer to',
+      },
+    ],
+  },
+},</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Beneficiary account selector component</strong>: This component is a customized version of <code>bb-product-selector-ui</code>
+from Web Design System and it accepts the following input options.
+The widget injects the beneficiary accounts as property named <code>items$</code> in <code>options</code> at runtime. A property called <code>fetchAccounts$</code> is also injected into the options, which can be used to search beneficaries. When overriding <code>PaymentComponents.beneficiarySelector</code> using <code>customComponents</code>(see <a href="adopt_omni_payment_widget.html#custom_paymenttype_overridecomponents">Override existing form components</a>) the credit accounts and contacts can be retrieved by subscribing to the <code>items$</code> observable that is injected into config options. The type of <code>items$</code> and <code>fetchItems$</code> is shown below:</p>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { InternalAccountFormItem, ExternalAccountFormItem } from '@backbase/payments-common-ang';
+
+items$: Observable&lt;{
+    accounts: InternalAccountFormItem[];
+    contacts: ExternalAccountFormItem[];
+    totalCreditAccounts: number;
+    totalContacts: number;
+}&gt;;
+
+fetchItems$: Subject&lt;string&gt;;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A sample config for beneficiary selector is below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_beneficiary_selector.svg?ver=3.10.1" alt="payord beneficiary selector">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+      name: CounterPartyFields.name,
+      type: PaymentComponents.beneficiarySelector,
+      options: {
+        label: 'Beneficiary name',
+        placeholder: 'Select a beneficiary',
+        cssClasses: ['col-12', 'mb-0'],
+        saveNewContactLabel: 'Save as a new contact',
+        tabs: ['contacts', 'accounts']
+      },
+    },</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+When overriding beneficiary selector with a custom component, if the form does not contain a counterparty account number field, make sure to set the beneficiary&#8217;s account number in the form group with name <code>CounterPartyFields.accountNumber</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Address component</strong>: This component is a form group and it contains multiple form fields. The configuration accepts two optional arrays for state and country list. The <code>hideCountry</code> option can be provided to hide the country field in the address component.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Initial state</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_address_initial.svg?ver=3.10.1" alt="payord address initial">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Edit state</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_address_form.svg?ver=3.10.1" alt="payord address form">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Collapsed state</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_address_card.svg?ver=3.10.1" alt="payord address card">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: CounterPartyFields.postalAddress,
+    type: PaymentComponents.address,
+    options: {
+        addressType: 'beneficiary',
+        countries: [
+            { label: 'United States', value: 'US'},
+            { label: 'Canada', value: 'CA'}
+        ],
+        states: [
+            { value: 'AL', label: 'Alabama' },
+            { value: 'AK', label: 'Alaska' },
+            { value: 'AS', label: 'American Samoa' },
+            { value: 'AZ', label: 'Arizona' }
+        ],
+    },
+},</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Schedule header component</strong>: This component is used to display the heading details of the schedule section. It accepts the following input options:</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_schedule_header.svg?ver=3.10.1" alt="payord schedule header">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  name: PaymentComponents.scheduleHeader,
+  type: PaymentComponents.scheduleHeader,
+  options: {
+    label: 'Delivery',
+  },
+},</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Schedule component</strong>: This component is a form group and it contains multiple form fields for managing payment schedule and
+it accepts the following input options.</p>
+<div class="openblock">
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/payord_schedule.svg?ver=3.10.1" alt="payord schedule">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    type: PaymentComponents.schedule,
+    name: ScheduleFields.scheduleGroup,
+    options: {
+        label: 'Schedule',
+        minOccurs: 2,
+        maxOccurs: 200,
+        frequencies: [
+            { value: 'ONCE', every: 1 },
+            { value: 'DAILY', every: 1 },
+            { value: 'WEEKLY', every: 1 },
+            { value: 'BIWEEKLY', every: 1 },
+            { value: 'MONTHLY', every: 1 },
+            { value: 'QUARTERLY', every: 1 },
+            { value: 'YEARLY', every: 1 },
+        ],
+    },
+},</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>PaymentComponents.schedule</code> is a single component and cannot be modified. Alternatively the schedule component can be implemented using individual configs like below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Validators, ValidatorFn } from '@angular/forms';
+import {
+  PaymentFormGroup,
+  PaymentComponents,
+  FormFieldHooksParams,
+  PaymentBaseFields,
+  ScheduleFields,
+} from '@backbase/payment-orders-ang/configs';
+
+import {
+  Frequencies,
+  pastDateValidator,
+  ScheduleEndType,
+  endDateAfterStartDateValidator,
+  endTypes,
+  getEndDate,
+  maxValueTwoHundredValidator,
+  minValueTwoValidator,
+} from '@backbase/payments-common-ang';
+import { Subject, combineLatest } from 'rxjs';
+import { takeUntil, pluck, distinctUntilChanged, startWith, filter } from 'rxjs/operators';
+
+let gc$: Subject&lt;void&gt;;
+export const schedule: PaymentFormGroup = {
+  name: PaymentBaseFields.schedule,
+  fields: [
+    {
+      name: PaymentComponents.scheduleHeader,
+      type: PaymentComponents.scheduleHeader,
+      options: {
+        label: 'Delivery',
+      },
+    },
+    {
+      name: ScheduleFields.frequency,
+      type: PaymentComponents.select,
+      options: {
+        label: 'Frequency',
+        validators: [Validators.required],
+        options: [
+          { label: 'Once', value: Frequencies.ONCE },
+          { label: 'Daily', value: Frequencies.DAILY },
+          { label: 'Weekly', value: Frequencies.WEEKLY },
+          { label: 'Biweekly', value: Frequencies.BIWEEKLY },
+          { label: 'Monthly', value: Frequencies.MONTHLY },
+          { label: 'Quarterly', value: Frequencies.QUARTERLY },
+          { label: 'Annually', value: Frequencies.YEARLY },
+        ],
+        defaultValue: Frequencies.ONCE,
+        cssClasses: ['d-inline-block', 'col-md-6', 'align-top', 'px-0', 'pr-md-3'],
+        dependants: [ScheduleFields.endType],
+        activateDependantsOn(value: string) {
+          return value !== Frequencies.ONCE ? [ScheduleFields.endType] : undefined;
+        },
+      },
+    },
+    {
+      type: PaymentComponents.date,
+      name: ScheduleFields.startDate,
+      options: {
+        label: 'Pay on',
+        cssClasses: ['d-inline-block', 'col-md-6', 'align-top', 'px-0', 'pl-md-3'],
+        validators: [Validators.required, pastDateValidator],
+        minDate: new Date().toISOString(),
+        defaultValue: new Date().toISOString(),
+        validationMessages: [{ name: 'pastDate', message: 'Execution date cannot be in the past' }],
+      },
+      hooks: {
+        onInit(params: FormFieldHooksParams) {
+          gc$ = new Subject();
+          if (params.group) {
+            params.group.valueChanges
+              .pipe(
+                takeUntil(gc$),
+                pluck(ScheduleFields.frequency),
+                distinctUntilChanged(),
+              )
+              .subscribe((value: Frequencies) =&gt; {
+                if (value === Frequencies.ONCE) {
+                  params.component.options.label = 'Pay on';
+                } else {
+                  params.component.options.label = 'Start on';
+                }
+              });
+          }
+        },
+        onDestroy() {
+          gc$.next();
+          gc$.complete();
+        },
+      },
+    },
+    {
+      name: ScheduleFields.endType,
+      type: PaymentComponents.radio,
+      options: {
+        label: 'End',
+        preselect: true,
+        isConditionalMandatory: true,
+        cssClasses: ['d-inline-block', 'col-md-2', 'align-top', 'px-0', 'bb-schedule__end-type'],
+        defaultValue: ScheduleEndType.NEVER,
+        options: [
+          { label: 'Never', value: ScheduleEndType.NEVER },
+          { label: 'On date', value: ScheduleEndType.ON },
+          { label: 'After', value: ScheduleEndType.AFTER },
+        ],
+        dependants: [ScheduleFields.endDate, ScheduleFields.repeat],
+        activateDependantsOn(value: string) {
+          switch (value) {
+            case ScheduleEndType.ON:
+              return [ScheduleFields.endDate];
+            case ScheduleEndType.AFTER:
+              return [ScheduleFields.repeat];
+            default:
+              return;
+          }
+        },
+      },
+    },
+    {
+      type: PaymentComponents.date,
+      name: ScheduleFields.endDate,
+      options: {
+        cssClasses: ['d-inline-block', 'col-md-10', 'align-top', 'px-0', 'bb-schedule__end-date'],
+        validators: [endDateAfterStartDateValidator as ValidatorFn],
+        validationMessages: [
+          { name: 'required', message: 'End date is required' },
+          { name: 'lessThanStartDate', message: 'End date cannot be before start date' },
+        ],
+        isConditionalMandatory: true,
+        defaultValue: new Date().toISOString(),
+      },
+      hooks: {
+        onInit(params: FormFieldHooksParams) {
+          const startDate = params.group &amp;&amp; params.group.get(ScheduleFields.startDate);
+          const frequency = params.group &amp;&amp; params.group.get(ScheduleFields.frequency);
+          const endType = params.group &amp;&amp; params.group.get(ScheduleFields.endType);
+          if (startDate &amp;&amp; frequency &amp;&amp; endType) {
+            combineLatest(
+              startDate.valueChanges.pipe(startWith(startDate.value)),
+              frequency.valueChanges.pipe(startWith(frequency.value)),
+              endType.valueChanges.pipe(filter(value =&gt; value === endTypes.on)),
+            )
+              .pipe(
+                takeUntil(gc$),
+                distinctUntilChanged(),
+              )
+              .subscribe(() =&gt; {
+                if (params.control) {
+                  params.control.patchValue(getEndDate(frequency.value, startDate.value));
+                }
+              });
+          }
+        },
+      },
+    },
+    {
+      name: ScheduleFields.repeat,
+      type: PaymentComponents.number,
+      options: {
+        isConditionalMandatory: true,
+        description: 'times',
+        min: 2,
+        max: 200,
+        defaultValue: 2,
+        validators: [minValueTwoValidator, maxValueTwoHundredValidator],
+        validationMessages: [
+          { name: 'required', message: 'Value is required' },
+          { name: 'min', message: 'Value is below the minimum allowed occurrences (2)' },
+          { name: 'max', message: 'Value exceeds maximum allowed occurances (200)' },
+        ],
+        cssClasses: ['d-inline-block', 'col-md-9', 'align-top', 'px-0', 'bb-schedule__repeat'],
+      },
+    },
+  ],
+};</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Schedule switch component</strong>: This component is used to display the <strong>Pay monthly</strong> switch instead of the payment frequency drop-down.</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/initiate_omni_payment_schedule_switch.png?ver=3.10.1" alt="initiate omni payment schedule switch">
+</div>
+</div>
+<div class="paragraph">
+<p>Out-of-the-box configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">type: PaymentComponents.scheduleSwitch,
+name: ScheduleFields.frequencySwitch,
+options: {
+cssClasses: ['col-12', 'mb-0', 'mt-4'],
+label: 'Pay monthly',
+tooltipMessage: 'For a recurring payment, the amount scheduled may change over time.',
+description:
+  'If the execution date falls on a weekend or holiday, we’ll make the payment on the previous business day.',
+values: {
+  on: Frequencies.MONTHLY,
+  off: Frequencies.ONCE,
+ },
+defaultValue: false,
+},</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This component has the following configurable properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>tooltip message</code>: The message of the tooltip that appears when the bank customer hovers over the <strong>i</strong> icon.</p>
+</li>
+<li>
+<p><code>label</code>: The header text of the section.</p>
+</li>
+<li>
+<p><code>description</code>: The explanatory text under the payment header.</p>
+</li>
+<li>
+<p><code>value</code>: The frequencies set when the switch is on or off respectively.</p>
+</li>
+<li>
+<p><code>default value</code>: Whether the switch is on or off by default.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alert component</strong>: This component is used to display due date messages when the bank customer selects a
+credit card or a loan account in the <strong>To</strong> drop-down.</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/initiate_omni_payment_alert_component_info.png?ver=3.10.1" alt="initiate omni payment alert component info">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/initiate_omni_payment_alert_component_warning.png?ver=3.10.1" alt="initiate omni payment alert component warning">
+</div>
+</div>
+<div class="paragraph">
+<p>Out-of-the-box configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">type: PaymentComponents.alert,
+      name: PaymentComponents.alert,
+      hidden: true,
+      options: {
+        cssClasses: ['col-md-12'],
+        alerts: {
+          undue: {
+            title: 'A payment executed after the due date will incur a late fee.',
+            description: 'The due date is @@date. A payment made before may improve your credit score.',
+            modifier: 'info',
+          },
+          overdue: {
+            title: 'The due date has passed. This payment will incur a late fee.',
+            description: 'The due date was @@date. Late payments will decrease your credit score.',
+            modifier: 'warning',
+          },
+        },
+      },
+      hooks: {
+        onInit: internalTransferScheduleAlertOnInitHook,
+      }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This component has the following configurable properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>title</code>: The title of the message.</p>
+</li>
+<li>
+<p><code>description</code>: The explanatory text about the due date and a late payment fee.</p>
+</li>
+<li>
+<p><code>modifier</code>: The type of the message - info block or warning. This defines the color and icon of the message.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="_international_transfer_2" class="discrete">International transfer</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Correspondent and Intermediary bank</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/omni_payment_correspondent_bank_configuration.svg?ver=3.10.1" alt="omni payment correspondent bank configuration">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/omni_payment_intermediary_bank_configuration.svg?ver=3.10.1" alt="omni payment intermediary bank configuration">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+  name: 'enableAdditionalBankDetails',
+  type: PaymentComponents.switch,
+  options: {
+    label: 'Transfer through intermediary bank',
+    cssClasses: ['col-12', 'mb-0'],
+    labelPosition: 'right',
+    dependants: [
+      'selectIntermediaryBankCodeType',
+      CounterPartyFields.bic,
+      CounterPartyFields.bankName,
+      CounterPartyFields.postalAddress,
+    ],
+    activateDependantsOn: true,
+  },
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Amount and currency selector</strong></p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Services and endpoints:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-order-options-client-api.html#api-SanctionedCurrencies-getSanctionedCurrencies">GET sanctioned currencies</a></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/omni_payment_amount_configuration.svg?ver=3.10.1" alt="omni payment amount configuration">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+      type: PaymentComponents.sanctionedCurrencyAmount,
+      name: RemittanceInfoFields.amountCurrencyGroup,
+      options: {
+        label: 'Amount',
+        cssClasses: ['col-12'],
+        validationMessages: [
+          {
+            message: 'Enter amount',
+            name: 'invalidAmount',
+          },
+          {
+            message: 'Selected country does not allow payments in this currency',
+            name: 'invalidCurrency',
+          },
+        ],
+      },
+    }</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Country selector</strong></p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Services and endpoints:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-order-options-client-api.html#api-SanctionedCountries-getSanctionedCountries">GET sanctioned countries</a></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/omni_payment_country_selector_configuration.svg?ver=3.10.1" alt="omni payment country selector configuration">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: CounterPartyFields.country,
+    type: PaymentComponents.sanctionedCountrySelector,
+    options: {
+      label: 'Country',
+      placeholder: '- select country -',
+      cssClasses: ['d-inline-block', 'col-md-6', 'align-top', 'pr-md-3'],
+      skipPreselect: true,
+      validators: [Validators.required],
+    },
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Payment option selector</strong></p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Services and endpoints:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/payment-order-options-client-api.html#api-PaymentOptions-postPaymentOptions">GET payment options</a></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/omni_payment_payment_option_selector_configuration.svg?ver=3.10.1" alt="omni payment payment option selector configuration">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: PaymentOptionFields.selectPaymentOption,
+    type: PaymentComponents.selectPaymentOption,
+    options: {
+      skipDefaultValue: true,
+    },
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Charge bearer selector</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/omni_payment_correspondent_bank_configuration.svg?ver=3.10.1" alt="omni payment correspondent bank configuration">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: PaymentOptionFields.chargeBearer,
+    type: PaymentComponents.chargeBearer,
+    options: {
+      label: 'How fees are paid',
+    },
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Transfer fee selector</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/business_banking_3/omni_payment_payment_cost_selector_configuration.svg?ver=3.10.1" alt="omni payment payment cost selector configuration">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">{
+    name: PaymentOptionFields.paymentCost,
+    type: PaymentComponents.paymentCost,
+    options: {},
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Contact selector</strong></p>
+<div class="paragraph">
+<p>A drop-down account selector with a search input. The bank customer either selects an item in the drop-down, or types it manually. The contacts are filtered and only the relevant ones are shown as the bank customer types in the contact. The search input field has OOTB required and valid name validation.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/retail_banking/omni_payment_contact_selector.png?ver=3.10.1" alt="omni payment contact selector">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">name: CounterPartyFields.name,
+  type: PaymentComponents.contactSelector,
+  options: {
+    label: 'Recipient’s name',
+    placeholder: 'Select contact or enter new',
+    cssClasses: ['col-md-6'],
+    validators: [Validators.required, Validators.pattern('^[A-Za-z0-9 ]+$')],
+    validationMessages: [
+      {
+        message: 'Enter a valid name',
+        name: 'pattern',
+      },
+      { name: 'required', message: 'Enter a recipient name' },
+    ],```</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

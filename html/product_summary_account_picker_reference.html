@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Select business account</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="product_summary_account_picker_reference" class="book toc2 toc-left">
+<div id="header">
+<h1>Select business account</h1>
+<div class="details">
+<span id="revnumber">version 3.10.1</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<p><span class="toc-root toc-current"><a href="index.html">Business Banking Widget Collection</a></span></p><ul class="sectlevel1">
+<li><a href="understand.html">Understand  Business Banking Widget Collection v3.10.1</a>
+<ul class="sectlevel2">
+<li><a href="what_are_widget_collections.html">What is Business Banking Widget Collection</a>
+</li>
+<li><a href="accountstatements_understand.html">Understand Account Statements</a>
+<ul class="sectlevel3">
+<li><a href="web_account_statements.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="authentication_understand.html">Understand Authentication</a>
+<ul class="sectlevel3">
+<li><a href="web_authentication.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="batches_understand.html">Understand Batches</a>
+<ul class="sectlevel3">
+<li><a href="web_batches.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cardmanagement_understand.html">Understand Card Management</a>
+<ul class="sectlevel3">
+<li><a href="web_card_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="cashflowforecasting_understand.html">Understand Cash Flow Forecasting</a>
+<ul class="sectlevel3">
+<li><a href="web_cash_flow_forecasting.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="contacts_understand.html">Understand Contacts</a>
+<ul class="sectlevel3">
+<li><a href="web_contacts.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="fx_trading_understand.html">Understand FX Trading</a>
+<ul class="sectlevel3">
+<li><a href="web_fx_trading.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="messages_understand.html">Understand Messages</a>
+<ul class="sectlevel3">
+<li><a href="web_messages.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="notifications_understand.html">Understand Notifications</a>
+<ul class="sectlevel3">
+<li><a href="web_notifications.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="payments_understand.html">Understand Payments</a>
+<ul class="sectlevel3">
+<li><a href="web_payments.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="places_understand.html">Understand Places</a>
+<ul class="sectlevel3">
+<li><a href="web_places.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="product_summary_understand.html">Understand Products</a>
+<ul class="sectlevel3">
+<li><a href="web_products.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="sweeping_understand.html">Understand Sweeping</a>
+<ul class="sectlevel3">
+<li><a href="web_sweeping.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="transaction_list_understand.html">Understand Transactions</a>
+<ul class="sectlevel3">
+<li><a href="web_transactions.html">Web widgets</a>
+</li>
+</ul>
+</li>
+<li><a href="user_self_service.html">Understand User Self Service</a>
+<ul class="sectlevel3">
+<li><a href="web_user_management.html">Web widgets</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="install_and_configure.html">Install</a>
+<ul class="sectlevel2">
+<li><a href="install_the_widget_collection_3_demo.html">Deploy the demo app for web</a>
+</li>
+<li><a href="install_the_lean_page_template.html">Install the lean page template for Widget Collection 3</a>
+</li>
+<li><a href="setup_widget_development_environment.html">Set up a widget development environment</a>
+</li>
+</ul>
+</li>
+<li><a href="use.html">Adopt</a>
+<ul class="sectlevel2">
+<li><a href="adopt_omni_payment_widget.html">Adopt the Initiate omni payment widget</a>
+</li>
+<li><a href="configure_create_payment_template_widget.html">Configure the Create payment template widget</a>
+</li>
+<li><a href="adopt_payment_wizard_widget.html">Adopt the Payment Wizard widget</a>
+</li>
+<li><a href="adopt_manual_batch_widget.html">Adopt the Create manual batch payments widget</a>
+</li>
+<li><a href="configure_navigation_notifications_widgets.html">Configure navigation for Notifications widgets</a>
+</li>
+<li><a href="how_to_use_theming.html">Use theming</a>
+</li>
+<li><a href="configure_account_numbers_displaying_in_products.html">Configure account numbers formatting for Products widgets</a>
+</li>
+<li><a href="synchronize_masking_behavior_in_products.html">Synchronize masking behavior with backed in Products widgets.</a>
+</li>
+</ul>
+</li>
+<li><a href="extend_and_build.html">Extend and build</a>
+<ul class="sectlevel2">
+<li><a href="extend_build_web.html">Extend and build web widgets</a>
+<ul class="sectlevel3">
+<li><a href="configure_batch_types.html">Add a custom batch type to the batch payment widgets</a>
+</li>
+<li><a href="configure_place_types.html">Customize the Find branches and ATMs widget</a>
+</li>
+<li><a href="field_mapping.html">Field mapping</a>
+</li>
+<li><a href="country_injection.html">Country injection</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="reference.html">Reference</a>
+<ul class="sectlevel2">
+<li><a href="web_reference.html">Web widgets</a>
+<ul class="sectlevel3">
+<li><a href="contact_manager_pending_approvals_reference.html">Approve contact change requests</a>
+</li>
+<li><a href="cash_flow_common_lib_reference.html">Cash Flow Forecasting common library</a>
+</li>
+<li><a href="create_message_reference.html">Compose message by the customer</a>
+</li>
+<li><a href="configure_forecast_reference.html">Configure forecast</a>
+</li>
+<li><a href="connect_accounting_software_reference.html">Connect accounting software</a>
+</li>
+<li><a href="contact_create_reference.html">Create business contact</a>
+</li>
+<li><a href="create_fx_trade_order_reference.html">Create FX trade order</a>
+</li>
+<li><a href="manual_batch_reference.html">Create manual batch payments</a>
+</li>
+<li><a href="create_sweep_reference.html">Create sweep</a>
+</li>
+<li><a href="contact_edit_reference.html">Edit business contact</a>
+</li>
+<li><a href="places_reference.html">Find branches and ATMs</a>
+</li>
+<li><a href="ach_debit_reference.html">Initiate ACH debit</a>
+</li>
+<li><a href="omni_payment_reference.html">Initiate omni payment</a>
+</li>
+<li><a href="payment_wizard_reference.html">Initiate payment wizard</a>
+</li>
+<li><a href="login_reference.html">Log in user</a>
+</li>
+<li><a href="manage_ach_debit_reference.html">Manage ACH debit</a>
+</li>
+<li><a href="configure_business_approval_notification_settings_reference.html">Manage business approval notification preferences</a>
+</li>
+<li><a href="batch_upload_log_reference.html">Manage batch file uploads</a>
+</li>
+<li><a href="manage_batches_reference.html">Manage batch payments</a>
+</li>
+<li><a href="manage_forecast_settings_reference.html">Manage forecast settings</a>
+</li>
+<li><a href="contact_manager_business_reference.html">Manage business contacts</a>
+</li>
+<li><a href="card_management_details_reference.html">Manage cards</a>
+</li>
+<li><a href="contact_manager_my_requests_reference.html">Manage contact change requests</a>
+</li>
+<li><a href="contact_details_reference.html">Manage contact details</a>
+</li>
+<li><a href="manage_payables_reference.html">Manage payables</a>
+</li>
+<li><a href="manage_payments_reference.html">Manage payments</a>
+</li>
+<li><a href="manage_payment_templates_reference.html">Manage payment templates</a>
+</li>
+<li><a href="manage_sweeps_reference.html">Manage sweeps</a>
+</li>
+<li><a href="card_management_travel_notice_reference.html">Manage travel notice</a>
+</li>
+<li><a href="manage_user_security_reference.html">Manage user security</a>
+</li>
+<li><a href="notification_badge_reference.html">Notification badge</a>
+</li>
+<li><a href="request_stop_checks_reference.html">Request stop checks</a>
+</li>
+<li><a href="product_summary_account_picker_reference.html"><span class="toc-current">Select business account</span></a>
+</li>
+<li><a href="select_context_reference.html">Select context</a>
+</li>
+<li><a href="upload_batch_reference.html">Upload batch payment</a>
+</li>
+<li><a href="user_context_menu_reference.html">View and change context</a>
+</li>
+<li><a href="view_download_business_account_statements_reference.html">View and download business account statements</a>
+</li>
+<li><a href="batch_payments_reference.html">View batch details</a>
+</li>
+<li><a href="product_summary_balance_history_reference.html">View business account balance history</a>
+</li>
+<li><a href="product_summary_account_details_reference.html">View business account details</a>
+</li>
+<li><a href="product_summary_accounts_overview_reference.html">View business account list</a>
+</li>
+<li><a href="card_management_overview_reference.html">View cards</a>
+</li>
+<li><a href="view_forecast_reference.html">View cash flow forecast</a>
+</li>
+<li><a href="contact_list_reference.html">View contact list</a>
+</li>
+<li><a href="messages_conversation_thread_reference.html">View conversation thread by the customer</a>
+</li>
+<li><a href="product_summary_favorite_accounts_reference.html">View favorite accounts</a>
+</li>
+<li><a href="view_fx_pair_details_reference.html">View FX pair details</a>
+</li>
+<li><a href="view_fx_rates_reference.html">View FX rates</a>
+</li>
+<li><a href="messages_conversations_list_reference.html">View messages by the customer</a>
+</li>
+<li><a href="view_receivables_reference.html">View receivables</a>
+</li>
+<li><a href="cash_flow_payment_request_details_reference.html">Cash flow payment request details</a>
+</li>
+<li><a href="view_sticky_popup_notifications_reference.html">View sticky and pop-up notifications</a>
+</li>
+<li><a href="stop_checks_list_reference.html">View stop check payment requests</a>
+</li>
+<li><a href="view_sweep_details_reference.html">View sweep details</a>
+</li>
+<li><a href="transactions_reference.html">View transactions table</a>
+</li>
+</ul>
+</li>
+<li><a href="bb_product_compatibility.html">Backbase product compatibility</a>
+</li>
+<li><a href="retirement.html">Backbase software lifecycle</a>
+</li>
+<li><a href="downloads_all.html">Downloads</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="modendtbl.html">Module/Endpoint list</a>
+</li>
+<li><a href="payments_schematics_reference.html">Payments Schematics</a>
+</li>
+<li><a href="platform_support.html">Software requirements</a>
+</li>
+<li><a href="third_party_dependencies.html">Third-party dependencies</a>
+</li>
+<li><a href="troubleshoot_angular_10_upgrade.html">Troubleshooting Angular 10 upgrade</a>
+</li>
+</ul>
+</li>
+<li><a href="release_notes.html">Release notes</a>
+<ul class="sectlevel2">
+<li><a href="cb3_3_10_1.html">Business Banking Widget Collection v3.10.1</a>
+</li>
+<li><a href="cb3_3100.html">Business Banking Widget Collection v3.10.0</a>
+</li>
+<li><a href="cb3_395.html">Business Banking Widget Collection v3.9.5</a>
+</li>
+<li><a href="cb3_394.html">Business Banking Widget Collection v3.9.4</a>
+</li>
+<li><a href="cb3_393.html">Business Banking Widget Collection v3.9.3</a>
+</li>
+<li><a href="cb3_392.html">Business Banking Widget Collection v3.9.2</a>
+</li>
+<li><a href="cb3_391.html">Business Banking Widget Collection v3.9.1</a>
+</li>
+<li><a href="cb3_390.html">Business Banking Widget Collection v3.9.0</a>
+</li>
+<li><a href="cb3_381.html">Business Banking Widget Collection v3.8.1</a>
+</li>
+<li><a href="cb3_380.html">Business Banking Widget Collection v3.8.0</a>
+</li>
+<li><a href="cb3_371.html">Widget Collection Business Banking v3.7.1</a>
+</li>
+<li><a href="cb3_370.html">Widget Collection Business Banking v3.7.0</a>
+</li>
+<li><a href="cb3_362.html">Widget Collection Business Banking v3.6.2</a>
+</li>
+<li><a href="cb3_361.html">Widget Collection Business Banking v3.6.1</a>
+</li>
+<li><a href="cb3_360.html">Widget Collection Business Banking v3.6.0</a>
+</li>
+<li><a href="cb3_353.html">Widget Collection Business Banking v3.5.3</a>
+</li>
+<li><a href="cb3_352.html">Widget Collection Business Banking v3.5.2</a>
+</li>
+<li><a href="cb3_351.html">Widget Collection Business Banking v3.5.1</a>
+</li>
+<li><a href="bb_350.html">Widget Collection Business Banking v3.5.0</a>
+</li>
+<li><a href="bb_343.html">Widget Collection Business Banking v.3.4.3</a>
+</li>
+<li><a href="bb_342.html">Widget Collection Business Banking v.3.4.2</a>
+</li>
+<li><a href="bb_341.html">Widget Collection Business Banking v.3.4.1</a>
+</li>
+<li><a href="bb_340.html">Business Banking Widget Collection v.3.4.0</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h1 id="product_summary_account_picker_reference" class="sect0">Select business account</h1>
+          <div class="paragraph">
+<p>This page includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="product_summary_account_picker_reference.html#bb_account_picker_widget_selector">Selector name</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_picker_reference.html#bb_account_picker_widget_required_imports">Required imports</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_picker_reference.html#bb_account_picker_widget_extension_slots">Extension slots</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_picker_reference.html#bb_account_picker_widget_hostref_api">API</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_picker_reference.html#bb_account_picker_widget_implementation">Implementation example</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_picker_reference.html#bb_account_picker_widget_preferences">Preferences</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_picker_reference.html#bb_account_picker_widget_attributes">Attributes</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_picker_reference.html#bb_account_picker_widget_access_control">Access Control</a></p>
+</li>
+</ul>
+</div>
+<h2 id="bb_account_picker_widget_selector" class="discrete">Selector name</h2>
+<div class="paragraph">
+<p>This widget has the following selector name: <code>&lt;bb-account-picker-widget&gt;&lt;/bb-account-picker-widget&gt;</code></p>
+</div>
+<h2 id="bb_account_picker_widget_required_imports" class="discrete">Required imports</h2>
+<div class="paragraph">
+<p>The following imports are required to set up and customize this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Widget module import</p>
+<div class="paragraph">
+<p>Import the following modules into the module of your wrapper widget:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { ProductSummaryAccountPickerModule } from '@backbase/product-summary-account-picker-ang';</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="bb_account_picker_widget_extension_slots" class="discrete">Extension slots</h2>
+<div class="paragraph">
+<p>This widget has the following extension slots:</p>
+</div>
+<div class="paragraph">
+<p>If multiselect is enabled for this widget in Experience Manager.
+<span class="image"><img src="./images/business_banking_3/select_business_account_slots_multiselect_1_2_3.svg?ver=3.10.1" alt="multiselect"></span></p>
+</div>
+<div class="paragraph">
+<p>If multiselect is not enabled for this widget in Experience Manager.
+<span class="image"><img src="./images/business_banking_3/select_business_account_slots_singleselect_1_2_3.svg?ver=3.10.1" alt="singleselect"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="product_summary_account_picker_reference.html#bbAccountPickerWidgetCustomizable">bbAccountPickerWidgetCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_picker_reference.html#bbAccountPickerContainerCustomizable">bbAccountPickerContainerCustomizable</a></p>
+</li>
+<li>
+<p><a href="product_summary_account_picker_reference.html#bbAccountPickerItemCustomizable">bbAccountPickerItemCustomizable</a></p>
+</li>
+</ol>
+</div>
+<h3 id="bbAccountPickerWidgetCustomizable" class="discrete">bbAccountPickerWidgetCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbAccountPickerWidgetCustomizable
+  let-hostRef&gt;
+    &lt;bb-account-picker-container
+      [accountIds]="hostRef.accountIds | async"
+      [businessFunction]="hostRef.businessFunction"
+      [resourceName]="hostRef.resourceName"
+      [privilege]="hostRef.privilege"
+      [size]="hostRef.size"
+      [multiple]="hostRef.multiple"
+      [dropdownPosition]="hostRef.dropdownPosition"
+      [favoriteFirst]="hostRef.favoriteFirst"
+      [multiSelectLabelLimit]="hostRef.multiSelectLabelLimit"
+      [debounceTime]="hostRef.debounceTime"
+      [accountsForVirtualScroll]="hostRef.accountsForVirtualScroll"
+      [accountsBeforeLoadingMore]="hostRef.accountsBeforeLoadingMore"
+      (selectedAccountIds)="hostRef.onSelectedAccount($event)"
+    &gt;&lt;/bb-account-picker-container&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<h3 id="bbAccountPickerContainerCustomizable" class="discrete">bbAccountPickerContainerCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template
+  bbAccountPickerContainerCustomizable
+  let-hostRef
+  let-accounts="context.accounts"
+  let-multiple="context.multiple"
+  let-favoriteFirst="context.favoriteFirst"
+  let-selectedItems="context.selectedItems"
+  let-loading="context.loading"
+  let-error="context.error"
+  let-dropdownPosition="context.dropdownPosition"
+  let-multiSelectLabelLimit = "context.multiSelectLabelLimit"
+  &gt;
+  &lt;ng-container *ngIf="accounts; else loadingTemplate"&gt;
+    &lt;bb-account-selector-ui
+      [virtualScroll]="hostRef.virtualScroll | async"
+      [items]="accounts.items"
+      [multiple]="multiple"
+      [closeOnSelect]="!multiple"
+      [groupByFn]="favoriteFirst ? hostRef.isFavorite : undefined"
+      [selectedItems]="selectedItems"
+      [loading]="loading"
+      [dropdownPosition]="dropdownPosition"
+      [searchFunc]="hostRef.searchByAlias"
+      (change)="hostRef.change($event)"
+      (scroll)="hostRef.scroll($event)"
+      (scrollToEnd)="hostRef.scrollToEnd($event)"
+      (filterChange)="hostRef.filter($event)"
+      (search)="hostRef.search($event)"
+      (clearSearch)="hostRef.search()"
+      placeholder="Select Accounts"
+      i18n-placeholder="Select Accounts|Select Accounts placeholder
+        @@account-picker-widget.empty.state.placeholder"
+    &gt;
+    &lt;ng-template bbCustomMultiSelectedItemsLabel let-items="items"&gt;
+      &lt;div class="bb-account-selector__selected"&gt;
+        &lt;div class="bb-account-selector__selected-accounts-number bb-text-bold"&gt;
+          &lt;span i18n="Selected Accounts|Selected Accounts multi label@@bb-product-summary-account-picker.multi.label"
+            data-role="selected-accounts-count"
+          &gt;{ items.length, plural, =1 {1 account selected} other {{{accounts.items.length === items.length ? 'All' : items.length}} accounts selected}}&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="bb-account-selector__selected-accounts bb-text-subtitle"&gt;
+          &lt;ng-container *ngIf="accounts.items.length === items.length; else selectedAccountsTemplate"&gt;
+            {{ items.length }}
+            &lt;span
+              i18n="
+                 All Selected Accounts|All Selected Accounts label @@product-summary-account-picker.allSelectedAccounts.label
+              "
+              class="bb-account-selector__selected-account"
+            &gt;
+              accounts
+            &lt;/span&gt;
+          &lt;/ng-container&gt;
+          &lt;ng-template #selectedAccountsTemplate&gt;
+            &lt;bb-ellipsis-ui&gt;
+              &lt;span class="bb-account-selector__selected-account"&gt;
+                {{hostRef.getMultiSelectLabelText(selectedItems, multiSelectLabelLimit)}}
+              &lt;/span&gt;
+            &lt;/bb-ellipsis-ui&gt;
+          &lt;/ng-template&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+
+    &lt;ng-template bbCustomOptionItem let-item="item" let-item$="item$" let-index="index"&gt;
+      &lt;ng-container *ngIf="multiple"&gt;
+        &lt;div class="bb-stack" &gt;
+          &lt;div class="bb-stack__item multiple-accounts-item-checkbox"&gt;
+            &lt;bb-input-checkbox-ui
+              [id]="index"
+              [ngModel]="item$.selected"
+              (click)="$event.preventDefault()"&gt;
+            &lt;/bb-input-checkbox-ui&gt;
+          &lt;/div&gt;
+          &lt;div class="bb-stack__item bb-stack__item--fill bb-ellipsis bb-ellipsis--single-line"&gt;
+            &lt;ng-container
+              bbAccountPickerItemCustomizable
+              [bbHostRef]="hostRef"
+              [bbTemplateContext]="{ item: item }"&gt;
+            &lt;/ng-container&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-container *ngIf="!multiple"&gt;
+        &lt;ng-container
+          bbAccountPickerItemCustomizable
+          [bbHostRef]="hostRef"
+          [bbTemplateContext]="{ item: item }"&gt;
+        &lt;/ng-container&gt;
+      &lt;/ng-container&gt;
+    &lt;/ng-template&gt;
+
+    &lt;ng-template bbCustomSingleSelectedItemLabel let-item="item"&gt;
+      &lt;ng-container
+        bbAccountPickerItemCustomizable
+        [bbHostRef]="hostRef"
+        [bbTemplateContext]="{ item: item }"&gt;
+      &lt;/ng-container&gt;
+    &lt;/ng-template&gt;
+    &lt;/bb-account-selector-ui&gt;
+  &lt;/ng-container&gt;
+
+  &lt;ng-template #loadingTemplate&gt;
+    &lt;ng-container *ngIf="error; else loadingIndicator"&gt;
+      &lt;div class="bb-state-container"&gt;
+        &lt;bb-empty-state-ui
+          [title]="hostRef.processErrorMessages(error?.messages)"
+          iconModifier="error"&gt;
+        &lt;/bb-empty-state-ui&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-template #loadingIndicator&gt;
+      &lt;div class="bb-block bb-block--xs"&gt;
+        &lt;bb-loading-indicator-ui&gt;&lt;/bb-loading-indicator-ui&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/ng-template&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>accounts</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of accounts to be shown in the selector</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>multiple</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets whether the bank customer can select multiple accounts at a time.</p>
+<p class="tableblock">Set to <code>false</code> in order to restrict selection to a single account only.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>favoriteFirst</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets how many account names can be displayed at once in the selection field of the widget.</p>
+<p class="tableblock">Accounts selected on top of the limit will be truncated.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>selectedItems</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of selected items. Type: <code>Observable&lt;ProductsummaryItem | ProductsummaryItem[] | undefined&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>loading</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines if fetching data is in progress. Type: <code>Observable&lt;boolean&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>error</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines error state for the component. Type: <code>Observable&lt;AccountsOverviewError | undefined&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>dropdownPosition</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the dropdown position. <code>Observable&lt;string&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>multiSelectLabelLimit</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets how many account names can be displayed at once in the selection field of the widget.</p>
+<p class="tableblock">Accounts selected on top of the limit will be truncated. Type: <code>Observable&lt;number&gt;</code></p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bbAccountPickerItemCustomizable" class="discrete">bbAccountPickerItemCustomizable</h3>
+<div class="paragraph">
+<p>This extension slot includes the following default template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;ng-template bbAccountPickerItemCustomizable
+  let-hostRef
+  let-item="context.item"&gt;
+  &lt;bb-product-item-basic-account-ui
+    [title]="item.displayName"
+    [productNumber]="item | bbProductNumberValue"
+    [productNumberFormat]="item | bbProductNumberFormat"
+    [amount]="item.bookedBalance || item.principalAmount || item.currentInvestmentValue"
+    [currency]="item.currency"
+    [active]="item.selected"
+    [favorite]="hostRef.isFavorite(item)"
+  &gt;
+  &lt;/bb-product-item-basic-account-ui&gt;
+&lt;/ng-template&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This extension slot consumes the following object properties from its custom context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Object property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>item</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Product data. Type: <code>ProductSummaryItem</code></p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="bb_account_picker_widget_hostref_api" class="discrete">API</h2>
+<div class="paragraph">
+<p>The following table shows the public class members of the host component that you access from each extension slot:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Extension slot identifier</th>
+<th class="tableblock halign-left valign-top">Public class member</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="13"><p class="tableblock">AccountPickerWidgetComponent</p></td>
+<td class="tableblock halign-left valign-top" rowspan="13"><p class="tableblock">bbAccountPickerWidgetCustomizable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>@Input() businessFunction: string | undefined</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default business function</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>@Input() resourceName: string | undefined</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default resource name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>@Input() privilege: string | undefined</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default privilege type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>@Input() size: number | undefined</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of accounts per page</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>@Input() multiple: boolean | undefined</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select multiple accounts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>@Input() dropdownPosition: string | undefined</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dropdown Position (bottom | top | auto)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>@Input() favoriteFirst: boolean | undefined</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Show favorite accounts on top</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>@Input() multiSelectLabelLimit: number | undefined</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max number of accounts in selected label text</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>@Input() debounceTime: number | undefined</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Time delay between search requests (in milliseconds)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>@Input() accountsForVirtualScroll: number | undefined</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total number of accounts after which a virtual scroll mechanism is enabled</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>@Input() accountsBeforeLoadingMore: number | undefined</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of accounts left before loading more (for virtual scroll only)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>readonly accountIds: Observable&lt;string&gt;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated list of account ids taken from the <code>selectedAccount</code> routeParam</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>onSelectedAccount()</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emits string with comma separated ids from selected accounts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock">AccountPickerContainerComponent</p></td>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock"><code>bbAccountPickerContainerCustomizable</code>
+<code>bbAccountPickerItemCustomizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>isFavorite(item: ProductsummaryItem): boolean</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checks if the passed account is favorite and returns <code>true</code> or <code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>change(accounts: ProductsummaryItem[] | ProductsummaryItem): void</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This method is invoked on the <code>change</code> event of <code>bb-account-selector-ui</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>scroll(position: { start: number; end: number }): void</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This method is invoked on the <code>scroll</code> event of <code>bb-account-selector-ui</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>scrollToEnd(): void</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This method is invoked on the <code>scrollToEnd</code> event of <code>bb-account-selector-ui</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>filter(filterTerm = ''): void</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This method is invoked on the <code>filterChange</code> event of <code>bb-account-selector-ui</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>search(searchTerm = ''): void</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This method is invoked on the <code>search</code> event of <code>bb-account-selector-ui</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>getMultiSelectLabelText(items: ProductsummaryItem[], limit: number): string</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Convert the passed accounts to a string and returns it</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>processErrorMessages(message: string[] | undefined): string</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Convert the passed error message to a string and returns it</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>virtualScroll: Observable&lt;boolean&gt;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables virtual scrolling mechanism</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>searchByAlias(searchTerm: string, product: ProductSummaryItem): boolean</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Compares product against alias</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="bb_account_picker_widget_implementation" class="discrete">Implementation example</h2>
+<div class="paragraph">
+<p>The following examples show the implementation of this widget:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrapper widget module</p>
+<div class="listingblock">
+<div class="title">account-picker-extended.module.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { ProductSummaryAccountPickerModule } from '@backbase/product-summary-account-picker-ang';
+import { ProductSummaryAccountPickerWidgetExtendedComponent } from './product-summary-account-picker-widget-extended.component';
+
+@NgModule({
+  declarations: [ProductSummaryAccountPickerWidgetExtendedComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    BackbaseCoreModule.withConfig({
+      classMap: { ProductSummaryAccountPickerWidgetExtendedComponent },
+    }),
+    ProductSummaryAccountPickerModule,
+  ],
+  exports: [ProductSummaryAccountPickerModule, ProductSummaryAccountPickerWidgetExtendedComponent],
+})
+export class ProductSummaryAccountPickerWidgetExtendedModule {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Wrapper widget component</p>
+<div class="listingblock">
+<div class="title">account-picker-extended.component.ts</div>
+<div class="content">
+<pre class="highlight"><code class="language-typescript" data-lang="typescript">import { Component, EventEmitter, Output } from '@angular/core';
+
+@Component({
+  selector: 'bb-product-summary-account-picker-widget-extended',
+  templateUrl: './product-summary-account-picker-widget-extended.component.html',
+})
+export class ProductSummaryAccountPickerWidgetExtendedComponent {
+  @Output() selectedAccount = new EventEmitter&lt;string&gt;();
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Custom template</p>
+<div class="listingblock">
+<div class="title">account-picker-extended.component.html</div>
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;bb-account-picker-widget
+  (selectedAccount)="selectedAccount.emit($event)"
+&gt;&lt;/bb-account-picker-widget&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="bb_account_picker_widget_preferences" class="discrete">Preferences</h2>
+<div class="paragraph">
+<p>This widget has the following preferences that managers or administrators configure in Experience Manager:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title and description</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Configured by</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default business function</strong></p>
+<p class="tableblock">In most cases, you should not change the default values.</p>
+<p class="tableblock">The widget uses the resource, business function(s) and privilege in the following call to arrangement manager:</p>
+<p class="tableblock"><a href="https://docs.backbase.com/extranet/technical-docs/endpoints/2021.08/specs/arrangement-client-api.html#api-ProductSummary-getArrangementsByBusinessFunction">GET https://ips_host:ips_port/gateway/api/arrangement-manager/client-api/v2/productsummary/context/arrangements?businessFunction=Product%20Summary,Product%20Summary%20Limited%20View&amp;resourceName=Product%20Summary&amp;privilege=view</a></p>
+<p class="tableblock">The arrangement-manager checks with Access Control whether the user has the privilege for any of the specified business functions.
+Customers with privileges for the <em>Product Summary Limited View</em> business function only see a limited set of keys for an arrangement,
+see <a href="https://community.backbase.com/documentation/DBS/2.21.1/retrieve_products#retrieve_arrangements_limited_view">Limited view</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>businessFunction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Product Summary,Product Summary Limited View</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default resource name</strong></p>
+<p class="tableblock">See <strong>Default business function</strong>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resourceName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Product Summary</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default privilege type</strong></p>
+<p class="tableblock">See <strong>Default business function</strong>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>privilege</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>view</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Number of accounts per page</strong></p>
+<p class="tableblock">Sets the number of the accounts that the widget displays per page.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>50</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Select multiple accounts</strong></p>
+<p class="tableblock">Sets whether the bank customer can select multiple accounts at a time.
+Set to <code>false</code> in order to restrict selection to a single account only.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multiple</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code> [checkbox]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>output.selectedAccount</strong></p>
+<p class="tableblock">Sets the output handler for the <code>selectedAccount</code> event.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>output.selectedAccount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigation:</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p><strong>Dropdown Position (bottom | top | auto)</strong></p>
+</div>
+<div class="paragraph">
+<p>Options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>bottom</code></p>
+</li>
+<li>
+<p><code>top</code></p>
+</li>
+<li>
+<p><code>auto</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Sets the dropdown position.
+By default, position is chosen automatically depending on the available space above or below the widget.</p>
+</div>
+</div>
+</body>
+</html></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dropdownPosition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>auto</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Show favorite accounts on top</strong></p>
+<p class="tableblock">Sets if the favorite accounts are shown on top of all the available accounts.
+Change to <code>false</code> in order to disable this behavior.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>favoriteFirst</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Max number of accounts in selected label text</strong></p>
+<p class="tableblock">Sets how many account names can be displayed at once in the selection field of the widget.
+Accounts selected on top of the limit will be truncated.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multiSelectLabelLimit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>15</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Time delay between search requests (in milliseconds)</strong></p>
+<p class="tableblock">Defines minimum delay between search requests.
+Time delay can be increased to lower onload on a network or decreased to have a better user experience.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>debounceTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>300</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Total number of accounts after which a virtual scroll mechanism is enabled</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountsForVirtualScroll</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>100</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Number of accounts left before loading more (for virtual scroll only)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountsBeforeLoadingMore</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>long</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5</code></p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="bb_account_picker_widget_attributes" class="discrete">Attributes</h2>
+<div class="paragraph">
+<p>The attributes for each product kind in this widget are:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 50%;">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Product kind</th>
+<th class="tableblock halign-left valign-top">Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Current Account</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Name</p>
+</li>
+<li>
+<p>Alias</p>
+</li>
+<li>
+<p>bookedBalance</p>
+</li>
+<li>
+<p>availableBalance</p>
+</li>
+<li>
+<p>IBAN</p>
+</li>
+<li>
+<p>BBAN</p>
+</li>
+<li>
+<p>Currency</p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Savings Account</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Name</p>
+</li>
+<li>
+<p>Alias</p>
+</li>
+<li>
+<p>bookedBalance</p>
+</li>
+<li>
+<p>accruedInterest</p>
+</li>
+<li>
+<p>BBAN</p>
+</li>
+<li>
+<p>Currency</p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Term Deposit</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Name</p>
+</li>
+<li>
+<p>Alias</p>
+</li>
+<li>
+<p>Currency</p>
+</li>
+<li>
+<p>bookedBalance</p>
+</li>
+<li>
+<p>accruedInterest</p>
+</li>
+<li>
+<p>principalAmount</p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Investment Account</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Name</p>
+</li>
+<li>
+<p>Alias</p>
+</li>
+<li>
+<p>Currency</p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loan</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Name</p>
+</li>
+<li>
+<p>Alias</p>
+</li>
+<li>
+<p>bookedBalance</p>
+</li>
+<li>
+<p>Currency</p>
+</li>
+<li>
+<p>IBAN</p>
+</li>
+<li>
+<p>BBAN</p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Debit Card</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Name</p>
+</li>
+<li>
+<p>Alias</p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Credit Card</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="keywords" content="Business Banking Widget Collection, BACKBASE, services">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                         font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+               .nav-footer{text-align: center; margin-top: auto;}
+               .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Name</p>
+</li>
+<li>
+<p>Alias</p>
+</li>
+<li>
+<p>Currency</p>
+</li>
+<li>
+<p>Number</p>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html></div></td>
+</tr>
+</tbody>
+</table>
+<h2 id="bb_account_picker_widget_access_control" class="discrete">Access Control</h2>
+<div class="paragraph">
+<p>A permission is the combination of a business function and a single privilege granted to a user
+on a given resource type. Privileges are enforced by Digital Banking Services. Widget behavior is affected by the permissions of the user accessing the widget.</p>
+</div>
+<div class="paragraph">
+<p>The following table describes how the widget behavior changes depending on the permissions of the user:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 15%;">
+<col style="width: 20%;">
+<col style="width: 15%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Resource</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Business function</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Privilege</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Widget behavior</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Product Summary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Product Summary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current user views a list of accounts.</p>
+<p class="tableblock">If the user does not have the permission to view any of the two business functions, the widget displays an empty list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Product Summary Limited View</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current user views a list of accounts with limited data.
+See <a href="https://community.backbase.com/documentation/DBS/2.21.1/retrieve_products#retrieve_arrangements_limited_view">Limited view</a>.</p>
+<p class="tableblock">If the user does not have the permission to view any of the two business functions, the widget displays an empty list.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
